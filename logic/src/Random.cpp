@@ -7,7 +7,7 @@
 namespace logic {
     std::shared_ptr<Random> Random::getInstance() {
         if (!_instance) {
-            _instance = std::make_shared<Random>(Random());
+            _instance = std::shared_ptr<Random>();
         }
         return _instance;
     }
