@@ -11,6 +11,8 @@ set(LOGIC_SOURCES
         include/IObserver.h
         src/EntityModel.cpp
         include/EntityModel.h
+        src/Position.cpp
+        include/Position.h
 )
 
 add_library(Logic ${LOGIC_SOURCES})
