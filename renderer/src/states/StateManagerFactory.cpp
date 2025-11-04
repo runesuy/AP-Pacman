@@ -6,9 +6,8 @@
 #include "../../include/states/DefaultStateFactory.h"
 
 namespace renderer {
-    std::unique_ptr<StateManager> StateManagerFactory::createStateManager() {
-        auto factory = std::make_unique<DefaultStateFactory>();
-        auto menuState = factory->createMenuState();
-        return std::make_unique<StateManager>(std::move(menuState),std::move(factory));
+    std::unique_ptr<StateManager> StateManagerFactory::createStateManager(std::unique_ptr<IStateFactory> stateFactory) {
+        auto menuState = stateFactory->createMenuState();
+        return std::make_unique<StateManager>(std::move(menuState),std::move(stateFactory));
     }
 } // renderer

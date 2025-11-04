@@ -12,7 +12,7 @@ namespace renderer {
 
     class StateManagerFactory {
     public:
-        [[maybe_unused]] [[maybe_unused]] std::unique_ptr<StateManager> createStateManager();
+        [[maybe_unused]] [[maybe_unused]] std::unique_ptr<StateManager> createStateManager(std::unique_ptr<IStateFactory> stateFactory);
     };
 
 } // renderer
