@@ -1,18 +1,20 @@
 set(LOGIC_SOURCES
-        src/World.cpp
-        include/World.h
-        src/Stopwatch.cpp
-        include/Stopwatch.h
+        src/world/World.cpp
+        include/world/World.h
+        src/utils/Stopwatch.cpp
+        include/utils/Stopwatch.h
         src/Score.cpp
         include/Score.h
-        src/Random.cpp
-        include/Random.h
-        src/IObserver.cpp
-        include/IObserver.h
-        src/EntityModel.cpp
-        include/EntityModel.h
-        src/Position.cpp
-        include/Position.h
+        src/utils/Random.cpp
+        include/utils/Random.h
+        src/observer/IObserver.cpp
+        include/observer/IObserver.h
+        src/entity/IEntityModel.cpp
+        include/entity/IEntityModel.h
+        src/world/Position.cpp
+        include/world/Position.h
+        src/observer/IObservable.cpp
+        include/observer/IObservable.h
 )
 
 add_library(Logic ${LOGIC_SOURCES})

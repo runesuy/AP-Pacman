@@ -4,14 +4,14 @@ set(RENDERER_SOURCES
         include/Camera.h
         src/Game.cpp
         include/Game.h
-        src/EntityView.cpp
-        include/EntityView.h
-        src/StateManager.cpp
-        include/StateManager.h
-        src/IState.cpp
-        include/IState.h
-        src/MenuState.cpp
-        include/MenuState.h
+        src/entity/EntityView.cpp
+        include/entity/EntityView.h
+        src/states/StateManager.cpp
+        include/states/StateManager.h
+        src/states/IState.cpp
+        include/states/IState.h
+        src/states/MenuState.cpp
+        include/states/MenuState.h
 )
 
 add_executable(Renderer ${RENDERER_SOURCES})
