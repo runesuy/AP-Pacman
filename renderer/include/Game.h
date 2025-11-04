@@ -4,6 +4,7 @@
 
 #ifndef AP_PACMAN_GAME_H
 #define AP_PACMAN_GAME_H
+#include "states/StateManager.h"
 
 namespace renderer {
     /**
@@ -13,6 +14,12 @@ namespace renderer {
          * - Processing user interaction
          */
     class Game {
+        /**
+         * The initial state the StateManager starts in
+         */
+        using InitialState = MenuState;
+
+        bool running;
     public:
         /**
          * Start the game.

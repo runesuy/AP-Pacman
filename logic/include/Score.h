@@ -4,7 +4,7 @@
 
 #ifndef AP_PACMAN_SCORE_H
 #define AP_PACMAN_SCORE_H
-#include "IObserver.h"
+#include "observer/IObserver.h"
 
 namespace logic {
     class Score {
