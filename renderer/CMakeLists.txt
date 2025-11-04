@@ -1,7 +1,7 @@
 set(RENDERER_SOURCES
         src/main.cpp
-        src/Camera.cpp
-        include/Camera.h
+        src/utils/Camera.cpp
+        include/utils/Camera.h
         src/Game.cpp
         include/Game.h
         src/entity/EntityView.cpp
@@ -10,13 +10,39 @@ set(RENDERER_SOURCES
         include/states/StateManager.h
         src/states/IState.cpp
         include/states/IState.h
-        src/states/MenuState.cpp
-        include/states/MenuState.h
+        src/states/menu/MenuState.cpp
+        include/states/menu/MenuState.h
+        src/states/DelegatingState.cpp
+        include/states/DelegatingState.h
+        src/core/IInputHandler.cpp
+        include/core/IInputHandler.h
+        src/core/IUpdateHandler.cpp
+        include/core/IUpdateHandler.h
+        src/core/IDrawHandler.cpp
+        include/core/IDrawHandler.h
+        src/states/menu/MenuUpdateHandler.cpp
+        include/states/menu/MenuUpdateHandler.h
+        src/states/menu/MenuDrawHandler.cpp
+        include/states/menu/MenuDrawHandler.h
+        src/states/menu/MenuInputHandler.cpp
+        include/states/menu/MenuInputHandler.h
+        src/states/StateManagerFactory.cpp
+        include/states/StateManagerFactory.h
+        src/states/IStateFactory.cpp
+        include/states/IStateFactory.h
+        src/states/DefaultStateFactory.cpp
+        include/states/DefaultStateFactory.h
+        src/IFactoryCollection.cpp
+        include/IFactoryCollection.h
+        src/DefaultFactoryCollection.cpp
+        include/DefaultFactoryCollection.h
 )
 
 add_executable(Renderer ${RENDERER_SOURCES})
+find_package(SFML 2.6 COMPONENTS system window graphics REQUIRED)
 
 target_link_libraries(Renderer
         PRIVATE
         Logic
+        sfml-graphics sfml-window sfml-system
 )

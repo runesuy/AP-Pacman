@@ -3,20 +3,41 @@
 //
 
 #include "../include/Game.h"
-#include "world/World.h"
-#include "../include/states/StateManager.h"
-#include "../include/states/MenuState.h"
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Window/Event.hpp>
+#include <memory>
 
-void renderer::Game::run() {
+int renderer::Game::run() {
 
     running = true;
-    logic::World world;
-    StateManager stateManager{std::make_unique<Game::InitialState>()};
-    // game loop
-    while (running) {
-        // process input
-        // update logic
+    std::unique_ptr<StateManager> stateManager = factoryCollection.getStateManagerFactory()->createStateManager();
 
-        // update renderer
+    //create sfml window
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Pacman");
+
+    // game loop
+    while (running && window.isOpen()) {
+
+        //--------- Process Input ---------
+        sf::Event event{};
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+
+            stateManager->processInput(event);
+        }
+
+        //--------- Update ---------
+        stateManager->update();
+
+        //--------- Render ---------
+        window.clear(sf::Color::Black);
+        stateManager->draw(window);
     }
+    return 0;
+}
+
+renderer::Game::Game(renderer::IFactoryCollection &factoryCollection) : factoryCollection(factoryCollection){
+
 }

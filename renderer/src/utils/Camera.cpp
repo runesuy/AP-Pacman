@@ -2,7 +2,7 @@
 // Created by runes on 3/11/2025.
 //
 
-#include "../include/Camera.h"
+#include "../../include/utils/Camera.h"
 
 int renderer::Camera::projectX(float posX, const sf::RenderWindow &window) {
     posX += 1.0f; // shift from [-1, 1] to [0, 2]

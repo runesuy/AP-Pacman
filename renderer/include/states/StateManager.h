@@ -4,16 +4,42 @@
 
 #ifndef AP_PACMAN_STATEMANAGER_H
 #define AP_PACMAN_STATEMANAGER_H
+
+#include <SFML/Window/Event.hpp>
 #include "stack"
 #include "IState.h"
 #include "memory"
-#include "MenuState.h"
+#include "menu/MenuState.h"
+#include "../../../logic/include/world/World.h"
+#include "IStateFactory.h"
+#include <SFML/Graphics/RenderWindow.hpp>
+
 
 namespace renderer {
     class StateManager {
         std::stack<std::unique_ptr<IState>> stack;
+        std::unique_ptr<IStateFactory> stateFactory;
     public:
-        explicit StateManager(std::unique_ptr<IState> &&initialState);
+        explicit StateManager(std::unique_ptr<IState> &&initialState, std::unique_ptr<IStateFactory> &&stateFactory);
+
+        /**
+         * Process input events and forward them to the current state.
+         * @param event The input event to process.
+         */
+        void processInput(sf::Event& event);
+
+        /**
+         * Draw the current state to the given window.
+         * Forwards the draw call to the current state.
+         * @param window
+         */
+        void draw(sf::RenderWindow& window);
+
+        /**
+         * Update the current state.
+         * Forwards the update call to the current state.
+         */
+        void update();
     };
 }
 

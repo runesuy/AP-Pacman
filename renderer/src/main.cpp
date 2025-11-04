@@ -1,6 +1,9 @@
 #include <iostream>
+#include "../include/Game.h"
+#include "../include/DefaultFactoryCollection.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    renderer::DefaultFactoryCollection factoryCollection{};
+    renderer::Game game{factoryCollection};
+    return game.run();
 }
