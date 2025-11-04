@@ -4,11 +4,11 @@
 
 #ifndef AP_PACMAN_ENTITYVIEW_H
 #define AP_PACMAN_ENTITYVIEW_H
-#include "IObserver.h"
-#include "EntityModel.h"
+#include "observer/IObserver.h"
+#include "entity/IEntityModel.h"
 
 namespace renderer {
-    class EntityView : public logic::IObserver<logic::EntityModel> {
+    class EntityView : public logic::IObserver<logic::IEntityModel> {
 
     };
 }

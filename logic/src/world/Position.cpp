@@ -2,7 +2,7 @@
 // Created by runes on 3/11/2025.
 //
 
-#include "Position.h"
+#include "world/Position.h"
 #include <stdexcept>
 
 logic::Position::Position(float x, float y): x(x), y(y) {

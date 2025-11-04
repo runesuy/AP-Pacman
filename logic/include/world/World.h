@@ -7,7 +7,8 @@
 
 namespace logic {
     class World {
-
+    public:
+        void update();
     };
 
 } // logic

@@ -4,6 +4,7 @@
 
 #ifndef AP_PACMAN_IOBSERVER_H
 #define AP_PACMAN_IOBSERVER_H
+#include "memory"
 
 namespace logic {
     template <typename T>
@@ -13,7 +14,7 @@ namespace logic {
      */
     class IObserver{
     public:
-        virtual void update(T* subject) const=0;
+        virtual void update(std::shared_ptr<T> subject)=0;
     };
 }
 

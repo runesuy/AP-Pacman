@@ -2,7 +2,7 @@
 // Created by runes on 3/11/2025.
 //
 
-#include "Random.h"
+#include "utils/Random.h"
 
 namespace logic {
     std::shared_ptr<Random> Random::getInstance() {
