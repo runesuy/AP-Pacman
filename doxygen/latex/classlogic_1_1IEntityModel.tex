@@ -1,0 +1,48 @@
+\doxysection{logic\+::IEntity\+Model Class Reference}
+\hypertarget{classlogic_1_1IEntityModel}{}\label{classlogic_1_1IEntityModel}\index{logic::IEntityModel@{logic::IEntityModel}}
+
+
+{\ttfamily \#include $<$IEntity\+Model.\+h$>$}
+
+
+
+Inheritance diagram for logic\+::IEntity\+Model\+:
+% FIG 0
+
+
+Collaboration diagram for logic\+::IEntity\+Model\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \& \mbox{\hyperlink{classlogic_1_1IEntityModel_a761691bb7644d2136f9a2ac6466a4e8c}{get\+Position}} () const
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityModel_a46d626552067d82fadbb214410768c6d}{update}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+In world logical representation of an entity. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1IEntityModel_a761691bb7644d2136f9a2ac6466a4e8c}\label{classlogic_1_1IEntityModel_a761691bb7644d2136f9a2ac6466a4e8c} 
+\index{logic::IEntityModel@{logic::IEntityModel}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!logic::IEntityModel@{logic::IEntityModel}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \& logic\+::\+IEntity\+Model\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The position of the entity inside the world. 
+\end{DoxyReturn}
+\Hypertarget{classlogic_1_1IEntityModel_a46d626552067d82fadbb214410768c6d}\label{classlogic_1_1IEntityModel_a46d626552067d82fadbb214410768c6d} 
+\index{logic::IEntityModel@{logic::IEntityModel}!update@{update}}
+\index{update@{update}!logic::IEntityModel@{logic::IEntityModel}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void logic\+::\+IEntity\+Model\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Called on each tick. Handles simulation logic. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+logic/include/entity/\mbox{\hyperlink{IEntityModel_8h}{IEntity\+Model.\+h}}\item 
+logic/src/entity/\mbox{\hyperlink{IEntityModel_8cpp}{IEntity\+Model.\+cpp}}\end{DoxyCompactItemize}
