@@ -9,6 +9,7 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include "world/Position.h"
 #include "SFML/Graphics.hpp"
+#include "world/Size.h"
 
 namespace renderer {
     class Camera {
@@ -52,6 +53,31 @@ namespace renderer {
          * @return The screen position in pixels.
          */
         static sf::Vector2<float> project(const logic::Position& position, const sf::RenderWindow& window);
+
+        /**
+         * Projects the size position to the screen size.
+         * @param size Logical size;
+         * @param window The render window to project to.
+         * @return The screen size in pixels.
+         */
+        static sf::Vector2<float> project(const logic::Size& size, const sf::RenderWindow& window);
+
+
+        /**
+         * Projects the logical size to the screen size.
+         * @param sizeX Logical X size between -1 and 1;
+         * @param window The render window to project to.
+         * @return The screen X size in pixels.
+         */
+        static float sizeX(float sizeX, const sf::RenderWindow& window);
+
+        /**
+         * Projects the logical size to the screen size.
+         * @param sizeX Logical Y size between -1 and 1;
+         * @param window The render window to project to.
+         * @return The screen Y size in pixels.
+         */
+        static float sizeY(float sizeY, const sf::RenderWindow& window);
     };
 }
 

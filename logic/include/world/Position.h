@@ -6,12 +6,14 @@
 #define AP_PACMAN_POSITION_H
 
 
+#include "ICoordinate.h"
+
 namespace logic {
     /**
      * A position class for the game world.
      * x and y should always be between -1 and 1
      */
-    class Position {
+    class Position : public ICoordinate {
         float x;
         float y;
     public:
@@ -30,26 +32,26 @@ namespace logic {
         /**
          * @return the horizontal coördinate
          */
-        [[nodiscard]] float getX() const;
+        [[nodiscard]] float getX() const override;
 
         /**
          * Set the horizontal coördinate
          * @param x
          * @pre x must be between -1 and 1
          */
-        void setX(float x);
+        void setX(float x) override;
 
         /**
          * @return the vertical coördinate
          */
-        [[nodiscard]] float getY() const;
+        [[nodiscard]] float getY() const override;
 
         /**
          * Set the vertical coördinate
          * @param y
          * @pre y must be between -1 and 1
          */
-        void setY(float y);
+        void setY(float y) override;
     };
 }
 

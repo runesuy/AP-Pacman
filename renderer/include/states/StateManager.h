@@ -40,6 +40,10 @@ namespace renderer {
          * Forwards the update call to the current state.
          */
         void update();
+
+        void pushState(std::unique_ptr<IState>&& state);
+
+        void popState();
     };
 }
 

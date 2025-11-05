@@ -34,3 +34,22 @@ float renderer::Camera::projectY(const logic::Position &position, const sf::Rend
 sf::Vector2<float> renderer::Camera::project(const logic::Position &position, const sf::RenderWindow &window) {
     return {projectX(position.getX(), window), projectY(position.getY(), window)};
 }
+
+sf::Vector2<float> renderer::Camera::project(const logic::Size &size, const sf::RenderWindow &window) {
+    return {sizeX(size.getX(), window), sizeY(size.getY(), window)};
+}
+
+float renderer::Camera::sizeX(float sizeX, const sf::RenderWindow &window) {
+    float center = projectX(-1, window);
+    float corner = projectX(sizeX-1, window);
+    float result = center-corner;
+    result = -result;
+    return result;
+}
+
+float renderer::Camera::sizeY(float sizeY, const sf::RenderWindow &window) {
+    float center = projectY(-1, window);
+    float corner = projectY(sizeY-1, window);
+    float result = center-corner;
+    return result;
+}

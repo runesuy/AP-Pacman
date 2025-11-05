@@ -27,3 +27,11 @@ void renderer::StateManager::update() {
         stack.top()->update();
     }
 }
+
+void renderer::StateManager::pushState(std::unique_ptr<IState> &&state) {
+    stack.push(std::move(state));
+}
+
+void renderer::StateManager::popState() {
+    stack.pop();
+}

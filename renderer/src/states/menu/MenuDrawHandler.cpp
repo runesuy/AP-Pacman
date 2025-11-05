@@ -16,23 +16,30 @@ void renderer::MenuDrawHandler::draw(sf::RenderWindow &window) {
         _fontLoaded = true;
     }
 
-    sf::Text text;
-    text.setFont(_font);
+    sf::Text title;
+    title.setFont(_font);
+    title.setString("PAC MAN");
+    title.setCharacterSize(Camera::sizeY(0.2, window));      // Size in pixels
+    title.setFillColor(sf::Color::Yellow);
+    title.setStyle(sf::Text::Bold );
+    title.setPosition(Camera::project(logic::Position{0, 0.5}, window));
+    title.setOrigin(title.getLocalBounds().width / 2, title.getLocalBounds().height / 2);
 
-    text.setString("PAC MAN");
+    sf::Text pressToPlay;
+    pressToPlay.setFont(_font);
+    pressToPlay.setString("Press Any Key to Play");
+    pressToPlay.setCharacterSize(Camera::sizeY(0.1, window));      // Size in pixels
+    pressToPlay.setFillColor(sf::Color::Yellow);
+    pressToPlay.setPosition(Camera::project(logic::Position{0, 0}, window));
+    pressToPlay.setOrigin(pressToPlay.getLocalBounds().width / 2, pressToPlay.getLocalBounds().height / 2);
 
-    text.setCharacterSize(50);      // Size in pixels
-    text.setFillColor(sf::Color::Yellow);
-    text.setStyle(sf::Text::Bold );
-
-    text.setPosition(Camera::projectX({0,0}, window), Camera::projectY({0,0}, window));
-    text.setOrigin(text.getLocalBounds().width / 2, text.getLocalBounds().height / 2);
-
-    sf::RectangleShape rect;
-    rect.setPosition(Camera::project({-1,1}, window));
+    /*sf::RectangleShape rect;
+    rect.setPosition(Camera::project(logic::Position{-1,1}, window));
     rect.setFillColor(sf::Color::Red);
-    rect.setSize(Camera::project({1,-1}, window)-Camera::project({-1,1}, window));
-    window.draw(rect);
+    rect.setSize(Camera::project(logic::Size{2,2}, window));
+    window.draw(rect);*/
+    // Testing Rect
 
-    window.draw(text);
+    window.draw(title);
+    window.draw(pressToPlay);
 }

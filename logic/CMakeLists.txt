@@ -15,6 +15,10 @@ set(LOGIC_SOURCES
         include/world/Position.h
         src/observer/IObservable.cpp
         include/observer/IObservable.h
+        src/world/ICoordinate.cpp
+        include/world/ICoordinate.h
+        src/world/Size.cpp
+        include/world/Size.h
 )
 
 add_library(Logic ${LOGIC_SOURCES})
