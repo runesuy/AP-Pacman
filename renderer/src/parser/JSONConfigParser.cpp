@@ -9,10 +9,10 @@
 
 namespace renderer {
     std::string JSONConfigParser::getDefaultFontPath() {
-        if (!_jsonData) {
+        if (_jsonData.empty()) {
             throw std::runtime_error("Configuration data not loaded.");
         }
-        return _jsonData["defaultFont"];
+        return _jsonData["fonts"]["defaultFont"].get<std::string>();
     }
 
     void JSONConfigParser::loadConfigFile() {
@@ -23,7 +23,9 @@ namespace renderer {
 
         try {
             inputFile >> _jsonData;
+            inputFile.close();
         } catch (const json::parse_error &e) {
+            inputFile.close();
             throw std::runtime_error("Error parsing JSON config file: " + std::string(e.what()));
         }
     }

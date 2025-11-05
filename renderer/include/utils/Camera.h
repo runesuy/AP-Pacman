@@ -8,6 +8,7 @@
 #include <tuple>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include "world/Position.h"
+#include "SFML/Graphics.hpp"
 
 namespace renderer {
     class Camera {
@@ -18,7 +19,7 @@ namespace renderer {
          * @param window The render window to project to.
          * @return The screen X position in pixels.
          */
-        static int projectX(float posX, const sf::RenderWindow& window);
+        static float projectX(float posX, const sf::RenderWindow& window);
 
         /**
          * Projects the logical position to the screen position.
@@ -26,7 +27,7 @@ namespace renderer {
          * @param window The render window to project to.
          * @return The screen X position in pixels.
          */
-        static int projectX(const logic::Position& position, const sf::RenderWindow& window);
+        static float projectX(const logic::Position& position, const sf::RenderWindow& window);
 
         /**
          * Projects the logical position to the screen position.
@@ -34,7 +35,7 @@ namespace renderer {
          * @param window The render window to project to.
          * @return The screen Y position in pixels.
          */
-        static int projectY(float posY, const sf::RenderWindow& window);
+        static float projectY(float posY, const sf::RenderWindow& window);
 
         /**
          * Projects the logical position to the screen position.
@@ -42,7 +43,7 @@ namespace renderer {
          * @param window The render window to project to.
          * @return The screen Y position in pixels.
          */
-        static int projectY(const logic::Position& position, const sf::RenderWindow& window);
+        static float projectY(const logic::Position& position, const sf::RenderWindow& window);
 
         /**
          * Projects the logical position to the screen position.
@@ -50,7 +51,7 @@ namespace renderer {
          * @param window The render window to project to.
          * @return The screen position in pixels.
          */
-        static std::tuple<int, int> project(const logic::Position& position, const sf::RenderWindow& window);
+        static sf::Vector2<float> project(const logic::Position& position, const sf::RenderWindow& window);
     };
 }
 

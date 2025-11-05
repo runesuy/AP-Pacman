@@ -57,6 +57,8 @@ namespace renderer {
          * @return
          */
         static std::shared_ptr<Game> getInstance();
+
+        IAppConfig &getAppConfig() const;
     };
 }
 

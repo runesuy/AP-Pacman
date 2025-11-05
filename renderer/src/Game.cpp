@@ -13,6 +13,9 @@ int renderer::Game::run() {
     std::unique_ptr<StateManager> stateManager = appConfig.getFactoryCollection().getStateManagerFactory()
             ->createStateManager(appConfig.getFactoryCollection().getStateFactory());
 
+    // load config file
+    appConfig.getConfigParser().loadConfigFile();
+
     //create sfml window
     sf::RenderWindow window(sf::VideoMode(800, 600), "Pacman");
 
@@ -25,6 +28,10 @@ int renderer::Game::run() {
         {
             if (event.type == sf::Event::Closed)
                 window.close();
+            if (event.type == sf::Event::Resized) {
+                sf::FloatRect visibleArea(0, 0, event.size.width, event.size.height);
+                window.setView(sf::View(visibleArea));
+            }
 
             stateManager->processInput(event);
         }
@@ -35,12 +42,12 @@ int renderer::Game::run() {
         //--------- Render ---------
         window.clear(sf::Color::Black);
         stateManager->draw(window);
+        window.display();
     }
     return 0;
 }
 
 renderer::Game::Game(renderer::IAppConfig& appConfig): appConfig(appConfig){
-
 }
 
 std::shared_ptr<renderer::Game> renderer::Game::initializeInstance(renderer::IAppConfig &appConfig) {
@@ -56,4 +63,8 @@ std::shared_ptr<renderer::Game> renderer::Game::getInstance() {
         throw std::runtime_error("Game must first be initialized.");
     }
     return _instance;
+}
+
+renderer::IAppConfig &renderer::Game::getAppConfig() const {
+    return appConfig;
 }

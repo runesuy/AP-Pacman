@@ -2,31 +2,35 @@
 // Created by runes on 3/11/2025.
 //
 
+#include <iostream>
 #include "../../include/utils/Camera.h"
-
-int renderer::Camera::projectX(float posX, const sf::RenderWindow &window) {
+float renderer::Camera::projectX(float posX, const sf::RenderWindow &window) {
+    const float smallestSide = static_cast<float>(std::min(window.getSize().x, window.getSize().y));
     posX += 1.0f; // shift from [-1, 1] to [0, 2]
     posX /= 2.0f; // scale from [0, 2] to [0, 1]
-    posX *= static_cast<float>(window.getSize().x); // scale to window width
-    posX += (static_cast<float>(window.getSize().x)-posX) / 2.0f; // shift for zero centered x-axis
-    return static_cast<int>(posX);
+    posX *= static_cast<float>(smallestSide); // scale to window height
+    posX += std::max(0.0f,(static_cast<float>(window.getSize().x)-static_cast<float>(window.getSize().y))) / 2.0f; // shift for zero centered x-axis
+    return posX;
 }
 
-int renderer::Camera::projectX(const logic::Position &position, const sf::RenderWindow &window) {
+float renderer::Camera::projectX(const logic::Position &position, const sf::RenderWindow &window) {
     return projectX(position.getX(), window);
 }
 
-int renderer::Camera::projectY(float posY, const sf::RenderWindow &window) {
+float renderer::Camera::projectY(float posY, const sf::RenderWindow &window) {
+    posY *= -1.0f; // invert y-axis
+    const float smallestSide = static_cast<float>(std::min(window.getSize().x, window.getSize().y));
     posY += 1.0f; // shift from [-1, 1] to [0, 2]
     posY /= 2.0f; // scale from [0, 2] to [0, 1]
-    posY *= static_cast<float>(window.getSize().y); // scale to window height
-    return static_cast<int>(posY);
+    posY *= static_cast<float>(smallestSide); // scale to window height
+    posY += std::max(0.0f,(static_cast<float>(window.getSize().y)-static_cast<float>(window.getSize().x))) / 2.0f; // shift for zero centered x-axis
+    return posY;
 }
 
-int renderer::Camera::projectY(const logic::Position &position, const sf::RenderWindow &window) {
+float renderer::Camera::projectY(const logic::Position &position, const sf::RenderWindow &window) {
     return projectY(position.getY(), window);;
 }
 
-std::tuple<int, int> renderer::Camera::project(const logic::Position &position, const sf::RenderWindow &window) {
+sf::Vector2<float> renderer::Camera::project(const logic::Position &position, const sf::RenderWindow &window) {
     return {projectX(position.getX(), window), projectY(position.getY(), window)};
 }
