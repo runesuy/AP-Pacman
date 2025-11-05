@@ -9,6 +9,8 @@
 class IUpdateHandler {
 public:
     virtual void update() = 0;
+
+    virtual ~IUpdateHandler() = default;
 };
 
 

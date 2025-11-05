@@ -7,15 +7,16 @@
 
 #include <SFML/Window/Event.hpp>
 #include "stack"
-#include "IState.h"
 #include "memory"
-#include "menu/MenuState.h"
-#include "../../../logic/include/world/World.h"
-#include "IStateFactory.h"
+#include "world/World.h"
 #include <SFML/Graphics/RenderWindow.hpp>
 
 
 namespace renderer {
+    class MenuState;
+    class IStateFactory;
+    class IState;
+
     class StateManager {
         std::stack<std::unique_ptr<IState>> stack;
         std::unique_ptr<IStateFactory> stateFactory;

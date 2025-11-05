@@ -12,6 +12,8 @@ namespace renderer {
     class IInputHandler {
     public:
         virtual void processInput(sf::Event& event)=0;
+
+        virtual ~IInputHandler() = default;
     };
 
 } // renderer

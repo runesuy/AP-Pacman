@@ -8,10 +8,14 @@
 #include "IStateFactory.h"
 
 namespace renderer {
+    class MenuState;
+    class LevelState;
 
     class DefaultStateFactory : public IStateFactory {
     public:
         std::unique_ptr<MenuState> createMenuState() override;
+
+        std::unique_ptr<LevelState> createLevelState() override;
     };
 
 } // renderer

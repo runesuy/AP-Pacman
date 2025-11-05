@@ -3,13 +3,14 @@
 //
 
 #include "../../include/states/DelegatingState.h"
+#include "states/IStateInputHandler.h"
 
 void renderer::DelegatingState::update() {
     _updateHandler->update();
 }
 
-void renderer::DelegatingState::processInput(sf::Event &event) {
-    _inputHandler->processInput(event);
+void renderer::DelegatingState::processInput(sf::Event &event, StateManager& stateManager) {
+    _inputHandler->processInput(event, stateManager);
 }
 
 void renderer::DelegatingState::draw(sf::RenderWindow &window) {
@@ -17,7 +18,7 @@ void renderer::DelegatingState::draw(sf::RenderWindow &window) {
 }
 
 renderer::DelegatingState::DelegatingState(std::unique_ptr<IUpdateHandler> &&updateHandler,
-                                           std::unique_ptr<IInputHandler> &&inputHandler,
+                                           std::unique_ptr<IStateInputHandler> &&inputHandler,
                                            std::unique_ptr<IDrawHandler> &&drawHandler) :
                                            _updateHandler(std::move(updateHandler)),
                                            _inputHandler(std::move(inputHandler)),

@@ -34,9 +34,6 @@ void renderer::MenuDrawHandler::draw(sf::RenderWindow &window) {
     pressToPlay.setPosition(Camera::project(logic::Position{0, 0}, window));
     pressToPlay.setOrigin(pressToPlay.getLocalBounds().width / 2, pressToPlay.getLocalBounds().height / 2);
 
-    Button button;
-    button.draw(window);
-
     /*sf::RectangleShape rect;
     rect.setPosition(Camera::project(logic::Position{-1,1}, window));
     rect.setFillColor(sf::Color::Red);

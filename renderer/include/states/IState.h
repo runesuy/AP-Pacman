@@ -10,13 +10,16 @@
 #include <memory>
 
 namespace renderer {
+    class StateManager;
     class IState {
     public:
         virtual void update()=0;
 
-        virtual void processInput(sf::Event& event)=0;
+        virtual void processInput(sf::Event &event, StateManager& stateManager) =0;
 
         virtual void draw(sf::RenderWindow& window)=0;
+
+        virtual ~IState()=default;
     };
 }
 

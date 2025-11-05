@@ -8,7 +8,6 @@ set(RENDERER_SOURCES
         include/entity/EntityView.h
         src/states/StateManager.cpp
         include/states/StateManager.h
-        src/states/IState.cpp
         include/states/IState.h
         src/states/menu/MenuState.cpp
         include/states/menu/MenuState.h
@@ -28,7 +27,6 @@ set(RENDERER_SOURCES
         include/states/menu/MenuInputHandler.h
         src/states/StateManagerFactory.cpp
         include/states/StateManagerFactory.h
-        src/states/IStateFactory.cpp
         include/states/IStateFactory.h
         src/states/DefaultStateFactory.cpp
         include/states/DefaultStateFactory.h
@@ -36,7 +34,6 @@ set(RENDERER_SOURCES
         include/config/IFactoryCollection.h
         src/config/DefaultFactoryCollection.cpp
         include/config/DefaultFactoryCollection.h
-        src/parser/IConfigParser.cpp
         include/parser/IConfigParser.h
         src/parser/JSONConfigParser.cpp
         include/parser/JSONConfigParser.h
@@ -52,6 +49,17 @@ set(RENDERER_SOURCES
         src/drawable/DrawObject.cpp
         src/drawable/ui/Button.cpp
         include/drawable/ui/Button.h
+        src/states/level/LevelState.cpp
+        include/states/level/LevelState.h
+        src/states/level/LevelUpdateHandler.cpp
+        include/states/level/LevelUpdateHandler.h
+        src/states/level/LevelInputHandler.cpp
+        include/states/level/LevelInputHandler.h
+        src/states/level/LevelDrawHandler.cpp
+        include/states/level/LevelDrawHandler.h
+        include/states/IStateInputHandler.h
+        src/drawable/game/TileMap.cpp
+        include/drawable/game/TileMap.h
 )
 
 add_executable(Renderer ${RENDERER_SOURCES})

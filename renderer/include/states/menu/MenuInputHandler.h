@@ -6,12 +6,13 @@
 #define AP_PACMAN_MENUINPUTHANDLER_H
 
 #include "../../core/IInputHandler.h"
+#include "states/IStateInputHandler.h"
 
 namespace renderer {
 
-    class MenuInputHandler : public IInputHandler {
+    class MenuInputHandler : public IStateInputHandler {
     public:
-        void processInput(sf::Event &event) override;
+        void processInput(sf::Event &event, StateManager& stateManager) override;
     };
 
 } // renderer

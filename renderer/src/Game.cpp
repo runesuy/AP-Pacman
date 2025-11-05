@@ -6,6 +6,8 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Window/Event.hpp>
 #include <memory>
+#include "states/IState.h"
+#include "states/IStateFactory.h"
 
 int renderer::Game::run() {
 

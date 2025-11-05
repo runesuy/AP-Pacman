@@ -3,6 +3,8 @@
 //
 
 #include "../../include/states/StateManager.h"
+#include "states/IState.h"
+#include "states/IStateFactory.h"
 
 renderer::StateManager::StateManager(std::unique_ptr<IState> &&initialState,
                                      std::unique_ptr<IStateFactory> &&stateFactory) :
@@ -12,7 +14,7 @@ renderer::StateManager::StateManager(std::unique_ptr<IState> &&initialState,
 
 void renderer::StateManager::processInput(sf::Event &event) {
     if (!stack.empty()) {
-        stack.top()->processInput(event);
+        stack.top()->processInput(event, *this);
     }
 }
 
