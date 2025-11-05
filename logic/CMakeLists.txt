@@ -9,7 +9,6 @@ set(LOGIC_SOURCES
         include/utils/Random.h
         src/observer/IObserver.cpp
         include/observer/IObserver.h
-        src/entity/IEntityModel.cpp
         include/entity/IEntityModel.h
         src/world/Position.cpp
         include/world/Position.h
@@ -19,6 +18,8 @@ set(LOGIC_SOURCES
         src/world/Size.cpp
         include/world/Size.h
         include/world/IWorldObject.h
+        include/world/TileMap.cpp
+        include/world/TileMap.h
 )
 
 add_library(Logic ${LOGIC_SOURCES})

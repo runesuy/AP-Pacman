@@ -58,8 +58,6 @@ set(RENDERER_SOURCES
         src/states/level/LevelDrawHandler.cpp
         include/states/level/LevelDrawHandler.h
         include/states/IStateInputHandler.h
-        src/drawable/game/TileMap.cpp
-        include/drawable/game/TileMap.h
 )
 
 add_executable(Renderer ${RENDERER_SOURCES})

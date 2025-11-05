@@ -17,7 +17,7 @@ namespace renderer {
 class DrawObject : public IDrawable, public logic::IWorldObject {
     logic::Position position{0,0};
 public:
-    [[nodiscard]] logic::Position getPosition() const override;
+    [[nodiscard]] const logic::Position& getPosition() const override;
 
     void setPosition(const logic::Position &position) override;
 

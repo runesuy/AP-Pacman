@@ -15,7 +15,7 @@ namespace logic {
         /**
          * @return the position of the world object
          */
-        [[nodiscard]] virtual Position getPosition() const=0;
+        [[nodiscard]] virtual const Position & getPosition() const =0;
 
         /**
          * Set the position of the world object

@@ -8,24 +8,14 @@
 #include "vector"
 #include "observer/IObservable.h"
 #include "memory"
+#include "world/IWorldObject.h"
 
 namespace logic {
     /**
      * In world logical representation of an entity.
      */
-    class IEntityModel : public IObservable{
-        Position position;
-
+    class IEntityModel : public IObservable, public IWorldObject{
     public:
-        /**
-         * @return The position of the entity inside the world.
-         */
-        [[nodiscard]] const Position &getPosition() const;
-
-        /**
-         * Called on each tick. Handles simulation logic.
-         */
-        virtual void update()=0;
     };
 }
 

@@ -22,7 +22,7 @@ namespace renderer {
         }
     }
 
-    logic::Position DrawObject::getPosition() const {
+    const logic::Position& DrawObject::getPosition() const {
         return position;
     }
 
