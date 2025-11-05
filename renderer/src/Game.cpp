@@ -10,7 +10,7 @@
 int renderer::Game::run() {
 
     running = true;
-    std::unique_ptr<StateManager> stateManager = factoryCollection.getStateManagerFactory()->createStateManager();
+    std::unique_ptr<StateManager> stateManager = factoryCollection.getStateManagerFactory()->createStateManager(factoryCollection.getStateFactory());
 
     //create sfml window
     sf::RenderWindow window(sf::VideoMode(800, 600), "Pacman");
