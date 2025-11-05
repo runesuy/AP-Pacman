@@ -32,17 +32,38 @@ set(RENDERER_SOURCES
         include/states/IStateFactory.h
         src/states/DefaultStateFactory.cpp
         include/states/DefaultStateFactory.h
-        src/IFactoryCollection.cpp
-        include/IFactoryCollection.h
-        src/DefaultFactoryCollection.cpp
-        include/DefaultFactoryCollection.h
+        src/config/IFactoryCollection.cpp
+        include/config/IFactoryCollection.h
+        src/config/DefaultFactoryCollection.cpp
+        include/config/DefaultFactoryCollection.h
+        src/parser/IConfigParser.cpp
+        include/parser/IConfigParser.h
+        src/parser/JSONConfigParser.cpp
+        include/parser/JSONConfigParser.h
+        src/exceptions/FileNotOpenedException.cpp
+        include/exceptions/FileNotOpenedException.h
+        src/config/IAppConfig.cpp
+        include/config/IAppConfig.h
+        src/config/DefaultAppConfig.cpp
+        include/config/DefaultAppConfig.h
 )
 
 add_executable(Renderer ${RENDERER_SOURCES})
 find_package(SFML 2.6 COMPONENTS system window graphics REQUIRED)
 
+target_include_directories(Renderer
+        PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/lib
+)
+
+target_include_directories(Renderer
+        PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
 target_link_libraries(Renderer
         PRIVATE
         Logic
         sfml-graphics sfml-window sfml-system
+
 )

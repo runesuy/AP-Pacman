@@ -8,10 +8,13 @@
 #include <SFML/Window/Event.hpp>
 #include "states/StateManager.h"
 #include "world/World.h"
-#include "IFactoryCollection.h"
+#include "config/IFactoryCollection.h"
+#include "parser/IConfigParser.h"
+#include "config/IAppConfig.h"
 
 namespace renderer {
     /**
+     * Singleton
      * Manages the representation side of the game, such as:
      * - Game loop
      * - Factory creation
@@ -23,16 +26,37 @@ namespace renderer {
          */
         using InitialState = MenuState;
 
-        bool running;
+        bool running=false;
 
-        IFactoryCollection& factoryCollection;
+        /**
+         * All the game configurations
+         */
+        IAppConfig& appConfig;
+
+        inline static std::shared_ptr<Game> _instance;
+
+        explicit Game(IAppConfig& appConfig);
     public:
-        explicit Game(IFactoryCollection& factoryCollection);
-
+        Game(Game&&) noexcept = delete;
+        Game(Game&) = delete;
+        Game operator=(Game&&) noexcept = delete;
+        Game operator=(Game&) = delete;
         /**
          * Start the game.
          */
         int run();
+
+        /**
+         * Call to initialize the instance with a IConfig.
+         * @return
+         */
+        static std::shared_ptr<Game> initializeInstance(IAppConfig& appConfig);
+
+        /**
+         * Get active instance.
+         * @return
+         */
+        static std::shared_ptr<Game> getInstance();
     };
 }
 

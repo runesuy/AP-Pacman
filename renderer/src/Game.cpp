@@ -10,7 +10,8 @@
 int renderer::Game::run() {
 
     running = true;
-    std::unique_ptr<StateManager> stateManager = factoryCollection.getStateManagerFactory()->createStateManager(factoryCollection.getStateFactory());
+    std::unique_ptr<StateManager> stateManager = appConfig.getFactoryCollection().getStateManagerFactory()
+            ->createStateManager(appConfig.getFactoryCollection().getStateFactory());
 
     //create sfml window
     sf::RenderWindow window(sf::VideoMode(800, 600), "Pacman");
@@ -38,6 +39,21 @@ int renderer::Game::run() {
     return 0;
 }
 
-renderer::Game::Game(renderer::IFactoryCollection &factoryCollection) : factoryCollection(factoryCollection){
+renderer::Game::Game(renderer::IAppConfig& appConfig): appConfig(appConfig){
 
+}
+
+std::shared_ptr<renderer::Game> renderer::Game::initializeInstance(renderer::IAppConfig &appConfig) {
+    if (_instance) {
+        throw std::runtime_error("Game was already initialized.");
+    }
+    _instance = std::shared_ptr<Game>(new Game(appConfig));
+    return _instance;
+}
+
+std::shared_ptr<renderer::Game> renderer::Game::getInstance() {
+    if (!_instance) {
+        throw std::runtime_error("Game must first be initialized.");
+    }
+    return _instance;
 }

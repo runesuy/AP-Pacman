@@ -5,7 +5,7 @@
 #ifndef AP_PACMAN_DEFAULTFACTORYCOLLECTION_H
 #define AP_PACMAN_DEFAULTFACTORYCOLLECTION_H
 
-#include "IFactoryCollection.h"
+#include "config/IFactoryCollection.h"
 
 namespace renderer {
 

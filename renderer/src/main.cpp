@@ -1,9 +1,10 @@
 #include <iostream>
 #include "../include/Game.h"
-#include "../include/DefaultFactoryCollection.h"
+#include "config/DefaultFactoryCollection.h"
+#include "config/DefaultAppConfig.h"
 
 int main() {
-    renderer::DefaultFactoryCollection factoryCollection{};
-    renderer::Game game{factoryCollection};
-    return game.run();
+    renderer::DefaultAppConfig config;
+    std::shared_ptr<renderer::Game> game = renderer::Game::initializeInstance(config);
+    return game->run();
 }
