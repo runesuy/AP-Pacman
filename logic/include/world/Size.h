@@ -15,7 +15,7 @@ namespace logic {
     public:
         Size(float x, float y);
         Size(Size&&) noexcept = default;
-        Size(Size&) = default;
+        Size(const Size&) = default;
         Size& operator=(Size&&) noexcept = default;
         Size& operator=(const Size&) = default;
 

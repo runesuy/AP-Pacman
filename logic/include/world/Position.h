@@ -24,8 +24,9 @@ namespace logic {
          * @pre y is between -1 and 1
          */
         Position(float x, float y);
+        Position()=default;
         Position(Position&&) noexcept = default;
-        Position(Position&) = default;
+        Position(const Position&) = default;
         Position& operator=(Position&&) noexcept = default;
         Position& operator=(const Position&) = default;
 

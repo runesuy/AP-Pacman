@@ -46,6 +46,12 @@ set(RENDERER_SOURCES
         include/config/IAppConfig.h
         src/config/DefaultAppConfig.cpp
         include/config/DefaultAppConfig.h
+        include/drawable/IDrawable.h
+        include/drawable/DrawObject.h
+        src/drawable/IDrawable.cpp
+        src/drawable/DrawObject.cpp
+        src/drawable/ui/Button.cpp
+        include/drawable/ui/Button.h
 )
 
 add_executable(Renderer ${RENDERER_SOURCES})

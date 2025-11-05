@@ -6,6 +6,7 @@
 #include "Game.h"
 #include <SFML/Graphics.hpp>
 #include "utils/Camera.h"
+#include "drawable/ui/Button.h"
 
 void renderer::MenuDrawHandler::draw(sf::RenderWindow &window) {
     if (!_fontLoaded) {
@@ -32,6 +33,9 @@ void renderer::MenuDrawHandler::draw(sf::RenderWindow &window) {
     pressToPlay.setFillColor(sf::Color::Yellow);
     pressToPlay.setPosition(Camera::project(logic::Position{0, 0}, window));
     pressToPlay.setOrigin(pressToPlay.getLocalBounds().width / 2, pressToPlay.getLocalBounds().height / 2);
+
+    Button button;
+    button.draw(window);
 
     /*sf::RectangleShape rect;
     rect.setPosition(Camera::project(logic::Position{-1,1}, window));
