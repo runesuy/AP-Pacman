@@ -6,9 +6,11 @@
 #include "../../../include/states/menu/MenuInputHandler.h"
 #include "Game.h"
 #include "states/level/LevelState.h"
+#include "states/IStateFactory.h"
+#include "states/IStateUpdateHandler.h"
 
 namespace renderer {
-    void MenuInputHandler::processInput(sf::Event &event, StateManager& stateManager) {
+    void MenuInputHandler::processInput(sf::Event &event, StateManager &stateManager, IState &state) {
         if (event.type == sf::Event::KeyPressed) {
 
             std::unique_ptr<LevelState> levelState = Game::getInstance()->getAppConfig().getFactoryCollection().getStateFactory()->createLevelState();

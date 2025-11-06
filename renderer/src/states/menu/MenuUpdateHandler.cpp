@@ -5,7 +5,7 @@
 #include "../../../include/states/menu/MenuUpdateHandler.h"
 
 namespace renderer {
-    void MenuUpdateHandler::update() {
+    void MenuUpdateHandler::update(IState &state) {
 
     }
 } // renderer

@@ -9,7 +9,7 @@
 
 namespace renderer {
 
-    class LevelDrawHandler : public IDrawHandler {
+class LevelDrawHandler : public logic::IDrawHandler {
     public:
         void draw(sf::RenderWindow &window) override;
     };

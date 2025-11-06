@@ -5,7 +5,7 @@
 #include "states/level/LevelInputHandler.h"
 
 namespace renderer {
-    void LevelInputHandler::processInput(sf::Event &event, StateManager& stateManager) {
+    void LevelInputHandler::processInput(sf::Event &event, StateManager &stateManager, IState &state) {
 
     }
 } // renderer

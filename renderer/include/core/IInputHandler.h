@@ -7,7 +7,7 @@
 
 #include <SFML/Window/Event.hpp>
 
-namespace renderer {
+namespace logic {
 
     class IInputHandler {
     public:

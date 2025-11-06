@@ -6,10 +6,10 @@
 #define AP_PACMAN_MENUDRAWHANDLER_H
 
 #include <SFML/Graphics/Font.hpp>
-#include "../../core/IDrawHandler.h"
+#include "core/IDrawHandler.h"
 
 namespace renderer {
-    class MenuDrawHandler : public IDrawHandler {
+class MenuDrawHandler : public logic::IDrawHandler {
         bool _fontLoaded = false;
         sf::Font _font;
     public:

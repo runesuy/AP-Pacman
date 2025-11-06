@@ -5,13 +5,14 @@
 #ifndef AP_PACMAN_MENUUPDATEHANDLER_H
 #define AP_PACMAN_MENUUPDATEHANDLER_H
 
-#include "../../core/IUpdateHandler.h"
+#include "states/IStateUpdateHandler.h"
 
 namespace renderer {
+    class IState;
 
-    class MenuUpdateHandler : public IUpdateHandler {
+    class MenuUpdateHandler : public IStateUpdateHandler {
     public:
-        void update() override;
+        void update(IState& state) override;
     };
 
 } // renderer

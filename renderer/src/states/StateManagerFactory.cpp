@@ -6,6 +6,7 @@
 #include "../../include/states/DefaultStateFactory.h"
 #include "states/menu/MenuState.h"
 #include "states/IStateInputHandler.h"
+#include "states/IStateUpdateHandler.h"
 
 namespace renderer {
     std::unique_ptr<StateManager> StateManagerFactory::createStateManager(std::unique_ptr<IStateFactory> stateFactory) {

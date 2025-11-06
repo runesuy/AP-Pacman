@@ -5,8 +5,6 @@
 #ifndef AP_PACMAN_ISTATEFACTORY_H
 #define AP_PACMAN_ISTATEFACTORY_H
 
-#include "IState.h"
-
 namespace renderer {
     class MenuState;
     class LevelState;

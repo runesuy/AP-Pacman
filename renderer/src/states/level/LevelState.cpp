@@ -6,7 +6,9 @@
 #include "states/IStateInputHandler.h"
 
 namespace renderer {
-    LevelState::LevelState(std::unique_ptr<IUpdateHandler> &&updateHandler,
-                           std::unique_ptr<IStateInputHandler> &&inputHandler, std::unique_ptr<IDrawHandler> &&drawHandler)
-            : DelegatingState(std::move(updateHandler), std::move(inputHandler), std::move(drawHandler)) {}
+    LevelState::LevelState(std::unique_ptr<IStateUpdateHandler> &&updateHandler,
+                           std::unique_ptr<IStateInputHandler> &&inputHandler, std::unique_ptr<logic::IDrawHandler> &&drawHandler)
+            : DelegatingState(std::move(updateHandler), std::move(inputHandler), std::move(drawHandler)) {
+
+    }
 } // renderer

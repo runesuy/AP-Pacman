@@ -5,6 +5,7 @@
 #ifndef AP_PACMAN_DEFAULTSTATEFACTORY_H
 #define AP_PACMAN_DEFAULTSTATEFACTORY_H
 
+#include <memory>
 #include "IStateFactory.h"
 
 namespace renderer {

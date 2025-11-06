@@ -6,15 +6,15 @@
 #define AP_PACMAN_IENTITYMODEL_H
 #include "world/Position.h"
 #include "vector"
-#include "observer/IObservable.h"
+#include "observer/Observable.h"
 #include "memory"
-#include "world/IWorldObject.h"
+#include "world/WorldObject.h"
 
 namespace logic {
     /**
      * In world logical representation of an entity.
      */
-    class IEntityModel : public IObservable, public IWorldObject{
+    class IEntityModel : public Observable, public WorldObject{
     public:
     };
 }

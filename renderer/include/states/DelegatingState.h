@@ -5,25 +5,23 @@
 #ifndef AP_PACMAN_DELEGATINGSTATE_H
 #define AP_PACMAN_DELEGATINGSTATE_H
 #include "IState.h"
-#include "../core/IUpdateHandler.h"
-#include "../core/IDrawHandler.h"
 #include <memory>
+#include "core/IDrawHandler.h"
+#include "IStateUpdateHandler.h"
 #include "IStateInputHandler.h"
 
 namespace renderer {
 
     class IStateFactory;
-    class IStateInputHandler;
 
-    class DelegatingState : public IState {
-
-        std::unique_ptr<IUpdateHandler> _updateHandler;
+    class DelegatingState : public IState  {
+        std::unique_ptr<IStateUpdateHandler> _updateHandler;
         std::unique_ptr<IStateInputHandler> _inputHandler;
-        std::unique_ptr<IDrawHandler> _drawHandler;
+        std::unique_ptr<logic::IDrawHandler> _drawHandler;
     public:
-        DelegatingState(std::unique_ptr<IUpdateHandler> &&updateHandler,
+        DelegatingState(std::unique_ptr<IStateUpdateHandler> &&updateHandler,
                         std::unique_ptr<IStateInputHandler> &&inputHandler,
-                        std::unique_ptr<IDrawHandler> &&drawHandler);
+                        std::unique_ptr<logic::IDrawHandler> &&drawHandler);
 
         void update() override;
 

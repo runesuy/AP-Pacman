@@ -6,13 +6,14 @@
 #define AP_PACMAN_ISTATEINPUTHANDLER_H
 
 #include "core/IInputHandler.h"
-#include "IStateFactory.h"
-#include "states/StateManager.h"
 
 namespace renderer {
-    class IStateInputHandler : public IInputHandler{
+    class StateManager;
+    class IState;
+
+    class IStateInputHandler : public logic::IInputHandler {
     public:
-        virtual void processInput(sf::Event& event, StateManager &factory)=0;
+        virtual void processInput(sf::Event& event, StateManager &stateManager, IState& state)=0;
 
         void processInput(sf::Event &event) override {};
     };

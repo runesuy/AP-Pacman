@@ -14,9 +14,9 @@
 
 namespace renderer {
     std::unique_ptr<MenuState> DefaultStateFactory::createMenuState() {
-        auto updateHandler = std::make_unique<MenuUpdateHandler>();
-        auto inputHandler =  std::make_unique<MenuInputHandler>();
-        auto drawHandler =  std::make_unique<MenuDrawHandler>();
+        std::unique_ptr<MenuUpdateHandler> updateHandler = std::make_unique<MenuUpdateHandler>();
+        std::unique_ptr<MenuInputHandler> inputHandler =  std::make_unique<MenuInputHandler>();
+        std::unique_ptr<MenuDrawHandler> drawHandler =  std::make_unique<MenuDrawHandler>();
         return std::make_unique<MenuState>(std::move(updateHandler), std::move(inputHandler), std::move(drawHandler));
     }
 

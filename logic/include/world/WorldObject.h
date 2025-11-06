@@ -2,26 +2,26 @@
 // Created by rune-suy on 11/5/25.
 //
 
-#ifndef AP_PACMAN_IWORLDOBJECT_H
-#define AP_PACMAN_IWORLDOBJECT_H
+#ifndef AP_PACMAN_WORLDOBJECT_H
+#define AP_PACMAN_WORLDOBJECT_H
 
 #include "Position.h"
 
 namespace logic {
 
-    class IWorldObject {
+    class WorldObject {
         Position position;
     public:
         /**
          * @return the position of the world object
          */
-        [[nodiscard]] virtual const Position & getPosition() const =0;
+        [[nodiscard]] virtual const Position & getPosition() const;
 
         /**
          * Set the position of the world object
          * @param position The new position
          */
-        virtual void setPosition(const Position& position)=0;
+        virtual void setPosition(const Position& position);
 
         /**
          * Update the world object.
@@ -32,4 +32,4 @@ namespace logic {
 
 } // logic
 
-#endif //AP_PACMAN_IWORLDOBJECT_H
+#endif //AP_PACMAN_WORLDOBJECT_H

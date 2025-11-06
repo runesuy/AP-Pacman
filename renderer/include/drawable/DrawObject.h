@@ -10,11 +10,11 @@
 #include <SFML/Graphics/Text.hpp>
 #include <memory>
 #include "IDrawable.h"
-#include "world/IWorldObject.h"
+#include "world/WorldObject.h"
 
 namespace renderer {
 
-class DrawObject : public IDrawable, public logic::IWorldObject {
+class DrawObject : public IDrawable, public logic::WorldObject {
     logic::Position position{0,0};
 public:
     [[nodiscard]] const logic::Position& getPosition() const override;

@@ -12,14 +12,18 @@ set(LOGIC_SOURCES
         include/entity/IEntityModel.h
         src/world/Position.cpp
         include/world/Position.h
-        src/observer/IObservable.cpp
-        include/observer/IObservable.h
+        src/observer/Observable.cpp
+        include/observer/Observable.h
         include/world/ICoordinate.h
         src/world/Size.cpp
         include/world/Size.h
-        include/world/IWorldObject.h
-        include/world/TileMap.cpp
+        include/world/WorldObject.h
+        src/world/TileMap.cpp
         include/world/TileMap.h
+        include/entity/IEntityFactory.h
+        src/entity/WallModel.cpp
+        include/entity/WallModel.h
+        src/world/WorldObject.cpp
 )
 
 add_library(Logic ${LOGIC_SOURCES})

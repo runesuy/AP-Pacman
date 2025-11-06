@@ -6,12 +6,14 @@
 #define AP_PACMAN_IUPDATEHANDLER_H
 
 
-class IUpdateHandler {
-public:
-    virtual void update() = 0;
+namespace logic {
+    class IUpdateHandler {
+    public:
+        virtual void update() = 0;
 
-    virtual ~IUpdateHandler() = default;
-};
+        virtual ~IUpdateHandler() = default;
+    };
+}
 
 
 #endif //AP_PACMAN_IUPDATEHANDLER_H

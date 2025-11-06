@@ -58,6 +58,8 @@ set(RENDERER_SOURCES
         src/states/level/LevelDrawHandler.cpp
         include/states/level/LevelDrawHandler.h
         include/states/IStateInputHandler.h
+        src/states/IStateUpdateHandler.cpp
+        include/states/IStateUpdateHandler.h
 )
 
 add_executable(Renderer ${RENDERER_SOURCES})

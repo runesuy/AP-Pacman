@@ -8,12 +8,14 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 
-class IDrawHandler {
-public:
-    virtual void draw(sf::RenderWindow& window)=0;
+namespace logic {
+    class IDrawHandler {
+    public:
+        virtual void draw(sf::RenderWindow &window) = 0;
 
-    virtual ~IDrawHandler() = default;
-};
+        virtual ~IDrawHandler() = default;
+    };
+}
 
 
 #endif //AP_PACMAN_IDRAWHANDLER_H

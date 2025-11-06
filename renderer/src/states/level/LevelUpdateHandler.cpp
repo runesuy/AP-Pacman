@@ -5,7 +5,8 @@
 #include "states/level/LevelUpdateHandler.h"
 
 namespace renderer {
-    void LevelUpdateHandler::update() {
+
+    void LevelUpdateHandler::update(IState &state) {
 
     }
 } // renderer
