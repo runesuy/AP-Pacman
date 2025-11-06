@@ -12,4 +12,8 @@ namespace renderer {
     IConfigParser &DefaultAppConfig::getConfigParser(){
         return configParser;
     }
+
+    logic::IConfig &DefaultAppConfig::getLogicConfig() {
+        return logicConfig;
+    }
 } // renderer

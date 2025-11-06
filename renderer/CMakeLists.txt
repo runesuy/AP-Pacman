@@ -30,7 +30,6 @@ set(RENDERER_SOURCES
         include/states/IStateFactory.h
         src/states/DefaultStateFactory.cpp
         include/states/DefaultStateFactory.h
-        src/config/IFactoryCollection.cpp
         include/config/IFactoryCollection.h
         src/config/DefaultFactoryCollection.cpp
         include/config/DefaultFactoryCollection.h
@@ -39,7 +38,6 @@ set(RENDERER_SOURCES
         include/parser/JSONConfigParser.h
         src/exceptions/FileNotOpenedException.cpp
         include/exceptions/FileNotOpenedException.h
-        src/config/IAppConfig.cpp
         include/config/IAppConfig.h
         src/config/DefaultAppConfig.cpp
         include/config/DefaultAppConfig.h
@@ -60,6 +58,17 @@ set(RENDERER_SOURCES
         include/states/IStateInputHandler.h
         src/states/IStateUpdateHandler.cpp
         include/states/IStateUpdateHandler.h
+        src/entity/DefaultEntityFactory.cpp
+        include/entity/DefaultEntityFactory.h
+        include/parser/IMapParser.h
+        src/parser/TXTMapParser.cpp
+        include/parser/TXTMapParser.h
+        src/config/DefaultLogicConfig.cpp
+        include/config/DefaultLogicConfig.h
+        src/entity/WallView.cpp
+        include/entity/WallView.h
+        src/drawable/DrawCollection.cpp
+        include/drawable/DrawCollection.h
 )
 
 add_executable(Renderer ${RENDERER_SOURCES})

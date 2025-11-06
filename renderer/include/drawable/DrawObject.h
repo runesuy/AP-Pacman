@@ -14,16 +14,16 @@
 
 namespace renderer {
 
-class DrawObject : public IDrawable, public logic::WorldObject {
+class DrawObject : public IDrawable {
     logic::Position position{0,0};
 public:
-    [[nodiscard]] const logic::Position& getPosition() const override;
+    [[nodiscard]] const logic::Position& getPosition() const;
 
-    void setPosition(const logic::Position &position) override;
+    void setPosition(const logic::Position &position);
 
     void draw(sf::RenderWindow &window) override;
 
-    virtual std::vector<std::unique_ptr<sf::Shape>> getSFShapes() = 0;
+    virtual std::vector<std::unique_ptr<sf::Shape>> getSFShapes(sf::RenderWindow &window) = 0;
 
     virtual std::vector<std::unique_ptr<sf::Sprite>> getSFSprites() = 0;
 

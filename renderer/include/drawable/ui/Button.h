@@ -11,9 +11,7 @@ namespace renderer {
 
     class Button : public DrawObject {
     public:
-        void update() override;
-
-        std::vector<std::unique_ptr<sf::Shape>> getSFShapes() override;
+        std::vector<std::unique_ptr<sf::Shape>> getSFShapes(sf::RenderWindow &window) override;
 
         std::vector<std::unique_ptr<sf::Sprite>> getSFSprites() override;
 

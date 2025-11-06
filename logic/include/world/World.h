@@ -6,13 +6,21 @@
 #define AP_PACMAN_WORLD_H
 
 #include "entity/IEntityFactory.h"
+#include "WorldObject.h"
+#include "IConfig.h"
+#include <vector>
 
 namespace logic {
     class World {
-        std::unique_ptr<IEntityFactory> entityFactory;
+        IConfig& config;
+        std::vector<std::shared_ptr<WorldObject>> objects;
     public:
-        explicit World(std::unique_ptr<IEntityFactory> entityFactory);
+        explicit World(IConfig& config);
         void update();
+
+        [[nodiscard]] IConfig &getConfig() const;
+
+        void addObject(const std::shared_ptr<WorldObject>& object);
     };
 
 } // logic

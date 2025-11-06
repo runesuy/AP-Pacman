@@ -6,4 +6,14 @@
 
 namespace logic {
     void WallModel::update() {}
+
+    void WallModel::setSize(const Size &size) {
+        EntityModel::setSize(size);
+        updateObservers();
+    }
+
+    void WallModel::setPosition(const Position &position) {
+        WorldObject::setPosition(position);
+        updateObservers();
+    }
 } // logic

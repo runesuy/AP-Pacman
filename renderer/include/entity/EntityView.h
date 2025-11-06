@@ -5,11 +5,16 @@
 #ifndef AP_PACMAN_ENTITYVIEW_H
 #define AP_PACMAN_ENTITYVIEW_H
 #include "observer/IObserver.h"
-#include "entity/IEntityModel.h"
+#include "entity/EntityModel.h"
+#include "drawable/DrawObject.h"
 
 namespace renderer {
-    class EntityView : public logic::IObserver<logic::IEntityModel> {
+    class EntityView : public DrawObject{
+        logic::Size size={0,0};
+    public:
+        [[nodiscard]] const logic::Size &getSize() const;
 
+        void setSize(const logic::Size &size);
     };
 }
 

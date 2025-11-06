@@ -3,12 +3,17 @@
 //
 
 #include "states/level/LevelState.h"
+
+#include <memory>
 #include "states/IStateInputHandler.h"
+#include "Game.h"
 
 namespace renderer {
     LevelState::LevelState(std::unique_ptr<IStateUpdateHandler> &&updateHandler,
                            std::unique_ptr<IStateInputHandler> &&inputHandler, std::unique_ptr<logic::IDrawHandler> &&drawHandler)
             : DelegatingState(std::move(updateHandler), std::move(inputHandler), std::move(drawHandler)) {
 
+        auto &logicConfig = Game::getInstance()->getAppConfig().getLogicConfig();
+        _world = std::make_unique<logic::World>(logicConfig);
     }
 } // renderer

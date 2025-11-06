@@ -12,7 +12,7 @@ namespace logic {
      * A default observer class.
      * @tparam T the class this observer observes
      */
-    class IObserver{
+class IObserver{
     public:
         virtual void update(std::shared_ptr<T> subject)=0;
     };

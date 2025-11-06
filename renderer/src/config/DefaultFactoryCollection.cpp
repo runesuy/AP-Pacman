@@ -4,6 +4,7 @@
 
 #include "config/DefaultFactoryCollection.h"
 #include "states/DefaultStateFactory.h"
+#include "entity/DefaultEntityFactory.h"
 
 namespace renderer {
     std::unique_ptr<StateManagerFactory> DefaultFactoryCollection::getStateManagerFactory() {

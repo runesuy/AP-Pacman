@@ -11,6 +11,7 @@
 #include "config/IFactoryCollection.h"
 #include "parser/IConfigParser.h"
 #include "config/IAppConfig.h"
+#include "drawable/DrawCollection.h"
 
 namespace renderer {
     /**
@@ -36,6 +37,8 @@ namespace renderer {
         inline static std::shared_ptr<Game> _instance;
 
         explicit Game(IAppConfig& appConfig);
+
+        DrawCollection drawCollection;
     public:
         Game(Game&&) noexcept = delete;
         Game(Game&) = delete;
@@ -58,7 +61,11 @@ namespace renderer {
          */
         static std::shared_ptr<Game> getInstance();
 
-        IAppConfig &getAppConfig() const;
+        [[nodiscard]] IAppConfig &getAppConfig() const;
+
+        [[nodiscard]] const DrawCollection &getDrawCollection() const;
+
+        DrawCollection &getDrawCollection();
     };
 }
 

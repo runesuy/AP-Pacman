@@ -15,22 +15,29 @@ namespace logic {
     /**
      * An class containing observing logic for integrating with the IObserver class.
      */
-    class Observable {
-        std::vector<std::shared_ptr<IObserver<Observable>>> _observers;
+    template <typename T>
+class Observable : public std::enable_shared_from_this<T>{
+        std::vector<std::shared_ptr<IObserver<T>>> _observers;
 
+
+    protected:
         /**
          * Call update in all observers
          */
-        void updateObservers();
+        void updateObservers() {
+            for (auto &observer: _observers) {
+                observer->update(this->shared_from_this());
+            }
+        };
 
     public:
+        virtual ~Observable() = default;
         /**
          * Add an observer to this observable
          * @param observer The observer to add
          */
-        void addObserver(const std::shared_ptr<IObserver<Observable>>& observer);
+        void addObserver(const std::shared_ptr<IObserver<T>>& observer) { _observers.push_back(observer); };
 
-        virtual ~Observable() = default;
     };
 }
 

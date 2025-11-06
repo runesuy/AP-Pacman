@@ -8,7 +8,7 @@
 
 namespace renderer {
     void DrawObject::draw(sf::RenderWindow &window) {
-        for (auto &shape : getSFShapes()) {
+        for (auto &shape : getSFShapes(window)) {
             shape->setPosition(shape->getPosition() + Camera::project(getPosition(), window));
             window.draw(*shape);
         }

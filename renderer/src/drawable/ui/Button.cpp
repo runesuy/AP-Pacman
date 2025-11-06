@@ -7,12 +7,7 @@
 
 namespace renderer {
 
-
-    void Button::update() {
-
-    }
-
-    std::vector<std::unique_ptr<sf::Shape>> Button::getSFShapes() {
+    std::vector<std::unique_ptr<sf::Shape>> Button::getSFShapes(sf::RenderWindow &window) {
         std::vector<std::unique_ptr<sf::Shape>> shapes;
 
         auto rectShape = std::make_unique<sf::RectangleShape>();

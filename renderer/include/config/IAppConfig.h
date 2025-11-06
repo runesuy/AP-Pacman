@@ -13,6 +13,7 @@ namespace renderer {
     public:
         virtual IFactoryCollection& getFactoryCollection() = 0;
         virtual IConfigParser& getConfigParser() = 0;
+        virtual logic::IConfig& getLogicConfig()=0;
 
         virtual ~IAppConfig() = default;
     };
