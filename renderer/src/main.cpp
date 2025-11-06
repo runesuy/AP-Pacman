@@ -1,4 +1,3 @@
-#include <iostream>
 #include "../include/Game.h"
 #include "factories/DefaultFactoryCollection.h"
 #include "config/DefaultAppConfig.h"

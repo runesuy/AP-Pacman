@@ -17,6 +17,10 @@ int renderer::Game::run() {
 
     // load config file
     appConfig.getConfigParser().loadConfigFile();
+    appConfig.getTextureParser().loadTextures(
+            appConfig.getConfigParser().getSpriteSheetPath(),
+            appConfig.getConfigParser().getTextureRects()
+    );
 
     //create sfml window
     sf::RenderWindow window(sf::VideoMode(800, 600), "Pacman");

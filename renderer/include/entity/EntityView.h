@@ -30,7 +30,7 @@ namespace renderer {
          * Set the size of the entity view.
          * @param size
          */
-        void setSize(const logic::Size &size);
+        virtual void setSize(const logic::Size &size);
     };
 }
 

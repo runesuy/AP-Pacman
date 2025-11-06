@@ -3,7 +3,7 @@
 //
 
 #include "factories/DefaultEntityFactory.h"
-#include "entity/WallView.h"
+#include "entity/derived/WallView.h"
 #include "entity/WallModel.h"
 #include "Game.h"
 

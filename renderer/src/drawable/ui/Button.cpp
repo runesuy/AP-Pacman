@@ -17,7 +17,7 @@ namespace renderer {
         return shapes;
     }
 
-    std::vector<std::unique_ptr<sf::Sprite>> Button::getSFSprites() {
+    std::vector<std::shared_ptr<sf::Sprite>> Button::getSFSprites() {
         return {};
     };
 

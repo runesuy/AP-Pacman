@@ -9,11 +9,23 @@ namespace renderer {
         return factoryCollection;
     }
 
-    IConfigParser &DefaultAppConfig::getConfigParser(){
+    const IConfigParser & DefaultAppConfig::getConfigParser() const {
         return configParser;
     }
 
-    logic::IConfig &DefaultAppConfig::getLogicConfig() {
+    const logic::IConfig & DefaultAppConfig::getLogicConfig() const {
         return logicConfig;
+    }
+
+    IConfigParser &DefaultAppConfig::getConfigParser() {
+        return configParser;
+    }
+
+    const DefaultTextureParser &DefaultAppConfig::getTextureParser() const {
+        return textureParser;
+    }
+
+    ITextureParser &DefaultAppConfig::getTextureParser() {
+        return textureParser;
     }
 } // renderer

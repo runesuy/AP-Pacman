@@ -5,6 +5,7 @@
 #ifndef AP_PACMAN_JSONCONFIGPARSER_H
 #define AP_PACMAN_JSONCONFIGPARSER_H
 
+#include <SFML/Graphics/Rect.hpp>
 #include "IConfigParser.h"
 #include "json.hpp"
 
@@ -19,9 +20,15 @@ namespace renderer {
         json _jsonData;
         const std::string configFilePath = "resources/config.json";
     public:
-        std::string getDefaultFontPath() override;
+        [[nodiscard]] std::string getDefaultFontPath() const override;
 
         void loadConfigFile() override;
+
+        [[nodiscard]] std::string getSpriteSheetPath() const override;
+
+        [[nodiscard]] std::map<std::string, sf::IntRect> getTextureRects() const override;
+
+        [[nodiscard]] sf::IntRect getTextureRectByName(const std::string& name) const override;
     };
 
 } // renderer

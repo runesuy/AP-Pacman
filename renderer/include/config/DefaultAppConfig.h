@@ -9,6 +9,7 @@
 #include "factories/DefaultFactoryCollection.h"
 #include "parser/JSONConfigParser.h"
 #include "DefaultLogicConfig.h"
+#include "parser/DefaultTextureParser.h"
 
 namespace renderer {
 
@@ -16,12 +17,19 @@ namespace renderer {
         DefaultFactoryCollection factoryCollection;
         JSONConfigParser configParser;
         DefaultLogicConfig logicConfig;
+        DefaultTextureParser textureParser;
     public:
         IFactoryCollection &getFactoryCollection() override;
 
+        [[nodiscard]] const IConfigParser & getConfigParser() const override;
+
         IConfigParser &getConfigParser() override;
 
-        logic::IConfig &getLogicConfig() override;
+        [[nodiscard]] const logic::IConfig & getLogicConfig() const override;
+
+        [[nodiscard]] const DefaultTextureParser &getTextureParser() const override;
+
+        ITextureParser &getTextureParser() override;
     };
 } // renderer
 

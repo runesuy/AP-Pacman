@@ -7,6 +7,7 @@
 #include <string>
 #include "factories/IFactoryCollection.h"
 #include "parser/IConfigParser.h"
+#include "parser/ITextureParser.h"
 
 namespace renderer {
     /**
@@ -28,13 +29,23 @@ namespace renderer {
          * Get the configuration parser for reading and interpreting configuration files.
          * @return
          */
-        virtual IConfigParser& getConfigParser() = 0;
+        [[nodiscard]] virtual const IConfigParser& getConfigParser() const = 0;
+
+        /**
+         * Get the configuration parser for reading and interpreting configuration files.
+         * @return
+         */
+        [[nodiscard]] virtual IConfigParser& getConfigParser() = 0;
 
         /**
          * Get the logic configuration containing game logic settings.
          * @return
          */
-        virtual logic::IConfig& getLogicConfig()=0;
+        [[nodiscard]] virtual const logic::IConfig & getLogicConfig() const =0;
+
+        [[nodiscard]] virtual const ITextureParser& getTextureParser() const =0;
+
+        [[nodiscard]] virtual ITextureParser& getTextureParser() =0;
 
         virtual ~IAppConfig() = default;
     };

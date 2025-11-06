@@ -16,7 +16,7 @@ namespace logic {
         /**
          * Configuration reference for all logical settings and factories.
          */
-        IConfig& config;
+        const IConfig& config;
 
         /**
          * All objects present in the world.
@@ -28,7 +28,7 @@ namespace logic {
          * Construct a World with the given configuration.
          * @param config Logic configuration reference.
          */
-        explicit World(IConfig& config);
+        explicit World(const IConfig& config);
 
         /**
          * Update all objects in the world.
@@ -39,7 +39,7 @@ namespace logic {
          * Get the configuration reference.
          * @return
          */
-        [[nodiscard]] IConfig &getConfig() const;
+        [[nodiscard]] const IConfig &getConfig() const;
 
         /**
          * Add an object to the world.

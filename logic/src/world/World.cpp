@@ -13,11 +13,11 @@ namespace logic {
         }
     }
 
-    World::World(IConfig& config) : config(config) {
+    World::World(const IConfig& config) : config(config) {
         config.getTileMap().loadToWorld(*this);
     }
 
-    IConfig &World::getConfig() const {
+    const IConfig &World::getConfig() const {
         return config;
     }
 

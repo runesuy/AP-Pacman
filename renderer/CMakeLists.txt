@@ -63,10 +63,21 @@ set(RENDERER_SOURCES
         include/parser/TXTMapParser.h
         src/config/DefaultLogicConfig.cpp
         include/config/DefaultLogicConfig.h
-        src/entity/WallView.cpp
-        include/entity/WallView.h
+        src/entity/derived/WallView.cpp
+        include/entity/derived/WallView.h
         src/drawable/DrawCollection.cpp
         include/drawable/DrawCollection.h
+        src/entity/modular/ModularEntityView.cpp
+        include/entity/modular/ModularEntityView.h
+        src/entity/modular/IEntityViewModule.cpp
+        include/entity/modular/IEntityViewModule.h
+        src/entity/modular/modules/RectangleModule.cpp
+        include/entity/modular/modules/RectangleModule.h
+        src/entity/modular/modules/SpriteModule.cpp
+        include/entity/modular/modules/SpriteModule.h
+        include/parser/ITextureParser.h
+        src/parser/DefaultTextureParser.cpp
+        include/parser/DefaultTextureParser.h
 )
 
 add_executable(Renderer ${RENDERER_SOURCES})
