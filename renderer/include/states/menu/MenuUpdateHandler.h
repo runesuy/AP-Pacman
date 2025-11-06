@@ -10,6 +10,9 @@
 namespace renderer {
     class IState;
 
+    /**
+     * Update handler for the MenuState, managing updates specific to the main menu.
+     */
     class MenuUpdateHandler : public IStateUpdateHandler {
     public:
         void update(IState& state) override;

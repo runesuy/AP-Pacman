@@ -15,8 +15,6 @@ set(RENDERER_SOURCES
         include/states/DelegatingState.h
         src/core/IInputHandler.cpp
         include/core/IInputHandler.h
-        src/core/IUpdateHandler.cpp
-        include/core/IUpdateHandler.h
         src/core/IDrawHandler.cpp
         include/core/IDrawHandler.h
         src/states/menu/MenuUpdateHandler.cpp
@@ -26,13 +24,13 @@ set(RENDERER_SOURCES
         src/states/menu/MenuInputHandler.cpp
         include/states/menu/MenuInputHandler.h
         src/states/StateManagerFactory.cpp
-        include/states/StateManagerFactory.h
+        include/factories/StateManagerFactory.h
         include/states/IStateFactory.h
-        src/states/DefaultStateFactory.cpp
-        include/states/DefaultStateFactory.h
-        include/config/IFactoryCollection.h
-        src/config/DefaultFactoryCollection.cpp
-        include/config/DefaultFactoryCollection.h
+        src/factories/DefaultStateFactory.cpp
+        include/factories/DefaultStateFactory.h
+        include/factories/IFactoryCollection.h
+        src/factories/DefaultFactoryCollection.cpp
+        include/factories/DefaultFactoryCollection.h
         include/parser/IConfigParser.h
         src/parser/JSONConfigParser.cpp
         include/parser/JSONConfigParser.h
@@ -58,8 +56,8 @@ set(RENDERER_SOURCES
         include/states/IStateInputHandler.h
         src/states/IStateUpdateHandler.cpp
         include/states/IStateUpdateHandler.h
-        src/entity/DefaultEntityFactory.cpp
-        include/entity/DefaultEntityFactory.h
+        src/factories/DefaultEntityFactory.cpp
+        include/factories/DefaultEntityFactory.h
         include/parser/IMapParser.h
         src/parser/TXTMapParser.cpp
         include/parser/TXTMapParser.h

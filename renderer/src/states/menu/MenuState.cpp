@@ -9,7 +9,7 @@
 
 namespace renderer {
     MenuState::MenuState(std::unique_ptr<IStateUpdateHandler> &&updateHandler, std::unique_ptr<IStateInputHandler> &&inputHandler,
-                         std::unique_ptr<logic::IDrawHandler>&& drawHandler) : DelegatingState(std::move(updateHandler), std::move(inputHandler), std::move(drawHandler)) {
+                         std::unique_ptr<IDrawHandler>&& drawHandler) : DelegatingState(std::move(updateHandler), std::move(inputHandler), std::move(drawHandler)) {
 
     }
 

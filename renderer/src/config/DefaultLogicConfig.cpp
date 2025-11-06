@@ -4,7 +4,7 @@
 
 #include "config/DefaultLogicConfig.h"
 #include "parser/TXTMapParser.h"
-#include "entity/DefaultEntityFactory.h"
+#include "factories/DefaultEntityFactory.h"
 
 namespace renderer {
     logic::TileMap DefaultLogicConfig::getTileMap() const {

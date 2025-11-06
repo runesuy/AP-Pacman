@@ -14,6 +14,12 @@ namespace logic {
      */
 class IObserver{
     public:
+        virtual ~IObserver()=default;
+
+        /**
+         * Called when the subject being observed has changed.
+         * @param subject The subject being observed.
+         */
         virtual void update(std::shared_ptr<T> subject)=0;
     };
 }

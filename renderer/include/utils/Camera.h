@@ -12,6 +12,12 @@
 #include "world/Size.h"
 
 namespace renderer {
+
+    /**
+     * Utility class for projecting logical game coordinates to screen coordinates.
+     * Provides static methods to convert logical positions and sizes to pixel values
+     * based on the dimensions of the render window.
+     */
     class Camera {
     public:
         /**

@@ -17,11 +17,11 @@ namespace renderer {
     class DelegatingState : public IState  {
         std::unique_ptr<IStateUpdateHandler> _updateHandler;
         std::unique_ptr<IStateInputHandler> _inputHandler;
-        std::unique_ptr<logic::IDrawHandler> _drawHandler;
+        std::unique_ptr<renderer::IDrawHandler> _drawHandler;
     public:
         DelegatingState(std::unique_ptr<IStateUpdateHandler> &&updateHandler,
                         std::unique_ptr<IStateInputHandler> &&inputHandler,
-                        std::unique_ptr<logic::IDrawHandler> &&drawHandler);
+                        std::unique_ptr<renderer::IDrawHandler> &&drawHandler);
 
         void update() override;
 

@@ -9,7 +9,10 @@
 #include "core/IDrawHandler.h"
 
 namespace renderer {
-class MenuDrawHandler : public logic::IDrawHandler {
+    /**
+     * Draw handler for the MenuState, responsible for rendering the main menu.
+     */
+class MenuDrawHandler : public IDrawHandler {
         bool _fontLoaded = false;
         sf::Font _font;
     public:

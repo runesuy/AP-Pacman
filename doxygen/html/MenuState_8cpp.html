@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Pacman: renderer/src/states/MenuState.cpp File Reference</title>
+<title>Pacman: renderer/src/states/menu/MenuState.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d10aa5f1e26260a914a037377583e9a7.html">renderer</a></li><li class="navelem"><a class="el" href="dir_6738159fedaa62764926ef00595e65f1.html">src</a></li><li class="navelem"><a class="el" href="dir_d026bc01d9d935a7290f61af036e970c.html">states</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d10aa5f1e26260a914a037377583e9a7.html">renderer</a></li><li class="navelem"><a class="el" href="dir_6738159fedaa62764926ef00595e65f1.html">src</a></li><li class="navelem"><a class="el" href="dir_d026bc01d9d935a7290f61af036e970c.html">states</a></li><li class="navelem"><a class="el" href="dir_65a14fc777b5ac1f716908e657adbecd.html">menu</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -78,11 +78,45 @@ $(function() {
   <div class="headertitle"><div class="title">MenuState.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="MenuState_8h_source.html">../../include/states/MenuState.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="MenuState_8h_source.html">../../../include/states/menu/MenuState.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="IDrawHandler_8h_source.html">core/IDrawHandler.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="IStateInputHandler_8h_source.html">states/IStateInputHandler.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="IStateUpdateHandler_8h_source.html">states/IStateUpdateHandler.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for MenuState.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="MenuState_8cpp__incl.png" border="0" usemap="#arenderer_2src_2states_2MenuState_8cpp" alt=""/></div>
+<div class="center"><img src="MenuState_8cpp__incl.png" border="0" usemap="#arenderer_2src_2states_2menu_2MenuState_8cpp" alt=""/></div>
+<map name="arenderer_2src_2states_2menu_2MenuState_8cpp" id="arenderer_2src_2states_2menu_2MenuState_8cpp">
+<area shape="rect" title=" " alt="" coords="351,5,515,45"/>
+<area shape="rect" href="MenuState_8h.html" title=" " alt="" coords="302,93,451,133"/>
+<area shape="poly" title=" " alt="" coords="422,47,399,83,394,80,418,44"/>
+<area shape="rect" href="IDrawHandler_8h.html" title=" " alt="" coords="38,255,193,280"/>
+<area shape="poly" title=" " alt="" coords="387,48,340,69,291,96,230,135,177,183,152,214,131,244,127,241,148,211,173,179,227,130,289,91,337,65,385,43"/>
+<area shape="rect" href="IStateUpdateHandler_8h.html" title=" " alt="" coords="415,255,584,280"/>
+<area shape="poly" title=" " alt="" coords="445,44,466,92,487,173,499,241,493,241,481,174,461,94,440,47"/>
+<area shape="rect" href="IStateInputHandler_8h.html" title=" " alt="" coords="609,255,763,280"/>
+<area shape="poly" title=" " alt="" coords="454,44,666,243,662,247,451,47"/>
+<area shape="rect" href="DelegatingState_8h.html" title=" " alt="" coords="188,181,339,207"/>
+<area shape="poly" title=" " alt="" coords="351,136,293,175,290,171,348,131"/>
+<area shape="rect" title=" " alt="" coords="287,328,365,353"/>
+<area shape="poly" title=" " alt="" coords="375,134,334,315,329,314,370,133"/>
+<area shape="rect" href="IState_8h.html" title=" " alt="" coords="217,255,289,280"/>
+<area shape="poly" title=" " alt="" coords="264,207,259,242,254,241,259,207"/>
+<area shape="poly" title=" " alt="" coords="274,206,303,254,323,313,318,315,298,256,270,208"/>
+<area shape="poly" title=" " alt="" coords="241,209,153,251,151,246,238,204"/>
+<area shape="poly" title=" " alt="" coords="302,204,449,248,447,253,300,209"/>
+<area shape="poly" title=" " alt="" coords="332,204,605,250,604,255,331,209"/>
+<area shape="rect" title=" " alt="" coords="5,328,252,353"/>
+<area shape="poly" title=" " alt="" coords="234,282,162,323,159,319,231,278"/>
+<area shape="poly" title=" " alt="" coords="267,278,306,316,302,320,263,282"/>
+<area shape="poly" title=" " alt="" coords="120,280,127,314,121,315,115,281"/>
+<area shape="rect" href="IUpdateHandler_8h.html" title=" " alt="" coords="416,328,583,353"/>
+<area shape="poly" title=" " alt="" coords="502,280,502,314,497,314,497,280"/>
+<area shape="rect" href="IInputHandler_8h.html" title=" " alt="" coords="609,328,763,353"/>
+<area shape="poly" title=" " alt="" coords="689,280,689,314,683,314,683,280"/>
+<area shape="rect" title=" " alt="" coords="595,401,777,427"/>
+<area shape="poly" title=" " alt="" coords="689,354,689,388,683,388,683,354"/>
+</map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>

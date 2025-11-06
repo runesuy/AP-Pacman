@@ -13,6 +13,9 @@ namespace logic {
 
     class TileMap {
     public:
+        /**
+         * All possible tile types in the tile map.
+         */
         enum TileType {
             EMPTY = 0,
             WALL = 1,
@@ -23,12 +26,29 @@ namespace logic {
             PLAYER = 6
         };
     private:
+        /**
+         * The tile map data represented as a 2D vector of TileType.
+         */
         std::vector<std::vector<TileType>> mapData;
     public:
+
+        /**
+         * @return A row major 2d grid representing the tile map's tile types.
+         */
         [[nodiscard]] const std::vector<std::vector<TileType>> &getMapData() const;
 
+        /**
+         * Load the tile map into the given world.
+         * An entity is created for each tile based on its type.
+         * @param world
+         */
         void loadToWorld(World& world);
 
+        /**
+         * Add a row to the tile map.
+         * @param row A vector representing a row of tile types.
+         * @throws std::invalid_argument if the row size does not match existing rows.
+         */
         void addRow(const std::vector<TileType>& row);
     };
 

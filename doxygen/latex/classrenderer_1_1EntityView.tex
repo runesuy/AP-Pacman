@@ -6,20 +6,75 @@
 
 
 
-Inheritance diagram for renderer\+::Entity\+View\+:
-% FIG 0
+Inheritance diagram for renderer\+::Entity\+View\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classrenderer_1_1EntityView__inherit__graph}
+\end{center}
+\end{figure}
 
 
-Collaboration diagram for renderer\+::Entity\+View\+:
-% FIG 1
-\doxysubsubsection*{Additional Inherited Members}
-\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IObserver}{logic\+::\+IObserver$<$ logic\+::\+IEntity\+Model $>$}}}
+Collaboration diagram for renderer\+::Entity\+View\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classrenderer_1_1EntityView__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \mbox{\hyperlink{classlogic_1_1IObserver_a3d8efd8c9d8c5cd613138b275fb57f85}{update}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IEntityModel}{logic\+::\+IEntity\+Model}} $>$ subject)=0
+const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \& \mbox{\hyperlink{classrenderer_1_1EntityView_a4b2d240028a5fadd9f9bda861306bcf4}{get\+Size}} () const
+\item 
+void \mbox{\hyperlink{classrenderer_1_1EntityView_ab1a10febe0d9e2415040418075de0217}{set\+Size}} (const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1DrawObject}{renderer\+::\+Draw\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \& \mbox{\hyperlink{classrenderer_1_1DrawObject_a1317e66b07b34c0fa2fbf7472f45207e}{get\+Position}} () const
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&position)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de728}{draw}} (sf\+::\+Render\+Window \&window) override
+\item 
+virtual std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ \mbox{\hyperlink{classrenderer_1_1DrawObject_a9612dd69d98b224a4088b73b266a9716}{get\+SFShapes}} (sf\+::\+Render\+Window \&window)=0
+\item 
+virtual std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ \mbox{\hyperlink{classrenderer_1_1DrawObject_a3f6d68c32bed30050334cb5f54d23d35}{get\+SFSprites}} ()=0
+\item 
+virtual std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ \mbox{\hyperlink{classrenderer_1_1DrawObject_af19f9063d49b40fd7ea39e81bb634208}{get\+SFTexts}} ()=0
 \end{DoxyCompactItemize}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Detailed Description}
+View class representing the visual aspect of an entity in the game. Inherits from \doxylink{classrenderer_1_1DrawObject}{Draw\+Object} to provide drawing capabilities. When inheriting create corresponding Entity\+Model class to handle logic side.
+
+Has a size property to define the dimensions of the entity in the game world. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1EntityView_a4b2d240028a5fadd9f9bda861306bcf4}\label{classrenderer_1_1EntityView_a4b2d240028a5fadd9f9bda861306bcf4} 
+\index{renderer::EntityView@{renderer::EntityView}!getSize@{getSize}}
+\index{getSize@{getSize}!renderer::EntityView@{renderer::EntityView}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \& renderer\+::\+Entity\+View\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the size of the entity view. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{classrenderer_1_1EntityView_ab1a10febe0d9e2415040418075de0217}\label{classrenderer_1_1EntityView_ab1a10febe0d9e2415040418075de0217} 
+\index{renderer::EntityView@{renderer::EntityView}!setSize@{setSize}}
+\index{setSize@{setSize}!renderer::EntityView@{renderer::EntityView}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void renderer\+::\+Entity\+View\+::set\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&}]{size }\end{DoxyParamCaption})}
+
+Set the size of the entity view. 
+\begin{DoxyParams}{Parameters}
+{\em size} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-renderer/include/entity/\mbox{\hyperlink{EntityView_8h}{Entity\+View.\+h}}\end{DoxyCompactItemize}
+renderer/include/entity/\mbox{\hyperlink{EntityView_8h}{Entity\+View.\+h}}\item 
+renderer/src/entity/\mbox{\hyperlink{EntityView_8cpp}{Entity\+View.\+cpp}}\end{DoxyCompactItemize}

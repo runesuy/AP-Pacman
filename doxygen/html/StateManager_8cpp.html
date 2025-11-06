@@ -77,10 +77,68 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="StateManager_8h_source.html">../../include/states/StateManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="IState_8h_source.html">states/IState.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="IStateFactory_8h_source.html">states/IStateFactory.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for StateManager.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="StateManager_8cpp__incl.png" border="0" usemap="#arenderer_2src_2states_2StateManager_8cpp" alt=""/></div>
+<map name="arenderer_2src_2states_2StateManager_8cpp" id="arenderer_2src_2states_2StateManager_8cpp">
+<area shape="rect" title=" " alt="" coords="318,5,462,45"/>
+<area shape="rect" href="StateManager_8h.html" title=" " alt="" coords="321,93,458,133"/>
+<area shape="poly" title=" " alt="" coords="392,46,392,79,387,79,387,46"/>
+<area shape="rect" href="IState_8h.html" title=" " alt="" coords="108,101,224,126"/>
+<area shape="poly" title=" " alt="" coords="341,48,209,98,207,93,339,43"/>
+<area shape="rect" href="IStateFactory_8h.html" title=" " alt="" coords="482,101,644,126"/>
+<area shape="poly" title=" " alt="" coords="429,43,529,92,527,97,426,48"/>
+<area shape="rect" title=" " alt="" coords="364,181,546,207"/>
+<area shape="poly" title=" " alt="" coords="407,132,439,169,435,172,403,135"/>
+<area shape="rect" title=" " alt="" coords="570,181,628,207"/>
+<area shape="poly" title=" " alt="" coords="441,131,558,175,556,180,439,136"/>
+<area shape="rect" title=" " alt="" coords="388,695,466,720"/>
+<area shape="poly" title=" " alt="" coords="378,135,346,192,333,228,328,266,328,562,336,599,354,632,378,661,402,684,399,688,374,665,350,635,331,601,323,562,323,266,328,227,341,190,373,132"/>
+<area shape="rect" href="World_8h.html" title=" " alt="" coords="652,181,762,207"/>
+<area shape="poly" title=" " alt="" coords="459,129,648,176,647,181,458,134"/>
+<area shape="rect" title=" " alt="" coords="42,181,289,207"/>
+<area shape="poly" title=" " alt="" coords="337,136,212,179,210,174,335,131"/>
+<area shape="rect" href="IEntityFactory_8h.html" title=" " alt="" coords="567,328,730,353"/>
+<area shape="poly" title=" " alt="" coords="702,208,677,256,657,315,652,313,672,254,698,206"/>
+<area shape="rect" title=" " alt="" coords="465,621,528,647"/>
+<area shape="poly" title=" " alt="" coords="655,209,572,231,481,261,441,279,408,299,387,319,379,340,379,489,381,508,388,527,409,561,438,590,467,612,464,616,435,594,405,565,383,529,376,510,374,489,374,339,382,316,405,294,439,274,479,256,571,226,654,204"/>
+<area shape="rect" href="WorldObject_8h.html" title=" " alt="" coords="886,548,1040,573"/>
+<area shape="poly" title=" " alt="" coords="764,202,821,217,880,243,906,262,927,283,941,309,946,339,946,415,951,480,960,534,955,535,945,480,940,415,940,340,936,311,922,286,903,266,878,248,820,222,762,207"/>
+<area shape="rect" href="IConfig_8h.html" title=" " alt="" coords="686,255,765,280"/>
+<area shape="poly" title=" " alt="" coords="713,206,722,241,717,242,707,208"/>
+<area shape="rect" href="WallModel_8h.html" title=" " alt="" coords="593,401,696,427"/>
+<area shape="poly" title=" " alt="" coords="650,354,648,388,643,388,645,354"/>
+<area shape="rect" href="EntityModel_8h.html" title=" " alt="" coords="586,475,698,500"/>
+<area shape="poly" title=" " alt="" coords="646,427,645,461,640,461,641,427"/>
+<area shape="poly" title=" " alt="" coords="586,502,536,520,512,533,490,550,466,580,449,616,438,651,432,682,427,681,433,650,444,614,461,578,486,546,509,529,534,515,584,497"/>
+<area shape="rect" href="Position_8h.html" title=" " alt="" coords="798,621,925,647"/>
+<area shape="poly" title=" " alt="" coords="692,498,768,519,802,532,825,546,846,575,858,607,853,609,842,578,821,550,799,537,766,524,690,503"/>
+<area shape="poly" title=" " alt="" coords="587,501,542,519,523,532,506,550,499,563,496,578,495,607,490,607,490,577,494,561,502,546,519,528,540,514,585,496"/>
+<area shape="rect" href="Observable_8h.html" title=" " alt="" coords="516,548,685,573"/>
+<area shape="poly" title=" " alt="" coords="637,502,616,537,612,535,632,499"/>
+<area shape="poly" title=" " alt="" coords="694,497,898,542,897,548,693,503"/>
+<area shape="rect" href="Size_8h.html" title=" " alt="" coords="710,548,811,573"/>
+<area shape="poly" title=" " alt="" coords="662,498,730,538,728,543,659,502"/>
+<area shape="rect" href="ICoordinate_8h.html" title=" " alt="" coords="756,695,866,720"/>
+<area shape="poly" title=" " alt="" coords="855,649,829,685,825,682,851,645"/>
+<area shape="poly" title=" " alt="" coords="597,575,575,610,542,649,507,673,472,691,469,687,505,669,538,645,571,607,592,572"/>
+<area shape="poly" title=" " alt="" coords="585,576,526,615,523,611,582,571"/>
+<area shape="rect" href="IObserver_8h.html" title=" " alt="" coords="603,621,699,647"/>
+<area shape="poly" title=" " alt="" coords="611,572,637,609,633,612,606,575"/>
+<area shape="poly" title=" " alt="" coords="616,649,477,693,475,688,614,644"/>
+<area shape="poly" title=" " alt="" coords="948,576,891,615,888,611,945,571"/>
+<area shape="poly" title=" " alt="" coords="766,573,789,646,803,681,798,683,784,648,761,574"/>
+<area shape="poly" title=" " alt="" coords="715,282,673,320,669,317,711,278"/>
+<area shape="rect" href="TileMap_8h.html" title=" " alt="" coords="722,475,849,500"/>
+<area shape="poly" title=" " alt="" coords="731,280,781,460,776,462,726,281"/>
+<area shape="poly" title=" " alt="" coords="757,503,644,545,642,541,755,498"/>
+<area shape="poly" title=" " alt="" coords="815,498,922,540,921,545,813,502"/>
+<area shape="poly" title=" " alt="" coords="122,129,74,149,51,164,32,183,18,203,11,221,8,266,8,562,11,575,19,588,49,612,94,633,149,651,270,679,375,697,374,702,269,685,147,656,92,638,46,616,15,591,6,577,3,562,3,266,6,220,13,200,28,180,48,160,72,145,120,124"/>
+<area shape="poly" title=" " alt="" coords="168,126,168,167,163,167,163,126"/>
+</map>
 </div>
 </div></div><!-- contents -->
 <!-- start footer part -->

@@ -7,6 +7,9 @@
 
 namespace logic {
 
+    /**
+     * Interface representing a 2D coordinate with x and y values.
+     */
     class ICoordinate {
     public:
         /**

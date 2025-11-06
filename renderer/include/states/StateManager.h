@@ -17,6 +17,9 @@ namespace renderer {
     class IStateFactory;
     class IState;
 
+    /**
+     * Manages the stack of game states, allowing for state transitions and delegating input, update, and draw calls to the current state.
+     */
     class StateManager {
         std::stack<std::unique_ptr<IState>> stack;
         std::unique_ptr<IStateFactory> stateFactory;

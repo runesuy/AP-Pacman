@@ -9,6 +9,9 @@
 
 namespace renderer {
 
+    /**
+     * Exception thrown when a file cannot be opened.
+     */
     class FileNotOpenedException : public std::runtime_error {
         std::string path;
     public:

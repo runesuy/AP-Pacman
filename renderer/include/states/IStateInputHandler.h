@@ -11,7 +11,10 @@ namespace renderer {
     class StateManager;
     class IState;
 
-    class IStateInputHandler : public logic::IInputHandler {
+    /**
+     * Interface for handling input specific to a game state.
+     */
+    class IStateInputHandler : public renderer::IInputHandler {
     public:
         virtual void processInput(sf::Event& event, StateManager &stateManager, IState& state)=0;
 

@@ -11,6 +11,10 @@
 namespace renderer {
     using json = nlohmann::json;
 
+    /**
+     * Concrete implementation of IConfigParser that reads configuration from a JSON file.
+     * Reads file resources/config.json
+     */
     class JSONConfigParser : public IConfigParser {
         json _jsonData;
         const std::string configFilePath = "resources/config.json";

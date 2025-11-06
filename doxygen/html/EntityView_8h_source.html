@@ -88,23 +88,33 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef AP_PACMAN_ENTITYVIEW_H</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define AP_PACMAN_ENTITYVIEW_H</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="IObserver_8h.html">observer/IObserver.h</a>&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="IEntityModel_8h.html">entity/IEntityModel.h</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerenderer.html">renderer</a> {</div>
-<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classrenderer_1_1EntityView.html">   11</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1EntityView.html">EntityView</a> : <span class="keyword">public</span> <a class="code hl_class" href="classlogic_1_1IObserver.html">logic::IObserver</a>&lt;logic::IEntityModel&gt; {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="EntityModel_8h.html">entity/EntityModel.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="DrawObject_8h.html">drawable/DrawObject.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerenderer.html">renderer</a> {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    };</div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classrenderer_1_1EntityView.html">   20</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1EntityView.html">EntityView</a> : <span class="keyword">public</span> <a class="code hl_class" href="classrenderer_1_1DrawObject.html">DrawObject</a>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_class" href="classlogic_1_1Size.html">logic::Size</a> size={0,0};</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        [[nodiscard]] <span class="keyword">const</span> <a class="code hl_class" href="classlogic_1_1Size.html">logic::Size</a> &amp;<a class="code hl_function" href="classrenderer_1_1EntityView.html#a4b2d240028a5fadd9f9bda861306bcf4">getSize</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classrenderer_1_1EntityView.html#ab1a10febe0d9e2415040418075de0217">setSize</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlogic_1_1Size.html">logic::Size</a> &amp;size);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    };</div>
 </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_ENTITYVIEW_H</span></div>
-<div class="ttc" id="aIEntityModel_8h_html"><div class="ttname"><a href="IEntityModel_8h.html">IEntityModel.h</a></div></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_ENTITYVIEW_H</span></div>
+<div class="ttc" id="aDrawObject_8h_html"><div class="ttname"><a href="DrawObject_8h.html">DrawObject.h</a></div></div>
+<div class="ttc" id="aEntityModel_8h_html"><div class="ttname"><a href="EntityModel_8h.html">EntityModel.h</a></div></div>
 <div class="ttc" id="aIObserver_8h_html"><div class="ttname"><a href="IObserver_8h.html">IObserver.h</a></div></div>
-<div class="ttc" id="aclasslogic_1_1IObserver_html"><div class="ttname"><a href="classlogic_1_1IObserver.html">logic::IObserver</a></div><div class="ttdef"><b>Definition</b> IObserver.h:15</div></div>
-<div class="ttc" id="aclassrenderer_1_1EntityView_html"><div class="ttname"><a href="classrenderer_1_1EntityView.html">renderer::EntityView</a></div><div class="ttdef"><b>Definition</b> EntityView.h:11</div></div>
-<div class="ttc" id="anamespacerenderer_html"><div class="ttname"><a href="namespacerenderer.html">renderer</a></div><div class="ttdef"><b>Definition</b> Camera.h:9</div></div>
+<div class="ttc" id="aclasslogic_1_1Size_html"><div class="ttname"><a href="classlogic_1_1Size.html">logic::Size</a></div><div class="ttdef"><b>Definition</b> Size.h:16</div></div>
+<div class="ttc" id="aclassrenderer_1_1DrawObject_html"><div class="ttname"><a href="classrenderer_1_1DrawObject.html">renderer::DrawObject</a></div><div class="ttdef"><b>Definition</b> DrawObject.h:17</div></div>
+<div class="ttc" id="aclassrenderer_1_1EntityView_html"><div class="ttname"><a href="classrenderer_1_1EntityView.html">renderer::EntityView</a></div><div class="ttdef"><b>Definition</b> EntityView.h:20</div></div>
+<div class="ttc" id="aclassrenderer_1_1EntityView_html_a4b2d240028a5fadd9f9bda861306bcf4"><div class="ttname"><a href="classrenderer_1_1EntityView.html#a4b2d240028a5fadd9f9bda861306bcf4">renderer::EntityView::getSize</a></div><div class="ttdeci">const logic::Size &amp; getSize() const</div><div class="ttdef"><b>Definition</b> EntityView.cpp:7</div></div>
+<div class="ttc" id="aclassrenderer_1_1EntityView_html_ab1a10febe0d9e2415040418075de0217"><div class="ttname"><a href="classrenderer_1_1EntityView.html#ab1a10febe0d9e2415040418075de0217">renderer::EntityView::setSize</a></div><div class="ttdeci">void setSize(const logic::Size &amp;size)</div><div class="ttdef"><b>Definition</b> EntityView.cpp:11</div></div>
+<div class="ttc" id="anamespacerenderer_html"><div class="ttname"><a href="namespacerenderer.html">renderer</a></div><div class="ttdef"><b>Definition</b> DefaultAppConfig.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

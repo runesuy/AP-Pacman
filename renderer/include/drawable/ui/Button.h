@@ -9,6 +9,10 @@
 
 namespace renderer {
 
+    /**
+     * Class representing a UI button in the game.
+     * @todo finish implementation
+     */
     class Button : public DrawObject {
     public:
         std::vector<std::unique_ptr<sf::Shape>> getSFShapes(sf::RenderWindow &window) override;

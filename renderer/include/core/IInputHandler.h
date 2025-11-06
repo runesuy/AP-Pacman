@@ -7,15 +7,16 @@
 
 #include <SFML/Window/Event.hpp>
 
-namespace logic {
+    namespace renderer {
+        /**
+                 *
+                 */
+        class IInputHandler {
+        public:
+            virtual void processInput(sf::Event& event)=0;
 
-    class IInputHandler {
-    public:
-        virtual void processInput(sf::Event& event)=0;
-
-        virtual ~IInputHandler() = default;
-    };
-
-} // renderer
+            virtual ~IInputHandler() = default;
+        };
+    }// renderer
 
 #endif //AP_PACMAN_IINPUTHANDLER_H

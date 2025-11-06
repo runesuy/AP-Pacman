@@ -8,6 +8,11 @@
 namespace renderer {
     class MenuState;
     class LevelState;
+
+    /**
+     * Interface for state factory, responsible for creating different game states.
+     * Interchangeable using config system.
+     */
     class IStateFactory {
     public:
         virtual std::unique_ptr<MenuState> createMenuState()=0;

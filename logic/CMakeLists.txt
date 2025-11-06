@@ -25,7 +25,9 @@ set(LOGIC_SOURCES
         include/entity/WallModel.h
         src/world/WorldObject.cpp
         include/IConfig.h
-        include/entity/EntityModel.cpp
+        src/entity/EntityModel.cpp
+        src/core/IUpdateHandler.cpp
+        include/core/IUpdateHandler.h
 )
 
 add_library(Logic ${LOGIC_SOURCES})

@@ -2,8 +2,8 @@
 // Created by rune-suy on 11/4/25.
 //
 
-#include "../../include/states/StateManagerFactory.h"
-#include "../../include/states/DefaultStateFactory.h"
+#include "factories/StateManagerFactory.h"
+#include "factories/DefaultStateFactory.h"
 #include "states/menu/MenuState.h"
 #include "states/IStateInputHandler.h"
 #include "states/IStateUpdateHandler.h"

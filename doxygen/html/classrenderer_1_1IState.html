@@ -85,17 +85,56 @@ $(function() {
 Inheritance diagram for renderer::IState:</div>
 <div class="dyncontent">
 <div class="center"><img src="classrenderer_1_1IState__inherit__graph.png" border="0" usemap="#arenderer_1_1IState_inherit__map" alt="Inheritance graph"/></div>
+<map name="arenderer_1_1IState_inherit__map" id="arenderer_1_1IState_inherit__map">
+<area shape="rect" title=" " alt="" coords="111,5,233,31"/>
+<area shape="rect" href="classrenderer_1_1DelegatingState.html" title=" " alt="" coords="77,79,267,104"/>
+<area shape="poly" title=" " alt="" coords="175,44,175,79,169,79,169,44"/>
+<area shape="rect" href="classrenderer_1_1LevelState.html" title=" " alt="" coords="5,152,160,177"/>
+<area shape="poly" title=" " alt="" coords="149,115,99,154,96,150,145,110"/>
+<area shape="rect" href="classrenderer_1_1MenuState.html" title=" " alt="" coords="184,152,339,177"/>
+<area shape="poly" title=" " alt="" coords="199,110,248,150,245,154,195,115"/>
+</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aeae0f541281a7ba2112e3bc10695f91c" id="r_aeae0f541281a7ba2112e3bc10695f91c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1IState.html#aeae0f541281a7ba2112e3bc10695f91c">update</a> ()=0</td></tr>
 <tr class="separator:aeae0f541281a7ba2112e3bc10695f91c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3101659bc6b481fc2001e7e59a5f34b8" id="r_a3101659bc6b481fc2001e7e59a5f34b8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1IState.html#a3101659bc6b481fc2001e7e59a5f34b8">processInput</a> (sf::Event &amp;event)=0</td></tr>
-<tr class="separator:a3101659bc6b481fc2001e7e59a5f34b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7795fde03ef5a5504a6ba8f7834c5bd9" id="r_a7795fde03ef5a5504a6ba8f7834c5bd9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1IState.html#a7795fde03ef5a5504a6ba8f7834c5bd9">processInput</a> (sf::Event &amp;event, <a class="el" href="classrenderer_1_1StateManager.html">StateManager</a> &amp;stateManager)=0</td></tr>
+<tr class="separator:a7795fde03ef5a5504a6ba8f7834c5bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae962641c4ec98033b21fabb8b9af699" id="r_aae962641c4ec98033b21fabb8b9af699"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1IState.html#aae962641c4ec98033b21fabb8b9af699">draw</a> (sf::RenderWindow &amp;window)=0</td></tr>
 <tr class="separator:aae962641c4ec98033b21fabb8b9af699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0eccb586fc4819e616966f4c761c39d" id="r_ac0eccb586fc4819e616966f4c761c39d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1IState.html#ac0eccb586fc4819e616966f4c761c39d">~IState</a> ()=default</td></tr>
+<tr class="separator:ac0eccb586fc4819e616966f4c761c39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Interface for game states, defining methods for updating, processing input, and drawing. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac0eccb586fc4819e616966f4c761c39d" name="ac0eccb586fc4819e616966f4c761c39d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0eccb586fc4819e616966f4c761c39d">&#9670;&#160;</a></span>~IState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual renderer::IState::~IState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="aae962641c4ec98033b21fabb8b9af699" name="aae962641c4ec98033b21fabb8b9af699"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae962641c4ec98033b21fabb8b9af699">&#9670;&#160;</a></span>draw()</h2>
@@ -120,11 +159,19 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Draw the state onto the provided render window. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classrenderer_1_1DelegatingState.html#a78ad8e7bbf4ad31de6d7c62074f894e1">renderer::DelegatingState</a>.</p>
 
 </div>
 </div>
-<a id="a3101659bc6b481fc2001e7e59a5f34b8" name="a3101659bc6b481fc2001e7e59a5f34b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3101659bc6b481fc2001e7e59a5f34b8">&#9670;&#160;</a></span>processInput()</h2>
+<a id="a7795fde03ef5a5504a6ba8f7834c5bd9" name="a7795fde03ef5a5504a6ba8f7834c5bd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7795fde03ef5a5504a6ba8f7834c5bd9">&#9670;&#160;</a></span>processInput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,8 +183,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual void renderer::IState::processInput </td>
           <td>(</td>
           <td class="paramtype">sf::Event &amp;&#160;</td>
-          <td class="paramname"><em>event</em></td><td>)</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classrenderer_1_1StateManager.html">StateManager</a> &amp;&#160;</td>
+          <td class="paramname"><em>stateManager</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -146,6 +203,15 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Process input events for the state. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td></td></tr>
+    <tr><td class="paramname">stateManager</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classrenderer_1_1DelegatingState.html#a0f2edc8f97d5dec5ed8b97571ceb0050">renderer::DelegatingState</a>.</p>
 
 </div>
 </div>
@@ -171,6 +237,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Update the state logic. </p>
+
+<p>Implemented in <a class="el" href="classrenderer_1_1DelegatingState.html#af34dff5edb2725d7fe9061369dd2ca55">renderer::DelegatingState</a>.</p>
 
 </div>
 </div>

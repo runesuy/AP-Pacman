@@ -9,7 +9,10 @@
 
 namespace renderer {
 
-class LevelDrawHandler : public logic::IDrawHandler {
+    /**
+     * Draw handler for the LevelState, responsible for rendering the game level and its entities.
+     */
+class LevelDrawHandler : public IDrawHandler {
     public:
         void draw(sf::RenderWindow &window) override;
     };

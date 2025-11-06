@@ -10,6 +10,10 @@
 namespace logic {
 
     class WorldObject {
+        /**
+         * The position of the world object.
+         * Used for spatial representation in the world.
+         */
         Position position;
     public:
         /**

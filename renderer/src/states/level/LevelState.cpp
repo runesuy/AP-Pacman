@@ -10,7 +10,7 @@
 
 namespace renderer {
     LevelState::LevelState(std::unique_ptr<IStateUpdateHandler> &&updateHandler,
-                           std::unique_ptr<IStateInputHandler> &&inputHandler, std::unique_ptr<logic::IDrawHandler> &&drawHandler)
+                           std::unique_ptr<IStateInputHandler> &&inputHandler, std::unique_ptr<IDrawHandler> &&drawHandler)
             : DelegatingState(std::move(updateHandler), std::move(inputHandler), std::move(drawHandler)) {
 
         auto &logicConfig = Game::getInstance()->getAppConfig().getLogicConfig();

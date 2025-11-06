@@ -1,5 +1,5 @@
 \doxysection{Camera.\+h}
-\hypertarget{Camera_8h_source}{}\label{Camera_8h_source}\index{renderer/include/Camera.h@{renderer/include/Camera.h}}
+\hypertarget{Camera_8h_source}{}\label{Camera_8h_source}\index{renderer/include/utils/Camera.h@{renderer/include/utils/Camera.h}}
 \mbox{\hyperlink{Camera_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{//}}
@@ -9,14 +9,36 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_CAMERA\_H}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_CAMERA\_H}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1Camera}{Camera}}\ \{}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \ \ \ \ \};}
-\DoxyCodeLine{00013\ \}}
-\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <tuple>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <SFML/Graphics/RenderWindow.hpp>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Position_8h}{world/Position.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}SFML/Graphics.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Size_8h}{world/Size.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
 \DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_CAMERA\_H}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1Camera}{Camera}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classrenderer_1_1Camera_a1f1b7a00629a08ca1aceeb97c8dcb784}{projectX}}(\textcolor{keywordtype}{float}\ posX,\ \textcolor{keyword}{const}\ sf::RenderWindow\&\ window);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classrenderer_1_1Camera_a1f1b7a00629a08ca1aceeb97c8dcb784}{projectX}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{logic::Position}}\&\ position,\ \textcolor{keyword}{const}\ sf::RenderWindow\&\ window);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classrenderer_1_1Camera_a4b45873256b0145554825bcbc3b7a337}{projectY}}(\textcolor{keywordtype}{float}\ posY,\ \textcolor{keyword}{const}\ sf::RenderWindow\&\ window);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classrenderer_1_1Camera_a4b45873256b0145554825bcbc3b7a337}{projectY}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{logic::Position}}\&\ position,\ \textcolor{keyword}{const}\ sf::RenderWindow\&\ window);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ sf::Vector2<float>\ \mbox{\hyperlink{classrenderer_1_1Camera_af7d74fb9963b2b63d59e3ff1f7cd9c1c}{project}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{logic::Position}}\&\ position,\ \textcolor{keyword}{const}\ sf::RenderWindow\&\ window);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ sf::Vector2<float>\ \mbox{\hyperlink{classrenderer_1_1Camera_af7d74fb9963b2b63d59e3ff1f7cd9c1c}{project}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\&\ size,\ \textcolor{keyword}{const}\ sf::RenderWindow\&\ window);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classrenderer_1_1Camera_a273651c702b6e0e048daa9f475005646}{sizeX}}(\textcolor{keywordtype}{float}\ \mbox{\hyperlink{classrenderer_1_1Camera_a273651c702b6e0e048daa9f475005646}{sizeX}},\ \textcolor{keyword}{const}\ sf::RenderWindow\&\ window);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classrenderer_1_1Camera_ae6ebd42e635d46dc7245bc3c3a454622}{sizeY}}(\textcolor{keywordtype}{float}\ \mbox{\hyperlink{classrenderer_1_1Camera_ae6ebd42e635d46dc7245bc3c3a454622}{sizeY}},\ \textcolor{keyword}{const}\ sf::RenderWindow\&\ window);}
+\DoxyCodeLine{00087\ \ \ \ \ \};}
+\DoxyCodeLine{00088\ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_CAMERA\_H}}
 
 \end{DoxyCode}

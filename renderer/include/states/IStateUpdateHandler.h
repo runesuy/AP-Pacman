@@ -9,6 +9,9 @@
 namespace renderer {
     class IState;
 
+    /**
+     * Interface for handling updates specific to a game state.
+     */
     class IStateUpdateHandler : public logic::IUpdateHandler {
     public:
         virtual void update(IState& state) = 0;

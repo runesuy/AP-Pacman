@@ -12,6 +12,9 @@ namespace logic {
     }
 
     void TileMap::addRow(const std::vector<TileType> &row) {
+        if (!mapData.empty() && row.size() != mapData[0].size()) {
+            throw std::invalid_argument("Row size does not match existing map data");
+        }
         mapData.push_back(row);
     }
 

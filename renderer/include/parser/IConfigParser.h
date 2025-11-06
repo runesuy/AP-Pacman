@@ -8,6 +8,10 @@
 #include <memory>
 
 namespace renderer {
+
+    /**
+     * Interface for configuration parser, responsible for loading and retrieving configuration settings.
+     */
     class IConfigParser {
     public:
         virtual ~IConfigParser() = default;

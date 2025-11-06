@@ -10,6 +10,9 @@
 namespace renderer {
     class IState;
 
+    /**
+     * Update handler for the LevelState, managing game logic updates during gameplay.
+     */
     class LevelUpdateHandler : public IStateUpdateHandler {
     public:
         void update(IState& state) override;

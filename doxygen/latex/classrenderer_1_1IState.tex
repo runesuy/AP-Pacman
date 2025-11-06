@@ -6,17 +6,36 @@
 
 
 
-Inheritance diagram for renderer\+::IState\+:
-% FIG 0
+Inheritance diagram for renderer\+::IState\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classrenderer_1_1IState__inherit__graph}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 virtual void \mbox{\hyperlink{classrenderer_1_1IState_aeae0f541281a7ba2112e3bc10695f91c}{update}} ()=0
 \item 
-virtual void \mbox{\hyperlink{classrenderer_1_1IState_a3101659bc6b481fc2001e7e59a5f34b8}{process\+Input}} (sf\+::\+Event \&event)=0
+virtual void \mbox{\hyperlink{classrenderer_1_1IState_a7795fde03ef5a5504a6ba8f7834c5bd9}{process\+Input}} (sf\+::\+Event \&event, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager)=0
 \item 
 virtual void \mbox{\hyperlink{classrenderer_1_1IState_aae962641c4ec98033b21fabb8b9af699}{draw}} (sf\+::\+Render\+Window \&window)=0
+\item 
+virtual \mbox{\hyperlink{classrenderer_1_1IState_ac0eccb586fc4819e616966f4c761c39d}{\texorpdfstring{$\sim$}{\string~}\+IState}} ()=default
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for game states, defining methods for updating, processing input, and drawing. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrenderer_1_1IState_ac0eccb586fc4819e616966f4c761c39d}\label{classrenderer_1_1IState_ac0eccb586fc4819e616966f4c761c39d} 
+\index{renderer::IState@{renderer::IState}!````~IState@{\texorpdfstring{$\sim$}{\string~}IState}}
+\index{````~IState@{\texorpdfstring{$\sim$}{\string~}IState}!renderer::IState@{renderer::IState}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IState()}{\string~IState()}}
+{\footnotesize\ttfamily virtual renderer\+::\+IState\+::\texorpdfstring{$\sim$}{\string~}\+IState (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -26,17 +45,41 @@ virtual void \mbox{\hyperlink{classrenderer_1_1IState_aae962641c4ec98033b21fabb8
 \doxysubsubsection{\texorpdfstring{draw()}{draw()}}
 {\footnotesize\ttfamily virtual void renderer\+::\+IState\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
-\Hypertarget{classrenderer_1_1IState_a3101659bc6b481fc2001e7e59a5f34b8}\label{classrenderer_1_1IState_a3101659bc6b481fc2001e7e59a5f34b8} 
+Draw the state onto the provided render window. 
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1DelegatingState_a78ad8e7bbf4ad31de6d7c62074f894e1}{renderer\+::\+Delegating\+State}}.
+
+\Hypertarget{classrenderer_1_1IState_a7795fde03ef5a5504a6ba8f7834c5bd9}\label{classrenderer_1_1IState_a7795fde03ef5a5504a6ba8f7834c5bd9} 
 \index{renderer::IState@{renderer::IState}!processInput@{processInput}}
 \index{processInput@{processInput}!renderer::IState@{renderer::IState}}
 \doxysubsubsection{\texorpdfstring{processInput()}{processInput()}}
-{\footnotesize\ttfamily virtual void renderer\+::\+IState\+::process\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void renderer\+::\+IState\+::process\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event,  }\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Process input events for the state. 
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+{\em state\+Manager} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1DelegatingState_a0f2edc8f97d5dec5ed8b97571ceb0050}{renderer\+::\+Delegating\+State}}.
 
 \Hypertarget{classrenderer_1_1IState_aeae0f541281a7ba2112e3bc10695f91c}\label{classrenderer_1_1IState_aeae0f541281a7ba2112e3bc10695f91c} 
 \index{renderer::IState@{renderer::IState}!update@{update}}
 \index{update@{update}!renderer::IState@{renderer::IState}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
 {\footnotesize\ttfamily virtual void renderer\+::\+IState\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Update the state logic. 
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1DelegatingState_af34dff5edb2725d7fe9061369dd2ca55}{renderer\+::\+Delegating\+State}}.
 
 
 

@@ -1,0 +1,25 @@
+//
+// Created by rune-suy on 11/4/25.
+//
+
+#ifndef AP_PACMAN_IUPDATEHANDLER_H
+#define AP_PACMAN_IUPDATEHANDLER_H
+
+
+namespace logic {
+    /**
+     * Interface for handling update operations in the game.
+     */
+    class IUpdateHandler {
+    public:
+        /**
+         * Update the game state.
+         */
+        virtual void update() = 0;
+
+        virtual ~IUpdateHandler() = default;
+    };
+}
+
+
+#endif //AP_PACMAN_IUPDATEHANDLER_H

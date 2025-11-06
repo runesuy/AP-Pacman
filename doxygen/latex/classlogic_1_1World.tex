@@ -7,18 +7,65 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classlogic_1_1World_a9cf1260e3eabd49878262ecec857fb53}{World}} (\mbox{\hyperlink{classlogic_1_1IConfig}{IConfig}} \&config)
+\item 
 void \mbox{\hyperlink{classlogic_1_1World_a8c069541cc88b46fd9849bf2d7f4008c}{update}} ()
+\item 
+\mbox{\hyperlink{classlogic_1_1IConfig}{IConfig}} \& \mbox{\hyperlink{classlogic_1_1World_ad243ba553c74178efcd93aaefa12446c}{get\+Config}} () const
+\item 
+void \mbox{\hyperlink{classlogic_1_1World_a0283bebe131b2e3d14961195cfeb5993}{add\+Object}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1WorldObject}{World\+Object}} $>$ \&object)
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classlogic_1_1World_a9cf1260e3eabd49878262ecec857fb53}\label{classlogic_1_1World_a9cf1260e3eabd49878262ecec857fb53} 
+\index{logic::World@{logic::World}!World@{World}}
+\index{World@{World}!logic::World@{logic::World}}
+\doxysubsubsection{\texorpdfstring{World()}{World()}}
+{\footnotesize\ttfamily logic\+::\+World\+::\+World (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1IConfig}{IConfig}} \&}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Construct a \doxylink{classlogic_1_1World}{World} with the given configuration. 
+\begin{DoxyParams}{Parameters}
+{\em config} & Logic configuration reference. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1World_a9cf1260e3eabd49878262ecec857fb53_cgraph}
+\end{center}
+\end{figure}
+
+
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1World_a0283bebe131b2e3d14961195cfeb5993}\label{classlogic_1_1World_a0283bebe131b2e3d14961195cfeb5993} 
+\index{logic::World@{logic::World}!addObject@{addObject}}
+\index{addObject@{addObject}!logic::World@{logic::World}}
+\doxysubsubsection{\texorpdfstring{addObject()}{addObject()}}
+{\footnotesize\ttfamily void logic\+::\+World\+::add\+Object (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1WorldObject}{World\+Object}} $>$ \&}]{object }\end{DoxyParamCaption})}
+
+Add an object to the world. 
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlogic_1_1World_ad243ba553c74178efcd93aaefa12446c}\label{classlogic_1_1World_ad243ba553c74178efcd93aaefa12446c} 
+\index{logic::World@{logic::World}!getConfig@{getConfig}}
+\index{getConfig@{getConfig}!logic::World@{logic::World}}
+\doxysubsubsection{\texorpdfstring{getConfig()}{getConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1IConfig}{IConfig}} \& logic\+::\+World\+::get\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the configuration reference. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \Hypertarget{classlogic_1_1World_a8c069541cc88b46fd9849bf2d7f4008c}\label{classlogic_1_1World_a8c069541cc88b46fd9849bf2d7f4008c} 
 \index{logic::World@{logic::World}!update@{update}}
 \index{update@{update}!logic::World@{logic::World}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
 {\footnotesize\ttfamily void logic\+::\+World\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
+Update all objects in the world. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

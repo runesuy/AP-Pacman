@@ -9,6 +9,10 @@
 
 namespace logic {
 
+    /**
+     * A size class representing width and height.
+     * Size width and height must always be non-negative.
+     */
     class Size : public ICoordinate {
         float width;
         float height;
@@ -19,12 +23,26 @@ namespace logic {
         Size& operator=(Size&&) noexcept = default;
         Size& operator=(const Size&) = default;
 
+        /**
+         * @return The width
+         */
         [[nodiscard]] float getX() const override;
 
+        /**
+         * Set the width
+         * @param x width (>=0)
+         */
         void setX(float x) override;
 
+        /**
+         * @return The height
+         */
         [[nodiscard]] float getY() const override;
 
+        /**
+         * Set the height
+         * @param y height (>=0)
+         */
         void setY(float y) override;
     };
 

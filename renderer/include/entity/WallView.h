@@ -10,6 +10,10 @@
 
 namespace renderer {
 
+    /**
+     * View class representing the visual aspect of a wall entity in the game.
+     * Inherits from EntityView and implements the observer pattern to update its state based on the WallModel.
+     */
     class WallView : public EntityView, public logic::IObserver<logic::WallModel>{
     public:
         WallView();

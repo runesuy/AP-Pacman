@@ -7,6 +7,9 @@
 #include "observer/IObserver.h"
 
 namespace logic {
+    /**
+     * An observer class to track and manage the player's score.
+     */
     class Score {
 
     };

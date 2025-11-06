@@ -6,7 +6,7 @@
 #define AP_PACMAN_DEFAULTAPPCONFIG_H
 
 #include "IAppConfig.h"
-#include "DefaultFactoryCollection.h"
+#include "factories/DefaultFactoryCollection.h"
 #include "parser/JSONConfigParser.h"
 #include "DefaultLogicConfig.h"
 

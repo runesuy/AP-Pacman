@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['position_2ecpp_0',['Position.cpp',['../Position_8cpp.html',1,'']]],
-  ['position_2eh_1',['Position.h',['../Position_8h.html',1,'']]]
+  ['game_2ecpp_0',['Game.cpp',['../Game_8cpp.html',1,'']]],
+  ['game_2eh_1',['Game.h',['../Game_8h.html',1,'']]]
 ];

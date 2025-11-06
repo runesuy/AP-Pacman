@@ -10,6 +10,9 @@
 namespace renderer {
     class IState;
 
+    /**
+     * Input handler for the LevelState, processing user inputs during gameplay and passing it to logic.
+     */
     class LevelInputHandler : public IStateInputHandler {
     public:
         void processInput(sf::Event &event, StateManager& stateManager, IState& state) override;

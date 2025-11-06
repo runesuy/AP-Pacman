@@ -8,8 +8,15 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 
 namespace renderer {
+    /**
+     * Interface for drawable objects in the game.
+     */
     class IDrawable {
     public:
+        /**
+         * Draw the object onto the provided render window.
+         * @param window
+         */
         virtual void draw(sf::RenderWindow& window)=0;
     };
 }

@@ -8,7 +8,7 @@
 #include <SFML/Window/Event.hpp>
 #include "states/StateManager.h"
 #include "world/World.h"
-#include "config/IFactoryCollection.h"
+#include "factories/IFactoryCollection.h"
 #include "parser/IConfigParser.h"
 #include "config/IAppConfig.h"
 #include "drawable/DrawCollection.h"

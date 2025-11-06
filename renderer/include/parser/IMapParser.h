@@ -9,6 +9,9 @@
 
 namespace renderer {
 
+    /**
+     * Interface for map parser, responsible for loading tile maps from files.
+     */
     class IMapParser {
     public:
         virtual logic::TileMap loadMap(const std::string& filename) = 0;

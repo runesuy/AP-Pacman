@@ -9,6 +9,9 @@
 
 namespace renderer {
 
+    /**
+     * Concrete implementation of IMapParser that reads tile maps from TXT files.
+     */
     class TXTMapParser : public IMapParser {
     public:
         static const char WALL_CHAR = 'W';

@@ -9,10 +9,22 @@
 
 namespace renderer {
 
+    /**
+     * Default implementation of the logic configuration interface.
+     */
     class DefaultLogicConfig : public logic::IConfig {
     public:
+        /**
+         * Get the tile map to be used in the game world.
+         * @return
+         */
         [[nodiscard]] logic::TileMap getTileMap() const override;
 
+        /**
+         * Get the entity factory for creating game entities.
+         * Contains all the code for creating a logic entities and the rendering counterparts.
+         * @return
+         */
         [[nodiscard]] std::unique_ptr<logic::IEntityFactory> getEntityFactory() const override;
     };
 

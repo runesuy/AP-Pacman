@@ -14,8 +14,17 @@ namespace logic {
     public:
         virtual ~IConfig() = default;
 
+        /**
+         * Get the tile map configuration.
+         * This map is loaded in the world on creation.
+         * @return
+         */
         [[nodiscard]] virtual TileMap getTileMap() const = 0;
 
+        /**
+         * Get the entity factory for creating game entities.
+         * @return
+         */
         [[nodiscard]] virtual std::unique_ptr<IEntityFactory> getEntityFactory() const = 0;
     };
 

@@ -84,6 +84,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aa3736db37cb39a0e8f1570c7c3201b33" id="r_aa3736db37cb39a0e8f1570c7c3201b33"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IObserver.html#aa3736db37cb39a0e8f1570c7c3201b33">~IObserver</a> ()=default</td></tr>
+<tr class="separator:aa3736db37cb39a0e8f1570c7c3201b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d8efd8c9d8c5cd613138b275fb57f85" id="r_a3d8efd8c9d8c5cd613138b275fb57f85"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IObserver.html#a3d8efd8c9d8c5cd613138b275fb57f85">update</a> (std::shared_ptr&lt; T &gt; subject)=0</td></tr>
 <tr class="separator:a3d8efd8c9d8c5cd613138b275fb57f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -95,7 +97,35 @@ class logic::IObserver&lt; T &gt;</div><p>A default observer class. </p><dl clas
   </table>
   </dd>
 </dl>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa3736db37cb39a0e8f1570c7c3201b33" name="aa3736db37cb39a0e8f1570c7c3201b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3736db37cb39a0e8f1570c7c3201b33">&#9670;&#160;</a></span>~IObserver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classlogic_1_1IObserver.html">logic::IObserver</a>&lt; T &gt;::~<a class="el" href="classlogic_1_1IObserver.html">IObserver</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3d8efd8c9d8c5cd613138b275fb57f85" name="a3d8efd8c9d8c5cd613138b275fb57f85"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3d8efd8c9d8c5cd613138b275fb57f85">&#9670;&#160;</a></span>update()</h2>
 
@@ -121,6 +151,12 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Called when the subject being observed has changed. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">subject</td><td>The subject being observed. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

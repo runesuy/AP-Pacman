@@ -84,18 +84,24 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abd2070eaa3e172acba549e012d126119" id="r_abd2070eaa3e172acba549e012d126119"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1StateManager.html#abd2070eaa3e172acba549e012d126119">StateManager</a> (std::unique_ptr&lt; <a class="el" href="classrenderer_1_1IState.html">IState</a> &gt; &amp;&amp;initialState)</td></tr>
-<tr class="separator:abd2070eaa3e172acba549e012d126119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae90e7e39af15555e9ca36058f93317f9" id="r_ae90e7e39af15555e9ca36058f93317f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1StateManager.html#ae90e7e39af15555e9ca36058f93317f9">StateManager</a> (std::unique_ptr&lt; <a class="el" href="classrenderer_1_1IState.html">IState</a> &gt; &amp;&amp;initialState, std::unique_ptr&lt; <a class="el" href="classrenderer_1_1IStateFactory.html">IStateFactory</a> &gt; &amp;&amp;stateFactory)</td></tr>
+<tr class="separator:ae90e7e39af15555e9ca36058f93317f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a4847e98bec7c688ca9ad423e5c4804" id="r_a4a4847e98bec7c688ca9ad423e5c4804"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1StateManager.html#a4a4847e98bec7c688ca9ad423e5c4804">processInput</a> (sf::Event &amp;event)</td></tr>
 <tr class="separator:a4a4847e98bec7c688ca9ad423e5c4804"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac58e08abe78bb06670171aa4866df68b" id="r_ac58e08abe78bb06670171aa4866df68b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1StateManager.html#ac58e08abe78bb06670171aa4866df68b">draw</a> (sf::RenderWindow &amp;window)</td></tr>
 <tr class="separator:ac58e08abe78bb06670171aa4866df68b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8e76e0e75928ceb4de827953dc5458d" id="r_ad8e76e0e75928ceb4de827953dc5458d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1StateManager.html#ad8e76e0e75928ceb4de827953dc5458d">update</a> ()</td></tr>
 <tr class="separator:ad8e76e0e75928ceb4de827953dc5458d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b8a71923469fe8908528592683c9be3" id="r_a2b8a71923469fe8908528592683c9be3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1StateManager.html#a2b8a71923469fe8908528592683c9be3">pushState</a> (std::unique_ptr&lt; <a class="el" href="classrenderer_1_1IState.html">IState</a> &gt; &amp;&amp;state)</td></tr>
+<tr class="separator:a2b8a71923469fe8908528592683c9be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48940184a09dce24ee08748a41b7e741" id="r_a48940184a09dce24ee08748a41b7e741"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1StateManager.html#a48940184a09dce24ee08748a41b7e741">popState</a> ()</td></tr>
+<tr class="separator:a48940184a09dce24ee08748a41b7e741"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="abd2070eaa3e172acba549e012d126119" name="abd2070eaa3e172acba549e012d126119"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd2070eaa3e172acba549e012d126119">&#9670;&#160;</a></span>StateManager()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages the stack of game states, allowing for state transitions and delegating input, update, and draw calls to the current state. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae90e7e39af15555e9ca36058f93317f9" name="ae90e7e39af15555e9ca36058f93317f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae90e7e39af15555e9ca36058f93317f9">&#9670;&#160;</a></span>StateManager()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -107,8 +113,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">renderer::StateManager::StateManager </td>
           <td>(</td>
           <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classrenderer_1_1IState.html">IState</a> &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"><em>initialState</em></td><td>)</td>
+          <td class="paramname"><em>initialState</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classrenderer_1_1IStateFactory.html">IStateFactory</a> &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>stateFactory</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -145,6 +161,23 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a48940184a09dce24ee08748a41b7e741" name="a48940184a09dce24ee08748a41b7e741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48940184a09dce24ee08748a41b7e741">&#9670;&#160;</a></span>popState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void renderer::StateManager::popState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4a4847e98bec7c688ca9ad423e5c4804" name="a4a4847e98bec7c688ca9ad423e5c4804"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a4847e98bec7c688ca9ad423e5c4804">&#9670;&#160;</a></span>processInput()</h2>
 
@@ -166,6 +199,24 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a2b8a71923469fe8908528592683c9be3" name="a2b8a71923469fe8908528592683c9be3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b8a71923469fe8908528592683c9be3">&#9670;&#160;</a></span>pushState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void renderer::StateManager::pushState </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classrenderer_1_1IState.html">IState</a> &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

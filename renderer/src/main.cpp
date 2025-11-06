@@ -1,6 +1,6 @@
 #include <iostream>
 #include "../include/Game.h"
-#include "config/DefaultFactoryCollection.h"
+#include "factories/DefaultFactoryCollection.h"
 #include "config/DefaultAppConfig.h"
 
 int main() {

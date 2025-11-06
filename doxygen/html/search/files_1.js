@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['entityview_2ecpp_0',['EntityView.cpp',['../EntityView_8cpp.html',1,'']]],
-  ['entityview_2eh_1',['EntityView.h',['../EntityView_8h.html',1,'']]]
+  ['camera_2ecpp_0',['Camera.cpp',['../Camera_8cpp.html',1,'']]],
+  ['camera_2eh_1',['Camera.h',['../Camera_8h.html',1,'']]]
 ];

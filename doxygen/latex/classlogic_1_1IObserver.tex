@@ -7,6 +7,8 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+virtual \mbox{\hyperlink{classlogic_1_1IObserver_aa3736db37cb39a0e8f1570c7c3201b33}{\texorpdfstring{$\sim$}{\string~}\+IObserver}} ()=default
+\item 
 virtual void \mbox{\hyperlink{classlogic_1_1IObserver_a3d8efd8c9d8c5cd613138b275fb57f85}{update}} (std\+::shared\+\_\+ptr$<$ T $>$ subject)=0
 \end{DoxyCompactItemize}
 
@@ -21,6 +23,16 @@ A default observer class.
 \end{DoxyTemplParams}
 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classlogic_1_1IObserver_aa3736db37cb39a0e8f1570c7c3201b33}\label{classlogic_1_1IObserver_aa3736db37cb39a0e8f1570c7c3201b33} 
+\index{logic::IObserver$<$ T $>$@{logic::IObserver$<$ T $>$}!````~IObserver@{\texorpdfstring{$\sim$}{\string~}IObserver}}
+\index{````~IObserver@{\texorpdfstring{$\sim$}{\string~}IObserver}!logic::IObserver$<$ T $>$@{logic::IObserver$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IObserver()}{\string~IObserver()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{classlogic_1_1IObserver}{logic\+::\+IObserver}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classlogic_1_1IObserver_a3d8efd8c9d8c5cd613138b275fb57f85}\label{classlogic_1_1IObserver_a3d8efd8c9d8c5cd613138b275fb57f85} 
 \index{logic::IObserver$<$ T $>$@{logic::IObserver$<$ T $>$}!update@{update}}
@@ -29,6 +41,11 @@ A default observer class.
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 virtual void \mbox{\hyperlink{classlogic_1_1IObserver}{logic\+::\+IObserver}}$<$ T $>$\+::update (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ T $>$}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
+Called when the subject being observed has changed. 
+\begin{DoxyParams}{Parameters}
+{\em subject} & The subject being observed. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
