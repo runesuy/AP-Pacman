@@ -6,11 +6,12 @@
 
 
 
-Inheritance diagram for renderer\+::Entity\+View\+:\nopagebreak
+Inheritance diagram for renderer\+::Entity\+View\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=201pt]{classrenderer_1_1EntityView__inherit__graph}
+\includegraphics[width=236pt]{classrenderer_1_1EntityView__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -27,7 +28,7 @@ Collaboration diagram for renderer\+::Entity\+View\+:\nopagebreak
 \item 
 const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \& \mbox{\hyperlink{classrenderer_1_1EntityView_a4b2d240028a5fadd9f9bda861306bcf4}{get\+Size}} () const
 \item 
-void \mbox{\hyperlink{classrenderer_1_1EntityView_ab1a10febe0d9e2415040418075de0217}{set\+Size}} (const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&size)
+virtual void \mbox{\hyperlink{classrenderer_1_1EntityView_ab1a10febe0d9e2415040418075de0217}{set\+Size}} (const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&size)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1DrawObject}{renderer\+::\+Draw\+Object}}}
 \begin{DoxyCompactItemize}
@@ -40,7 +41,7 @@ void \mbox{\hyperlink{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de
 \item 
 virtual std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ \mbox{\hyperlink{classrenderer_1_1DrawObject_a9612dd69d98b224a4088b73b266a9716}{get\+SFShapes}} (sf\+::\+Render\+Window \&window)=0
 \item 
-virtual std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ \mbox{\hyperlink{classrenderer_1_1DrawObject_a3f6d68c32bed30050334cb5f54d23d35}{get\+SFSprites}} ()=0
+virtual std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ \mbox{\hyperlink{classrenderer_1_1DrawObject_aadeb4e31eda8ad747d2f58136167f665}{get\+SFSprites}} ()=0
 \item 
 virtual std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ \mbox{\hyperlink{classrenderer_1_1DrawObject_af19f9063d49b40fd7ea39e81bb634208}{get\+SFTexts}} ()=0
 \end{DoxyCompactItemize}
@@ -65,13 +66,17 @@ Get the size of the entity view. \begin{DoxyReturn}{Returns}
 \index{renderer::EntityView@{renderer::EntityView}!setSize@{setSize}}
 \index{setSize@{setSize}!renderer::EntityView@{renderer::EntityView}}
 \doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
-{\footnotesize\ttfamily void renderer\+::\+Entity\+View\+::set\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&}]{size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void renderer\+::\+Entity\+View\+::set\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 Set the size of the entity view. 
 \begin{DoxyParams}{Parameters}
 {\em size} & \\
 \hline
 \end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classrenderer_1_1WallView_a83b84324bd900063a02d11bd04e99056}{renderer\+::\+Wall\+View}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
