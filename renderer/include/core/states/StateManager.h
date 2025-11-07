@@ -8,7 +8,7 @@
 #include <SFML/Window/Event.hpp>
 #include "stack"
 #include "memory"
-#include "world/World.h"
+#include "core/world/World.h"
 #include <SFML/Graphics/RenderWindow.hpp>
 
 

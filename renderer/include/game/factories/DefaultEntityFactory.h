@@ -5,7 +5,7 @@
 #ifndef AP_PACMAN_DEFAULTENTITYFACTORY_H
 #define AP_PACMAN_DEFAULTENTITYFACTORY_H
 
-#include "entity/IEntityFactory.h"
+#include "core/entity/IEntityFactory.h"
 #include "game/states/level/LevelState.h"
 
 namespace renderer {

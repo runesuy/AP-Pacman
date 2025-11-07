@@ -7,9 +7,9 @@
 
 #include <tuple>
 #include <SFML/Graphics/RenderWindow.hpp>
-#include "world/Position.h"
+#include "core/world/Position.h"
 #include "SFML/Graphics.hpp"
-#include "world/Size.h"
+#include "core/world/Size.h"
 
 namespace renderer {
 

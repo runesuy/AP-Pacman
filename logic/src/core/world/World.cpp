@@ -3,8 +3,8 @@
 //
 
 #include <memory>
-#include "world/World.h"
-#include "world/TileMap.h"
+#include "core/world/World.h"
+#include "core/world/TileMap.h"
 
 namespace logic {
     void World::update() {

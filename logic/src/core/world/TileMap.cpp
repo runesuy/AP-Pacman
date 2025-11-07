@@ -3,8 +3,8 @@
 //
 
 #include <iostream>
-#include "world/TileMap.h"
-#include "world/World.h"
+#include "core/world/TileMap.h"
+#include "core/world/World.h"
 
 namespace logic {
     const std::vector<std::vector<TileMap::TileType>> &TileMap::getMapData() const {

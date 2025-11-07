@@ -10,7 +10,7 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
-#include "observer/IObserver.h"
+#include "core/observer/IObserver.h"
 
 namespace renderer {
     class ModularEntityView;

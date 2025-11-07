@@ -6,7 +6,7 @@
 #define AP_PACMAN_SPRITEMODULE_H
 
 #include "core/entity/modular/IEntityViewModule.h"
-#include "world/Size.h"
+#include "core/world/Size.h"
 
 namespace renderer {
 

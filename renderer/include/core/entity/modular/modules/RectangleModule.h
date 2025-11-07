@@ -5,8 +5,8 @@
 #ifndef AP_PACMAN_RECTANGLEMODULE_H
 #define AP_PACMAN_RECTANGLEMODULE_H
 #include "core/entity/modular/IEntityViewModule.h"
-#include "world/Size.h"
-#include "observer/IObserver.h"
+#include "core/world/Size.h"
+#include "core/observer/IObserver.h"
 #include "core/entity/modular/ModularEntityView.h"
 
 namespace renderer {

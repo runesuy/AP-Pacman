@@ -4,7 +4,7 @@
 
 #ifndef AP_PACMAN_ENTITYVIEW_H
 #define AP_PACMAN_ENTITYVIEW_H
-#include "observer/IObserver.h"
+#include "core/observer/IObserver.h"
 #include "core/entity/EntityModel.h"
 #include "core/drawable/DrawObject.h"
 

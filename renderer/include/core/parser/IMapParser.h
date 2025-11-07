@@ -5,7 +5,7 @@
 #ifndef AP_PACMAN_IMAPPARSER_H
 #define AP_PACMAN_IMAPPARSER_H
 #include <string>
-#include "world/TileMap.h"
+#include "core/world/TileMap.h"
 
 namespace renderer {
 

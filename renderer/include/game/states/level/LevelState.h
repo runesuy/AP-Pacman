@@ -6,7 +6,7 @@
 #define AP_PACMAN_LEVELSTATE_H
 
 #include "core/states/DelegatingState.h"
-#include "world/World.h"
+#include "core/world/World.h"
 #include "core/drawable/DrawCollection.h"
 
 namespace renderer {

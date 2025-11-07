@@ -7,7 +7,7 @@
 
 #include <SFML/Window/Event.hpp>
 #include "core/states/StateManager.h"
-#include "world/World.h"
+#include "core/world/World.h"
 #include "core/factories/IFactoryCollection.h"
 #include "core/parser/IConfigParser.h"
 #include "core/config/IAppConfig.h"
