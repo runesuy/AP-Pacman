@@ -1,6 +1,6 @@
-#include "../include/Game.h"
-#include "factories/DefaultFactoryCollection.h"
-#include "config/DefaultAppConfig.h"
+#include "game/Game.h"
+#include "game/factories/DefaultFactoryCollection.h"
+#include "game/configs/DefaultAppConfig.h"
 
 int main() {
     renderer::DefaultAppConfig config;
