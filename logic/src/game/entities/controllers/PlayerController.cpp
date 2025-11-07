@@ -5,10 +5,6 @@
 #include "game/entities/controllers/PlayerController.h"
 
 namespace logic {
-    void PlayerController::update(std::shared_ptr<EntityModel> entity) {
-
-    }
-
     void PlayerController::_turnLeft() {
 
     }
@@ -25,7 +21,12 @@ namespace logic {
 
     }
 
-    void PlayerController::processCommand(EntityCommand command, EntityModel &entity) {
+    void PlayerController::processCommand(EntityCommand command, PlayerModel &entity) {
 
     }
+
+    void PlayerController::update(PlayerModel &entity) {
+
+    }
+
 } // logic

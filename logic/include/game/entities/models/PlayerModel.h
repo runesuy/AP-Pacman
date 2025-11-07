@@ -9,7 +9,7 @@
 
 namespace logic {
 
-    class PlayerModel : public EntityModel, public Observable<PlayerModel>{
+    class PlayerModel : public EntityModel<PlayerModel>, public Observable<PlayerModel>{
         enum Direction {
             UP,
             DOWN,

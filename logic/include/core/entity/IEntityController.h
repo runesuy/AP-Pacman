@@ -8,13 +8,15 @@
 #include "EntityCommands.h"
 
 namespace logic {
+    template<typename EntityModelType>
     class EntityModel;
 
+    template<typename EntityModelType>
     class IEntityController {
     public:
-        virtual void update(std::shared_ptr<EntityModel> entity) = 0;
+        virtual void update(EntityModelType& entity) = 0;
 
-        virtual void processCommand(EntityCommand command, EntityModel& entity) = 0;
+        virtual void processCommand(EntityCommand command, EntityModelType& entity) = 0;
     };
 }
 

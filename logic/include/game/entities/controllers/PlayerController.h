@@ -6,14 +6,15 @@
 #define AP_PACMAN_PLAYERCONTROLLER_H
 
 #include "core/entity/IEntityController.h"
+#include "game/entities/models/PlayerModel.h"
 
 namespace logic {
 
-    class PlayerController : public IEntityController {
+    class PlayerController : public IEntityController<PlayerModel> {
     public:
-        void update(std::shared_ptr<EntityModel> entity) override;
+        void update(PlayerModel& entity) override;
 
-        void processCommand(EntityCommand command, EntityModel &entity) override;
+        void processCommand(EntityCommand command, PlayerModel &entity) override;
 
     private:
         void _turnLeft();

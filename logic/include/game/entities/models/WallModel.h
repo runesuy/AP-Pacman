@@ -13,7 +13,7 @@ namespace logic {
      * Entity Model representing a wall in the game world.
      * Observable for integrating with representation layer.
      */
-    class WallModel : public EntityModel, public Observable<WallModel>{
+    class WallModel : public EntityModel<WallModel>, public Observable<WallModel>{
     public:
         WallModel()=default;
 
