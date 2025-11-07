@@ -5,7 +5,7 @@
 #ifndef AP_PACMAN_DEFAULTLOGICCONFIG_H
 #define AP_PACMAN_DEFAULTLOGICCONFIG_H
 
-#include "IConfig.h"
+#include "core/config/IConfig.h"
 
 namespace renderer {
 

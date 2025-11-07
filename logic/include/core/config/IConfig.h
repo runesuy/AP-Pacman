@@ -5,8 +5,8 @@
 #ifndef AP_PACMAN_ICONFIG_H
 #define AP_PACMAN_ICONFIG_H
 
-#include "world/TileMap.h"
-#include "entity/IEntityFactory.h"
+#include "core/world/TileMap.h"
+#include "core/entity/IEntityFactory.h"
 
 namespace logic {
 

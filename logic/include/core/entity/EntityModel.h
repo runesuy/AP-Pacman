@@ -4,13 +4,13 @@
 
 #ifndef AP_PACMAN_ENTITYMODEL_H
 #define AP_PACMAN_ENTITYMODEL_H
-#include "world/Position.h"
+#include "core/world/Position.h"
 #include "vector"
-#include "observer/Observable.h"
+#include "core/observer/Observable.h"
 #include "memory"
-#include "world/WorldObject.h"
-#include "world/Size.h"
-#include "IEntityController.h"
+#include "core/world/WorldObject.h"
+#include "core/world/Size.h"
+#include "core/entity/IEntityController.h"
 
 namespace logic {
     class IEntityController;

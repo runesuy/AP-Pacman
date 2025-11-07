@@ -6,7 +6,7 @@
 #define AP_PACMAN_PLAYERVIEW_H
 
 #include "core/entity/modular/ModularEntityView.h"
-#include "entity/PlayerModel.h"
+#include "game/entities/models/PlayerModel.h"
 
 namespace renderer {
 

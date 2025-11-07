@@ -5,9 +5,9 @@
 #ifndef AP_PACMAN_WORLD_H
 #define AP_PACMAN_WORLD_H
 
-#include "entity/IEntityFactory.h"
+#include "core/entity/IEntityFactory.h"
 #include "WorldObject.h"
-#include "IConfig.h"
+#include "core/config/IConfig.h"
 #include <vector>
 
 namespace logic {

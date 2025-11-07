@@ -2,7 +2,7 @@
 // Created by rune-suy on 11/6/25.
 //
 
-#include "entity/EntityModel.h"
+#include "core/entity/EntityModel.h"
 
 namespace logic {
 

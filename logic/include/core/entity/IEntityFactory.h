@@ -5,7 +5,7 @@
 #ifndef AP_PACMAN_IENTITYFACTORY_H
 #define AP_PACMAN_IENTITYFACTORY_H
 
-#include "WallModel.h"
+#include "game/entities/models/WallModel.h"
 
 namespace logic {
 

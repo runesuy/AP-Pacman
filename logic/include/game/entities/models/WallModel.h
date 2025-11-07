@@ -5,7 +5,7 @@
 #ifndef AP_PACMAN_WALLMODEL_H
 #define AP_PACMAN_WALLMODEL_H
 
-#include "EntityModel.h"
+#include "core/entity/EntityModel.h"
 
 namespace logic {
 

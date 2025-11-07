@@ -4,7 +4,7 @@
 
 #include "game/factories/DefaultEntityFactory.h"
 #include "game/entities/views/WallView.h"
-#include "entity/WallModel.h"
+#include "game/entities/models/WallModel.h"
 #include "game/Game.h"
 
 namespace renderer {

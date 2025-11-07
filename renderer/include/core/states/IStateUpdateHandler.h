@@ -4,7 +4,7 @@
 
 #ifndef AP_PACMAN_ISTATEUPDATEHANDLER_H
 #define AP_PACMAN_ISTATEUPDATEHANDLER_H
-#include "core/IUpdateHandler.h"
+#include "core/handlers/IUpdateHandler.h"
 
 namespace renderer {
     class IState;

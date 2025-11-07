@@ -5,7 +5,7 @@
 #ifndef AP_PACMAN_WALLVIEW_H
 #define AP_PACMAN_WALLVIEW_H
 
-#include "entity/WallModel.h"
+#include "game/entities/models/WallModel.h"
 #include "core/entity/modular/ModularEntityView.h"
 #include "core/entity/modular/modules/RectangleModule.h"
 #include "observer/Observable.h"

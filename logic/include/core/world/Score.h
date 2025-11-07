@@ -4,7 +4,7 @@
 
 #ifndef AP_PACMAN_SCORE_H
 #define AP_PACMAN_SCORE_H
-#include "observer/IObserver.h"
+#include "core/observer/IObserver.h"
 
 namespace logic {
     /**

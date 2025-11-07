@@ -5,7 +5,7 @@
 #ifndef AP_PACMAN_TILEMAP_H
 #define AP_PACMAN_TILEMAP_H
 
-#include "observer/Observable.h"
+#include "core/observer/Observable.h"
 #include "WorldObject.h"
 
 namespace logic {

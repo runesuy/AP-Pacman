@@ -5,7 +5,7 @@
 #ifndef AP_PACMAN_ENTITYVIEW_H
 #define AP_PACMAN_ENTITYVIEW_H
 #include "observer/IObserver.h"
-#include "entity/EntityModel.h"
+#include "core/entity/EntityModel.h"
 #include "core/drawable/DrawObject.h"
 
 namespace renderer {
