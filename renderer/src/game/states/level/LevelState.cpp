@@ -16,4 +16,8 @@ namespace renderer {
         auto &logicConfig = Game::getInstance()->getAppConfig().getLogicConfig();
         _world = std::make_unique<logic::World>(logicConfig);
     }
+
+    std::unique_ptr<logic::World> &LevelState::getWorld() {
+        return _world;
+    }
 } // renderer

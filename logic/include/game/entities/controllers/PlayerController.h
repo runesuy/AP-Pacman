@@ -12,7 +12,7 @@ namespace logic {
 
     class PlayerController : public IEntityController<PlayerModel> {
     public:
-        void update(PlayerModel& entity) override;
+        void update(World& world, PlayerModel& entity) override;
 
         void processCommand(EntityCommand command, PlayerModel &entity) override;
 

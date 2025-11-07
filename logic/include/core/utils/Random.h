@@ -12,7 +12,7 @@ namespace logic {
      * Singleton class.
      */
     class Random {
-        static std::shared_ptr<Random> _instance;
+        inline static std::shared_ptr<Random> _instance;
         Random()=default;
 
     public:

@@ -8,6 +8,7 @@
 #include <memory>
 #include "core/states/IState.h"
 #include "core/factories/IStateFactory.h"
+#include "core/utils/Stopwatch.h"
 
 int renderer::Game::run() {
 
@@ -23,7 +24,7 @@ int renderer::Game::run() {
 
     // game loop
     while (running && window.isOpen()) {
-
+        logic::Stopwatch::getInstance()->tick();
         //--------- Process Input ---------
         sf::Event event{};
         while (window.pollEvent(event))

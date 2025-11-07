@@ -22,6 +22,7 @@ namespace renderer {
         LevelState(std::unique_ptr<IStateUpdateHandler> &&updateHandler, std::unique_ptr<IStateInputHandler> &&inputHandler,
                    std::unique_ptr<IDrawHandler> &&drawHandler);
 
+        std::unique_ptr<logic::World> &getWorld();
 
     };
 

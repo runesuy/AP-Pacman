@@ -28,6 +28,9 @@ namespace logic {
          */
         float deltaTime=0;
 
+        inline static std::shared_ptr<Stopwatch> _instance;
+        Stopwatch()=default;
+
     public:
 
         /**
@@ -41,6 +44,8 @@ namespace logic {
          * @return The time between the previous two ticks in seconds. 0 if tick has only been called once.
          */
         [[nodiscard]] float getDeltaTime() const noexcept;
+
+        static std::shared_ptr<Stopwatch> getInstance();
     };
 }
 

@@ -30,6 +30,10 @@ namespace logic {
         Position& operator=(Position&&) noexcept = default;
         Position& operator=(const Position&) = default;
 
+        Position& operator+=(const Position& other);
+        Position operator+(const Position& other) const;
+        Position operator*(float scalar) const;
+
         /**
          * @return the horizontal coördinate
          */

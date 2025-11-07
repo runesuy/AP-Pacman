@@ -46,4 +46,20 @@ namespace logic {
         }
     }
 
+    TileMap::TileType TileMap::getTileType(const Position& position) const{
+        const auto [row, col] = getGridPosition(position);
+        return getTileType(row, col);
+    }
+
+    std::pair<int, int> TileMap::getGridPosition(const Position &position) const {
+        const float tileSize = 2/static_cast<float>(mapData[0].size());
+        int col = static_cast<int>((position.getX() + 1.0f) / tileSize);
+        int row = static_cast<int>((1.0f - position.getY()) / tileSize);
+        return {row, col};
+    }
+
+    TileMap::TileType TileMap::getTileType(int row, int col) const {
+        return mapData.at(row).at(col);
+    }
+
 } // logic

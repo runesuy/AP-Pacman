@@ -8,6 +8,7 @@
 #include "Position.h"
 
 namespace logic {
+    class World;
 
     class WorldObject {
         /**
@@ -31,7 +32,7 @@ namespace logic {
          * Update the world object.
          * Called on each game update.
          */
-        virtual void update()=0;
+        virtual void update(World &world) = 0;
     };
 
 } // logic

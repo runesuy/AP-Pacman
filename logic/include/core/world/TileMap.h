@@ -50,6 +50,12 @@ namespace logic {
          * @throws std::invalid_argument if the row size does not match existing rows.
          */
         void addRow(const std::vector<TileType>& row);
+
+        [[nodiscard]] TileType getTileType(const Position& position) const;
+
+        [[nodiscard]] std::pair<int, int> getGridPosition(const Position& position) const;
+
+        [[nodiscard]] TileType getTileType(int row, int col) const;
     };
 
 } // logic

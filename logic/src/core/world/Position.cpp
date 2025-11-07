@@ -35,3 +35,17 @@ void logic::Position::setY(float y) {
     }
     Position::y = y;
 }
+
+logic::Position &logic::Position::operator+=(const logic::Position &other) {
+    this->x += other.x;
+    this->y += other.y;
+    return *this;
+}
+
+logic::Position logic::Position::operator+(const logic::Position &other) const {
+    return {this->x + other.x, this->y + other.y};
+}
+
+logic::Position logic::Position::operator*(float scalar) const {
+    return {this->x * scalar, this->y * scalar};
+}

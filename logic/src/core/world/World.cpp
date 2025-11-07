@@ -9,7 +9,7 @@
 namespace logic {
     void World::update() {
         for (const auto& object : objects) {
-            object->update();
+            object->update(*this);
         }
     }
 

@@ -49,10 +49,10 @@ class EntityModel : public WorldObject{
             this->controller = controller;
         }
 
-        void update() override {
+        void update(World &world) override {
             if(controller){
                 try {
-                    controller->update(static_cast<EntityModelType&>(*this));
+                    controller->update(world, static_cast<EntityModelType &>(*this));
                 }
                 catch (std::bad_cast& e){
                     // Handle the error appropriately, e.g., log it

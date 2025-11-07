@@ -8,6 +8,7 @@
 #include "core/entity/EntityModel.h"
 
 namespace logic {
+    class World;
 
     /**
      * Entity Model representing a wall in the game world.
@@ -20,7 +21,7 @@ namespace logic {
         /**
          * Run periodic update logic for the wall.
          */
-        void update() override;
+        void update(World &world) override;
 
         /**
          * Sets the size of the wall.
