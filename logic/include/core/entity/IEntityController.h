@@ -5,6 +5,7 @@
 #ifndef AP_PACMAN_IENTITYCONTROLLER_H
 #define AP_PACMAN_IENTITYCONTROLLER_H
 #include <memory>
+#include "EntityCommands.h"
 
 namespace logic {
     class EntityModel;
@@ -13,7 +14,7 @@ namespace logic {
     public:
         virtual void update(std::shared_ptr<EntityModel> entity) = 0;
 
-        virtual void onCollision(std::shared_ptr<EntityModel> thisEntity, std::shared_ptr<EntityModel> otherEntity) = 0;
+        virtual void processCommand(EntityCommand command, EntityModel& entity) = 0;
     };
 }
 

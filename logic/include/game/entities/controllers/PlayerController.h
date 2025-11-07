@@ -13,15 +13,16 @@ namespace logic {
     public:
         void update(std::shared_ptr<EntityModel> entity) override;
 
-        void onCollision(std::shared_ptr<EntityModel> thisEntity, std::shared_ptr<EntityModel> otherEntity) override;
+        void processCommand(EntityCommand command, EntityModel &entity) override;
 
-        void turnLeft();
+    private:
+        void _turnLeft();
 
-        void turnRight();
+        void _turnRight();
 
-        void turnUp();
+        void _turnUp();
 
-        void turnDown();
+        void _turnDown();
     };
 
 } // logic
