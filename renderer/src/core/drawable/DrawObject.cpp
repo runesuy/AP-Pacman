@@ -9,6 +9,11 @@
 namespace renderer {
     void DrawObject::draw(sf::RenderWindow &window) {
         for (auto &shape : getSFShapes(window)) {
+            if (shape->getFillColor() == sf::Color::Yellow) {
+                int debug = 0;
+                sf::RectangleShape debugRect = dynamic_cast<sf::RectangleShape&>(*shape);
+                auto size = debugRect.getSize();
+            }
             shape->setPosition(shape->getPosition() + Camera::project(getPosition(), window));
             window.draw(*shape);
         }

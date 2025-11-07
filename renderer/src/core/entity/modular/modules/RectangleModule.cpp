@@ -3,6 +3,7 @@
 //
 
 #include <SFML/Graphics/RectangleShape.hpp>
+#include <iostream>
 #include "core/entity/modular/modules/RectangleModule.h"
 #include "core/utils/Camera.h"
 

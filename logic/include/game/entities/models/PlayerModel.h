@@ -10,7 +10,22 @@
 namespace logic {
 
     class PlayerModel : public EntityModel, public Observable<PlayerModel>{
+        enum Direction {
+            UP,
+            DOWN,
+            LEFT,
+            RIGHT
+        };
 
+        Direction direction;
+    public:
+        void setPosition(const Position &position) override;
+
+        void setSize(const Size &size) override;
+
+        Direction getDirection() const;
+
+        void setDirection(Direction direction);
     };
 
 } // logic

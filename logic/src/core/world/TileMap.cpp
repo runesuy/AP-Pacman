@@ -27,12 +27,20 @@ namespace logic {
                 float x = -1.0f + static_cast<float>(col) * tileSize + tileSize / 2;
                 float y = 1.0f - static_cast<float>(row) * tileSize - tileSize / 2 - yOffsetForCentering;
                 switch (tileType) {
-                    case TileType::WALL:
+                    case TileType::WALL: {
                         auto wall = world.getConfig().getEntityFactory()->createWallModel();
                         wall->setPosition({x, y});
                         wall->setSize({tileSize, tileSize});
                         world.addObject(wall);
                         break;
+                    }
+                    case TileType::PLAYER: {
+                        auto player = world.getConfig().getEntityFactory()->createPlayerModel();
+                        player->setPosition({x, y});
+                        player->setSize({tileSize, tileSize});
+                        world.addObject(player);
+                        break;
+                    }
                 }
             }
         }

@@ -7,6 +7,7 @@
 
 #include "core/entity/IEntityFactory.h"
 #include "game/states/level/LevelState.h"
+#include "game/entities/models/PlayerModel.h"
 
 namespace renderer {
 
@@ -16,6 +17,8 @@ namespace renderer {
     class DefaultEntityFactory : public logic::IEntityFactory {
     public:
         std::shared_ptr<logic::WallModel> createWallModel() override;
+
+        std::shared_ptr<logic::PlayerModel> createPlayerModel() override;
     };
 
 } // renderer

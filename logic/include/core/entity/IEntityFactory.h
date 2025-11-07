@@ -6,6 +6,7 @@
 #define AP_PACMAN_IENTITYFACTORY_H
 
 #include "game/entities/models/WallModel.h"
+#include "game/entities/models/PlayerModel.h"
 
 namespace logic {
 
@@ -26,6 +27,9 @@ namespace logic {
          * @return A shared pointer to the created WallModel.
          */
         virtual std::shared_ptr<WallModel> createWallModel() = 0;
+
+        virtual std::shared_ptr<PlayerModel> createPlayerModel() = 0;
+
     };
 }
 

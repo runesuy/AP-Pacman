@@ -6,6 +6,7 @@
 #include "game/entities/views/WallView.h"
 #include "game/entities/models/WallModel.h"
 #include "game/Game.h"
+#include "game/entities/views/PlayerView.h"
 
 namespace renderer {
     std::shared_ptr<logic::WallModel> DefaultEntityFactory::createWallModel() {
@@ -14,5 +15,13 @@ namespace renderer {
         wallModel->addObserver(wallView);
         Game::getInstance()->getDrawCollection().addDrawable(wallView);
         return wallModel;
+    }
+
+    std::shared_ptr<logic::PlayerModel> DefaultEntityFactory::createPlayerModel() {
+            auto playerView = std::make_shared<PlayerView>();
+            auto playerModel = std::make_shared<logic::PlayerModel>();
+            playerModel->addObserver(playerView);
+            Game::getInstance()->getDrawCollection().addDrawable(playerView);
+            return playerModel;
     }
 } // renderer

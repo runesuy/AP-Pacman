@@ -12,10 +12,11 @@ namespace renderer {
 
     class PlayerView : public ModularEntityView, public logic::IObserver<logic::PlayerModel>{
     public:
-        PlayerView()=default;
+        PlayerView();
 
         void update(logic::PlayerModel &subject) override;
 
+        void setSize(const logic::Size &size) override;
     };
 
 } // renderer
