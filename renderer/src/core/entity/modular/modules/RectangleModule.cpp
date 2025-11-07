@@ -34,8 +34,8 @@ namespace renderer {
         RectangleModule::size = size;
     }
 
-    void RectangleModule::update(std::shared_ptr<ModularEntityView> subject) {
-        setSize(subject->getSize());
+    void RectangleModule::update(ModularEntityView &subject) {
+        setSize(subject.getSize());
     }
 
     void RectangleModule::setFillColor(const sf::Color &color) {

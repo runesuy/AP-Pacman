@@ -30,7 +30,7 @@ class RectangleModule : public IEntityViewModule {
 
         void setSize(const logic::Size &size);
 
-        void update(std::shared_ptr<ModularEntityView> subject) override;
+        void update(ModularEntityView &subject) override;
 
         void setFillColor(const sf::Color &color);
 

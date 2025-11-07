@@ -20,7 +20,7 @@ class IObserver{
          * Called when the subject being observed has changed.
          * @param subject The subject being observed.
          */
-        virtual void update(std::shared_ptr<T> subject)=0;
+        virtual void update(T &subject)=0;
     };
 }
 

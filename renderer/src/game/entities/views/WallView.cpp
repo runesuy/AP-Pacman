@@ -10,9 +10,9 @@
 #include "game/Game.h"
 
 namespace renderer {
-    void WallView::update(std::shared_ptr<logic::WallModel> subject) {
-        setPosition(subject->getPosition());
-        setSize(subject->getSize());
+    void WallView::update(logic::WallModel &subject) {
+        setPosition(subject.getPosition());
+        setSize(subject.getSize());
     }
 
     WallView::WallView() {

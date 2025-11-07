@@ -16,7 +16,7 @@ namespace logic {
      * An class containing observing logic for integrating with the IObserver class.
      */
     template <typename T>
-    class Observable : public std::enable_shared_from_this<T>{
+    class Observable {
 
         /**
          * List of observers observing this observable
@@ -29,7 +29,7 @@ namespace logic {
          */
         void updateObservers() {
             for (auto &observer: _observers) {
-                observer->update(this->shared_from_this());
+                observer->update(static_cast<T&>(*this));
             }
         };
 

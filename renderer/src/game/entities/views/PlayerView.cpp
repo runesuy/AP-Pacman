@@ -5,9 +5,9 @@
 #include "game/entities/views/PlayerView.h"
 
 namespace renderer {
-    void PlayerView::update(std::shared_ptr<logic::PlayerModel> subject) {
-        setPosition(subject->getPosition());
-        setSize(subject->getSize());
+    void PlayerView::update(logic::PlayerModel &subject) {
+        setPosition(subject.getPosition());
+        setSize(subject.getSize());
     }
 
 } // renderer

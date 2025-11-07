@@ -16,7 +16,7 @@ namespace renderer {
     public:
         SpriteModule()=default;
 
-        void update(std::shared_ptr<ModularEntityView> subject) override;
+        void update(ModularEntityView &subject) override;
 
         std::vector<std::unique_ptr<sf::Shape>> getSFShapes(sf::RenderWindow &window) const override;
 

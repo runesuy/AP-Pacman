@@ -6,8 +6,8 @@
 #include "core/entity/modular/ModularEntityView.h"
 
 namespace renderer {
-    void SpriteModule::update(std::shared_ptr<ModularEntityView> subject) {
-        setSize(subject->getSize());
+    void SpriteModule::update(ModularEntityView &subject) {
+        setSize(subject.getSize());
     }
 
     std::vector<std::unique_ptr<sf::Shape>> SpriteModule::getSFShapes(sf::RenderWindow &window) const {

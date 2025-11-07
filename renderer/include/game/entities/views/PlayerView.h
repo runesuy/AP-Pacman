@@ -14,7 +14,7 @@ namespace renderer {
     public:
         PlayerView()=default;
 
-        void update(std::shared_ptr<logic::PlayerModel> subject) override;
+        void update(logic::PlayerModel &subject) override;
 
     };
 

@@ -20,7 +20,7 @@ namespace renderer {
     public:
         WallView();
 
-        void update(std::shared_ptr<logic::WallModel> subject) override;
+        void update(logic::WallModel &subject) override;
 
         void setSize(const logic::Size &size) override;
 
