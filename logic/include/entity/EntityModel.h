@@ -10,13 +10,19 @@
 #include "memory"
 #include "world/WorldObject.h"
 #include "world/Size.h"
+#include "IEntityController.h"
 
 namespace logic {
+    class IEntityController;
+
     /**
      * In world logical representation of an entity.
      * Consists of size attribute in addition to WorldObject attributes.
      */
-    class EntityModel : public WorldObject{
+class EntityModel : public WorldObject, public std::enable_shared_from_this<EntityModel>{
+    protected:
+        std::shared_ptr<IEntityController> controller;
+
         /**
          * The size of the entity.
          */
@@ -32,6 +38,10 @@ namespace logic {
          * @return The size of the entity.
          */
         [[nodiscard]] Size getSize() const;
+
+        void setController(const std::shared_ptr<IEntityController> &controller);
+
+        void update() override;
     };
 }
 

@@ -27,6 +27,9 @@ namespace renderer {
          */
         using InitialState = MenuState;
 
+        /**
+         * Is the game running?
+         */
         bool running=false;
 
         /**
@@ -34,11 +37,21 @@ namespace renderer {
          */
         IAppConfig& appConfig;
 
+        /**
+         * The singleton instance
+         */
         inline static std::shared_ptr<Game> _instance;
-
         explicit Game(IAppConfig& appConfig);
 
+        /**
+         * Collection of all drawable objects drawn before the states.
+         */
         DrawCollection drawCollection;
+
+        /**
+         * Load resources from config files.
+         */
+        void loadResources();
     public:
         Game(Game&&) noexcept = delete;
         Game(Game&) = delete;

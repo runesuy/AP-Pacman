@@ -16,11 +16,7 @@ int renderer::Game::run() {
             ->createStateManager(appConfig.getFactoryCollection().getStateFactory());
 
     // load config file
-    appConfig.getConfigParser().loadConfigFile();
-    appConfig.getTextureParser().loadTextures(
-            appConfig.getConfigParser().getSpriteSheetPath(),
-            appConfig.getConfigParser().getTextureRects()
-    );
+    loadResources();
 
     //create sfml window
     sf::RenderWindow window(sf::VideoMode(800, 600), "Pacman");
@@ -84,4 +80,12 @@ const renderer::DrawCollection &renderer::Game::getDrawCollection() const {
 
 renderer::DrawCollection &renderer::Game::getDrawCollection() {
     return drawCollection;
+}
+
+void renderer::Game::loadResources() {
+    appConfig.getConfigParser().loadConfigFile();
+    appConfig.getTextureParser().loadTextures(
+            appConfig.getConfigParser().getSpriteSheetPath(),
+            appConfig.getConfigParser().getTextureRects()
+    );
 }

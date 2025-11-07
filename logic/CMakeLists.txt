@@ -28,6 +28,9 @@ set(LOGIC_SOURCES
         src/entity/EntityModel.cpp
         src/core/IUpdateHandler.cpp
         include/core/IUpdateHandler.h
+        src/entity/PlayerModel.cpp
+        include/entity/PlayerModel.h
+        include/entity/IEntityController.h
 )
 
 add_library(Logic ${LOGIC_SOURCES})
