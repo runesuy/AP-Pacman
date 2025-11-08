@@ -19,6 +19,8 @@ namespace renderer {
         std::shared_ptr<logic::WallModel> createWallModel() override;
 
         std::shared_ptr<logic::PlayerModel> createPlayerModel() override;
+
+        std::shared_ptr<logic::CoinModel> createCoinModel() override;
     };
 
 } // renderer

@@ -41,6 +41,13 @@ namespace logic {
                         world.addObject(player);
                         break;
                     }
+                    case TileType::COIN: {
+                        auto coin = world.getConfig().getEntityFactory()->createCoinModel();
+                        coin->setPosition({x, y});
+                        coin->setSize({tileSize * 0.5f, tileSize * 0.5f});
+                        world.addObject(coin);
+                        break;
+                    }
                 }
             }
         }

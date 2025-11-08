@@ -8,7 +8,7 @@
 #include "vector"
 #include "core/observer/Observable.h"
 #include "memory"
-#include "core/world/WorldObject.h"
+#include "core/world/SizedWorldObject.h"
 #include "core/world/Size.h"
 #include "core/entity/IEntityController.h"
 #include "EntityCommands.h"
@@ -22,30 +22,11 @@ namespace logic {
      * Consists of size attribute in addition to WorldObject attributes.
      */
     template<typename EntityModelType>
-class EntityModel : public WorldObject{
+class EntityModel : public SizedWorldObject{
     protected:
         std::shared_ptr<IEntityController<EntityModelType>> controller;
 
-        /**
-         * The size of the entity.
-         */
-        Size size={0,0};
     public:
-        /**
-         * Sets the size of the entity.
-         * @param size
-         */
-        virtual void setSize(const Size& size) {
-            this->size = size;
-        }
-
-        /**
-         * @return The size of the entity.
-         */
-        [[nodiscard]] Size getSize() const {
-            return size;
-        }
-
         void setController(const std::shared_ptr<IEntityController<EntityModelType>> &controller){
             this->controller = controller;
         }

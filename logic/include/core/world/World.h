@@ -23,6 +23,8 @@ namespace logic {
          * Updated on update.
          */
         std::vector<std::shared_ptr<WorldObject>> objects;
+
+        void _handleCollisions();
     public:
         /**
          * Construct a World with the given configuration.
