@@ -18,15 +18,7 @@ namespace logic {
         void processCommand(EntityCommand command, PlayerModel &entity) override;
 
     private:
-        void _turnLeft();
-
-        void _turnRight();
-
-        void _turnUp();
-
-        void _turnDown();
-
-        [[nodiscard]] TileMap::TileType getTileInDirection(const World& world, const PlayerModel& entity, PlayerModel::Direction direction) const;
+        static TileMap::TileType getTileInDirection(const World& world, const PlayerModel& entity, PlayerModel::Direction direction) ;
 
         /**
          * Check if the player has passed the center of the current tile in the given direction.
@@ -35,7 +27,7 @@ namespace logic {
          * @param direction
          * @return True and the center position if past center, false otherwise.
          */
-        [[nodiscard]] std::tuple<bool,Position> _isPastOrOnCenter(const logic::World &world, const logic::PlayerModel &entity, logic::PlayerModel::Direction direction) const;
+        static std::tuple<bool,Position> _isPastOrOnCenter(const logic::World &world, const logic::PlayerModel &entity, logic::PlayerModel::Direction direction) ;
     };
 
 } // logic

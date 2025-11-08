@@ -15,12 +15,13 @@ namespace logic {
             UP,
             DOWN,
             LEFT,
-            RIGHT
+            RIGHT,
+            NONE
         };
     private:
         const float SPEED = 0.3f;
-        Direction direction=RIGHT;
-        Direction requestedDirection=DOWN;
+        Direction direction=NONE;
+        Direction requestedDirection=NONE;
     public:
         PlayerModel();
 

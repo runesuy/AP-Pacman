@@ -8,22 +8,6 @@
 #include "core/world/World.h"
 
 namespace logic {
-    void PlayerController::_turnLeft() {
-
-    }
-
-    void PlayerController::_turnRight() {
-
-    }
-
-    void PlayerController::_turnUp() {
-
-    }
-
-    void PlayerController::_turnDown() {
-
-    }
-
     void PlayerController::processCommand(EntityCommand command, PlayerModel &entity) {
         switch (command) {
             case EntityCommand::TURN_LEFT:
@@ -56,6 +40,7 @@ namespace logic {
                 entity.setDirection(entity.getRequestedDirection());
             }
         }
+        if (entity.getDirection()==PlayerModel::NONE) return;
 
         TileMap::TileType tileInFront = getTileInDirection(world, entity, entity.getDirection());
         auto [isPastCenter, tileCenter] = _isPastOrOnCenter(world, entity, entity.getDirection());
@@ -80,7 +65,7 @@ namespace logic {
 }
 
     logic::TileMap::TileType logic::PlayerController::getTileInDirection(const World &world, const PlayerModel &entity,
-                                                           PlayerModel::Direction direction) const {
+                                                           PlayerModel::Direction direction) {
         auto [row, col] = world.getConfig().getTileMap().getGridPosition(entity.getPosition());
 
         TileMap::TileType tileInFront;
@@ -102,7 +87,7 @@ namespace logic {
     }
 
 std::tuple<bool,logic::Position> logic::PlayerController::_isPastOrOnCenter(const logic::World &world, const logic::PlayerModel &entity,
-                                                                            logic::PlayerModel::Direction direction) const {
+                                                                            logic::PlayerModel::Direction direction) {
     auto [row, col] = world.getConfig().getTileMap().getGridPosition(entity.getPosition());
     Position tileCenter = world.getConfig().getTileMap().getTileCenterPosition(row, col);
     if (entity.getPosition() == tileCenter) {
