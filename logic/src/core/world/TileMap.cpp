@@ -55,7 +55,7 @@ namespace logic {
         const float tileSize = 2/static_cast<float>(mapData[0].size());
         const float yOffsetForCentering = (2.0f - tileSize * static_cast<float>(mapData.size())) / 2.0f;
         int col = static_cast<int>(((position.getX() + 1.0f) / tileSize)+tileSize/2);
-        int row = static_cast<int>((1.0f - tileSize / 2 - yOffsetForCentering - position.getY()) / tileSize);
+        int row = static_cast<int>((1.0f - position.getY() - yOffsetForCentering) / tileSize+tileSize/2);
         return {row, col};
     }
 
