@@ -5,23 +5,14 @@
 #ifndef AP_PACMAN_PLAYERMODEL_H
 #define AP_PACMAN_PLAYERMODEL_H
 
-#include "core/entity/EntityModel.h"
+#include "core/entity/MovingEntityModel.h"
 
 namespace logic {
 
-    class PlayerModel : public EntityModel<PlayerModel>, public Observable<PlayerModel>{
+    class PlayerModel : public MovingEntityModel<PlayerModel>, public Observable<PlayerModel>{
     public:
-        enum Direction {
-            UP,
-            DOWN,
-            LEFT,
-            RIGHT,
-            NONE
-        };
     private:
         const float SPEED = 0.3f;
-        Direction direction=NONE;
-        Direction requestedDirection=NONE;
     public:
         PlayerModel();
 
@@ -29,15 +20,7 @@ namespace logic {
 
         void setSize(const Size &size) override;
 
-        [[nodiscard]] Direction getDirection() const;
-
-        void setDirection(Direction direction);
-
-        [[nodiscard]] float getSpeed() const;
-
-        [[nodiscard]] Direction getRequestedDirection() const;
-
-        void setRequestedDirection(Direction requestedDirection);
+        float getSpeed() override;
     };
 
 } // logic

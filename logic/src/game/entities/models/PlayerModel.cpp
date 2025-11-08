@@ -16,27 +16,11 @@ namespace logic {
         updateObservers();
     }
 
-    PlayerModel::Direction PlayerModel::getDirection() const {
-        return direction;
-    }
-
-    void PlayerModel::setDirection(PlayerModel::Direction direction) {
-        PlayerModel::direction = direction;
-    }
-
     PlayerModel::PlayerModel() {
         setController(std::make_shared<PlayerController>());
     }
 
-    float PlayerModel::getSpeed() const {
+    float PlayerModel::getSpeed() {
         return SPEED;
-    }
-
-    PlayerModel::Direction PlayerModel::getRequestedDirection() const {
-        return requestedDirection;
-    }
-
-    void PlayerModel::setRequestedDirection(PlayerModel::Direction requestedDirection) {
-        PlayerModel::requestedDirection = requestedDirection;
     }
 } // logic
