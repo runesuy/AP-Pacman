@@ -31,30 +31,36 @@ class EntityModel : public SizedWorldObject{
             this->controller = controller;
         }
 
-        void processCommand(EntityCommand command){
-            if(controller){
-                try {
-                    controller->processCommand(command, static_cast<EntityModelType &>(*this));
-                }
-                catch (std::bad_cast& e){
-                    // Handle the error appropriately, e.g., log it
-                    throw std::runtime_error("Failed to cast EntityModel to EntityModelType in processCommand(): " + std::string(e.what()));
-                }
-            }
-        };
+        void processCommand(EntityCommand command);
 
-        void update(World &world) override {
-            if(controller){
-                try {
-                    controller->update(world, static_cast<EntityModelType &>(*this));
-                }
-                catch (std::bad_cast& e){
-                    // Handle the error appropriately, e.g., log it
-                    throw std::runtime_error("Failed to cast EntityModel to EntityModelType in update(): " + std::string(e.what()));
-                }
+        void update(World &world) override;
+    };
+
+    template<typename EntityModelType>
+    void EntityModel<EntityModelType>::update(World &world) {
+        if(controller){
+            try {
+                controller->update(world, static_cast<EntityModelType &>(*this));
+            }
+            catch (std::bad_cast& e){
+                // Handle the error appropriately, e.g., log it
+                throw std::runtime_error("Failed to cast EntityModel to EntityModelType in update(): " + std::string(e.what()));
             }
         }
-    };
+    }
+
+    template<typename EntityModelType>
+    void EntityModel<EntityModelType>::processCommand(EntityCommand command) {
+        if(controller){
+            try {
+                controller->processCommand(command, static_cast<EntityModelType &>(*this));
+            }
+            catch (std::bad_cast& e){
+                // Handle the error appropriately, e.g., log it
+                throw std::runtime_error("Failed to cast EntityModel to EntityModelType in processCommand(): " + std::string(e.what()));
+            }
+        }
+    }
 }
 
 
