@@ -49,3 +49,7 @@ logic::Position logic::Position::operator+(const logic::Position &other) const {
 logic::Position logic::Position::operator*(float scalar) const {
     return {this->x * scalar, this->y * scalar};
 }
+
+bool logic::Position::operator==(const logic::Position &other) const {
+    return this->x == other.x && this->y == other.y;
+}

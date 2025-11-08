@@ -8,8 +8,13 @@
 
 namespace renderer {
     logic::TileMap DefaultLogicConfig::getTileMap() const {
+        if (tileMapLoaded) {
+            return tileMap;
+        }
         TXTMapParser parser;
-        return parser.loadMap("resources/maps/map1.txt");
+        tileMapLoaded = true;
+        tileMap = parser.loadMap("resources/maps/map1.txt");
+        return tileMap;
     }
 
     std::unique_ptr<logic::IEntityFactory> DefaultLogicConfig::getEntityFactory() const {

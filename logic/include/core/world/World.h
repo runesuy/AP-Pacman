@@ -46,6 +46,16 @@ namespace logic {
          * @param object
          */
         void addObject(const std::shared_ptr<WorldObject>& object);
+
+        template<typename Target>
+        void sendCommandTo(EntityCommand command) {
+            for (const auto& object : objects) {
+                auto target = std::dynamic_pointer_cast<Target>(object);
+                if (target) {
+                    target->processCommand(command);
+                }
+            }
+        };
     };
 
 } // logic

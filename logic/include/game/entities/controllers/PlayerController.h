@@ -7,6 +7,7 @@
 
 #include "core/entity/IEntityController.h"
 #include "game/entities/models/PlayerModel.h"
+#include "core/world/TileMap.h"
 
 namespace logic {
 
@@ -24,6 +25,17 @@ namespace logic {
         void _turnUp();
 
         void _turnDown();
+
+        [[nodiscard]] TileMap::TileType getTileInDirection(const World& world, const PlayerModel& entity, PlayerModel::Direction direction) const;
+
+        /**
+         * Check if the player has passed the center of the current tile in the given direction.
+         * @param world
+         * @param entity
+         * @param direction
+         * @return True and the center position if past center, false otherwise.
+         */
+        [[nodiscard]] std::tuple<bool,Position> _isPastOrOnCenter(const logic::World &world, const logic::PlayerModel &entity, logic::PlayerModel::Direction direction) const;
     };
 
 } // logic

@@ -53,13 +53,22 @@ namespace logic {
 
     std::pair<int, int> TileMap::getGridPosition(const Position &position) const {
         const float tileSize = 2/static_cast<float>(mapData[0].size());
-        int col = static_cast<int>((position.getX() + 1.0f) / tileSize);
-        int row = static_cast<int>((1.0f - position.getY()) / tileSize);
+        const float yOffsetForCentering = (2.0f - tileSize * static_cast<float>(mapData.size())) / 2.0f;
+        int col = static_cast<int>(((position.getX() + 1.0f) / tileSize)+tileSize/2);
+        int row = static_cast<int>((1.0f - tileSize / 2 - yOffsetForCentering - position.getY()) / tileSize);
         return {row, col};
     }
 
     TileMap::TileType TileMap::getTileType(int row, int col) const {
         return mapData.at(row).at(col);
+    }
+
+    Position TileMap::getTileCenterPosition(int row, int col) const {
+        const float tileSize = 2/static_cast<float>(mapData[0].size());
+        const float yOffsetForCentering = (2.0f - tileSize * static_cast<float>(mapData.size())) / 2.0f;
+        float x = -1.0f + static_cast<float>(col) * tileSize + tileSize / 2;
+        float y = 1.0f - static_cast<float>(row) * tileSize - tileSize / 2 - yOffsetForCentering;
+        return {x, y};
     }
 
 } // logic

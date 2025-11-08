@@ -11,6 +11,7 @@
 #include "core/world/WorldObject.h"
 #include "core/world/Size.h"
 #include "core/entity/IEntityController.h"
+#include "EntityCommands.h"
 
 namespace logic {
     template<typename EntityModelType>
@@ -49,6 +50,18 @@ class EntityModel : public WorldObject{
             this->controller = controller;
         }
 
+        void processCommand(EntityCommand command){
+            if(controller){
+                try {
+                    controller->processCommand(command, static_cast<EntityModelType &>(*this));
+                }
+                catch (std::bad_cast& e){
+                    // Handle the error appropriately, e.g., log it
+                    throw std::runtime_error("Failed to cast EntityModel to EntityModelType in processCommand(): " + std::string(e.what()));
+                }
+            }
+        };
+
         void update(World &world) override {
             if(controller){
                 try {
@@ -59,7 +72,6 @@ class EntityModel : public WorldObject{
                     throw std::runtime_error("Failed to cast EntityModel to EntityModelType in update(): " + std::string(e.what()));
                 }
             }
-
         }
     };
 }

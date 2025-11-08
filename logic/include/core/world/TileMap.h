@@ -56,6 +56,8 @@ namespace logic {
         [[nodiscard]] std::pair<int, int> getGridPosition(const Position& position) const;
 
         [[nodiscard]] TileType getTileType(int row, int col) const;
+
+        Position getTileCenterPosition(int row, int col) const;
     };
 
 } // logic

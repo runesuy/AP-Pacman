@@ -6,6 +6,7 @@
 #define AP_PACMAN_DEFAULTLOGICCONFIG_H
 
 #include "core/config/IConfig.h"
+#include "core/world/TileMap.h"
 
 namespace renderer {
 
@@ -13,6 +14,8 @@ namespace renderer {
      * Default implementation of the logic configuration interface.
      */
     class DefaultLogicConfig : public logic::IConfig {
+        mutable bool tileMapLoaded = false;
+        mutable logic::TileMap tileMap;
     public:
         /**
          * Get the tile map to be used in the game world.

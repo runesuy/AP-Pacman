@@ -33,6 +33,7 @@ namespace logic {
         Position& operator+=(const Position& other);
         Position operator+(const Position& other) const;
         Position operator*(float scalar) const;
+        bool operator==(const Position& other) const;
 
         /**
          * @return the horizontal coördinate

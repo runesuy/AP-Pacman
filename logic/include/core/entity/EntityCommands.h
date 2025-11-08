@@ -4,7 +4,6 @@
 
 #ifndef AP_PACMAN_IENTITYCOMMAND_H
 #define AP_PACMAN_IENTITYCOMMAND_H
-#include "EntityModel.h"
 
 namespace logic {
     enum EntityCommand {
