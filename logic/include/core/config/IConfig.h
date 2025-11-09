@@ -25,7 +25,7 @@ namespace logic {
          * Get the entity factory for creating game entities.
          * @return
          */
-        [[nodiscard]] virtual std::unique_ptr<IEntityFactory> getEntityFactory() const = 0;
+        [[nodiscard]] virtual std::shared_ptr<logic::IEntityFactory> getEntityFactory() const = 0;
     };
 
 } // logic

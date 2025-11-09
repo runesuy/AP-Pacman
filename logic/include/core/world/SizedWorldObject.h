@@ -26,6 +26,8 @@ namespace logic {
          * @return The size of the object.
          */
         [[nodiscard]] Size getSize() const;
+
+        virtual void onCollision(WorldObject &other) {};
     };
 
 } // logic

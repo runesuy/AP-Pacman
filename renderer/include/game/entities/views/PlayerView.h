@@ -17,6 +17,8 @@ namespace renderer {
         void update(logic::PlayerModel &subject) override;
 
         void setSize(const logic::Size &size) override;
+
+        bool isMarkedForRemoval() override;
     };
 
 } // renderer

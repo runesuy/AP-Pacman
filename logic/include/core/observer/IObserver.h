@@ -21,6 +21,12 @@ class IObserver{
          * @param subject The subject being observed.
          */
         virtual void update(T &subject)=0;
+
+        /**
+         * Called when the subject being observed is being destroyed.
+         * @param subject
+         */
+        virtual void onObservableDestroyed(T &subject){};
     };
 }
 

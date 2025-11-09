@@ -44,11 +44,6 @@ namespace renderer {
         explicit Game(IAppConfig& appConfig);
 
         /**
-         * Collection of all drawable objects drawn before the states.
-         */
-        DrawCollection drawCollection;
-
-        /**
          * Load resources from config files.
          */
         void loadResources();
@@ -75,10 +70,6 @@ namespace renderer {
         static std::shared_ptr<Game> getInstance();
 
         [[nodiscard]] IAppConfig &getAppConfig() const;
-
-        [[nodiscard]] const DrawCollection &getDrawCollection() const;
-
-        DrawCollection &getDrawCollection();
     };
 }
 

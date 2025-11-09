@@ -11,7 +11,7 @@
 #include <vector>
 
 namespace logic {
-    class World {
+    class World : public Observable<World> {
 
         /**
          * Configuration reference for all logical settings and factories.
@@ -25,6 +25,8 @@ namespace logic {
         std::vector<std::shared_ptr<WorldObject>> objects;
 
         void _handleCollisions();
+
+        void _removeMarkedObjects();
     public:
         /**
          * Construct a World with the given configuration.
@@ -48,6 +50,8 @@ namespace logic {
          * @param object
          */
         void addObject(const std::shared_ptr<WorldObject>& object);
+
+        void removeObject(const WorldObject& object);
 
         template<typename Target>
         void sendCommandTo(EntityCommand command) {

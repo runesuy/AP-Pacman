@@ -3,8 +3,10 @@
 //
 
 #include <memory>
+#include <iostream>
 #include "core/world/World.h"
 #include "core/world/TileMap.h"
+#include "core/world/CollisionHandler.h"
 
 namespace logic {
     void World::update() {
@@ -15,6 +17,8 @@ namespace logic {
         for (const auto& object : objects) {
             object->update(*this);
         }
+
+        _removeMarkedObjects();
     }
 
     World::World(const IConfig& config) : config(config) {
@@ -30,17 +34,28 @@ namespace logic {
     }
 
     void World::_handleCollisions() {
-        for (auto& objectA : objects) {
-            // check if objectA is EntityModel
-            if (!std::dynamic_pointer_cast<SizedWorldObject>(objectA)) {
-                continue;
-            }
-            for (auto& objectB : objects) {
-                if (!std::dynamic_pointer_cast<SizedWorldObject>(objectB)) {
-                    continue;
-                }
+        CollisionHandler::handleCollisions(objects);
+    }
 
+    void World::removeObject(const WorldObject &object) {
+        for (auto it = objects.begin(); it != objects.end(); ) {
+            if (it->get() == &object) {
+                it = objects.erase(it);
+            } else {
+                ++it;
             }
         }
+        updateObservers();
+    }
+
+    void World::_removeMarkedObjects() {
+        for (auto it = objects.begin(); it != objects.end(); ) {
+            if ((*it)->isMarkedForRemoval()) {
+                it = objects.erase(it);
+            } else {
+                ++it;
+            }
+        }
+        updateObservers();
     }
 } // logic

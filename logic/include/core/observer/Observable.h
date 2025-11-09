@@ -34,7 +34,7 @@ namespace logic {
         };
 
     public:
-        virtual ~Observable() = default;
+        virtual ~Observable();
 
         /**
          * Add an observer to this observable.
@@ -43,6 +43,13 @@ namespace logic {
         void addObserver(const std::shared_ptr<IObserver<T>>& observer) { _observers.push_back(observer); };
 
     };
+
+    template<typename T>
+    Observable<T>::~Observable() {
+        for (auto &observer: _observers) {
+            observer->onObservableDestroyed(static_cast<T&>(*this));
+        }
+    }
 }
 
 

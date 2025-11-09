@@ -20,7 +20,7 @@ namespace renderer {
     public:
         MenuState(std::unique_ptr<IStateUpdateHandler>&& updateHandler,
                   std::unique_ptr<IStateInputHandler>&& inputHandler,
-                  std::unique_ptr<IDrawHandler>&& drawHandler);
+                  std::unique_ptr<IStateDrawHandler>&& drawHandler);
     };
 
 } // renderer

@@ -28,4 +28,8 @@ namespace renderer {
         updateObservers();
     }
 
+    bool WallView::isMarkedForRemoval() {
+        return false;
+    }
+
 } // renderer

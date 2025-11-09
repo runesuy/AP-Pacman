@@ -24,4 +24,8 @@ namespace renderer {
         updateObservers();
     }
 
+    bool PlayerView::isMarkedForRemoval() {
+        return false;
+    }
+
 } // renderer

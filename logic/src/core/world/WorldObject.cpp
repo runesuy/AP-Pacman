@@ -12,4 +12,12 @@ namespace logic {
     void WorldObject::setPosition(const Position &position) {
         this->position = position;
     }
+
+    void WorldObject::markForRemoval() {
+        markedForRemoval = true;
+    }
+
+    bool WorldObject::isMarkedForRemoval() const {
+        return markedForRemoval;
+    }
 } // logic

@@ -17,12 +17,12 @@ void renderer::DelegatingState::processInput(sf::Event &event, StateManager& sta
 }
 
 void renderer::DelegatingState::draw(sf::RenderWindow &window) {
-    _drawHandler->draw(window);
+    _drawHandler->draw(window, *this);
 }
 
 renderer::DelegatingState::DelegatingState(std::unique_ptr<IStateUpdateHandler> &&updateHandler,
                                            std::unique_ptr<IStateInputHandler> &&inputHandler,
-                                           std::unique_ptr<IDrawHandler> &&drawHandler) :
+                                           std::unique_ptr<IStateDrawHandler> &&drawHandler) :
                                            _updateHandler(std::move(updateHandler)),
                                            _inputHandler(std::move(inputHandler)),
                                            _drawHandler(std::move(drawHandler)) {

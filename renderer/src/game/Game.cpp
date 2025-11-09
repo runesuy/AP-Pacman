@@ -44,9 +44,6 @@ int renderer::Game::run() {
 
         //--------- Render ---------
         window.clear(sf::Color::Black);
-        for (auto& drawable : drawCollection.getDrawables()) {
-            drawable->draw(window);
-        }
         stateManager->draw(window);
         window.display();
     }
@@ -73,14 +70,6 @@ std::shared_ptr<renderer::Game> renderer::Game::getInstance() {
 
 renderer::IAppConfig &renderer::Game::getAppConfig() const {
     return appConfig;
-}
-
-const renderer::DrawCollection &renderer::Game::getDrawCollection() const {
-    return drawCollection;
-}
-
-renderer::DrawCollection &renderer::Game::getDrawCollection() {
-    return drawCollection;
 }
 
 void renderer::Game::loadResources() {

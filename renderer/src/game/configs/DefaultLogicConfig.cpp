@@ -17,7 +17,7 @@ namespace renderer {
         return tileMap;
     }
 
-    std::unique_ptr<logic::IEntityFactory> DefaultLogicConfig::getEntityFactory() const {
-        return std::make_unique<DefaultEntityFactory>();
+    std::shared_ptr<logic::IEntityFactory> DefaultLogicConfig::getEntityFactory() const {
+        return entityFactory;
     }
 } // renderer

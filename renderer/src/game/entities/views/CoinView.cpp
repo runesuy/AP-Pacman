@@ -9,6 +9,9 @@ namespace renderer {
     void CoinView::update(logic::CoinModel &subject) {
         setPosition(subject.getPosition());
         setSize(subject.getSize());
+        if (subject.isMarkedForRemoval()) {
+            markForRemoval();
+        }
     }
 
     CoinView::CoinView() {
@@ -22,5 +25,17 @@ namespace renderer {
     void CoinView::setSize(const logic::Size &size) {
         EntityView::setSize(size);
         updateObservers();
+    }
+
+    bool CoinView::isMarkedForRemoval() {
+        return markedForRemoval;
+    }
+
+    void CoinView::onObservableDestroyed(logic::CoinModel &subject) {
+        IObserver::onObservableDestroyed(subject);
+    }
+
+    void CoinView::markForRemoval() {
+        markedForRemoval = true;
     }
 } // renderer

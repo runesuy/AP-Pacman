@@ -9,7 +9,7 @@
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
 #include <memory>
-#include "IDrawable.h"
+#include "core/drawable/IDrawable.h"
 #include "core/world/WorldObject.h"
 
 namespace renderer {

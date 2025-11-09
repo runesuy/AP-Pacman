@@ -16,6 +16,8 @@ namespace logic {
          * Used for spatial representation in the world.
          */
         Position position;
+
+        bool markedForRemoval = false;
     public:
         /**
          * @return the position of the world object
@@ -33,6 +35,10 @@ namespace logic {
          * Called on each game update.
          */
         virtual void update(World &world) = 0;
+
+        virtual void markForRemoval();
+
+        bool isMarkedForRemoval() const;
     };
 
 } // logic

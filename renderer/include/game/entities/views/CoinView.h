@@ -10,11 +10,18 @@
 namespace renderer {
 
     class CoinView : public ModularEntityView, public logic::IObserver<logic::CoinModel> {
+        bool markedForRemoval{false};
     public:
         CoinView();
         void update(logic::CoinModel &subject) override;
 
         void setSize(const logic::Size &size) override;
+
+        bool isMarkedForRemoval() override;
+
+        void onObservableDestroyed(logic::CoinModel &subject) override;
+
+        void markForRemoval();
     };
 
 } // renderer

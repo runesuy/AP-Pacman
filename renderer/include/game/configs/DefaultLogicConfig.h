@@ -7,6 +7,7 @@
 
 #include "core/config/IConfig.h"
 #include "core/world/TileMap.h"
+#include "game/factories/DefaultEntityFactory.h"
 
 namespace renderer {
 
@@ -16,6 +17,7 @@ namespace renderer {
     class DefaultLogicConfig : public logic::IConfig {
         mutable bool tileMapLoaded = false;
         mutable logic::TileMap tileMap;
+        std::shared_ptr<logic::IEntityFactory> entityFactory = std::make_shared<DefaultEntityFactory>();
     public:
         /**
          * Get the tile map to be used in the game world.
@@ -28,7 +30,7 @@ namespace renderer {
          * Contains all the code for creating a logic entities and the rendering counterparts.
          * @return
          */
-        [[nodiscard]] std::unique_ptr<logic::IEntityFactory> getEntityFactory() const override;
+        [[nodiscard]] std::shared_ptr<logic::IEntityFactory> getEntityFactory() const override;
     };
 
 } // renderer

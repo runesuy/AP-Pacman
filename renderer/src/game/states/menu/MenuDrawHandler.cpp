@@ -7,7 +7,7 @@
 #include <SFML/Graphics.hpp>
 #include "core/utils/Camera.h"
 
-void renderer::MenuDrawHandler::draw(sf::RenderWindow &window) {
+void renderer::MenuDrawHandler::draw(sf::RenderWindow &window, IState& state) {
     if (!_fontLoaded) {
         std::string fileName = renderer::Game::getInstance()->getAppConfig().getConfigParser().getDefaultFontPath();
         if (!_font.loadFromFile(fileName)) {

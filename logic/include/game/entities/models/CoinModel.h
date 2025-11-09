@@ -14,6 +14,10 @@ namespace logic {
         void setSize(const Size &size) override;
 
         void setPosition(const Position &position) override;
+
+        void onCollision(WorldObject &other) override;
+
+        void markForRemoval() override;
     };
 
 } // logic

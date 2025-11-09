@@ -15,12 +15,17 @@ namespace renderer {
      * Default implementation of the entity factory interface.
      */
     class DefaultEntityFactory : public logic::IEntityFactory {
+        std::shared_ptr<WorldView> viewTarget;
     public:
         std::shared_ptr<logic::WallModel> createWallModel() override;
 
         std::shared_ptr<logic::PlayerModel> createPlayerModel() override;
 
         std::shared_ptr<logic::CoinModel> createCoinModel() override;
+
+        [[nodiscard]] const std::shared_ptr<WorldView> &getViewTarget() const;
+
+        void setViewTarget(const std::shared_ptr<WorldView> &viewTarget);
     };
 
 } // renderer

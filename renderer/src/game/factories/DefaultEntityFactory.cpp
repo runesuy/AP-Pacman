@@ -14,7 +14,7 @@ namespace renderer {
         auto wallView = std::make_shared<WallView>();
         auto wallModel = std::make_shared<logic::WallModel>();
         wallModel->addObserver(wallView);
-        Game::getInstance()->getDrawCollection().addDrawable(wallView);
+        viewTarget->addObjectView(wallView);
         return wallModel;
     }
 
@@ -22,7 +22,7 @@ namespace renderer {
             auto playerView = std::make_shared<PlayerView>();
             auto playerModel = std::make_shared<logic::PlayerModel>();
             playerModel->addObserver(playerView);
-            Game::getInstance()->getDrawCollection().addDrawable(playerView);
+            viewTarget->addObjectView(playerView);
             return playerModel;
     }
 
@@ -30,7 +30,15 @@ namespace renderer {
         auto coinView = std::make_shared<CoinView>();
         auto coinModel = std::make_shared<logic::CoinModel>();
         coinModel->addObserver(coinView);
-        Game::getInstance()->getDrawCollection().addDrawable(coinView);
+        viewTarget->addObjectView(coinView);
         return coinModel;
+    }
+
+    const std::shared_ptr<WorldView> &DefaultEntityFactory::getViewTarget() const {
+        return viewTarget;
+    }
+
+    void DefaultEntityFactory::setViewTarget(const std::shared_ptr<WorldView> &viewTarget) {
+        DefaultEntityFactory::viewTarget = viewTarget;
     }
 } // renderer

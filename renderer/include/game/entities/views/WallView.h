@@ -24,7 +24,7 @@ namespace renderer {
 
         void setSize(const logic::Size &size) override;
 
-
+        bool isMarkedForRemoval() override;
     };
 
 } // renderer
