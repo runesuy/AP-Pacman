@@ -34,6 +34,13 @@ namespace logic {
                 observer->update(static_cast<T&>(*this));
             }
         };
+
+        void updateObservers(EventType eventType) {
+            for (auto &observer: _observers) {
+                observer->update(static_cast<T&>(*this), eventType);
+            }
+        };
+
         virtual ~Observable();
 
         /**
