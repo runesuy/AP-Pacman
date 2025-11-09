@@ -19,11 +19,6 @@ namespace logic {
         WallModel()=default;
 
         /**
-         * Run periodic update logic for the wall.
-         */
-        void update(World &world) override;
-
-        /**
          * Sets the size of the wall.
          * Calls the observers to update.
          * @param size

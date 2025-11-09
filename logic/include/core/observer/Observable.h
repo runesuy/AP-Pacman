@@ -23,7 +23,9 @@ namespace logic {
          */
         std::vector<std::shared_ptr<IObserver<T>>> _observers;
 
-    protected:
+    public:
+        enum EventType {};
+
         /**
          * Call update in all observers.
          */
@@ -32,8 +34,6 @@ namespace logic {
                 observer->update(static_cast<T&>(*this));
             }
         };
-
-    public:
         virtual ~Observable();
 
         /**

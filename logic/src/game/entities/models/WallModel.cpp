@@ -5,8 +5,6 @@
 #include "game/entities/models/WallModel.h"
 
 namespace logic {
-    void WallModel::update(World &world) {}
-
     void WallModel::setSize(const Size &size) {
         EntityModel::setSize(size);
         updateObservers();

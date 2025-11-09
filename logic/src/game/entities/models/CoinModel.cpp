@@ -4,6 +4,7 @@
 
 #include "game/entities/models/CoinModel.h"
 #include "game/entities/models/PlayerModel.h"
+#include "game/entities/controllers/CoinController.h"
 
 namespace logic {
     void CoinModel::setSize(const Size &size) {
@@ -16,16 +17,12 @@ namespace logic {
         updateObservers();
     }
 
-    void CoinModel::onCollision(WorldObject &other) {
-        // if collision with player
-        if (dynamic_cast<EntityModel<PlayerModel>*>(&other)) {
-            markForRemoval();
-            updateObservers();
-        }
-    }
-
     void CoinModel::markForRemoval() {
         WorldObject::markForRemoval();
         updateObservers();
+    }
+
+    CoinModel::CoinModel() {
+        controller = std::make_shared<logic::CoinController>();
     }
 } // logic

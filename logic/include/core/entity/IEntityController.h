@@ -6,6 +6,7 @@
 #define AP_PACMAN_IENTITYCONTROLLER_H
 #include <memory>
 #include "EntityCommands.h"
+#include "core/world/WorldObject.h"
 
 namespace logic {
     class World;
@@ -19,6 +20,8 @@ namespace logic {
         virtual void update(World &world, EntityModelType &entity) = 0;
 
         virtual void processCommand(EntityCommand command, EntityModelType& entity) = 0;
+
+        virtual void onCollision(EntityModelType &entity, WorldObject &other) = 0;
     };
 }
 

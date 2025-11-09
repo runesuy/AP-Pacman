@@ -33,8 +33,17 @@ class EntityModel : public SizedWorldObject{
 
         void processCommand(EntityCommand command);
 
-        void update(World &world) override;
-    };
+        void update(World &world) final;
+
+        void onCollision(WorldObject &other) final;
+};
+
+    template<typename EntityModelType>
+    void EntityModel<EntityModelType>::onCollision(WorldObject &other) {
+        if (controller) {
+            controller->onCollision(static_cast<EntityModelType &>(*this), other);
+        }
+    }
 
     template<typename EntityModelType>
     void EntityModel<EntityModelType>::update(World &world) {

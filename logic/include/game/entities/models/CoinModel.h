@@ -10,12 +10,10 @@ namespace logic {
 
     class CoinModel : public EntityModel<CoinModel>, public Observable<CoinModel>{
     public:
-        CoinModel() = default;
+        CoinModel();
         void setSize(const Size &size) override;
 
         void setPosition(const Position &position) override;
-
-        void onCollision(WorldObject &other) override;
 
         void markForRemoval() override;
     };

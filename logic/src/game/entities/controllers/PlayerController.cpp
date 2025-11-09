@@ -27,6 +27,10 @@ namespace logic {
         }
 
     }
+
+    void PlayerController::onCollision(PlayerModel &entity, WorldObject &other) {
+
+    }
 }
 
 // logic
