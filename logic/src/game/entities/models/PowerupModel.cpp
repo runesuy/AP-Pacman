@@ -4,6 +4,7 @@
 
 #include "game/entities/models/PowerupModel.h"
 #include "game/entities/models/PlayerModel.h"
+#include "game/entities/controllers/PowerupController.h"
 
 namespace logic {
     void PowerupModel::setSize(const Size &size) {
@@ -19,5 +20,9 @@ namespace logic {
     void PowerupModel::markForRemoval() {
         WorldObject::markForRemoval();
         updateObservers();
+    }
+
+    PowerupModel::PowerupModel() {
+        controller = std::make_shared<PowerupController>();
     }
 } // logic

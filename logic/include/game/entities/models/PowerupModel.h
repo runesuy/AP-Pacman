@@ -11,7 +11,8 @@
 namespace logic {
 
     class PowerupModel : public EntityModel<PowerupModel>, public Observable<PowerupModel> {
-        PowerupModel() = default;
+    public:
+        PowerupModel();
         void setSize(const Size &size) override;
 
         void setPosition(const Position &position) override;

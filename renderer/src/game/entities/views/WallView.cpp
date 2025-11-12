@@ -18,7 +18,7 @@ namespace renderer {
     WallView::WallView() {
         auto rectangleModule = std::make_shared<RectangleModule>();
         rectangleModule->setSize(getSize());
-        rectangleModule->setFillColor(sf::Color::White);
+        rectangleModule->setFillColor(sf::Color::Blue);
         addModule(rectangleModule);
         addObserver(rectangleModule);
     }

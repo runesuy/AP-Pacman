@@ -3,7 +3,7 @@
 //
 
 #include "../../../../include/game/entities/views/CoinView.h"
-#include "core/entity/modular/modules/RectangleModule.h"
+#include "core/entity/modular/modules/CircleModule.h"
 
 namespace renderer {
     void CoinView::update(logic::CoinModel &subject) {
@@ -15,11 +15,11 @@ namespace renderer {
     }
 
     CoinView::CoinView() {
-        auto rectangleModule = std::make_shared<RectangleModule>();
-        rectangleModule->setSize(getSize());
-        rectangleModule->setFillColor(sf::Color::Green);
-        addModule(rectangleModule);
-        addObserver(rectangleModule);
+        auto circleModule = std::make_shared<CircleModule>();
+        circleModule->setSize(getSize());
+        circleModule->setFillColor(sf::Color::White);
+        addModule(circleModule);
+        addObserver(circleModule);
     }
 
     void CoinView::setSize(const logic::Size &size) {

@@ -8,6 +8,7 @@
 #include "game/entities/models/WallModel.h"
 #include "game/entities/models/PlayerModel.h"
 #include "game/entities/models/CoinModel.h"
+#include "game/entities/models/PowerupModel.h"
 
 namespace logic {
 
@@ -32,6 +33,8 @@ namespace logic {
         virtual std::shared_ptr<PlayerModel> createPlayerModel() = 0;
 
         virtual std::shared_ptr<CoinModel> createCoinModel() = 0;
+
+        virtual std::shared_ptr<PowerupModel> createPowerupModel() = 0;
     };
 }
 

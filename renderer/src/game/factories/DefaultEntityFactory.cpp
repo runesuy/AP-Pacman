@@ -8,6 +8,7 @@
 #include "game/Game.h"
 #include "game/entities/views/PlayerView.h"
 #include "game/entities/views/CoinView.h"
+#include "game/entities/views/PowerupView.h"
 
 namespace renderer {
     std::shared_ptr<logic::WallModel> DefaultEntityFactory::createWallModel() {
@@ -40,5 +41,13 @@ namespace renderer {
 
     void DefaultEntityFactory::setViewTarget(const std::shared_ptr<WorldView> &viewTarget) {
         DefaultEntityFactory::viewTarget = viewTarget;
+    }
+
+    std::shared_ptr<logic::PowerupModel> DefaultEntityFactory::createPowerupModel() {
+        auto powerupView = std::make_shared<PowerupView>();
+        auto powerupModel = std::make_shared<logic::PowerupModel>();
+        powerupModel->addObserver(powerupView);
+        viewTarget->addObjectView(powerupView);
+        return powerupModel;
     }
 } // renderer

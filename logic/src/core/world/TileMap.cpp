@@ -44,8 +44,15 @@ namespace logic {
                     case TileType::COIN: {
                         auto coin = world.getConfig().getEntityFactory()->createCoinModel();
                         coin->setPosition({x, y});
-                        coin->setSize({tileSize * 0.5f, tileSize * 0.5f});
+                        coin->setSize({tileSize * 0.2f, tileSize * 0.2f});
                         world.addObject(coin);
+                        break;
+                    }
+                    case TileType::POWER_UP: {
+                        auto powerup = world.getConfig().getEntityFactory()->createPowerupModel();
+                        powerup->setPosition({x, y});
+                        powerup->setSize({tileSize * 0.4f, tileSize * 0.4f});
+                        world.addObject(powerup);
                         break;
                     }
                 }
