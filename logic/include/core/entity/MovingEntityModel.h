@@ -32,7 +32,7 @@ namespace logic {
             return direction;
         };
 
-        void setDirection(Direction direction) {
+        virtual void setDirection(Direction direction) {
             MovingEntityModel::direction = direction;
         }
     };

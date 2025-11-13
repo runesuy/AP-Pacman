@@ -20,6 +20,8 @@ namespace logic {
         void markForRemoval() override;
 
         float getSpeed() override;
+
+        void setDirection(Direction direction) override;
     };
 
 } // logic

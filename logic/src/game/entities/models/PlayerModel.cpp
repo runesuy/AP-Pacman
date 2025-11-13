@@ -23,4 +23,9 @@ namespace logic {
     float PlayerModel::getSpeed() {
         return SPEED;
     }
+
+    void PlayerModel::setDirection(Direction direction) {
+        MovingEntityModel::setDirection(direction);
+        updateObservers();
+    }
 } // logic

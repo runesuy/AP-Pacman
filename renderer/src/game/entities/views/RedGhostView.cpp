@@ -12,6 +12,8 @@ namespace renderer {
     void RedGhostView::update(logic::GhostModel &subject) {
         setPosition(subject.getPosition());
         setSize(subject.getSize());
+        setDirection(subject.getDirection());
+        updateAnimation();
     }
 
     bool RedGhostView::isMarkedForRemoval() {
@@ -28,19 +30,51 @@ namespace renderer {
     }
 
     RedGhostView::RedGhostView() {
-        auto rectangleModule = std::make_shared<AnimatedSpriteModule>();
-        rectangleModule->setSize(getSize());
-        rectangleModule->setTextures({
-            {"move-right",
-             {
-                    std::make_shared<sf::Texture>(Game::getInstance()->getAppConfig().getTextureParser().getTexture("ghost-red-right_0")),
-                    std::make_shared<sf::Texture>(Game::getInstance()->getAppConfig().getTextureParser().getTexture("ghost-red-right_1"))
+        auto animatedSpriteModule = std::make_shared<AnimatedSpriteModule>();
+        animatedSpriteModule->setSize(getSize());
+        animatedSpriteModule->setAnimations(animations);
+        animatedSpriteModule->setCurrentAnimation("move-right");
+        animatedSpriteModule->setFrameDuration(0.2f);
+        addModule(animatedSpriteModule);
+        addObserver(animatedSpriteModule);
+    }
+
+    void RedGhostView::updateAnimation() {
+        switch (direction) {
+            case logic::Direction::RIGHT :{
+                auto module = getModule<AnimatedSpriteModule>();
+                if (module) {
+                    module->setCurrentAnimation("move-right");
                 }
-            },
-        });
-        rectangleModule->setCurrentAnimation("move-right");
-        rectangleModule->setFrameDuration(0.2f);
-        addModule(rectangleModule);
-        addObserver(rectangleModule);
+                break;
+            }
+            case (logic::Direction::LEFT) :{
+                auto module = getModule<AnimatedSpriteModule>();
+                if (module) {
+                    module->setCurrentAnimation("move-left");
+                }
+                break;
+            }
+            case (logic::Direction::UP) :{
+                auto module = getModule<AnimatedSpriteModule>();
+                if (module) {
+                    module->setCurrentAnimation("move-up");
+                }
+                break;
+            }
+            case (logic::Direction::DOWN) :{
+                auto module = getModule<AnimatedSpriteModule>();
+                if (module) {
+                    module->setCurrentAnimation("move-down");
+                }
+                break;
+            }
+            case logic::NONE:
+                break;
+        }
+    }
+
+    void RedGhostView::setDirection(logic::Direction direction) {
+        this->direction = direction;
     }
 } // renderer

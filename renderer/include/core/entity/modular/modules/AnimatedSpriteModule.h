@@ -8,6 +8,7 @@
 
 #include "core/entity/modular/IEntityViewModule.h"
 #include "core/world/Size.h"
+#include "core/parser/ITextureParser.h"
 
 namespace renderer {
 
@@ -31,7 +32,9 @@ namespace renderer {
 
         [[nodiscard]] std::vector<std::unique_ptr<sf::Text>> getSFTexts() const override;
 
-        void setTextures(const std::map<std::string,std::vector<std::shared_ptr<sf::Texture>>> &textures);
+        void setAnimations(const std::map<std::string,std::vector<std::shared_ptr<sf::Texture>>> &textures);
+
+        void setAnimations(const std::map<std::string,std::vector<std::string>> &textures);
 
         void setSize(const logic::Size &size);
 

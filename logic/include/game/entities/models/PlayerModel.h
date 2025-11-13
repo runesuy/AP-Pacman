@@ -21,6 +21,8 @@ namespace logic {
         void setSize(const Size &size) override;
 
         float getSpeed() override;
+
+        void setDirection(Direction direction) override;
     };
 
 } // logic

@@ -28,4 +28,9 @@ namespace logic {
     float GhostModel::getSpeed() {
         return SPEED;
     }
+
+    void GhostModel::setDirection(Direction direction) {
+        MovingEntityModel::setDirection(direction);
+        updateObservers();
+    }
 } // logic
