@@ -17,7 +17,10 @@ namespace renderer {
         static const char WALL_CHAR = 'W';
         static const char COIN_CHAR = '.';
         static const char PLAYER_CHAR = 'P';
-        static const char GHOST_CHAR = 'G';
+        static const char GHOST_RED_CHAR = 'R';
+        static const char GHOST_PINK_CHAR = 'I';
+        static const char GHOST_BLUE_CHAR = 'B';
+        static const char GHOST_ORANGE_CHAR = 'O';
         static const char SPAWN_CHAR = 'S';
         static const char EMPTY_CHAR = ' ';
         static const char POWER_UP_CHAR = 'U';

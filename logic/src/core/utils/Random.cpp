@@ -7,8 +7,13 @@
 namespace logic {
     std::shared_ptr<Random> Random::getInstance() {
         if (!_instance) {
-            _instance = std::shared_ptr<Random>();
+            _instance = std::shared_ptr<Random>(new Random());
         }
         return _instance;
+    }
+
+    int Random::getIntInRange(int min, int max) {
+        std::uniform_int_distribution<int> distribution(min, max);
+        return distribution(generator);
     }
 }

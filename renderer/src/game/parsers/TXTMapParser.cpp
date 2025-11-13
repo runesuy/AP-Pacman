@@ -39,8 +39,17 @@ namespace renderer {
                     case SPAWN_CHAR:
                         row.push_back(logic::TileMap::SPAWN);
                         break;
-                    case GHOST_CHAR:
-                        row.push_back(logic::TileMap::GHOST);
+                    case GHOST_RED_CHAR:
+                        row.push_back(logic::TileMap::GHOST_RED);
+                        break;
+                    case GHOST_PINK_CHAR:
+                        row.push_back(logic::TileMap::GHOST_PINK);
+                        break;
+                    case GHOST_BLUE_CHAR:
+                        row.push_back(logic::TileMap::GHOST_BLUE);
+                        break;
+                    case GHOST_ORANGE_CHAR:
+                        row.push_back(logic::TileMap::GHOST_ORANGE);
                         break;
                     case PLAYER_CHAR:
                         row.push_back(logic::TileMap::PLAYER);

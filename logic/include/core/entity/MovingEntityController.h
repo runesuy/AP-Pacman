@@ -14,7 +14,6 @@ namespace logic {
     template<typename EntityModelType>
     class MovingEntityController : public IEntityController<EntityModelType> {
     private:
-        static TileMap::TileType getTileInDirection(const World& world, const EntityModelType& entity, Direction direction) ;
 
         /**
          * Check if the player has passed the center of the current tile in the given direction.
@@ -24,8 +23,14 @@ namespace logic {
          * @return True and the center position if past center, false otherwise.
          */
         static std::tuple<bool,Position> _isPastOrOnCenter(const logic::World &world, const EntityModelType &entity, Direction direction) ;
+
+    protected:
+        static TileMap::TileType getTileInDirection(const World& world, const EntityModelType& entity, Direction direction) ;
+
     public:
         void update(World &world, EntityModelType &entity) override;
+
+        virtual void onWallCollision(logic::World &world, EntityModelType &entity) {};
         };
 
     template<typename EntityModelType>
@@ -59,6 +64,7 @@ namespace logic {
             auto [isPastCenter, tileCenter] = _isPastOrOnCenter(world, entity, entity.getDirection());
             if (isPastCenter) {
                 entity.setPosition(tileCenter);
+                onWallCollision(world, entity);
             }
         }
     }
@@ -83,6 +89,7 @@ namespace logic {
             case Direction::DOWN:
                 tileInFront = world.getConfig().getTileMap().getTileType(row + 1, col);
                 break;
+            case Direction::NONE: break;
         }
         return tileInFront;
     }

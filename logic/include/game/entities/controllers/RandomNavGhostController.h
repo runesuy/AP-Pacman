@@ -1,0 +1,27 @@
+//
+// Created by rune-suy on 11/12/25.
+//
+
+#ifndef AP_PACMAN_RANDOMNAVGHOSTCONTROLLER_H
+#define AP_PACMAN_RANDOMNAVGHOSTCONTROLLER_H
+#include "core/entity/MovingEntityController.h"
+#include "game/entities/models/GhostModel.h"
+
+namespace logic {
+    class RandomNavGhostController : public MovingEntityController<GhostModel> {
+    public:
+        void processCommand(EntityCommand command, GhostModel &entity) override;
+
+        void onCollision(GhostModel &entity, WorldObject &other) override;
+
+        void update(World &world, GhostModel &entity) override;
+
+        void onWallCollision(logic::World &world, logic::GhostModel &entity) override;
+
+        void onIsStationary(logic::World &world, logic::GhostModel &entity);
+
+        std::vector<Direction> getViableDirections(const World &world, const GhostModel &entity);
+    };
+
+}
+#endif //AP_PACMAN_RANDOMNAVGHOSTCONTROLLER_H

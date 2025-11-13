@@ -28,6 +28,8 @@ namespace renderer {
         [[nodiscard]] const std::shared_ptr<WorldView> &getViewTarget() const;
 
         void setViewTarget(const std::shared_ptr<WorldView> &viewTarget);
+
+        std::shared_ptr<logic::GhostModel> createGhostModel(logic::GhostType type) override;
     };
 
 } // renderer

@@ -5,6 +5,7 @@
 #ifndef AP_PACMAN_RANDOM_H
 #define AP_PACMAN_RANDOM_H
 #include "memory"
+#include <random>
 
 namespace logic {
     /**
@@ -13,6 +14,7 @@ namespace logic {
      */
     class Random {
         inline static std::shared_ptr<Random> _instance;
+        std::default_random_engine generator;
         Random()=default;
 
     public:
@@ -27,6 +29,8 @@ namespace logic {
          * @return a pointer to the instance.
          */
         static std::shared_ptr<Random> getInstance();
+
+        int getIntInRange(int min, int max);
     };
 }
 

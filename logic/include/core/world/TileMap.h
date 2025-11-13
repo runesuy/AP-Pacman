@@ -17,13 +17,16 @@ namespace logic {
          * All possible tile types in the tile map.
          */
         enum TileType {
-            EMPTY = 0,
-            WALL = 1,
-            COIN = 2,
-            POWER_UP = 3,
-            SPAWN = 4,
-            GHOST = 5,
-            PLAYER = 6
+            EMPTY,
+            WALL,
+            COIN,
+            POWER_UP ,
+            SPAWN,
+            GHOST_RED,
+            GHOST_PINK,
+            GHOST_BLUE,
+            GHOST_ORANGE,
+            PLAYER,
         };
     private:
         /**

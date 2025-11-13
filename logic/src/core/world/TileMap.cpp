@@ -55,6 +55,13 @@ namespace logic {
                         world.addObject(powerup);
                         break;
                     }
+                    case TileType::GHOST_RED: {
+                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::RED);
+                        ghost->setPosition({x, y});
+                        ghost->setSize({tileSize, tileSize});
+                        world.addObject(ghost);
+                        break;
+                    }
                 }
             }
         }
