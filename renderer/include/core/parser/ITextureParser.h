@@ -16,7 +16,7 @@ namespace renderer {
     public:
         virtual void loadTextures(const std::string& path, const std::map<std::string, sf::IntRect>& textureRects)=0;
 
-        [[nodiscard]] virtual sf::Texture getSprite(const std::string &name) const = 0;
+        [[nodiscard]] virtual const sf::Texture& getTexture(const std::string &name) const = 0;
     };
 }
 

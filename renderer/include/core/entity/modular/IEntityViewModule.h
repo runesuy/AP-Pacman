@@ -19,7 +19,7 @@ namespace renderer {
     public:
         virtual std::vector<std::unique_ptr<sf::Shape>> getSFShapes(sf::RenderWindow &window) const = 0;
 
-        [[nodiscard]] virtual std::vector<std::shared_ptr<sf::Sprite>> getSFSprites() const = 0;
+        [[nodiscard]] virtual std::vector<std::shared_ptr<sf::Sprite>> getSFSprites(sf::RenderWindow &window) const = 0;
 
         [[nodiscard]] virtual std::vector<std::unique_ptr<sf::Text>> getSFTexts() const = 0;
     };

@@ -54,7 +54,7 @@ public:
      * @warning positions are relative to the DrawObject position.
      * @return
      */
-    virtual std::vector<std::shared_ptr<sf::Sprite>> getSFSprites() = 0;
+    virtual std::vector<std::shared_ptr<sf::Sprite>> getSFSprites(sf::RenderWindow &window) = 0;
 
     /**
      * Get the SFML texts representing the draw object.

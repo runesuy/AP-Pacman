@@ -22,7 +22,7 @@ class CircleModule : public IEntityViewModule {
     public:
         std::vector<std::unique_ptr<sf::Shape>> getSFShapes(sf::RenderWindow &window) const override;
 
-        [[nodiscard]] std::vector<std::shared_ptr<sf::Sprite>> getSFSprites() const override;
+        [[nodiscard]] std::vector<std::shared_ptr<sf::Sprite>> getSFSprites(sf::RenderWindow &window) const override;
 
         [[nodiscard]] std::vector<std::unique_ptr<sf::Text>> getSFTexts() const override;
 

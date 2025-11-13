@@ -12,7 +12,7 @@ namespace renderer {
 
     class SpriteModule : public IEntityViewModule {
         logic::Size size={0.1,0.1};
-        sf::Sprite sprite;
+        mutable sf::Sprite sprite;
     public:
         SpriteModule()=default;
 
@@ -20,7 +20,7 @@ namespace renderer {
 
         std::vector<std::unique_ptr<sf::Shape>> getSFShapes(sf::RenderWindow &window) const override;
 
-        std::vector<std::shared_ptr<sf::Sprite>> getSFSprites() const override;
+        std::vector<std::shared_ptr<sf::Sprite>> getSFSprites(sf::RenderWindow &window) const override;
 
         std::vector<std::unique_ptr<sf::Text>> getSFTexts() const override;
 

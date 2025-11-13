@@ -20,7 +20,7 @@ namespace renderer {
         return shapes;
     }
 
-    std::vector<std::shared_ptr<sf::Sprite>> CircleModule::getSFSprites() const {
+    std::vector<std::shared_ptr<sf::Sprite>> CircleModule::getSFSprites(sf::RenderWindow &window) const {
         return {};
     }
 

@@ -19,7 +19,7 @@ namespace renderer {
         return shapes;
     }
 
-    std::vector<std::shared_ptr<sf::Sprite>> RectangleModule::getSFSprites() const {
+    std::vector<std::shared_ptr<sf::Sprite>> RectangleModule::getSFSprites(sf::RenderWindow &window) const {
         return {};
     }
 

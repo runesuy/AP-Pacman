@@ -9,7 +9,7 @@
 
 namespace renderer {
 
-    sf::Texture DefaultTextureParser::getSprite(const std::string &name) const {
+    const sf::Texture& DefaultTextureParser::getTexture(const std::string &name) const {
         return _textureCache.at(name);
     }
 

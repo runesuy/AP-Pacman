@@ -16,10 +16,10 @@ namespace renderer {
         return std::move(shapes);
     }
 
-    std::vector<std::shared_ptr<sf::Sprite>> ModularEntityView::getSFSprites() {
+    std::vector<std::shared_ptr<sf::Sprite>> ModularEntityView::getSFSprites(sf::RenderWindow &window) {
         std::vector<std::shared_ptr<sf::Sprite>> sprites;
         for (const auto& module : modules) {
-            auto moduleSprites = module->getSFSprites();
+            auto moduleSprites = module->getSFSprites(window);
             sprites.insert(sprites.end(),
                            std::make_move_iterator(moduleSprites.begin()),
                            std::make_move_iterator(moduleSprites.end()));
