@@ -31,8 +31,8 @@ namespace logic {
         Position posB = objectB->getPosition();
         Size sizeB = objectB->getSize();
 
-        bool overlapX = posA.getX() < posB.getX() + sizeB.getX() && posA.getX()+ sizeA.getX() > posB.getX();
-        bool overlapY = posA.getY() < posB.getY() + sizeB.getY() && posA.getY() + sizeA.getY() > posB.getY();
+        bool overlapX = posA.getX() < posB.getX() + sizeB.getX()/2 && posA.getX()+ sizeA.getX()/2 > posB.getX();
+        bool overlapY = posA.getY() < posB.getY() + sizeB.getY()/2 && posA.getY() + sizeA.getY()/2 > posB.getY();
         if (overlapX && overlapY) {
             objectA->onCollision(*objectB);
             objectB->onCollision(*objectA);
