@@ -4,6 +4,8 @@
 
 #ifndef AP_PACMAN_MOVINGENTITYCONTROLLER_H
 #define AP_PACMAN_MOVINGENTITYCONTROLLER_H
+
+#include <iostream>
 #include "IEntityController.h"
 #include "MovingEntityModel.h"
 #include "core/utils/Stopwatch.h"
@@ -41,6 +43,7 @@ namespace logic {
 
         if (entity.getRequestedDirection() != entity.getDirection() && tileInRequested != TileMap::TileType::WALL) {
             auto [isPastCenter, tileCenter] = _isPastOrOnCenter(world, entity, entity.getDirection());
+            auto ghost = dynamic_cast<GhostModel*>(&entity);
             if (isPastCenter) {
                 entity.setPosition(tileCenter);
                 entity.setDirection(entity.getRequestedDirection());
@@ -100,7 +103,8 @@ namespace logic {
                                                                Direction direction) {
         auto [row, col] = world.getConfig().getTileMap().getGridPosition(entity.getPosition());
         Position tileCenter = world.getConfig().getTileMap().getTileCenterPosition(row, col);
-        if (entity.getPosition() == tileCenter) {
+        const float epsilon = 0.0001f;
+        if (std::abs(tileCenter.getX()-entity.getPosition().getX()) < epsilon && std::abs(tileCenter.getY()-entity.getPosition().getY()) < epsilon) {
             return {true, tileCenter};
         }
         switch (direction) {

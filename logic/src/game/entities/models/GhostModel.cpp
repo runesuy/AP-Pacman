@@ -33,4 +33,24 @@ namespace logic {
         MovingEntityModel::setDirection(direction);
         updateObservers();
     }
+
+    float GhostModel::getStartTimer() const {
+        return startTimer;
+    }
+
+    void GhostModel::setStartTimer(float startTimer) {
+        GhostModel::startTimer = startTimer;
+    }
+
+    GhostModel::Mode GhostModel::getMode() const {
+        return mode;
+    }
+
+    void GhostModel::setMode(GhostModel::Mode mode) {
+        GhostModel::mode = mode;
+    }
+
+    const float GhostModel::getStartDelay() const {
+        return START_DELAY;
+    }
 } // logic

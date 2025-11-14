@@ -6,9 +6,10 @@
 #define AP_PACMAN_RANDOMNAVGHOSTCONTROLLER_H
 #include "core/entity/MovingEntityController.h"
 #include "game/entities/models/GhostModel.h"
+#include "GhostController.h"
 
 namespace logic {
-    class RandomNavGhostController : public MovingEntityController<GhostModel> {
+    class RandomNavGhostController : public GhostController{
     public:
         void processCommand(EntityCommand command, GhostModel &entity) override;
 
