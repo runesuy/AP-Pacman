@@ -5,7 +5,6 @@
 #ifndef AP_PACMAN_IOBSERVER_H
 #define AP_PACMAN_IOBSERVER_H
 #include "memory"
-#include "Events.h"
 
 namespace logic {
     template <typename T>
@@ -23,7 +22,7 @@ class IObserver{
          */
         virtual void update(T &subject)=0;
 
-        virtual void update(T &subject, GameEventType eventType){};
+        virtual void update(T &subject, const std::string &event){};
 
         /**
          * Called when the subject being observed is being destroyed.

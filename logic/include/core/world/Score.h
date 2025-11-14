@@ -18,11 +18,13 @@ namespace logic {
     public:
         void update(PlayerModel &subject) override;
 
-        void update(PlayerModel &subject, GameEventType eventType) override;
+        void update(PlayerModel &subject, const std::string &event) override;
 
         void loadHighScores(const std::string& filename);
 
         void saveHighScores(const std::string& filename) const;
+
+        [[nodiscard]] int getScore() const;
     };
 }
 

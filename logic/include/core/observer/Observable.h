@@ -35,9 +35,9 @@ namespace logic {
             }
         };
 
-        void updateObservers(EventType eventType) {
+        void updateObservers(const std::string &event) {
             for (auto &observer: _observers) {
-                observer->update(static_cast<T&>(*this), eventType);
+                observer->update(static_cast<T&>(*this), event);
             }
         };
 
