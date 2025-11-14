@@ -25,7 +25,7 @@ namespace logic {
          */
         std::vector<std::shared_ptr<WorldObject>> objects;
 
-        Score score;
+        std::shared_ptr<Score> score = std::make_shared<Score>();
 
         void _handleCollisions();
 

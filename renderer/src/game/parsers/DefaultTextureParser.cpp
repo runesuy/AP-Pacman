@@ -22,7 +22,6 @@ namespace renderer {
             sf::IntRect correctedRect = rect;
             correctedRect.height += 1;
             correctedRect.left-=1;
-            std::cout << correctedRect.height;
             if (texture.loadFromFile(path, correctedRect)) {
                 _textureCache[name] = texture;
             } else {
