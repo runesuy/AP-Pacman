@@ -8,17 +8,15 @@
 #include <SFML/Graphics/Text.hpp>
 #include "core/observer/IObserver.h"
 #include "core/world/Score.h"
+#include "core/drawable/ui/Label.h"
 
 namespace renderer {
 
-class ScoreView : public logic::IObserver<logic::Score>, public sf::Drawable{
-        sf::Text scoreText;
-        sf::Font _font;
+class ScoreView : public logic::IObserver<logic::Score>, public Label{
     public:
+        ScoreView();
         void update(logic::Score &subject) override;
 
-protected:
-    void draw(RenderTarget &target, sf::RenderStates states) const override;
 };
 
 } // renderer

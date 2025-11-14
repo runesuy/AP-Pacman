@@ -35,7 +35,7 @@ namespace logic {
         bool overlapY = posA.getY() < posB.getY() + sizeB.getY()/2 && posA.getY() + sizeA.getY()/2 > posB.getY();
         if (overlapX && overlapY) {
             objectA->onCollision(*objectB);
-            objectB->onCollision(*objectA);
+            //objectB->onCollision(*objectA); NOT called because of double handling
         }
     }
 } // logic

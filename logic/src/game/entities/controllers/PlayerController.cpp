@@ -29,7 +29,10 @@ namespace logic {
     }
 
     void PlayerController::onCollision(PlayerModel &entity, WorldObject &other) {
-
+        auto coin = dynamic_cast<CoinModel*>(&other);
+        if (coin) {
+            entity.updateObservers("COIN_COLLECTED");
+        }
     }
 }
 

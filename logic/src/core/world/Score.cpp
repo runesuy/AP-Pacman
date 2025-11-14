@@ -3,6 +3,7 @@
 //
 
 #include "core/world/Score.h"
+#include "core/utils/Stopwatch.h"
 
 void logic::Score::update(logic::PlayerModel &subject) {
 
@@ -10,8 +11,10 @@ void logic::Score::update(logic::PlayerModel &subject) {
 
 void logic::Score::update(PlayerModel &subject, const std::string &event) {
     if (event == "COIN_COLLECTED") {
-        score += 10; // Example: increase score by 10 for each point collected
+        score += static_cast<int>(10*(1/(timeSinceLastCoin==0 ? 1 : 1+timeSinceLastCoin*10))); // Example: increase score by 10 for each point collected
+        timeSinceLastCoin = 0;
     }
+    updateObservers();
 }
 
 void logic::Score::loadHighScores(const std::string &filename) {
@@ -24,4 +27,18 @@ void logic::Score::saveHighScores(const std::string &filename) const {
 
 int logic::Score::getScore() const {
     return score;
+}
+
+void logic::Score::onTick() {
+    timeSinceLastCoin = Stopwatch::getInstance()->getDeltaTime();
+    timeSinceLastDecay += Stopwatch::getInstance()->getDeltaTime();
+    while (timeSinceLastDecay >= 1.0f) {
+        setScore(std::max(0, score - SCORE_DECAY_RATE));
+        timeSinceLastDecay -= 1.0f;
+    }
+}
+
+void logic::Score::setScore(int score) {
+    Score::score = score;
+    updateObservers();
 }

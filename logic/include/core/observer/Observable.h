@@ -35,11 +35,7 @@ namespace logic {
             }
         };
 
-        void updateObservers(const std::string &event) {
-            for (auto &observer: _observers) {
-                observer->update(static_cast<T&>(*this), event);
-            }
-        };
+        void updateObservers(const std::string &event);
 
         virtual ~Observable();
 
@@ -49,13 +45,40 @@ namespace logic {
          */
         void addObserver(const std::shared_ptr<IObserver<T>>& observer) { _observers.push_back(observer); };
 
+        [[nodiscard]] bool hasObservers() const;
+
+        bool hasObserver(const std::shared_ptr<IObserver<T>>& observer) const;
+
     };
+
+    template<typename T>
+    void Observable<T>::updateObservers(const std::string &event) {
+        for (auto &observer: _observers) {
+            observer->update(static_cast<T&>(*this), event);
+        }
+    }
+
+    template<typename T>
+    bool Observable<T>::hasObservers() const {
+        return !_observers.empty();
+    }
 
     template<typename T>
     Observable<T>::~Observable() {
         for (auto &observer: _observers) {
             observer->onObservableDestroyed(static_cast<T&>(*this));
         }
+        _observers.clear();
+    }
+
+    template<typename T>
+    bool Observable<T>::hasObserver(const std::shared_ptr<IObserver<T>> &observer) const {
+        for (const auto& obs : _observers) {
+            if (obs == observer) {
+                return true;
+            }
+        }
+        return false;
     }
 }
 

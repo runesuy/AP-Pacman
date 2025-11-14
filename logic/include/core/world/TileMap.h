@@ -58,9 +58,17 @@ namespace logic {
 
         [[nodiscard]] std::pair<int, int> getGridPosition(const Position& position) const;
 
-        [[nodiscard]] TileType getTileType(int row, int col) const;
+        [[nodiscard]] TileType getTileType(unsigned int row, unsigned int col) const;
 
-        Position getTileCenterPosition(int row, int col) const;
+        [[nodiscard]] Position getTileCenterPosition(unsigned int row, unsigned int col) const;
+
+        [[nodiscard]] float getTileSize() const;
+
+        [[nodiscard]] float getYOffsetForCentering() const;
+
+        [[nodiscard]] unsigned int getRowCount() const;
+
+        [[nodiscard]] unsigned int getColumnCount() const;
     };
 
 } // logic

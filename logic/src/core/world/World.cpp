@@ -10,6 +10,8 @@
 
 namespace logic {
     void World::update() {
+        score.onTick();
+
         // look for collisions between objects
         _handleCollisions();
 
@@ -30,6 +32,10 @@ namespace logic {
     }
 
     void World::addObject(const std::shared_ptr<WorldObject> &object) {
+        auto playerModel = std::dynamic_pointer_cast<PlayerModel>(object);
+        if (playerModel) {
+            playerModel->addObserver(std::shared_ptr<Score>(&score));
+        }
         objects.push_back(object);
     }
 
@@ -57,5 +63,13 @@ namespace logic {
             }
         }
         updateObservers();
+    }
+
+    const Score &World::getScore() const {
+        return score;
+    }
+
+    Score &World::getScore() {
+        return score;
     }
 } // logic

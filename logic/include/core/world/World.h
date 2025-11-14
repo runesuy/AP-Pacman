@@ -8,6 +8,7 @@
 #include "core/entity/IEntityFactory.h"
 #include "WorldObject.h"
 #include "core/config/IConfig.h"
+#include "Score.h"
 #include <vector>
 
 namespace logic {
@@ -23,6 +24,8 @@ namespace logic {
          * Updated on update.
          */
         std::vector<std::shared_ptr<WorldObject>> objects;
+
+        Score score;
 
         void _handleCollisions();
 
@@ -47,6 +50,7 @@ namespace logic {
 
         /**
          * Add an object to the world.
+         * If the object is a PlayerModel, attach the Score as an observer.
          * @param object
          */
         void addObject(const std::shared_ptr<WorldObject>& object);
@@ -62,6 +66,10 @@ namespace logic {
                 }
             }
         };
+
+        [[nodiscard]] const Score &getScore() const;
+
+        Score &getScore() ;
     };
 
 } // logic

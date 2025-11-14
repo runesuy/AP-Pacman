@@ -19,7 +19,7 @@ namespace logic {
     }
 
     void TileMap::loadToWorld(World &world) {
-        const float tileSize = 2/static_cast<float>(mapData[0].size());
+        const float tileSize = getTileSize();
         const float yOffsetForCentering = (2.0f - tileSize * static_cast<float>(mapData.size())) / 2.0f;
         for (int row=0; row<mapData.size(); row++) {
             for (int col=0; col<mapData[row].size(); col++) {
@@ -80,16 +80,33 @@ namespace logic {
         return {row, col};
     }
 
-    TileMap::TileType TileMap::getTileType(int row, int col) const {
+    TileMap::TileType TileMap::getTileType(unsigned int row, unsigned int col) const {
         return mapData.at(row).at(col);
     }
 
-    Position TileMap::getTileCenterPosition(int row, int col) const {
+    Position TileMap::getTileCenterPosition(unsigned int row, unsigned int col) const {
         const float tileSize = 2/static_cast<float>(mapData[0].size());
         const float yOffsetForCentering = (2.0f - tileSize * static_cast<float>(mapData.size())) / 2.0f;
         float x = -1.0f + static_cast<float>(col) * tileSize + tileSize / 2;
         float y = 1.0f - static_cast<float>(row) * tileSize - tileSize / 2 - yOffsetForCentering;
         return {x, y};
+    }
+
+    float TileMap::getTileSize() const {
+        return 2/static_cast<float>(mapData[0].size());
+    }
+
+    float TileMap::getYOffsetForCentering() const {
+        const float tileSize = getTileSize();
+        return (2.0f - tileSize * static_cast<float>(mapData.size())) / 2.0f;
+    }
+
+    unsigned int TileMap::getRowCount() const {
+        return mapData.size();
+    }
+
+    unsigned int TileMap::getColumnCount() const {
+        return mapData.empty() ? 0 : mapData[0].size();
     }
 
 } // logic

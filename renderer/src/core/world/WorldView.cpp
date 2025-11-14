@@ -3,10 +3,14 @@
 //
 
 #include "core/world/WorldView.h"
+#include "game/Game.h"
 
 namespace renderer {
     void WorldView::update(logic::World &subject) {
         _cleanUpViews();
+        if (!subject.getScore().hasObserver(scoreView)) {
+           subject.getScore().addObserver(scoreView);
+        }
     }
 
     void WorldView::_cleanUpViews() {
@@ -23,6 +27,9 @@ namespace renderer {
         for( const auto& view : objectViews) {
             view->draw(window);
         }
+        scoreView->draw(window);
+        const logic::TileMap &tileMap = Game::getInstance()->getAppConfig().getLogicConfig().getTileMap();
+        scoreView->setPosition(tileMap.getTileCenterPosition(tileMap.getRowCount(), 0));
     }
 
     void WorldView::addObjectView(const std::shared_ptr<WorldObjectView> &objectView) {

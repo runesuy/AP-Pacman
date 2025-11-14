@@ -7,6 +7,7 @@
 #include "core/observer/IObserver.h"
 #include "core/world/World.h"
 #include "WorldObjectView.h"
+#include "ScoreView.h"
 
 namespace renderer {
 
@@ -18,6 +19,9 @@ class WorldView : public logic::IObserver<logic::World> {
      * Removes all views that are not associated with any world object.
      */
     void _cleanUpViews();
+
+    std::shared_ptr<ScoreView> scoreView = std::make_shared<ScoreView>();
+
 public:
     void update(logic::World &subject) override;
 
