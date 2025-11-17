@@ -10,7 +10,7 @@
 #include "game/entities/models/CoinModel.h"
 #include "game/entities/models/PowerupModel.h"
 #include "game/entities/models/GhostModel.h"
-#include "GhostTypes.h"
+#include "game/entities/models/GhostTypes.h"
 
 namespace logic {
 

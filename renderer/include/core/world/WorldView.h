@@ -6,13 +6,13 @@
 #define AP_PACMAN_WORLDVIEW_H
 #include "core/observer/IObserver.h"
 #include "core/world/World.h"
-#include "WorldObjectView.h"
+#include "IWorldObjectView.h"
 #include "ScoreView.h"
 
 namespace renderer {
 
 class WorldView : public logic::IObserver<logic::World> {
-    std::vector<std::shared_ptr<WorldObjectView>> objectViews;
+    std::vector<std::shared_ptr<IWorldObjectView>> objectViews;
 
     /**
      * Clean up views that are no longer needed.
@@ -27,7 +27,7 @@ public:
 
     void draw(sf::RenderWindow &window);
 
-    void addObjectView(const std::shared_ptr<WorldObjectView>& objectView);
+    void addObjectView(const std::shared_ptr<IWorldObjectView>& objectView);
 };
 
 } // renderer

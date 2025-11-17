@@ -4,7 +4,7 @@
 
 #ifndef AP_PACMAN_RANDOMNAVGHOSTCONTROLLER_H
 #define AP_PACMAN_RANDOMNAVGHOSTCONTROLLER_H
-#include "core/entity/MovingEntityController.h"
+#include "MovingEntityController.h"
 #include "game/entities/models/GhostModel.h"
 #include "GhostController.h"
 

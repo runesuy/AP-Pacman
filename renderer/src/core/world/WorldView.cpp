@@ -32,7 +32,7 @@ namespace renderer {
         scoreView->setPosition(tileMap.getTileCenterPosition(tileMap.getRowCount(), 0));
     }
 
-    void WorldView::addObjectView(const std::shared_ptr<WorldObjectView> &objectView) {
+    void WorldView::addObjectView(const std::shared_ptr<IWorldObjectView> &objectView) {
         objectViews.push_back(objectView);
     }
 

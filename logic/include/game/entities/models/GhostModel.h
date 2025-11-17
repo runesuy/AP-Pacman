@@ -5,7 +5,7 @@
 #ifndef AP_PACMAN_GHOSTMODEL_H
 #define AP_PACMAN_GHOSTMODEL_H
 
-#include "core/entity/MovingEntityModel.h"
+#include "MovingEntityModel.h"
 
 namespace logic {
 

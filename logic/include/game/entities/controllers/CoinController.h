@@ -6,7 +6,7 @@
 #define AP_PACMAN_COINCONTROLLER_H
 
 #include "game/entities/models/CoinModel.h"
-#include "core/entity/CollectableController.h"
+#include "CollectableController.h"
 
 namespace logic {
 

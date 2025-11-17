@@ -6,7 +6,7 @@
 #define AP_PACMAN_ENTITYVIEW_H
 #include "core/observer/IObserver.h"
 #include "core/entity/EntityModel.h"
-#include "core/world/WorldObjectView.h"
+#include "core/world/IWorldObjectView.h"
 
 namespace renderer {
 
@@ -17,7 +17,7 @@ namespace renderer {
      *
      * Has a size property to define the dimensions of the entity in the game world.
      */
-    class EntityView : public WorldObjectView{
+    class EntityView : public IWorldObjectView{
         logic::Size size={0,0};
     public:
         /**

@@ -4,7 +4,7 @@
 
 #ifndef AP_PACMAN_COLLECTABLECONTROLLER_H
 #define AP_PACMAN_COLLECTABLECONTROLLER_H
-#include "IEntityController.h"
+#include "core/entity/IEntityController.h"
 #include "game/entities/models/PlayerModel.h"
 
 namespace logic {

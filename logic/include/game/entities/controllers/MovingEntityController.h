@@ -6,8 +6,8 @@
 #define AP_PACMAN_MOVINGENTITYCONTROLLER_H
 
 #include <iostream>
-#include "IEntityController.h"
-#include "MovingEntityModel.h"
+#include "core/entity/IEntityController.h"
+#include "game/entities/models/MovingEntityModel.h"
 #include "core/utils/Stopwatch.h"
 #include "core/world/TileMap.h"
 #include "core/world/World.h"

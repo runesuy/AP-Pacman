@@ -5,7 +5,7 @@
 #ifndef AP_PACMAN_PLAYERMODEL_H
 #define AP_PACMAN_PLAYERMODEL_H
 
-#include "core/entity/MovingEntityModel.h"
+#include "MovingEntityModel.h"
 
 namespace logic {
 

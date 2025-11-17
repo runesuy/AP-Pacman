@@ -4,8 +4,8 @@
 
 #ifndef AP_PACMAN_MOVINGENTITYMODEL_H
 #define AP_PACMAN_MOVINGENTITYMODEL_H
-#include "EntityModel.h"
-#include "Directions.h"
+#include "core/entity/EntityModel.h"
+#include "core/entity/Directions.h"
 
 namespace logic {
 

@@ -7,7 +7,7 @@
 
 #include "game/entities/models/PlayerModel.h"
 #include "core/world/TileMap.h"
-#include "core/entity/MovingEntityController.h"
+#include "MovingEntityController.h"
 
 namespace logic {
 

@@ -4,7 +4,7 @@
 
 #ifndef AP_PACMAN_POWERUPCONTROLLER_H
 #define AP_PACMAN_POWERUPCONTROLLER_H
-#include "core/entity/CollectableController.h"
+#include "CollectableController.h"
 #include "game/entities/models/PowerupModel.h"
 
 namespace logic {
