@@ -7,6 +7,7 @@
 
 #include "core/observer/Observable.h"
 #include "WorldObject.h"
+#include "Size.h"
 
 namespace logic {
     class World;
