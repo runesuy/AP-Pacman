@@ -11,7 +11,6 @@
 #include "core/factories/IFactoryCollection.h"
 #include "core/parser/IConfigParser.h"
 #include "core/config/IAppConfig.h"
-#include "core/drawable/DrawCollection.h"
 
 namespace renderer {
     /**
