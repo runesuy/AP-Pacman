@@ -21,7 +21,7 @@ namespace renderer {
         return {};
     };
 
-    std::vector<std::unique_ptr<sf::Text>> Button::getSFTexts() {
+    std::vector<std::unique_ptr<sf::Text>> Button::getSFTexts(sf::RenderWindow &window) {
         return {};
     }
 } // renderer

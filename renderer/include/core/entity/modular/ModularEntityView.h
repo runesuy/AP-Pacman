@@ -20,7 +20,7 @@ namespace renderer {
 
         std::vector<std::shared_ptr<sf::Sprite>> getSFSprites(sf::RenderWindow &window) override;
 
-        std::vector<std::unique_ptr<sf::Text>> getSFTexts() override;
+        std::vector<std::unique_ptr<sf::Text>> getSFTexts(sf::RenderWindow &window) override;
 
         void addModule(std::shared_ptr<IEntityViewModule> module);
 

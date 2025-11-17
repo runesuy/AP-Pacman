@@ -27,7 +27,7 @@ namespace renderer {
         return std::move(sprites);
     }
 
-    std::vector<std::unique_ptr<sf::Text>> ModularEntityView::getSFTexts() {
+    std::vector<std::unique_ptr<sf::Text>> ModularEntityView::getSFTexts(sf::RenderWindow &window) {
         std::vector<std::unique_ptr<sf::Text>> texts;
         for (const auto& module : modules) {
             auto moduleTexts = module->getSFTexts();

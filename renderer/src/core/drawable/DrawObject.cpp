@@ -16,7 +16,7 @@ namespace renderer {
             shape->setPosition(shape->getPosition() + Camera::project(getPosition(), window));
             window.draw(*shape);
         }
-        for (auto &shape : getSFTexts()) {
+        for (auto &shape : getSFTexts(window)) {
             shape->setPosition(shape->getPosition() + Camera::project(getPosition(), window));
             window.draw(*shape);
         }

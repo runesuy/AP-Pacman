@@ -14,6 +14,7 @@ namespace renderer {
     class Label : public DrawObject {
         sf::Font font;
         sf::Text text;
+        float characterSize = 0.05;
     public:
         Label();
         explicit Label(const std::string &str);
@@ -21,13 +22,13 @@ namespace renderer {
 
         void setString(const std::string &str);
         void setFont(const sf::Font &font);
-        void setCharacterSize(unsigned int size);
+        void setCharacterSize(float size);
 
         std::vector<std::unique_ptr<sf::Shape>> getSFShapes(sf::RenderWindow &window) override;
 
         std::vector<std::shared_ptr<sf::Sprite>> getSFSprites(sf::RenderWindow &window) override;
 
-        std::vector<std::unique_ptr<sf::Text>> getSFTexts() override;
+        std::vector<std::unique_ptr<sf::Text>> getSFTexts(sf::RenderWindow &window) override;
     };
 
 } // renderer

@@ -4,6 +4,7 @@
 
 #include "core/drawable/ui/Label.h"
 #include "game/Game.h"
+#include "core/utils/Camera.h"
 
 namespace renderer {
     Label::Label() {
@@ -31,8 +32,8 @@ namespace renderer {
         text.setFont(font);
     }
 
-    void Label::setCharacterSize(unsigned int size) {
-        text.setCharacterSize(size);
+    void Label::setCharacterSize(float size) {
+        characterSize = size;
     }
 
     void Label::setFont(const sf::Font &font) {
@@ -47,8 +48,9 @@ namespace renderer {
         return {};
     }
 
-    std::vector<std::unique_ptr<sf::Text>> Label::getSFTexts() {
+    std::vector<std::unique_ptr<sf::Text>> Label::getSFTexts(sf::RenderWindow &window) {
         std::vector<std::unique_ptr<sf::Text>> texts;
+        text.setCharacterSize(Camera::sizeY(characterSize, window));
         texts.push_back(std::make_unique<sf::Text>(text));
         return texts;
     }

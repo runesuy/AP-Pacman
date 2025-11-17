@@ -62,7 +62,7 @@ public:
      * @warning positions are relative to the DrawObject position.
      * @return
      */
-    virtual std::vector<std::unique_ptr<sf::Text>> getSFTexts() = 0;
+    virtual std::vector<std::unique_ptr<sf::Text>> getSFTexts(sf::RenderWindow &window) = 0;
 };
 
 } // renderer
