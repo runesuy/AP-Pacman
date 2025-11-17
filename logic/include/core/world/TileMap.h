@@ -38,7 +38,7 @@ namespace logic {
         /**
          * @return A row major 2d grid representing the tile map's tile types.
          */
-        [[nodiscard]] const std::vector<std::vector<TileType>> &getMapData() const;
+        [[nodiscard]] const auto &getMapData() const;
 
         /**
          * Load the tile map into the given world.
@@ -62,9 +62,9 @@ namespace logic {
 
         [[nodiscard]] Position getTileCenterPosition(unsigned int row, unsigned int col) const;
 
-        [[nodiscard]] float getTileSize() const;
+        [[nodiscard]] Size::CoordinateType getTileSize() const;
 
-        [[nodiscard]] float getYOffsetForCentering() const;
+        [[nodiscard]] Size::CoordinateType getYOffsetForCentering() const;
 
         [[nodiscard]] unsigned int getRowCount() const;
 

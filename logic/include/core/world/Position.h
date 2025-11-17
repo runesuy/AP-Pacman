@@ -14,8 +14,8 @@ namespace logic {
      * x and y should always be between -1 and 1
      */
     class Position : public ICoordinate {
-        float x;
-        float y;
+        CoordinateType x{};
+        CoordinateType y{};
     public:
         /**
          * @param x horizontal coördinate, 0 being the center of the game world
@@ -23,7 +23,7 @@ namespace logic {
          * @pre x is between -1 and 1
          * @pre y is between -1 and 1
          */
-        Position(float x, float y);
+        Position(CoordinateType x, CoordinateType y);
         Position()=default;
         Position(Position&&) noexcept = default;
         Position(const Position&) = default;
@@ -38,26 +38,26 @@ namespace logic {
         /**
          * @return the horizontal coördinate
          */
-        [[nodiscard]] float getX() const override;
+        [[nodiscard]] CoordinateType getX() const override;
 
         /**
          * Set the horizontal coördinate
          * @param x
          * @pre x must be between -1 and 1
          */
-        void setX(float x) override;
+        void setX(CoordinateType x) override;
 
         /**
          * @return the vertical coördinate
          */
-        [[nodiscard]] float getY() const override;
+        [[nodiscard]] CoordinateType getY() const override;
 
         /**
          * Set the vertical coördinate
          * @param y
          * @pre y must be between -1 and 1
          */
-        void setY(float y) override;
+        void setY(CoordinateType y) override;
     };
 }
 

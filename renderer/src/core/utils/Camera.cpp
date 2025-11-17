@@ -5,10 +5,10 @@
 #include <iostream>
 #include "core/utils/Camera.h"
 float renderer::Camera::projectX(float posX, const sf::RenderWindow &window) {
-    const float smallestSide = static_cast<float>(std::min(window.getSize().x, window.getSize().y));
+    const unsigned int smallestSide = std::min(window.getSize().x, window.getSize().y);
     posX += 1.0f; // shift from [-1, 1] to [0, 2]
     posX /= 2.0f; // scale from [0, 2] to [0, 1]
-    posX *= static_cast<float>(smallestSide); // scale to window height
+    posX *=smallestSide; // scale to window height
     posX += std::max(0.0f,(static_cast<float>(window.getSize().x)-static_cast<float>(window.getSize().y))) / 2.0f; // shift for zero centered x-axis
     return posX;
 }
@@ -19,7 +19,7 @@ float renderer::Camera::projectX(const logic::Position &position, const sf::Rend
 
 float renderer::Camera::projectY(float posY, const sf::RenderWindow &window) {
     posY *= -1.0f; // invert y-axis
-    const float smallestSide = static_cast<float>(std::min(window.getSize().x, window.getSize().y));
+    const unsigned int smallestSide = std::min(window.getSize().x, window.getSize().y);
     posY += 1.0f; // shift from [-1, 1] to [0, 2]
     posY /= 2.0f; // scale from [0, 2] to [0, 1]
     posY *= static_cast<float>(smallestSide); // scale to window height

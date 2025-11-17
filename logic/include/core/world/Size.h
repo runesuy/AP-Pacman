@@ -14,10 +14,10 @@ namespace logic {
      * Size width and height must always be non-negative.
      */
     class Size : public ICoordinate {
-        float width;
-        float height;
+        CoordinateType width;
+        CoordinateType height;
     public:
-        Size(float x, float y);
+        Size(CoordinateType x, CoordinateType y);
         Size(Size&&) noexcept = default;
         Size(const Size&) = default;
         Size& operator=(Size&&) noexcept = default;
@@ -26,24 +26,24 @@ namespace logic {
         /**
          * @return The width
          */
-        [[nodiscard]] float getX() const override;
+        [[nodiscard]] CoordinateType getX() const override;
 
         /**
          * Set the width
          * @param x width (>=0)
          */
-        void setX(float x) override;
+        void setX(CoordinateType x) override;
 
         /**
          * @return The height
          */
-        [[nodiscard]] float getY() const override;
+        [[nodiscard]] CoordinateType getY() const override;
 
         /**
          * Set the height
          * @param y height (>=0)
          */
-        void setY(float y) override;
+        void setY(CoordinateType y) override;
     };
 
 } // logic

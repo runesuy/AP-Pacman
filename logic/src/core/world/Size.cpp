@@ -6,29 +6,29 @@
 #include "stdexcept"
 
 namespace logic {
-    float Size::getX() const {
+    ICoordinate::CoordinateType Size::getX() const {
         return width;
     }
 
-    void Size::setX(float x) {
+    void Size::setX(CoordinateType x) {
         if (x < 0) {
             throw std::invalid_argument("width cannot be negative");
         }
         width = x;
     }
 
-    float Size::getY() const {
+    Size::CoordinateType Size::getY() const {
         return height;
     }
 
-    void Size::setY(float y) {
+    void Size::setY(CoordinateType y) {
         if (y < 0) {
             throw std::invalid_argument("height cannot be negative");
         }
         height = y;
     }
 
-    Size::Size(float x, float y) {
+    Size::Size(Size::CoordinateType x, Size::CoordinateType y) {
         if (x < 0) {
             throw std::invalid_argument("width cannot be negative");
         }

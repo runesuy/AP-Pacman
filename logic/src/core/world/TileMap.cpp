@@ -7,7 +7,7 @@
 #include "core/world/World.h"
 
 namespace logic {
-    const std::vector<std::vector<TileMap::TileType>> &TileMap::getMapData() const {
+    const auto &TileMap::getMapData() const {
         return mapData;
     }
 
@@ -19,14 +19,17 @@ namespace logic {
     }
 
     void TileMap::loadToWorld(World &world) {
-        const float tileSize = getTileSize();
-        const float yOffsetForCentering = (2.0f - tileSize * static_cast<float>(mapData.size())) / 2.0f;
+        const auto tileSize = getTileSize();
+        const auto yOffsetForCentering = (2.0 - tileSize * mapData.size()) / 2.0;
         for (int row=0; row<mapData.size(); row++) {
             for (int col=0; col<mapData[row].size(); col++) {
                 TileType tileType = mapData[row][col];
-                float x = -1.0f + static_cast<float>(col) * tileSize + tileSize / 2;
-                float y = 1.0f - static_cast<float>(row) * tileSize - tileSize / 2 - yOffsetForCentering;
+                auto x = -1.0 + static_cast<float>(col) * tileSize + tileSize / 2;
+                auto y = 1.0 - static_cast<float>(row) * tileSize - tileSize / 2 - yOffsetForCentering;
                 switch (tileType) {
+                    default:{
+                        break;
+                    }
                     case TileType::WALL: {
                         auto wall = world.getConfig().getEntityFactory()->createWallModel();
                         wall->setPosition({x, y});
@@ -92,11 +95,11 @@ namespace logic {
         return {x, y};
     }
 
-    float TileMap::getTileSize() const {
+    Size::CoordinateType TileMap::getTileSize() const {
         return 2/static_cast<float>(mapData[0].size());
     }
 
-    float TileMap::getYOffsetForCentering() const {
+    Size::CoordinateType TileMap::getYOffsetForCentering() const {
         const float tileSize = getTileSize();
         return (2.0f - tileSize * static_cast<float>(mapData.size())) / 2.0f;
     }

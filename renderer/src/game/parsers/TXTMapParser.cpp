@@ -12,12 +12,12 @@ namespace renderer {
         if (!inputFile.is_open()) throw FileNotOpenedException(filename);
 
         logic::TileMap tileMap;
-        int width = -1;
+        std::string::size_type width = -1;
         std::string line;
         while (std::getline(inputFile, line)) {
             if (width == -1) {
-                width = static_cast<int>(line.length());
-            } else if (static_cast<int>(line.length()) != width) {
+                width = line.length();
+            } else if (line.length() != width) {
                 throw std::runtime_error("Inconsistent line lengths in map file: " + filename);
             }
 
