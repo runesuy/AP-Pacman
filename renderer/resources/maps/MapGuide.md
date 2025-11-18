@@ -13,7 +13,10 @@ Here is a list of common characters used in the map files:
 - `.` : Coin
 - ' ' : Empty space
 - `W` : Wall
-- `G` : Ghost
+- `R` : Red Ghost
+- 'O' : Orange Ghost
+- 'I' : Pink Ghost
+- 'B' : Blue Ghost
 - `P` : Player start position
 - `S` : Ghost spawner (The point the ghosts will respawn when killed)
 - `U` : Power-up
