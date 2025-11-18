@@ -35,6 +35,10 @@ namespace logic {
             }
         };
 
+        /**
+         * Update all observers with an event.
+         * @param event String event passed to observers.
+         */
         void updateObservers(const std::string &event);
 
         virtual ~Observable();
@@ -45,11 +49,20 @@ namespace logic {
          */
         void addObserver(const std::shared_ptr<IObserver<T>>& observer) { _observers.push_back(observer); };
 
+        /**
+         * @return true if this has any observers
+         */
         [[nodiscard]] bool hasObservers() const;
 
+        /**
+         * @param observer
+         * @return true if observer is among observers
+         */
         bool hasObserver(const std::shared_ptr<IObserver<T>>& observer) const;
 
     };
+
+    //---------------------- Implementation ------------------------//
 
     template<typename T>
     void Observable<T>::updateObservers(const std::string &event) {

@@ -15,7 +15,7 @@ namespace logic {
 
         void processCommand(EntityCommand command, PowerupModel &entity) override;
 
-        void onCollision(PowerupModel &entity, WorldObject &other) override;
+        void onCollision(PowerupModel &entity, const SizedWorldObject &other) override;
     };
 
 } // logic

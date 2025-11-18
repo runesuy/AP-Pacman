@@ -22,11 +22,16 @@ class IObserver{
          */
         virtual void update(T &subject)=0;
 
+        /**
+         * Called when the subject being observed has changed.
+         * @param subject The subject being observed.
+         * @param event The event the subject passed.
+         */
         virtual void update(T &subject, const std::string &event){};
 
         /**
          * Called when the subject being observed is being destroyed.
-         * @param subject
+         * @param subject The subject being observerd.
          */
         virtual void onObservableDestroyed(T &subject){};
     };

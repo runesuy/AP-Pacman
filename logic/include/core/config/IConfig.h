@@ -10,6 +10,10 @@
 
 namespace logic {
 
+    /**
+     * Config interface for the logic.
+     * Needs to be passed to world.
+     */
     class IConfig {
     public:
         virtual ~IConfig() = default;
@@ -23,7 +27,7 @@ namespace logic {
 
         /**
          * Get the entity factory for creating game entities.
-         * @return
+         * @return A shared ptr to the factory
          */
         [[nodiscard]] virtual std::shared_ptr<logic::IEntityFactory> getEntityFactory() const = 0;
     };

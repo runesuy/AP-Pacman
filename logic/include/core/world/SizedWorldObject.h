@@ -9,6 +9,9 @@
 
 namespace logic {
 
+    /**
+     * A world object containing a size and able to handle collisions.
+     */
     class SizedWorldObject : public WorldObject{
         /**
          * The size of the object.
@@ -27,7 +30,21 @@ namespace logic {
          */
         [[nodiscard]] Size getSize() const;
 
-        virtual void onCollision(WorldObject &other) {};
+        /**
+         * Handle a collision with other.
+         * @param other
+         */
+        virtual void onCollision(const SizedWorldObject &other) {};
+
+
+        using CollisionType=int;
+
+        /**
+        * Return the ID type for collisions.
+        * Can be used to identify the other colliding object.
+        * @return -1 by default.
+        */
+        [[nodiscard]] virtual CollisionType getCollisionType() const {return -1;};
     };
 
 } // logic

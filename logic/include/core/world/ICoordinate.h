@@ -13,29 +13,30 @@ namespace logic {
     class ICoordinate {
     public:
         using CoordinateType = double;
+
         /**
          * @return the horizontal coördinate
          */
-        [[nodiscard]] virtual CoordinateType getX() const=0;
+        [[nodiscard]] virtual CoordinateType getX() const = 0;
 
         /**
          * Set the horizontal coördinate
          * @param x
          * @pre x must be between -1 and 1
          */
-        virtual void setX(CoordinateType x)=0;
+        virtual void setX(CoordinateType x) = 0;
 
         /**
          * @return the vertical coördinate
          */
-        [[nodiscard]] virtual CoordinateType getY() const=0;
+        [[nodiscard]] virtual CoordinateType getY() const = 0;
 
         /**
          * Set the vertical coördinate
          * @param y
          * @pre y must be between -1 and 1
          */
-        virtual void setY(CoordinateType y)=0;
+        virtual void setY(CoordinateType y) = 0;
     };
 
 } // logic

@@ -9,7 +9,7 @@
 
 namespace logic {
 
-    class GhostModel : public MovingEntityModel<GhostModel>, public Observable<GhostModel>{
+    class GhostModel : public MovingEntityModel<GhostModel>, public Observable<GhostModel> {
     public:
         enum Mode {
             CHASE,
@@ -21,10 +21,11 @@ namespace logic {
         const float SPEED = 0.2f;
 
         Mode mode = WAITING;
-        float startTimer=0.0f;
+        float startTimer = 0.0f;
         inline static const float START_DELAY = 3.0f; // seconds
     public:
         GhostModel();
+
         void setSize(const Size &size) override;
 
         void setPosition(const Position &position) override;

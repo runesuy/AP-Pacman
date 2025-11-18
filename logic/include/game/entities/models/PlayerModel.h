@@ -9,7 +9,7 @@
 
 namespace logic {
 
-    class PlayerModel : public MovingEntityModel<PlayerModel>, public Observable<PlayerModel>{
+    class PlayerModel : public MovingEntityModel<PlayerModel>, public Observable<PlayerModel> {
     public:
     private:
         const float SPEED = 0.3f;

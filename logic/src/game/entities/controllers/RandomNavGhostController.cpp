@@ -9,7 +9,7 @@ void logic::RandomNavGhostController::processCommand(logic::EntityCommand comman
 
 }
 
-void logic::RandomNavGhostController::onCollision(logic::GhostModel &entity, logic::WorldObject &other) {
+void logic::RandomNavGhostController::onCollision(GhostModel &entity, const SizedWorldObject &other) {
 
 }
 

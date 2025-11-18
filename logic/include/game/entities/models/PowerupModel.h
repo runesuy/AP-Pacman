@@ -13,6 +13,7 @@ namespace logic {
     class PowerupModel : public EntityModel<PowerupModel>, public Observable<PowerupModel> {
     public:
         PowerupModel();
+
         void setSize(const Size &size) override;
 
         void setPosition(const Position &position) override;

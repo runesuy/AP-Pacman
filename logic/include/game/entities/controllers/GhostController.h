@@ -4,6 +4,7 @@
 
 #ifndef AP_PACMAN_GHOSTCONTROLLER_H
 #define AP_PACMAN_GHOSTCONTROLLER_H
+
 #include "MovingEntityController.h"
 
 namespace logic {

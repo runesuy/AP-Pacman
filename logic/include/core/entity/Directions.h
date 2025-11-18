@@ -8,6 +8,9 @@
 #endif //AP_PACMAN_DIRECTIONS_H
 
 namespace logic {
+    /**
+     * Possible direction a entity can face.
+     */
     enum Direction {
         UP,
         DOWN,

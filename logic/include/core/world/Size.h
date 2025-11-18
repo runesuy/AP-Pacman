@@ -18,10 +18,14 @@ namespace logic {
         CoordinateType height;
     public:
         Size(CoordinateType x, CoordinateType y);
-        Size(Size&&) noexcept = default;
-        Size(const Size&) = default;
-        Size& operator=(Size&&) noexcept = default;
-        Size& operator=(const Size&) = default;
+
+        Size(Size &&) noexcept = default;
+
+        Size(const Size &) = default;
+
+        Size &operator=(Size &&) noexcept = default;
+
+        Size &operator=(const Size &) = default;
 
         /**
          * @return The width

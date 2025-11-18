@@ -13,7 +13,7 @@ namespace logic {
 
     }
 
-    void CoinController::onCollision(CoinModel &entity, WorldObject &other) {
+    void CoinController::onCollision(CoinModel &entity, const SizedWorldObject &other) {
         CollectableController<logic::CoinModel>::onCollision(entity, other);
         entity.updateObservers();
     }

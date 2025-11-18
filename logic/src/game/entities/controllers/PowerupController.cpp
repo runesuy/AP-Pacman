@@ -13,7 +13,7 @@ namespace logic {
 
     }
 
-    void PowerupController::onCollision(PowerupModel &entity, WorldObject &other) {
+    void PowerupController::onCollision(PowerupModel &entity, const SizedWorldObject &other) {
         CollectableController<logic::PowerupModel>::onCollision(entity, other);
         entity.updateObservers();
     }

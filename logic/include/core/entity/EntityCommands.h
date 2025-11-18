@@ -6,6 +6,9 @@
 #define AP_PACMAN_IENTITYCOMMAND_H
 
 namespace logic {
+    /**
+     * Commands for entities.
+     */
     enum EntityCommand {
         TURN_LEFT,
         TURN_RIGHT,

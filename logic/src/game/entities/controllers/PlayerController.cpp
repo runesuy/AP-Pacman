@@ -6,6 +6,8 @@
 #include "core/utils/Stopwatch.h"
 #include "core/world/TileMap.h"
 #include "core/world/World.h"
+#include <typeinfo>
+#include "game/entities/models/CollisionTypes.h"
 
 namespace logic {
     void PlayerController::processCommand(EntityCommand command, PlayerModel &entity) {
@@ -28,10 +30,13 @@ namespace logic {
 
     }
 
-    void PlayerController::onCollision(PlayerModel &entity, WorldObject &other) {
-        auto coin = dynamic_cast<CoinModel*>(&other);
-        if (coin) {
-            entity.updateObservers("COIN_COLLECTED");
+    void PlayerController::onCollision(PlayerModel &entity, const SizedWorldObject &other) {
+
+        switch (other.getCollisionType()) {
+            case (CollisionType::COIN): {
+                entity.updateObservers("COIN_COLLECTED");
+            }
+            default:{}
         }
     }
 }

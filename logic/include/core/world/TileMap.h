@@ -21,7 +21,7 @@ namespace logic {
             EMPTY,
             WALL,
             COIN,
-            POWER_UP ,
+            POWER_UP,
             SPAWN,
             GHOST_RED,
             GHOST_PINK,
@@ -46,18 +46,18 @@ namespace logic {
          * An entity is created for each tile based on its type.
          * @param world
          */
-        void loadToWorld(World& world);
+        void loadToWorld(World &world);
 
         /**
          * Add a row to the tile map.
          * @param row A vector representing a row of tile types.
          * @throws std::invalid_argument if the row size does not match existing rows.
          */
-        void addRow(const std::vector<TileType>& row);
+        void addRow(const std::vector<TileType> &row);
 
-        [[nodiscard]] TileType getTileType(const Position& position) const;
+        [[nodiscard]] TileType getTileType(const Position &position) const;
 
-        [[nodiscard]] std::pair<int, int> getGridPosition(const Position& position) const;
+        [[nodiscard]] std::pair<int, int> getGridPosition(const Position &position) const;
 
         [[nodiscard]] TileType getTileType(unsigned int row, unsigned int col) const;
 

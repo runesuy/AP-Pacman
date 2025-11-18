@@ -24,16 +24,24 @@ namespace logic {
          * @pre y is between -1 and 1
          */
         Position(CoordinateType x, CoordinateType y);
-        Position()=default;
-        Position(Position&&) noexcept = default;
-        Position(const Position&) = default;
-        Position& operator=(Position&&) noexcept = default;
-        Position& operator=(const Position&) = default;
 
-        Position& operator+=(const Position& other);
-        Position operator+(const Position& other) const;
+        Position() = default;
+
+        Position(Position &&) noexcept = default;
+
+        Position(const Position &) = default;
+
+        Position &operator=(Position &&) noexcept = default;
+
+        Position &operator=(const Position &) = default;
+
+        Position &operator+=(const Position &other);
+
+        Position operator+(const Position &other) const;
+
         Position operator*(float scalar) const;
-        bool operator==(const Position& other) const;
+
+        bool operator==(const Position &other) const;
 
         /**
          * @return the horizontal coördinate
