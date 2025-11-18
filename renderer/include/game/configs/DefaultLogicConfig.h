@@ -18,6 +18,13 @@ namespace renderer {
         mutable bool tileMapLoaded = false;
         mutable logic::TileMap tileMap;
         std::shared_ptr<logic::IEntityFactory> entityFactory = std::make_shared<DefaultEntityFactory>();
+
+        inline static const std::string _MapFolderPath = "resources/maps/";
+
+        /**
+         * @return Paths to all txt files in _MapFolderPath
+         */
+        std::vector<std::string> _getAllMapPaths() const;
     public:
         /**
          * Get the tile map to be used in the game world.

@@ -5,6 +5,8 @@
 #include "game/configs/DefaultLogicConfig.h"
 #include "game/parsers/TXTMapParser.h"
 #include "game/factories/DefaultEntityFactory.h"
+#include <filesystem>
+#include "core/utils/Random.h"
 
 namespace renderer {
     logic::TileMap DefaultLogicConfig::getTileMap() const {
@@ -13,11 +15,23 @@ namespace renderer {
         }
         TXTMapParser parser;
         tileMapLoaded = true;
-        tileMap = parser.loadMap("resources/maps/map1.txt");
+        const auto mapPaths = _getAllMapPaths();
+        int randomI = logic::Random::getInstance()->getIntInRange(0, mapPaths.size());
+        tileMap = parser.loadMap(mapPaths.at(randomI));
         return tileMap;
     }
 
     std::shared_ptr<logic::IEntityFactory> DefaultLogicConfig::getEntityFactory() const {
         return entityFactory;
+    }
+
+    std::vector<std::string> DefaultLogicConfig::_getAllMapPaths() const {
+        std::vector<std::string> result;
+        for (const auto & entry : std::filesystem::directory_iterator(_MapFolderPath)) {
+            if (entry.is_regular_file() && entry.path().extension() == ".txt") {
+                result.push_back(entry.path().string());
+            }
+        }
+        return result;
     }
 } // renderer

@@ -15,7 +15,7 @@ namespace logic {
     class Random {
         inline static std::shared_ptr<Random> _instance;
         std::default_random_engine generator;
-        Random()=default;
+        Random();
 
     public:
         ~Random()=default;

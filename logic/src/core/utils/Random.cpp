@@ -16,4 +16,9 @@ namespace logic {
         std::uniform_int_distribution<int> distribution(min, max);
         return distribution(generator);
     }
+
+    Random::Random() {
+        std::random_device rd;
+        generator.seed(rd());
+    }
 }
