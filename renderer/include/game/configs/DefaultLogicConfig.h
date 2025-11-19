@@ -19,7 +19,7 @@ namespace renderer {
         mutable logic::TileMap tileMap;
         std::shared_ptr<logic::IEntityFactory> entityFactory = std::make_shared<DefaultEntityFactory>();
 
-        inline static const std::string _MapFolderPath = "resources/maps/";
+        const std::string _MapFolderPath = "resources/maps/";
 
         /**
          * @return Paths to all txt files in _MapFolderPath

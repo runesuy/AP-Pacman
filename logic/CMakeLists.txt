@@ -5,8 +5,7 @@ file(GLOB_RECURSE LOGIC_SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/*.h
 )
 
-add_library(Logic ${LOGIC_SOURCES}
-        include/game/entities/models/CollisionTypes.h)
+add_library(Logic ${LOGIC_SOURCES})
 
 target_include_directories(Logic
         PUBLIC

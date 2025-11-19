@@ -67,10 +67,23 @@ namespace logic {
             }
         };
 
+        template<typename Target>
+        [[nodiscard]] std::vector<std::shared_ptr<Target>> getObjectsOfType() const;
+
         [[nodiscard]] const Score &getScore() const;
 
         Score &getScore() ;
     };
+
+    template<typename Target>
+    std::vector<std::shared_ptr<Target>> World::getObjectsOfType() const {
+        std::vector<std::shared_ptr<Target>> result;
+        for (const auto& object : objects) {
+            auto derived = std::dynamic_pointer_cast<Target>(object);
+            if (derived) result.push_back(derived);
+        }
+        return  result;
+    }
 
 } // logic
 

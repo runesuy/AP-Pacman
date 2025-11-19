@@ -10,6 +10,9 @@
 #include "game/entities/views/CoinView.h"
 #include "game/entities/views/PowerupView.h"
 #include "game/entities/views/RedGhostView.h"
+#include "game/entities/controllers/ManhattanFollowGhostController.h"
+#include "game/entities/controllers/RandomNavGhostController.h"
+#include "game/entities/views/PinkGhostView.h"
 
 namespace renderer {
     std::shared_ptr<logic::WallModel> DefaultEntityFactory::createWallModel() {
@@ -58,6 +61,15 @@ namespace renderer {
                 auto ghostView = std::make_shared<RedGhostView>();
                 auto ghostModel = std::make_shared<logic::GhostModel>();
                 ghostModel->addObserver(ghostView);
+                ghostModel->setController(std::make_shared<logic::RandomNavGhostController>());
+                viewTarget->addObjectView(ghostView);
+                return ghostModel;
+            }
+            case logic::GhostType::PINK: {
+                auto ghostView = std::make_shared<PinkGhostView>();
+                auto ghostModel = std::make_shared<logic::GhostModel>();
+                ghostModel->addObserver(ghostView);
+                ghostModel->setController(std::make_shared<logic::ManhattanFollowGhostController>());
                 viewTarget->addObjectView(ghostView);
                 return ghostModel;
             }

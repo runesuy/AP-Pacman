@@ -15,7 +15,7 @@
 namespace logic {
     template<typename EntityModelType>
     class MovingEntityController : public IEntityController<EntityModelType> {
-    private:
+    protected:
 
         /**
          * Check if the player has passed the center of the current tile in the given direction.
@@ -26,7 +26,6 @@ namespace logic {
          */
         static std::tuple<bool,Position> _isPastOrOnCenter(const logic::World &world, const EntityModelType &entity, Direction direction) ;
 
-    protected:
         static TileMap::TileType getTileInDirection(const World& world, const EntityModelType& entity, Direction direction) ;
 
     public:
@@ -116,8 +115,8 @@ namespace logic {
                 return {entity.getPosition().getY() > tileCenter.getY(), tileCenter};
             case Direction::DOWN:
                 return {entity.getPosition().getY() < tileCenter.getY(), tileCenter};
+            default:return {false, Position(0,0)};
         }
-        return {false, Position(0,0)};
     }
 };
 #endif //AP_PACMAN_MOVINGENTITYCONTROLLER_H

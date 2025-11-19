@@ -57,6 +57,10 @@ namespace logic {
 
         [[nodiscard]] TileType getTileType(const Position &position) const;
 
+        /**
+         * @param position
+         * @return (row, col) of the position on the map
+         */
         [[nodiscard]] std::pair<int, int> getGridPosition(const Position &position) const;
 
         [[nodiscard]] TileType getTileType(unsigned int row, unsigned int col) const;

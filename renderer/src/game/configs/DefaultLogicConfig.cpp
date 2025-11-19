@@ -16,7 +16,7 @@ namespace renderer {
         TXTMapParser parser;
         tileMapLoaded = true;
         const auto mapPaths = _getAllMapPaths();
-        int randomI = logic::Random::getInstance()->getIntInRange(0, mapPaths.size());
+        int randomI = logic::Random::getInstance()->getIntInRange(0, mapPaths.size()-1);
         tileMap = parser.loadMap(mapPaths.at(randomI));
         return tileMap;
     }
