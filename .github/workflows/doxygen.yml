@@ -8,6 +8,10 @@ on:
 jobs:
   build_doxygen: # Give the job a descriptive name (mapping key)
     runs-on: ubuntu-latest # Specify the runner environment
+    permissions:
+      contents: write
+      pages: write # Good practice to include this if deploying to GH Pages
+      id-token: write # Required by the peaceiris action
     steps:
       # Checkout the repository first (essential for actions to access your code)
       - name: Checkout repository
