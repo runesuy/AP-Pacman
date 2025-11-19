@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['createlevelstate_0',['createlevelstate',['../classrenderer_1_1DefaultStateFactory.html#aeea53a552115621ceed32a1cc406f3a5',1,'renderer::DefaultStateFactory::createLevelState()'],['../classrenderer_1_1IStateFactory.html#ab5ba35efd6828be7f2fc20209449abe1',1,'renderer::IStateFactory::createLevelState()']]],
-  ['createmenustate_1',['createmenustate',['../classrenderer_1_1DefaultStateFactory.html#adfa5b4b5ef5a32888e18c7630dd1f278',1,'renderer::DefaultStateFactory::createMenuState()'],['../classrenderer_1_1IStateFactory.html#a3299896614b5cbe80352e8ce7d2b3f98',1,'renderer::IStateFactory::createMenuState()']]],
-  ['createstatemanager_2',['createStateManager',['../classrenderer_1_1StateManagerFactory.html#af6d12bf6487efe7007a7191d7076bd93',1,'renderer::StateManagerFactory']]],
-  ['createwallmodel_3',['createwallmodel',['../classlogic_1_1IEntityFactory.html#acec55acd47773b8630b467d9a93ab0e4',1,'logic::IEntityFactory::createWallModel()'],['../classrenderer_1_1DefaultEntityFactory.html#acd0f8f93327b10cad01d682effa9e7fe',1,'renderer::DefaultEntityFactory::createWallModel()']]]
+  ['addmodule_0',['addModule',['../classrenderer_1_1_modular_entity_view.html#ad01af13e596e5ba0f121343774c303e3',1,'renderer::ModularEntityView']]],
+  ['addobject_1',['addObject',['../classlogic_1_1_world.html#a0283bebe131b2e3d14961195cfeb5993',1,'logic::World']]],
+  ['addobjectview_2',['addObjectView',['../classrenderer_1_1_world_view.html#a6cf03a68e886f61755f2954824f53875',1,'renderer::WorldView']]],
+  ['addobserver_3',['addObserver',['../classlogic_1_1_observable.html#afb2547e65fdf6b4c090f5170df4bf66d',1,'logic::Observable']]],
+  ['addrow_4',['addRow',['../classlogic_1_1_tile_map.html#aa01a7a80be57dd3e85d3c0a570d07d7c',1,'logic::TileMap']]],
+  ['animatedspritemodule_5',['AnimatedSpriteModule',['../classrenderer_1_1_animated_sprite_module.html#ac913ec6b379df50362fdb516cdd650f5',1,'renderer::AnimatedSpriteModule']]]
 ];

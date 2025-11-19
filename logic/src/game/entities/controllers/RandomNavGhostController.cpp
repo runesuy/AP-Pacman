@@ -15,14 +15,19 @@ void logic::RandomNavGhostController::onCollision(GhostModel &entity, const Size
 
 void logic::RandomNavGhostController::update(logic::World &world, logic::GhostModel &entity) {
     GhostController::update(world, entity);
-    if (entity.getDirection() == Direction::NONE && entity.getMode() != GhostModel::WAITING) {
-        onIsStationary(world, entity);
+    if (entity.getMode() == GhostModel::WAITING) return;
+    if (entity.getDirection() == Direction::NONE) {
+        chooseDirection(world, entity);
+    }
+    auto tilemap = world.getConfig().getTileMap();
+    if(getViableDirections(world, entity).size() > 2 && !get<0>(_isPastOrOnCenter(world, entity, entity.getDirection()))) {
+        chooseDirection(world, entity);
     }
 }
 
 void logic::RandomNavGhostController::onWallCollision(logic::World &world, logic::GhostModel &entity) {
     // set requested direction to a random direction
-    onIsStationary(world, entity);
+    chooseDirection(world, entity);
 }
 
 std::vector<logic::Direction>
@@ -37,7 +42,9 @@ logic::RandomNavGhostController::getViableDirections(const logic::World &world, 
     return viableDirections;
 }
 
-void logic::RandomNavGhostController::onIsStationary(logic::World &world, logic::GhostModel &entity) {
+void logic::RandomNavGhostController::chooseDirection(logic::World &world, logic::GhostModel &entity) {
+    bool change = Random::getInstance()->getIntInRange(0,1);
+    if (!change) return;
     std::vector<Direction> viableDirections = getViableDirections(world, entity);
     if (!viableDirections.empty()) {
         Direction randomDirection = viableDirections[Random::getInstance()->getIntInRange(0, static_cast<int>(viableDirections.size()) - 1)];

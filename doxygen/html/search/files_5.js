@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['game_2ecpp_0',['Game.cpp',['../Game_8cpp.html',1,'']]],
-  ['game_2eh_1',['Game.h',['../Game_8h.html',1,'']]]
+  ['filenotopenedexception_2eh_0',['FileNotOpenedException.h',['../_file_not_opened_exception_8h.html',1,'']]]
 ];

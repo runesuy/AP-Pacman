@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['camera_0',['Camera',['../classrenderer_1_1Camera.html',1,'renderer']]]
+  ['button_0',['Button',['../classrenderer_1_1_button.html',1,'renderer']]]
 ];

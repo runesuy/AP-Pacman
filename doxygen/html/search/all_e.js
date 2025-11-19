@@ -1,12 +1,24 @@
 var searchData=
 [
-  ['random_0',['random',['../classlogic_1_1Random.html',1,'logic::Random'],['../classlogic_1_1Random.html#a1c8a0c127c90e2760aaf347cbbe49976',1,'logic::Random::Random(Random &amp;)=delete'],['../classlogic_1_1Random.html#a72525ce753bc59a73d7b9c089b7438e9',1,'logic::Random::Random(Random &amp;&amp;) noexcept=delete']]],
-  ['random_2ecpp_1',['Random.cpp',['../Random_8cpp.html',1,'']]],
-  ['random_2eh_2',['Random.h',['../Random_8h.html',1,'']]],
-  ['rectanglemodule_3',['rectanglemodule',['../classrenderer_1_1RectangleModule.html',1,'renderer::RectangleModule'],['../classrenderer_1_1RectangleModule.html#ae0fdc73778a6aa532b4c4cfe25c3bff6',1,'renderer::RectangleModule::RectangleModule()']]],
-  ['rectanglemodule_2ecpp_4',['RectangleModule.cpp',['../RectangleModule_8cpp.html',1,'']]],
-  ['rectanglemodule_2eh_5',['RectangleModule.h',['../RectangleModule_8h.html',1,'']]],
-  ['renderer_6',['renderer',['../namespacerenderer.html',1,'']]],
-  ['renderer_3a_3aismoduletype_7',['IsModuleType',['../conceptrenderer_1_1IsModuleType.html',1,'renderer']]],
-  ['run_8',['run',['../classrenderer_1_1Game.html#a47e7e9dc327781e6797f3b5f43b9bc8d',1,'renderer::Game']]]
+  ['observable_0',['Observable',['../classlogic_1_1_observable.html',1,'logic']]],
+  ['observable_2eh_1',['Observable.h',['../_observable_8h.html',1,'']]],
+  ['observable_3c_20coinmodel_20_3e_2',['Observable&lt; CoinModel &gt;',['../classlogic_1_1_observable.html',1,'logic']]],
+  ['observable_3c_20ghostmodel_20_3e_3',['Observable&lt; GhostModel &gt;',['../classlogic_1_1_observable.html',1,'logic']]],
+  ['observable_3c_20modularentityview_20_3e_4',['Observable&lt; ModularEntityView &gt;',['../classlogic_1_1_observable.html',1,'logic']]],
+  ['observable_3c_20playermodel_20_3e_5',['Observable&lt; PlayerModel &gt;',['../classlogic_1_1_observable.html',1,'logic']]],
+  ['observable_3c_20powerupmodel_20_3e_6',['Observable&lt; PowerupModel &gt;',['../classlogic_1_1_observable.html',1,'logic']]],
+  ['observable_3c_20score_20_3e_7',['Observable&lt; Score &gt;',['../classlogic_1_1_observable.html',1,'logic']]],
+  ['observable_3c_20wallmodel_20_3e_8',['Observable&lt; WallModel &gt;',['../classlogic_1_1_observable.html',1,'logic']]],
+  ['observable_3c_20world_20_3e_9',['Observable&lt; World &gt;',['../classlogic_1_1_observable.html',1,'logic']]],
+  ['oncollision_10',['onCollision',['../classlogic_1_1_entity_model.html#ad3c78cf196837eaf4000297d8b810a08',1,'logic::EntityModel::onCollision()'],['../classlogic_1_1_i_entity_controller.html#aecb8e1520605760c2e2f10e66e9eb5b2',1,'logic::IEntityController::onCollision()'],['../classlogic_1_1_sized_world_object.html#ae86060174dd100f02773f55bf97450a1',1,'logic::SizedWorldObject::onCollision()'],['../classlogic_1_1_coin_controller.html#ab8b5ab2e4af0019689db3deacb59e2a7',1,'logic::CoinController::onCollision()'],['../classlogic_1_1_collectable_controller.html#a384062c1c0d681ecf33884e694ee551c',1,'logic::CollectableController::onCollision()'],['../classlogic_1_1_manhattan_follow_ghost_controller.html#a01ad387c5e6f48d50ecaea9f69fe8df5',1,'logic::ManhattanFollowGhostController::onCollision()'],['../classlogic_1_1_player_controller.html#a1556ec8ee1bef152a3a5a6a43a273f19',1,'logic::PlayerController::onCollision()'],['../classlogic_1_1_powerup_controller.html#ae19238b4b839827fba8b8d9081e332ce',1,'logic::PowerupController::onCollision()'],['../classlogic_1_1_random_nav_ghost_controller.html#a2f10d41e673e1f325d1b074ab3425355',1,'logic::RandomNavGhostController::onCollision(GhostModel &amp;entity, const SizedWorldObject &amp;other) override']]],
+  ['onisstationary_11',['onIsStationary',['../classlogic_1_1_random_nav_ghost_controller.html#abf3a92b8590f3b9a16f5a0caf69cada5',1,'logic::RandomNavGhostController']]],
+  ['onobservabledestroyed_12',['onObservableDestroyed',['../classlogic_1_1_i_observer.html#acdde4b1d124989fc652801832b036eea',1,'logic::IObserver::onObservableDestroyed()'],['../classrenderer_1_1_coin_view.html#a70f2589f3670880e9444c5ca55f2cc4a',1,'renderer::CoinView::onObservableDestroyed()']]],
+  ['ontick_13',['onTick',['../classlogic_1_1_score.html#a24a5466920e34282c89abee1c32373dc',1,'logic::Score']]],
+  ['onwallcollision_14',['onWallCollision',['../classlogic_1_1_moving_entity_controller.html#a75b2d8e1d0ad0e2924f7a11d771a72f8',1,'logic::MovingEntityController::onWallCollision()'],['../classlogic_1_1_random_nav_ghost_controller.html#af1b25d3570b8af506ace0f0b024f300b',1,'logic::RandomNavGhostController::onWallCollision()']]],
+  ['operator_2a_15',['operator*',['../classlogic_1_1_position.html#aebd75e849ae695f916136fe97a674a49',1,'logic::Position']]],
+  ['operator_2b_16',['operator+',['../classlogic_1_1_position.html#a73279ab08e7f9e540d36b74b0f589cf0',1,'logic::Position']]],
+  ['operator_2b_3d_17',['operator+=',['../classlogic_1_1_position.html#a6fd9a65da3d1b21e414f832d361e68ab',1,'logic::Position']]],
+  ['operator_3d_18',['operator=',['../classlogic_1_1_random.html#afbd6916c2e4b03e5623c6397c87bd2dc',1,'logic::Random::operator=(Random &amp;)=delete'],['../classlogic_1_1_random.html#aab4cdee2395937c4b92fd69f6bb91635',1,'logic::Random::operator=(Random &amp;&amp;) noexcept=delete'],['../classlogic_1_1_position.html#a556b00f77d785faf5f62de2e963210c4',1,'logic::Position::operator=(Position &amp;&amp;) noexcept=default'],['../classlogic_1_1_position.html#a73df09fbc97a392eec2623f3f219784c',1,'logic::Position::operator=(const Position &amp;)=default'],['../classlogic_1_1_size.html#a187484b25738cfadd8295cceda2dfbf9',1,'logic::Size::operator=(Size &amp;&amp;) noexcept=default'],['../classlogic_1_1_size.html#a063a97c2aaebf9601acf461c9ae08cb0',1,'logic::Size::operator=(const Size &amp;)=default'],['../classrenderer_1_1_game.html#ad082768e0a30c67f506a007b49187f68',1,'renderer::Game::operator=(Game &amp;&amp;) noexcept=delete'],['../classrenderer_1_1_game.html#a0831c7241863c5e8c9ac3ee3e5242668',1,'renderer::Game::operator=(Game &amp;)=delete']]],
+  ['operator_3d_3d_19',['operator==',['../classlogic_1_1_position.html#a8cc92303dd1483e4476e5ff1563dff20',1,'logic::Position']]],
+  ['orange_20',['ORANGE',['../namespacelogic.html#a36053e250f7e1339ba0a6cbecbdf1b4ba5b6490317b6f7270bc3ab5ffd07c1f52',1,'logic']]]
 ];

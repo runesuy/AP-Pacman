@@ -19,9 +19,9 @@ namespace logic {
 
         void onWallCollision(logic::World &world, logic::GhostModel &entity) override;
 
-        void onIsStationary(logic::World &world, logic::GhostModel &entity);
+        static void chooseDirection(logic::World &world, logic::GhostModel &entity);
 
-        std::vector<Direction> getViableDirections(const World &world, const GhostModel &entity);
+        static std::vector<Direction> getViableDirections(const World &world, const GhostModel &entity);
     };
 
 }

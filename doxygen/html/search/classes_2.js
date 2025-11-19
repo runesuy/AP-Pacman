@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['defaultappconfig_0',['DefaultAppConfig',['../classrenderer_1_1DefaultAppConfig.html',1,'renderer']]],
-  ['defaultentityfactory_1',['DefaultEntityFactory',['../classrenderer_1_1DefaultEntityFactory.html',1,'renderer']]],
-  ['defaultfactorycollection_2',['DefaultFactoryCollection',['../classrenderer_1_1DefaultFactoryCollection.html',1,'renderer']]],
-  ['defaultlogicconfig_3',['DefaultLogicConfig',['../classrenderer_1_1DefaultLogicConfig.html',1,'renderer']]],
-  ['defaultstatefactory_4',['DefaultStateFactory',['../classrenderer_1_1DefaultStateFactory.html',1,'renderer']]],
-  ['defaulttextureparser_5',['DefaultTextureParser',['../classrenderer_1_1DefaultTextureParser.html',1,'renderer']]],
-  ['delegatingstate_6',['DelegatingState',['../classrenderer_1_1DelegatingState.html',1,'renderer']]],
-  ['drawcollection_7',['DrawCollection',['../classrenderer_1_1DrawCollection.html',1,'renderer']]],
-  ['drawobject_8',['DrawObject',['../classrenderer_1_1DrawObject.html',1,'renderer']]]
+  ['camera_0',['Camera',['../classrenderer_1_1_camera.html',1,'renderer']]],
+  ['circlemodule_1',['CircleModule',['../classrenderer_1_1_circle_module.html',1,'renderer']]],
+  ['coincontroller_2',['CoinController',['../classlogic_1_1_coin_controller.html',1,'logic']]],
+  ['coinmodel_3',['CoinModel',['../classlogic_1_1_coin_model.html',1,'logic']]],
+  ['coinview_4',['CoinView',['../classrenderer_1_1_coin_view.html',1,'renderer']]],
+  ['collectablecontroller_5',['CollectableController',['../classlogic_1_1_collectable_controller.html',1,'logic']]],
+  ['collectablecontroller_3c_20coinmodel_20_3e_6',['CollectableController&lt; CoinModel &gt;',['../classlogic_1_1_collectable_controller.html',1,'logic']]],
+  ['collectablecontroller_3c_20powerupmodel_20_3e_7',['CollectableController&lt; PowerupModel &gt;',['../classlogic_1_1_collectable_controller.html',1,'logic']]],
+  ['collisionhandler_8',['CollisionHandler',['../classlogic_1_1_collision_handler.html',1,'logic']]]
 ];
