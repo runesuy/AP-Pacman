@@ -18,7 +18,7 @@ jobs:
         uses: mattnotmitt/doxygen-action@1.9.8
         with:
           # Path to Doxyfile
-          doxyfile-path: ./ # default is ./Doxyfile
+          doxyfile-path: ./Doxyfile # default is ./Doxyfile
           # Working directory
           working-directory: . # default is .
           # Generate latex documentation
@@ -27,7 +27,7 @@ jobs:
 
       - name: Commit and push ONLY the documentation folder
         # We use a condition to only deploy when pushing to the main branch
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
