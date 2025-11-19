@@ -1,0 +1,165 @@
+\doxysection{logic\+::World Class Reference}
+\hypertarget{classlogic_1_1World}{}\label{classlogic_1_1World}\index{logic::World@{logic::World}}
+
+
+{\ttfamily \#include $<$World.\+h$>$}
+
+
+
+Inheritance diagram for logic\+::World\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classlogic_1_1World__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for logic\+::World\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classlogic_1_1World__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlogic_1_1World_a4c78012e99bae38cf558be2e20c3b37c}{World}} (const \mbox{\hyperlink{classlogic_1_1IConfig}{IConfig}} \&config)
+\item 
+void \mbox{\hyperlink{classlogic_1_1World_a8c069541cc88b46fd9849bf2d7f4008c}{update}} ()
+\item 
+const \mbox{\hyperlink{classlogic_1_1IConfig}{IConfig}} \& \mbox{\hyperlink{classlogic_1_1World_a16d6a106df682d833d19735fc8f0a1ea}{get\+Config}} () const
+\item 
+void \mbox{\hyperlink{classlogic_1_1World_a0283bebe131b2e3d14961195cfeb5993}{add\+Object}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1WorldObject}{World\+Object}} $>$ \&object)
+\item 
+void \mbox{\hyperlink{classlogic_1_1World_aa0ee63479670036e50b093909e6ccfcb}{remove\+Object}} (const \mbox{\hyperlink{classlogic_1_1WorldObject}{World\+Object}} \&object)
+\item 
+{\footnotesize template$<$typename Target $>$ }\\void \mbox{\hyperlink{classlogic_1_1World_a93baf6b62a43ffe3cc2ecf33f60e85c2}{send\+Command\+To}} (\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}} command)
+\item 
+{\footnotesize template$<$typename Target $>$ }\\std\+::vector$<$ std\+::shared\+\_\+ptr$<$ Target $>$ $>$ \mbox{\hyperlink{classlogic_1_1World_a8982fe868e154e8595bd3736b57305ca}{get\+Objects\+Of\+Type}} () const
+\item 
+const \mbox{\hyperlink{classlogic_1_1Score}{Score}} \& \mbox{\hyperlink{classlogic_1_1World_a867e6617d44852c0a974089fb9149f69}{get\+Score}} () const
+\item 
+\mbox{\hyperlink{classlogic_1_1Score}{Score}} \& \mbox{\hyperlink{classlogic_1_1World_af9de59942f639833d0e5db3c7d14035f}{get\+Score}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ World $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_afd56bfb66920d8e1d38a3ac3259e85d9}{update\+Observers}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_a73e3a3b1f7ffdd12ffa269541a551ec6}{update\+Observers}} (const std\+::string \&event)
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1Observable_a1f7f0337470804741ddd21ffe82103c1}{\texorpdfstring{$\sim$}{\string~}\+Observable}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_afb2547e65fdf6b4c090f5170df4bf66d}{add\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ \mbox{\hyperlink{classlogic_1_1World}{World}} $>$ $>$ \&observer)
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Observable_ad7cb2d9214c5dd7f5aa8a36ef7ce43b9}{has\+Observers}} () const
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Observable_a54bfc543d21f11be7137efce418394c2}{has\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ \mbox{\hyperlink{classlogic_1_1World}{World}} $>$ $>$ \&observer) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ World $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classlogic_1_1Observable_a637139aff6f941cdc9096713a3f38ea7}{Event\+Type}} 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classlogic_1_1World_a4c78012e99bae38cf558be2e20c3b37c}\label{classlogic_1_1World_a4c78012e99bae38cf558be2e20c3b37c} 
+\index{logic::World@{logic::World}!World@{World}}
+\index{World@{World}!logic::World@{logic::World}}
+\doxysubsubsection{\texorpdfstring{World()}{World()}}
+{\footnotesize\ttfamily logic\+::\+World\+::\+World (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1IConfig}{IConfig}} \&}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Construct a \doxylink{classlogic_1_1World}{World} with the given configuration. 
+\begin{DoxyParams}{Parameters}
+{\em config} & Logic configuration reference. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1World_a4c78012e99bae38cf558be2e20c3b37c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1World_a0283bebe131b2e3d14961195cfeb5993}\label{classlogic_1_1World_a0283bebe131b2e3d14961195cfeb5993} 
+\index{logic::World@{logic::World}!addObject@{addObject}}
+\index{addObject@{addObject}!logic::World@{logic::World}}
+\doxysubsubsection{\texorpdfstring{addObject()}{addObject()}}
+{\footnotesize\ttfamily void logic\+::\+World\+::add\+Object (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1WorldObject}{World\+Object}} $>$ \&}]{object }\end{DoxyParamCaption})}
+
+Add an object to the world. If the object is a \doxylink{classlogic_1_1PlayerModel}{Player\+Model}, attach the \doxylink{classlogic_1_1Score}{Score} as an observer. 
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlogic_1_1World_a16d6a106df682d833d19735fc8f0a1ea}\label{classlogic_1_1World_a16d6a106df682d833d19735fc8f0a1ea} 
+\index{logic::World@{logic::World}!getConfig@{getConfig}}
+\index{getConfig@{getConfig}!logic::World@{logic::World}}
+\doxysubsubsection{\texorpdfstring{getConfig()}{getConfig()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlogic_1_1IConfig}{IConfig}} \& logic\+::\+World\+::get\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the configuration reference. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{classlogic_1_1World_a8982fe868e154e8595bd3736b57305ca}\label{classlogic_1_1World_a8982fe868e154e8595bd3736b57305ca} 
+\index{logic::World@{logic::World}!getObjectsOfType@{getObjectsOfType}}
+\index{getObjectsOfType@{getObjectsOfType}!logic::World@{logic::World}}
+\doxysubsubsection{\texorpdfstring{getObjectsOfType()}{getObjectsOfType()}}
+{\footnotesize\ttfamily template$<$typename Target $>$ \\
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ Target $>$ $>$ logic\+::\+World\+::get\+Objects\+Of\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classlogic_1_1World_af9de59942f639833d0e5db3c7d14035f}\label{classlogic_1_1World_af9de59942f639833d0e5db3c7d14035f} 
+\index{logic::World@{logic::World}!getScore@{getScore}}
+\index{getScore@{getScore}!logic::World@{logic::World}}
+\doxysubsubsection{\texorpdfstring{getScore()}{getScore()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1Score}{Score}} \& logic\+::\+World\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classlogic_1_1World_a867e6617d44852c0a974089fb9149f69}\label{classlogic_1_1World_a867e6617d44852c0a974089fb9149f69} 
+\index{logic::World@{logic::World}!getScore@{getScore}}
+\index{getScore@{getScore}!logic::World@{logic::World}}
+\doxysubsubsection{\texorpdfstring{getScore()}{getScore()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlogic_1_1Score}{Score}} \& logic\+::\+World\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classlogic_1_1World_aa0ee63479670036e50b093909e6ccfcb}\label{classlogic_1_1World_aa0ee63479670036e50b093909e6ccfcb} 
+\index{logic::World@{logic::World}!removeObject@{removeObject}}
+\index{removeObject@{removeObject}!logic::World@{logic::World}}
+\doxysubsubsection{\texorpdfstring{removeObject()}{removeObject()}}
+{\footnotesize\ttfamily void logic\+::\+World\+::remove\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1WorldObject}{World\+Object}} \&}]{object }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1World_aa0ee63479670036e50b093909e6ccfcb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlogic_1_1World_a93baf6b62a43ffe3cc2ecf33f60e85c2}\label{classlogic_1_1World_a93baf6b62a43ffe3cc2ecf33f60e85c2} 
+\index{logic::World@{logic::World}!sendCommandTo@{sendCommandTo}}
+\index{sendCommandTo@{sendCommandTo}!logic::World@{logic::World}}
+\doxysubsubsection{\texorpdfstring{sendCommandTo()}{sendCommandTo()}}
+{\footnotesize\ttfamily template$<$typename Target $>$ \\
+void logic\+::\+World\+::send\+Command\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}}}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classlogic_1_1World_a8c069541cc88b46fd9849bf2d7f4008c}\label{classlogic_1_1World_a8c069541cc88b46fd9849bf2d7f4008c} 
+\index{logic::World@{logic::World}!update@{update}}
+\index{update@{update}!logic::World@{logic::World}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void logic\+::\+World\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Update all objects in the world. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+logic/include/core/world/\mbox{\hyperlink{World_8h}{World.\+h}}\item 
+logic/src/core/world/\mbox{\hyperlink{World_8cpp}{World.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,51 @@
+\doxysection{renderer\+::ITexture\+Parser Class Reference}
+\hypertarget{classrenderer_1_1ITextureParser}{}\label{classrenderer_1_1ITextureParser}\index{renderer::ITextureParser@{renderer::ITextureParser}}
+
+
+{\ttfamily \#include $<$ITexture\+Parser.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::ITexture\+Parser\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classrenderer_1_1ITextureParser__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classrenderer_1_1ITextureParser_acd0207832ea88fd1cae6e130003f67a9}{load\+Textures}} (const std\+::string \&path, const std\+::map$<$ std\+::string, sf\+::\+Int\+Rect $>$ \&texture\+Rects)=0
+\item 
+virtual const sf\+::\+Texture \& \mbox{\hyperlink{classrenderer_1_1ITextureParser_af64019e0be24ea4a3e02479221a9468b}{get\+Texture}} (const std\+::string \&name) const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1ITextureParser_af64019e0be24ea4a3e02479221a9468b}\label{classrenderer_1_1ITextureParser_af64019e0be24ea4a3e02479221a9468b} 
+\index{renderer::ITextureParser@{renderer::ITextureParser}!getTexture@{getTexture}}
+\index{getTexture@{getTexture}!renderer::ITextureParser@{renderer::ITextureParser}}
+\doxysubsubsection{\texorpdfstring{getTexture()}{getTexture()}}
+{\footnotesize\ttfamily virtual const sf\+::\+Texture \& renderer\+::\+ITexture\+Parser\+::get\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1DefaultTextureParser_a13c20f01390113f39df3ab0a56d451c1}{renderer\+::\+Default\+Texture\+Parser}}.
+
+\Hypertarget{classrenderer_1_1ITextureParser_acd0207832ea88fd1cae6e130003f67a9}\label{classrenderer_1_1ITextureParser_acd0207832ea88fd1cae6e130003f67a9} 
+\index{renderer::ITextureParser@{renderer::ITextureParser}!loadTextures@{loadTextures}}
+\index{loadTextures@{loadTextures}!renderer::ITextureParser@{renderer::ITextureParser}}
+\doxysubsubsection{\texorpdfstring{loadTextures()}{loadTextures()}}
+{\footnotesize\ttfamily virtual void renderer\+::\+ITexture\+Parser\+::load\+Textures (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{const std\+::map$<$ std\+::string, sf\+::\+Int\+Rect $>$ \&}]{texture\+Rects }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1DefaultTextureParser_acbc29caeb10668c094fcd593ed163bf7}{renderer\+::\+Default\+Texture\+Parser}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/core/parser/\mbox{\hyperlink{ITextureParser_8h}{ITexture\+Parser.\+h}}\end{DoxyCompactItemize}

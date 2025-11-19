@@ -1,0 +1,114 @@
+\doxysection{logic\+::ICoordinate Class Reference}
+\hypertarget{classlogic_1_1ICoordinate}{}\label{classlogic_1_1ICoordinate}\index{logic::ICoordinate@{logic::ICoordinate}}
+
+
+{\ttfamily \#include $<$ICoordinate.\+h$>$}
+
+
+
+Inheritance diagram for logic\+::ICoordinate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classlogic_1_1ICoordinate__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}} = double
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}} \mbox{\hyperlink{classlogic_1_1ICoordinate_a24e8a75338e9c550318c7bd4d3fcd234}{getX}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1ICoordinate_a874fbe4673abbc08e22164cb3690c88c}{setX}} (\mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}} x)=0
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}} \mbox{\hyperlink{classlogic_1_1ICoordinate_a851d6934686081c99912dc4c69608e4b}{getY}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1ICoordinate_af2972c90ab2e28421b60aa8568d1895b}{setY}} (\mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}} y)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface representing a 2D coordinate with x and y values. 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}\label{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1} 
+\index{logic::ICoordinate@{logic::ICoordinate}!CoordinateType@{CoordinateType}}
+\index{CoordinateType@{CoordinateType}!logic::ICoordinate@{logic::ICoordinate}}
+\doxysubsubsection{\texorpdfstring{CoordinateType}{CoordinateType}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{logic\+::\+ICoordinate\+::\+Coordinate\+Type}} =  double}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1ICoordinate_a24e8a75338e9c550318c7bd4d3fcd234}\label{classlogic_1_1ICoordinate_a24e8a75338e9c550318c7bd4d3fcd234} 
+\index{logic::ICoordinate@{logic::ICoordinate}!getX@{getX}}
+\index{getX@{getX}!logic::ICoordinate@{logic::ICoordinate}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}} logic\+::\+ICoordinate\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the horizontal coördinate 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classlogic_1_1Position_a00a7d58e378c852a5a431d6ec60ad0a5}{logic\+::\+Position}}, and \mbox{\hyperlink{classlogic_1_1Size_a36e6958d8699fef7bdbaed2fb5e7b816}{logic\+::\+Size}}.
+
+\Hypertarget{classlogic_1_1ICoordinate_a851d6934686081c99912dc4c69608e4b}\label{classlogic_1_1ICoordinate_a851d6934686081c99912dc4c69608e4b} 
+\index{logic::ICoordinate@{logic::ICoordinate}!getY@{getY}}
+\index{getY@{getY}!logic::ICoordinate@{logic::ICoordinate}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}} logic\+::\+ICoordinate\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the vertical coördinate 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classlogic_1_1Position_a8425d7c97e5a6c1855f8c9878db58ce1}{logic\+::\+Position}}, and \mbox{\hyperlink{classlogic_1_1Size_a5dd3021007bf19dbb588d9e1387926e4}{logic\+::\+Size}}.
+
+\Hypertarget{classlogic_1_1ICoordinate_a874fbe4673abbc08e22164cb3690c88c}\label{classlogic_1_1ICoordinate_a874fbe4673abbc08e22164cb3690c88c} 
+\index{logic::ICoordinate@{logic::ICoordinate}!setX@{setX}}
+\index{setX@{setX}!logic::ICoordinate@{logic::ICoordinate}}
+\doxysubsubsection{\texorpdfstring{setX()}{setX()}}
+{\footnotesize\ttfamily virtual void logic\+::\+ICoordinate\+::setX (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}}}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the horizontal coördinate 
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+x must be between -\/1 and 1 
+\end{DoxyPrecond}
+
+
+Implemented in \mbox{\hyperlink{classlogic_1_1Position_a6d7b15bef28628ed645f05810d540049}{logic\+::\+Position}}, and \mbox{\hyperlink{classlogic_1_1Size_a0f1636e17ee3e016d3de2ca7d2954503}{logic\+::\+Size}}.
+
+\Hypertarget{classlogic_1_1ICoordinate_af2972c90ab2e28421b60aa8568d1895b}\label{classlogic_1_1ICoordinate_af2972c90ab2e28421b60aa8568d1895b} 
+\index{logic::ICoordinate@{logic::ICoordinate}!setY@{setY}}
+\index{setY@{setY}!logic::ICoordinate@{logic::ICoordinate}}
+\doxysubsubsection{\texorpdfstring{setY()}{setY()}}
+{\footnotesize\ttfamily virtual void logic\+::\+ICoordinate\+::setY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}}}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the vertical coördinate 
+\begin{DoxyParams}{Parameters}
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+y must be between -\/1 and 1 
+\end{DoxyPrecond}
+
+
+Implemented in \mbox{\hyperlink{classlogic_1_1Position_a2f44a7d6ebfae106103337eb3bfe6150}{logic\+::\+Position}}, and \mbox{\hyperlink{classlogic_1_1Size_a008634247b4e8484ef17a345e1e4c3c1}{logic\+::\+Size}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+logic/include/core/world/\mbox{\hyperlink{ICoordinate_8h}{ICoordinate.\+h}}\end{DoxyCompactItemize}

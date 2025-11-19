@@ -1,0 +1,199 @@
+\doxysection{renderer\+::Coin\+View Class Reference}
+\hypertarget{classrenderer_1_1CoinView}{}\label{classrenderer_1_1CoinView}\index{renderer::CoinView@{renderer::CoinView}}
+
+
+{\ttfamily \#include $<$Coin\+View.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::Coin\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1CoinView__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::Coin\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1CoinView__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrenderer_1_1CoinView_a2f61bfd2d5d02b85f1ef787d97c7af0c}{Coin\+View}} ()
+\item 
+void \mbox{\hyperlink{classrenderer_1_1CoinView_a5bdc2d07a366ff71c0fe42ad10300f6b}{update}} (\mbox{\hyperlink{classlogic_1_1CoinModel}{logic\+::\+Coin\+Model}} \&subject) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1CoinView_ab71ef2c0395db2fa5967e31b465f6e7a}{set\+Size}} (const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&size) override
+\item 
+bool \mbox{\hyperlink{classrenderer_1_1CoinView_a1d9726c203396e9f20a5f0ec9feb71c2}{is\+Marked\+For\+Removal}} () override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1CoinView_a70f2589f3670880e9444c5ca55f2cc4a}{on\+Observable\+Destroyed}} (\mbox{\hyperlink{classlogic_1_1CoinModel}{logic\+::\+Coin\+Model}} \&subject) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1CoinView_ae0f8e4df9759141bdbfca33b80918d4d}{mark\+For\+Removal}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1ModularEntityView}{renderer\+::\+Modular\+Entity\+View}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ \mbox{\hyperlink{classrenderer_1_1ModularEntityView_aa7574935c99ca248d974cb51a1bf4726}{get\+SFShapes}} (sf\+::\+Render\+Window \&window) override
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ \mbox{\hyperlink{classrenderer_1_1ModularEntityView_aa73af8952f79fc94f61ac05b8b1672ad}{get\+SFSprites}} (sf\+::\+Render\+Window \&window) override
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ \mbox{\hyperlink{classrenderer_1_1ModularEntityView_a97e430746a6ae2cfb8d7b98a9bea9658}{get\+SFTexts}} (sf\+::\+Render\+Window \&window) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1ModularEntityView_ad01af13e596e5ba0f121343774c303e3}{add\+Module}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IEntityViewModule}{IEntity\+View\+Module}} $>$ module)
+\item 
+{\footnotesize template$<$Is\+Module\+Type T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classrenderer_1_1ModularEntityView_a301fd6ed3f229c71997575c71d871e8e}{get\+Module}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1EntityView}{renderer\+::\+Entity\+View}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \& \mbox{\hyperlink{classrenderer_1_1EntityView_a4b2d240028a5fadd9f9bda861306bcf4}{get\+Size}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1DrawObject}{renderer\+::\+Draw\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \& \mbox{\hyperlink{classrenderer_1_1DrawObject_a1317e66b07b34c0fa2fbf7472f45207e}{get\+Position}} () const
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&position)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de728}{draw}} (sf\+::\+Render\+Window \&window) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ Modular\+Entity\+View $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_afd56bfb66920d8e1d38a3ac3259e85d9}{update\+Observers}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_a73e3a3b1f7ffdd12ffa269541a551ec6}{update\+Observers}} (const std\+::string \&event)
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1Observable_a1f7f0337470804741ddd21ffe82103c1}{\texorpdfstring{$\sim$}{\string~}\+Observable}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_afb2547e65fdf6b4c090f5170df4bf66d}{add\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ Modular\+Entity\+View $>$ $>$ \&observer)
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Observable_ad7cb2d9214c5dd7f5aa8a36ef7ce43b9}{has\+Observers}} () const
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Observable_a54bfc543d21f11be7137efce418394c2}{has\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ Modular\+Entity\+View $>$ $>$ \&observer) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IObserver}{logic\+::\+IObserver$<$ logic\+::\+Coin\+Model $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1IObserver_aa3736db37cb39a0e8f1570c7c3201b33}{\texorpdfstring{$\sim$}{\string~}\+IObserver}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_aa1e644dd23114de669503363e1dff6e8}{update}} (\mbox{\hyperlink{classlogic_1_1CoinModel}{logic\+::\+Coin\+Model}} \&subject, const std\+::string \&event)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ Modular\+Entity\+View $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classlogic_1_1Observable_a637139aff6f941cdc9096713a3f38ea7}{Event\+Type}} 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrenderer_1_1CoinView_a2f61bfd2d5d02b85f1ef787d97c7af0c}\label{classrenderer_1_1CoinView_a2f61bfd2d5d02b85f1ef787d97c7af0c} 
+\index{renderer::CoinView@{renderer::CoinView}!CoinView@{CoinView}}
+\index{CoinView@{CoinView}!renderer::CoinView@{renderer::CoinView}}
+\doxysubsubsection{\texorpdfstring{CoinView()}{CoinView()}}
+{\footnotesize\ttfamily renderer\+::\+Coin\+View\+::\+Coin\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classrenderer_1_1CoinView_a2f61bfd2d5d02b85f1ef787d97c7af0c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1CoinView_a1d9726c203396e9f20a5f0ec9feb71c2}\label{classrenderer_1_1CoinView_a1d9726c203396e9f20a5f0ec9feb71c2} 
+\index{renderer::CoinView@{renderer::CoinView}!isMarkedForRemoval@{isMarkedForRemoval}}
+\index{isMarkedForRemoval@{isMarkedForRemoval}!renderer::CoinView@{renderer::CoinView}}
+\doxysubsubsection{\texorpdfstring{isMarkedForRemoval()}{isMarkedForRemoval()}}
+{\footnotesize\ttfamily bool renderer\+::\+Coin\+View\+::is\+Marked\+For\+Removal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IWorldObjectView_ad486098155a47b33991193ee5e7311a3}{renderer\+::\+IWorld\+Object\+View}}.
+
+\Hypertarget{classrenderer_1_1CoinView_ae0f8e4df9759141bdbfca33b80918d4d}\label{classrenderer_1_1CoinView_ae0f8e4df9759141bdbfca33b80918d4d} 
+\index{renderer::CoinView@{renderer::CoinView}!markForRemoval@{markForRemoval}}
+\index{markForRemoval@{markForRemoval}!renderer::CoinView@{renderer::CoinView}}
+\doxysubsubsection{\texorpdfstring{markForRemoval()}{markForRemoval()}}
+{\footnotesize\ttfamily void renderer\+::\+Coin\+View\+::mark\+For\+Removal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classrenderer_1_1CoinView_a70f2589f3670880e9444c5ca55f2cc4a}\label{classrenderer_1_1CoinView_a70f2589f3670880e9444c5ca55f2cc4a} 
+\index{renderer::CoinView@{renderer::CoinView}!onObservableDestroyed@{onObservableDestroyed}}
+\index{onObservableDestroyed@{onObservableDestroyed}!renderer::CoinView@{renderer::CoinView}}
+\doxysubsubsection{\texorpdfstring{onObservableDestroyed()}{onObservableDestroyed()}}
+{\footnotesize\ttfamily void renderer\+::\+Coin\+View\+::on\+Observable\+Destroyed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1CoinModel}{logic\+::\+Coin\+Model}} \&}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called when the subject being observed is being destroyed. 
+\begin{DoxyParams}{Parameters}
+{\em subject} & The subject being observerd. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classlogic_1_1IObserver_acdde4b1d124989fc652801832b036eea}{logic\+::\+IObserver$<$ logic\+::\+Coin\+Model $>$}}.
+
+\Hypertarget{classrenderer_1_1CoinView_ab71ef2c0395db2fa5967e31b465f6e7a}\label{classrenderer_1_1CoinView_ab71ef2c0395db2fa5967e31b465f6e7a} 
+\index{renderer::CoinView@{renderer::CoinView}!setSize@{setSize}}
+\index{setSize@{setSize}!renderer::CoinView@{renderer::CoinView}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void renderer\+::\+Coin\+View\+::set\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Set the size of the entity view. 
+\begin{DoxyParams}{Parameters}
+{\em size} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrenderer_1_1EntityView_ab1a10febe0d9e2415040418075de0217}{renderer\+::\+Entity\+View}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classrenderer_1_1CoinView_ab71ef2c0395db2fa5967e31b465f6e7a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1CoinView_a5bdc2d07a366ff71c0fe42ad10300f6b}\label{classrenderer_1_1CoinView_a5bdc2d07a366ff71c0fe42ad10300f6b} 
+\index{renderer::CoinView@{renderer::CoinView}!update@{update}}
+\index{update@{update}!renderer::CoinView@{renderer::CoinView}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void renderer\+::\+Coin\+View\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1CoinModel}{logic\+::\+Coin\+Model}} \&}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called when the subject being observed has changed. 
+\begin{DoxyParams}{Parameters}
+{\em subject} & The subject being observed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1IObserver_ac01efa8f0fbc7495847489c0a8651b28}{logic\+::\+IObserver$<$ logic\+::\+Coin\+Model $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1CoinView_a5bdc2d07a366ff71c0fe42ad10300f6b_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/game/entities/views/\mbox{\hyperlink{CoinView_8h}{Coin\+View.\+h}}\item 
+renderer/src/game/entities/views/\mbox{\hyperlink{CoinView_8cpp}{Coin\+View.\+cpp}}\end{DoxyCompactItemize}

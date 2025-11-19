@@ -1,0 +1,29 @@
+\doxysection{IConfig\+Parser.\+h}
+\hypertarget{IConfigParser_8h_source}{}\label{IConfigParser_8h_source}\index{renderer/include/core/parser/IConfigParser.h@{renderer/include/core/parser/IConfigParser.h}}
+\mbox{\hyperlink{IConfigParser_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/5/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_ICONFIGPARSER\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_ICONFIGPARSER\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1IConfigParser}{IConfigParser}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classrenderer_1_1IConfigParser_a0468f6857b2786528e83fd114f9b9780}{\string~IConfigParser}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1IConfigParser_a7bca04342b5562edc5de2352d996a113}{loadConfigFile}}()\ =\ 0;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{classrenderer_1_1IConfigParser_aa77b34fb3e3fac869fdaae73814444bb}{getDefaultFontPath}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{classrenderer_1_1IConfigParser_a8ace617490d726901a6d9cf687cf6474}{getSpriteSheetPath}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ std::map<std::string,\ sf::IntRect>\ \mbox{\hyperlink{classrenderer_1_1IConfigParser_a459f265187764b25781a7521f1981ce3}{getTextureRects}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ sf::IntRect\ \mbox{\hyperlink{classrenderer_1_1IConfigParser_acbeba8d7a53b6826d887bab5639a0293}{getTextureRectByName}}(\textcolor{keyword}{const}\ std::string\&\ name)\ \textcolor{keyword}{const}\ =0;}
+\DoxyCodeLine{00024\ \ \ \ \ \};}
+\DoxyCodeLine{00025\ \}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_ICONFIGPARSER\_H}}
+
+\end{DoxyCode}

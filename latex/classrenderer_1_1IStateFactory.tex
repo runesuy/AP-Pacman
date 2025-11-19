@@ -1,0 +1,54 @@
+\doxysection{renderer\+::IState\+Factory Class Reference}
+\hypertarget{classrenderer_1_1IStateFactory}{}\label{classrenderer_1_1IStateFactory}\index{renderer::IStateFactory@{renderer::IStateFactory}}
+
+
+{\ttfamily \#include $<$IState\+Factory.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::IState\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classrenderer_1_1IStateFactory__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1MenuState}{Menu\+State}} $>$ \mbox{\hyperlink{classrenderer_1_1IStateFactory_a3299896614b5cbe80352e8ce7d2b3f98}{create\+Menu\+State}} ()=0
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1LevelState}{Level\+State}} $>$ \mbox{\hyperlink{classrenderer_1_1IStateFactory_ab5ba35efd6828be7f2fc20209449abe1}{create\+Level\+State}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for state factory, responsible for creating different game states. Interchangeable using config system. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1IStateFactory_ab5ba35efd6828be7f2fc20209449abe1}\label{classrenderer_1_1IStateFactory_ab5ba35efd6828be7f2fc20209449abe1} 
+\index{renderer::IStateFactory@{renderer::IStateFactory}!createLevelState@{createLevelState}}
+\index{createLevelState@{createLevelState}!renderer::IStateFactory@{renderer::IStateFactory}}
+\doxysubsubsection{\texorpdfstring{createLevelState()}{createLevelState()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1LevelState}{Level\+State}} $>$ renderer\+::\+IState\+Factory\+::create\+Level\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1DefaultStateFactory_aeea53a552115621ceed32a1cc406f3a5}{renderer\+::\+Default\+State\+Factory}}.
+
+\Hypertarget{classrenderer_1_1IStateFactory_a3299896614b5cbe80352e8ce7d2b3f98}\label{classrenderer_1_1IStateFactory_a3299896614b5cbe80352e8ce7d2b3f98} 
+\index{renderer::IStateFactory@{renderer::IStateFactory}!createMenuState@{createMenuState}}
+\index{createMenuState@{createMenuState}!renderer::IStateFactory@{renderer::IStateFactory}}
+\doxysubsubsection{\texorpdfstring{createMenuState()}{createMenuState()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1MenuState}{Menu\+State}} $>$ renderer\+::\+IState\+Factory\+::create\+Menu\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1DefaultStateFactory_adfa5b4b5ef5a32888e18c7630dd1f278}{renderer\+::\+Default\+State\+Factory}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/core/factories/\mbox{\hyperlink{IStateFactory_8h}{IState\+Factory.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,42 @@
+\doxysection{Default\+App\+Config.\+h}
+\hypertarget{DefaultAppConfig_8h_source}{}\label{DefaultAppConfig_8h_source}\index{renderer/include/game/configs/DefaultAppConfig.h@{renderer/include/game/configs/DefaultAppConfig.h}}
+\mbox{\hyperlink{DefaultAppConfig_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/5/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_DEFAULTAPPCONFIG\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_DEFAULTAPPCONFIG\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IAppConfig_8h}{core/config/IAppConfig.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{DefaultFactoryCollection_8h}{game/factories/DefaultFactoryCollection.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{JSONConfigParser_8h}{game/parsers/JSONConfigParser.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{DefaultLogicConfig_8h}{DefaultLogicConfig.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{DefaultTextureParser_8h}{game/parsers/DefaultTextureParser.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1DefaultAppConfig}{DefaultAppConfig}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IAppConfig}{IAppConfig}}\{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1DefaultFactoryCollection}{DefaultFactoryCollection}}\ factoryCollection;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1JSONConfigParser}{JSONConfigParser}}\ configParser;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1DefaultLogicConfig}{DefaultLogicConfig}}\ logicConfig;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1DefaultTextureParser}{DefaultTextureParser}}\ textureParser;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1IFactoryCollection}{IFactoryCollection}}\ \&\mbox{\hyperlink{classrenderer_1_1DefaultAppConfig_ac2668b14cfbe620fb7329bc6018fe459}{getFactoryCollection}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classrenderer_1_1IConfigParser}{IConfigParser}}\ \&\ \mbox{\hyperlink{classrenderer_1_1DefaultAppConfig_a78ffef03e2490831039bd108165a3c76}{getConfigParser}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1IConfigParser}{IConfigParser}}\ \&\mbox{\hyperlink{classrenderer_1_1DefaultAppConfig_a78ffef03e2490831039bd108165a3c76}{getConfigParser}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1IConfig}{logic::IConfig}}\ \&\ \mbox{\hyperlink{classrenderer_1_1DefaultAppConfig_a41d2261686e8837e2856e3d7a51a1da1}{getLogicConfig}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classrenderer_1_1DefaultTextureParser}{DefaultTextureParser}}\ \&\mbox{\hyperlink{classrenderer_1_1DefaultAppConfig_a52a49ac876a99b12a68b9aab03671466}{getTextureParser}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1ITextureParser}{ITextureParser}}\ \&\mbox{\hyperlink{classrenderer_1_1DefaultAppConfig_a52a49ac876a99b12a68b9aab03671466}{getTextureParser}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ \ \ \ \ \};}
+\DoxyCodeLine{00034\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_DEFAULTAPPCONFIG\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,69 @@
+\doxysection{renderer\+::IState\+Update\+Handler Class Reference}
+\hypertarget{classrenderer_1_1IStateUpdateHandler}{}\label{classrenderer_1_1IStateUpdateHandler}\index{renderer::IStateUpdateHandler@{renderer::IStateUpdateHandler}}
+
+
+{\ttfamily \#include $<$IState\+Update\+Handler.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::IState\+Update\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1IStateUpdateHandler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::IState\+Update\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classrenderer_1_1IStateUpdateHandler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler_a4a383f41823cc934711a5c4d73ef9d0d}{update}} (\mbox{\hyperlink{classrenderer_1_1IState}{IState}} \&state)=0
+\item 
+void \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler_a57b4657720a91fa449434f6bdadf8aa8}{update}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IUpdateHandler}{logic\+::\+IUpdate\+Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1IUpdateHandler_ae7df05b12b4361fa53a0b213c6facc0d}{\texorpdfstring{$\sim$}{\string~}\+IUpdate\+Handler}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for handling updates specific to a game state. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1IStateUpdateHandler_a57b4657720a91fa449434f6bdadf8aa8}\label{classrenderer_1_1IStateUpdateHandler_a57b4657720a91fa449434f6bdadf8aa8} 
+\index{renderer::IStateUpdateHandler@{renderer::IStateUpdateHandler}!update@{update}}
+\index{update@{update}!renderer::IStateUpdateHandler@{renderer::IStateUpdateHandler}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void renderer\+::\+IState\+Update\+Handler\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the game state. 
+
+Implements \mbox{\hyperlink{classlogic_1_1IUpdateHandler_a15a888cd1242714cb3211ed11dbe0bef}{logic\+::\+IUpdate\+Handler}}.
+
+\Hypertarget{classrenderer_1_1IStateUpdateHandler_a4a383f41823cc934711a5c4d73ef9d0d}\label{classrenderer_1_1IStateUpdateHandler_a4a383f41823cc934711a5c4d73ef9d0d} 
+\index{renderer::IStateUpdateHandler@{renderer::IStateUpdateHandler}!update@{update}}
+\index{update@{update}!renderer::IStateUpdateHandler@{renderer::IStateUpdateHandler}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void renderer\+::\+IState\+Update\+Handler\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrenderer_1_1IState}{IState}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1LevelUpdateHandler_adb74d43274ac5430adc2adcc909c99ab}{renderer\+::\+Level\+Update\+Handler}}, and \mbox{\hyperlink{classrenderer_1_1MenuUpdateHandler_a3938f5278e792929edb913e47c28dc6a}{renderer\+::\+Menu\+Update\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/core/states/\mbox{\hyperlink{IStateUpdateHandler_8h}{IState\+Update\+Handler.\+h}}\end{DoxyCompactItemize}

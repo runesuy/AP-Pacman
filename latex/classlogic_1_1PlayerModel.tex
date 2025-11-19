@@ -1,0 +1,214 @@
+\doxysection{logic\+::Player\+Model Class Reference}
+\hypertarget{classlogic_1_1PlayerModel}{}\label{classlogic_1_1PlayerModel}\index{logic::PlayerModel@{logic::PlayerModel}}
+
+
+{\ttfamily \#include $<$Player\+Model.\+h$>$}
+
+
+
+Inheritance diagram for logic\+::Player\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classlogic_1_1PlayerModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for logic\+::Player\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classlogic_1_1PlayerModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlogic_1_1PlayerModel_a975d31493d566c17540569b4eea78c47}{Player\+Model}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1PlayerModel_afee8855014523fdfadc7e289f1cacf1e}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&position) override
+\item 
+void \mbox{\hyperlink{classlogic_1_1PlayerModel_a7f0a16442d85d987d4a2472737d674d8}{set\+Size}} (const \mbox{\hyperlink{classlogic_1_1Size}{Size}} \&size) override
+\item 
+float \mbox{\hyperlink{classlogic_1_1PlayerModel_a715b6f22aa65e8bf3a48363ab8dbbe03}{get\+Speed}} () override
+\item 
+void \mbox{\hyperlink{classlogic_1_1PlayerModel_a922483df1be2c9d583712a7fac95fc76}{set\+Direction}} (\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} direction) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1MovingEntityModel}{logic\+::\+Moving\+Entity\+Model$<$ Player\+Model $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlogic_1_1MovingEntityModel_a36a87400133117f50cba0f14d6f459e0}{set\+Requested\+Direction}} (\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} requested\+Direction)
+\item 
+\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} \mbox{\hyperlink{classlogic_1_1MovingEntityModel_a42bfb9c5c33d067b7f9795b36656bae3}{get\+Requested\+Direction}} () const
+\item 
+\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} \mbox{\hyperlink{classlogic_1_1MovingEntityModel_ac60a9bf73b3bbd94b6969cc14f142453}{get\+Direction}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1EntityModel}{logic\+::\+Entity\+Model$<$ Derived $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlogic_1_1EntityModel_a1db9f7ad3cd006dd62c8d932a2382d48}{set\+Controller}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IEntityController}{IEntity\+Controller}}$<$ Derived $>$ $>$ \&\mbox{\hyperlink{classlogic_1_1EntityModel_aee24e152c4f10d4aa870336c34517d13}{controller}})
+\item 
+void \mbox{\hyperlink{classlogic_1_1EntityModel_a8be02b6525f2322a08af1fd72c88f57a}{process\+Command}} (\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}} command)
+\item 
+void \mbox{\hyperlink{classlogic_1_1EntityModel_a20ff77425bb7eb04e201d33ab3f33181}{update}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world) final
+\item 
+void \mbox{\hyperlink{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}{on\+Collision}} (const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other) final
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{logic\+::\+Sized\+World\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlogic_1_1Size}{Size}} \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a35d3332f6e228334cd195bb9af478cbd}{get\+Size}} () const
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2}{Collision\+Type}} \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a2aa2949b03b2ec7087cfdf942d2ad1b4}{get\+Collision\+Type}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1WorldObject}{logic\+::\+World\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \& \mbox{\hyperlink{classlogic_1_1WorldObject_aac0f498afeff654fee790e435617de04}{get\+Position}} () const
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1WorldObject_ad57fa60da3633757434ef70a266f8e14}{mark\+For\+Removal}} ()
+\item 
+bool \mbox{\hyperlink{classlogic_1_1WorldObject_adae3a3c45f13113f3ebcbdaed7190770}{is\+Marked\+For\+Removal}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ Player\+Model $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_afd56bfb66920d8e1d38a3ac3259e85d9}{update\+Observers}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_a73e3a3b1f7ffdd12ffa269541a551ec6}{update\+Observers}} (const std\+::string \&event)
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1Observable_a1f7f0337470804741ddd21ffe82103c1}{\texorpdfstring{$\sim$}{\string~}\+Observable}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_afb2547e65fdf6b4c090f5170df4bf66d}{add\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ \mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} $>$ $>$ \&observer)
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Observable_ad7cb2d9214c5dd7f5aa8a36ef7ce43b9}{has\+Observers}} () const
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Observable_a54bfc543d21f11be7137efce418394c2}{has\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ \mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} $>$ $>$ \&observer) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{logic\+::\+Sized\+World\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2}{Collision\+Type}} = int
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ Player\+Model $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classlogic_1_1Observable_a637139aff6f941cdc9096713a3f38ea7}{Event\+Type}} 
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classlogic_1_1EntityModel}{logic\+::\+Entity\+Model$<$ Derived $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IEntityController}{IEntity\+Controller}}$<$ Derived $>$ $>$ \mbox{\hyperlink{classlogic_1_1EntityModel_aee24e152c4f10d4aa870336c34517d13}{controller}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classlogic_1_1PlayerModel_a975d31493d566c17540569b4eea78c47}\label{classlogic_1_1PlayerModel_a975d31493d566c17540569b4eea78c47} 
+\index{logic::PlayerModel@{logic::PlayerModel}!PlayerModel@{PlayerModel}}
+\index{PlayerModel@{PlayerModel}!logic::PlayerModel@{logic::PlayerModel}}
+\doxysubsubsection{\texorpdfstring{PlayerModel()}{PlayerModel()}}
+{\footnotesize\ttfamily logic\+::\+Player\+Model\+::\+Player\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{classlogic_1_1PlayerModel_a975d31493d566c17540569b4eea78c47_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1PlayerModel_a715b6f22aa65e8bf3a48363ab8dbbe03}\label{classlogic_1_1PlayerModel_a715b6f22aa65e8bf3a48363ab8dbbe03} 
+\index{logic::PlayerModel@{logic::PlayerModel}!getSpeed@{getSpeed}}
+\index{getSpeed@{getSpeed}!logic::PlayerModel@{logic::PlayerModel}}
+\doxysubsubsection{\texorpdfstring{getSpeed()}{getSpeed()}}
+{\footnotesize\ttfamily float logic\+::\+Player\+Model\+::get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+A constant or variable speed of the moving entity. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1MovingEntityModel_aa6fca2f79efe199960c3e9e295a11936}{logic\+::\+Moving\+Entity\+Model$<$ Player\+Model $>$}}.
+
+\Hypertarget{classlogic_1_1PlayerModel_a922483df1be2c9d583712a7fac95fc76}\label{classlogic_1_1PlayerModel_a922483df1be2c9d583712a7fac95fc76} 
+\index{logic::PlayerModel@{logic::PlayerModel}!setDirection@{setDirection}}
+\index{setDirection@{setDirection}!logic::PlayerModel@{logic::PlayerModel}}
+\doxysubsubsection{\texorpdfstring{setDirection()}{setDirection()}}
+{\footnotesize\ttfamily void logic\+::\+Player\+Model\+::set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Set the current direction of the entity. 
+\begin{DoxyParams}{Parameters}
+{\em direction} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classlogic_1_1MovingEntityModel_a89594315ce13127378ab82a89f75e23b}{logic\+::\+Moving\+Entity\+Model$<$ Player\+Model $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1PlayerModel_a922483df1be2c9d583712a7fac95fc76_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlogic_1_1PlayerModel_afee8855014523fdfadc7e289f1cacf1e}\label{classlogic_1_1PlayerModel_afee8855014523fdfadc7e289f1cacf1e} 
+\index{logic::PlayerModel@{logic::PlayerModel}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!logic::PlayerModel@{logic::PlayerModel}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void logic\+::\+Player\+Model\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Set the position of the world object 
+\begin{DoxyParams}{Parameters}
+{\em position} & The new position \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classlogic_1_1WorldObject_ae414bee61532c20edbaf252f5dbeae74}{logic\+::\+World\+Object}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1PlayerModel_afee8855014523fdfadc7e289f1cacf1e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlogic_1_1PlayerModel_a7f0a16442d85d987d4a2472737d674d8}\label{classlogic_1_1PlayerModel_a7f0a16442d85d987d4a2472737d674d8} 
+\index{logic::PlayerModel@{logic::PlayerModel}!setSize@{setSize}}
+\index{setSize@{setSize}!logic::PlayerModel@{logic::PlayerModel}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void logic\+::\+Player\+Model\+::set\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Size}{Size}} \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Sets the size of the object. 
+\begin{DoxyParams}{Parameters}
+{\em size} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a779988657f15c88c046d48d44eb1fba9}{logic\+::\+Sized\+World\+Object}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1PlayerModel_a7f0a16442d85d987d4a2472737d674d8_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+logic/include/game/entities/models/\mbox{\hyperlink{PlayerModel_8h}{Player\+Model.\+h}}\item 
+logic/src/game/entities/models/\mbox{\hyperlink{PlayerModel_8cpp}{Player\+Model.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,106 @@
+\doxysection{renderer\+::JSONConfig\+Parser Class Reference}
+\hypertarget{classrenderer_1_1JSONConfigParser}{}\label{classrenderer_1_1JSONConfigParser}\index{renderer::JSONConfigParser@{renderer::JSONConfigParser}}
+
+
+{\ttfamily \#include $<$JSONConfig\+Parser.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::JSONConfig\+Parser\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classrenderer_1_1JSONConfigParser__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::JSONConfig\+Parser\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classrenderer_1_1JSONConfigParser__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classrenderer_1_1JSONConfigParser_acc3a9d8b908a1d68a3e8e222e7421ded}{get\+Default\+Font\+Path}} () const override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1JSONConfigParser_a69b9aec32b78a8f49fdb34f76fcc5970}{load\+Config\+File}} () override
+\item 
+std\+::string \mbox{\hyperlink{classrenderer_1_1JSONConfigParser_ad7983de15012ca7813a0433a3dd1ac18}{get\+Sprite\+Sheet\+Path}} () const override
+\item 
+std\+::map$<$ std\+::string, sf\+::\+Int\+Rect $>$ \mbox{\hyperlink{classrenderer_1_1JSONConfigParser_ac4566bd06f4e40801c00219066b7d587}{get\+Texture\+Rects}} () const override
+\item 
+sf\+::\+Int\+Rect \mbox{\hyperlink{classrenderer_1_1JSONConfigParser_ab70ead8aa12d6a5435c8cca8189afa12}{get\+Texture\+Rect\+By\+Name}} (const std\+::string \&name) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1IConfigParser}{renderer\+::\+IConfig\+Parser}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classrenderer_1_1IConfigParser_a0468f6857b2786528e83fd114f9b9780}{\texorpdfstring{$\sim$}{\string~}\+IConfig\+Parser}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete implementation of \doxylink{classrenderer_1_1IConfigParser}{IConfig\+Parser} that reads configuration from a JSON file. Reads file resources/config.\+json 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1JSONConfigParser_acc3a9d8b908a1d68a3e8e222e7421ded}\label{classrenderer_1_1JSONConfigParser_acc3a9d8b908a1d68a3e8e222e7421ded} 
+\index{renderer::JSONConfigParser@{renderer::JSONConfigParser}!getDefaultFontPath@{getDefaultFontPath}}
+\index{getDefaultFontPath@{getDefaultFontPath}!renderer::JSONConfigParser@{renderer::JSONConfigParser}}
+\doxysubsubsection{\texorpdfstring{getDefaultFontPath()}{getDefaultFontPath()}}
+{\footnotesize\ttfamily std\+::string renderer\+::\+JSONConfig\+Parser\+::get\+Default\+Font\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IConfigParser_aa77b34fb3e3fac869fdaae73814444bb}{renderer\+::\+IConfig\+Parser}}.
+
+\Hypertarget{classrenderer_1_1JSONConfigParser_ad7983de15012ca7813a0433a3dd1ac18}\label{classrenderer_1_1JSONConfigParser_ad7983de15012ca7813a0433a3dd1ac18} 
+\index{renderer::JSONConfigParser@{renderer::JSONConfigParser}!getSpriteSheetPath@{getSpriteSheetPath}}
+\index{getSpriteSheetPath@{getSpriteSheetPath}!renderer::JSONConfigParser@{renderer::JSONConfigParser}}
+\doxysubsubsection{\texorpdfstring{getSpriteSheetPath()}{getSpriteSheetPath()}}
+{\footnotesize\ttfamily std\+::string renderer\+::\+JSONConfig\+Parser\+::get\+Sprite\+Sheet\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IConfigParser_a8ace617490d726901a6d9cf687cf6474}{renderer\+::\+IConfig\+Parser}}.
+
+\Hypertarget{classrenderer_1_1JSONConfigParser_ab70ead8aa12d6a5435c8cca8189afa12}\label{classrenderer_1_1JSONConfigParser_ab70ead8aa12d6a5435c8cca8189afa12} 
+\index{renderer::JSONConfigParser@{renderer::JSONConfigParser}!getTextureRectByName@{getTextureRectByName}}
+\index{getTextureRectByName@{getTextureRectByName}!renderer::JSONConfigParser@{renderer::JSONConfigParser}}
+\doxysubsubsection{\texorpdfstring{getTextureRectByName()}{getTextureRectByName()}}
+{\footnotesize\ttfamily sf\+::\+Int\+Rect renderer\+::\+JSONConfig\+Parser\+::get\+Texture\+Rect\+By\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IConfigParser_acbeba8d7a53b6826d887bab5639a0293}{renderer\+::\+IConfig\+Parser}}.
+
+\Hypertarget{classrenderer_1_1JSONConfigParser_ac4566bd06f4e40801c00219066b7d587}\label{classrenderer_1_1JSONConfigParser_ac4566bd06f4e40801c00219066b7d587} 
+\index{renderer::JSONConfigParser@{renderer::JSONConfigParser}!getTextureRects@{getTextureRects}}
+\index{getTextureRects@{getTextureRects}!renderer::JSONConfigParser@{renderer::JSONConfigParser}}
+\doxysubsubsection{\texorpdfstring{getTextureRects()}{getTextureRects()}}
+{\footnotesize\ttfamily std\+::map$<$ std\+::string, sf\+::\+Int\+Rect $>$ renderer\+::\+JSONConfig\+Parser\+::get\+Texture\+Rects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IConfigParser_a459f265187764b25781a7521f1981ce3}{renderer\+::\+IConfig\+Parser}}.
+
+\Hypertarget{classrenderer_1_1JSONConfigParser_a69b9aec32b78a8f49fdb34f76fcc5970}\label{classrenderer_1_1JSONConfigParser_a69b9aec32b78a8f49fdb34f76fcc5970} 
+\index{renderer::JSONConfigParser@{renderer::JSONConfigParser}!loadConfigFile@{loadConfigFile}}
+\index{loadConfigFile@{loadConfigFile}!renderer::JSONConfigParser@{renderer::JSONConfigParser}}
+\doxysubsubsection{\texorpdfstring{loadConfigFile()}{loadConfigFile()}}
+{\footnotesize\ttfamily void renderer\+::\+JSONConfig\+Parser\+::load\+Config\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IConfigParser_a7bca04342b5562edc5de2352d996a113}{renderer\+::\+IConfig\+Parser}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/game/parsers/\mbox{\hyperlink{JSONConfigParser_8h}{JSONConfig\+Parser.\+h}}\item 
+renderer/src/game/parsers/\mbox{\hyperlink{JSONConfigParser_8cpp}{JSONConfig\+Parser.\+cpp}}\end{DoxyCompactItemize}

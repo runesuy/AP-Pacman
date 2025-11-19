@@ -1,0 +1,36 @@
+\doxysection{Level\+State.\+h}
+\hypertarget{LevelState_8h_source}{}\label{LevelState_8h_source}\index{renderer/include/game/states/level/LevelState.h@{renderer/include/game/states/level/LevelState.h}}
+\mbox{\hyperlink{LevelState_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/5/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_LEVELSTATE\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_LEVELSTATE\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{DelegatingState_8h}{core/states/DelegatingState.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{World_8h}{core/world/World.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{WorldView_8h}{core/world/WorldView.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1LevelState}{LevelState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1DelegatingState}{DelegatingState}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::unique\_ptr<logic::World>\ \_world;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::shared\_ptr<WorldView>\ \_worldView;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1LevelState}{LevelState}}(std::unique\_ptr<IStateUpdateHandler>\ \&\&updateHandler,\ std::unique\_ptr<IStateInputHandler>\ \&\&inputHandler,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<IStateDrawHandler>\ \&\&drawHandler);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::unique\_ptr<logic::World>\ \&\mbox{\hyperlink{classrenderer_1_1LevelState_a985a6130dc1cd71665ef27ff2ecc15c9}{getWorld}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ std::shared\_ptr<WorldView>\ \&\mbox{\hyperlink{classrenderer_1_1LevelState_aab7f1d9df1307f492ebbd7904f952153}{getWorldView}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_LEVELSTATE\_H}}
+
+\end{DoxyCode}

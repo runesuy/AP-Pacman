@@ -1,0 +1,41 @@
+\doxysection{Draw\+Object.\+h}
+\hypertarget{DrawObject_8h_source}{}\label{DrawObject_8h_source}\index{renderer/include/core/drawable/DrawObject.h@{renderer/include/core/drawable/DrawObject.h}}
+\mbox{\hyperlink{DrawObject_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/5/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_DRAWOBJECT\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_DRAWOBJECT\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <SFML/Graphics/Shape.hpp>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <SFML/Graphics/Sprite.hpp>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <SFML/Graphics/Text.hpp>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IDrawable_8h}{core/drawable/IDrawable.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{WorldObject_8h}{core/world/WorldObject.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1DrawObject}{DrawObject}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IDrawable}{IDrawable}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classlogic_1_1Position}{logic::Position}}\ position\{0,0\};}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{logic::Position}}\&\ \mbox{\hyperlink{classrenderer_1_1DrawObject_a1317e66b07b34c0fa2fbf7472f45207e}{getPosition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}{setPosition}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{logic::Position}}\ \&position);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de728}{draw}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<std::unique\_ptr<sf::Shape>>\ \mbox{\hyperlink{classrenderer_1_1DrawObject_a9612dd69d98b224a4088b73b266a9716}{getSFShapes}}(sf::RenderWindow\ \&window)\ =\ 0;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<std::shared\_ptr<sf::Sprite>>\ \mbox{\hyperlink{classrenderer_1_1DrawObject_acac924ad07a7f2ee44bec57f13161c31}{getSFSprites}}(sf::RenderWindow\ \&window)\ =\ 0;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<std::unique\_ptr<sf::Text>>\ \mbox{\hyperlink{classrenderer_1_1DrawObject_aa4d5616621231dc20620faa1dc5c1b6c}{getSFTexts}}(sf::RenderWindow\ \&window)\ =\ 0;}
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_DRAWOBJECT\_H}}
+
+\end{DoxyCode}

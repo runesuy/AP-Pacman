@@ -1,0 +1,168 @@
+\doxysection{renderer\+::Animated\+Sprite\+Module Class Reference}
+\hypertarget{classrenderer_1_1AnimatedSpriteModule}{}\label{classrenderer_1_1AnimatedSpriteModule}\index{renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}}
+
+
+{\ttfamily \#include $<$Animated\+Sprite\+Module.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::Animated\+Sprite\+Module\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classrenderer_1_1AnimatedSpriteModule__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::Animated\+Sprite\+Module\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classrenderer_1_1AnimatedSpriteModule__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_ac913ec6b379df50362fdb516cdd650f5}{Animated\+Sprite\+Module}} ()=default
+\item 
+void \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a9d2e08cbe3b4a8537e5b963e3a07c82a}{update}} (\mbox{\hyperlink{classrenderer_1_1ModularEntityView}{Modular\+Entity\+View}} \&subject) override
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_ac6ad2866b80f9aa9e62a065e02322e6a}{get\+SFShapes}} (sf\+::\+Render\+Window \&window) const override
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a5d8e5f53564f61c90dd44b317ddab40e}{get\+SFSprites}} (sf\+::\+Render\+Window \&window) const override
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a5d90107ab5ce63d957ad24a6a2867bac}{get\+SFTexts}} () const override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a43bd3dd7675f3c4edb5786ae8f1e6443}{set\+Animations}} (const std\+::map$<$ std\+::string, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ $>$ $>$ \&textures)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a6faacb9f8a7f49f7af41fadf129771ea}{set\+Animations}} (const std\+::map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \&textures)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_abb30e791b68e73d4d1ceffb09c2d43d1}{set\+Size}} (const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&size)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_ab50214c94ead3bbe8cab27955333348b}{set\+Frame\+Duration}} (float frame\+Duration)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a534e2d5332d56e3cfd086b0b39321dad}{set\+Current\+Animation}} (const std\+::string \&current\+Animation)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IObserver}{logic\+::\+IObserver$<$ Modular\+Entity\+View $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1IObserver_aa3736db37cb39a0e8f1570c7c3201b33}{\texorpdfstring{$\sim$}{\string~}\+IObserver}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_ac01efa8f0fbc7495847489c0a8651b28}{update}} (Modular\+Entity\+View \&subject)=0
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_aa1e644dd23114de669503363e1dff6e8}{update}} (Modular\+Entity\+View \&subject, const std\+::string \&event)
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_acdde4b1d124989fc652801832b036eea}{on\+Observable\+Destroyed}} (Modular\+Entity\+View \&subject)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrenderer_1_1AnimatedSpriteModule_ac913ec6b379df50362fdb516cdd650f5}\label{classrenderer_1_1AnimatedSpriteModule_ac913ec6b379df50362fdb516cdd650f5} 
+\index{renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}!AnimatedSpriteModule@{AnimatedSpriteModule}}
+\index{AnimatedSpriteModule@{AnimatedSpriteModule}!renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}}
+\doxysubsubsection{\texorpdfstring{AnimatedSpriteModule()}{AnimatedSpriteModule()}}
+{\footnotesize\ttfamily renderer\+::\+Animated\+Sprite\+Module\+::\+Animated\+Sprite\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1AnimatedSpriteModule_ac6ad2866b80f9aa9e62a065e02322e6a}\label{classrenderer_1_1AnimatedSpriteModule_ac6ad2866b80f9aa9e62a065e02322e6a} 
+\index{renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}!getSFShapes@{getSFShapes}}
+\index{getSFShapes@{getSFShapes}!renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}}
+\doxysubsubsection{\texorpdfstring{getSFShapes()}{getSFShapes()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ renderer\+::\+Animated\+Sprite\+Module\+::get\+SFShapes (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IEntityViewModule_a60e279032eb55ba2702cb6670d1a320b}{renderer\+::\+IEntity\+View\+Module}}.
+
+\Hypertarget{classrenderer_1_1AnimatedSpriteModule_a5d8e5f53564f61c90dd44b317ddab40e}\label{classrenderer_1_1AnimatedSpriteModule_a5d8e5f53564f61c90dd44b317ddab40e} 
+\index{renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}!getSFSprites@{getSFSprites}}
+\index{getSFSprites@{getSFSprites}!renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}}
+\doxysubsubsection{\texorpdfstring{getSFSprites()}{getSFSprites()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ renderer\+::\+Animated\+Sprite\+Module\+::get\+SFSprites (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IEntityViewModule_a15570ec73a55192317254f6b06e72908}{renderer\+::\+IEntity\+View\+Module}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1AnimatedSpriteModule_a5d8e5f53564f61c90dd44b317ddab40e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1AnimatedSpriteModule_a5d90107ab5ce63d957ad24a6a2867bac}\label{classrenderer_1_1AnimatedSpriteModule_a5d90107ab5ce63d957ad24a6a2867bac} 
+\index{renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}!getSFTexts@{getSFTexts}}
+\index{getSFTexts@{getSFTexts}!renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}}
+\doxysubsubsection{\texorpdfstring{getSFTexts()}{getSFTexts()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ renderer\+::\+Animated\+Sprite\+Module\+::get\+SFTexts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IEntityViewModule_a0f703a56940857e995a47555b965fa53}{renderer\+::\+IEntity\+View\+Module}}.
+
+\Hypertarget{classrenderer_1_1AnimatedSpriteModule_a43bd3dd7675f3c4edb5786ae8f1e6443}\label{classrenderer_1_1AnimatedSpriteModule_a43bd3dd7675f3c4edb5786ae8f1e6443} 
+\index{renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}!setAnimations@{setAnimations}}
+\index{setAnimations@{setAnimations}!renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}}
+\doxysubsubsection{\texorpdfstring{setAnimations()}{setAnimations()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void renderer\+::\+Animated\+Sprite\+Module\+::set\+Animations (\begin{DoxyParamCaption}\item[{const std\+::map$<$ std\+::string, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ $>$ $>$ \&}]{textures }\end{DoxyParamCaption})}
+
+\Hypertarget{classrenderer_1_1AnimatedSpriteModule_a6faacb9f8a7f49f7af41fadf129771ea}\label{classrenderer_1_1AnimatedSpriteModule_a6faacb9f8a7f49f7af41fadf129771ea} 
+\index{renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}!setAnimations@{setAnimations}}
+\index{setAnimations@{setAnimations}!renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}}
+\doxysubsubsection{\texorpdfstring{setAnimations()}{setAnimations()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void renderer\+::\+Animated\+Sprite\+Module\+::set\+Animations (\begin{DoxyParamCaption}\item[{const std\+::map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \&}]{textures }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1AnimatedSpriteModule_a6faacb9f8a7f49f7af41fadf129771ea_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1AnimatedSpriteModule_a534e2d5332d56e3cfd086b0b39321dad}\label{classrenderer_1_1AnimatedSpriteModule_a534e2d5332d56e3cfd086b0b39321dad} 
+\index{renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}!setCurrentAnimation@{setCurrentAnimation}}
+\index{setCurrentAnimation@{setCurrentAnimation}!renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}}
+\doxysubsubsection{\texorpdfstring{setCurrentAnimation()}{setCurrentAnimation()}}
+{\footnotesize\ttfamily void renderer\+::\+Animated\+Sprite\+Module\+::set\+Current\+Animation (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{current\+Animation }\end{DoxyParamCaption})}
+
+\Hypertarget{classrenderer_1_1AnimatedSpriteModule_ab50214c94ead3bbe8cab27955333348b}\label{classrenderer_1_1AnimatedSpriteModule_ab50214c94ead3bbe8cab27955333348b} 
+\index{renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}!setFrameDuration@{setFrameDuration}}
+\index{setFrameDuration@{setFrameDuration}!renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}}
+\doxysubsubsection{\texorpdfstring{setFrameDuration()}{setFrameDuration()}}
+{\footnotesize\ttfamily void renderer\+::\+Animated\+Sprite\+Module\+::set\+Frame\+Duration (\begin{DoxyParamCaption}\item[{float}]{frame\+Duration }\end{DoxyParamCaption})}
+
+\Hypertarget{classrenderer_1_1AnimatedSpriteModule_abb30e791b68e73d4d1ceffb09c2d43d1}\label{classrenderer_1_1AnimatedSpriteModule_abb30e791b68e73d4d1ceffb09c2d43d1} 
+\index{renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}!setSize@{setSize}}
+\index{setSize@{setSize}!renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void renderer\+::\+Animated\+Sprite\+Module\+::set\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&}]{size }\end{DoxyParamCaption})}
+
+\Hypertarget{classrenderer_1_1AnimatedSpriteModule_a9d2e08cbe3b4a8537e5b963e3a07c82a}\label{classrenderer_1_1AnimatedSpriteModule_a9d2e08cbe3b4a8537e5b963e3a07c82a} 
+\index{renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}!update@{update}}
+\index{update@{update}!renderer::AnimatedSpriteModule@{renderer::AnimatedSpriteModule}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void renderer\+::\+Animated\+Sprite\+Module\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrenderer_1_1ModularEntityView}{Modular\+Entity\+View}} \&}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1AnimatedSpriteModule_a9d2e08cbe3b4a8537e5b963e3a07c82a_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/core/entity/modular/modules/\mbox{\hyperlink{AnimatedSpriteModule_8h}{Animated\+Sprite\+Module.\+h}}\item 
+renderer/src/core/entity/modular/modules/\mbox{\hyperlink{AnimatedSpriteModule_8cpp}{Animated\+Sprite\+Module.\+cpp}}\end{DoxyCompactItemize}

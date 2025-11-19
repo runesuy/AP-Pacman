@@ -1,0 +1,40 @@
+\doxysection{IEntity\+Factory.\+h}
+\hypertarget{IEntityFactory_8h_source}{}\label{IEntityFactory_8h_source}\index{logic/include/core/entity/IEntityFactory.h@{logic/include/core/entity/IEntityFactory.h}}
+\mbox{\hyperlink{IEntityFactory_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/5/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_IENTITYFACTORY\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_IENTITYFACTORY\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{WallModel_8h}{game/entities/models/WallModel.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{PlayerModel_8h}{game/entities/models/PlayerModel.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{CoinModel_8h}{game/entities/models/CoinModel.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{PowerupModel_8h}{game/entities/models/PowerupModel.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GhostModel_8h}{game/entities/models/GhostModel.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GhostTypes_8h}{game/entities/models/GhostTypes.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1IEntityFactory}{IEntityFactory}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classlogic_1_1IEntityFactory_a0e6d20caae0a051b0da5cfe0eb70f538}{\string~IEntityFactory}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::shared\_ptr<WallModel>\ \mbox{\hyperlink{classlogic_1_1IEntityFactory_acec55acd47773b8630b467d9a93ab0e4}{createWallModel}}()\ =\ 0;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::shared\_ptr<PlayerModel>\ \mbox{\hyperlink{classlogic_1_1IEntityFactory_a7a7370e07ed51e7a29b2b2e4f4b6c038}{createPlayerModel}}()\ =\ 0;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::shared\_ptr<CoinModel>\ \mbox{\hyperlink{classlogic_1_1IEntityFactory_a681cfc3ed8fef2b023f6c402a164207d}{createCoinModel}}()\ =\ 0;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::shared\_ptr<PowerupModel>\ \mbox{\hyperlink{classlogic_1_1IEntityFactory_a1dd3ffb00e2e030b590d282ec3062cb5}{createPowerupModel}}()\ =\ 0;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::shared\_ptr<GhostModel>\ \mbox{\hyperlink{classlogic_1_1IEntityFactory_a50a2d30662b07e2e949de98d0b2dcd8f}{createGhostModel}}(\mbox{\hyperlink{namespacelogic_a36053e250f7e1339ba0a6cbecbdf1b4b}{GhostType}}\ type)\ =\ 0;}
+\DoxyCodeLine{00058\ \ \ \ \ \};}
+\DoxyCodeLine{00059\ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_IENTITYFACTORY\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,37 @@
+\doxysection{World\+View.\+h}
+\hypertarget{WorldView_8h_source}{}\label{WorldView_8h_source}\index{renderer/include/core/world/WorldView.h@{renderer/include/core/world/WorldView.h}}
+\mbox{\hyperlink{WorldView_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/9/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_WORLDVIEW\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_WORLDVIEW\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IObserver_8h}{core/observer/IObserver.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{World_8h}{core/world/World.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IWorldObjectView_8h}{IWorldObjectView.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ScoreView_8h}{ScoreView.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1WorldView}{WorldView}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1IObserver}{logic::IObserver}}<logic::World>\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ std::vector<std::shared\_ptr<IWorldObjectView>>\ objectViews;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \_cleanUpViews();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ std::shared\_ptr<ScoreView>\ scoreView\ =\ std::make\_shared<ScoreView>();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1WorldView_afb39716567d9877e8caaec10089fb817}{update}}(\mbox{\hyperlink{classlogic_1_1World}{logic::World}}\ \&subject)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1WorldView_abff20a141f71b9f6be4a586d8500cff7}{draw}}(sf::RenderWindow\ \&window);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1WorldView_a6cf03a68e886f61755f2954824f53875}{addObjectView}}(\textcolor{keyword}{const}\ std::shared\_ptr<IWorldObjectView>\&\ objectView);}
+\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_WORLDVIEW\_H}}
+
+\end{DoxyCode}

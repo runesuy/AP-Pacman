@@ -1,0 +1,34 @@
+\doxysection{Wall\+View.\+h}
+\hypertarget{WallView_8h_source}{}\label{WallView_8h_source}\index{renderer/include/game/entities/views/WallView.h@{renderer/include/game/entities/views/WallView.h}}
+\mbox{\hyperlink{WallView_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/6/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_WALLVIEW\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_WALLVIEW\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{WallModel_8h}{game/entities/models/WallModel.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ModularEntityView_8h}{core/entity/modular/ModularEntityView.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{RectangleModule_8h}{core/entity/modular/modules/RectangleModule.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Observable_8h}{core/observer/Observable.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1WallView}{WallView}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1ModularEntityView}{ModularEntityView}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1IObserver}{logic::IObserver}}<logic::WallModel>\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1WallView_a006a3fcbb94c5bde7bdec1d8705ef35e}{WallView}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1WallView_a4a35f4cbbb25a1ed761ff319bf1f3d18}{update}}(\mbox{\hyperlink{classlogic_1_1WallModel}{logic::WallModel}}\ \&subject)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1WallView_a83b84324bd900063a02d11bd04e99056}{setSize}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\ \&size)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrenderer_1_1WallView_a5c742dafd06e3b70a69e4bb42b90ab5e}{isMarkedForRemoval}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \ \ \ \ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_WALLVIEW\_H}}
+
+\end{DoxyCode}

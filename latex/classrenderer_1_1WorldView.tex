@@ -1,0 +1,96 @@
+\doxysection{renderer\+::World\+View Class Reference}
+\hypertarget{classrenderer_1_1WorldView}{}\label{classrenderer_1_1WorldView}\index{renderer::WorldView@{renderer::WorldView}}
+
+
+{\ttfamily \#include $<$World\+View.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::World\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classrenderer_1_1WorldView__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::World\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classrenderer_1_1WorldView__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classrenderer_1_1WorldView_afb39716567d9877e8caaec10089fb817}{update}} (\mbox{\hyperlink{classlogic_1_1World}{logic\+::\+World}} \&subject) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1WorldView_abff20a141f71b9f6be4a586d8500cff7}{draw}} (sf\+::\+Render\+Window \&window)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1WorldView_a6cf03a68e886f61755f2954824f53875}{add\+Object\+View}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IWorldObjectView}{IWorld\+Object\+View}} $>$ \&object\+View)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IObserver}{logic\+::\+IObserver$<$ logic\+::\+World $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1IObserver_aa3736db37cb39a0e8f1570c7c3201b33}{\texorpdfstring{$\sim$}{\string~}\+IObserver}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_aa1e644dd23114de669503363e1dff6e8}{update}} (\mbox{\hyperlink{classlogic_1_1World}{logic\+::\+World}} \&subject, const std\+::string \&event)
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_acdde4b1d124989fc652801832b036eea}{on\+Observable\+Destroyed}} (\mbox{\hyperlink{classlogic_1_1World}{logic\+::\+World}} \&subject)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1WorldView_a6cf03a68e886f61755f2954824f53875}\label{classrenderer_1_1WorldView_a6cf03a68e886f61755f2954824f53875} 
+\index{renderer::WorldView@{renderer::WorldView}!addObjectView@{addObjectView}}
+\index{addObjectView@{addObjectView}!renderer::WorldView@{renderer::WorldView}}
+\doxysubsubsection{\texorpdfstring{addObjectView()}{addObjectView()}}
+{\footnotesize\ttfamily void renderer\+::\+World\+View\+::add\+Object\+View (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IWorldObjectView}{IWorld\+Object\+View}} $>$ \&}]{object\+View }\end{DoxyParamCaption})}
+
+\Hypertarget{classrenderer_1_1WorldView_abff20a141f71b9f6be4a586d8500cff7}\label{classrenderer_1_1WorldView_abff20a141f71b9f6be4a586d8500cff7} 
+\index{renderer::WorldView@{renderer::WorldView}!draw@{draw}}
+\index{draw@{draw}!renderer::WorldView@{renderer::WorldView}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void renderer\+::\+World\+View\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1WorldView_abff20a141f71b9f6be4a586d8500cff7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1WorldView_afb39716567d9877e8caaec10089fb817}\label{classrenderer_1_1WorldView_afb39716567d9877e8caaec10089fb817} 
+\index{renderer::WorldView@{renderer::WorldView}!update@{update}}
+\index{update@{update}!renderer::WorldView@{renderer::WorldView}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void renderer\+::\+World\+View\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1World}{logic\+::\+World}} \&}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called when the subject being observed has changed. 
+\begin{DoxyParams}{Parameters}
+{\em subject} & The subject being observed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1IObserver_ac01efa8f0fbc7495847489c0a8651b28}{logic\+::\+IObserver$<$ logic\+::\+World $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classrenderer_1_1WorldView_afb39716567d9877e8caaec10089fb817_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/core/world/\mbox{\hyperlink{WorldView_8h}{World\+View.\+h}}\item 
+renderer/src/core/world/\mbox{\hyperlink{WorldView_8cpp}{World\+View.\+cpp}}\end{DoxyCompactItemize}

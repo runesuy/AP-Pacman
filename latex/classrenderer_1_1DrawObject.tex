@@ -1,0 +1,152 @@
+\doxysection{renderer\+::Draw\+Object Class Reference}
+\hypertarget{classrenderer_1_1DrawObject}{}\label{classrenderer_1_1DrawObject}\index{renderer::DrawObject@{renderer::DrawObject}}
+
+
+{\ttfamily \#include $<$Draw\+Object.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::Draw\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1DrawObject__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::Draw\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classrenderer_1_1DrawObject__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \& \mbox{\hyperlink{classrenderer_1_1DrawObject_a1317e66b07b34c0fa2fbf7472f45207e}{get\+Position}} () const
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&position)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de728}{draw}} (sf\+::\+Render\+Window \&window) override
+\item 
+virtual std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ \mbox{\hyperlink{classrenderer_1_1DrawObject_a9612dd69d98b224a4088b73b266a9716}{get\+SFShapes}} (sf\+::\+Render\+Window \&window)=0
+\item 
+virtual std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ \mbox{\hyperlink{classrenderer_1_1DrawObject_acac924ad07a7f2ee44bec57f13161c31}{get\+SFSprites}} (sf\+::\+Render\+Window \&window)=0
+\item 
+virtual std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ \mbox{\hyperlink{classrenderer_1_1DrawObject_aa4d5616621231dc20620faa1dc5c1b6c}{get\+SFTexts}} (sf\+::\+Render\+Window \&window)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de728}\label{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de728} 
+\index{renderer::DrawObject@{renderer::DrawObject}!draw@{draw}}
+\index{draw@{draw}!renderer::DrawObject@{renderer::DrawObject}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void renderer\+::\+Draw\+Object\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draw the object onto the provided render window. All shapes sprites and text will be drawn and scaled according to the position and size of the object, along with the \doxylink{classrenderer_1_1DrawObject}{Draw\+Object} position. 
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IDrawable_a7a7cdfdbea7a25ac8c46453657a7e355}{renderer\+::\+IDrawable}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de728_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1DrawObject_a1317e66b07b34c0fa2fbf7472f45207e}\label{classrenderer_1_1DrawObject_a1317e66b07b34c0fa2fbf7472f45207e} 
+\index{renderer::DrawObject@{renderer::DrawObject}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!renderer::DrawObject@{renderer::DrawObject}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \& renderer\+::\+Draw\+Object\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the position of the draw object. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{classrenderer_1_1DrawObject_a9612dd69d98b224a4088b73b266a9716}\label{classrenderer_1_1DrawObject_a9612dd69d98b224a4088b73b266a9716} 
+\index{renderer::DrawObject@{renderer::DrawObject}!getSFShapes@{getSFShapes}}
+\index{getSFShapes@{getSFShapes}!renderer::DrawObject@{renderer::DrawObject}}
+\doxysubsubsection{\texorpdfstring{getSFShapes()}{getSFShapes()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ renderer\+::\+Draw\+Object\+::get\+SFShapes (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the SFML shapes representing the draw object. \begin{DoxyWarning}{Warning}
+Use the \doxylink{classlogic_1_1Position}{logic\+::\+Position} and \doxylink{classlogic_1_1Size}{logic\+::\+Size} system when giving positions and sizes to the shapes. 
+
+positions are relative to the \doxylink{classrenderer_1_1DrawObject}{Draw\+Object} position. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1Button_a918eb9efe3f25e9be22ccb9eecdf50db}{renderer\+::\+Button}}, \mbox{\hyperlink{classrenderer_1_1Label_afc92ec67b6a0d2666f3667b49cd97a36}{renderer\+::\+Label}}, and \mbox{\hyperlink{classrenderer_1_1ModularEntityView_aa7574935c99ca248d974cb51a1bf4726}{renderer\+::\+Modular\+Entity\+View}}.
+
+\Hypertarget{classrenderer_1_1DrawObject_acac924ad07a7f2ee44bec57f13161c31}\label{classrenderer_1_1DrawObject_acac924ad07a7f2ee44bec57f13161c31} 
+\index{renderer::DrawObject@{renderer::DrawObject}!getSFSprites@{getSFSprites}}
+\index{getSFSprites@{getSFSprites}!renderer::DrawObject@{renderer::DrawObject}}
+\doxysubsubsection{\texorpdfstring{getSFSprites()}{getSFSprites()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ renderer\+::\+Draw\+Object\+::get\+SFSprites (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the SFML sprites representing the draw object. \begin{DoxyWarning}{Warning}
+Use the \doxylink{classlogic_1_1Position}{logic\+::\+Position} and \doxylink{classlogic_1_1Size}{logic\+::\+Size} system when giving positions and sizes 
+
+positions are relative to the \doxylink{classrenderer_1_1DrawObject}{Draw\+Object} position. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1Button_a596db4cb3bdd79adc7e63af455df1e61}{renderer\+::\+Button}}, \mbox{\hyperlink{classrenderer_1_1Label_ab674bb75a394790149de702cb7d3a491}{renderer\+::\+Label}}, and \mbox{\hyperlink{classrenderer_1_1ModularEntityView_aa73af8952f79fc94f61ac05b8b1672ad}{renderer\+::\+Modular\+Entity\+View}}.
+
+\Hypertarget{classrenderer_1_1DrawObject_aa4d5616621231dc20620faa1dc5c1b6c}\label{classrenderer_1_1DrawObject_aa4d5616621231dc20620faa1dc5c1b6c} 
+\index{renderer::DrawObject@{renderer::DrawObject}!getSFTexts@{getSFTexts}}
+\index{getSFTexts@{getSFTexts}!renderer::DrawObject@{renderer::DrawObject}}
+\doxysubsubsection{\texorpdfstring{getSFTexts()}{getSFTexts()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ renderer\+::\+Draw\+Object\+::get\+SFTexts (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the SFML texts representing the draw object. \begin{DoxyWarning}{Warning}
+Use the \doxylink{classlogic_1_1Position}{logic\+::\+Position} and \doxylink{classlogic_1_1Size}{logic\+::\+Size} system when giving positions and sizes 
+
+positions are relative to the \doxylink{classrenderer_1_1DrawObject}{Draw\+Object} position. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1Button_add05e62ac67f5e94402a3fd13643c73c}{renderer\+::\+Button}}, \mbox{\hyperlink{classrenderer_1_1Label_ae6bb2428dffea2093599d1a94bf394cd}{renderer\+::\+Label}}, and \mbox{\hyperlink{classrenderer_1_1ModularEntityView_a97e430746a6ae2cfb8d7b98a9bea9658}{renderer\+::\+Modular\+Entity\+View}}.
+
+\Hypertarget{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}\label{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f} 
+\index{renderer::DrawObject@{renderer::DrawObject}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!renderer::DrawObject@{renderer::DrawObject}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void renderer\+::\+Draw\+Object\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&}]{position }\end{DoxyParamCaption})}
+
+Set the position of the draw object. 
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/core/drawable/\mbox{\hyperlink{DrawObject_8h}{Draw\+Object.\+h}}\item 
+renderer/src/core/drawable/\mbox{\hyperlink{DrawObject_8cpp}{Draw\+Object.\+cpp}}\end{DoxyCompactItemize}

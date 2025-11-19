@@ -1,0 +1,35 @@
+\doxysection{Coin\+View.\+h}
+\hypertarget{CoinView_8h_source}{}\label{CoinView_8h_source}\index{renderer/include/game/entities/views/CoinView.h@{renderer/include/game/entities/views/CoinView.h}}
+\mbox{\hyperlink{CoinView_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/8/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_COINVIEW\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_COINVIEW\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ModularEntityView_8h}{core/entity/modular/ModularEntityView.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{CoinModel_8h}{game/entities/models/CoinModel.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1CoinView}{CoinView}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1ModularEntityView}{ModularEntityView}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1IObserver}{logic::IObserver}}<logic::CoinModel>\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ markedForRemoval\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1CoinView_a2f61bfd2d5d02b85f1ef787d97c7af0c}{CoinView}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1CoinView_a5bdc2d07a366ff71c0fe42ad10300f6b}{update}}(\mbox{\hyperlink{classlogic_1_1CoinModel}{logic::CoinModel}}\ \&subject)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1CoinView_ab71ef2c0395db2fa5967e31b465f6e7a}{setSize}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\ \&size)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrenderer_1_1CoinView_a1d9726c203396e9f20a5f0ec9feb71c2}{isMarkedForRemoval}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1CoinView_a70f2589f3670880e9444c5ca55f2cc4a}{onObservableDestroyed}}(\mbox{\hyperlink{classlogic_1_1CoinModel}{logic::CoinModel}}\ \&subject)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1CoinView_ae0f8e4df9759141bdbfca33b80918d4d}{markForRemoval}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_COINVIEW\_H}}
+
+\end{DoxyCode}

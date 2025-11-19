@@ -1,0 +1,121 @@
+\doxysection{renderer\+::Score\+View Class Reference}
+\hypertarget{classrenderer_1_1ScoreView}{}\label{classrenderer_1_1ScoreView}\index{renderer::ScoreView@{renderer::ScoreView}}
+
+
+{\ttfamily \#include $<$Score\+View.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::Score\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classrenderer_1_1ScoreView__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::Score\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classrenderer_1_1ScoreView__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrenderer_1_1ScoreView_a434c179e743aa995aa4257b45128175f}{Score\+View}} ()
+\item 
+void \mbox{\hyperlink{classrenderer_1_1ScoreView_a09c37d72125e4a1788968fcd3afd05a9}{update}} (\mbox{\hyperlink{classlogic_1_1Score}{logic\+::\+Score}} \&subject) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IObserver}{logic\+::\+IObserver$<$ logic\+::\+Score $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1IObserver_aa3736db37cb39a0e8f1570c7c3201b33}{\texorpdfstring{$\sim$}{\string~}\+IObserver}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_aa1e644dd23114de669503363e1dff6e8}{update}} (\mbox{\hyperlink{classlogic_1_1Score}{logic\+::\+Score}} \&subject, const std\+::string \&event)
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_acdde4b1d124989fc652801832b036eea}{on\+Observable\+Destroyed}} (\mbox{\hyperlink{classlogic_1_1Score}{logic\+::\+Score}} \&subject)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1Label}{renderer\+::\+Label}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrenderer_1_1Label_a6a43d6b85e5393c7d3a1fc2102ee75ac}{Label}} ()
+\item 
+\mbox{\hyperlink{classrenderer_1_1Label_a53eacf0ab24c25be2fa51660a49d9c8d}{Label}} (const std\+::string \&str)
+\item 
+\mbox{\hyperlink{classrenderer_1_1Label_aae61a022e1f80b87da516d4fd8705962}{Label}} (const std\+::string \&str, const sf\+::\+Font \&font)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Label_ad9a62b724b8a8b3c2358c483d11c8e13}{set\+String}} (const std\+::string \&str)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Label_ab7ab0ab215594f5deaf00b8d64a7d2d1}{set\+Font}} (const sf\+::\+Font \&font)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Label_a1e2c6c4b7c1290d03e10aa2de2898b60}{set\+Character\+Size}} (float size)
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Label_afc92ec67b6a0d2666f3667b49cd97a36}{get\+SFShapes}} (sf\+::\+Render\+Window \&window) override
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Label_ab674bb75a394790149de702cb7d3a491}{get\+SFSprites}} (sf\+::\+Render\+Window \&window) override
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Label_ae6bb2428dffea2093599d1a94bf394cd}{get\+SFTexts}} (sf\+::\+Render\+Window \&window) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1DrawObject}{renderer\+::\+Draw\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \& \mbox{\hyperlink{classrenderer_1_1DrawObject_a1317e66b07b34c0fa2fbf7472f45207e}{get\+Position}} () const
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&position)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de728}{draw}} (sf\+::\+Render\+Window \&window) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrenderer_1_1ScoreView_a434c179e743aa995aa4257b45128175f}\label{classrenderer_1_1ScoreView_a434c179e743aa995aa4257b45128175f} 
+\index{renderer::ScoreView@{renderer::ScoreView}!ScoreView@{ScoreView}}
+\index{ScoreView@{ScoreView}!renderer::ScoreView@{renderer::ScoreView}}
+\doxysubsubsection{\texorpdfstring{ScoreView()}{ScoreView()}}
+{\footnotesize\ttfamily renderer\+::\+Score\+View\+::\+Score\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classrenderer_1_1ScoreView_a434c179e743aa995aa4257b45128175f_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1ScoreView_a09c37d72125e4a1788968fcd3afd05a9}\label{classrenderer_1_1ScoreView_a09c37d72125e4a1788968fcd3afd05a9} 
+\index{renderer::ScoreView@{renderer::ScoreView}!update@{update}}
+\index{update@{update}!renderer::ScoreView@{renderer::ScoreView}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void renderer\+::\+Score\+View\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1Score}{logic\+::\+Score}} \&}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called when the subject being observed has changed. 
+\begin{DoxyParams}{Parameters}
+{\em subject} & The subject being observed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1IObserver_ac01efa8f0fbc7495847489c0a8651b28}{logic\+::\+IObserver$<$ logic\+::\+Score $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classrenderer_1_1ScoreView_a09c37d72125e4a1788968fcd3afd05a9_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/core/world/\mbox{\hyperlink{ScoreView_8h}{Score\+View.\+h}}\item 
+renderer/src/game/\mbox{\hyperlink{ScoreView_8cpp}{Score\+View.\+cpp}}\end{DoxyCompactItemize}

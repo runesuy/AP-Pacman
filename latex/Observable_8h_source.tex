@@ -1,0 +1,81 @@
+\doxysection{Observable.\+h}
+\hypertarget{Observable_8h_source}{}\label{Observable_8h_source}\index{logic/include/core/observer/Observable.h@{logic/include/core/observer/Observable.h}}
+\mbox{\hyperlink{Observable_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ runes\ on\ 4/11/2025.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_OBSERVABLE\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_OBSERVABLE\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IObserver_8h}{IObserver.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1Observable}{Observable}}\ \{}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<IObserver<T>>>\ \_observers;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classlogic_1_1Observable_a637139aff6f941cdc9096713a3f38ea7}{EventType}}\ \{\};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1Observable_afd56bfb66920d8e1d38a3ac3259e85d9}{updateObservers}}()\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&observer:\ \_observers)\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ observer-\/>update(\textcolor{keyword}{static\_cast<}T\&\textcolor{keyword}{>}(*\textcolor{keyword}{this}));}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1Observable_a73e3a3b1f7ffdd12ffa269541a551ec6}{updateObservers}}(\textcolor{keyword}{const}\ std::string\ \&event);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classlogic_1_1Observable_a1f7f0337470804741ddd21ffe82103c1}{\string~Observable}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1Observable_afb2547e65fdf6b4c090f5170df4bf66d}{addObserver}}(\textcolor{keyword}{const}\ std::shared\_ptr<\mbox{\hyperlink{classlogic_1_1IObserver}{IObserver<T>}}>\&\ observer)\ \{\ \_observers.push\_back(observer);\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classlogic_1_1Observable_ad7cb2d9214c5dd7f5aa8a36ef7ce43b9}{hasObservers}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classlogic_1_1Observable_a54bfc543d21f11be7137efce418394c2}{hasObserver}}(\textcolor{keyword}{const}\ std::shared\_ptr<\mbox{\hyperlink{classlogic_1_1IObserver}{IObserver<T>}}>\&\ observer)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Implementation\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\///}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1Observable_afd56bfb66920d8e1d38a3ac3259e85d9}{Observable<T>::updateObservers}}(\textcolor{keyword}{const}\ std::string\ \&event)\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&observer:\ \_observers)\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ observer-\/>update(\textcolor{keyword}{static\_cast<}T\&\textcolor{keyword}{>}(*\textcolor{keyword}{this}),\ event);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classlogic_1_1Observable_ad7cb2d9214c5dd7f5aa8a36ef7ce43b9}{Observable<T>::hasObservers}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !\_observers.empty();}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{classlogic_1_1Observable_a1f7f0337470804741ddd21ffe82103c1}{Observable<T>::\string~Observable}}()\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&observer:\ \_observers)\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ observer-\/>onObservableDestroyed(\textcolor{keyword}{static\_cast<}T\&\textcolor{keyword}{>}(*\textcolor{keyword}{this}));}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \_observers.clear();}
+\DoxyCodeLine{00085\ \ \ \ \ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classlogic_1_1Observable_a54bfc543d21f11be7137efce418394c2}{Observable<T>::hasObserver}}(\textcolor{keyword}{const}\ std::shared\_ptr<\mbox{\hyperlink{classlogic_1_1IObserver}{IObserver<T>}}>\ \&observer)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ obs\ :\ \_observers)\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (obs\ ==\ observer)\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_OBSERVABLE\_H}}
+
+\end{DoxyCode}

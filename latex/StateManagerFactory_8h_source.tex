@@ -1,0 +1,26 @@
+\doxysection{State\+Manager\+Factory.\+h}
+\hypertarget{StateManagerFactory_8h_source}{}\label{StateManagerFactory_8h_source}\index{renderer/include/game/factories/StateManagerFactory.h@{renderer/include/game/factories/StateManagerFactory.h}}
+\mbox{\hyperlink{StateManagerFactory_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/4/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_STATEMANAGERFACTORY\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_STATEMANAGERFACTORY\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{StateManager_8h}{core/states/StateManager.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1StateManagerFactory}{StateManagerFactory}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ std::unique\_ptr<StateManager>\ \mbox{\hyperlink{classrenderer_1_1StateManagerFactory_af6d12bf6487efe7007a7191d7076bd93}{createStateManager}}(std::unique\_ptr<IStateFactory>\ stateFactory);}
+\DoxyCodeLine{00016\ \ \ \ \ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_STATEMANAGERFACTORY\_H}}
+
+\end{DoxyCode}

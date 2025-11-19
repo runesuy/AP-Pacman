@@ -1,0 +1,34 @@
+\doxysection{Random\+Nav\+Ghost\+Controller.\+h}
+\hypertarget{RandomNavGhostController_8h_source}{}\label{RandomNavGhostController_8h_source}\index{logic/include/game/entities/controllers/RandomNavGhostController.h@{logic/include/game/entities/controllers/RandomNavGhostController.h}}
+\mbox{\hyperlink{RandomNavGhostController_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/12/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_RANDOMNAVGHOSTCONTROLLER\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_RANDOMNAVGHOSTCONTROLLER\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MovingEntityController_8h}{MovingEntityController.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GhostModel_8h}{game/entities/models/GhostModel.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GhostController_8h}{GhostController.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1RandomNavGhostController}{RandomNavGhostController}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1GhostController}{GhostController}}\{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a81f28729a077fa04040f443217df058f}{processCommand}}(\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{EntityCommand}}\ command,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a2f10d41e673e1f325d1b074ab3425355}{onCollision}}(\mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{SizedWorldObject}}\ \&other)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a1710c2ac9420f3cf75941aefb0d9da0e}{update}}(\mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_af1b25d3570b8af506ace0f0b024f300b}{onWallCollision}}(\mbox{\hyperlink{classlogic_1_1World}{logic::World}}\ \&world,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{logic::GhostModel}}\ \&entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a231c0609100e65eef142e40ca9f6e94e}{chooseDirection}}(\mbox{\hyperlink{classlogic_1_1World}{logic::World}}\ \&world,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{logic::GhostModel}}\ \&entity);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<Direction>\ \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_ac11832e834e4e82fe419e20463cf8c00}{getViableDirections}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity);}
+\DoxyCodeLine{00025\ \ \ \ \ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_RANDOMNAVGHOSTCONTROLLER\_H}}
+
+\end{DoxyCode}

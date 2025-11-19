@@ -1,0 +1,35 @@
+\doxysection{Collectable\+Controller.\+h}
+\hypertarget{CollectableController_8h_source}{}\label{CollectableController_8h_source}\index{logic/include/game/entities/controllers/CollectableController.h@{logic/include/game/entities/controllers/CollectableController.h}}
+\mbox{\hyperlink{CollectableController_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/9/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_COLLECTABLECONTROLLER\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_COLLECTABLECONTROLLER\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IEntityController_8h}{core/entity/IEntityController.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{PlayerModel_8h}{game/entities/models/PlayerModel.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ModelType>}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1CollectableController}{CollectableController}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1IEntityController}{IEntityController}}<ModelType>\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1CollectableController_a384062c1c0d681ecf33884e694ee551c}{onCollision}}(ModelType\ \&entity,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{SizedWorldObject}}\ \&other)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00017\ \ \ \ \ \};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ ModelType>}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1CollectableController_a384062c1c0d681ecf33884e694ee551c}{CollectableController<ModelType>::onCollision}}(ModelType\ \&entity,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{SizedWorldObject}}\ \&other)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ collision\ with\ player}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\textcolor{keyword}{const\ }\mbox{\hyperlink{classlogic_1_1EntityModel}{EntityModel<PlayerModel>}}\ *\textcolor{keyword}{>}(\&other))\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ entity.markForRemoval();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \}\ \textcolor{comment}{//\ logic}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_COLLECTABLECONTROLLER\_H}}
+
+\end{DoxyCode}

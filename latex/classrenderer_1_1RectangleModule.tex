@@ -1,0 +1,166 @@
+\doxysection{renderer\+::Rectangle\+Module Class Reference}
+\hypertarget{classrenderer_1_1RectangleModule}{}\label{classrenderer_1_1RectangleModule}\index{renderer::RectangleModule@{renderer::RectangleModule}}
+
+
+{\ttfamily \#include $<$Rectangle\+Module.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::Rectangle\+Module\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classrenderer_1_1RectangleModule__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::Rectangle\+Module\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classrenderer_1_1RectangleModule__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrenderer_1_1RectangleModule_ae0fdc73778a6aa532b4c4cfe25c3bff6}{Rectangle\+Module}} ()=default
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ \mbox{\hyperlink{classrenderer_1_1RectangleModule_aabaedadc1409354b6b06b7115045791c}{get\+SFShapes}} (sf\+::\+Render\+Window \&window) const override
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ \mbox{\hyperlink{classrenderer_1_1RectangleModule_a28c00a07bbebcd7e1517e467948c1b2e}{get\+SFSprites}} (sf\+::\+Render\+Window \&window) const override
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ \mbox{\hyperlink{classrenderer_1_1RectangleModule_aa744d31a217b78ed0fdd7d977907c14c}{get\+SFTexts}} () const override
+\item 
+const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \& \mbox{\hyperlink{classrenderer_1_1RectangleModule_a753c3c095b45a77d2fc86e21e490988e}{get\+Size}} () const
+\item 
+void \mbox{\hyperlink{classrenderer_1_1RectangleModule_a5d1548a000d66a8f3a4c71e84972b37b}{set\+Size}} (const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&\mbox{\hyperlink{classrenderer_1_1RectangleModule_a5b1a0910e64ea966a58c4b5f718e93d9}{size}})
+\item 
+void \mbox{\hyperlink{classrenderer_1_1RectangleModule_a0d238b3e13c5c81f7590b136ad2eb0c0}{update}} (\mbox{\hyperlink{classrenderer_1_1ModularEntityView}{Modular\+Entity\+View}} \&subject) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1RectangleModule_abefad40a33680f92b9bd759cc62e3833}{set\+Fill\+Color}} (const sf\+::\+Color \&color)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IObserver}{logic\+::\+IObserver$<$ Modular\+Entity\+View $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1IObserver_aa3736db37cb39a0e8f1570c7c3201b33}{\texorpdfstring{$\sim$}{\string~}\+IObserver}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_ac01efa8f0fbc7495847489c0a8651b28}{update}} (Modular\+Entity\+View \&subject)=0
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_aa1e644dd23114de669503363e1dff6e8}{update}} (Modular\+Entity\+View \&subject, const std\+::string \&event)
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_acdde4b1d124989fc652801832b036eea}{on\+Observable\+Destroyed}} (Modular\+Entity\+View \&subject)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \mbox{\hyperlink{classrenderer_1_1RectangleModule_a5b1a0910e64ea966a58c4b5f718e93d9}{size}} =\{0.\+1,0.\+1\}
+\item 
+sf\+::\+Color \mbox{\hyperlink{classrenderer_1_1RectangleModule_a377e832916d74059ccf0a9e7cd38f89b}{fill\+Color}} = sf\+::\+Color\+::\+Red
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrenderer_1_1RectangleModule_ae0fdc73778a6aa532b4c4cfe25c3bff6}\label{classrenderer_1_1RectangleModule_ae0fdc73778a6aa532b4c4cfe25c3bff6} 
+\index{renderer::RectangleModule@{renderer::RectangleModule}!RectangleModule@{RectangleModule}}
+\index{RectangleModule@{RectangleModule}!renderer::RectangleModule@{renderer::RectangleModule}}
+\doxysubsubsection{\texorpdfstring{RectangleModule()}{RectangleModule()}}
+{\footnotesize\ttfamily renderer\+::\+Rectangle\+Module\+::\+Rectangle\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1RectangleModule_aabaedadc1409354b6b06b7115045791c}\label{classrenderer_1_1RectangleModule_aabaedadc1409354b6b06b7115045791c} 
+\index{renderer::RectangleModule@{renderer::RectangleModule}!getSFShapes@{getSFShapes}}
+\index{getSFShapes@{getSFShapes}!renderer::RectangleModule@{renderer::RectangleModule}}
+\doxysubsubsection{\texorpdfstring{getSFShapes()}{getSFShapes()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ renderer\+::\+Rectangle\+Module\+::get\+SFShapes (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IEntityViewModule_a60e279032eb55ba2702cb6670d1a320b}{renderer\+::\+IEntity\+View\+Module}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1RectangleModule_aabaedadc1409354b6b06b7115045791c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1RectangleModule_a28c00a07bbebcd7e1517e467948c1b2e}\label{classrenderer_1_1RectangleModule_a28c00a07bbebcd7e1517e467948c1b2e} 
+\index{renderer::RectangleModule@{renderer::RectangleModule}!getSFSprites@{getSFSprites}}
+\index{getSFSprites@{getSFSprites}!renderer::RectangleModule@{renderer::RectangleModule}}
+\doxysubsubsection{\texorpdfstring{getSFSprites()}{getSFSprites()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ renderer\+::\+Rectangle\+Module\+::get\+SFSprites (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IEntityViewModule_a15570ec73a55192317254f6b06e72908}{renderer\+::\+IEntity\+View\+Module}}.
+
+\Hypertarget{classrenderer_1_1RectangleModule_aa744d31a217b78ed0fdd7d977907c14c}\label{classrenderer_1_1RectangleModule_aa744d31a217b78ed0fdd7d977907c14c} 
+\index{renderer::RectangleModule@{renderer::RectangleModule}!getSFTexts@{getSFTexts}}
+\index{getSFTexts@{getSFTexts}!renderer::RectangleModule@{renderer::RectangleModule}}
+\doxysubsubsection{\texorpdfstring{getSFTexts()}{getSFTexts()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ renderer\+::\+Rectangle\+Module\+::get\+SFTexts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IEntityViewModule_a0f703a56940857e995a47555b965fa53}{renderer\+::\+IEntity\+View\+Module}}.
+
+\Hypertarget{classrenderer_1_1RectangleModule_a753c3c095b45a77d2fc86e21e490988e}\label{classrenderer_1_1RectangleModule_a753c3c095b45a77d2fc86e21e490988e} 
+\index{renderer::RectangleModule@{renderer::RectangleModule}!getSize@{getSize}}
+\index{getSize@{getSize}!renderer::RectangleModule@{renderer::RectangleModule}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \& renderer\+::\+Rectangle\+Module\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classrenderer_1_1RectangleModule_abefad40a33680f92b9bd759cc62e3833}\label{classrenderer_1_1RectangleModule_abefad40a33680f92b9bd759cc62e3833} 
+\index{renderer::RectangleModule@{renderer::RectangleModule}!setFillColor@{setFillColor}}
+\index{setFillColor@{setFillColor}!renderer::RectangleModule@{renderer::RectangleModule}}
+\doxysubsubsection{\texorpdfstring{setFillColor()}{setFillColor()}}
+{\footnotesize\ttfamily void renderer\+::\+Rectangle\+Module\+::set\+Fill\+Color (\begin{DoxyParamCaption}\item[{const sf\+::\+Color \&}]{color }\end{DoxyParamCaption})}
+
+\Hypertarget{classrenderer_1_1RectangleModule_a5d1548a000d66a8f3a4c71e84972b37b}\label{classrenderer_1_1RectangleModule_a5d1548a000d66a8f3a4c71e84972b37b} 
+\index{renderer::RectangleModule@{renderer::RectangleModule}!setSize@{setSize}}
+\index{setSize@{setSize}!renderer::RectangleModule@{renderer::RectangleModule}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void renderer\+::\+Rectangle\+Module\+::set\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&}]{size }\end{DoxyParamCaption})}
+
+\Hypertarget{classrenderer_1_1RectangleModule_a0d238b3e13c5c81f7590b136ad2eb0c0}\label{classrenderer_1_1RectangleModule_a0d238b3e13c5c81f7590b136ad2eb0c0} 
+\index{renderer::RectangleModule@{renderer::RectangleModule}!update@{update}}
+\index{update@{update}!renderer::RectangleModule@{renderer::RectangleModule}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void renderer\+::\+Rectangle\+Module\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrenderer_1_1ModularEntityView}{Modular\+Entity\+View}} \&}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1RectangleModule_a0d238b3e13c5c81f7590b136ad2eb0c0_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classrenderer_1_1RectangleModule_a377e832916d74059ccf0a9e7cd38f89b}\label{classrenderer_1_1RectangleModule_a377e832916d74059ccf0a9e7cd38f89b} 
+\index{renderer::RectangleModule@{renderer::RectangleModule}!fillColor@{fillColor}}
+\index{fillColor@{fillColor}!renderer::RectangleModule@{renderer::RectangleModule}}
+\doxysubsubsection{\texorpdfstring{fillColor}{fillColor}}
+{\footnotesize\ttfamily sf\+::\+Color renderer\+::\+Rectangle\+Module\+::fill\+Color = sf\+::\+Color\+::\+Red}
+
+\Hypertarget{classrenderer_1_1RectangleModule_a5b1a0910e64ea966a58c4b5f718e93d9}\label{classrenderer_1_1RectangleModule_a5b1a0910e64ea966a58c4b5f718e93d9} 
+\index{renderer::RectangleModule@{renderer::RectangleModule}!size@{size}}
+\index{size@{size}!renderer::RectangleModule@{renderer::RectangleModule}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} renderer\+::\+Rectangle\+Module\+::size =\{0.\+1,0.\+1\}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/core/entity/modular/modules/\mbox{\hyperlink{RectangleModule_8h}{Rectangle\+Module.\+h}}\item 
+renderer/src/core/entity/modular/modules/\mbox{\hyperlink{RectangleModule_8cpp}{Rectangle\+Module.\+cpp}}\end{DoxyCompactItemize}

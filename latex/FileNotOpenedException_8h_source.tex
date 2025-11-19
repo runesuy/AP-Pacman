@@ -1,0 +1,33 @@
+\doxysection{File\+Not\+Opened\+Exception.\+h}
+\hypertarget{FileNotOpenedException_8h_source}{}\label{FileNotOpenedException_8h_source}\index{renderer/include/core/exceptions/FileNotOpenedException.h@{renderer/include/core/exceptions/FileNotOpenedException.h}}
+\mbox{\hyperlink{FileNotOpenedException_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/5/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_FILENOTOPENEDEXCEPTION\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_FILENOTOPENEDEXCEPTION\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1FileNotOpenedException}{FileNotOpenedException}}\ :\ \textcolor{keyword}{public}\ std::runtime\_error\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ std::string\ path;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classrenderer_1_1FileNotOpenedException_a04d160e5649473cb73ab297786911028}{FileNotOpenedException}}(\textcolor{keyword}{const}\ std::string\&\ path)\ :\ path(path),\ std::runtime\_error(}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Failed\ to\ open\ file\ at\ path:\ "{}}\ +\ path}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ )\{\};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{classrenderer_1_1FileNotOpenedException_a4bdd469395c570520f9b61fb21d6e43a}{getPath}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ path;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_FILENOTOPENEDEXCEPTION\_H}}
+
+\end{DoxyCode}

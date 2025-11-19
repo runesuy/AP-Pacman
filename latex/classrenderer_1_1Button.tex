@@ -1,0 +1,117 @@
+\doxysection{renderer\+::Button Class Reference}
+\hypertarget{classrenderer_1_1Button}{}\label{classrenderer_1_1Button}\index{renderer::Button@{renderer::Button}}
+
+
+{\ttfamily \#include $<$Button.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::Button\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classrenderer_1_1Button__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::Button\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classrenderer_1_1Button__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Button_a918eb9efe3f25e9be22ccb9eecdf50db}{get\+SFShapes}} (sf\+::\+Render\+Window \&window) override
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Button_a596db4cb3bdd79adc7e63af455df1e61}{get\+SFSprites}} (sf\+::\+Render\+Window \&window) override
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Button_add05e62ac67f5e94402a3fd13643c73c}{get\+SFTexts}} (sf\+::\+Render\+Window \&window) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1DrawObject}{renderer\+::\+Draw\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \& \mbox{\hyperlink{classrenderer_1_1DrawObject_a1317e66b07b34c0fa2fbf7472f45207e}{get\+Position}} () const
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&position)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de728}{draw}} (sf\+::\+Render\+Window \&window) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a UI button in the game. \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]finish implementation \end{DoxyRefDesc}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1Button_a918eb9efe3f25e9be22ccb9eecdf50db}\label{classrenderer_1_1Button_a918eb9efe3f25e9be22ccb9eecdf50db} 
+\index{renderer::Button@{renderer::Button}!getSFShapes@{getSFShapes}}
+\index{getSFShapes@{getSFShapes}!renderer::Button@{renderer::Button}}
+\doxysubsubsection{\texorpdfstring{getSFShapes()}{getSFShapes()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ renderer\+::\+Button\+::get\+SFShapes (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get the SFML shapes representing the draw object. \begin{DoxyWarning}{Warning}
+Use the \doxylink{classlogic_1_1Position}{logic\+::\+Position} and \doxylink{classlogic_1_1Size}{logic\+::\+Size} system when giving positions and sizes to the shapes. 
+
+positions are relative to the \doxylink{classrenderer_1_1DrawObject}{Draw\+Object} position. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1DrawObject_a9612dd69d98b224a4088b73b266a9716}{renderer\+::\+Draw\+Object}}.
+
+\Hypertarget{classrenderer_1_1Button_a596db4cb3bdd79adc7e63af455df1e61}\label{classrenderer_1_1Button_a596db4cb3bdd79adc7e63af455df1e61} 
+\index{renderer::Button@{renderer::Button}!getSFSprites@{getSFSprites}}
+\index{getSFSprites@{getSFSprites}!renderer::Button@{renderer::Button}}
+\doxysubsubsection{\texorpdfstring{getSFSprites()}{getSFSprites()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ renderer\+::\+Button\+::get\+SFSprites (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get the SFML sprites representing the draw object. \begin{DoxyWarning}{Warning}
+Use the \doxylink{classlogic_1_1Position}{logic\+::\+Position} and \doxylink{classlogic_1_1Size}{logic\+::\+Size} system when giving positions and sizes 
+
+positions are relative to the \doxylink{classrenderer_1_1DrawObject}{Draw\+Object} position. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1DrawObject_acac924ad07a7f2ee44bec57f13161c31}{renderer\+::\+Draw\+Object}}.
+
+\Hypertarget{classrenderer_1_1Button_add05e62ac67f5e94402a3fd13643c73c}\label{classrenderer_1_1Button_add05e62ac67f5e94402a3fd13643c73c} 
+\index{renderer::Button@{renderer::Button}!getSFTexts@{getSFTexts}}
+\index{getSFTexts@{getSFTexts}!renderer::Button@{renderer::Button}}
+\doxysubsubsection{\texorpdfstring{getSFTexts()}{getSFTexts()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ renderer\+::\+Button\+::get\+SFTexts (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get the SFML texts representing the draw object. \begin{DoxyWarning}{Warning}
+Use the \doxylink{classlogic_1_1Position}{logic\+::\+Position} and \doxylink{classlogic_1_1Size}{logic\+::\+Size} system when giving positions and sizes 
+
+positions are relative to the \doxylink{classrenderer_1_1DrawObject}{Draw\+Object} position. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1DrawObject_aa4d5616621231dc20620faa1dc5c1b6c}{renderer\+::\+Draw\+Object}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/core/drawable/ui/\mbox{\hyperlink{Button_8h}{Button.\+h}}\item 
+renderer/src/core/drawable/ui/\mbox{\hyperlink{Button_8cpp}{Button.\+cpp}}\end{DoxyCompactItemize}

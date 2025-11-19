@@ -1,0 +1,29 @@
+\doxysection{Default\+Texture\+Parser.\+h}
+\hypertarget{DefaultTextureParser_8h_source}{}\label{DefaultTextureParser_8h_source}\index{renderer/include/game/parsers/DefaultTextureParser.h@{renderer/include/game/parsers/DefaultTextureParser.h}}
+\mbox{\hyperlink{DefaultTextureParser_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/6/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_DEFAULTTEXTUREPARSER\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_DEFAULTTEXTUREPARSER\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ITextureParser_8h}{core/parser/ITextureParser.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1DefaultTextureParser}{DefaultTextureParser}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1ITextureParser}{ITextureParser}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ std::map<std::string,\ sf::Texture>\ \_textureCache;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ sf::Texture\&\ \mbox{\hyperlink{classrenderer_1_1DefaultTextureParser_a13c20f01390113f39df3ab0a56d451c1}{getTexture}}(\textcolor{keyword}{const}\ std::string\ \&name)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1DefaultTextureParser_acbc29caeb10668c094fcd593ed163bf7}{loadTextures}}(\textcolor{keyword}{const}\ std::string\&\ path,\ \textcolor{keyword}{const}\ std::map<std::string,\ sf::IntRect>\&\ textureRects)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ \ \ \ \ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_DEFAULTTEXTUREPARSER\_H}}
+
+\end{DoxyCode}

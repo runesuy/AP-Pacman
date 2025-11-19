@@ -1,0 +1,62 @@
+\doxysection{Moving\+Entity\+Model.\+h}
+\hypertarget{MovingEntityModel_8h_source}{}\label{MovingEntityModel_8h_source}\index{logic/include/game/entities/models/MovingEntityModel.h@{logic/include/game/entities/models/MovingEntityModel.h}}
+\mbox{\hyperlink{MovingEntityModel_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/8/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_MOVINGENTITYMODEL\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_MOVINGENTITYMODEL\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{EntityModel_8h}{core/entity/EntityModel.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Directions_8h}{core/entity/Directions.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ EntityModelType>}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1MovingEntityModel}{MovingEntityModel}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1EntityModel}{EntityModel}}<EntityModelType>\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ direction\ =\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52a20a55e99eb2e2128f8088d553b78afd5}{NONE}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ requestedDirection\ =\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52a20a55e99eb2e2128f8088d553b78afd5}{NONE}};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classlogic_1_1MovingEntityModel_aa6fca2f79efe199960c3e9e295a11936}{getSpeed}}()\ =\ 0;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1MovingEntityModel_a36a87400133117f50cba0f14d6f459e0}{setRequestedDirection}}(\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ requestedDirection);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ \mbox{\hyperlink{classlogic_1_1MovingEntityModel_a42bfb9c5c33d067b7f9795b36656bae3}{getRequestedDirection}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ \mbox{\hyperlink{classlogic_1_1MovingEntityModel_ac60a9bf73b3bbd94b6969cc14f142453}{getDirection}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1MovingEntityModel_a89594315ce13127378ab82a89f75e23b}{setDirection}}(\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ direction);}
+\DoxyCodeLine{00058\ \ \ \ \ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ IMPLEMENTATION\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\///}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ EntityModelType>}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1MovingEntityModel_a89594315ce13127378ab82a89f75e23b}{MovingEntityModel<EntityModelType>::setDirection}}(\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ direction)\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ MovingEntityModel::direction\ =\ direction;}
+\DoxyCodeLine{00066\ \ \ \ \ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ EntityModelType>}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ \mbox{\hyperlink{classlogic_1_1MovingEntityModel_ac60a9bf73b3bbd94b6969cc14f142453}{MovingEntityModel<EntityModelType>::getDirection}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ direction;}
+\DoxyCodeLine{00071\ \ \ \ \ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ EntityModelType>}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ \mbox{\hyperlink{classlogic_1_1MovingEntityModel_a42bfb9c5c33d067b7f9795b36656bae3}{MovingEntityModel<EntityModelType>::getRequestedDirection}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ requestedDirection;}
+\DoxyCodeLine{00076\ \ \ \ \ \};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ EntityModelType>}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1MovingEntityModel_a36a87400133117f50cba0f14d6f459e0}{MovingEntityModel<EntityModelType>::setRequestedDirection}}(\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ requestedDirection)\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ this-\/>requestedDirection\ =\ requestedDirection;}
+\DoxyCodeLine{00081\ \ \ \ \ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \}\ \textcolor{comment}{//\ logic}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_MOVINGENTITYMODEL\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,84 @@
+\doxysection{renderer\+::IEntity\+View\+Module Class Reference}
+\hypertarget{classrenderer_1_1IEntityViewModule}{}\label{classrenderer_1_1IEntityViewModule}\index{renderer::IEntityViewModule@{renderer::IEntityViewModule}}
+
+
+{\ttfamily \#include $<$IEntity\+View\+Module.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::IEntity\+View\+Module\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1IEntityViewModule__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::IEntity\+View\+Module\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classrenderer_1_1IEntityViewModule__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ \mbox{\hyperlink{classrenderer_1_1IEntityViewModule_a60e279032eb55ba2702cb6670d1a320b}{get\+SFShapes}} (sf\+::\+Render\+Window \&window) const =0
+\item 
+virtual std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ \mbox{\hyperlink{classrenderer_1_1IEntityViewModule_a15570ec73a55192317254f6b06e72908}{get\+SFSprites}} (sf\+::\+Render\+Window \&window) const =0
+\item 
+virtual std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ \mbox{\hyperlink{classrenderer_1_1IEntityViewModule_a0f703a56940857e995a47555b965fa53}{get\+SFTexts}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IObserver}{logic\+::\+IObserver$<$ Modular\+Entity\+View $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1IObserver_aa3736db37cb39a0e8f1570c7c3201b33}{\texorpdfstring{$\sim$}{\string~}\+IObserver}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_ac01efa8f0fbc7495847489c0a8651b28}{update}} (Modular\+Entity\+View \&subject)=0
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_aa1e644dd23114de669503363e1dff6e8}{update}} (Modular\+Entity\+View \&subject, const std\+::string \&event)
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_acdde4b1d124989fc652801832b036eea}{on\+Observable\+Destroyed}} (Modular\+Entity\+View \&subject)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1IEntityViewModule_a60e279032eb55ba2702cb6670d1a320b}\label{classrenderer_1_1IEntityViewModule_a60e279032eb55ba2702cb6670d1a320b} 
+\index{renderer::IEntityViewModule@{renderer::IEntityViewModule}!getSFShapes@{getSFShapes}}
+\index{getSFShapes@{getSFShapes}!renderer::IEntityViewModule@{renderer::IEntityViewModule}}
+\doxysubsubsection{\texorpdfstring{getSFShapes()}{getSFShapes()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ renderer\+::\+IEntity\+View\+Module\+::get\+SFShapes (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_ac6ad2866b80f9aa9e62a065e02322e6a}{renderer\+::\+Animated\+Sprite\+Module}}, \mbox{\hyperlink{classrenderer_1_1CircleModule_ae78361d480d1682c5b2b3aa48c6f6341}{renderer\+::\+Circle\+Module}}, \mbox{\hyperlink{classrenderer_1_1RectangleModule_aabaedadc1409354b6b06b7115045791c}{renderer\+::\+Rectangle\+Module}}, and \mbox{\hyperlink{classrenderer_1_1SpriteModule_a0ae8c58d621db47069044c01fadfffcc}{renderer\+::\+Sprite\+Module}}.
+
+\Hypertarget{classrenderer_1_1IEntityViewModule_a15570ec73a55192317254f6b06e72908}\label{classrenderer_1_1IEntityViewModule_a15570ec73a55192317254f6b06e72908} 
+\index{renderer::IEntityViewModule@{renderer::IEntityViewModule}!getSFSprites@{getSFSprites}}
+\index{getSFSprites@{getSFSprites}!renderer::IEntityViewModule@{renderer::IEntityViewModule}}
+\doxysubsubsection{\texorpdfstring{getSFSprites()}{getSFSprites()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ renderer\+::\+IEntity\+View\+Module\+::get\+SFSprites (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a5d8e5f53564f61c90dd44b317ddab40e}{renderer\+::\+Animated\+Sprite\+Module}}, \mbox{\hyperlink{classrenderer_1_1CircleModule_ace289f0279c1f2c1ccfeaaae9480ac1b}{renderer\+::\+Circle\+Module}}, \mbox{\hyperlink{classrenderer_1_1RectangleModule_a28c00a07bbebcd7e1517e467948c1b2e}{renderer\+::\+Rectangle\+Module}}, and \mbox{\hyperlink{classrenderer_1_1SpriteModule_a276af3683c0273b8733f76e8a5a0b276}{renderer\+::\+Sprite\+Module}}.
+
+\Hypertarget{classrenderer_1_1IEntityViewModule_a0f703a56940857e995a47555b965fa53}\label{classrenderer_1_1IEntityViewModule_a0f703a56940857e995a47555b965fa53} 
+\index{renderer::IEntityViewModule@{renderer::IEntityViewModule}!getSFTexts@{getSFTexts}}
+\index{getSFTexts@{getSFTexts}!renderer::IEntityViewModule@{renderer::IEntityViewModule}}
+\doxysubsubsection{\texorpdfstring{getSFTexts()}{getSFTexts()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ renderer\+::\+IEntity\+View\+Module\+::get\+SFTexts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a5d90107ab5ce63d957ad24a6a2867bac}{renderer\+::\+Animated\+Sprite\+Module}}, \mbox{\hyperlink{classrenderer_1_1CircleModule_a6dadb3f1371d505947c03f1f3224e460}{renderer\+::\+Circle\+Module}}, \mbox{\hyperlink{classrenderer_1_1RectangleModule_aa744d31a217b78ed0fdd7d977907c14c}{renderer\+::\+Rectangle\+Module}}, and \mbox{\hyperlink{classrenderer_1_1SpriteModule_a92b37cfd12b63c79bfa6246c84f0a550}{renderer\+::\+Sprite\+Module}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/core/entity/modular/\mbox{\hyperlink{IEntityViewModule_8h}{IEntity\+View\+Module.\+h}}\end{DoxyCompactItemize}

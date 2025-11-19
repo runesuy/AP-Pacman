@@ -1,0 +1,29 @@
+\doxysection{Button.\+h}
+\hypertarget{Button_8h_source}{}\label{Button_8h_source}\index{renderer/include/core/drawable/ui/Button.h@{renderer/include/core/drawable/ui/Button.h}}
+\mbox{\hyperlink{Button_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/5/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_BUTTON\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_BUTTON\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{DrawObject_8h}{core/drawable/DrawObject.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1Button}{Button}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1DrawObject}{DrawObject}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Shape>>\ \mbox{\hyperlink{classrenderer_1_1Button_a918eb9efe3f25e9be22ccb9eecdf50db}{getSFShapes}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<sf::Sprite>>\ \mbox{\hyperlink{classrenderer_1_1Button_a596db4cb3bdd79adc7e63af455df1e61}{getSFSprites}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Text>>\ \mbox{\hyperlink{classrenderer_1_1Button_add05e62ac67f5e94402a3fd13643c73c}{getSFTexts}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ \ \ \ \ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_BUTTON\_H}}
+
+\end{DoxyCode}

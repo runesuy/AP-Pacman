@@ -1,0 +1,27 @@
+\doxysection{Default\+Factory\+Collection.\+h}
+\hypertarget{DefaultFactoryCollection_8h_source}{}\label{DefaultFactoryCollection_8h_source}\index{renderer/include/game/factories/DefaultFactoryCollection.h@{renderer/include/game/factories/DefaultFactoryCollection.h}}
+\mbox{\hyperlink{DefaultFactoryCollection_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/4/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_DEFAULTFACTORYCOLLECTION\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_DEFAULTFACTORYCOLLECTION\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IFactoryCollection_8h}{core/factories/IFactoryCollection.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1DefaultFactoryCollection}{DefaultFactoryCollection}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IFactoryCollection}{IFactoryCollection}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ std::unique\_ptr<StateManagerFactory>\ \mbox{\hyperlink{classrenderer_1_1DefaultFactoryCollection_a955108cbcc43c98447e0ac8bc123c3b8}{getStateManagerFactory}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ std::unique\_ptr<IStateFactory>\ \mbox{\hyperlink{classrenderer_1_1DefaultFactoryCollection_a2d6c4ab93813bebdd39cf8ceca83ec6f}{getStateFactory}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00017\ \ \ \ \ \};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_DEFAULTFACTORYCOLLECTION\_H}}
+
+\end{DoxyCode}

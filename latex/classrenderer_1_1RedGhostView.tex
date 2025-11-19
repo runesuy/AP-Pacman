@@ -1,0 +1,192 @@
+\doxysection{renderer\+::Red\+Ghost\+View Class Reference}
+\hypertarget{classrenderer_1_1RedGhostView}{}\label{classrenderer_1_1RedGhostView}\index{renderer::RedGhostView@{renderer::RedGhostView}}
+
+
+{\ttfamily \#include $<$Red\+Ghost\+View.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::Red\+Ghost\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1RedGhostView__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::Red\+Ghost\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1RedGhostView__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrenderer_1_1RedGhostView_a39acb71e2d4e43f782bd443730cd4b84}{Red\+Ghost\+View}} ()
+\item 
+void \mbox{\hyperlink{classrenderer_1_1RedGhostView_a037112eb107a07f9b2328d4ba2a0fe4c}{update}} (\mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} \&subject) override
+\item 
+bool \mbox{\hyperlink{classrenderer_1_1RedGhostView_a7e06cca532318f93fb724d910a77b1ed}{is\+Marked\+For\+Removal}} () override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1RedGhostView_a1ea75d3440b5369072f508fe5c5a20d7}{mark\+For\+Removal}} ()
+\item 
+void \mbox{\hyperlink{classrenderer_1_1RedGhostView_a8622208079b3f90f2c9de06708065694}{set\+Size}} (const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&size) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1RedGhostView_a487a1e192b0fdd65b566eb6a0a73352a}{set\+Direction}} (\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{logic\+::\+Direction}} direction)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1ModularEntityView}{renderer\+::\+Modular\+Entity\+View}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ \mbox{\hyperlink{classrenderer_1_1ModularEntityView_aa7574935c99ca248d974cb51a1bf4726}{get\+SFShapes}} (sf\+::\+Render\+Window \&window) override
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ \mbox{\hyperlink{classrenderer_1_1ModularEntityView_aa73af8952f79fc94f61ac05b8b1672ad}{get\+SFSprites}} (sf\+::\+Render\+Window \&window) override
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ \mbox{\hyperlink{classrenderer_1_1ModularEntityView_a97e430746a6ae2cfb8d7b98a9bea9658}{get\+SFTexts}} (sf\+::\+Render\+Window \&window) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1ModularEntityView_ad01af13e596e5ba0f121343774c303e3}{add\+Module}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IEntityViewModule}{IEntity\+View\+Module}} $>$ module)
+\item 
+{\footnotesize template$<$Is\+Module\+Type T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classrenderer_1_1ModularEntityView_a301fd6ed3f229c71997575c71d871e8e}{get\+Module}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1EntityView}{renderer\+::\+Entity\+View}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \& \mbox{\hyperlink{classrenderer_1_1EntityView_a4b2d240028a5fadd9f9bda861306bcf4}{get\+Size}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1DrawObject}{renderer\+::\+Draw\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \& \mbox{\hyperlink{classrenderer_1_1DrawObject_a1317e66b07b34c0fa2fbf7472f45207e}{get\+Position}} () const
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&position)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de728}{draw}} (sf\+::\+Render\+Window \&window) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ Modular\+Entity\+View $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_afd56bfb66920d8e1d38a3ac3259e85d9}{update\+Observers}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_a73e3a3b1f7ffdd12ffa269541a551ec6}{update\+Observers}} (const std\+::string \&event)
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1Observable_a1f7f0337470804741ddd21ffe82103c1}{\texorpdfstring{$\sim$}{\string~}\+Observable}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_afb2547e65fdf6b4c090f5170df4bf66d}{add\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ Modular\+Entity\+View $>$ $>$ \&observer)
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Observable_ad7cb2d9214c5dd7f5aa8a36ef7ce43b9}{has\+Observers}} () const
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Observable_a54bfc543d21f11be7137efce418394c2}{has\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ Modular\+Entity\+View $>$ $>$ \&observer) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IObserver}{logic\+::\+IObserver$<$ logic\+::\+Ghost\+Model $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1IObserver_aa3736db37cb39a0e8f1570c7c3201b33}{\texorpdfstring{$\sim$}{\string~}\+IObserver}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_aa1e644dd23114de669503363e1dff6e8}{update}} (\mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} \&subject, const std\+::string \&event)
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_acdde4b1d124989fc652801832b036eea}{on\+Observable\+Destroyed}} (\mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} \&subject)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ Modular\+Entity\+View $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classlogic_1_1Observable_a637139aff6f941cdc9096713a3f38ea7}{Event\+Type}} 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrenderer_1_1RedGhostView_a39acb71e2d4e43f782bd443730cd4b84}\label{classrenderer_1_1RedGhostView_a39acb71e2d4e43f782bd443730cd4b84} 
+\index{renderer::RedGhostView@{renderer::RedGhostView}!RedGhostView@{RedGhostView}}
+\index{RedGhostView@{RedGhostView}!renderer::RedGhostView@{renderer::RedGhostView}}
+\doxysubsubsection{\texorpdfstring{RedGhostView()}{RedGhostView()}}
+{\footnotesize\ttfamily renderer\+::\+Red\+Ghost\+View\+::\+Red\+Ghost\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1RedGhostView_a39acb71e2d4e43f782bd443730cd4b84_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1RedGhostView_a7e06cca532318f93fb724d910a77b1ed}\label{classrenderer_1_1RedGhostView_a7e06cca532318f93fb724d910a77b1ed} 
+\index{renderer::RedGhostView@{renderer::RedGhostView}!isMarkedForRemoval@{isMarkedForRemoval}}
+\index{isMarkedForRemoval@{isMarkedForRemoval}!renderer::RedGhostView@{renderer::RedGhostView}}
+\doxysubsubsection{\texorpdfstring{isMarkedForRemoval()}{isMarkedForRemoval()}}
+{\footnotesize\ttfamily bool renderer\+::\+Red\+Ghost\+View\+::is\+Marked\+For\+Removal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IWorldObjectView_ad486098155a47b33991193ee5e7311a3}{renderer\+::\+IWorld\+Object\+View}}.
+
+\Hypertarget{classrenderer_1_1RedGhostView_a1ea75d3440b5369072f508fe5c5a20d7}\label{classrenderer_1_1RedGhostView_a1ea75d3440b5369072f508fe5c5a20d7} 
+\index{renderer::RedGhostView@{renderer::RedGhostView}!markForRemoval@{markForRemoval}}
+\index{markForRemoval@{markForRemoval}!renderer::RedGhostView@{renderer::RedGhostView}}
+\doxysubsubsection{\texorpdfstring{markForRemoval()}{markForRemoval()}}
+{\footnotesize\ttfamily void renderer\+::\+Red\+Ghost\+View\+::mark\+For\+Removal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classrenderer_1_1RedGhostView_a487a1e192b0fdd65b566eb6a0a73352a}\label{classrenderer_1_1RedGhostView_a487a1e192b0fdd65b566eb6a0a73352a} 
+\index{renderer::RedGhostView@{renderer::RedGhostView}!setDirection@{setDirection}}
+\index{setDirection@{setDirection}!renderer::RedGhostView@{renderer::RedGhostView}}
+\doxysubsubsection{\texorpdfstring{setDirection()}{setDirection()}}
+{\footnotesize\ttfamily void renderer\+::\+Red\+Ghost\+View\+::set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{logic\+::\+Direction}}}]{direction }\end{DoxyParamCaption})}
+
+\Hypertarget{classrenderer_1_1RedGhostView_a8622208079b3f90f2c9de06708065694}\label{classrenderer_1_1RedGhostView_a8622208079b3f90f2c9de06708065694} 
+\index{renderer::RedGhostView@{renderer::RedGhostView}!setSize@{setSize}}
+\index{setSize@{setSize}!renderer::RedGhostView@{renderer::RedGhostView}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void renderer\+::\+Red\+Ghost\+View\+::set\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Set the size of the entity view. 
+\begin{DoxyParams}{Parameters}
+{\em size} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrenderer_1_1EntityView_ab1a10febe0d9e2415040418075de0217}{renderer\+::\+Entity\+View}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classrenderer_1_1RedGhostView_a8622208079b3f90f2c9de06708065694_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1RedGhostView_a037112eb107a07f9b2328d4ba2a0fe4c}\label{classrenderer_1_1RedGhostView_a037112eb107a07f9b2328d4ba2a0fe4c} 
+\index{renderer::RedGhostView@{renderer::RedGhostView}!update@{update}}
+\index{update@{update}!renderer::RedGhostView@{renderer::RedGhostView}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void renderer\+::\+Red\+Ghost\+View\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} \&}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called when the subject being observed has changed. 
+\begin{DoxyParams}{Parameters}
+{\em subject} & The subject being observed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1IObserver_ac01efa8f0fbc7495847489c0a8651b28}{logic\+::\+IObserver$<$ logic\+::\+Ghost\+Model $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1RedGhostView_a037112eb107a07f9b2328d4ba2a0fe4c_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/game/entities/views/\mbox{\hyperlink{RedGhostView_8h}{Red\+Ghost\+View.\+h}}\item 
+renderer/src/game/entities/views/\mbox{\hyperlink{RedGhostView_8cpp}{Red\+Ghost\+View.\+cpp}}\end{DoxyCompactItemize}

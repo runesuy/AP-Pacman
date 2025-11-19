@@ -1,0 +1,37 @@
+\doxysection{IApp\+Config.\+h}
+\hypertarget{IAppConfig_8h_source}{}\label{IAppConfig_8h_source}\index{renderer/include/core/config/IAppConfig.h@{renderer/include/core/config/IAppConfig.h}}
+\mbox{\hyperlink{IAppConfig_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/5/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_IAPPCONFIG\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_IAPPCONFIG\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IFactoryCollection_8h}{core/factories/IFactoryCollection.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IConfigParser_8h}{core/parser/IConfigParser.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ITextureParser_8h}{core/parser/ITextureParser.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1IAppConfig}{IAppConfig}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classrenderer_1_1IFactoryCollection}{IFactoryCollection}}\&\ \mbox{\hyperlink{classrenderer_1_1IAppConfig_ab7b6ad3a0353d446bb2b949252eff4ae}{getFactoryCollection}}()\ =\ 0;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classrenderer_1_1IConfigParser}{IConfigParser}}\&\ \mbox{\hyperlink{classrenderer_1_1IAppConfig_acd98f1464689097106ae58709e619c9c}{getConfigParser}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classrenderer_1_1IConfigParser}{IConfigParser}}\&\ \mbox{\hyperlink{classrenderer_1_1IAppConfig_ae48462aa8460a5e2ac61d25fea58c628}{getConfigParser}}()\ =\ 0;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1IConfig}{logic::IConfig}}\ \&\ \mbox{\hyperlink{classrenderer_1_1IAppConfig_a851a6789f451f0ce8908a446727f366b}{getLogicConfig}}()\ \textcolor{keyword}{const}\ =0;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classrenderer_1_1ITextureParser}{ITextureParser}}\&\ \mbox{\hyperlink{classrenderer_1_1IAppConfig_ad295d5bc4c32cc78998e8bb531ff9ff4}{getTextureParser}}()\ \textcolor{keyword}{const}\ =0;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classrenderer_1_1ITextureParser}{ITextureParser}}\&\ \mbox{\hyperlink{classrenderer_1_1IAppConfig_a6c00f2f957cfc3c4493726b785b91488}{getTextureParser}}()\ =0;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classrenderer_1_1IAppConfig_aa3cdf0e6760964616aa9359e6c37ff4f}{\string~IAppConfig}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00051\ \ \ \ \ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_IAPPCONFIG\_H}}
+
+\end{DoxyCode}

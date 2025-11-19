@@ -1,0 +1,69 @@
+\doxysection{renderer\+::IState\+Input\+Handler Class Reference}
+\hypertarget{classrenderer_1_1IStateInputHandler}{}\label{classrenderer_1_1IStateInputHandler}\index{renderer::IStateInputHandler@{renderer::IStateInputHandler}}
+
+
+{\ttfamily \#include $<$IState\+Input\+Handler.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::IState\+Input\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1IStateInputHandler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::IState\+Input\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classrenderer_1_1IStateInputHandler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classrenderer_1_1IStateInputHandler_a876593bd0283d695d4ed49fd53b0c53a}{process\+Input}} (sf\+::\+Event \&event, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager, \mbox{\hyperlink{classrenderer_1_1IState}{IState}} \&state)=0
+\item 
+void \mbox{\hyperlink{classrenderer_1_1IStateInputHandler_afd6f5e2fb75ae0c57ed649007b434a28}{process\+Input}} (sf\+::\+Event \&event) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1IInputHandler}{renderer\+::\+IInput\+Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classrenderer_1_1IInputHandler_ac8f33e6a9115d6af37fe632e72b553cd}{\texorpdfstring{$\sim$}{\string~}\+IInput\+Handler}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for handling input specific to a game state. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1IStateInputHandler_afd6f5e2fb75ae0c57ed649007b434a28}\label{classrenderer_1_1IStateInputHandler_afd6f5e2fb75ae0c57ed649007b434a28} 
+\index{renderer::IStateInputHandler@{renderer::IStateInputHandler}!processInput@{processInput}}
+\index{processInput@{processInput}!renderer::IStateInputHandler@{renderer::IStateInputHandler}}
+\doxysubsubsection{\texorpdfstring{processInput()}{processInput()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void renderer\+::\+IState\+Input\+Handler\+::process\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IInputHandler_a720663b29dfb041da4d8bae6d5cf5188}{renderer\+::\+IInput\+Handler}}.
+
+\Hypertarget{classrenderer_1_1IStateInputHandler_a876593bd0283d695d4ed49fd53b0c53a}\label{classrenderer_1_1IStateInputHandler_a876593bd0283d695d4ed49fd53b0c53a} 
+\index{renderer::IStateInputHandler@{renderer::IStateInputHandler}!processInput@{processInput}}
+\index{processInput@{processInput}!renderer::IStateInputHandler@{renderer::IStateInputHandler}}
+\doxysubsubsection{\texorpdfstring{processInput()}{processInput()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void renderer\+::\+IState\+Input\+Handler\+::process\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event,  }\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager,  }\item[{\mbox{\hyperlink{classrenderer_1_1IState}{IState}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1LevelInputHandler_ac7797c26768d36454a8f775be580299f}{renderer\+::\+Level\+Input\+Handler}}, and \mbox{\hyperlink{classrenderer_1_1MenuInputHandler_a5fb4765897eda877e76471ce38b807c3}{renderer\+::\+Menu\+Input\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/core/states/\mbox{\hyperlink{IStateInputHandler_8h}{IState\+Input\+Handler.\+h}}\end{DoxyCompactItemize}

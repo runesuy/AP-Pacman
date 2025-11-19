@@ -1,0 +1,124 @@
+\doxysection{logic\+::Sized\+World\+Object Class Reference}
+\hypertarget{classlogic_1_1SizedWorldObject}{}\label{classlogic_1_1SizedWorldObject}\index{logic::SizedWorldObject@{logic::SizedWorldObject}}
+
+
+{\ttfamily \#include $<$Sized\+World\+Object.\+h$>$}
+
+
+
+Inheritance diagram for logic\+::Sized\+World\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1SizedWorldObject__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for logic\+::Sized\+World\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classlogic_1_1SizedWorldObject__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2}{Collision\+Type}} = int
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a779988657f15c88c046d48d44eb1fba9}{set\+Size}} (const \mbox{\hyperlink{classlogic_1_1Size}{Size}} \&size)
+\item 
+\mbox{\hyperlink{classlogic_1_1Size}{Size}} \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a35d3332f6e228334cd195bb9af478cbd}{get\+Size}} () const
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1SizedWorldObject_ae86060174dd100f02773f55bf97450a1}{on\+Collision}} (const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other)
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2}{Collision\+Type}} \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a2aa2949b03b2ec7087cfdf942d2ad1b4}{get\+Collision\+Type}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1WorldObject}{logic\+::\+World\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \& \mbox{\hyperlink{classlogic_1_1WorldObject_aac0f498afeff654fee790e435617de04}{get\+Position}} () const
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1WorldObject_ae414bee61532c20edbaf252f5dbeae74}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&position)
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1WorldObject_a6d7bf1f5aa8e0fc8763bf2551871489c}{update}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world)=0
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1WorldObject_ad57fa60da3633757434ef70a266f8e14}{mark\+For\+Removal}} ()
+\item 
+bool \mbox{\hyperlink{classlogic_1_1WorldObject_adae3a3c45f13113f3ebcbdaed7190770}{is\+Marked\+For\+Removal}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A world object containing a size and able to handle collisions. 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2}\label{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2} 
+\index{logic::SizedWorldObject@{logic::SizedWorldObject}!CollisionType@{CollisionType}}
+\index{CollisionType@{CollisionType}!logic::SizedWorldObject@{logic::SizedWorldObject}}
+\doxysubsubsection{\texorpdfstring{CollisionType}{CollisionType}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2}{logic\+::\+Sized\+World\+Object\+::\+Collision\+Type}} =  int}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1SizedWorldObject_a2aa2949b03b2ec7087cfdf942d2ad1b4}\label{classlogic_1_1SizedWorldObject_a2aa2949b03b2ec7087cfdf942d2ad1b4} 
+\index{logic::SizedWorldObject@{logic::SizedWorldObject}!getCollisionType@{getCollisionType}}
+\index{getCollisionType@{getCollisionType}!logic::SizedWorldObject@{logic::SizedWorldObject}}
+\doxysubsubsection{\texorpdfstring{getCollisionType()}{getCollisionType()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2}{Collision\+Type}} logic\+::\+Sized\+World\+Object\+::get\+Collision\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Return the ID type for collisions. Can be used to identify the other colliding object. \begin{DoxyReturn}{Returns}
+-\/1 by default. 
+\end{DoxyReturn}
+\Hypertarget{classlogic_1_1SizedWorldObject_a35d3332f6e228334cd195bb9af478cbd}\label{classlogic_1_1SizedWorldObject_a35d3332f6e228334cd195bb9af478cbd} 
+\index{logic::SizedWorldObject@{logic::SizedWorldObject}!getSize@{getSize}}
+\index{getSize@{getSize}!logic::SizedWorldObject@{logic::SizedWorldObject}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1Size}{Size}} logic\+::\+Sized\+World\+Object\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The size of the object. 
+\end{DoxyReturn}
+\Hypertarget{classlogic_1_1SizedWorldObject_ae86060174dd100f02773f55bf97450a1}\label{classlogic_1_1SizedWorldObject_ae86060174dd100f02773f55bf97450a1} 
+\index{logic::SizedWorldObject@{logic::SizedWorldObject}!onCollision@{onCollision}}
+\index{onCollision@{onCollision}!logic::SizedWorldObject@{logic::SizedWorldObject}}
+\doxysubsubsection{\texorpdfstring{onCollision()}{onCollision()}}
+{\footnotesize\ttfamily virtual void logic\+::\+Sized\+World\+Object\+::on\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Handle a collision with other. 
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}{logic\+::\+Entity\+Model$<$ Derived $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}{logic\+::\+Entity\+Model$<$ Coin\+Model $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}{logic\+::\+Entity\+Model$<$ Entity\+Model\+Type $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}{logic\+::\+Entity\+Model$<$ Ghost\+Model $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}{logic\+::\+Entity\+Model$<$ Player\+Model $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}{logic\+::\+Entity\+Model$<$ Powerup\+Model $>$}}, and \mbox{\hyperlink{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}{logic\+::\+Entity\+Model$<$ Wall\+Model $>$}}.
+
+\Hypertarget{classlogic_1_1SizedWorldObject_a779988657f15c88c046d48d44eb1fba9}\label{classlogic_1_1SizedWorldObject_a779988657f15c88c046d48d44eb1fba9} 
+\index{logic::SizedWorldObject@{logic::SizedWorldObject}!setSize@{setSize}}
+\index{setSize@{setSize}!logic::SizedWorldObject@{logic::SizedWorldObject}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void logic\+::\+Sized\+World\+Object\+::set\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Size}{Size}} \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sets the size of the object. 
+\begin{DoxyParams}{Parameters}
+{\em size} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classlogic_1_1CoinModel_accad02ca7c67b16d3d24b53aeb2bfd17}{logic\+::\+Coin\+Model}}, \mbox{\hyperlink{classlogic_1_1GhostModel_afac1e9b8ff51aa840c87fe7936d7a477}{logic\+::\+Ghost\+Model}}, \mbox{\hyperlink{classlogic_1_1PlayerModel_a7f0a16442d85d987d4a2472737d674d8}{logic\+::\+Player\+Model}}, \mbox{\hyperlink{classlogic_1_1PowerupModel_abe2451f06cbbf66170665b8412192f9d}{logic\+::\+Powerup\+Model}}, and \mbox{\hyperlink{classlogic_1_1WallModel_afdfd21314b2fac7753fbe26d5df66d8c}{logic\+::\+Wall\+Model}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+logic/include/core/world/\mbox{\hyperlink{SizedWorldObject_8h}{Sized\+World\+Object.\+h}}\item 
+logic/src/core/world/\mbox{\hyperlink{SizedWorldObject_8cpp}{Sized\+World\+Object.\+cpp}}\end{DoxyCompactItemize}

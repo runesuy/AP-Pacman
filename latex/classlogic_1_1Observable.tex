@@ -1,0 +1,115 @@
+\doxysection{logic\+::Observable\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classlogic_1_1Observable}{}\label{classlogic_1_1Observable}\index{logic::Observable$<$ T $>$@{logic::Observable$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Observable.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classlogic_1_1Observable_a637139aff6f941cdc9096713a3f38ea7}{Event\+Type}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_afd56bfb66920d8e1d38a3ac3259e85d9}{update\+Observers}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_a73e3a3b1f7ffdd12ffa269541a551ec6}{update\+Observers}} (const std\+::string \&event)
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1Observable_a1f7f0337470804741ddd21ffe82103c1}{\texorpdfstring{$\sim$}{\string~}\+Observable}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_afb2547e65fdf6b4c090f5170df4bf66d}{add\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ T $>$ $>$ \&observer)
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Observable_ad7cb2d9214c5dd7f5aa8a36ef7ce43b9}{has\+Observers}} () const
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Observable_a54bfc543d21f11be7137efce418394c2}{has\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ T $>$ $>$ \&observer) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class logic\+::\+Observable$<$ T $>$}
+An class containing observing logic for integrating with the \doxylink{classlogic_1_1IObserver}{IObserver} class. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classlogic_1_1Observable_a637139aff6f941cdc9096713a3f38ea7}\label{classlogic_1_1Observable_a637139aff6f941cdc9096713a3f38ea7} 
+\index{logic::Observable$<$ T $>$@{logic::Observable$<$ T $>$}!EventType@{EventType}}
+\index{EventType@{EventType}!logic::Observable$<$ T $>$@{logic::Observable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{EventType}{EventType}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+enum \mbox{\hyperlink{classlogic_1_1Observable_a637139aff6f941cdc9096713a3f38ea7}{logic\+::\+Observable\+::\+Event\+Type}}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classlogic_1_1Observable_a1f7f0337470804741ddd21ffe82103c1}\label{classlogic_1_1Observable_a1f7f0337470804741ddd21ffe82103c1} 
+\index{logic::Observable$<$ T $>$@{logic::Observable$<$ T $>$}!````~Observable@{\texorpdfstring{$\sim$}{\string~}Observable}}
+\index{````~Observable@{\texorpdfstring{$\sim$}{\string~}Observable}!logic::Observable$<$ T $>$@{logic::Observable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Observable()}{\string~Observable()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classlogic_1_1Observable}{Observable}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1Observable_afb2547e65fdf6b4c090f5170df4bf66d}\label{classlogic_1_1Observable_afb2547e65fdf6b4c090f5170df4bf66d} 
+\index{logic::Observable$<$ T $>$@{logic::Observable$<$ T $>$}!addObserver@{addObserver}}
+\index{addObserver@{addObserver}!logic::Observable$<$ T $>$@{logic::Observable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{addObserver()}{addObserver()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable}}$<$ T $>$\+::add\+Observer (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ T $>$ $>$ \&}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add an observer to this observable. 
+\begin{DoxyParams}{Parameters}
+{\em observer} & The observer to add \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlogic_1_1Observable_a54bfc543d21f11be7137efce418394c2}\label{classlogic_1_1Observable_a54bfc543d21f11be7137efce418394c2} 
+\index{logic::Observable$<$ T $>$@{logic::Observable$<$ T $>$}!hasObserver@{hasObserver}}
+\index{hasObserver@{hasObserver}!logic::Observable$<$ T $>$@{logic::Observable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{hasObserver()}{hasObserver()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable}}$<$ T $>$\+::has\+Observer (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ T $>$ $>$ \&}]{observer }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if observer is among observers 
+\end{DoxyReturn}
+\Hypertarget{classlogic_1_1Observable_ad7cb2d9214c5dd7f5aa8a36ef7ce43b9}\label{classlogic_1_1Observable_ad7cb2d9214c5dd7f5aa8a36ef7ce43b9} 
+\index{logic::Observable$<$ T $>$@{logic::Observable$<$ T $>$}!hasObservers@{hasObservers}}
+\index{hasObservers@{hasObservers}!logic::Observable$<$ T $>$@{logic::Observable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{hasObservers()}{hasObservers()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable}}$<$ T $>$\+::has\+Observers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+true if this has any observers 
+\end{DoxyReturn}
+\Hypertarget{classlogic_1_1Observable_afd56bfb66920d8e1d38a3ac3259e85d9}\label{classlogic_1_1Observable_afd56bfb66920d8e1d38a3ac3259e85d9} 
+\index{logic::Observable$<$ T $>$@{logic::Observable$<$ T $>$}!updateObservers@{updateObservers}}
+\index{updateObservers@{updateObservers}!logic::Observable$<$ T $>$@{logic::Observable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{updateObservers()}{updateObservers()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable}}$<$ T $>$\+::update\+Observers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Call update in all observers. \Hypertarget{classlogic_1_1Observable_a73e3a3b1f7ffdd12ffa269541a551ec6}\label{classlogic_1_1Observable_a73e3a3b1f7ffdd12ffa269541a551ec6} 
+\index{logic::Observable$<$ T $>$@{logic::Observable$<$ T $>$}!updateObservers@{updateObservers}}
+\index{updateObservers@{updateObservers}!logic::Observable$<$ T $>$@{logic::Observable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{updateObservers()}{updateObservers()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable}}$<$ T $>$\+::update\+Observers (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{event }\end{DoxyParamCaption})}
+
+Update all observers with an event. 
+\begin{DoxyParams}{Parameters}
+{\em event} & String event passed to observers. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+logic/include/core/observer/\mbox{\hyperlink{Observable_8h}{Observable.\+h}}\end{DoxyCompactItemize}

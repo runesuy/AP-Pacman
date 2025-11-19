@@ -1,0 +1,169 @@
+\doxysection{logic\+::Score Class Reference}
+\hypertarget{classlogic_1_1Score}{}\label{classlogic_1_1Score}\index{logic::Score@{logic::Score}}
+
+
+{\ttfamily \#include $<$Score.\+h$>$}
+
+
+
+Inheritance diagram for logic\+::Score\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classlogic_1_1Score__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for logic\+::Score\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classlogic_1_1Score__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlogic_1_1Score_a24a5466920e34282c89abee1c32373dc}{on\+Tick}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Score_a7dc0b66e765a991456c0402e4b31af2b}{update}} (\mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&subject) override
+\item 
+void \mbox{\hyperlink{classlogic_1_1Score_a8ddf617fcf22907fdc8a825977cdc493}{update}} (\mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&subject, const std\+::string \&event) override
+\item 
+void \mbox{\hyperlink{classlogic_1_1Score_af32572540e3ddef5ede0577a0a44aad2}{load\+High\+Scores}} (const std\+::string \&filename)
+\item 
+void \mbox{\hyperlink{classlogic_1_1Score_ab8f20a55b09c9b7b790578615ce4e562}{save\+High\+Scores}} (const std\+::string \&filename) const
+\item 
+int \mbox{\hyperlink{classlogic_1_1Score_a264f12c58423d957ee7ff023a3e7561e}{get\+Score}} () const
+\item 
+void \mbox{\hyperlink{classlogic_1_1Score_a79f2b2bd442436d8cb8ac64a915fee76}{set\+Score}} (int score)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IObserver}{logic\+::\+IObserver$<$ Player\+Model $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1IObserver_aa3736db37cb39a0e8f1570c7c3201b33}{\texorpdfstring{$\sim$}{\string~}\+IObserver}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_acdde4b1d124989fc652801832b036eea}{on\+Observable\+Destroyed}} (\mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&subject)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ Score $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_afd56bfb66920d8e1d38a3ac3259e85d9}{update\+Observers}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_a73e3a3b1f7ffdd12ffa269541a551ec6}{update\+Observers}} (const std\+::string \&event)
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1Observable_a1f7f0337470804741ddd21ffe82103c1}{\texorpdfstring{$\sim$}{\string~}\+Observable}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_afb2547e65fdf6b4c090f5170df4bf66d}{add\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ \mbox{\hyperlink{classlogic_1_1Score}{Score}} $>$ $>$ \&observer)
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Observable_ad7cb2d9214c5dd7f5aa8a36ef7ce43b9}{has\+Observers}} () const
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Observable_a54bfc543d21f11be7137efce418394c2}{has\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ \mbox{\hyperlink{classlogic_1_1Score}{Score}} $>$ $>$ \&observer) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ Score $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classlogic_1_1Observable_a637139aff6f941cdc9096713a3f38ea7}{Event\+Type}} 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An observer class to track and manage the player\textquotesingle{}s score. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1Score_a264f12c58423d957ee7ff023a3e7561e}\label{classlogic_1_1Score_a264f12c58423d957ee7ff023a3e7561e} 
+\index{logic::Score@{logic::Score}!getScore@{getScore}}
+\index{getScore@{getScore}!logic::Score@{logic::Score}}
+\doxysubsubsection{\texorpdfstring{getScore()}{getScore()}}
+{\footnotesize\ttfamily int logic\+::\+Score\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The current score. 
+\end{DoxyReturn}
+\Hypertarget{classlogic_1_1Score_af32572540e3ddef5ede0577a0a44aad2}\label{classlogic_1_1Score_af32572540e3ddef5ede0577a0a44aad2} 
+\index{logic::Score@{logic::Score}!loadHighScores@{loadHighScores}}
+\index{loadHighScores@{loadHighScores}!logic::Score@{logic::Score}}
+\doxysubsubsection{\texorpdfstring{loadHighScores()}{loadHighScores()}}
+{\footnotesize\ttfamily void logic\+::\+Score\+::load\+High\+Scores (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Load the highscores from file. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlogic_1_1Score_a24a5466920e34282c89abee1c32373dc}\label{classlogic_1_1Score_a24a5466920e34282c89abee1c32373dc} 
+\index{logic::Score@{logic::Score}!onTick@{onTick}}
+\index{onTick@{onTick}!logic::Score@{logic::Score}}
+\doxysubsubsection{\texorpdfstring{onTick()}{onTick()}}
+{\footnotesize\ttfamily void logic\+::\+Score\+::on\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Called on each tick. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1Score_a24a5466920e34282c89abee1c32373dc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlogic_1_1Score_ab8f20a55b09c9b7b790578615ce4e562}\label{classlogic_1_1Score_ab8f20a55b09c9b7b790578615ce4e562} 
+\index{logic::Score@{logic::Score}!saveHighScores@{saveHighScores}}
+\index{saveHighScores@{saveHighScores}!logic::Score@{logic::Score}}
+\doxysubsubsection{\texorpdfstring{saveHighScores()}{saveHighScores()}}
+{\footnotesize\ttfamily void logic\+::\+Score\+::save\+High\+Scores (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const}
+
+Load save the highscores to file. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlogic_1_1Score_a79f2b2bd442436d8cb8ac64a915fee76}\label{classlogic_1_1Score_a79f2b2bd442436d8cb8ac64a915fee76} 
+\index{logic::Score@{logic::Score}!setScore@{setScore}}
+\index{setScore@{setScore}!logic::Score@{logic::Score}}
+\doxysubsubsection{\texorpdfstring{setScore()}{setScore()}}
+{\footnotesize\ttfamily void logic\+::\+Score\+::set\+Score (\begin{DoxyParamCaption}\item[{int}]{score }\end{DoxyParamCaption})}
+
+Set the score; 
+\begin{DoxyParams}{Parameters}
+{\em score} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlogic_1_1Score_a7dc0b66e765a991456c0402e4b31af2b}\label{classlogic_1_1Score_a7dc0b66e765a991456c0402e4b31af2b} 
+\index{logic::Score@{logic::Score}!update@{update}}
+\index{update@{update}!logic::Score@{logic::Score}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void logic\+::\+Score\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1PlayerModel}{logic\+::\+Player\+Model}} \&}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update score based on player change. 
+\begin{DoxyParams}{Parameters}
+{\em subject} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1IObserver_ac01efa8f0fbc7495847489c0a8651b28}{logic\+::\+IObserver$<$ Player\+Model $>$}}.
+
+\Hypertarget{classlogic_1_1Score_a8ddf617fcf22907fdc8a825977cdc493}\label{classlogic_1_1Score_a8ddf617fcf22907fdc8a825977cdc493} 
+\index{logic::Score@{logic::Score}!update@{update}}
+\index{update@{update}!logic::Score@{logic::Score}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void logic\+::\+Score\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&}]{subject,  }\item[{const std\+::string \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update score based on player event. 
+\begin{DoxyParams}{Parameters}
+{\em subject} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classlogic_1_1IObserver_aa1e644dd23114de669503363e1dff6e8}{logic\+::\+IObserver$<$ Player\+Model $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+logic/include/core/world/\mbox{\hyperlink{Score_8h}{Score.\+h}}\item 
+logic/src/core/world/\mbox{\hyperlink{Score_8cpp}{Score.\+cpp}}\end{DoxyCompactItemize}

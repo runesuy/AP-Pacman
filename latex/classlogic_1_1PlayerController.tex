@@ -1,0 +1,94 @@
+\doxysection{logic\+::Player\+Controller Class Reference}
+\hypertarget{classlogic_1_1PlayerController}{}\label{classlogic_1_1PlayerController}\index{logic::PlayerController@{logic::PlayerController}}
+
+
+{\ttfamily \#include $<$Player\+Controller.\+h$>$}
+
+
+
+Inheritance diagram for logic\+::Player\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classlogic_1_1PlayerController__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for logic\+::Player\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classlogic_1_1PlayerController__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlogic_1_1PlayerController_a25a856466eda0506d63a900a1d88b747}{process\+Command}} (\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}} command, \mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&entity) override
+\item 
+void \mbox{\hyperlink{classlogic_1_1PlayerController_a1556ec8ee1bef152a3a5a6a43a273f19}{on\+Collision}} (\mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&entity, const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1MovingEntityController}{logic\+::\+Moving\+Entity\+Controller$<$ Player\+Model $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlogic_1_1MovingEntityController_a6dc0f5fe7e6001eb437664da3441ab63}{update}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world, \mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&entity) override
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1MovingEntityController_a75b2d8e1d0ad0e2924f7a11d771a72f8}{on\+Wall\+Collision}} (\mbox{\hyperlink{classlogic_1_1World}{logic\+::\+World}} \&world, \mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&entity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IEntityController}{logic\+::\+IEntity\+Controller$<$ Derived\+Entity\+Model $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_a7488094fb1442b613f7a902db8fce073}{update}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world, Derived\+Entity\+Model \&entity)=0
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_a6a070b8f37b4a331c949c19a1b676365}{process\+Command}} (\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}} command, Derived\+Entity\+Model \&entity)=0
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_aecb8e1520605760c2e2f10e66e9eb5b2}{on\+Collision}} (Derived\+Entity\+Model \&entity, const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{classlogic_1_1MovingEntityController}{logic\+::\+Moving\+Entity\+Controller$<$ Player\+Model $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::tuple$<$ bool, \mbox{\hyperlink{classlogic_1_1Position}{Position}} $>$ \mbox{\hyperlink{classlogic_1_1MovingEntityController_a73ec56f81d7b0e35cd2870596c47a904}{\+\_\+is\+Past\+Or\+On\+Center}} (const \mbox{\hyperlink{classlogic_1_1World}{logic\+::\+World}} \&world, const \mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&entity, \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} direction)
+\item 
+static \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}{Tile\+Map\+::\+Tile\+Type}} \mbox{\hyperlink{classlogic_1_1MovingEntityController_ae3016077b6427131d2ba9c73cd7b0541}{get\+Tile\+In\+Direction}} (const \mbox{\hyperlink{classlogic_1_1World}{World}} \&world, const \mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&entity, \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} direction)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1PlayerController_a1556ec8ee1bef152a3a5a6a43a273f19}\label{classlogic_1_1PlayerController_a1556ec8ee1bef152a3a5a6a43a273f19} 
+\index{logic::PlayerController@{logic::PlayerController}!onCollision@{onCollision}}
+\index{onCollision@{onCollision}!logic::PlayerController@{logic::PlayerController}}
+\doxysubsubsection{\texorpdfstring{onCollision()}{onCollision()}}
+{\footnotesize\ttfamily void logic\+::\+Player\+Controller\+::on\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&}]{entity,  }\item[{const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{classlogic_1_1PlayerController_a1556ec8ee1bef152a3a5a6a43a273f19_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlogic_1_1PlayerController_a25a856466eda0506d63a900a1d88b747}\label{classlogic_1_1PlayerController_a25a856466eda0506d63a900a1d88b747} 
+\index{logic::PlayerController@{logic::PlayerController}!processCommand@{processCommand}}
+\index{processCommand@{processCommand}!logic::PlayerController@{logic::PlayerController}}
+\doxysubsubsection{\texorpdfstring{processCommand()}{processCommand()}}
+{\footnotesize\ttfamily void logic\+::\+Player\+Controller\+::process\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}}}]{command,  }\item[{\mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classlogic_1_1PlayerController_a25a856466eda0506d63a900a1d88b747_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+logic/include/game/entities/controllers/\mbox{\hyperlink{PlayerController_8h}{Player\+Controller.\+h}}\item 
+logic/src/game/entities/controllers/\mbox{\hyperlink{PlayerController_8cpp}{Player\+Controller.\+cpp}}\end{DoxyCompactItemize}

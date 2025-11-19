@@ -1,0 +1,125 @@
+\doxysection{logic\+::IEntity\+Factory Class Reference}
+\hypertarget{classlogic_1_1IEntityFactory}{}\label{classlogic_1_1IEntityFactory}\index{logic::IEntityFactory@{logic::IEntityFactory}}
+
+
+{\ttfamily \#include $<$IEntity\+Factory.\+h$>$}
+
+
+
+Inheritance diagram for logic\+::IEntity\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classlogic_1_1IEntityFactory__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1IEntityFactory_a0e6d20caae0a051b0da5cfe0eb70f538}{\texorpdfstring{$\sim$}{\string~}\+IEntity\+Factory}} ()=default
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1WallModel}{Wall\+Model}} $>$ \mbox{\hyperlink{classlogic_1_1IEntityFactory_acec55acd47773b8630b467d9a93ab0e4}{create\+Wall\+Model}} ()=0
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} $>$ \mbox{\hyperlink{classlogic_1_1IEntityFactory_a7a7370e07ed51e7a29b2b2e4f4b6c038}{create\+Player\+Model}} ()=0
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1CoinModel}{Coin\+Model}} $>$ \mbox{\hyperlink{classlogic_1_1IEntityFactory_a681cfc3ed8fef2b023f6c402a164207d}{create\+Coin\+Model}} ()=0
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1PowerupModel}{Powerup\+Model}} $>$ \mbox{\hyperlink{classlogic_1_1IEntityFactory_a1dd3ffb00e2e030b590d282ec3062cb5}{create\+Powerup\+Model}} ()=0
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} $>$ \mbox{\hyperlink{classlogic_1_1IEntityFactory_a50a2d30662b07e2e949de98d0b2dcd8f}{create\+Ghost\+Model}} (\mbox{\hyperlink{namespacelogic_a36053e250f7e1339ba0a6cbecbdf1b4b}{Ghost\+Type}} type)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Factory interface for creating entity models. Provides methods to create different types of entities. \begin{DoxyNote}{Note}
+This is an interface and should be implemented by concrete factory classes. 
+
+This factory must be passed as logic\+::\+Config 
+
+On creation of an entity, it should be fully initialized except for position and size. 
+
+Each method should also initialize any necessary components for the entity on the representation side. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classlogic_1_1IEntityFactory_a0e6d20caae0a051b0da5cfe0eb70f538}\label{classlogic_1_1IEntityFactory_a0e6d20caae0a051b0da5cfe0eb70f538} 
+\index{logic::IEntityFactory@{logic::IEntityFactory}!````~IEntityFactory@{\texorpdfstring{$\sim$}{\string~}IEntityFactory}}
+\index{````~IEntityFactory@{\texorpdfstring{$\sim$}{\string~}IEntityFactory}!logic::IEntityFactory@{logic::IEntityFactory}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IEntityFactory()}{\string~IEntityFactory()}}
+{\footnotesize\ttfamily virtual logic\+::\+IEntity\+Factory\+::\texorpdfstring{$\sim$}{\string~}\+IEntity\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1IEntityFactory_a681cfc3ed8fef2b023f6c402a164207d}\label{classlogic_1_1IEntityFactory_a681cfc3ed8fef2b023f6c402a164207d} 
+\index{logic::IEntityFactory@{logic::IEntityFactory}!createCoinModel@{createCoinModel}}
+\index{createCoinModel@{createCoinModel}!logic::IEntityFactory@{logic::IEntityFactory}}
+\doxysubsubsection{\texorpdfstring{createCoinModel()}{createCoinModel()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1CoinModel}{Coin\+Model}} $>$ logic\+::\+IEntity\+Factory\+::create\+Coin\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Creates and returns a shared pointer to a \doxylink{classlogic_1_1CoinModel}{Coin\+Model} instance. \begin{DoxyReturn}{Returns}
+A shared pointer to the created \doxylink{classlogic_1_1CoinModel}{Coin\+Model}. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_af4e2b1499a0c08725275e9e3f397b913}{renderer\+::\+Default\+Entity\+Factory}}.
+
+\Hypertarget{classlogic_1_1IEntityFactory_a50a2d30662b07e2e949de98d0b2dcd8f}\label{classlogic_1_1IEntityFactory_a50a2d30662b07e2e949de98d0b2dcd8f} 
+\index{logic::IEntityFactory@{logic::IEntityFactory}!createGhostModel@{createGhostModel}}
+\index{createGhostModel@{createGhostModel}!logic::IEntityFactory@{logic::IEntityFactory}}
+\doxysubsubsection{\texorpdfstring{createGhostModel()}{createGhostModel()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} $>$ logic\+::\+IEntity\+Factory\+::create\+Ghost\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelogic_a36053e250f7e1339ba0a6cbecbdf1b4b}{Ghost\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Creates and returns a shared pointer to a \doxylink{classlogic_1_1GhostModel}{Ghost\+Model} instance of the specified type. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_a20f9fdaa9e516f2b021e074b6374f8e6}{renderer\+::\+Default\+Entity\+Factory}}.
+
+\Hypertarget{classlogic_1_1IEntityFactory_a7a7370e07ed51e7a29b2b2e4f4b6c038}\label{classlogic_1_1IEntityFactory_a7a7370e07ed51e7a29b2b2e4f4b6c038} 
+\index{logic::IEntityFactory@{logic::IEntityFactory}!createPlayerModel@{createPlayerModel}}
+\index{createPlayerModel@{createPlayerModel}!logic::IEntityFactory@{logic::IEntityFactory}}
+\doxysubsubsection{\texorpdfstring{createPlayerModel()}{createPlayerModel()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} $>$ logic\+::\+IEntity\+Factory\+::create\+Player\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Creates and returns a shared pointer to a \doxylink{classlogic_1_1PlayerModel}{Player\+Model} instance. \begin{DoxyReturn}{Returns}
+A shared pointer to the created \doxylink{classlogic_1_1PlayerModel}{Player\+Model}. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_a497423527503fbb10efb90c63543efee}{renderer\+::\+Default\+Entity\+Factory}}.
+
+\Hypertarget{classlogic_1_1IEntityFactory_a1dd3ffb00e2e030b590d282ec3062cb5}\label{classlogic_1_1IEntityFactory_a1dd3ffb00e2e030b590d282ec3062cb5} 
+\index{logic::IEntityFactory@{logic::IEntityFactory}!createPowerupModel@{createPowerupModel}}
+\index{createPowerupModel@{createPowerupModel}!logic::IEntityFactory@{logic::IEntityFactory}}
+\doxysubsubsection{\texorpdfstring{createPowerupModel()}{createPowerupModel()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1PowerupModel}{Powerup\+Model}} $>$ logic\+::\+IEntity\+Factory\+::create\+Powerup\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Creates and returns a shared pointer to a \doxylink{classlogic_1_1PowerupModel}{Powerup\+Model} instance. \begin{DoxyReturn}{Returns}
+A shared pointer to the created \doxylink{classlogic_1_1PowerupModel}{Powerup\+Model}. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_a0cb3435082762a3f66bc4497d1d548a1}{renderer\+::\+Default\+Entity\+Factory}}.
+
+\Hypertarget{classlogic_1_1IEntityFactory_acec55acd47773b8630b467d9a93ab0e4}\label{classlogic_1_1IEntityFactory_acec55acd47773b8630b467d9a93ab0e4} 
+\index{logic::IEntityFactory@{logic::IEntityFactory}!createWallModel@{createWallModel}}
+\index{createWallModel@{createWallModel}!logic::IEntityFactory@{logic::IEntityFactory}}
+\doxysubsubsection{\texorpdfstring{createWallModel()}{createWallModel()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1WallModel}{Wall\+Model}} $>$ logic\+::\+IEntity\+Factory\+::create\+Wall\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Creates and returns a shared pointer to a \doxylink{classlogic_1_1WallModel}{Wall\+Model} instance. \begin{DoxyReturn}{Returns}
+A shared pointer to the created \doxylink{classlogic_1_1WallModel}{Wall\+Model}. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_acd0f8f93327b10cad01d682effa9e7fe}{renderer\+::\+Default\+Entity\+Factory}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+logic/include/core/entity/\mbox{\hyperlink{IEntityFactory_8h}{IEntity\+Factory.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,137 @@
+\doxysection{renderer\+::Default\+Entity\+Factory Class Reference}
+\hypertarget{classrenderer_1_1DefaultEntityFactory}{}\label{classrenderer_1_1DefaultEntityFactory}\index{renderer::DefaultEntityFactory@{renderer::DefaultEntityFactory}}
+
+
+{\ttfamily \#include $<$Default\+Entity\+Factory.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::Default\+Entity\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classrenderer_1_1DefaultEntityFactory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::Default\+Entity\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classrenderer_1_1DefaultEntityFactory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1WallModel}{logic\+::\+Wall\+Model}} $>$ \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_acd0f8f93327b10cad01d682effa9e7fe}{create\+Wall\+Model}} () override
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1PlayerModel}{logic\+::\+Player\+Model}} $>$ \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_a497423527503fbb10efb90c63543efee}{create\+Player\+Model}} () override
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1CoinModel}{logic\+::\+Coin\+Model}} $>$ \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_af4e2b1499a0c08725275e9e3f397b913}{create\+Coin\+Model}} () override
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1PowerupModel}{logic\+::\+Powerup\+Model}} $>$ \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_a0cb3435082762a3f66bc4497d1d548a1}{create\+Powerup\+Model}} () override
+\item 
+const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1WorldView}{World\+View}} $>$ \& \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_ac433a23050444f6d2aaae43fb2671369}{get\+View\+Target}} () const
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_a8c325cc7e30dd7b9aba92dc0180d98ce}{set\+View\+Target}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1WorldView}{World\+View}} $>$ \&view\+Target)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} $>$ \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_a20f9fdaa9e516f2b021e074b6374f8e6}{create\+Ghost\+Model}} (\mbox{\hyperlink{namespacelogic_a36053e250f7e1339ba0a6cbecbdf1b4b}{logic\+::\+Ghost\+Type}} type) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IEntityFactory}{logic\+::\+IEntity\+Factory}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1IEntityFactory_a0e6d20caae0a051b0da5cfe0eb70f538}{\texorpdfstring{$\sim$}{\string~}\+IEntity\+Factory}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Default implementation of the entity factory interface. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1DefaultEntityFactory_af4e2b1499a0c08725275e9e3f397b913}\label{classrenderer_1_1DefaultEntityFactory_af4e2b1499a0c08725275e9e3f397b913} 
+\index{renderer::DefaultEntityFactory@{renderer::DefaultEntityFactory}!createCoinModel@{createCoinModel}}
+\index{createCoinModel@{createCoinModel}!renderer::DefaultEntityFactory@{renderer::DefaultEntityFactory}}
+\doxysubsubsection{\texorpdfstring{createCoinModel()}{createCoinModel()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1CoinModel}{logic\+::\+Coin\+Model}} $>$ renderer\+::\+Default\+Entity\+Factory\+::create\+Coin\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Creates and returns a shared pointer to a Coin\+Model instance. \begin{DoxyReturn}{Returns}
+A shared pointer to the created Coin\+Model. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1IEntityFactory_a681cfc3ed8fef2b023f6c402a164207d}{logic\+::\+IEntity\+Factory}}.
+
+\Hypertarget{classrenderer_1_1DefaultEntityFactory_a20f9fdaa9e516f2b021e074b6374f8e6}\label{classrenderer_1_1DefaultEntityFactory_a20f9fdaa9e516f2b021e074b6374f8e6} 
+\index{renderer::DefaultEntityFactory@{renderer::DefaultEntityFactory}!createGhostModel@{createGhostModel}}
+\index{createGhostModel@{createGhostModel}!renderer::DefaultEntityFactory@{renderer::DefaultEntityFactory}}
+\doxysubsubsection{\texorpdfstring{createGhostModel()}{createGhostModel()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} $>$ renderer\+::\+Default\+Entity\+Factory\+::create\+Ghost\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelogic_a36053e250f7e1339ba0a6cbecbdf1b4b}{logic\+::\+Ghost\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Creates and returns a shared pointer to a Ghost\+Model instance of the specified type. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1IEntityFactory_a50a2d30662b07e2e949de98d0b2dcd8f}{logic\+::\+IEntity\+Factory}}.
+
+\Hypertarget{classrenderer_1_1DefaultEntityFactory_a497423527503fbb10efb90c63543efee}\label{classrenderer_1_1DefaultEntityFactory_a497423527503fbb10efb90c63543efee} 
+\index{renderer::DefaultEntityFactory@{renderer::DefaultEntityFactory}!createPlayerModel@{createPlayerModel}}
+\index{createPlayerModel@{createPlayerModel}!renderer::DefaultEntityFactory@{renderer::DefaultEntityFactory}}
+\doxysubsubsection{\texorpdfstring{createPlayerModel()}{createPlayerModel()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1PlayerModel}{logic\+::\+Player\+Model}} $>$ renderer\+::\+Default\+Entity\+Factory\+::create\+Player\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Creates and returns a shared pointer to a Player\+Model instance. \begin{DoxyReturn}{Returns}
+A shared pointer to the created Player\+Model. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1IEntityFactory_a7a7370e07ed51e7a29b2b2e4f4b6c038}{logic\+::\+IEntity\+Factory}}.
+
+\Hypertarget{classrenderer_1_1DefaultEntityFactory_a0cb3435082762a3f66bc4497d1d548a1}\label{classrenderer_1_1DefaultEntityFactory_a0cb3435082762a3f66bc4497d1d548a1} 
+\index{renderer::DefaultEntityFactory@{renderer::DefaultEntityFactory}!createPowerupModel@{createPowerupModel}}
+\index{createPowerupModel@{createPowerupModel}!renderer::DefaultEntityFactory@{renderer::DefaultEntityFactory}}
+\doxysubsubsection{\texorpdfstring{createPowerupModel()}{createPowerupModel()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1PowerupModel}{logic\+::\+Powerup\+Model}} $>$ renderer\+::\+Default\+Entity\+Factory\+::create\+Powerup\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Creates and returns a shared pointer to a Powerup\+Model instance. \begin{DoxyReturn}{Returns}
+A shared pointer to the created Powerup\+Model. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1IEntityFactory_a1dd3ffb00e2e030b590d282ec3062cb5}{logic\+::\+IEntity\+Factory}}.
+
+\Hypertarget{classrenderer_1_1DefaultEntityFactory_acd0f8f93327b10cad01d682effa9e7fe}\label{classrenderer_1_1DefaultEntityFactory_acd0f8f93327b10cad01d682effa9e7fe} 
+\index{renderer::DefaultEntityFactory@{renderer::DefaultEntityFactory}!createWallModel@{createWallModel}}
+\index{createWallModel@{createWallModel}!renderer::DefaultEntityFactory@{renderer::DefaultEntityFactory}}
+\doxysubsubsection{\texorpdfstring{createWallModel()}{createWallModel()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1WallModel}{logic\+::\+Wall\+Model}} $>$ renderer\+::\+Default\+Entity\+Factory\+::create\+Wall\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Creates and returns a shared pointer to a Wall\+Model instance. \begin{DoxyReturn}{Returns}
+A shared pointer to the created Wall\+Model. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1IEntityFactory_acec55acd47773b8630b467d9a93ab0e4}{logic\+::\+IEntity\+Factory}}.
+
+\Hypertarget{classrenderer_1_1DefaultEntityFactory_ac433a23050444f6d2aaae43fb2671369}\label{classrenderer_1_1DefaultEntityFactory_ac433a23050444f6d2aaae43fb2671369} 
+\index{renderer::DefaultEntityFactory@{renderer::DefaultEntityFactory}!getViewTarget@{getViewTarget}}
+\index{getViewTarget@{getViewTarget}!renderer::DefaultEntityFactory@{renderer::DefaultEntityFactory}}
+\doxysubsubsection{\texorpdfstring{getViewTarget()}{getViewTarget()}}
+{\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1WorldView}{World\+View}} $>$ \& renderer\+::\+Default\+Entity\+Factory\+::get\+View\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classrenderer_1_1DefaultEntityFactory_a8c325cc7e30dd7b9aba92dc0180d98ce}\label{classrenderer_1_1DefaultEntityFactory_a8c325cc7e30dd7b9aba92dc0180d98ce} 
+\index{renderer::DefaultEntityFactory@{renderer::DefaultEntityFactory}!setViewTarget@{setViewTarget}}
+\index{setViewTarget@{setViewTarget}!renderer::DefaultEntityFactory@{renderer::DefaultEntityFactory}}
+\doxysubsubsection{\texorpdfstring{setViewTarget()}{setViewTarget()}}
+{\footnotesize\ttfamily void renderer\+::\+Default\+Entity\+Factory\+::set\+View\+Target (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1WorldView}{World\+View}} $>$ \&}]{view\+Target }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/game/factories/\mbox{\hyperlink{DefaultEntityFactory_8h}{Default\+Entity\+Factory.\+h}}\item 
+renderer/src/game/factories/\mbox{\hyperlink{DefaultEntityFactory_8cpp}{Default\+Entity\+Factory.\+cpp}}\end{DoxyCompactItemize}

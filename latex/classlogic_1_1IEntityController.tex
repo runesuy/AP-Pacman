@@ -1,0 +1,94 @@
+\doxysection{logic\+::IEntity\+Controller\texorpdfstring{$<$}{<} Derived\+Entity\+Model \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classlogic_1_1IEntityController}{}\label{classlogic_1_1IEntityController}\index{logic::IEntityController$<$ DerivedEntityModel $>$@{logic::IEntityController$<$ DerivedEntityModel $>$}}
+
+
+{\ttfamily \#include $<$IEntity\+Controller.\+h$>$}
+
+
+
+Inheritance diagram for logic\+::IEntity\+Controller\texorpdfstring{$<$}{<} Derived\+Entity\+Model \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1IEntityController__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_a7488094fb1442b613f7a902db8fce073}{update}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world, Derived\+Entity\+Model \&entity)=0
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_a6a070b8f37b4a331c949c19a1b676365}{process\+Command}} (\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}} command, Derived\+Entity\+Model \&entity)=0
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_aecb8e1520605760c2e2f10e66e9eb5b2}{on\+Collision}} (Derived\+Entity\+Model \&entity, const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Derived\+Entity\+Model$>$\newline
+class logic\+::\+IEntity\+Controller$<$ Derived\+Entity\+Model $>$}
+A controller that can be linked to a model. Handles all data change for the model. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Derived\+Entity\+Model} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1IEntityController_aecb8e1520605760c2e2f10e66e9eb5b2}\label{classlogic_1_1IEntityController_aecb8e1520605760c2e2f10e66e9eb5b2} 
+\index{logic::IEntityController$<$ DerivedEntityModel $>$@{logic::IEntityController$<$ DerivedEntityModel $>$}!onCollision@{onCollision}}
+\index{onCollision@{onCollision}!logic::IEntityController$<$ DerivedEntityModel $>$@{logic::IEntityController$<$ DerivedEntityModel $>$}}
+\doxysubsubsection{\texorpdfstring{onCollision()}{onCollision()}}
+{\footnotesize\ttfamily template$<$typename Derived\+Entity\+Model $>$ \\
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityController}{logic\+::\+IEntity\+Controller}}$<$ Derived\+Entity\+Model $>$\+::on\+Collision (\begin{DoxyParamCaption}\item[{Derived\+Entity\+Model \&}]{entity,  }\item[{const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Handle a collision between entity and other. 
+\begin{DoxyParams}{Parameters}
+{\em entity} & \\
+\hline
+{\em other} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classlogic_1_1CollectableController_a384062c1c0d681ecf33884e694ee551c}{logic\+::\+Collectable\+Controller$<$ Model\+Type $>$}}.
+
+\Hypertarget{classlogic_1_1IEntityController_a6a070b8f37b4a331c949c19a1b676365}\label{classlogic_1_1IEntityController_a6a070b8f37b4a331c949c19a1b676365} 
+\index{logic::IEntityController$<$ DerivedEntityModel $>$@{logic::IEntityController$<$ DerivedEntityModel $>$}!processCommand@{processCommand}}
+\index{processCommand@{processCommand}!logic::IEntityController$<$ DerivedEntityModel $>$@{logic::IEntityController$<$ DerivedEntityModel $>$}}
+\doxysubsubsection{\texorpdfstring{processCommand()}{processCommand()}}
+{\footnotesize\ttfamily template$<$typename Derived\+Entity\+Model $>$ \\
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityController}{logic\+::\+IEntity\+Controller}}$<$ Derived\+Entity\+Model $>$\+::process\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}}}]{command,  }\item[{Derived\+Entity\+Model \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Update the entity based on the command. 
+\begin{DoxyParams}{Parameters}
+{\em command} & \\
+\hline
+{\em entity} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlogic_1_1IEntityController_a7488094fb1442b613f7a902db8fce073}\label{classlogic_1_1IEntityController_a7488094fb1442b613f7a902db8fce073} 
+\index{logic::IEntityController$<$ DerivedEntityModel $>$@{logic::IEntityController$<$ DerivedEntityModel $>$}!update@{update}}
+\index{update@{update}!logic::IEntityController$<$ DerivedEntityModel $>$@{logic::IEntityController$<$ DerivedEntityModel $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily template$<$typename Derived\+Entity\+Model $>$ \\
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityController}{logic\+::\+IEntity\+Controller}}$<$ Derived\+Entity\+Model $>$\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{Derived\+Entity\+Model \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Update the entity based on world and stopwatch data. 
+\begin{DoxyParams}{Parameters}
+{\em world} & \\
+\hline
+{\em entity} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classlogic_1_1MovingEntityController_a6dc0f5fe7e6001eb437664da3441ab63}{logic\+::\+Moving\+Entity\+Controller$<$ Entity\+Model\+Type $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+logic/include/core/entity/\mbox{\hyperlink{EntityModel_8h}{Entity\+Model.\+h}}\item 
+logic/include/core/entity/\mbox{\hyperlink{IEntityController_8h}{IEntity\+Controller.\+h}}\end{DoxyCompactItemize}

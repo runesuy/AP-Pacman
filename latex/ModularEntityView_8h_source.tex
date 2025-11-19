@@ -1,0 +1,46 @@
+\doxysection{Modular\+Entity\+View.\+h}
+\hypertarget{ModularEntityView_8h_source}{}\label{ModularEntityView_8h_source}\index{renderer/include/core/entity/modular/ModularEntityView.h@{renderer/include/core/entity/modular/ModularEntityView.h}}
+\mbox{\hyperlink{ModularEntityView_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/6/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_MODULARENTITYVIEW\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_MODULARENTITYVIEW\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{EntityView_8h}{core/entity/EntityView.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IEntityViewModule_8h}{IEntityViewModule.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{concept\ }\mbox{\hyperlink{conceptrenderer_1_1IsModuleType}{IsModuleType}}\ =\ std::is\_base\_of<IEntityViewModule,\ T>::value;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1ModularEntityView}{ModularEntityView}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1EntityView}{EntityView}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1Observable}{logic::Observable}}<ModularEntityView>\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<IEntityViewModule>>\ modules;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Shape>>\ \mbox{\hyperlink{classrenderer_1_1ModularEntityView_aa7574935c99ca248d974cb51a1bf4726}{getSFShapes}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<sf::Sprite>>\ \mbox{\hyperlink{classrenderer_1_1ModularEntityView_aa73af8952f79fc94f61ac05b8b1672ad}{getSFSprites}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Text>>\ \mbox{\hyperlink{classrenderer_1_1ModularEntityView_a97e430746a6ae2cfb8d7b98a9bea9658}{getSFTexts}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1ModularEntityView_ad01af13e596e5ba0f121343774c303e3}{addModule}}(std::shared\_ptr<IEntityViewModule>\ module);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<IsModuleType\ T>}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::shared\_ptr<T>\ \mbox{\hyperlink{classrenderer_1_1ModularEntityView_a301fd6ed3f229c71997575c71d871e8e}{getModule}}()\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ module\ :\ modules)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{auto}\ casted\ =\ std::dynamic\_pointer\_cast<T>(module))\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ casted;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00036\ \ \ \ \ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_MODULARENTITYVIEW\_H}}
+
+\end{DoxyCode}

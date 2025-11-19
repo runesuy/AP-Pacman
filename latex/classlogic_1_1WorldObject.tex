@@ -1,0 +1,88 @@
+\doxysection{logic\+::World\+Object Class Reference}
+\hypertarget{classlogic_1_1WorldObject}{}\label{classlogic_1_1WorldObject}\index{logic::WorldObject@{logic::WorldObject}}
+
+
+{\ttfamily \#include $<$World\+Object.\+h$>$}
+
+
+
+Inheritance diagram for logic\+::World\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1WorldObject__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \& \mbox{\hyperlink{classlogic_1_1WorldObject_aac0f498afeff654fee790e435617de04}{get\+Position}} () const
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1WorldObject_ae414bee61532c20edbaf252f5dbeae74}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&position)
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1WorldObject_a6d7bf1f5aa8e0fc8763bf2551871489c}{update}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world)=0
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1WorldObject_ad57fa60da3633757434ef70a266f8e14}{mark\+For\+Removal}} ()
+\item 
+bool \mbox{\hyperlink{classlogic_1_1WorldObject_adae3a3c45f13113f3ebcbdaed7190770}{is\+Marked\+For\+Removal}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1WorldObject_aac0f498afeff654fee790e435617de04}\label{classlogic_1_1WorldObject_aac0f498afeff654fee790e435617de04} 
+\index{logic::WorldObject@{logic::WorldObject}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!logic::WorldObject@{logic::WorldObject}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \& logic\+::\+World\+Object\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the position of the world object 
+\end{DoxyReturn}
+\Hypertarget{classlogic_1_1WorldObject_adae3a3c45f13113f3ebcbdaed7190770}\label{classlogic_1_1WorldObject_adae3a3c45f13113f3ebcbdaed7190770} 
+\index{logic::WorldObject@{logic::WorldObject}!isMarkedForRemoval@{isMarkedForRemoval}}
+\index{isMarkedForRemoval@{isMarkedForRemoval}!logic::WorldObject@{logic::WorldObject}}
+\doxysubsubsection{\texorpdfstring{isMarkedForRemoval()}{isMarkedForRemoval()}}
+{\footnotesize\ttfamily bool logic\+::\+World\+Object\+::is\+Marked\+For\+Removal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classlogic_1_1WorldObject_ad57fa60da3633757434ef70a266f8e14}\label{classlogic_1_1WorldObject_ad57fa60da3633757434ef70a266f8e14} 
+\index{logic::WorldObject@{logic::WorldObject}!markForRemoval@{markForRemoval}}
+\index{markForRemoval@{markForRemoval}!logic::WorldObject@{logic::WorldObject}}
+\doxysubsubsection{\texorpdfstring{markForRemoval()}{markForRemoval()}}
+{\footnotesize\ttfamily void logic\+::\+World\+Object\+::mark\+For\+Removal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classlogic_1_1CoinModel_a2dcfc1318f085ceeef06c5d5b9e587df}{logic\+::\+Coin\+Model}}, \mbox{\hyperlink{classlogic_1_1GhostModel_af57a1128c94aaaaa9a82f99a8b6161b3}{logic\+::\+Ghost\+Model}}, and \mbox{\hyperlink{classlogic_1_1PowerupModel_a1d067816bb2a74d336d0996e6e451424}{logic\+::\+Powerup\+Model}}.
+
+\Hypertarget{classlogic_1_1WorldObject_ae414bee61532c20edbaf252f5dbeae74}\label{classlogic_1_1WorldObject_ae414bee61532c20edbaf252f5dbeae74} 
+\index{logic::WorldObject@{logic::WorldObject}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!logic::WorldObject@{logic::WorldObject}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void logic\+::\+World\+Object\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Set the position of the world object 
+\begin{DoxyParams}{Parameters}
+{\em position} & The new position \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classlogic_1_1CoinModel_a4632ebe719e2421116e4915794ce7b5e}{logic\+::\+Coin\+Model}}, \mbox{\hyperlink{classlogic_1_1GhostModel_a1c0ddb635a6b41907577c67c01377cb9}{logic\+::\+Ghost\+Model}}, \mbox{\hyperlink{classlogic_1_1PlayerModel_afee8855014523fdfadc7e289f1cacf1e}{logic\+::\+Player\+Model}}, \mbox{\hyperlink{classlogic_1_1PowerupModel_a9c0b1d7a0556ed9c0b92f0066fda5450}{logic\+::\+Powerup\+Model}}, and \mbox{\hyperlink{classlogic_1_1WallModel_a873c6964a2f75a567e88acae81b66415}{logic\+::\+Wall\+Model}}.
+
+\Hypertarget{classlogic_1_1WorldObject_a6d7bf1f5aa8e0fc8763bf2551871489c}\label{classlogic_1_1WorldObject_a6d7bf1f5aa8e0fc8763bf2551871489c} 
+\index{logic::WorldObject@{logic::WorldObject}!update@{update}}
+\index{update@{update}!logic::WorldObject@{logic::WorldObject}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void logic\+::\+World\+Object\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Update the world object. Called on each game update. 
+
+Implemented in \mbox{\hyperlink{classlogic_1_1EntityModel_a20ff77425bb7eb04e201d33ab3f33181}{logic\+::\+Entity\+Model$<$ Derived $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a20ff77425bb7eb04e201d33ab3f33181}{logic\+::\+Entity\+Model$<$ Coin\+Model $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a20ff77425bb7eb04e201d33ab3f33181}{logic\+::\+Entity\+Model$<$ Entity\+Model\+Type $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a20ff77425bb7eb04e201d33ab3f33181}{logic\+::\+Entity\+Model$<$ Ghost\+Model $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a20ff77425bb7eb04e201d33ab3f33181}{logic\+::\+Entity\+Model$<$ Player\+Model $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a20ff77425bb7eb04e201d33ab3f33181}{logic\+::\+Entity\+Model$<$ Powerup\+Model $>$}}, and \mbox{\hyperlink{classlogic_1_1EntityModel_a20ff77425bb7eb04e201d33ab3f33181}{logic\+::\+Entity\+Model$<$ Wall\+Model $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+logic/include/core/world/\mbox{\hyperlink{WorldObject_8h}{World\+Object.\+h}}\item 
+logic/src/core/world/\mbox{\hyperlink{WorldObject_8cpp}{World\+Object.\+cpp}}\end{DoxyCompactItemize}

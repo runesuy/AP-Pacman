@@ -1,0 +1,64 @@
+\doxysection{Tile\+Map.\+h}
+\hypertarget{TileMap_8h_source}{}\label{TileMap_8h_source}\index{logic/include/core/world/TileMap.h@{logic/include/core/world/TileMap.h}}
+\mbox{\hyperlink{TileMap_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/5/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_TILEMAP\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_TILEMAP\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Observable_8h}{core/observer/Observable.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{WorldObject_8h}{WorldObject.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Size_8h}{Size.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{class\ }World;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1TileMap}{TileMap}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}{TileType}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9ae8a1175c47254b14be2713267fc64886}{EMPTY}},}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9a1dfc7c643bd8489a40673ad997a28f50}{WALL}},}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9a52efebca63e5847e553bdabd5cd8b9b8}{COIN}},}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9a28d680f5271ac92872dc883921487129}{POWER\_UP}},}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9add1fa8ccdcaa8c1235b28d899eb7a5ac}{SPAWN}},}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9a9e441fdfecbba52e0c3b45cd773642e9}{GHOST\_RED}},}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9a756b9cc49ec4d31c2469e4385aede78d}{GHOST\_PINK}},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9ae2d4dd593e283f340937c2daeb0ca7a9}{GHOST\_BLUE}},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9aaec5b0646997aae2c2317ad4d1bfeb73}{GHOST\_ORANGE}},}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9a85600fa90a226dfcefcef12047f81c71}{PLAYER}},}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ std::vector<std::vector<TileType>>\ mapData;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&\mbox{\hyperlink{classlogic_1_1TileMap_a9f871c6da97a9a77dd4f692c8910069c}{getMapData}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1TileMap_a6b07dc60b6b58bc5faacb8717610fcea}{loadToWorld}}(\mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1TileMap_aa01a7a80be57dd3e85d3c0a570d07d7c}{addRow}}(\textcolor{keyword}{const}\ std::vector<TileType>\ \&row);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}{TileType}}\ \mbox{\hyperlink{classlogic_1_1TileMap_adb53cb4ee7398b449c8d084d25ea4510}{getTileType}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ \&position)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::pair<int,\ int>\ \mbox{\hyperlink{classlogic_1_1TileMap_af2e5cc47d879b59b10bfb532a43afb44}{getGridPosition}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ \&position)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}{TileType}}\ \mbox{\hyperlink{classlogic_1_1TileMap_adb53cb4ee7398b449c8d084d25ea4510}{getTileType}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ col)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ \mbox{\hyperlink{classlogic_1_1TileMap_a3510541030b3af363b3538f833105753}{getTileCenterPosition}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ col)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Size::CoordinateType}}\ \mbox{\hyperlink{classlogic_1_1TileMap_a1b57cd4600c865db3cbfb791b42717bf}{getTileSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Size::CoordinateType}}\ \mbox{\hyperlink{classlogic_1_1TileMap_a4b64392a0c764b051d4e81f49e00f794}{getYOffsetForCentering}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classlogic_1_1TileMap_adad1323ec1fae76de2e3f3de5acfec88}{getRowCount}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classlogic_1_1TileMap_a6758aebdbe635b91541ef650ee805235}{getColumnCount}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ \ \ \ \ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \}\ \textcolor{comment}{//\ logic}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_TILEMAP\_H}}
+
+\end{DoxyCode}

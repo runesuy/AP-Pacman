@@ -1,0 +1,101 @@
+\doxysection{renderer\+::IConfig\+Parser Class Reference}
+\hypertarget{classrenderer_1_1IConfigParser}{}\label{classrenderer_1_1IConfigParser}\index{renderer::IConfigParser@{renderer::IConfigParser}}
+
+
+{\ttfamily \#include $<$IConfig\+Parser.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::IConfig\+Parser\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classrenderer_1_1IConfigParser__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classrenderer_1_1IConfigParser_a0468f6857b2786528e83fd114f9b9780}{\texorpdfstring{$\sim$}{\string~}\+IConfig\+Parser}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classrenderer_1_1IConfigParser_a7bca04342b5562edc5de2352d996a113}{load\+Config\+File}} ()=0
+\item 
+virtual std\+::string \mbox{\hyperlink{classrenderer_1_1IConfigParser_aa77b34fb3e3fac869fdaae73814444bb}{get\+Default\+Font\+Path}} () const =0
+\item 
+virtual std\+::string \mbox{\hyperlink{classrenderer_1_1IConfigParser_a8ace617490d726901a6d9cf687cf6474}{get\+Sprite\+Sheet\+Path}} () const =0
+\item 
+virtual std\+::map$<$ std\+::string, sf\+::\+Int\+Rect $>$ \mbox{\hyperlink{classrenderer_1_1IConfigParser_a459f265187764b25781a7521f1981ce3}{get\+Texture\+Rects}} () const =0
+\item 
+virtual sf\+::\+Int\+Rect \mbox{\hyperlink{classrenderer_1_1IConfigParser_acbeba8d7a53b6826d887bab5639a0293}{get\+Texture\+Rect\+By\+Name}} (const std\+::string \&name) const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for configuration parser, responsible for loading and retrieving configuration settings. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrenderer_1_1IConfigParser_a0468f6857b2786528e83fd114f9b9780}\label{classrenderer_1_1IConfigParser_a0468f6857b2786528e83fd114f9b9780} 
+\index{renderer::IConfigParser@{renderer::IConfigParser}!````~IConfigParser@{\texorpdfstring{$\sim$}{\string~}IConfigParser}}
+\index{````~IConfigParser@{\texorpdfstring{$\sim$}{\string~}IConfigParser}!renderer::IConfigParser@{renderer::IConfigParser}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IConfigParser()}{\string~IConfigParser()}}
+{\footnotesize\ttfamily virtual renderer\+::\+IConfig\+Parser\+::\texorpdfstring{$\sim$}{\string~}\+IConfig\+Parser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1IConfigParser_aa77b34fb3e3fac869fdaae73814444bb}\label{classrenderer_1_1IConfigParser_aa77b34fb3e3fac869fdaae73814444bb} 
+\index{renderer::IConfigParser@{renderer::IConfigParser}!getDefaultFontPath@{getDefaultFontPath}}
+\index{getDefaultFontPath@{getDefaultFontPath}!renderer::IConfigParser@{renderer::IConfigParser}}
+\doxysubsubsection{\texorpdfstring{getDefaultFontPath()}{getDefaultFontPath()}}
+{\footnotesize\ttfamily virtual std\+::string renderer\+::\+IConfig\+Parser\+::get\+Default\+Font\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1JSONConfigParser_acc3a9d8b908a1d68a3e8e222e7421ded}{renderer\+::\+JSONConfig\+Parser}}.
+
+\Hypertarget{classrenderer_1_1IConfigParser_a8ace617490d726901a6d9cf687cf6474}\label{classrenderer_1_1IConfigParser_a8ace617490d726901a6d9cf687cf6474} 
+\index{renderer::IConfigParser@{renderer::IConfigParser}!getSpriteSheetPath@{getSpriteSheetPath}}
+\index{getSpriteSheetPath@{getSpriteSheetPath}!renderer::IConfigParser@{renderer::IConfigParser}}
+\doxysubsubsection{\texorpdfstring{getSpriteSheetPath()}{getSpriteSheetPath()}}
+{\footnotesize\ttfamily virtual std\+::string renderer\+::\+IConfig\+Parser\+::get\+Sprite\+Sheet\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1JSONConfigParser_ad7983de15012ca7813a0433a3dd1ac18}{renderer\+::\+JSONConfig\+Parser}}.
+
+\Hypertarget{classrenderer_1_1IConfigParser_acbeba8d7a53b6826d887bab5639a0293}\label{classrenderer_1_1IConfigParser_acbeba8d7a53b6826d887bab5639a0293} 
+\index{renderer::IConfigParser@{renderer::IConfigParser}!getTextureRectByName@{getTextureRectByName}}
+\index{getTextureRectByName@{getTextureRectByName}!renderer::IConfigParser@{renderer::IConfigParser}}
+\doxysubsubsection{\texorpdfstring{getTextureRectByName()}{getTextureRectByName()}}
+{\footnotesize\ttfamily virtual sf\+::\+Int\+Rect renderer\+::\+IConfig\+Parser\+::get\+Texture\+Rect\+By\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1JSONConfigParser_ab70ead8aa12d6a5435c8cca8189afa12}{renderer\+::\+JSONConfig\+Parser}}.
+
+\Hypertarget{classrenderer_1_1IConfigParser_a459f265187764b25781a7521f1981ce3}\label{classrenderer_1_1IConfigParser_a459f265187764b25781a7521f1981ce3} 
+\index{renderer::IConfigParser@{renderer::IConfigParser}!getTextureRects@{getTextureRects}}
+\index{getTextureRects@{getTextureRects}!renderer::IConfigParser@{renderer::IConfigParser}}
+\doxysubsubsection{\texorpdfstring{getTextureRects()}{getTextureRects()}}
+{\footnotesize\ttfamily virtual std\+::map$<$ std\+::string, sf\+::\+Int\+Rect $>$ renderer\+::\+IConfig\+Parser\+::get\+Texture\+Rects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1JSONConfigParser_ac4566bd06f4e40801c00219066b7d587}{renderer\+::\+JSONConfig\+Parser}}.
+
+\Hypertarget{classrenderer_1_1IConfigParser_a7bca04342b5562edc5de2352d996a113}\label{classrenderer_1_1IConfigParser_a7bca04342b5562edc5de2352d996a113} 
+\index{renderer::IConfigParser@{renderer::IConfigParser}!loadConfigFile@{loadConfigFile}}
+\index{loadConfigFile@{loadConfigFile}!renderer::IConfigParser@{renderer::IConfigParser}}
+\doxysubsubsection{\texorpdfstring{loadConfigFile()}{loadConfigFile()}}
+{\footnotesize\ttfamily virtual void renderer\+::\+IConfig\+Parser\+::load\+Config\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1JSONConfigParser_a69b9aec32b78a8f49fdb34f76fcc5970}{renderer\+::\+JSONConfig\+Parser}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/core/parser/\mbox{\hyperlink{IConfigParser_8h}{IConfig\+Parser.\+h}}\end{DoxyCompactItemize}

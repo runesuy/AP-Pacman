@@ -1,0 +1,27 @@
+\doxysection{IState\+Factory.\+h}
+\hypertarget{IStateFactory_8h_source}{}\label{IStateFactory_8h_source}\index{renderer/include/core/factories/IStateFactory.h@{renderer/include/core/factories/IStateFactory.h}}
+\mbox{\hyperlink{IStateFactory_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/4/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_ISTATEFACTORY\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_ISTATEFACTORY\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class\ }MenuState;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }LevelState;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1IStateFactory}{IStateFactory}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<MenuState>\ \mbox{\hyperlink{classrenderer_1_1IStateFactory_a3299896614b5cbe80352e8ce7d2b3f98}{createMenuState}}()=0;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<LevelState>\ \mbox{\hyperlink{classrenderer_1_1IStateFactory_ab5ba35efd6828be7f2fc20209449abe1}{createLevelState}}()=0;}
+\DoxyCodeLine{00021\ \ \ \ \ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_ISTATEFACTORY\_H}}
+
+\end{DoxyCode}

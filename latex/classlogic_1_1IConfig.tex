@@ -1,0 +1,71 @@
+\doxysection{logic\+::IConfig Class Reference}
+\hypertarget{classlogic_1_1IConfig}{}\label{classlogic_1_1IConfig}\index{logic::IConfig@{logic::IConfig}}
+
+
+{\ttfamily \#include $<$IConfig.\+h$>$}
+
+
+
+Inheritance diagram for logic\+::IConfig\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classlogic_1_1IConfig__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1IConfig_a4280f4f8aadff9169b8db63d468c1a71}{\texorpdfstring{$\sim$}{\string~}\+IConfig}} ()=default
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1TileMap}{Tile\+Map}} \mbox{\hyperlink{classlogic_1_1IConfig_aa6cde30e5eb1db08d33c49ed30d72f5f}{get\+Tile\+Map}} () const =0
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IEntityFactory}{logic\+::\+IEntity\+Factory}} $>$ \mbox{\hyperlink{classlogic_1_1IConfig_ad6fb44297695811606ac8b078f1bc076}{get\+Entity\+Factory}} () const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Config interface for the logic. Needs to be passed to world. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classlogic_1_1IConfig_a4280f4f8aadff9169b8db63d468c1a71}\label{classlogic_1_1IConfig_a4280f4f8aadff9169b8db63d468c1a71} 
+\index{logic::IConfig@{logic::IConfig}!````~IConfig@{\texorpdfstring{$\sim$}{\string~}IConfig}}
+\index{````~IConfig@{\texorpdfstring{$\sim$}{\string~}IConfig}!logic::IConfig@{logic::IConfig}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}IConfig()}{\string~IConfig()}}
+{\footnotesize\ttfamily virtual logic\+::\+IConfig\+::\texorpdfstring{$\sim$}{\string~}\+IConfig (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1IConfig_ad6fb44297695811606ac8b078f1bc076}\label{classlogic_1_1IConfig_ad6fb44297695811606ac8b078f1bc076} 
+\index{logic::IConfig@{logic::IConfig}!getEntityFactory@{getEntityFactory}}
+\index{getEntityFactory@{getEntityFactory}!logic::IConfig@{logic::IConfig}}
+\doxysubsubsection{\texorpdfstring{getEntityFactory()}{getEntityFactory()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IEntityFactory}{logic\+::\+IEntity\+Factory}} $>$ logic\+::\+IConfig\+::get\+Entity\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the entity factory for creating game entities. \begin{DoxyReturn}{Returns}
+A shared ptr to the factory 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1DefaultLogicConfig_af4d75b6cb4d070523d368c7230e87f94}{renderer\+::\+Default\+Logic\+Config}}.
+
+\Hypertarget{classlogic_1_1IConfig_aa6cde30e5eb1db08d33c49ed30d72f5f}\label{classlogic_1_1IConfig_aa6cde30e5eb1db08d33c49ed30d72f5f} 
+\index{logic::IConfig@{logic::IConfig}!getTileMap@{getTileMap}}
+\index{getTileMap@{getTileMap}!logic::IConfig@{logic::IConfig}}
+\doxysubsubsection{\texorpdfstring{getTileMap()}{getTileMap()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlogic_1_1TileMap}{Tile\+Map}} logic\+::\+IConfig\+::get\+Tile\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the tile map configuration. This map is loaded in the world on creation. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1DefaultLogicConfig_ae7baef062c61c68b042a88d669ee47f5}{renderer\+::\+Default\+Logic\+Config}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+logic/include/core/config/\mbox{\hyperlink{IConfig_8h}{IConfig.\+h}}\end{DoxyCompactItemize}

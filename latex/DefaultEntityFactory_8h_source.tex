@@ -1,0 +1,40 @@
+\doxysection{Default\+Entity\+Factory.\+h}
+\hypertarget{DefaultEntityFactory_8h_source}{}\label{DefaultEntityFactory_8h_source}\index{renderer/include/game/factories/DefaultEntityFactory.h@{renderer/include/game/factories/DefaultEntityFactory.h}}
+\mbox{\hyperlink{DefaultEntityFactory_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/6/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_DEFAULTENTITYFACTORY\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_DEFAULTENTITYFACTORY\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IEntityFactory_8h}{core/entity/IEntityFactory.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{LevelState_8h}{game/states/level/LevelState.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{PlayerModel_8h}{game/entities/models/PlayerModel.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory}{DefaultEntityFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1IEntityFactory}{logic::IEntityFactory}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::shared\_ptr<WorldView>\ viewTarget;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::shared\_ptr<logic::WallModel>\ \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_acd0f8f93327b10cad01d682effa9e7fe}{createWallModel}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::shared\_ptr<logic::PlayerModel>\ \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_a497423527503fbb10efb90c63543efee}{createPlayerModel}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::shared\_ptr<logic::CoinModel>\ \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_af4e2b1499a0c08725275e9e3f397b913}{createCoinModel}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::shared\_ptr<logic::PowerupModel>\ \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_a0cb3435082762a3f66bc4497d1d548a1}{createPowerupModel}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ std::shared\_ptr<WorldView>\ \&\mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_ac433a23050444f6d2aaae43fb2671369}{getViewTarget}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_a8c325cc7e30dd7b9aba92dc0180d98ce}{setViewTarget}}(\textcolor{keyword}{const}\ std::shared\_ptr<WorldView>\ \&viewTarget);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ std::shared\_ptr<logic::GhostModel>\ \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_a20f9fdaa9e516f2b021e074b6374f8e6}{createGhostModel}}(\mbox{\hyperlink{namespacelogic_a36053e250f7e1339ba0a6cbecbdf1b4b}{logic::GhostType}}\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ \ \ \ \ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_DEFAULTENTITYFACTORY\_H}}
+
+\end{DoxyCode}

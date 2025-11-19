@@ -1,0 +1,29 @@
+\doxysection{Manhattan\+Navigation\+Agent.\+h}
+\hypertarget{ManhattanNavigationAgent_8h_source}{}\label{ManhattanNavigationAgent_8h_source}\index{logic/include/game/entities/controllers/navigation/ManhattanNavigationAgent.h@{logic/include/game/entities/controllers/navigation/ManhattanNavigationAgent.h}}
+\mbox{\hyperlink{ManhattanNavigationAgent_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ runes\ on\ 18/11/2025.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_MANHATTANNAVIGATIONAGENT\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_MANHATTANNAVIGATIONAGENT\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{INavigationAgent_8h}{core/entity/INavigationAgent.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1ManhattanNavigationAgent}{ManhattanNavigationAgent}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1INavigationAgent}{INavigationAgent}}\{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_calculateManhattanDistance(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ \&current,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ \&target)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \_calculateManhattanDistance(\mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Position::CoordinateType}}\ row,\ \mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Position::CoordinateType}}\ col,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ \&target)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1ManhattanNavigationAgent_a0372ce9f843bcb164b2cb1755988b159}{getNavigationDirection}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ \&current,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ \&target,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00019\ \ \ \ \ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \}\ \textcolor{comment}{//\ logic}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_MANHATTANNAVIGATIONAGENT\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,36 @@
+\doxysection{Sized\+World\+Object.\+h}
+\hypertarget{SizedWorldObject_8h_source}{}\label{SizedWorldObject_8h_source}\index{logic/include/core/world/SizedWorldObject.h@{logic/include/core/world/SizedWorldObject.h}}
+\mbox{\hyperlink{SizedWorldObject_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/8/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_SIZEDWORLDOBJECT\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_SIZEDWORLDOBJECT\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{WorldObject_8h}{WorldObject.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Size_8h}{Size.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1SizedWorldObject}{SizedWorldObject}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1WorldObject}{WorldObject}}\{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1Size}{Size}}\ size=\{0,0\};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a779988657f15c88c046d48d44eb1fba9}{setSize}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Size}{Size}}\&\ size);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlogic_1_1Size}{Size}}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a35d3332f6e228334cd195bb9af478cbd}{getSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject_ae86060174dd100f02773f55bf97450a1}{onCollision}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{SizedWorldObject}}\ \&other)\ \{\};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2}{CollisionType}}=int;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2}{CollisionType}}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a2aa2949b03b2ec7087cfdf942d2ad1b4}{getCollisionType}}()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ -\/1;\};}
+\DoxyCodeLine{00048\ \ \ \ \ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \}\ \textcolor{comment}{//\ logic}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_SIZEDWORLDOBJECT\_H}}
+
+\end{DoxyCode}

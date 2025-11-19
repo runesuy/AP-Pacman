@@ -1,0 +1,121 @@
+\doxysection{Moving\+Entity\+Controller.\+h}
+\hypertarget{MovingEntityController_8h_source}{}\label{MovingEntityController_8h_source}\index{logic/include/game/entities/controllers/MovingEntityController.h@{logic/include/game/entities/controllers/MovingEntityController.h}}
+\mbox{\hyperlink{MovingEntityController_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/8/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_MOVINGENTITYCONTROLLER\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_MOVINGENTITYCONTROLLER\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IEntityController_8h}{core/entity/IEntityController.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MovingEntityModel_8h}{game/entities/models/MovingEntityModel.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Stopwatch_8h}{core/utils/Stopwatch.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{TileMap_8h}{core/world/TileMap.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{World_8h}{core/world/World.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ EntityModelType>}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1MovingEntityController}{MovingEntityController}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1IEntityController}{IEntityController}}<EntityModelType>\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::tuple<bool,Position>\ \mbox{\hyperlink{classlogic_1_1MovingEntityController_a73ec56f81d7b0e35cd2870596c47a904}{\_isPastOrOnCenter}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1World}{logic::World}}\ \&world,\ \textcolor{keyword}{const}\ EntityModelType\ \&entity,\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ direction)\ ;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}{TileMap::TileType}}\ \mbox{\hyperlink{classlogic_1_1MovingEntityController_ae3016077b6427131d2ba9c73cd7b0541}{getTileInDirection}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1World}{World}}\&\ world,\ \textcolor{keyword}{const}\ EntityModelType\&\ entity,\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ direction)\ ;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1MovingEntityController_a6dc0f5fe7e6001eb437664da3441ab63}{update}}(\mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ EntityModelType\ \&entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1MovingEntityController_a75b2d8e1d0ad0e2924f7a11d771a72f8}{onWallCollision}}(\mbox{\hyperlink{classlogic_1_1World}{logic::World}}\ \&world,\ EntityModelType\ \&entity)\ \{\};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ EntityModelType>}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1MovingEntityController_a6dc0f5fe7e6001eb437664da3441ab63}{MovingEntityController<EntityModelType>::update}}(\mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ EntityModelType\ \&entity)\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ delta\ =\ \mbox{\hyperlink{classlogic_1_1Stopwatch_ac6a008dc21f2179c8783caacf0114c0e}{Stopwatch::getInstance}}()-\/>getDeltaTime();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}{TileMap::TileType}}\ tileInRequested\ =\ getTileInDirection(world,\ entity,\ entity.getRequestedDirection());}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entity.getRequestedDirection()\ !=\ entity.getDirection()\ \&\&\ tileInRequested\ !=\ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9a1dfc7c643bd8489a40673ad997a28f50}{TileMap::TileType::WALL}})\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ [isPastCenter,\ tileCenter]\ =\ \_isPastOrOnCenter(world,\ entity,\ entity.getDirection());}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ ghost\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}*\textcolor{keyword}{>}(\&entity);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isPastCenter)\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ entity.\mbox{\hyperlink{classlogic_1_1GhostModel_a1c0ddb635a6b41907577c67c01377cb9}{setPosition}}(tileCenter);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ entity.setDirection(entity.getRequestedDirection());}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entity.getDirection()==\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52a20a55e99eb2e2128f8088d553b78afd5}{Direction::NONE}})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}{TileMap::TileType}}\ tileInFront\ =\ getTileInDirection(world,\ entity,\ entity.getDirection());}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ [isPastCenter,\ tileCenter]\ =\ \_isPastOrOnCenter(world,\ entity,\ entity.getDirection());}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tileInFront\ !=\ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9a1dfc7c643bd8489a40673ad997a28f50}{TileMap::TileType::WALL}}\ ||\ !isPastCenter)\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (entity.getDirection()\ ==\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52a454de50c4b204fc9eb4043e3493cef5b}{Direction::LEFT}})}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ entity.setPosition(entity.getPosition()\ +\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}(-\/entity.getSpeed(),\ 0)*\ delta);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (entity.getDirection()\ ==\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52ac231e8df5dd5f8ea2500f2a19efbd972}{Direction::RIGHT}})}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ entity.setPosition(entity.getPosition()\ +\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}(entity.getSpeed(),\ 0)*delta);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (entity.getDirection()\ ==\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52ae6e7782195a5da54721a065c1e31b6ec}{Direction::UP}})}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ entity.setPosition(entity.getPosition()\ +\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}(0,\ entity.getSpeed())*delta);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (entity.getDirection()\ ==\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52a19d623ed9d84cd892cb0d6618771bfc5}{Direction::DOWN}})}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ entity.setPosition(entity.getPosition()\ +\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}(0,\ -\/entity.getSpeed())*delta);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ [isPastCenter,\ tileCenter]\ =\ \_isPastOrOnCenter(world,\ entity,\ entity.getDirection());}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isPastCenter)\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ entity.setPosition(tileCenter);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ onWallCollision(world,\ entity);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ EntityModelType>}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}{TileMap::TileType}}}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{classlogic_1_1MovingEntityController_ae3016077b6427131d2ba9c73cd7b0541}{MovingEntityController<EntityModelType>::getTileInDirection}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ \textcolor{keyword}{const}\ EntityModelType\ \&entity,}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ direction)\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ [row,\ col]\ =\ world.\mbox{\hyperlink{classlogic_1_1World_a16d6a106df682d833d19735fc8f0a1ea}{getConfig}}().\mbox{\hyperlink{classlogic_1_1IConfig_aa6cde30e5eb1db08d33c49ed30d72f5f}{getTileMap}}().\mbox{\hyperlink{classlogic_1_1TileMap_af2e5cc47d879b59b10bfb532a43afb44}{getGridPosition}}(entity.getPosition());}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}{TileMap::TileType}}\ tileInFront;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (direction)\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52a454de50c4b204fc9eb4043e3493cef5b}{Direction::LEFT}}:}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tileInFront\ =\ world.\mbox{\hyperlink{classlogic_1_1World_a16d6a106df682d833d19735fc8f0a1ea}{getConfig}}().\mbox{\hyperlink{classlogic_1_1IConfig_aa6cde30e5eb1db08d33c49ed30d72f5f}{getTileMap}}().\mbox{\hyperlink{classlogic_1_1TileMap_adb53cb4ee7398b449c8d084d25ea4510}{getTileType}}(row,\ col\ -\/\ 1);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52ac231e8df5dd5f8ea2500f2a19efbd972}{Direction::RIGHT}}:}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tileInFront\ =\ world.\mbox{\hyperlink{classlogic_1_1World_a16d6a106df682d833d19735fc8f0a1ea}{getConfig}}().\mbox{\hyperlink{classlogic_1_1IConfig_aa6cde30e5eb1db08d33c49ed30d72f5f}{getTileMap}}().\mbox{\hyperlink{classlogic_1_1TileMap_adb53cb4ee7398b449c8d084d25ea4510}{getTileType}}(row,\ col\ +\ 1);}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52ae6e7782195a5da54721a065c1e31b6ec}{Direction::UP}}:}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tileInFront\ =\ world.\mbox{\hyperlink{classlogic_1_1World_a16d6a106df682d833d19735fc8f0a1ea}{getConfig}}().\mbox{\hyperlink{classlogic_1_1IConfig_aa6cde30e5eb1db08d33c49ed30d72f5f}{getTileMap}}().\mbox{\hyperlink{classlogic_1_1TileMap_adb53cb4ee7398b449c8d084d25ea4510}{getTileType}}(row\ -\/\ 1,\ col);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52a19d623ed9d84cd892cb0d6618771bfc5}{Direction::DOWN}}:}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tileInFront\ =\ world.\mbox{\hyperlink{classlogic_1_1World_a16d6a106df682d833d19735fc8f0a1ea}{getConfig}}().\mbox{\hyperlink{classlogic_1_1IConfig_aa6cde30e5eb1db08d33c49ed30d72f5f}{getTileMap}}().\mbox{\hyperlink{classlogic_1_1TileMap_adb53cb4ee7398b449c8d084d25ea4510}{getTileType}}(row\ +\ 1,\ col);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52a20a55e99eb2e2128f8088d553b78afd5}{Direction::NONE}}:\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tileInFront;}
+\DoxyCodeLine{00097\ \ \ \ \ \}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ EntityModelType>}
+\DoxyCodeLine{00100\ \ \ \ \ std::tuple<bool,\ Position>}
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{classlogic_1_1MovingEntityController_a73ec56f81d7b0e35cd2870596c47a904}{MovingEntityController<EntityModelType>::\_isPastOrOnCenter}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ \textcolor{keyword}{const}\ EntityModelType\ \&entity,}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ direction)\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ [row,\ col]\ =\ world.\mbox{\hyperlink{classlogic_1_1World_a16d6a106df682d833d19735fc8f0a1ea}{getConfig}}().\mbox{\hyperlink{classlogic_1_1IConfig_aa6cde30e5eb1db08d33c49ed30d72f5f}{getTileMap}}().\mbox{\hyperlink{classlogic_1_1TileMap_af2e5cc47d879b59b10bfb532a43afb44}{getGridPosition}}(entity.getPosition());}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ tileCenter\ =\ world.\mbox{\hyperlink{classlogic_1_1World_a16d6a106df682d833d19735fc8f0a1ea}{getConfig}}().\mbox{\hyperlink{classlogic_1_1IConfig_aa6cde30e5eb1db08d33c49ed30d72f5f}{getTileMap}}().\mbox{\hyperlink{classlogic_1_1TileMap_a3510541030b3af363b3538f833105753}{getTileCenterPosition}}(row,\ col);}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ epsilon\ =\ 0.0001f;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::abs(tileCenter.\mbox{\hyperlink{classlogic_1_1Position_a00a7d58e378c852a5a431d6ec60ad0a5}{getX}}()-\/entity.getPosition().getX())\ <\ epsilon\ \&\&\ std::abs(tileCenter.\mbox{\hyperlink{classlogic_1_1Position_a8425d7c97e5a6c1855f8c9878db58ce1}{getY}}()-\/entity.getPosition().getY())\ <\ epsilon)\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\textcolor{keyword}{true},\ tileCenter\};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (direction)\ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52a454de50c4b204fc9eb4043e3493cef5b}{Direction::LEFT}}:}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{entity.getPosition().\mbox{\hyperlink{classlogic_1_1Position_a00a7d58e378c852a5a431d6ec60ad0a5}{getX}}()\ <\ tileCenter.\mbox{\hyperlink{classlogic_1_1Position_a00a7d58e378c852a5a431d6ec60ad0a5}{getX}}(),\ tileCenter\};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52ac231e8df5dd5f8ea2500f2a19efbd972}{Direction::RIGHT}}:}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{entity.getPosition().\mbox{\hyperlink{classlogic_1_1Position_a00a7d58e378c852a5a431d6ec60ad0a5}{getX}}()\ >\ tileCenter.\mbox{\hyperlink{classlogic_1_1Position_a00a7d58e378c852a5a431d6ec60ad0a5}{getX}}(),\ tileCenter\};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52ae6e7782195a5da54721a065c1e31b6ec}{Direction::UP}}:}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{entity.getPosition().\mbox{\hyperlink{classlogic_1_1Position_a8425d7c97e5a6c1855f8c9878db58ce1}{getY}}()\ >\ tileCenter.\mbox{\hyperlink{classlogic_1_1Position_a8425d7c97e5a6c1855f8c9878db58ce1}{getY}}(),\ tileCenter\};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52a19d623ed9d84cd892cb0d6618771bfc5}{Direction::DOWN}}:}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{entity.getPosition().\mbox{\hyperlink{classlogic_1_1Position_a8425d7c97e5a6c1855f8c9878db58ce1}{getY}}()\ <\ tileCenter.\mbox{\hyperlink{classlogic_1_1Position_a8425d7c97e5a6c1855f8c9878db58ce1}{getY}}(),\ tileCenter\};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\textcolor{keywordflow}{return}\ \{\textcolor{keyword}{false},\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}(0,0)\};}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00120\ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \};}
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_MOVINGENTITYCONTROLLER\_H}}
+
+\end{DoxyCode}

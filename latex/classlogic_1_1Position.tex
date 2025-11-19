@@ -1,0 +1,212 @@
+\doxysection{logic\+::Position Class Reference}
+\hypertarget{classlogic_1_1Position}{}\label{classlogic_1_1Position}\index{logic::Position@{logic::Position}}
+
+
+{\ttfamily \#include $<$Position.\+h$>$}
+
+
+
+Inheritance diagram for logic\+::Position\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classlogic_1_1Position__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for logic\+::Position\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classlogic_1_1Position__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlogic_1_1Position_a2880cfd9d6e96db29a3b35da998db959}{Position}} (\mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}} x, \mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}} y)
+\item 
+\mbox{\hyperlink{classlogic_1_1Position_a1773f36bf4ff000dae3c5bab85a4860a}{Position}} ()=default
+\item 
+\mbox{\hyperlink{classlogic_1_1Position_a66a163a1ffba173b189d37f8a83f85f5}{Position}} (\mbox{\hyperlink{classlogic_1_1Position}{Position}} \&\&) noexcept=default
+\item 
+\mbox{\hyperlink{classlogic_1_1Position_aecf161b3ff53d0b53f09ac32f5917335}{Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&)=default
+\item 
+\mbox{\hyperlink{classlogic_1_1Position}{Position}} \& \mbox{\hyperlink{classlogic_1_1Position_a556b00f77d785faf5f62de2e963210c4}{operator=}} (\mbox{\hyperlink{classlogic_1_1Position}{Position}} \&\&) noexcept=default
+\item 
+\mbox{\hyperlink{classlogic_1_1Position}{Position}} \& \mbox{\hyperlink{classlogic_1_1Position_a73df09fbc97a392eec2623f3f219784c}{operator=}} (const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&)=default
+\item 
+\mbox{\hyperlink{classlogic_1_1Position}{Position}} \& \mbox{\hyperlink{classlogic_1_1Position_a6fd9a65da3d1b21e414f832d361e68ab}{operator+=}} (const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&other)
+\item 
+\mbox{\hyperlink{classlogic_1_1Position}{Position}} \mbox{\hyperlink{classlogic_1_1Position_a73279ab08e7f9e540d36b74b0f589cf0}{operator+}} (const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&other) const
+\item 
+\mbox{\hyperlink{classlogic_1_1Position}{Position}} \mbox{\hyperlink{classlogic_1_1Position_aebd75e849ae695f916136fe97a674a49}{operator\texorpdfstring{$\ast$}{*}}} (float scalar) const
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Position_a8cc92303dd1483e4476e5ff1563dff20}{operator==}} (const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&other) const
+\item 
+\mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}} \mbox{\hyperlink{classlogic_1_1Position_a00a7d58e378c852a5a431d6ec60ad0a5}{getX}} () const override
+\item 
+void \mbox{\hyperlink{classlogic_1_1Position_a6d7b15bef28628ed645f05810d540049}{setX}} (\mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}} x) override
+\item 
+\mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}} \mbox{\hyperlink{classlogic_1_1Position_a8425d7c97e5a6c1855f8c9878db58ce1}{getY}} () const override
+\item 
+void \mbox{\hyperlink{classlogic_1_1Position_a2f44a7d6ebfae106103337eb3bfe6150}{setY}} (\mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}} y) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classlogic_1_1ICoordinate}{logic\+::\+ICoordinate}}}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}} = double
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A position class for the game world. x and y should always be between -\/1 and 1 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classlogic_1_1Position_a2880cfd9d6e96db29a3b35da998db959}\label{classlogic_1_1Position_a2880cfd9d6e96db29a3b35da998db959} 
+\index{logic::Position@{logic::Position}!Position@{Position}}
+\index{Position@{Position}!logic::Position@{logic::Position}}
+\doxysubsubsection{\texorpdfstring{Position()}{Position()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily logic\+::\+Position\+::\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}}}]{x,  }\item[{\mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}}}]{y }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal coördinate, 0 being the center of the game world \\
+\hline
+{\em y} & vertical coördinate, 0 being the center of the game world \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+x is between -\/1 and 1 
+
+y is between -\/1 and 1 
+\end{DoxyPrecond}
+\Hypertarget{classlogic_1_1Position_a1773f36bf4ff000dae3c5bab85a4860a}\label{classlogic_1_1Position_a1773f36bf4ff000dae3c5bab85a4860a} 
+\index{logic::Position@{logic::Position}!Position@{Position}}
+\index{Position@{Position}!logic::Position@{logic::Position}}
+\doxysubsubsection{\texorpdfstring{Position()}{Position()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily logic\+::\+Position\+::\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classlogic_1_1Position_a66a163a1ffba173b189d37f8a83f85f5}\label{classlogic_1_1Position_a66a163a1ffba173b189d37f8a83f85f5} 
+\index{logic::Position@{logic::Position}!Position@{Position}}
+\index{Position@{Position}!logic::Position@{logic::Position}}
+\doxysubsubsection{\texorpdfstring{Position()}{Position()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily logic\+::\+Position\+::\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1Position}{Position}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{classlogic_1_1Position_aecf161b3ff53d0b53f09ac32f5917335}\label{classlogic_1_1Position_aecf161b3ff53d0b53f09ac32f5917335} 
+\index{logic::Position@{logic::Position}!Position@{Position}}
+\index{Position@{Position}!logic::Position@{logic::Position}}
+\doxysubsubsection{\texorpdfstring{Position()}{Position()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily logic\+::\+Position\+::\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1Position_a00a7d58e378c852a5a431d6ec60ad0a5}\label{classlogic_1_1Position_a00a7d58e378c852a5a431d6ec60ad0a5} 
+\index{logic::Position@{logic::Position}!getX@{getX}}
+\index{getX@{getX}!logic::Position@{logic::Position}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Position\+::\+Coordinate\+Type}} logic\+::\+Position\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the horizontal coördinate 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1ICoordinate_a24e8a75338e9c550318c7bd4d3fcd234}{logic\+::\+ICoordinate}}.
+
+\Hypertarget{classlogic_1_1Position_a8425d7c97e5a6c1855f8c9878db58ce1}\label{classlogic_1_1Position_a8425d7c97e5a6c1855f8c9878db58ce1} 
+\index{logic::Position@{logic::Position}!getY@{getY}}
+\index{getY@{getY}!logic::Position@{logic::Position}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Position\+::\+Coordinate\+Type}} logic\+::\+Position\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the vertical coördinate 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1ICoordinate_a851d6934686081c99912dc4c69608e4b}{logic\+::\+ICoordinate}}.
+
+\Hypertarget{classlogic_1_1Position_aebd75e849ae695f916136fe97a674a49}\label{classlogic_1_1Position_aebd75e849ae695f916136fe97a674a49} 
+\index{logic::Position@{logic::Position}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!logic::Position@{logic::Position}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} logic\+::\+Position\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{float}]{scalar }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classlogic_1_1Position_a73279ab08e7f9e540d36b74b0f589cf0}\label{classlogic_1_1Position_a73279ab08e7f9e540d36b74b0f589cf0} 
+\index{logic::Position@{logic::Position}!operator+@{operator+}}
+\index{operator+@{operator+}!logic::Position@{logic::Position}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} logic\+::\+Position\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{other }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classlogic_1_1Position_a6fd9a65da3d1b21e414f832d361e68ab}\label{classlogic_1_1Position_a6fd9a65da3d1b21e414f832d361e68ab} 
+\index{logic::Position@{logic::Position}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!logic::Position@{logic::Position}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \& logic\+::\+Position\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{other }\end{DoxyParamCaption})}
+
+\Hypertarget{classlogic_1_1Position_a73df09fbc97a392eec2623f3f219784c}\label{classlogic_1_1Position_a73df09fbc97a392eec2623f3f219784c} 
+\index{logic::Position@{logic::Position}!operator=@{operator=}}
+\index{operator=@{operator=}!logic::Position@{logic::Position}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1Position}{Position}} \& logic\+::\+Position\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{classlogic_1_1Position_a556b00f77d785faf5f62de2e963210c4}\label{classlogic_1_1Position_a556b00f77d785faf5f62de2e963210c4} 
+\index{logic::Position@{logic::Position}!operator=@{operator=}}
+\index{operator=@{operator=}!logic::Position@{logic::Position}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1Position}{Position}} \& logic\+::\+Position\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1Position}{Position}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}, {\ttfamily [noexcept]}}
+
+\Hypertarget{classlogic_1_1Position_a8cc92303dd1483e4476e5ff1563dff20}\label{classlogic_1_1Position_a8cc92303dd1483e4476e5ff1563dff20} 
+\index{logic::Position@{logic::Position}!operator==@{operator==}}
+\index{operator==@{operator==}!logic::Position@{logic::Position}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool logic\+::\+Position\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{other }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classlogic_1_1Position_a6d7b15bef28628ed645f05810d540049}\label{classlogic_1_1Position_a6d7b15bef28628ed645f05810d540049} 
+\index{logic::Position@{logic::Position}!setX@{setX}}
+\index{setX@{setX}!logic::Position@{logic::Position}}
+\doxysubsubsection{\texorpdfstring{setX()}{setX()}}
+{\footnotesize\ttfamily void logic\+::\+Position\+::setX (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}}}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Set the horizontal coördinate 
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+x must be between -\/1 and 1 
+\end{DoxyPrecond}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1ICoordinate_a874fbe4673abbc08e22164cb3690c88c}{logic\+::\+ICoordinate}}.
+
+\Hypertarget{classlogic_1_1Position_a2f44a7d6ebfae106103337eb3bfe6150}\label{classlogic_1_1Position_a2f44a7d6ebfae106103337eb3bfe6150} 
+\index{logic::Position@{logic::Position}!setY@{setY}}
+\index{setY@{setY}!logic::Position@{logic::Position}}
+\doxysubsubsection{\texorpdfstring{setY()}{setY()}}
+{\footnotesize\ttfamily void logic\+::\+Position\+::setY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Coordinate\+Type}}}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Set the vertical coördinate 
+\begin{DoxyParams}{Parameters}
+{\em y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+y must be between -\/1 and 1 
+\end{DoxyPrecond}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1ICoordinate_af2972c90ab2e28421b60aa8568d1895b}{logic\+::\+ICoordinate}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+logic/include/core/world/\mbox{\hyperlink{Position_8h}{Position.\+h}}\item 
+logic/src/core/world/\mbox{\hyperlink{Position_8cpp}{Position.\+cpp}}\end{DoxyCompactItemize}

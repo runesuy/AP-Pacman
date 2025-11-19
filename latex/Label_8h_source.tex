@@ -1,0 +1,39 @@
+\doxysection{Label.\+h}
+\hypertarget{Label_8h_source}{}\label{Label_8h_source}\index{renderer/include/core/drawable/ui/Label.h@{renderer/include/core/drawable/ui/Label.h}}
+\mbox{\hyperlink{Label_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/14/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_LABEL\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_LABEL\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{DrawObject_8h}{core/drawable/DrawObject.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1Label}{Label}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1DrawObject}{DrawObject}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ sf::Font\ font;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ sf::Text\ text;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ characterSize\ =\ 0.05;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label_a6a43d6b85e5393c7d3a1fc2102ee75ac}{Label}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classrenderer_1_1Label_a6a43d6b85e5393c7d3a1fc2102ee75ac}{Label}}(\textcolor{keyword}{const}\ std::string\ \&str);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label_a6a43d6b85e5393c7d3a1fc2102ee75ac}{Label}}(\textcolor{keyword}{const}\ std::string\ \&str,\ \textcolor{keyword}{const}\ sf::Font\ \&font);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Label_ad9a62b724b8a8b3c2358c483d11c8e13}{setString}}(\textcolor{keyword}{const}\ std::string\ \&str);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Label_ab7ab0ab215594f5deaf00b8d64a7d2d1}{setFont}}(\textcolor{keyword}{const}\ sf::Font\ \&font);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Label_a1e2c6c4b7c1290d03e10aa2de2898b60}{setCharacterSize}}(\textcolor{keywordtype}{float}\ size);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Shape>>\ \mbox{\hyperlink{classrenderer_1_1Label_afc92ec67b6a0d2666f3667b49cd97a36}{getSFShapes}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<sf::Sprite>>\ \mbox{\hyperlink{classrenderer_1_1Label_ab674bb75a394790149de702cb7d3a491}{getSFSprites}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Text>>\ \mbox{\hyperlink{classrenderer_1_1Label_ae6bb2428dffea2093599d1a94bf394cd}{getSFTexts}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ \ \ \ \ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_LABEL\_H}}
+
+\end{DoxyCode}

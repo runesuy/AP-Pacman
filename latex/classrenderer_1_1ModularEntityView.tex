@@ -1,0 +1,162 @@
+\doxysection{renderer\+::Modular\+Entity\+View Class Reference}
+\hypertarget{classrenderer_1_1ModularEntityView}{}\label{classrenderer_1_1ModularEntityView}\index{renderer::ModularEntityView@{renderer::ModularEntityView}}
+
+
+{\ttfamily \#include $<$Modular\+Entity\+View.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::Modular\+Entity\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1ModularEntityView__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::Modular\+Entity\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classrenderer_1_1ModularEntityView__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ \mbox{\hyperlink{classrenderer_1_1ModularEntityView_aa7574935c99ca248d974cb51a1bf4726}{get\+SFShapes}} (sf\+::\+Render\+Window \&window) override
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ \mbox{\hyperlink{classrenderer_1_1ModularEntityView_aa73af8952f79fc94f61ac05b8b1672ad}{get\+SFSprites}} (sf\+::\+Render\+Window \&window) override
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ \mbox{\hyperlink{classrenderer_1_1ModularEntityView_a97e430746a6ae2cfb8d7b98a9bea9658}{get\+SFTexts}} (sf\+::\+Render\+Window \&window) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1ModularEntityView_ad01af13e596e5ba0f121343774c303e3}{add\+Module}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IEntityViewModule}{IEntity\+View\+Module}} $>$ module)
+\item 
+{\footnotesize template$<$Is\+Module\+Type T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classrenderer_1_1ModularEntityView_a301fd6ed3f229c71997575c71d871e8e}{get\+Module}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1EntityView}{renderer\+::\+Entity\+View}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \& \mbox{\hyperlink{classrenderer_1_1EntityView_a4b2d240028a5fadd9f9bda861306bcf4}{get\+Size}} () const
+\item 
+virtual void \mbox{\hyperlink{classrenderer_1_1EntityView_ab1a10febe0d9e2415040418075de0217}{set\+Size}} (const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1IWorldObjectView}{renderer\+::\+IWorld\+Object\+View}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classrenderer_1_1IWorldObjectView_ad486098155a47b33991193ee5e7311a3}{is\+Marked\+For\+Removal}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1DrawObject}{renderer\+::\+Draw\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \& \mbox{\hyperlink{classrenderer_1_1DrawObject_a1317e66b07b34c0fa2fbf7472f45207e}{get\+Position}} () const
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&position)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de728}{draw}} (sf\+::\+Render\+Window \&window) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ Modular\+Entity\+View $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_afd56bfb66920d8e1d38a3ac3259e85d9}{update\+Observers}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_a73e3a3b1f7ffdd12ffa269541a551ec6}{update\+Observers}} (const std\+::string \&event)
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1Observable_a1f7f0337470804741ddd21ffe82103c1}{\texorpdfstring{$\sim$}{\string~}\+Observable}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_afb2547e65fdf6b4c090f5170df4bf66d}{add\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ Modular\+Entity\+View $>$ $>$ \&observer)
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Observable_ad7cb2d9214c5dd7f5aa8a36ef7ce43b9}{has\+Observers}} () const
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Observable_a54bfc543d21f11be7137efce418394c2}{has\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ Modular\+Entity\+View $>$ $>$ \&observer) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ Modular\+Entity\+View $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classlogic_1_1Observable_a637139aff6f941cdc9096713a3f38ea7}{Event\+Type}} 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1ModularEntityView_ad01af13e596e5ba0f121343774c303e3}\label{classrenderer_1_1ModularEntityView_ad01af13e596e5ba0f121343774c303e3} 
+\index{renderer::ModularEntityView@{renderer::ModularEntityView}!addModule@{addModule}}
+\index{addModule@{addModule}!renderer::ModularEntityView@{renderer::ModularEntityView}}
+\doxysubsubsection{\texorpdfstring{addModule()}{addModule()}}
+{\footnotesize\ttfamily void renderer\+::\+Modular\+Entity\+View\+::add\+Module (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IEntityViewModule}{IEntity\+View\+Module}} $>$}]{module }\end{DoxyParamCaption})}
+
+\Hypertarget{classrenderer_1_1ModularEntityView_a301fd6ed3f229c71997575c71d871e8e}\label{classrenderer_1_1ModularEntityView_a301fd6ed3f229c71997575c71d871e8e} 
+\index{renderer::ModularEntityView@{renderer::ModularEntityView}!getModule@{getModule}}
+\index{getModule@{getModule}!renderer::ModularEntityView@{renderer::ModularEntityView}}
+\doxysubsubsection{\texorpdfstring{getModule()}{getModule()}}
+{\footnotesize\ttfamily template$<$Is\+Module\+Type T$>$ \\
+std\+::shared\+\_\+ptr$<$ T $>$ renderer\+::\+Modular\+Entity\+View\+::get\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classrenderer_1_1ModularEntityView_aa7574935c99ca248d974cb51a1bf4726}\label{classrenderer_1_1ModularEntityView_aa7574935c99ca248d974cb51a1bf4726} 
+\index{renderer::ModularEntityView@{renderer::ModularEntityView}!getSFShapes@{getSFShapes}}
+\index{getSFShapes@{getSFShapes}!renderer::ModularEntityView@{renderer::ModularEntityView}}
+\doxysubsubsection{\texorpdfstring{getSFShapes()}{getSFShapes()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ renderer\+::\+Modular\+Entity\+View\+::get\+SFShapes (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get the SFML shapes representing the draw object. \begin{DoxyWarning}{Warning}
+Use the \doxylink{classlogic_1_1Position}{logic\+::\+Position} and \doxylink{classlogic_1_1Size}{logic\+::\+Size} system when giving positions and sizes to the shapes. 
+
+positions are relative to the \doxylink{classrenderer_1_1DrawObject}{Draw\+Object} position. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1DrawObject_a9612dd69d98b224a4088b73b266a9716}{renderer\+::\+Draw\+Object}}.
+
+\Hypertarget{classrenderer_1_1ModularEntityView_aa73af8952f79fc94f61ac05b8b1672ad}\label{classrenderer_1_1ModularEntityView_aa73af8952f79fc94f61ac05b8b1672ad} 
+\index{renderer::ModularEntityView@{renderer::ModularEntityView}!getSFSprites@{getSFSprites}}
+\index{getSFSprites@{getSFSprites}!renderer::ModularEntityView@{renderer::ModularEntityView}}
+\doxysubsubsection{\texorpdfstring{getSFSprites()}{getSFSprites()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ renderer\+::\+Modular\+Entity\+View\+::get\+SFSprites (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get the SFML sprites representing the draw object. \begin{DoxyWarning}{Warning}
+Use the \doxylink{classlogic_1_1Position}{logic\+::\+Position} and \doxylink{classlogic_1_1Size}{logic\+::\+Size} system when giving positions and sizes 
+
+positions are relative to the \doxylink{classrenderer_1_1DrawObject}{Draw\+Object} position. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1DrawObject_acac924ad07a7f2ee44bec57f13161c31}{renderer\+::\+Draw\+Object}}.
+
+\Hypertarget{classrenderer_1_1ModularEntityView_a97e430746a6ae2cfb8d7b98a9bea9658}\label{classrenderer_1_1ModularEntityView_a97e430746a6ae2cfb8d7b98a9bea9658} 
+\index{renderer::ModularEntityView@{renderer::ModularEntityView}!getSFTexts@{getSFTexts}}
+\index{getSFTexts@{getSFTexts}!renderer::ModularEntityView@{renderer::ModularEntityView}}
+\doxysubsubsection{\texorpdfstring{getSFTexts()}{getSFTexts()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ renderer\+::\+Modular\+Entity\+View\+::get\+SFTexts (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get the SFML texts representing the draw object. \begin{DoxyWarning}{Warning}
+Use the \doxylink{classlogic_1_1Position}{logic\+::\+Position} and \doxylink{classlogic_1_1Size}{logic\+::\+Size} system when giving positions and sizes 
+
+positions are relative to the \doxylink{classrenderer_1_1DrawObject}{Draw\+Object} position. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1DrawObject_aa4d5616621231dc20620faa1dc5c1b6c}{renderer\+::\+Draw\+Object}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/core/entity/modular/\mbox{\hyperlink{ModularEntityView_8h}{Modular\+Entity\+View.\+h}}\item 
+renderer/src/core/entity/modular/\mbox{\hyperlink{ModularEntityView_8cpp}{Modular\+Entity\+View.\+cpp}}\end{DoxyCompactItemize}

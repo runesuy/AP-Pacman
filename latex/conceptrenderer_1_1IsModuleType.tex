@@ -1,0 +1,13 @@
+\doxysection{renderer\+::Is\+Module\+Type Concept Reference}
+\hypertarget{conceptrenderer_1_1IsModuleType}{}\label{conceptrenderer_1_1IsModuleType}\index{renderer::IsModuleType@{renderer::IsModuleType}}
+
+
+{\ttfamily \#include $<$Modular\+Entity\+View.\+h$>$}
+
+\doxysubsection{Concept definition}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\textcolor{keyword}{concept\ }\mbox{\hyperlink{conceptrenderer_1_1IsModuleType}{renderer::IsModuleType}}\ =\ \ std::is\_base\_of<IEntityViewModule,\ T>::value}
+
+\end{DoxyCode}

@@ -1,0 +1,36 @@
+\doxysection{Powerup\+View.\+h}
+\hypertarget{PowerupView_8h_source}{}\label{PowerupView_8h_source}\index{renderer/include/game/entities/views/PowerupView.h@{renderer/include/game/entities/views/PowerupView.h}}
+\mbox{\hyperlink{PowerupView_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/12/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_POWERUPVIEW\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_POWERUPVIEW\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IObserver_8h}{core/observer/IObserver.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{PowerupModel_8h}{game/entities/models/PowerupModel.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ModularEntityView_8h}{core/entity/modular/ModularEntityView.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1PowerupView}{PowerupView}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1ModularEntityView}{ModularEntityView}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1IObserver}{logic::IObserver}}<logic::PowerupModel>\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ markedForRemoval\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1PowerupView_a73b62fec9a86a455d48898b8b3a1f71b}{PowerupView}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrenderer_1_1PowerupView_a6b53aacabfeea01b41939f5c67050e03}{isMarkedForRemoval}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1PowerupView_a01097012aa7db4b422fc4d69c029f747}{setSize}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\ \&size)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1PowerupView_adb1c83b02302603c32e3f3a7a3f19e7e}{update}}(\mbox{\hyperlink{classlogic_1_1PowerupModel}{logic::PowerupModel}}\ \&subject)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1PowerupView_ab7aecab7762f46e0c9f4022d780b9177}{markForRemoval}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_POWERUPVIEW\_H}}
+
+\end{DoxyCode}
