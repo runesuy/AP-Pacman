@@ -1,6 +1,0 @@
-var searchData=
-[
-  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
-  ['markforremoval_1',['markForRemoval',['../classlogic_1_1_world_object.html#ad57fa60da3633757434ef70a266f8e14',1,'logic::WorldObject::markForRemoval()'],['../classlogic_1_1_coin_model.html#a2dcfc1318f085ceeef06c5d5b9e587df',1,'logic::CoinModel::markForRemoval()'],['../classlogic_1_1_ghost_model.html#af57a1128c94aaaaa9a82f99a8b6161b3',1,'logic::GhostModel::markForRemoval()'],['../classlogic_1_1_powerup_model.html#a1d067816bb2a74d336d0996e6e451424',1,'logic::PowerupModel::markForRemoval()'],['../classrenderer_1_1_coin_view.html#ae0f8e4df9759141bdbfca33b80918d4d',1,'renderer::CoinView::markForRemoval()'],['../classrenderer_1_1_pink_ghost_view.html#a5ca6d3c3ef07be0099cfaa88e87901d4',1,'renderer::PinkGhostView::markForRemoval()'],['../classrenderer_1_1_powerup_view.html#ab7aecab7762f46e0c9f4022d780b9177',1,'renderer::PowerupView::markForRemoval()'],['../classrenderer_1_1_red_ghost_view.html#a1ea75d3440b5369072f508fe5c5a20d7',1,'renderer::RedGhostView::markForRemoval()']]],
-  ['menustate_2',['MenuState',['../classrenderer_1_1_menu_state.html#a6c096ce300902e4a3625c50bcc1803d2',1,'renderer::MenuState']]]
-];
