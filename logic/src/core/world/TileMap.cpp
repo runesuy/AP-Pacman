@@ -72,6 +72,13 @@ namespace logic {
                         world.addObject(ghost);
                         break;
                     }
+                    case TileType::GHOST_ORANGE: {
+                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::ORANGE);
+                        ghost->setPosition({x, y});
+                        ghost->setSize({tileSize, tileSize});
+                        world.addObject(ghost);
+                        break;
+                    }
                 }
             }
         }

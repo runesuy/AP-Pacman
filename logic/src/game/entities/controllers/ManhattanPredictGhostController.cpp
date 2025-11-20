@@ -1,0 +1,29 @@
+//
+// Created by runes on 20/11/2025.
+//
+
+#include "game/entities/controllers/ManhattanPredictGhostController.h"
+
+namespace logic {
+    void ManhattanPredictGhostController::update(World &world, GhostModel &entity) {
+        auto player = world.getObjectsOfType<PlayerModel>().at(0);
+        if (!player) {
+            std::cerr << "No Player Found [ManhattanFollowGhostController::update]" << std::endl;
+        }
+        // calculate position in front of player
+        auto targetPosition = _calculatePositionInFrontOneStep(*player, world.getConfig().getTileMap().getTileSize());
+        entity.setRequestedDirection(
+                navigationAgent->getNavigationDirection(entity.getPosition(), targetPosition, world));
+
+        GhostController::update(world, entity);
+    }
+
+    void ManhattanPredictGhostController::processCommand(EntityCommand command, GhostModel &entity) {
+
+    }
+
+    void ManhattanPredictGhostController::onCollision(GhostModel &entity, const SizedWorldObject &other) {
+
+    }
+
+} // logic

@@ -7,11 +7,15 @@
 #include "game/parsers/DefaultTextureParser.h"
 #include "game/parsers/JSONConfigParser.h"
 #include "game/Game.h"
+#include "core/exceptions/InvalidTextureNameException.h"
 
 namespace renderer {
 
     const sf::Texture& DefaultTextureParser::getTexture(const std::string &name) const {
-        return _textureCache.at(name);
+        try { return _textureCache.at(name); }
+        catch (const std::out_of_range& e) {
+            throw InvalidTextureNameException(name);
+        }
     }
 
     void DefaultTextureParser::loadTextures(const std::string &path,
