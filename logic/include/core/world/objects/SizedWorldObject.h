@@ -37,14 +37,14 @@ namespace logic {
         virtual void onCollision(const SizedWorldObject &other, World &world) {};
 
 
-        using CollisionType=int;
+        using CollisionTypeT=int;
 
         /**
         * Return the ID type for collisions.
         * Can be used to identify the other colliding object.
         * @return -1 by default.
         */
-        [[nodiscard]] virtual CollisionType getCollisionType() const {return -1;};
+        [[nodiscard]] virtual CollisionTypeT getCollisionType() const {return -1;};
     };
 
 } // logic

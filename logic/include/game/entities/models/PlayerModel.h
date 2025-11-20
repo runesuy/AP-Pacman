@@ -6,6 +6,7 @@
 #define AP_PACMAN_PLAYERMODEL_H
 
 #include "MovingEntityModel.h"
+#include "CollisionTypes.h"
 
 namespace logic {
 
@@ -13,6 +14,7 @@ namespace logic {
     public:
     private:
         const float SPEED = 0.3f;
+        inline static const CollisionType collisionType = PLAYER;
     public:
         PlayerModel();
 
@@ -23,6 +25,8 @@ namespace logic {
         float getSpeed() override;
 
         void setDirection(Direction direction) override;
+
+        CollisionTypeT getCollisionType() const override;
     };
 
 } // logic

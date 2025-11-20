@@ -5,7 +5,6 @@
 #ifndef AP_PACMAN_COLLISIONTYPES_H
 #define AP_PACMAN_COLLISIONTYPES_H
 
-#endif //AP_PACMAN_COLLISIONTYPES_H
 
 namespace logic {
     enum CollisionType {
@@ -13,3 +12,5 @@ namespace logic {
         PLAYER
     };
 }
+
+#endif //AP_PACMAN_COLLISIONTYPES_H

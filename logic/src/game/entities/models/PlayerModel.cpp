@@ -28,4 +28,8 @@ namespace logic {
         MovingEntityModel::setDirection(direction);
         updateObservers();
     }
+
+    SizedWorldObject::CollisionTypeT PlayerModel::getCollisionType() const {
+        return collisionType;
+    }
 } // logic

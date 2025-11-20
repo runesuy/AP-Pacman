@@ -25,4 +25,8 @@ namespace logic {
     CoinModel::CoinModel() {
         controller = std::make_shared<logic::CoinController>();
     }
+
+    SizedWorldObject::CollisionTypeT CoinModel::getCollisionType() const {
+        return collisionType;
+    }
 } // logic
