@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Pacman: logic/src/core/world/CollisionHandler.cpp File Reference</title>
+<title>Pacman: logic/src/core/world/objects/CollisionHandler.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0f9694b8de2575528c6c0ae9f79dda65.html">logic</a></li><li class="navelem"><a class="el" href="dir_98de9e47f37a019cddc1d6619996a644.html">src</a></li><li class="navelem"><a class="el" href="dir_18680ea4496aa16a20a19da3e1a647b7.html">core</a></li><li class="navelem"><a class="el" href="dir_187a0122112f48f08c5909eba0f14471.html">world</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_0f9694b8de2575528c6c0ae9f79dda65.html">logic</a></li><li class="navelem"><a class="el" href="dir_98de9e47f37a019cddc1d6619996a644.html">src</a></li><li class="navelem"><a class="el" href="dir_18680ea4496aa16a20a19da3e1a647b7.html">core</a></li><li class="navelem"><a class="el" href="dir_187a0122112f48f08c5909eba0f14471.html">world</a></li><li class="navelem"><a class="el" href="dir_eafff698abd901b1fdb69bb210af5bbf.html">objects</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -78,33 +78,33 @@ $(function() {
   <div class="headertitle"><div class="title">CollisionHandler.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="CollisionHandler_8h_source.html">core/world/CollisionHandler.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="SizedWorldObject_8h_source.html">core/world/SizedWorldObject.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="CollisionHandler_8h_source.html">core/world/objects/CollisionHandler.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SizedWorldObject_8h_source.html">core/world/objects/SizedWorldObject.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for CollisionHandler.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="CollisionHandler_8cpp__incl.png" border="0" usemap="#alogic_2src_2core_2world_2CollisionHandler_8cpp" alt=""/></div>
-<map name="alogic_2src_2core_2world_2CollisionHandler_8cpp" id="alogic_2src_2core_2world_2CollisionHandler_8cpp">
-<area shape="rect" title=" " alt="" coords="185,5,328,46"/>
-<area shape="rect" href="CollisionHandler_8h.html" title=" " alt="" coords="97,94,286,120"/>
-<area shape="poly" title=" " alt="" coords="243,48,213,83,209,80,238,45"/>
-<area shape="rect" href="SizedWorldObject_8h.html" title=" " alt="" coords="228,168,427,193"/>
-<area shape="poly" title=" " alt="" coords="272,45,300,93,322,152,317,154,296,95,268,48"/>
-<area shape="rect" title=" " alt="" coords="5,168,63,193"/>
-<area shape="poly" title=" " alt="" coords="166,123,76,163,74,158,164,118"/>
-<area shape="rect" title=" " alt="" coords="87,168,154,193"/>
-<area shape="poly" title=" " alt="" coords="182,122,145,158,141,155,178,118"/>
-<area shape="rect" href="WorldObject_8h.html" title=" " alt="" coords="124,241,291,267"/>
-<area shape="poly" title=" " alt="" coords="195,120,207,226,202,226,190,120"/>
-<area shape="poly" title=" " alt="" coords="216,118,292,158,290,162,213,123"/>
-<area shape="rect" href="Position_8h.html" title=" " alt="" coords="182,315,260,341"/>
-<area shape="poly" title=" " alt="" coords="212,267,218,299,213,300,207,268"/>
-<area shape="rect" href="ICoordinate_8h.html" title=" " alt="" coords="217,389,315,414"/>
-<area shape="poly" title=" " alt="" coords="230,339,253,374,248,377,226,342"/>
-<area shape="poly" title=" " alt="" coords="308,196,242,235,239,231,306,192"/>
-<area shape="rect" href="Size_8h.html" title=" " alt="" coords="291,315,348,341"/>
-<area shape="poly" title=" " alt="" coords="329,194,323,300,318,299,324,194"/>
-<area shape="poly" title=" " alt="" coords="313,342,286,378,282,374,308,339"/>
+<div class="center"><img src="CollisionHandler_8cpp__incl.png" border="0" usemap="#alogic_2src_2core_2world_2objects_2CollisionHandler_8cpp" alt=""/></div>
+<map name="alogic_2src_2core_2world_2objects_2CollisionHandler_8cpp" id="alogic_2src_2core_2world_2objects_2CollisionHandler_8cpp">
+<area shape="rect" title=" " alt="" coords="147,5,337,46"/>
+<area shape="rect" href="CollisionHandler_8h.html" title=" " alt="" coords="127,94,256,135"/>
+<area shape="poly" title=" " alt="" coords="233,48,213,82,208,79,228,45"/>
+<area shape="rect" href="SizedWorldObject_8h.html" title=" " alt="" coords="228,183,363,208"/>
+<area shape="poly" title=" " alt="" coords="252,45,270,93,291,167,286,168,265,95,247,47"/>
+<area shape="rect" title=" " alt="" coords="5,183,63,208"/>
+<area shape="poly" title=" " alt="" coords="153,138,73,178,71,173,151,133"/>
+<area shape="rect" title=" " alt="" coords="87,183,154,208"/>
+<area shape="poly" title=" " alt="" coords="176,137,144,173,140,169,172,133"/>
+<area shape="rect" href="WorldObject_8h.html" title=" " alt="" coords="140,256,243,282"/>
+<area shape="poly" title=" " alt="" coords="194,135,194,241,189,241,189,135"/>
+<area shape="poly" title=" " alt="" coords="219,133,269,171,266,175,215,137"/>
+<area shape="rect" href="Position_8h.html" title=" " alt="" coords="55,330,237,356"/>
+<area shape="poly" title=" " alt="" coords="186,284,164,318,159,315,182,281"/>
+<area shape="rect" href="ICoordinate_8h.html" title=" " alt="" coords="195,404,292,429"/>
+<area shape="poly" title=" " alt="" coords="164,354,217,392,213,397,161,358"/>
+<area shape="poly" title=" " alt="" coords="279,211,223,250,220,245,276,207"/>
+<area shape="rect" href="Size_8h.html" title=" " alt="" coords="261,330,420,356"/>
+<area shape="poly" title=" " alt="" coords="302,208,335,314,330,316,296,209"/>
+<area shape="poly" title=" " alt="" coords="326,358,273,397,270,392,323,354"/>
 </map>
 </div>
 </div><table class="memberdecls">
