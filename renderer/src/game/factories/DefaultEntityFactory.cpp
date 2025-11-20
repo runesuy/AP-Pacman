@@ -66,6 +66,7 @@ namespace renderer {
                 ghostModel->addObserver(ghostView);
                 ghostModel->setController(std::make_shared<logic::RandomNavGhostController>());
                 viewTarget->addObjectView(ghostView);
+                ghostModel->setStartDelay(0);
                 return ghostModel;
             }
             case logic::GhostType::PINK: {
@@ -74,6 +75,7 @@ namespace renderer {
                 ghostModel->addObserver(ghostView);
                 ghostModel->setController(std::make_shared<logic::ManhattanFollowGhostController>());
                 viewTarget->addObjectView(ghostView);
+                ghostModel->setStartDelay(0);
                 return ghostModel;
             }
             case logic::GhostType::ORANGE: {
@@ -82,6 +84,7 @@ namespace renderer {
                 ghostModel->addObserver(ghostView);
                 ghostModel->setController(std::make_shared<logic::ManhattanPredictGhostController>());
                 viewTarget->addObjectView(ghostView);
+                ghostModel->setStartDelay(10);
                 return ghostModel;
             }
             case logic::GhostType::BLUE: {
@@ -90,6 +93,7 @@ namespace renderer {
                 ghostModel->addObserver(ghostView);
                 ghostModel->setController(std::make_shared<logic::ManhattanPredictGhostController>());
                 viewTarget->addObjectView(ghostView);
+                ghostModel->setStartDelay(10);
                 return ghostModel;
             }
         }
