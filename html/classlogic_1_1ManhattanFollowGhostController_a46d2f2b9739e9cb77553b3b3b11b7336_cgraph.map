@@ -1,35 +1,38 @@
 <map id="logic::ManhattanFollowGhostController::update" name="logic::ManhattanFollowGhostController::update">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,100,194,141"/>
-<area shape="rect" id="Node000002" href="$classlogic_1_1World.html#a8982fe868e154e8595bd3736b57305ca" title=" " alt="" coords="242,5,398,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,97,241,57,255,50,257,55,243,61,149,102"/>
-<area shape="rect" id="Node000003" href="$classlogic_1_1WorldObject.html#aac0f498afeff654fee790e435617de04" title=" " alt="" coords="257,71,383,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="193,105,241,99,242,104,194,110"/>
-<area shape="rect" id="Node000004" href="$classlogic_1_1MovingEntityModel.html#a36a87400133117f50cba0f14d6f459e0" title=" " alt="" coords="456,49,619,90"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="194,128,293,131,346,128,397,120,421,112,445,101,463,94,465,99,447,105,423,117,399,126,346,133,293,136,194,134"/>
-<area shape="rect" id="Node000005" href="$classlogic_1_1GhostController.html#a8b06b2000603ac58aafbbbb3032dcb0a" title=" " alt="" coords="248,263,392,303"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="130,139,280,251,277,255,127,143"/>
-<area shape="poly" id="edge11_Node000005_Node000004" title=" " alt="" coords="333,261,397,166,444,101,452,96,455,100,448,105,402,169,337,264"/>
-<area shape="rect" id="Node000006" href="$classlogic_1_1MovingEntityModel.html#ac60a9bf73b3bbd94b6969cc14f142453" title=" " alt="" coords="456,115,619,155"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="339,260,385,217,445,171,465,160,468,165,447,176,388,221,343,264"/>
-<area shape="rect" id="Node000007" href="$classlogic_1_1Stopwatch.html#ac6a008dc21f2179c8783caacf0114c0e" title=" " alt="" coords="677,344,868,369"/>
-<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="349,260,393,235,445,215,497,203,539,196,580,199,630,215,671,238,706,268,735,301,757,329,752,332,731,304,702,272,668,242,628,220,579,205,539,202,498,208,447,220,396,240,352,265"/>
-<area shape="rect" id="Node000008" href="$classlogic_1_1GhostModel.html#af319b6eda1da39921f26ac2ae5711549" title=" " alt="" coords="473,229,603,270"/>
-<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="392,269,456,259,457,265,393,275"/>
-<area shape="rect" id="Node000009" href="$classlogic_1_1GhostModel.html#a53ae80c730c31a5732cea30f3122cc6a" title=" " alt="" coords="473,295,603,335"/>
-<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="393,291,457,301,456,306,392,296"/>
-<area shape="rect" id="Node000010" href="$classlogic_1_1GhostModel.html#add1e77e061893880c511f64a2aa1cb12" title=" " alt="" coords="473,360,603,401"/>
-<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="360,301,447,345,464,351,462,356,445,349,358,306"/>
-<area shape="rect" id="Node000011" href="$classlogic_1_1GhostModel.html#a0be928fc21c21965bc82b17524edc716" title=" " alt="" coords="473,425,603,466"/>
-<area shape="poly" id="edge10_Node000005_Node000011" title=" " alt="" coords="338,302,384,355,414,385,447,410,459,417,457,422,445,415,411,389,380,359,334,305"/>
-<area shape="rect" id="Node000012" href="$classlogic_1_1GhostModel.html#ac455ae19d66e47094f399e08ae17f43f" title=" " alt="" coords="473,491,603,531"/>
-<area shape="poly" id="edge12_Node000005_Node000012" title=" " alt="" coords="332,303,348,340,373,386,407,434,448,476,460,484,457,488,444,480,402,437,369,389,343,342,327,305"/>
-<area shape="rect" id="Node000013" href="$classlogic_1_1MovingEntityController.html#a6dc0f5fe7e6001eb437664da3441ab63" title=" " alt="" coords="446,556,629,597"/>
-<area shape="poly" id="edge13_Node000005_Node000013" title=" " alt="" coords="328,303,341,351,364,415,399,482,422,513,448,541,453,545,449,549,444,545,418,517,395,485,359,417,336,353,323,304"/>
-<area shape="poly" id="edge14_Node000013_Node000007" title=" " alt="" coords="607,553,628,541,669,503,705,460,755,382,760,385,710,463,673,507,631,545,610,558"/>
-<area shape="rect" id="Node000014" href="$classlogic_1_1GhostModel.html#a1c0ddb635a6b41907577c67c01377cb9" title=" " alt="" coords="707,556,838,597"/>
-<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="629,574,692,574,692,579,629,579"/>
-<area shape="rect" id="Node000015" href="$classlogic_1_1WorldObject.html#ae414bee61532c20edbaf252f5dbeae74" title=" " alt="" coords="958,523,1084,563"/>
-<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="837,565,942,551,943,556,838,570"/>
-<area shape="rect" id="Node000016" href="$classlogic_1_1Observable.html#afd56bfb66920d8e1d38a3ac3259e85d9" title=" " alt="" coords="916,588,1126,629"/>
-<area shape="poly" id="edge17_Node000014_Node000016" title=" " alt="" coords="838,582,900,590,900,595,837,587"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,173,194,214"/>
+<area shape="rect" id="Node000002" href="$classlogic_1_1MovingEntityController.html#ac1e017f33e1035f879e14e4be09b455c" title=" " alt="" coords="242,36,443,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,171,177,132,240,93,266,80,268,85,243,97,180,137,128,175"/>
+<area shape="rect" id="Node000003" href="$classlogic_1_1MovingEntityModel.html#ac60a9bf73b3bbd94b6969cc14f142453" title=" " alt="" coords="501,5,664,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="143,170,241,131,297,117,343,111,387,103,442,86,466,72,490,57,505,50,507,55,492,61,469,77,444,91,389,109,344,116,299,122,242,136,145,175"/>
+<area shape="rect" id="Node000004" href="$classlogic_1_1World.html#a8982fe868e154e8595bd3736b57305ca" title=" " alt="" coords="264,267,421,307"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="148,212,243,251,263,259,261,264,241,256,146,217"/>
+<area shape="rect" id="Node000005" href="$classlogic_1_1WorldObject.html#aac0f498afeff654fee790e435617de04" title=" " alt="" coords="280,332,405,373"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="121,212,173,264,207,292,243,317,267,328,264,333,240,321,203,296,169,268,117,216"/>
+<area shape="rect" id="Node000006" href="$classlogic_1_1MovingEntityModel.html#a36a87400133117f50cba0f14d6f459e0" title=" " alt="" coords="501,71,664,111"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="194,177,313,157,442,130,502,114,503,119,444,135,314,162,194,183"/>
+<area shape="rect" id="Node000007" href="$classlogic_1_1GhostController.html#a8b06b2000603ac58aafbbbb3032dcb0a" title=" " alt="" coords="270,201,415,242"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="194,202,255,209,255,214,194,207"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="369,199,404,168,441,131,455,111,463,93,472,75,489,57,496,52,500,56,493,61,476,78,467,95,459,113,445,134,408,172,372,203"/>
+<area shape="poly" id="edge13_Node000007_Node000006" title=" " alt="" coords="410,198,441,181,456,167,465,152,474,137,489,122,498,117,501,121,493,126,478,141,469,155,460,170,445,185,413,203"/>
+<area shape="rect" id="Node000008" href="$classlogic_1_1Stopwatch.html#ac6a008dc21f2179c8783caacf0114c0e" title=" " alt="" coords="722,364,913,389"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="416,233,432,241,445,253,466,288,473,322,471,357,465,391,459,423,459,455,468,485,493,513,515,529,536,539,557,543,578,543,622,533,673,513,713,490,747,460,776,429,797,400,802,404,780,432,751,464,716,495,675,517,623,538,578,549,556,549,535,544,512,534,489,517,464,487,454,456,454,423,459,390,466,356,468,323,461,290,441,257,429,246,414,238"/>
+<area shape="rect" id="Node000009" href="$classlogic_1_1GhostModel.html#af319b6eda1da39921f26ac2ae5711549" title=" " alt="" coords="518,201,648,242"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="415,219,502,219,502,224,415,224"/>
+<area shape="rect" id="Node000010" href="$classlogic_1_1GhostModel.html#a53ae80c730c31a5732cea30f3122cc6a" title=" " alt="" coords="518,267,648,307"/>
+<area shape="poly" id="edge10_Node000007_Node000010" title=" " alt="" coords="416,239,503,263,502,268,414,244"/>
+<area shape="rect" id="Node000011" href="$classlogic_1_1GhostModel.html#add1e77e061893880c511f64a2aa1cb12" title=" " alt="" coords="518,332,648,373"/>
+<area shape="poly" id="edge11_Node000007_Node000011" title=" " alt="" coords="416,237,445,253,461,269,469,286,478,301,493,317,505,325,502,329,489,321,473,305,465,288,457,272,441,257,413,242"/>
+<area shape="rect" id="Node000012" href="$classlogic_1_1GhostModel.html#a0be928fc21c21965bc82b17524edc716" title=" " alt="" coords="518,397,648,438"/>
+<area shape="poly" id="edge12_Node000007_Node000012" title=" " alt="" coords="416,235,445,253,458,270,466,286,470,319,474,351,481,367,493,382,505,392,502,397,489,386,476,369,469,353,465,320,460,288,454,272,441,257,413,239"/>
+<area shape="rect" id="Node000013" href="$classlogic_1_1GhostModel.html#ac455ae19d66e47094f399e08ae17f43f" title=" " alt="" coords="518,463,648,503"/>
+<area shape="poly" id="edge14_Node000007_Node000013" title=" " alt="" coords="416,233,445,253,462,278,470,303,472,328,470,352,468,376,470,400,477,424,493,448,506,459,502,463,489,451,472,426,464,401,463,376,465,352,466,328,465,304,458,281,441,257,413,238"/>
+<area shape="rect" id="Node000014" href="$classlogic_1_1MovingEntityController.html#a6dc0f5fe7e6001eb437664da3441ab63" title=" " alt="" coords="491,136,674,177"/>
+<area shape="poly" id="edge15_Node000007_Node000014" title=" " alt="" coords="414,199,490,179,491,184,416,205"/>
+<area shape="poly" id="edge16_Node000014_Node000008" title=" " alt="" coords="655,175,676,188,718,226,755,269,805,348,800,351,750,273,714,229,673,192,652,179"/>
+<area shape="rect" id="Node000015" href="$classlogic_1_1GhostModel.html#a1c0ddb635a6b41907577c67c01377cb9" title=" " alt="" coords="752,136,883,177"/>
+<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="674,154,737,154,737,159,674,159"/>
+<area shape="rect" id="Node000016" href="$classlogic_1_1WorldObject.html#ae414bee61532c20edbaf252f5dbeae74" title=" " alt="" coords="1003,103,1129,143"/>
+<area shape="poly" id="edge18_Node000015_Node000016" title=" " alt="" coords="882,145,987,131,988,136,883,150"/>
+<area shape="rect" id="Node000017" href="$classlogic_1_1Observable.html#afd56bfb66920d8e1d38a3ac3259e85d9" title=" " alt="" coords="961,168,1171,209"/>
+<area shape="poly" id="edge19_Node000015_Node000017" title=" " alt="" coords="883,162,945,170,945,175,882,167"/>
 </map>
