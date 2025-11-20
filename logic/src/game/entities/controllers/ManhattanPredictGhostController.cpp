@@ -12,7 +12,7 @@ namespace logic {
         }
         // calculate position in front of player
         auto targetPosition = _calculatePositionInFrontOneStep(*player, world.getConfig().getTileMap().getTileSize());
-        if (!get<0>(_isPastCenter(world, entity, entity.getDirection()))) {
+        if (!get<0>(_isPastCenter(world, entity, entity.getDirection())) && entity.getMode() != GhostModel::WAITING) {
             entity.setRequestedDirection(
                     navigationAgent->getNavigationDirection(entity.getPosition(), targetPosition, world));
         }
