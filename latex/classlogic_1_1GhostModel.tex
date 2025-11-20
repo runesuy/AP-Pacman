@@ -64,9 +64,11 @@ void \mbox{\hyperlink{classlogic_1_1GhostModel_ac455ae19d66e47094f399e08ae17f43f
 \item 
 \mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{Mode}} \mbox{\hyperlink{classlogic_1_1GhostModel_af319b6eda1da39921f26ac2ae5711549}{get\+Mode}} () const
 \item 
-void \mbox{\hyperlink{classlogic_1_1GhostModel_a0be928fc21c21965bc82b17524edc716}{set\+Mode}} (\mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{Mode}} mode)
+const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \& \mbox{\hyperlink{classlogic_1_1GhostModel_a08bce7b616df091ca65fa6ac2c70bc95}{get\+Return\+Position}} () const
 \item 
-const float \mbox{\hyperlink{classlogic_1_1GhostModel_a4c07e98dcd67484d49f556868207f16e}{get\+Start\+Delay}} () const
+void \mbox{\hyperlink{classlogic_1_1GhostModel_a865048e98dc3cab20192c39e67ae3db2}{set\+Return\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&return\+Position)
+\item 
+void \mbox{\hyperlink{classlogic_1_1GhostModel_a0be928fc21c21965bc82b17524edc716}{set\+Mode}} (\mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{Mode}} mode)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1MovingEntityModel}{logic\+::\+Moving\+Entity\+Model$<$ Ghost\+Model $>$}}}
 \begin{DoxyCompactItemize}
@@ -117,6 +119,11 @@ bool \mbox{\hyperlink{classlogic_1_1Observable_ad7cb2d9214c5dd7f5aa8a36ef7ce43b9
 \item 
 bool \mbox{\hyperlink{classlogic_1_1Observable_a54bfc543d21f11be7137efce418394c2}{has\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} $>$ $>$ \&observer) const
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static float \mbox{\hyperlink{classlogic_1_1GhostModel_a53ae80c730c31a5732cea30f3122cc6a}{get\+Start\+Delay}} ()
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classlogic_1_1EntityModel}{logic\+::\+Entity\+Model$<$ Derived $>$}}}
 \begin{DoxyCompactItemize}
@@ -157,7 +164,7 @@ WAITING&\\
 \index{logic::GhostModel@{logic::GhostModel}!GhostModel@{GhostModel}}
 \index{GhostModel@{GhostModel}!logic::GhostModel@{logic::GhostModel}}
 \doxysubsubsection{\texorpdfstring{GhostModel()}{GhostModel()}}
-{\footnotesize\ttfamily logic\+::\+Ghost\+Model\+::\+Ghost\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily logic\+::\+Ghost\+Model\+::\+Ghost\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
 
@@ -167,6 +174,12 @@ WAITING&\\
 \index{getMode@{getMode}!logic::GhostModel@{logic::GhostModel}}
 \doxysubsubsection{\texorpdfstring{getMode()}{getMode()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{Ghost\+Model\+::\+Mode}} logic\+::\+Ghost\+Model\+::get\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classlogic_1_1GhostModel_a08bce7b616df091ca65fa6ac2c70bc95}\label{classlogic_1_1GhostModel_a08bce7b616df091ca65fa6ac2c70bc95} 
+\index{logic::GhostModel@{logic::GhostModel}!getReturnPosition@{getReturnPosition}}
+\index{getReturnPosition@{getReturnPosition}!logic::GhostModel@{logic::GhostModel}}
+\doxysubsubsection{\texorpdfstring{getReturnPosition()}{getReturnPosition()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \& logic\+::\+Ghost\+Model\+::get\+Return\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 \Hypertarget{classlogic_1_1GhostModel_a480aa2f7bd82fd2eb90f628dcfa99198}\label{classlogic_1_1GhostModel_a480aa2f7bd82fd2eb90f628dcfa99198} 
 \index{logic::GhostModel@{logic::GhostModel}!getSpeed@{getSpeed}}
@@ -181,11 +194,11 @@ A constant or variable speed of the moving entity.
 
 Implements \mbox{\hyperlink{classlogic_1_1MovingEntityModel_aa6fca2f79efe199960c3e9e295a11936}{logic\+::\+Moving\+Entity\+Model$<$ Ghost\+Model $>$}}.
 
-\Hypertarget{classlogic_1_1GhostModel_a4c07e98dcd67484d49f556868207f16e}\label{classlogic_1_1GhostModel_a4c07e98dcd67484d49f556868207f16e} 
+\Hypertarget{classlogic_1_1GhostModel_a53ae80c730c31a5732cea30f3122cc6a}\label{classlogic_1_1GhostModel_a53ae80c730c31a5732cea30f3122cc6a} 
 \index{logic::GhostModel@{logic::GhostModel}!getStartDelay@{getStartDelay}}
 \index{getStartDelay@{getStartDelay}!logic::GhostModel@{logic::GhostModel}}
 \doxysubsubsection{\texorpdfstring{getStartDelay()}{getStartDelay()}}
-{\footnotesize\ttfamily const float logic\+::\+Ghost\+Model\+::get\+Start\+Delay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily float logic\+::\+Ghost\+Model\+::get\+Start\+Delay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 \Hypertarget{classlogic_1_1GhostModel_add1e77e061893880c511f64a2aa1cb12}\label{classlogic_1_1GhostModel_add1e77e061893880c511f64a2aa1cb12} 
 \index{logic::GhostModel@{logic::GhostModel}!getStartTimer@{getStartTimer}}
@@ -263,6 +276,12 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{classlogic_1_1GhostModel_a1c0ddb635a6b41907577c67c01377cb9_cgraph}
 \end{center}
 \end{figure}
+\Hypertarget{classlogic_1_1GhostModel_a865048e98dc3cab20192c39e67ae3db2}\label{classlogic_1_1GhostModel_a865048e98dc3cab20192c39e67ae3db2} 
+\index{logic::GhostModel@{logic::GhostModel}!setReturnPosition@{setReturnPosition}}
+\index{setReturnPosition@{setReturnPosition}!logic::GhostModel@{logic::GhostModel}}
+\doxysubsubsection{\texorpdfstring{setReturnPosition()}{setReturnPosition()}}
+{\footnotesize\ttfamily void logic\+::\+Ghost\+Model\+::set\+Return\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{return\+Position }\end{DoxyParamCaption})}
+
 \Hypertarget{classlogic_1_1GhostModel_afac1e9b8ff51aa840c87fe7936d7a477}\label{classlogic_1_1GhostModel_afac1e9b8ff51aa840c87fe7936d7a477} 
 \index{logic::GhostModel@{logic::GhostModel}!setSize@{setSize}}
 \index{setSize@{setSize}!logic::GhostModel@{logic::GhostModel}}
