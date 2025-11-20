@@ -18,4 +18,12 @@ namespace logic {
         RIGHT,
         NONE
     };
+
+    /**
+     * Returns the opposite of direction.
+     * Opposite of NONE is NONE
+     * @param direction
+     * @return
+     */
+    Direction getOppositeDirection(Direction direction);
 }
