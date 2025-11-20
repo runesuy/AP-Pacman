@@ -8,5 +8,6 @@ var searchData=
   ['observable_3c_20powerupmodel_20_3e_5',['Observable&lt; PowerupModel &gt;',['../classlogic_1_1Observable.html',1,'logic']]],
   ['observable_3c_20score_20_3e_6',['Observable&lt; Score &gt;',['../classlogic_1_1Observable.html',1,'logic']]],
   ['observable_3c_20wallmodel_20_3e_7',['Observable&lt; WallModel &gt;',['../classlogic_1_1Observable.html',1,'logic']]],
-  ['observable_3c_20world_20_3e_8',['Observable&lt; World &gt;',['../classlogic_1_1Observable.html',1,'logic']]]
+  ['observable_3c_20world_20_3e_8',['Observable&lt; World &gt;',['../classlogic_1_1Observable.html',1,'logic']]],
+  ['orangeghostview_9',['OrangeGhostView',['../classrenderer_1_1OrangeGhostView.html',1,'renderer']]]
 ];

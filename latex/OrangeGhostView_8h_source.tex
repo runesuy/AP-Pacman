@@ -1,0 +1,56 @@
+\doxysection{Orange\+Ghost\+View.\+h}
+\hypertarget{OrangeGhostView_8h_source}{}\label{OrangeGhostView_8h_source}\index{renderer/include/game/entities/views/OrangeGhostView.h@{renderer/include/game/entities/views/OrangeGhostView.h}}
+\mbox{\hyperlink{OrangeGhostView_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/13/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_ORANGEGHOSTVIEW\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_ORANGEGHOSTVIEW\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ModularEntityView_8h}{core/entity/modular/ModularEntityView.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GhostModel_8h}{game/entities/models/GhostModel.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1OrangeGhostView}{OrangeGhostView}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1ModularEntityView}{ModularEntityView}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1IObserver}{logic::IObserver}}<logic::GhostModel>\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ markedForRemoval\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{logic::Direction}}\ direction;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ updateAnimation();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::map<std::string,\ std::vector<std::string>>\ animations\{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}move-\/right"{}},}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}ghost-\/orange-\/right\_0"{}},\ \textcolor{stringliteral}{"{}ghost-\/orange-\/right\_1"{}}\},}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}move-\/left"{}},}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}ghost-\/orange-\/left\_0"{}},\ \ \textcolor{stringliteral}{"{}ghost-\/orange-\/left\_1"{}}\}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}move-\/up"{}},}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}ghost-\/orange-\/up\_0"{}},\ \ \ \ \textcolor{stringliteral}{"{}ghost-\/orange-\/up\_1"{}}\}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}move-\/down"{}},}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}ghost-\/orange-\/down\_0"{}},\ \ \textcolor{stringliteral}{"{}ghost-\/orange-\/down\_1"{}}\}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1OrangeGhostView_a62dd03b73343724bc6003b45aa58640e}{OrangeGhostView}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1OrangeGhostView_a61a22f63ccb18670477aa90f5f1f698f}{update}}(\mbox{\hyperlink{classlogic_1_1GhostModel}{logic::GhostModel}}\ \&subject)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classrenderer_1_1OrangeGhostView_a2462dd9f18948b3c925c1056e408b056}{isMarkedForRemoval}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1OrangeGhostView_aeaf44b5aab8f568df5595f7d430fae02}{markForRemoval}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1OrangeGhostView_ab7a4de2ea09fa739907eb88a511fcd4c}{setSize}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\ \&size)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1OrangeGhostView_a67924c229f59b43167b57d544658998b}{setDirection}}(\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{logic::Direction}}\ direction);}
+\DoxyCodeLine{00046\ \ \ \ \ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_ORANGEGHOSTVIEW\_H}}
+
+\end{DoxyCode}

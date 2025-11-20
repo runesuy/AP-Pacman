@@ -1,0 +1,62 @@
+\doxysection{Manhattan\+Predict\+Ghost\+Controller.\+h}
+\hypertarget{ManhattanPredictGhostController_8h_source}{}\label{ManhattanPredictGhostController_8h_source}\index{logic/include/game/entities/controllers/ManhattanPredictGhostController.h@{logic/include/game/entities/controllers/ManhattanPredictGhostController.h}}
+\mbox{\hyperlink{ManhattanPredictGhostController_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ runes\ on\ 20/11/2025.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_MANHATTENPREDICTGHOSTCONTROLLER\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_MANHATTENPREDICTGHOSTCONTROLLER\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GhostController_8h}{GhostController.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{INavigationAgent_8h}{core/entity/INavigationAgent.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ManhattanNavigationAgent_8h}{game/entities/controllers/navigation/ManhattanNavigationAgent.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1ManhattanPredictGhostController}{ManhattanPredictGhostController}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1GhostController}{GhostController}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::unique\_ptr<INavigationAgent>\ navigationAgent\ =\ std::make\_unique<ManhattanNavigationAgent>();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ Derived>}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ \_calculatePositionInFrontOneStep(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1MovingEntityModel}{MovingEntityModel<Derived>}}\ \&entity,\ \textcolor{keywordtype}{double}\ stepSize);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ManhattanPredictGhostController_a016cdc3c9878acf7555a952115c0db3d}{update}}(\mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ManhattanPredictGhostController_afc247246d06ae445d4efa22b087cf905}{processCommand}}(\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{EntityCommand}}\ command,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ManhattanPredictGhostController_a6fc235bde6a42152fa3d1ba267c45985}{onCollision}}(\mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{SizedWorldObject}}\ \&other)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ Derived>}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ ManhattanPredictGhostController::\_calculatePositionInFrontOneStep(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1MovingEntityModel}{MovingEntityModel<Derived>}}\ \&entity,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ stepSize)\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ position\ =\ entity.\mbox{\hyperlink{classlogic_1_1WorldObject_aac0f498afeff654fee790e435617de04}{getPosition}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ direction\ =\ entity.\mbox{\hyperlink{classlogic_1_1MovingEntityModel_ac60a9bf73b3bbd94b6969cc14f142453}{getDirection}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (direction)\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52a20a55e99eb2e2128f8088d553b78afd5}{NONE}}:}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ position;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52ac231e8df5dd5f8ea2500f2a19efbd972}{RIGHT}}:}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ position.\mbox{\hyperlink{classlogic_1_1Position_a6d7b15bef28628ed645f05810d540049}{setX}}(position.\mbox{\hyperlink{classlogic_1_1Position_a00a7d58e378c852a5a431d6ec60ad0a5}{getX}}()\ +\ stepSize);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52a454de50c4b204fc9eb4043e3493cef5b}{LEFT}}:}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ position.\mbox{\hyperlink{classlogic_1_1Position_a6d7b15bef28628ed645f05810d540049}{setX}}(position.\mbox{\hyperlink{classlogic_1_1Position_a00a7d58e378c852a5a431d6ec60ad0a5}{getX}}()\ -\/\ stepSize);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52ae6e7782195a5da54721a065c1e31b6ec}{UP}}:}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ position.\mbox{\hyperlink{classlogic_1_1Position_a2f44a7d6ebfae106103337eb3bfe6150}{setY}}(position.\mbox{\hyperlink{classlogic_1_1Position_a8425d7c97e5a6c1855f8c9878db58ce1}{getY}}()\ +\ stepSize);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52a19d623ed9d84cd892cb0d6618771bfc5}{DOWN}}:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ position.\mbox{\hyperlink{classlogic_1_1Position_a2f44a7d6ebfae106103337eb3bfe6150}{setY}}(position.\mbox{\hyperlink{classlogic_1_1Position_a8425d7c97e5a6c1855f8c9878db58ce1}{getY}}()\ -\/\ stepSize);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ position;}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \}\ \textcolor{comment}{//\ logic}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_MANHATTENPREDICTGHOSTCONTROLLER\_H}}
+
+\end{DoxyCode}
