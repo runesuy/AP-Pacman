@@ -12,10 +12,13 @@ var searchData=
   ['world_9',['world',['../classlogic_1_1World.html',1,'logic::World'],['../classlogic_1_1World.html#a4c78012e99bae38cf558be2e20c3b37c',1,'logic::World::World()']]],
   ['world_2ecpp_10',['World.cpp',['../World_8cpp.html',1,'']]],
   ['world_2eh_11',['World.h',['../World_8h.html',1,'']]],
-  ['worldobject_12',['WorldObject',['../classlogic_1_1WorldObject.html',1,'logic']]],
-  ['worldobject_2ecpp_13',['WorldObject.cpp',['../WorldObject_8cpp.html',1,'']]],
-  ['worldobject_2eh_14',['WorldObject.h',['../WorldObject_8h.html',1,'']]],
-  ['worldview_15',['WorldView',['../classrenderer_1_1WorldView.html',1,'renderer']]],
-  ['worldview_2ecpp_16',['WorldView.cpp',['../WorldView_8cpp.html',1,'']]],
-  ['worldview_2eh_17',['WorldView.h',['../WorldView_8h.html',1,'']]]
+  ['worldevent_12',['WorldEvent',['../namespacelogic.html#a38da8dce3c551ae0ba23d0180a863d98',1,'logic']]],
+  ['worldevents_2eh_13',['WorldEvents.h',['../WorldEvents_8h.html',1,'']]],
+  ['worldeventt_14',['WorldEventT',['../classlogic_1_1WorldObject.html#a2c8c9cce37d13cbc0acf8a6d3d437373',1,'logic::WorldObject']]],
+  ['worldobject_15',['WorldObject',['../classlogic_1_1WorldObject.html',1,'logic']]],
+  ['worldobject_2ecpp_16',['WorldObject.cpp',['../WorldObject_8cpp.html',1,'']]],
+  ['worldobject_2eh_17',['WorldObject.h',['../WorldObject_8h.html',1,'']]],
+  ['worldview_18',['WorldView',['../classrenderer_1_1WorldView.html',1,'renderer']]],
+  ['worldview_2ecpp_19',['WorldView.cpp',['../WorldView_8cpp.html',1,'']]],
+  ['worldview_2eh_20',['WorldView.h',['../WorldView_8h.html',1,'']]]
 ];

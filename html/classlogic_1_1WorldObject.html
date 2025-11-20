@@ -74,6 +74,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classlogic_1_1WorldObject-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">logic::WorldObject Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
@@ -122,6 +123,11 @@ Inheritance diagram for logic::WorldObject:</div>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a2c8c9cce37d13cbc0acf8a6d3d437373" id="r_a2c8c9cce37d13cbc0acf8a6d3d437373"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1WorldObject.html#a2c8c9cce37d13cbc0acf8a6d3d437373">WorldEventT</a> = int</td></tr>
+<tr class="separator:a2c8c9cce37d13cbc0acf8a6d3d437373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aac0f498afeff654fee790e435617de04" id="r_aac0f498afeff654fee790e435617de04"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1WorldObject.html#aac0f498afeff654fee790e435617de04">getPosition</a> () const</td></tr>
@@ -132,9 +138,26 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6d7bf1f5aa8e0fc8763bf2551871489c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad57fa60da3633757434ef70a266f8e14" id="r_ad57fa60da3633757434ef70a266f8e14"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1WorldObject.html#ad57fa60da3633757434ef70a266f8e14">markForRemoval</a> ()</td></tr>
 <tr class="separator:ad57fa60da3633757434ef70a266f8e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8afa55395cbe77bd51771c8e176aff9" id="r_aa8afa55395cbe77bd51771c8e176aff9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1WorldObject.html#aa8afa55395cbe77bd51771c8e176aff9">handleWorldEvent</a> (<a class="el" href="classlogic_1_1WorldObject.html#a2c8c9cce37d13cbc0acf8a6d3d437373">WorldEventT</a>)</td></tr>
+<tr class="separator:aa8afa55395cbe77bd51771c8e176aff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adae3a3c45f13113f3ebcbdaed7190770" id="r_adae3a3c45f13113f3ebcbdaed7190770"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1WorldObject.html#adae3a3c45f13113f3ebcbdaed7190770">isMarkedForRemoval</a> () const</td></tr>
 <tr class="separator:adae3a3c45f13113f3ebcbdaed7190770"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a2c8c9cce37d13cbc0acf8a6d3d437373" name="a2c8c9cce37d13cbc0acf8a6d3d437373"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c8c9cce37d13cbc0acf8a6d3d437373">&#9670;&#160;</a></span>WorldEventT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classlogic_1_1WorldObject.html#a2c8c9cce37d13cbc0acf8a6d3d437373">logic::WorldObject::WorldEventT</a> =  int</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="aac0f498afeff654fee790e435617de04" name="aac0f498afeff654fee790e435617de04"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aac0f498afeff654fee790e435617de04">&#9670;&#160;</a></span>getPosition()</h2>
@@ -159,6 +182,32 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the position of the world object </dd></dl>
+
+</div>
+</div>
+<a id="aa8afa55395cbe77bd51771c8e176aff9" name="aa8afa55395cbe77bd51771c8e176aff9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8afa55395cbe77bd51771c8e176aff9">&#9670;&#160;</a></span>handleWorldEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void logic::WorldObject::handleWorldEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlogic_1_1WorldObject.html#a2c8c9cce37d13cbc0acf8a6d3d437373">WorldEventT</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

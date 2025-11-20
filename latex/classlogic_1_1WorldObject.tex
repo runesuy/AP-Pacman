@@ -14,6 +14,11 @@ Inheritance diagram for logic\+::World\+Object\+:
 \includegraphics[width=350pt]{classlogic_1_1WorldObject__inherit__graph}
 \end{center}
 \end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{World\+EventT}} = int
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -25,8 +30,19 @@ virtual void \mbox{\hyperlink{classlogic_1_1WorldObject_a6d7bf1f5aa8e0fc8763bf25
 \item 
 virtual void \mbox{\hyperlink{classlogic_1_1WorldObject_ad57fa60da3633757434ef70a266f8e14}{mark\+For\+Removal}} ()
 \item 
+virtual void \mbox{\hyperlink{classlogic_1_1WorldObject_aa8afa55395cbe77bd51771c8e176aff9}{handle\+World\+Event}} (\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{World\+EventT}})
+\item 
 bool \mbox{\hyperlink{classlogic_1_1WorldObject_adae3a3c45f13113f3ebcbdaed7190770}{is\+Marked\+For\+Removal}} () const
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}\label{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373} 
+\index{logic::WorldObject@{logic::WorldObject}!WorldEventT@{WorldEventT}}
+\index{WorldEventT@{WorldEventT}!logic::WorldObject@{logic::WorldObject}}
+\doxysubsubsection{\texorpdfstring{WorldEventT}{WorldEventT}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{logic\+::\+World\+Object\+::\+World\+EventT}} =  int}
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -39,6 +55,12 @@ bool \mbox{\hyperlink{classlogic_1_1WorldObject_adae3a3c45f13113f3ebcbdaed719077
 \begin{DoxyReturn}{Returns}
 the position of the world object 
 \end{DoxyReturn}
+\Hypertarget{classlogic_1_1WorldObject_aa8afa55395cbe77bd51771c8e176aff9}\label{classlogic_1_1WorldObject_aa8afa55395cbe77bd51771c8e176aff9} 
+\index{logic::WorldObject@{logic::WorldObject}!handleWorldEvent@{handleWorldEvent}}
+\index{handleWorldEvent@{handleWorldEvent}!logic::WorldObject@{logic::WorldObject}}
+\doxysubsubsection{\texorpdfstring{handleWorldEvent()}{handleWorldEvent()}}
+{\footnotesize\ttfamily virtual void logic\+::\+World\+Object\+::handle\+World\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{World\+EventT}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
 \Hypertarget{classlogic_1_1WorldObject_adae3a3c45f13113f3ebcbdaed7190770}\label{classlogic_1_1WorldObject_adae3a3c45f13113f3ebcbdaed7190770} 
 \index{logic::WorldObject@{logic::WorldObject}!isMarkedForRemoval@{isMarkedForRemoval}}
 \index{isMarkedForRemoval@{isMarkedForRemoval}!logic::WorldObject@{logic::WorldObject}}
