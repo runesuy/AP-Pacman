@@ -48,6 +48,8 @@ namespace logic {
          */
         [[nodiscard]] const IConfig &getConfig() const;
 
+        void sendWorldEvent(WorldObject::WorldEventT event);
+
         /**
          * Add an object to the world.
          * If the object is a PlayerModel, attach the Score as an observer.

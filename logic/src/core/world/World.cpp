@@ -72,4 +72,8 @@ namespace logic {
     Score &World::getScore() {
         return *score;
     }
+
+    void World::sendWorldEvent(WorldObject::WorldEventT event) {
+        for (auto obj : objects) sendWorldEvent(event);
+    }
 } // logic

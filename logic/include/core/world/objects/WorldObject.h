@@ -38,6 +38,9 @@ namespace logic {
 
         virtual void markForRemoval();
 
+        using WorldEventT = int;
+        virtual void handleWorldEvent(WorldEventT){};
+
         bool isMarkedForRemoval() const;
     };
 
