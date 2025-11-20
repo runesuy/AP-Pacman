@@ -7,12 +7,15 @@
 
 #include "core/entity/modular/ModularEntityView.h"
 #include "game/entities/models/GhostModel.h"
+#include "game/entities/models/GhostModel.h"
 
 namespace renderer {
 
     class OrangeGhostView : public ModularEntityView, public logic::IObserver<logic::GhostModel> {
         bool markedForRemoval{false};
         logic::Direction direction;
+
+        logic::GhostModel::Mode ghostMode=logic::GhostModel::WAITING;
 
         void updateAnimation();
 
@@ -28,6 +31,18 @@ namespace renderer {
                 },
                 {"move-down",
                         {"ghost-orange-down_0",  "ghost-orange-down_1"}
+                },
+                {"move-right-frightened",
+                            {"ghost-frightened-right_0", "ghost-frightened-right_1"},
+                },
+                {"move-left-frightened",
+                            {"ghost-frightened-left_0",  "ghost-frightened-left_1"}
+                },
+                {"move-up-frightened",
+                            {"ghost-frightened-up_0",    "ghost-frightened-up_1"}
+                },
+                {"move-down-frightened",
+                            {"ghost-frightened-down_0",  "ghost-frightened-down_1"}
                 }
         };
 
@@ -43,6 +58,10 @@ namespace renderer {
         void setSize(const logic::Size &size) override;
 
         void setDirection(logic::Direction direction);
+
+        logic::GhostModel::Mode getGhostMode() const;
+
+        void setGhostMode(logic::GhostModel::Mode ghostMode);
     };
 
 } // renderer

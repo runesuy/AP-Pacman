@@ -48,6 +48,7 @@ namespace logic {
 
     void GhostModel::setMode(GhostModel::Mode mode) {
         GhostModel::mode = mode;
+        updateObservers();
     }
 
     float GhostModel::getStartDelay() const {
