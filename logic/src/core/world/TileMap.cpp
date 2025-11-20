@@ -61,6 +61,7 @@ namespace logic {
                     case TileType::GHOST_RED: {
                         auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::RED);
                         ghost->setPosition({x, y});
+                        ghost->setReturnPosition({x,y});
                         ghost->setSize({tileSize, tileSize});
                         world.addObject(ghost);
                         break;
@@ -68,6 +69,7 @@ namespace logic {
                     case TileType::GHOST_PINK: {
                         auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::PINK);
                         ghost->setPosition({x, y});
+                        ghost->setReturnPosition({x,y});
                         ghost->setSize({tileSize, tileSize});
                         world.addObject(ghost);
                         break;
@@ -75,6 +77,15 @@ namespace logic {
                     case TileType::GHOST_ORANGE: {
                         auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::ORANGE);
                         ghost->setPosition({x, y});
+                        ghost->setReturnPosition({x,y});
+                        ghost->setSize({tileSize, tileSize});
+                        world.addObject(ghost);
+                        break;
+                    }
+                    case TileType::GHOST_BLUE: {
+                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::BLUE);
+                        ghost->setPosition({x, y});
+                        ghost->setReturnPosition({x,y});
                         ghost->setSize({tileSize, tileSize});
                         world.addObject(ghost);
                         break;

@@ -19,12 +19,13 @@ namespace logic {
         };
     private:
         const float SPEED = 0.2f;
+        Position returnPosition {0,0};
 
         Mode mode = WAITING;
         float startTimer = 0.0f;
         inline static const float START_DELAY = 3.0f; // seconds
     public:
-        GhostModel();
+        explicit GhostModel();
 
         void setSize(const Size &size) override;
 
@@ -42,9 +43,13 @@ namespace logic {
 
         [[nodiscard]] Mode getMode() const;
 
+        [[nodiscard]] const Position &getReturnPosition() const;
+
+        void setReturnPosition(const Position &returnPosition);
+
         void setMode(Mode mode);
 
-        [[nodiscard]] const float getStartDelay() const;
+        static float getStartDelay()  ;
     };
 
 } // logic

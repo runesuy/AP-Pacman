@@ -15,6 +15,7 @@
 #include "game/entities/views/PinkGhostView.h"
 #include "game/entities/views/OrangeGhostView.h"
 #include "game/entities/controllers/ManhattanPredictGhostController.h"
+#include "game/entities/views/BlueGhostView.h"
 
 namespace renderer {
     std::shared_ptr<logic::WallModel> DefaultEntityFactory::createWallModel() {
@@ -26,11 +27,11 @@ namespace renderer {
     }
 
     std::shared_ptr<logic::PlayerModel> DefaultEntityFactory::createPlayerModel() {
-            auto playerView = std::make_shared<PlayerView>();
-            auto playerModel = std::make_shared<logic::PlayerModel>();
-            playerModel->addObserver(playerView);
-            viewTarget->addObjectView(playerView);
-            return playerModel;
+        auto playerView = std::make_shared<PlayerView>();
+        auto playerModel = std::make_shared<logic::PlayerModel>();
+        playerModel->addObserver(playerView);
+        viewTarget->addObjectView(playerView);
+        return playerModel;
     }
 
     std::shared_ptr<logic::CoinModel> DefaultEntityFactory::createCoinModel() {
@@ -75,13 +76,22 @@ namespace renderer {
                 viewTarget->addObjectView(ghostView);
                 return ghostModel;
             }
-            case logic::GhostType::ORANGE:
+            case logic::GhostType::ORANGE: {
                 auto ghostView = std::make_shared<OrangeGhostView>();
                 auto ghostModel = std::make_shared<logic::GhostModel>();
                 ghostModel->addObserver(ghostView);
                 ghostModel->setController(std::make_shared<logic::ManhattanPredictGhostController>());
                 viewTarget->addObjectView(ghostView);
                 return ghostModel;
+            }
+            case logic::GhostType::BLUE: {
+                auto ghostView = std::make_shared<BlueGhostView>();
+                auto ghostModel = std::make_shared<logic::GhostModel>();
+                ghostModel->addObserver(ghostView);
+                ghostModel->setController(std::make_shared<logic::ManhattanPredictGhostController>());
+                viewTarget->addObjectView(ghostView);
+                return ghostModel;
+            }
         }
         return {};
     }

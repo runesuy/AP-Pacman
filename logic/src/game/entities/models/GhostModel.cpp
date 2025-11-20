@@ -50,7 +50,15 @@ namespace logic {
         GhostModel::mode = mode;
     }
 
-    const float GhostModel::getStartDelay() const {
+    float GhostModel::getStartDelay() {
         return START_DELAY;
+    }
+
+    const Position &GhostModel::getReturnPosition() const {
+        return returnPosition;
+    }
+
+    void GhostModel::setReturnPosition(const Position &returnPosition) {
+        GhostModel::returnPosition = returnPosition;
     }
 } // logic
