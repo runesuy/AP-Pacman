@@ -41,7 +41,7 @@ virtual void \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a779988657f15c88c04
 \item 
 \mbox{\hyperlink{classlogic_1_1Size}{Size}} \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a35d3332f6e228334cd195bb9af478cbd}{get\+Size}} () const
 \item 
-virtual void \mbox{\hyperlink{classlogic_1_1SizedWorldObject_ae86060174dd100f02773f55bf97450a1}{on\+Collision}} (const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other)
+virtual void \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a32b7587ef4e60c33ff9899257c19c4d3}{on\+Collision}} (const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other, \mbox{\hyperlink{classlogic_1_1World}{World}} \&world)
 \item 
 virtual \mbox{\hyperlink{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2}{Collision\+Type}} \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a2aa2949b03b2ec7087cfdf942d2ad1b4}{get\+Collision\+Type}} () const
 \end{DoxyCompactItemize}
@@ -93,11 +93,11 @@ Return the ID type for collisions. Can be used to identify the other colliding o
 \begin{DoxyReturn}{Returns}
 The size of the object. 
 \end{DoxyReturn}
-\Hypertarget{classlogic_1_1SizedWorldObject_ae86060174dd100f02773f55bf97450a1}\label{classlogic_1_1SizedWorldObject_ae86060174dd100f02773f55bf97450a1} 
+\Hypertarget{classlogic_1_1SizedWorldObject_a32b7587ef4e60c33ff9899257c19c4d3}\label{classlogic_1_1SizedWorldObject_a32b7587ef4e60c33ff9899257c19c4d3} 
 \index{logic::SizedWorldObject@{logic::SizedWorldObject}!onCollision@{onCollision}}
 \index{onCollision@{onCollision}!logic::SizedWorldObject@{logic::SizedWorldObject}}
 \doxysubsubsection{\texorpdfstring{onCollision()}{onCollision()}}
-{\footnotesize\ttfamily virtual void logic\+::\+Sized\+World\+Object\+::on\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual void logic\+::\+Sized\+World\+Object\+::on\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&}]{other,  }\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 Handle a collision with other. 
 \begin{DoxyParams}{Parameters}
@@ -106,7 +106,7 @@ Handle a collision with other.
 \end{DoxyParams}
 
 
-Reimplemented in \mbox{\hyperlink{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}{logic\+::\+Entity\+Model$<$ Derived $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}{logic\+::\+Entity\+Model$<$ Coin\+Model $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}{logic\+::\+Entity\+Model$<$ Entity\+Model\+Type $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}{logic\+::\+Entity\+Model$<$ Ghost\+Model $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}{logic\+::\+Entity\+Model$<$ Player\+Model $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}{logic\+::\+Entity\+Model$<$ Powerup\+Model $>$}}, and \mbox{\hyperlink{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}{logic\+::\+Entity\+Model$<$ Wall\+Model $>$}}.
+Reimplemented in \mbox{\hyperlink{classlogic_1_1EntityModel_a804ac2ca9115200dd15d1d207ea9de63}{logic\+::\+Entity\+Model$<$ Derived $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a804ac2ca9115200dd15d1d207ea9de63}{logic\+::\+Entity\+Model$<$ Coin\+Model $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a804ac2ca9115200dd15d1d207ea9de63}{logic\+::\+Entity\+Model$<$ Entity\+Model\+Type $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a804ac2ca9115200dd15d1d207ea9de63}{logic\+::\+Entity\+Model$<$ Ghost\+Model $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a804ac2ca9115200dd15d1d207ea9de63}{logic\+::\+Entity\+Model$<$ Player\+Model $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a804ac2ca9115200dd15d1d207ea9de63}{logic\+::\+Entity\+Model$<$ Powerup\+Model $>$}}, and \mbox{\hyperlink{classlogic_1_1EntityModel_a804ac2ca9115200dd15d1d207ea9de63}{logic\+::\+Entity\+Model$<$ Wall\+Model $>$}}.
 
 \Hypertarget{classlogic_1_1SizedWorldObject_a779988657f15c88c046d48d44eb1fba9}\label{classlogic_1_1SizedWorldObject_a779988657f15c88c046d48d44eb1fba9} 
 \index{logic::SizedWorldObject@{logic::SizedWorldObject}!setSize@{setSize}}

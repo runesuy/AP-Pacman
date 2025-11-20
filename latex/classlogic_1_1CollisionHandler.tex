@@ -7,18 +7,18 @@
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \mbox{\hyperlink{classlogic_1_1CollisionHandler_adea96926e7f25db8c1f47e29046d244c}{handle\+Collisions}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1WorldObject}{World\+Object}} $>$ $>$ \&objects)
+static void \mbox{\hyperlink{classlogic_1_1CollisionHandler_a52344f961077f9e44ebbb42576929dd2}{handle\+Collisions}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1WorldObject}{World\+Object}} $>$ $>$ \&objects, \mbox{\hyperlink{classlogic_1_1World}{World}} \&world)
 \item 
-static void \mbox{\hyperlink{classlogic_1_1CollisionHandler_aac1be582476d665f443f656b3cc3ca93}{handle\+Collision}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} $>$ \&objectA, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} $>$ \&objectB)
+static void \mbox{\hyperlink{classlogic_1_1CollisionHandler_a954562b8dd5934077765a860829c7ca9}{handle\+Collision}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} $>$ \&objectA, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} $>$ \&objectB, \mbox{\hyperlink{classlogic_1_1World}{World}} \&world)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classlogic_1_1CollisionHandler_aac1be582476d665f443f656b3cc3ca93}\label{classlogic_1_1CollisionHandler_aac1be582476d665f443f656b3cc3ca93} 
+\Hypertarget{classlogic_1_1CollisionHandler_a954562b8dd5934077765a860829c7ca9}\label{classlogic_1_1CollisionHandler_a954562b8dd5934077765a860829c7ca9} 
 \index{logic::CollisionHandler@{logic::CollisionHandler}!handleCollision@{handleCollision}}
 \index{handleCollision@{handleCollision}!logic::CollisionHandler@{logic::CollisionHandler}}
 \doxysubsubsection{\texorpdfstring{handleCollision()}{handleCollision()}}
-{\footnotesize\ttfamily void logic\+::\+Collision\+Handler\+::handle\+Collision (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} $>$ \&}]{objectA,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} $>$ \&}]{objectB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily void logic\+::\+Collision\+Handler\+::handle\+Collision (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} $>$ \&}]{objectA,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} $>$ \&}]{objectB,  }\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 Handle a collision from object a to object b. 
 \begin{DoxyParams}{Parameters}
@@ -32,14 +32,14 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=328pt]{classlogic_1_1CollisionHandler_aac1be582476d665f443f656b3cc3ca93_cgraph}
+\includegraphics[width=328pt]{classlogic_1_1CollisionHandler_a954562b8dd5934077765a860829c7ca9_cgraph}
 \end{center}
 \end{figure}
-\Hypertarget{classlogic_1_1CollisionHandler_adea96926e7f25db8c1f47e29046d244c}\label{classlogic_1_1CollisionHandler_adea96926e7f25db8c1f47e29046d244c} 
+\Hypertarget{classlogic_1_1CollisionHandler_a52344f961077f9e44ebbb42576929dd2}\label{classlogic_1_1CollisionHandler_a52344f961077f9e44ebbb42576929dd2} 
 \index{logic::CollisionHandler@{logic::CollisionHandler}!handleCollisions@{handleCollisions}}
 \index{handleCollisions@{handleCollisions}!logic::CollisionHandler@{logic::CollisionHandler}}
 \doxysubsubsection{\texorpdfstring{handleCollisions()}{handleCollisions()}}
-{\footnotesize\ttfamily void logic\+::\+Collision\+Handler\+::handle\+Collisions (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1WorldObject}{World\+Object}} $>$ $>$ \&}]{objects }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily void logic\+::\+Collision\+Handler\+::handle\+Collisions (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1WorldObject}{World\+Object}} $>$ $>$ \&}]{objects,  }\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 Handle collisions between objects of the list. \begin{DoxyNote}{Note}
 Only Sized\+World\+Objects have collisions. 
@@ -54,7 +54,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classlogic_1_1CollisionHandler_adea96926e7f25db8c1f47e29046d244c_cgraph}
+\includegraphics[width=350pt]{classlogic_1_1CollisionHandler_a52344f961077f9e44ebbb42576929dd2_cgraph}
 \end{center}
 \end{figure}
 

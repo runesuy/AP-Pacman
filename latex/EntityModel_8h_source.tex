@@ -34,13 +34,13 @@
 \DoxyCodeLine{00049\ }
 \DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1EntityModel_a20ff77425bb7eb04e201d33ab3f33181}{update}}(\mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world)\ \textcolor{keyword}{final};}
 \DoxyCodeLine{00056\ }
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}{onCollision}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{SizedWorldObject}}\ \&other)\ \textcolor{keyword}{final};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1EntityModel_a804ac2ca9115200dd15d1d207ea9de63}{onCollision}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{SizedWorldObject}}\ \&other,\ \mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world)\ \textcolor{keyword}{final};}
 \DoxyCodeLine{00063\ \ \ \ \ \};}
 \DoxyCodeLine{00064\ }
 \DoxyCodeLine{00065\ }
 \DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Implementation\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\///}}
 \DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Derived>}
-\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}{EntityModel<Derived>::onCollision}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{SizedWorldObject}}\ \&other)\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1EntityModel_a804ac2ca9115200dd15d1d207ea9de63}{EntityModel<Derived>::onCollision}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{SizedWorldObject}}\ \&other,\ \mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world)\ \{}
 \DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (controller)\ \{}
 \DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ controller-\/>onCollision(\textcolor{keyword}{static\_cast<}Derived\ \&\textcolor{keyword}{>}(*\textcolor{keyword}{this}),\ other);}
 \DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}

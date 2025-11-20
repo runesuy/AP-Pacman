@@ -33,7 +33,7 @@ void \mbox{\hyperlink{classlogic_1_1EntityModel_a8be02b6525f2322a08af1fd72c88f57
 \item 
 void \mbox{\hyperlink{classlogic_1_1EntityModel_a20ff77425bb7eb04e201d33ab3f33181}{update}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world) final
 \item 
-void \mbox{\hyperlink{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}{on\+Collision}} (const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other) final
+void \mbox{\hyperlink{classlogic_1_1EntityModel_a804ac2ca9115200dd15d1d207ea9de63}{on\+Collision}} (const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other, \mbox{\hyperlink{classlogic_1_1World}{World}} \&world) final
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{logic\+::\+Sized\+World\+Object}}}
 \begin{DoxyCompactItemize}
@@ -86,12 +86,12 @@ In world logical representation of an entity. Consists of size attribute in addi
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08}\label{classlogic_1_1EntityModel_ad3c78cf196837eaf4000297d8b810a08} 
+\Hypertarget{classlogic_1_1EntityModel_a804ac2ca9115200dd15d1d207ea9de63}\label{classlogic_1_1EntityModel_a804ac2ca9115200dd15d1d207ea9de63} 
 \index{logic::EntityModel$<$ Derived $>$@{logic::EntityModel$<$ Derived $>$}!onCollision@{onCollision}}
 \index{onCollision@{onCollision}!logic::EntityModel$<$ Derived $>$@{logic::EntityModel$<$ Derived $>$}}
 \doxysubsubsection{\texorpdfstring{onCollision()}{onCollision()}}
 {\footnotesize\ttfamily template$<$typename Derived $>$ \\
-void \mbox{\hyperlink{classlogic_1_1EntityModel}{logic\+::\+Entity\+Model}}$<$ Derived $>$\+::on\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+void \mbox{\hyperlink{classlogic_1_1EntityModel}{logic\+::\+Entity\+Model}}$<$ Derived $>$\+::on\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&}]{other,  }\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
 
 Handle collision event with other object. Calls the controller. 
 \begin{DoxyParams}{Parameters}
@@ -100,7 +100,7 @@ Handle collision event with other object. Calls the controller.
 \end{DoxyParams}
 
 
-Reimplemented from \mbox{\hyperlink{classlogic_1_1SizedWorldObject_ae86060174dd100f02773f55bf97450a1}{logic\+::\+Sized\+World\+Object}}.
+Reimplemented from \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a32b7587ef4e60c33ff9899257c19c4d3}{logic\+::\+Sized\+World\+Object}}.
 
 \Hypertarget{classlogic_1_1EntityModel_a8be02b6525f2322a08af1fd72c88f57a}\label{classlogic_1_1EntityModel_a8be02b6525f2322a08af1fd72c88f57a} 
 \index{logic::EntityModel$<$ Derived $>$@{logic::EntityModel$<$ Derived $>$}!processCommand@{processCommand}}
