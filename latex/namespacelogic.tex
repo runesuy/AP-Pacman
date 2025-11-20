@@ -74,6 +74,12 @@ class \mbox{\hyperlink{classlogic_1_1WorldObject}{World\+Object}}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
+enum \mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}} \{ \mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fbad58db11eab840e1e40d712e6f79f1e61}{TURN\+\_\+\+LEFT}}
+, \mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fba497a039e5de2dae9f0e28e6fb98bbbb7}{TURN\+\_\+\+RIGHT}}
+, \mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fbadf69f49b71af2465a9138ae58c36621a}{TURN\+\_\+\+UP}}
+, \mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fbadd2753e90e67662ee60f9549026e17d6}{TURN\+\_\+\+DOWN}}
+ \}
+\item 
 enum \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} \{ \newline
 \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52ae6e7782195a5da54721a065c1e31b6ec}{UP}}
 , \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52a19d623ed9d84cd892cb0d6618771bfc5}{DOWN}}
@@ -81,12 +87,6 @@ enum \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Directio
 , \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52ac231e8df5dd5f8ea2500f2a19efbd972}{RIGHT}}
 , \newline
 \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52a20a55e99eb2e2128f8088d553b78afd5}{NONE}}
- \}
-\item 
-enum \mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}} \{ \mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fbad58db11eab840e1e40d712e6f79f1e61}{TURN\+\_\+\+LEFT}}
-, \mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fba497a039e5de2dae9f0e28e6fb98bbbb7}{TURN\+\_\+\+RIGHT}}
-, \mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fbadf69f49b71af2465a9138ae58c36621a}{TURN\+\_\+\+UP}}
-, \mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fbadd2753e90e67662ee60f9549026e17d6}{TURN\+\_\+\+DOWN}}
  \}
 \item 
 enum \mbox{\hyperlink{namespacelogic_a3617a50a32f5e13787b434372fa21ac6}{Collision\+Type}} \{ \mbox{\hyperlink{namespacelogic_a3617a50a32f5e13787b434372fa21ac6a6ab44a0dd51ce1bbf0e5d75e5cd34337}{COIN}}
@@ -98,6 +98,11 @@ enum class \mbox{\hyperlink{namespacelogic_a36053e250f7e1339ba0a6cbecbdf1b4b}{Gh
 , \mbox{\hyperlink{namespacelogic_a36053e250f7e1339ba0a6cbecbdf1b4ba1b3e1ee9bff86431dea6b181365ba65f}{BLUE}}
 , \mbox{\hyperlink{namespacelogic_a36053e250f7e1339ba0a6cbecbdf1b4ba5b6490317b6f7270bc3ab5ffd07c1f52}{ORANGE}}
  \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} \mbox{\hyperlink{namespacelogic_a2209715fe15bb3f89c92ef8073de9b04}{get\+Opposite\+Direction}} (\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} direction)
 \end{DoxyCompactItemize}
 
 
@@ -194,3 +199,20 @@ ORANGE&\\
 \hline
 
 \end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacelogic_a2209715fe15bb3f89c92ef8073de9b04}\label{namespacelogic_a2209715fe15bb3f89c92ef8073de9b04} 
+\index{logic@{logic}!getOppositeDirection@{getOppositeDirection}}
+\index{getOppositeDirection@{getOppositeDirection}!logic@{logic}}
+\doxysubsubsection{\texorpdfstring{getOppositeDirection()}{getOppositeDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} logic\+::get\+Opposite\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}}]{direction }\end{DoxyParamCaption})}
+
+Returns the opposite of direction. Opposite of NONE is NONE 
+\begin{DoxyParams}{Parameters}
+{\em direction} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
