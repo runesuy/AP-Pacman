@@ -34,7 +34,7 @@ namespace logic {
          * Handle a collision with other.
          * @param other
          */
-        virtual void onCollision(const SizedWorldObject &other) {};
+        virtual void onCollision(const SizedWorldObject &other, World &world) {};
 
 
         using CollisionType=int;

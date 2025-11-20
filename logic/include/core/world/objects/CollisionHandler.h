@@ -18,15 +18,15 @@ namespace logic {
          * @note Only SizedWorldObjects have collisions.
          * @param objects List of objects.
          */
-        static void handleCollisions(std::vector<std::shared_ptr<WorldObject>>& objects);
+        static void handleCollisions(std::vector<std::shared_ptr<WorldObject>> &objects, World &world);
 
         /**
          * Handle a collision from object a to object b.
          * @param objectA
          * @param objectB
          */
-        static void handleCollision(const std::shared_ptr<SizedWorldObject>& objectA,
-                                    const std::shared_ptr<SizedWorldObject>& objectB);
+        static void handleCollision(const std::shared_ptr<SizedWorldObject> &objectA,
+                                    const std::shared_ptr<SizedWorldObject> &objectB, World &world);
     };
 
 } // logic

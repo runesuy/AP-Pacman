@@ -6,7 +6,7 @@
 #include "core/world/objects/SizedWorldObject.h"
 
 namespace logic {
-    void CollisionHandler::handleCollisions(std::vector<std::shared_ptr<WorldObject>> &objects) {
+    void CollisionHandler::handleCollisions(std::vector<std::shared_ptr<WorldObject>> &objects, World &world) {
         for (auto& objectA : objects) {
             // check if objectA is EntityModel
             auto sizedObjectA = std::dynamic_pointer_cast<SizedWorldObject>(objectA);
@@ -18,13 +18,13 @@ namespace logic {
                 if (!sizedObjectB || objectA == objectB) {
                     continue;
                 }
-                handleCollision(sizedObjectA, sizedObjectB);
+                handleCollision(sizedObjectA, sizedObjectB, world);
             }
         }
     }
 
     void CollisionHandler::handleCollision(const std::shared_ptr<SizedWorldObject> &objectA,
-                                           const std::shared_ptr<SizedWorldObject> &objectB) {
+                                           const std::shared_ptr<SizedWorldObject> &objectB, World &world) {
 
         Position posA = objectA->getPosition();
         Size sizeA = objectA->getSize();
@@ -34,7 +34,7 @@ namespace logic {
         bool overlapX = posA.getX() < posB.getX() + sizeB.getX()/2 && posA.getX()+ sizeA.getX()/2 > posB.getX();
         bool overlapY = posA.getY() < posB.getY() + sizeB.getY()/2 && posA.getY() + sizeA.getY()/2 > posB.getY();
         if (overlapX && overlapY) {
-            objectA->onCollision(*objectB);
+            objectA->onCollision(*objectB, world);
             //objectB->onCollision(*objectA); NOT called because of double handling
         }
     }

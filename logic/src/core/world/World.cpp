@@ -40,7 +40,7 @@ namespace logic {
     }
 
     void World::_handleCollisions() {
-        CollisionHandler::handleCollisions(objects);
+        CollisionHandler::handleCollisions(objects, *this);
     }
 
     void World::removeObject(const WorldObject &object) {

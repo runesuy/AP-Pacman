@@ -59,13 +59,13 @@ namespace logic {
          * Calls the controller.
          * @param other
          */
-        void onCollision(const SizedWorldObject &other) final;
+        void onCollision(const SizedWorldObject &other, World &world) final;
     };
 
 
     //----------------- Implementation -------------------//
     template<typename Derived>
-    void EntityModel<Derived>::onCollision(const SizedWorldObject &other) {
+    void EntityModel<Derived>::onCollision(const SizedWorldObject &other, World &world) {
         if (controller) {
             controller->onCollision(static_cast<Derived &>(*this), other);
         }
