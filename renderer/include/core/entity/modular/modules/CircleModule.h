@@ -5,7 +5,7 @@
 #ifndef AP_PACMAN_RECTANGLEMODULE_H
 #define AP_PACMAN_RECTANGLEMODULE_H
 #include "core/entity/modular/IEntityViewModule.h"
-#include "core/world/Size.h"
+#include "core/world/space/Size.h"
 #include "core/observer/IObserver.h"
 #include "core/entity/modular/ModularEntityView.h"
 

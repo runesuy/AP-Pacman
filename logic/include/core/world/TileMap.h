@@ -6,8 +6,8 @@
 #define AP_PACMAN_TILEMAP_H
 
 #include "core/observer/Observable.h"
-#include "WorldObject.h"
-#include "Size.h"
+#include "core/world/objects/WorldObject.h"
+#include "core/world/space/Size.h"
 
 namespace logic {
     class World;

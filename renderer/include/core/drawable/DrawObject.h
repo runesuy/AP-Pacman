@@ -10,7 +10,7 @@
 #include <SFML/Graphics/Text.hpp>
 #include <memory>
 #include "core/drawable/IDrawable.h"
-#include "core/world/WorldObject.h"
+#include "core/world/objects/WorldObject.h"
 
 namespace renderer {
 

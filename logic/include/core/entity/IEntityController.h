@@ -6,7 +6,7 @@
 #define AP_PACMAN_IENTITYCONTROLLER_H
 #include <memory>
 #include "EntityCommands.h"
-#include "core/world/SizedWorldObject.h"
+#include "core/world/objects/SizedWorldObject.h"
 
 namespace logic {
     class World;

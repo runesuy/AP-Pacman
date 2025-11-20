@@ -2,7 +2,7 @@
 // Created by runes on 3/11/2025.
 //
 
-#include "core/world/Position.h"
+#include "core/world/space/Position.h"
 #include <stdexcept>
 
 namespace logic {

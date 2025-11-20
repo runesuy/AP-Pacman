@@ -5,7 +5,7 @@
 #ifndef AP_PACMAN_SIZEDWORLDOBJECT_H
 #define AP_PACMAN_SIZEDWORLDOBJECT_H
 #include "WorldObject.h"
-#include "Size.h"
+#include "core/world/space/Size.h"
 
 namespace logic {
 

@@ -6,7 +6,7 @@
 #include <iostream>
 #include "core/world/World.h"
 #include "core/world/TileMap.h"
-#include "core/world/CollisionHandler.h"
+#include "core/world/objects/CollisionHandler.h"
 
 namespace logic {
     void World::update() {

@@ -5,7 +5,7 @@
 #ifndef AP_PACMAN_WORLDOBJECT_H
 #define AP_PACMAN_WORLDOBJECT_H
 
-#include "Position.h"
+#include "core/world/space/Position.h"
 
 namespace logic {
     class World;

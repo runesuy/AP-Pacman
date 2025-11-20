@@ -1,7 +1,7 @@
 //
 // Created by runes on 20/11/2025.
 //
-#include "core/world/Directions.h"
+#include "core/world/space/Directions.h"
 
 namespace logic {
 
@@ -13,5 +13,6 @@ namespace logic {
             case UP: return DOWN;
             case DOWN: return UP;
         }
+        return NONE;
     }
 }

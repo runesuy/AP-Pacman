@@ -6,8 +6,8 @@
 #define AP_PACMAN_COLLISIONHANDLER_H
 #include <vector>
 #include <memory>
-#include "core/world/WorldObject.h"
-#include "core/world/SizedWorldObject.h"
+#include "WorldObject.h"
+#include "SizedWorldObject.h"
 
 namespace logic {
 

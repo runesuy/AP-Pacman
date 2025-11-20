@@ -2,8 +2,8 @@
 // Created by rune-suy on 11/8/25.
 //
 
-#include "core/world/CollisionHandler.h"
-#include "core/world/SizedWorldObject.h"
+#include "core/world/objects/CollisionHandler.h"
+#include "core/world/objects/SizedWorldObject.h"
 
 namespace logic {
     void CollisionHandler::handleCollisions(std::vector<std::shared_ptr<WorldObject>> &objects) {

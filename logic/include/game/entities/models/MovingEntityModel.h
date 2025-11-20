@@ -6,7 +6,7 @@
 #define AP_PACMAN_MOVINGENTITYMODEL_H
 
 #include "core/entity/EntityModel.h"
-#include "core/world/Directions.h"
+#include "core/world/space/Directions.h"
 
 namespace logic {
 

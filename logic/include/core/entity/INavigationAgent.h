@@ -4,7 +4,7 @@
 
 #ifndef AP_PACMAN_INAVIGATIONAGENT_H
 #define AP_PACMAN_INAVIGATIONAGENT_H
-#include "core/world/Position.h"
+#include "core/world/space/Position.h"
 #include "core/world/World.h"
 
 namespace logic {

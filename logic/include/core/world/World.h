@@ -6,7 +6,7 @@
 #define AP_PACMAN_WORLD_H
 
 #include "core/entity/IEntityFactory.h"
-#include "WorldObject.h"
+#include "core/world/objects/WorldObject.h"
 #include "core/config/IConfig.h"
 #include "Score.h"
 #include <vector>

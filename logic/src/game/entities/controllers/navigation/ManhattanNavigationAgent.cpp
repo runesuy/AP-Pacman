@@ -3,7 +3,7 @@
 //
 
 #include "game/entities/controllers/navigation/ManhattanNavigationAgent.h"
-#include "core/world/Position.h"
+#include "core/world/space/Position.h"
 #include <algorithm>
 
 namespace logic {

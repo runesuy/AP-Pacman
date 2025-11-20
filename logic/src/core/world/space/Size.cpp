@@ -2,7 +2,7 @@
 // Created by rune-suy on 11/5/25.
 //
 
-#include "core/world/Size.h"
+#include "core/world/space/Size.h"
 #include "stdexcept"
 
 namespace logic {

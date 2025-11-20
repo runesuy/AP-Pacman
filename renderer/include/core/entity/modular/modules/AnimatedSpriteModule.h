@@ -7,7 +7,7 @@
 
 
 #include "core/entity/modular/IEntityViewModule.h"
-#include "core/world/Size.h"
+#include "core/world/space/Size.h"
 #include "core/parser/ITextureParser.h"
 
 namespace renderer {

@@ -5,12 +5,12 @@
 #ifndef AP_PACMAN_ENTITYMODEL_H
 #define AP_PACMAN_ENTITYMODEL_H
 
-#include "core/world/Position.h"
+#include "core/world/space/Position.h"
 #include "vector"
 #include "core/observer/Observable.h"
 #include "memory"
-#include "core/world/SizedWorldObject.h"
-#include "core/world/Size.h"
+#include "core/world/objects/SizedWorldObject.h"
+#include "core/world/space/Size.h"
 #include "core/entity/IEntityController.h"
 #include "EntityCommands.h"
 
