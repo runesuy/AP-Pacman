@@ -60,6 +60,10 @@ namespace logic {
          * @param other
          */
         void onCollision(const SizedWorldObject &other, World &world) final;
+
+        void handleWorldEvent(WorldEventT t) override {
+            if (controller) controller->handleWorldEvent(t, static_cast<Derived &>(*this));
+        }
     };
 
 
@@ -67,7 +71,7 @@ namespace logic {
     template<typename Derived>
     void EntityModel<Derived>::onCollision(const SizedWorldObject &other, World &world) {
         if (controller) {
-            controller->onCollision(static_cast<Derived &>(*this), other);
+            controller->onCollision(static_cast<Derived &>(*this), other, world);
         }
     }
 

@@ -33,7 +33,7 @@ namespace logic {
 
         void processCommand(EntityCommand command, GhostModel &entity) override;
 
-        void onCollision(GhostModel &entity, const SizedWorldObject &other) override;
+        void onCollision(GhostModel &entity, const SizedWorldObject &other, World& world) override;
 
     };
 

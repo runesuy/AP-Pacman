@@ -31,11 +31,13 @@ namespace logic {
         m[DOWN] = {dDown, typeDown};
 
         // calculate viable directions
+        auto r = m;
         for (const auto& [d , pr] : m) {
             if (pr.second == TileMap::WALL) {
-                m.erase(d);
+                r.erase(d);
             }
         }
+        m = r;
 
         // calculate options | result : vector with directions with the smallest distance
         std::vector<Direction> options;

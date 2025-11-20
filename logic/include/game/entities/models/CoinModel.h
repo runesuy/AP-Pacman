@@ -21,7 +21,7 @@ namespace logic {
 
         void markForRemoval() override;
 
-        CollisionTypeT getCollisionType() const override;
+        [[nodiscard]] CollisionTypeT getCollisionType() const override;
     };
 
 } // logic

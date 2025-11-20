@@ -6,12 +6,12 @@
 #define AP_PACMAN_POWERUPVIEW_H
 
 #include "core/observer/IObserver.h"
-#include "game/entities/models/PowerupModel.h"
+#include "game/entities/models/FruitModel.h"
 #include "core/entity/modular/ModularEntityView.h"
 
 namespace renderer {
 
-    class PowerupView : public ModularEntityView, public logic::IObserver<logic::PowerupModel> {
+    class PowerupView : public ModularEntityView, public logic::IObserver<logic::FruitModel> {
         bool markedForRemoval{false};
     public:
         PowerupView();
@@ -20,7 +20,7 @@ namespace renderer {
 
         void setSize(const logic::Size &size) override;
 
-        void update(logic::PowerupModel &subject) override;
+        void update(logic::FruitModel &subject) override;
 
         void markForRemoval();
     };

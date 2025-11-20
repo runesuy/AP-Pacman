@@ -23,7 +23,7 @@ namespace renderer {
 
         std::shared_ptr<logic::CoinModel> createCoinModel() override;
 
-        std::shared_ptr<logic::PowerupModel> createPowerupModel() override;
+        std::shared_ptr<logic::FruitModel> createPowerupModel() override;
 
         [[nodiscard]] const std::shared_ptr<WorldView> &getViewTarget() const;
 

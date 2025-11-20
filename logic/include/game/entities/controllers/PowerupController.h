@@ -5,17 +5,17 @@
 #ifndef AP_PACMAN_POWERUPCONTROLLER_H
 #define AP_PACMAN_POWERUPCONTROLLER_H
 #include "CollectableController.h"
-#include "game/entities/models/PowerupModel.h"
+#include "game/entities/models/FruitModel.h"
 
 namespace logic {
 
-    class PowerupController : public CollectableController<PowerupModel> {
+    class PowerupController : public CollectableController<FruitModel> {
     public:
-        void update(World &world, PowerupModel &entity) override;
+        void update(World &world, FruitModel &entity) override;
 
-        void processCommand(EntityCommand command, PowerupModel &entity) override;
+        void processCommand(EntityCommand command, FruitModel &entity) override;
 
-        void onCollision(PowerupModel &entity, const SizedWorldObject &other) override;
+        void onCollision(FruitModel &entity, const SizedWorldObject &other, World& world) override;
     };
 
 } // logic

@@ -8,6 +8,7 @@
 #include "core/world/World.h"
 #include <typeinfo>
 #include "game/entities/models/CollisionTypes.h"
+#include "game/WorldEvents.h"
 
 namespace logic {
     void PlayerController::processCommand(EntityCommand command, PlayerModel &entity) {
@@ -30,11 +31,16 @@ namespace logic {
 
     }
 
-    void PlayerController::onCollision(PlayerModel &entity, const SizedWorldObject &other) {
+    void PlayerController::onCollision(PlayerModel &entity, const SizedWorldObject &other, World &world) {
 
         switch (other.getCollisionType()) {
             case (CollisionType::COIN): {
                 entity.updateObservers("COIN_COLLECTED");
+                break;
+            }
+            case(CollisionType::FRUIT): {
+                world.sendWorldEvent(WorldEvent::FRUIT_EATEN_BY_PLAYER);
+                break;
             }
             default:{}
         }

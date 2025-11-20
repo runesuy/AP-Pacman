@@ -49,7 +49,7 @@ namespace logic {
 
         void setMode(Mode mode);
 
-        float getStartDelay() const;
+        [[nodiscard]] float getStartDelay() const;
 
         void setStartDelay(float startDelay);
     };

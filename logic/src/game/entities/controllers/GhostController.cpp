@@ -3,6 +3,7 @@
 //
 
 #include "game/entities/controllers/GhostController.h"
+#include "game/WorldEvents.h"
 
 namespace logic {
     void GhostController::update(World &world, GhostModel &entity) {
@@ -13,6 +14,15 @@ namespace logic {
         }
         if (entity.getMode() == GhostModel::WAITING && entity.getDirection() != Direction::NONE) {
             entity.setRequestedDirection(Direction::NONE);
+        }
+    }
+
+    void GhostController::handleWorldEvent(WorldObject::WorldEventT event, GhostModel& entity) {
+        switch (event) {
+            default:{}
+            case(WorldEvent::FRUIT_EATEN_BY_PLAYER): {
+                entity.setMode(GhostModel::FRIGHTENED);
+            }
         }
     }
 } // logic

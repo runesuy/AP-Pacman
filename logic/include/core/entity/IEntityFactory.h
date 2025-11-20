@@ -8,7 +8,7 @@
 #include "game/entities/models/WallModel.h"
 #include "game/entities/models/PlayerModel.h"
 #include "game/entities/models/CoinModel.h"
-#include "game/entities/models/PowerupModel.h"
+#include "game/entities/models/FruitModel.h"
 #include "game/entities/models/GhostModel.h"
 #include "game/entities/models/GhostTypes.h"
 
@@ -45,10 +45,10 @@ namespace logic {
         virtual std::shared_ptr<CoinModel> createCoinModel() = 0;
 
         /**
-         * Creates and returns a shared pointer to a PowerupModel instance.
-         * @return A shared pointer to the created PowerupModel.
+         * Creates and returns a shared pointer to a FruitModel instance.
+         * @return A shared pointer to the created FruitModel.
          */
-        virtual std::shared_ptr<PowerupModel> createPowerupModel() = 0;
+        virtual std::shared_ptr<FruitModel> createPowerupModel() = 0;
 
         /**
          * Creates and returns a shared pointer to a GhostModel instance of the specified type.

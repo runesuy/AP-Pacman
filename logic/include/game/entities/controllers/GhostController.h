@@ -12,6 +12,8 @@ namespace logic {
     class GhostController : public MovingEntityController<GhostModel> {
     public:
         void update(World &world, GhostModel &entity) override;
+
+        void handleWorldEvent(WorldObject::WorldEventT event, GhostModel& entity) override;
     };
 
 } // logic

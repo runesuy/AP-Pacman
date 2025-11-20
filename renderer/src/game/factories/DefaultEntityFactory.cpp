@@ -50,9 +50,9 @@ namespace renderer {
         DefaultEntityFactory::viewTarget = viewTarget;
     }
 
-    std::shared_ptr<logic::PowerupModel> DefaultEntityFactory::createPowerupModel() {
+    std::shared_ptr<logic::FruitModel> DefaultEntityFactory::createPowerupModel() {
         auto powerupView = std::make_shared<PowerupView>();
-        auto powerupModel = std::make_shared<logic::PowerupModel>();
+        auto powerupModel = std::make_shared<logic::FruitModel>();
         powerupModel->addObserver(powerupView);
         viewTarget->addObjectView(powerupView);
         return powerupModel;

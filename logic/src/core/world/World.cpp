@@ -16,14 +16,14 @@ namespace logic {
         _handleCollisions();
 
         // Update all objects in the world
-        for (const auto& object : objects) {
+        for (const auto &object: objects) {
             object->update(*this);
         }
 
         _removeMarkedObjects();
     }
 
-    World::World(const IConfig& config) : config(config) {
+    World::World(const IConfig &config) : config(config) {
         config.getTileMap().loadToWorld(*this);
     }
 
@@ -44,7 +44,7 @@ namespace logic {
     }
 
     void World::removeObject(const WorldObject &object) {
-        for (auto it = objects.begin(); it != objects.end(); ) {
+        for (auto it = objects.begin(); it != objects.end();) {
             if (it->get() == &object) {
                 it = objects.erase(it);
             } else {
@@ -55,7 +55,7 @@ namespace logic {
     }
 
     void World::_removeMarkedObjects() {
-        for (auto it = objects.begin(); it != objects.end(); ) {
+        for (auto it = objects.begin(); it != objects.end();) {
             if ((*it)->isMarkedForRemoval()) {
                 it = objects.erase(it);
             } else {
@@ -74,6 +74,8 @@ namespace logic {
     }
 
     void World::sendWorldEvent(WorldObject::WorldEventT event) {
-        for (auto obj : objects) sendWorldEvent(event);
+        for (auto &obj: objects) {
+            obj->handleWorldEvent(event);
+        }
     }
 } // logic

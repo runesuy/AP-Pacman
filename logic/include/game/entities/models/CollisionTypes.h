@@ -9,7 +9,9 @@
 namespace logic {
     enum CollisionType {
         COIN,
-        PLAYER
+        PLAYER,
+        FRUIT,
+        GHOST
     };
 }
 

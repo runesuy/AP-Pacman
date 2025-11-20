@@ -5,16 +5,16 @@
 #include "game/entities/controllers/PowerupController.h"
 
 namespace logic {
-    void PowerupController::update(World &world, PowerupModel &entity) {
+    void PowerupController::update(World &world, FruitModel &entity) {
 
     }
 
-    void PowerupController::processCommand(EntityCommand command, PowerupModel &entity) {
+    void PowerupController::processCommand(EntityCommand command, FruitModel &entity) {
 
     }
 
-    void PowerupController::onCollision(PowerupModel &entity, const SizedWorldObject &other) {
-        CollectableController<logic::PowerupModel>::onCollision(entity, other);
+    void PowerupController::onCollision(FruitModel &entity, const SizedWorldObject &other, World& world) {
+        CollectableController<logic::FruitModel>::onCollision(entity, other, world);
         entity.updateObservers();
     }
 } // logic

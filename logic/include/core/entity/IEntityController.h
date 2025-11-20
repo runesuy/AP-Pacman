@@ -34,14 +34,16 @@ namespace logic {
          * @param command
          * @param entity
          */
-        virtual void processCommand(EntityCommand command, DerivedEntityModel& entity) = 0;
+        virtual void processCommand(EntityCommand command, DerivedEntityModel &entity) = 0;
 
         /**
          * Handle a collision between entity and other.
          * @param entity
          * @param other
          */
-        virtual void onCollision(DerivedEntityModel &entity, const SizedWorldObject &other) = 0;
+        virtual void onCollision(DerivedEntityModel &entity, const SizedWorldObject &other, World &world) = 0;
+
+        virtual void handleWorldEvent(WorldObject::WorldEventT event, DerivedEntityModel &entity){};
     };
 }
 

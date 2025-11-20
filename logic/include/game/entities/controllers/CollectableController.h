@@ -13,11 +13,12 @@ namespace logic {
     template<typename ModelType>
     class CollectableController : public IEntityController<ModelType> {
     public:
-        void onCollision(ModelType &entity, const SizedWorldObject &other) override;
+        void onCollision(ModelType &entity, const SizedWorldObject &other, World& world) override;
     };
 
     template<typename ModelType>
-    void CollectableController<ModelType>::onCollision(ModelType &entity, const SizedWorldObject &other) {
+    void CollectableController<ModelType>::onCollision(ModelType &entity, const SizedWorldObject &other,
+                                                       World &world) {
         // if collision with player
         if (dynamic_cast<const EntityModel<PlayerModel> *>(&other)) {
             entity.markForRemoval();

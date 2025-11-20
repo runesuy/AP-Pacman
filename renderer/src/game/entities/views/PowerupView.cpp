@@ -6,7 +6,7 @@
 #include "core/entity/modular/modules/RectangleModule.h"
 
 namespace renderer {
-    void PowerupView::update(logic::PowerupModel &subject) {
+    void PowerupView::update(logic::FruitModel &subject) {
         setPosition(subject.getPosition());
         setSize(subject.getSize());
         if (subject.isMarkedForRemoval()) {
