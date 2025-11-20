@@ -27,7 +27,7 @@ Collaboration diagram for logic\+::Collectable\+Controller\texorpdfstring{$<$}{<
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classlogic_1_1CollectableController_a384062c1c0d681ecf33884e694ee551c}{on\+Collision}} (Model\+Type \&entity, const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other) override
+void \mbox{\hyperlink{classlogic_1_1CollectableController_a5f2132ad0f8a084ff3d506d6fa7be5fa}{on\+Collision}} (Model\+Type \&entity, const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other, \mbox{\hyperlink{classlogic_1_1World}{World}} \&world) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IEntityController}{logic\+::\+IEntity\+Controller$<$ Model\+Type $>$}}}
 \begin{DoxyCompactItemize}
@@ -35,16 +35,18 @@ void \mbox{\hyperlink{classlogic_1_1CollectableController_a384062c1c0d681ecf3388
 virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_a7488094fb1442b613f7a902db8fce073}{update}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world, Model\+Type \&entity)=0
 \item 
 virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_a6a070b8f37b4a331c949c19a1b676365}{process\+Command}} (\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}} command, Model\+Type \&entity)=0
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_afc00d163ce088cd89b18b282ddf7e3e0}{handle\+World\+Event}} (\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{World\+Object\+::\+World\+EventT}} event, Model\+Type \&entity)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classlogic_1_1CollectableController_a384062c1c0d681ecf33884e694ee551c}\label{classlogic_1_1CollectableController_a384062c1c0d681ecf33884e694ee551c} 
+\Hypertarget{classlogic_1_1CollectableController_a5f2132ad0f8a084ff3d506d6fa7be5fa}\label{classlogic_1_1CollectableController_a5f2132ad0f8a084ff3d506d6fa7be5fa} 
 \index{logic::CollectableController$<$ ModelType $>$@{logic::CollectableController$<$ ModelType $>$}!onCollision@{onCollision}}
 \index{onCollision@{onCollision}!logic::CollectableController$<$ ModelType $>$@{logic::CollectableController$<$ ModelType $>$}}
 \doxysubsubsection{\texorpdfstring{onCollision()}{onCollision()}}
 {\footnotesize\ttfamily template$<$typename Model\+Type $>$ \\
-void \mbox{\hyperlink{classlogic_1_1CollectableController}{logic\+::\+Collectable\+Controller}}$<$ Model\+Type $>$\+::on\+Collision (\begin{DoxyParamCaption}\item[{Model\+Type \&}]{entity,  }\item[{const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+void \mbox{\hyperlink{classlogic_1_1CollectableController}{logic\+::\+Collectable\+Controller}}$<$ Model\+Type $>$\+::on\+Collision (\begin{DoxyParamCaption}\item[{Model\+Type \&}]{entity,  }\item[{const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&}]{other,  }\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 Handle a collision between entity and other. 
 \begin{DoxyParams}{Parameters}
@@ -55,7 +57,7 @@ Handle a collision between entity and other.
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{classlogic_1_1IEntityController_aecb8e1520605760c2e2f10e66e9eb5b2}{logic\+::\+IEntity\+Controller$<$ Model\+Type $>$}}.
+Implements \mbox{\hyperlink{classlogic_1_1IEntityController_ae3b0e2339729244ae589ed4221c8c591}{logic\+::\+IEntity\+Controller$<$ Model\+Type $>$}}.
 
 
 

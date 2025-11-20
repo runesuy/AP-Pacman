@@ -31,12 +31,12 @@ void \mbox{\hyperlink{classlogic_1_1CoinController_a88df720350ea1c579bf9e4b33870
 \item 
 void \mbox{\hyperlink{classlogic_1_1CoinController_a199ca1f28d584bc344061f06bf45cfe2}{process\+Command}} (\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}} command, \mbox{\hyperlink{classlogic_1_1CoinModel}{Coin\+Model}} \&entity) override
 \item 
-void \mbox{\hyperlink{classlogic_1_1CoinController_ab8b5ab2e4af0019689db3deacb59e2a7}{on\+Collision}} (\mbox{\hyperlink{classlogic_1_1CoinModel}{Coin\+Model}} \&entity, const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other) override
+void \mbox{\hyperlink{classlogic_1_1CoinController_af1cc1cda6facb7c86d9b606ae3a3c2b8}{on\+Collision}} (\mbox{\hyperlink{classlogic_1_1CoinModel}{Coin\+Model}} \&entity, const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other, \mbox{\hyperlink{classlogic_1_1World}{World}} \&world) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1CollectableController}{logic\+::\+Collectable\+Controller$<$ Coin\+Model $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classlogic_1_1CollectableController_a384062c1c0d681ecf33884e694ee551c}{on\+Collision}} (\mbox{\hyperlink{classlogic_1_1CoinModel}{Coin\+Model}} \&entity, const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other) override
+void \mbox{\hyperlink{classlogic_1_1CollectableController_a5f2132ad0f8a084ff3d506d6fa7be5fa}{on\+Collision}} (\mbox{\hyperlink{classlogic_1_1CoinModel}{Coin\+Model}} \&entity, const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other, \mbox{\hyperlink{classlogic_1_1World}{World}} \&world) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IEntityController}{logic\+::\+IEntity\+Controller$<$ Derived\+Entity\+Model $>$}}}
 \begin{DoxyCompactItemize}
@@ -45,23 +45,25 @@ virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_a7488094fb1442b613
 \item 
 virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_a6a070b8f37b4a331c949c19a1b676365}{process\+Command}} (\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}} command, Derived\+Entity\+Model \&entity)=0
 \item 
-virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_aecb8e1520605760c2e2f10e66e9eb5b2}{on\+Collision}} (Derived\+Entity\+Model \&entity, const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other)=0
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_ae3b0e2339729244ae589ed4221c8c591}{on\+Collision}} (Derived\+Entity\+Model \&entity, const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other, \mbox{\hyperlink{classlogic_1_1World}{World}} \&world)=0
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_afc00d163ce088cd89b18b282ddf7e3e0}{handle\+World\+Event}} (\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{World\+Object\+::\+World\+EventT}} event, Derived\+Entity\+Model \&entity)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classlogic_1_1CoinController_ab8b5ab2e4af0019689db3deacb59e2a7}\label{classlogic_1_1CoinController_ab8b5ab2e4af0019689db3deacb59e2a7} 
+\Hypertarget{classlogic_1_1CoinController_af1cc1cda6facb7c86d9b606ae3a3c2b8}\label{classlogic_1_1CoinController_af1cc1cda6facb7c86d9b606ae3a3c2b8} 
 \index{logic::CoinController@{logic::CoinController}!onCollision@{onCollision}}
 \index{onCollision@{onCollision}!logic::CoinController@{logic::CoinController}}
 \doxysubsubsection{\texorpdfstring{onCollision()}{onCollision()}}
-{\footnotesize\ttfamily void logic\+::\+Coin\+Controller\+::on\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1CoinModel}{Coin\+Model}} \&}]{entity,  }\item[{const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+{\footnotesize\ttfamily void logic\+::\+Coin\+Controller\+::on\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1CoinModel}{Coin\+Model}} \&}]{entity,  }\item[{const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&}]{other,  }\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=348pt]{classlogic_1_1CoinController_ab8b5ab2e4af0019689db3deacb59e2a7_cgraph}
+\includegraphics[width=348pt]{classlogic_1_1CoinController_af1cc1cda6facb7c86d9b606ae3a3c2b8_cgraph}
 \end{center}
 \end{figure}
 \Hypertarget{classlogic_1_1CoinController_a199ca1f28d584bc344061f06bf45cfe2}\label{classlogic_1_1CoinController_a199ca1f28d584bc344061f06bf45cfe2} 

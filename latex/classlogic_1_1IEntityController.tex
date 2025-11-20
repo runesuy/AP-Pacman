@@ -21,7 +21,9 @@ virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_a7488094fb1442b613
 \item 
 virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_a6a070b8f37b4a331c949c19a1b676365}{process\+Command}} (\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}} command, Derived\+Entity\+Model \&entity)=0
 \item 
-virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_aecb8e1520605760c2e2f10e66e9eb5b2}{on\+Collision}} (Derived\+Entity\+Model \&entity, const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other)=0
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_ae3b0e2339729244ae589ed4221c8c591}{on\+Collision}} (Derived\+Entity\+Model \&entity, const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other, \mbox{\hyperlink{classlogic_1_1World}{World}} \&world)=0
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_afc00d163ce088cd89b18b282ddf7e3e0}{handle\+World\+Event}} (\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{World\+Object\+::\+World\+EventT}} event, Derived\+Entity\+Model \&entity)
 \end{DoxyCompactItemize}
 
 
@@ -36,12 +38,19 @@ A controller that can be linked to a model. Handles all data change for the mode
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classlogic_1_1IEntityController_aecb8e1520605760c2e2f10e66e9eb5b2}\label{classlogic_1_1IEntityController_aecb8e1520605760c2e2f10e66e9eb5b2} 
+\Hypertarget{classlogic_1_1IEntityController_afc00d163ce088cd89b18b282ddf7e3e0}\label{classlogic_1_1IEntityController_afc00d163ce088cd89b18b282ddf7e3e0} 
+\index{logic::IEntityController$<$ DerivedEntityModel $>$@{logic::IEntityController$<$ DerivedEntityModel $>$}!handleWorldEvent@{handleWorldEvent}}
+\index{handleWorldEvent@{handleWorldEvent}!logic::IEntityController$<$ DerivedEntityModel $>$@{logic::IEntityController$<$ DerivedEntityModel $>$}}
+\doxysubsubsection{\texorpdfstring{handleWorldEvent()}{handleWorldEvent()}}
+{\footnotesize\ttfamily template$<$typename Derived\+Entity\+Model $>$ \\
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityController}{logic\+::\+IEntity\+Controller}}$<$ Derived\+Entity\+Model $>$\+::handle\+World\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{World\+Object\+::\+World\+EventT}}}]{event,  }\item[{Derived\+Entity\+Model \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\Hypertarget{classlogic_1_1IEntityController_ae3b0e2339729244ae589ed4221c8c591}\label{classlogic_1_1IEntityController_ae3b0e2339729244ae589ed4221c8c591} 
 \index{logic::IEntityController$<$ DerivedEntityModel $>$@{logic::IEntityController$<$ DerivedEntityModel $>$}!onCollision@{onCollision}}
 \index{onCollision@{onCollision}!logic::IEntityController$<$ DerivedEntityModel $>$@{logic::IEntityController$<$ DerivedEntityModel $>$}}
 \doxysubsubsection{\texorpdfstring{onCollision()}{onCollision()}}
 {\footnotesize\ttfamily template$<$typename Derived\+Entity\+Model $>$ \\
-virtual void \mbox{\hyperlink{classlogic_1_1IEntityController}{logic\+::\+IEntity\+Controller}}$<$ Derived\+Entity\+Model $>$\+::on\+Collision (\begin{DoxyParamCaption}\item[{Derived\+Entity\+Model \&}]{entity,  }\item[{const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityController}{logic\+::\+IEntity\+Controller}}$<$ Derived\+Entity\+Model $>$\+::on\+Collision (\begin{DoxyParamCaption}\item[{Derived\+Entity\+Model \&}]{entity,  }\item[{const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&}]{other,  }\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 Handle a collision between entity and other. 
 \begin{DoxyParams}{Parameters}
@@ -52,7 +61,7 @@ Handle a collision between entity and other.
 \end{DoxyParams}
 
 
-Implemented in \mbox{\hyperlink{classlogic_1_1CollectableController_a384062c1c0d681ecf33884e694ee551c}{logic\+::\+Collectable\+Controller$<$ Model\+Type $>$}}.
+Implemented in \mbox{\hyperlink{classlogic_1_1CollectableController_a5f2132ad0f8a084ff3d506d6fa7be5fa}{logic\+::\+Collectable\+Controller$<$ Model\+Type $>$}}.
 
 \Hypertarget{classlogic_1_1IEntityController_a6a070b8f37b4a331c949c19a1b676365}\label{classlogic_1_1IEntityController_a6a070b8f37b4a331c949c19a1b676365} 
 \index{logic::IEntityController$<$ DerivedEntityModel $>$@{logic::IEntityController$<$ DerivedEntityModel $>$}!processCommand@{processCommand}}

@@ -13,7 +13,6 @@ var searchData=
   ['powerupcontroller_2ecpp_10',['PowerupController.cpp',['../PowerupController_8cpp.html',1,'']]],
   ['powerupcontroller_2eh_11',['PowerupController.h',['../PowerupController_8h.html',1,'']]],
   ['powerupmodel_2ecpp_12',['PowerupModel.cpp',['../PowerupModel_8cpp.html',1,'']]],
-  ['powerupmodel_2eh_13',['PowerupModel.h',['../PowerupModel_8h.html',1,'']]],
-  ['powerupview_2ecpp_14',['PowerupView.cpp',['../PowerupView_8cpp.html',1,'']]],
-  ['powerupview_2eh_15',['PowerupView.h',['../PowerupView_8h.html',1,'']]]
+  ['powerupview_2ecpp_13',['PowerupView.cpp',['../PowerupView_8cpp.html',1,'']]],
+  ['powerupview_2eh_14',['PowerupView.h',['../PowerupView_8h.html',1,'']]]
 ];

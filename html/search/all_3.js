@@ -23,7 +23,7 @@ var searchData=
   ['collectablecontroller_2ecpp_20',['CollectableController.cpp',['../CollectableController_8cpp.html',1,'']]],
   ['collectablecontroller_2eh_21',['CollectableController.h',['../CollectableController_8h.html',1,'']]],
   ['collectablecontroller_3c_20coinmodel_20_3e_22',['CollectableController&lt; CoinModel &gt;',['../classlogic_1_1CollectableController.html',1,'logic']]],
-  ['collectablecontroller_3c_20powerupmodel_20_3e_23',['CollectableController&lt; PowerupModel &gt;',['../classlogic_1_1CollectableController.html',1,'logic']]],
+  ['collectablecontroller_3c_20fruitmodel_20_3e_23',['CollectableController&lt; FruitModel &gt;',['../classlogic_1_1CollectableController.html',1,'logic']]],
   ['collisionhandler_24',['CollisionHandler',['../classlogic_1_1CollisionHandler.html',1,'logic']]],
   ['collisionhandler_2ecpp_25',['CollisionHandler.cpp',['../CollisionHandler_8cpp.html',1,'']]],
   ['collisionhandler_2eh_26',['CollisionHandler.h',['../CollisionHandler_8h.html',1,'']]],
@@ -37,7 +37,7 @@ var searchData=
   ['createlevelstate_34',['createlevelstate',['../classrenderer_1_1IStateFactory.html#ab5ba35efd6828be7f2fc20209449abe1',1,'renderer::IStateFactory::createLevelState()'],['../classrenderer_1_1DefaultStateFactory.html#aeea53a552115621ceed32a1cc406f3a5',1,'renderer::DefaultStateFactory::createLevelState()']]],
   ['createmenustate_35',['createmenustate',['../classrenderer_1_1IStateFactory.html#a3299896614b5cbe80352e8ce7d2b3f98',1,'renderer::IStateFactory::createMenuState()'],['../classrenderer_1_1DefaultStateFactory.html#adfa5b4b5ef5a32888e18c7630dd1f278',1,'renderer::DefaultStateFactory::createMenuState()']]],
   ['createplayermodel_36',['createplayermodel',['../classrenderer_1_1DefaultEntityFactory.html#a497423527503fbb10efb90c63543efee',1,'renderer::DefaultEntityFactory::createPlayerModel()'],['../classlogic_1_1IEntityFactory.html#a7a7370e07ed51e7a29b2b2e4f4b6c038',1,'logic::IEntityFactory::createPlayerModel()=0']]],
-  ['createpowerupmodel_37',['createpowerupmodel',['../classlogic_1_1IEntityFactory.html#a1dd3ffb00e2e030b590d282ec3062cb5',1,'logic::IEntityFactory::createPowerupModel()'],['../classrenderer_1_1DefaultEntityFactory.html#a0cb3435082762a3f66bc4497d1d548a1',1,'renderer::DefaultEntityFactory::createPowerupModel()']]],
+  ['createpowerupmodel_37',['createpowerupmodel',['../classlogic_1_1IEntityFactory.html#ad6cf715e54a24f75743af85b4c9f319b',1,'logic::IEntityFactory::createPowerupModel()'],['../classrenderer_1_1DefaultEntityFactory.html#a035d0cc4c60a7c3c1800f4c1424b0296',1,'renderer::DefaultEntityFactory::createPowerupModel()']]],
   ['createstatemanager_38',['createStateManager',['../classrenderer_1_1StateManagerFactory.html#af6d12bf6487efe7007a7191d7076bd93',1,'renderer::StateManagerFactory']]],
   ['createwallmodel_39',['createwallmodel',['../classlogic_1_1IEntityFactory.html#acec55acd47773b8630b467d9a93ab0e4',1,'logic::IEntityFactory::createWallModel()'],['../classrenderer_1_1DefaultEntityFactory.html#acd0f8f93327b10cad01d682effa9e7fe',1,'renderer::DefaultEntityFactory::createWallModel()']]],
   ['custom_20maps_40',['How to make custom maps.',['../md_renderer_2resources_2maps_2MapGuide.html',1,'']]]

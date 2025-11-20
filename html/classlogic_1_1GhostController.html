@@ -116,6 +116,8 @@ Collaboration diagram for logic::GhostController:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8b06b2000603ac58aafbbbb3032dcb0a" id="r_a8b06b2000603ac58aafbbbb3032dcb0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1GhostController.html#a8b06b2000603ac58aafbbbb3032dcb0a">update</a> (<a class="el" href="classlogic_1_1World.html">World</a> &amp;world, <a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> &amp;entity) override</td></tr>
 <tr class="separator:a8b06b2000603ac58aafbbbb3032dcb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeba3f9707ff49bd10c53c721c48b5002" id="r_aeba3f9707ff49bd10c53c721c48b5002"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1GhostController.html#aeba3f9707ff49bd10c53c721c48b5002">handleWorldEvent</a> (<a class="el" href="classlogic_1_1WorldObject.html#a2c8c9cce37d13cbc0acf8a6d3d437373">WorldObject::WorldEventT</a> event, <a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> &amp;entity) override</td></tr>
+<tr class="separator:aeba3f9707ff49bd10c53c721c48b5002"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classlogic_1_1MovingEntityController"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classlogic_1_1MovingEntityController')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classlogic_1_1MovingEntityController.html">logic::MovingEntityController&lt; GhostModel &gt;</a></td></tr>
 <tr class="memitem:a6dc0f5fe7e6001eb437664da3441ab63 inherit pub_methods_classlogic_1_1MovingEntityController" id="r_a6dc0f5fe7e6001eb437664da3441ab63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1MovingEntityController.html#a6dc0f5fe7e6001eb437664da3441ab63">update</a> (<a class="el" href="classlogic_1_1World.html">World</a> &amp;world, <a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> &amp;entity) override</td></tr>
 <tr class="separator:a6dc0f5fe7e6001eb437664da3441ab63 inherit pub_methods_classlogic_1_1MovingEntityController"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,8 +128,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7488094fb1442b613f7a902db8fce073 inherit pub_methods_classlogic_1_1IEntityController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a070b8f37b4a331c949c19a1b676365 inherit pub_methods_classlogic_1_1IEntityController" id="r_a6a070b8f37b4a331c949c19a1b676365"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IEntityController.html#a6a070b8f37b4a331c949c19a1b676365">processCommand</a> (<a class="el" href="namespacelogic.html#a8c969071a5f036b8ad64f854267522fb">EntityCommand</a> command, DerivedEntityModel &amp;entity)=0</td></tr>
 <tr class="separator:a6a070b8f37b4a331c949c19a1b676365 inherit pub_methods_classlogic_1_1IEntityController"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecb8e1520605760c2e2f10e66e9eb5b2 inherit pub_methods_classlogic_1_1IEntityController" id="r_aecb8e1520605760c2e2f10e66e9eb5b2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IEntityController.html#aecb8e1520605760c2e2f10e66e9eb5b2">onCollision</a> (DerivedEntityModel &amp;entity, const <a class="el" href="classlogic_1_1SizedWorldObject.html">SizedWorldObject</a> &amp;other)=0</td></tr>
-<tr class="separator:aecb8e1520605760c2e2f10e66e9eb5b2 inherit pub_methods_classlogic_1_1IEntityController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b0e2339729244ae589ed4221c8c591 inherit pub_methods_classlogic_1_1IEntityController" id="r_ae3b0e2339729244ae589ed4221c8c591"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IEntityController.html#ae3b0e2339729244ae589ed4221c8c591">onCollision</a> (DerivedEntityModel &amp;entity, const <a class="el" href="classlogic_1_1SizedWorldObject.html">SizedWorldObject</a> &amp;other, <a class="el" href="classlogic_1_1World.html">World</a> &amp;world)=0</td></tr>
+<tr class="separator:ae3b0e2339729244ae589ed4221c8c591 inherit pub_methods_classlogic_1_1IEntityController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc00d163ce088cd89b18b282ddf7e3e0 inherit pub_methods_classlogic_1_1IEntityController" id="r_afc00d163ce088cd89b18b282ddf7e3e0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IEntityController.html#afc00d163ce088cd89b18b282ddf7e3e0">handleWorldEvent</a> (<a class="el" href="classlogic_1_1WorldObject.html#a2c8c9cce37d13cbc0acf8a6d3d437373">WorldObject::WorldEventT</a> event, DerivedEntityModel &amp;entity)</td></tr>
+<tr class="separator:afc00d163ce088cd89b18b282ddf7e3e0 inherit pub_methods_classlogic_1_1IEntityController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -140,6 +144,52 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ae3016077b6427131d2ba9c73cd7b0541 inherit pro_static_methods_classlogic_1_1MovingEntityController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aeba3f9707ff49bd10c53c721c48b5002" name="aeba3f9707ff49bd10c53c721c48b5002"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba3f9707ff49bd10c53c721c48b5002">&#9670;&#160;</a></span>handleWorldEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void logic::GhostController::handleWorldEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlogic_1_1WorldObject.html#a2c8c9cce37d13cbc0acf8a6d3d437373">WorldObject::WorldEventT</a>&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> &amp;&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classlogic_1_1GhostController_aeba3f9707ff49bd10c53c721c48b5002_cgraph.png" border="0" usemap="#aclasslogic_1_1GhostController_aeba3f9707ff49bd10c53c721c48b5002_cgraph" alt=""/></div>
+<map name="aclasslogic_1_1GhostController_aeba3f9707ff49bd10c53c721c48b5002_cgraph" id="aclasslogic_1_1GhostController_aeba3f9707ff49bd10c53c721c48b5002_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,150,46"/>
+<area shape="rect" href="classlogic_1_1GhostModel.html#a0be928fc21c21965bc82b17524edc716" title=" " alt="" coords="198,5,328,46"/>
+<area shape="poly" title=" " alt="" coords="150,23,182,23,182,28,150,28"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a8b06b2000603ac58aafbbbb3032dcb0a" name="a8b06b2000603ac58aafbbbb3032dcb0a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8b06b2000603ac58aafbbbb3032dcb0a">&#9670;&#160;</a></span>update()</h2>
 

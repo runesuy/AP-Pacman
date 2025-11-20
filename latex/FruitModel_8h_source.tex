@@ -1,0 +1,36 @@
+\doxysection{Fruit\+Model.\+h}
+\hypertarget{FruitModel_8h_source}{}\label{FruitModel_8h_source}\index{logic/include/game/entities/models/FruitModel.h@{logic/include/game/entities/models/FruitModel.h}}
+\mbox{\hyperlink{FruitModel_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ rune-\/suy\ on\ 11/9/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_FRUITMODEL\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_FRUITMODEL\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{EntityModel_8h}{core/entity/EntityModel.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{CollisionTypes_8h}{game/entities/models/CollisionTypes.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1FruitModel}{FruitModel}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1EntityModel}{EntityModel}}<FruitModel>,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1Observable}{Observable}}<FruitModel>\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacelogic_a3617a50a32f5e13787b434372fa21ac6}{CollisionType}}\ collisionType\ =\ \mbox{\hyperlink{namespacelogic_a3617a50a32f5e13787b434372fa21ac6ab3ce4e64f1233ea35c27784de4ad9703}{FRUIT}};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1FruitModel_a7256304e4c1e64e42c9a25f4b86746b4}{FruitModel}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1FruitModel_a1eb5f4e842c60d91c7a6e48c842952fa}{setSize}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Size}{Size}}\ \&size)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1FruitModel_a34c284647d1e4c396096b46258d73f2c}{setPosition}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ \&position)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1FruitModel_a0f9c763c3ae80ac0280fcea4de1e2796}{markForRemoval}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a059ee03db27e3962f0c11f71cf0e2bd0}{CollisionTypeT}}\ \mbox{\hyperlink{classlogic_1_1FruitModel_aa120c79b5db4179e6c99755f8c0665e4}{getCollisionType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00026\ \ \ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \}\ \textcolor{comment}{//\ logic}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_FRUITMODEL\_H}}
+
+\end{DoxyCode}

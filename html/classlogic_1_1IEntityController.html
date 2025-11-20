@@ -118,8 +118,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7488094fb1442b613f7a902db8fce073"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a070b8f37b4a331c949c19a1b676365" id="r_a6a070b8f37b4a331c949c19a1b676365"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IEntityController.html#a6a070b8f37b4a331c949c19a1b676365">processCommand</a> (<a class="el" href="namespacelogic.html#a8c969071a5f036b8ad64f854267522fb">EntityCommand</a> command, DerivedEntityModel &amp;entity)=0</td></tr>
 <tr class="separator:a6a070b8f37b4a331c949c19a1b676365"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecb8e1520605760c2e2f10e66e9eb5b2" id="r_aecb8e1520605760c2e2f10e66e9eb5b2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IEntityController.html#aecb8e1520605760c2e2f10e66e9eb5b2">onCollision</a> (DerivedEntityModel &amp;entity, const <a class="el" href="classlogic_1_1SizedWorldObject.html">SizedWorldObject</a> &amp;other)=0</td></tr>
-<tr class="separator:aecb8e1520605760c2e2f10e66e9eb5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b0e2339729244ae589ed4221c8c591" id="r_ae3b0e2339729244ae589ed4221c8c591"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IEntityController.html#ae3b0e2339729244ae589ed4221c8c591">onCollision</a> (DerivedEntityModel &amp;entity, const <a class="el" href="classlogic_1_1SizedWorldObject.html">SizedWorldObject</a> &amp;other, <a class="el" href="classlogic_1_1World.html">World</a> &amp;world)=0</td></tr>
+<tr class="separator:ae3b0e2339729244ae589ed4221c8c591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc00d163ce088cd89b18b282ddf7e3e0" id="r_afc00d163ce088cd89b18b282ddf7e3e0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IEntityController.html#afc00d163ce088cd89b18b282ddf7e3e0">handleWorldEvent</a> (<a class="el" href="classlogic_1_1WorldObject.html#a2c8c9cce37d13cbc0acf8a6d3d437373">WorldObject::WorldEventT</a> event, DerivedEntityModel &amp;entity)</td></tr>
+<tr class="separator:afc00d163ce088cd89b18b282ddf7e3e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename DerivedEntityModel&gt;<br />
@@ -130,8 +132,46 @@ class logic::IEntityController&lt; DerivedEntityModel &gt;</div><p>A controller 
   </dd>
 </dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aecb8e1520605760c2e2f10e66e9eb5b2" name="aecb8e1520605760c2e2f10e66e9eb5b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecb8e1520605760c2e2f10e66e9eb5b2">&#9670;&#160;</a></span>onCollision()</h2>
+<a id="afc00d163ce088cd89b18b282ddf7e3e0" name="afc00d163ce088cd89b18b282ddf7e3e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc00d163ce088cd89b18b282ddf7e3e0">&#9670;&#160;</a></span>handleWorldEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DerivedEntityModel &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classlogic_1_1IEntityController.html">logic::IEntityController</a>&lt; DerivedEntityModel &gt;::handleWorldEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classlogic_1_1WorldObject.html#a2c8c9cce37d13cbc0acf8a6d3d437373">WorldObject::WorldEventT</a>&#160;</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DerivedEntityModel &amp;&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3b0e2339729244ae589ed4221c8c591" name="ae3b0e2339729244ae589ed4221c8c591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3b0e2339729244ae589ed4221c8c591">&#9670;&#160;</a></span>onCollision()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -151,7 +191,13 @@ template&lt;typename DerivedEntityModel &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classlogic_1_1SizedWorldObject.html">SizedWorldObject</a> &amp;&#160;</td>
-          <td class="paramname"><em>other</em>&#160;</td>
+          <td class="paramname"><em>other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classlogic_1_1World.html">World</a> &amp;&#160;</td>
+          <td class="paramname"><em>world</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -173,7 +219,7 @@ template&lt;typename DerivedEntityModel &gt; </div>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classlogic_1_1CollectableController.html#a384062c1c0d681ecf33884e694ee551c">logic::CollectableController&lt; ModelType &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classlogic_1_1CollectableController.html#a5f2132ad0f8a084ff3d506d6fa7be5fa">logic::CollectableController&lt; ModelType &gt;</a>.</p>
 
 </div>
 </div>

@@ -9,17 +9,17 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_POWERUPCONTROLLER\_H}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_POWERUPCONTROLLER\_H}}
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{CollectableController_8h}{CollectableController.h}}"{}}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{PowerupModel_8h}{game/entities/models/PowerupModel.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{FruitModel_8h}{game/entities/models/FruitModel.h}}"{}}}
 \DoxyCodeLine{00009\ }
 \DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
 \DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1PowerupController}{PowerupController}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1CollectableController}{CollectableController}}<PowerupModel>\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1PowerupController}{PowerupController}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1CollectableController}{CollectableController}}<FruitModel>\ \{}
 \DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1PowerupController_a37d874cefc95df6b1cdec4527271c158}{update}}(\mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ \mbox{\hyperlink{classlogic_1_1PowerupModel}{PowerupModel}}\ \&entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1PowerupController_a25bd9c4e1c2a33258b4e7dde2cc77df0}{update}}(\mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ \mbox{\hyperlink{classlogic_1_1FruitModel}{FruitModel}}\ \&entity)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1PowerupController_a1e7a861be8e1b08e26a21a0c6988de7d}{processCommand}}(\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{EntityCommand}}\ command,\ \mbox{\hyperlink{classlogic_1_1PowerupModel}{PowerupModel}}\ \&entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1PowerupController_a2e03e07cfa6c453657db2c9bcafa36f3}{processCommand}}(\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{EntityCommand}}\ command,\ \mbox{\hyperlink{classlogic_1_1FruitModel}{FruitModel}}\ \&entity)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1PowerupController_ae19238b4b839827fba8b8d9081e332ce}{onCollision}}(\mbox{\hyperlink{classlogic_1_1PowerupModel}{PowerupModel}}\ \&entity,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{SizedWorldObject}}\ \&other)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1PowerupController_a439a1618f24006d8584aaae2ddf1be04}{onCollision}}(\mbox{\hyperlink{classlogic_1_1FruitModel}{FruitModel}}\ \&entity,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{SizedWorldObject}}\ \&other,\ \mbox{\hyperlink{classlogic_1_1World}{World}}\&\ world)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00019\ \ \ \ \ \};}
 \DoxyCodeLine{00020\ }
 \DoxyCodeLine{00021\ \}\ \textcolor{comment}{//\ logic}}

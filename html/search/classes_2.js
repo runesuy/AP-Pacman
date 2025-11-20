@@ -7,6 +7,6 @@ var searchData=
   ['coinview_4',['CoinView',['../classrenderer_1_1CoinView.html',1,'renderer']]],
   ['collectablecontroller_5',['CollectableController',['../classlogic_1_1CollectableController.html',1,'logic']]],
   ['collectablecontroller_3c_20coinmodel_20_3e_6',['CollectableController&lt; CoinModel &gt;',['../classlogic_1_1CollectableController.html',1,'logic']]],
-  ['collectablecontroller_3c_20powerupmodel_20_3e_7',['CollectableController&lt; PowerupModel &gt;',['../classlogic_1_1CollectableController.html',1,'logic']]],
+  ['collectablecontroller_3c_20fruitmodel_20_3e_7',['CollectableController&lt; FruitModel &gt;',['../classlogic_1_1CollectableController.html',1,'logic']]],
   ['collisionhandler_8',['CollisionHandler',['../classlogic_1_1CollisionHandler.html',1,'logic']]]
 ];

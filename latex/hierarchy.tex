@@ -62,7 +62,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \begin{DoxyCompactList}
 \item \contentsline{section}{logic\+::Coin\+Controller}{\pageref{classlogic_1_1CoinController}}{}
 \end{DoxyCompactList}
-\item \contentsline{section}{logic\+::Collectable\+Controller\texorpdfstring{$<$}{<} Powerup\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1CollectableController}}{}
+\item \contentsline{section}{logic\+::Collectable\+Controller\texorpdfstring{$<$}{<} Fruit\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1CollectableController}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{logic\+::Powerup\+Controller}{\pageref{classlogic_1_1PowerupController}}{}
 \end{DoxyCompactList}
@@ -85,13 +85,13 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \begin{DoxyCompactList}
 \item \contentsline{section}{logic\+::Moving\+Entity\+Controller\texorpdfstring{$<$}{<} Entity\+Model\+Type \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1MovingEntityController}}{}
 \end{DoxyCompactList}
+\item \contentsline{section}{logic\+::IEntity\+Controller\texorpdfstring{$<$}{<} Fruit\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1IEntityController}}{}
 \item \contentsline{section}{logic\+::IEntity\+Controller\texorpdfstring{$<$}{<} Ghost\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1IEntityController}}{}
 \item \contentsline{section}{logic\+::IEntity\+Controller\texorpdfstring{$<$}{<} Model\+Type \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1IEntityController}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{logic\+::Collectable\+Controller\texorpdfstring{$<$}{<} Model\+Type \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1CollectableController}}{}
 \end{DoxyCompactList}
 \item \contentsline{section}{logic\+::IEntity\+Controller\texorpdfstring{$<$}{<} Player\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1IEntityController}}{}
-\item \contentsline{section}{logic\+::IEntity\+Controller\texorpdfstring{$<$}{<} Powerup\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1IEntityController}}{}
 \item \contentsline{section}{logic\+::IEntity\+Factory}{\pageref{classlogic_1_1IEntityFactory}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{renderer\+::Default\+Entity\+Factory}{\pageref{classrenderer_1_1DefaultEntityFactory}}{}
@@ -124,6 +124,10 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \begin{DoxyCompactList}
 \item \contentsline{section}{renderer\+::Coin\+View}{\pageref{classrenderer_1_1CoinView}}{}
 \end{DoxyCompactList}
+\item \contentsline{section}{logic\+::IObserver\texorpdfstring{$<$}{<} logic\+::Fruit\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1IObserver}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{renderer\+::Powerup\+View}{\pageref{classrenderer_1_1PowerupView}}{}
+\end{DoxyCompactList}
 \item \contentsline{section}{logic\+::IObserver\texorpdfstring{$<$}{<} logic\+::Ghost\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1IObserver}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{renderer\+::Blue\+Ghost\+View}{\pageref{classrenderer_1_1BlueGhostView}}{}
@@ -134,10 +138,6 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \item \contentsline{section}{logic\+::IObserver\texorpdfstring{$<$}{<} logic\+::Player\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1IObserver}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{renderer\+::Player\+View}{\pageref{classrenderer_1_1PlayerView}}{}
-\end{DoxyCompactList}
-\item \contentsline{section}{logic\+::IObserver\texorpdfstring{$<$}{<} logic\+::Powerup\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1IObserver}}{}
-\begin{DoxyCompactList}
-\item \contentsline{section}{renderer\+::Powerup\+View}{\pageref{classrenderer_1_1PowerupView}}{}
 \end{DoxyCompactList}
 \item \contentsline{section}{logic\+::IObserver\texorpdfstring{$<$}{<} logic\+::Score \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1IObserver}}{}
 \begin{DoxyCompactList}
@@ -194,6 +194,10 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \begin{DoxyCompactList}
 \item \contentsline{section}{logic\+::Coin\+Model}{\pageref{classlogic_1_1CoinModel}}{}
 \end{DoxyCompactList}
+\item \contentsline{section}{logic\+::Observable\texorpdfstring{$<$}{<} Fruit\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1Observable}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{logic\+::Fruit\+Model}{\pageref{classlogic_1_1FruitModel}}{}
+\end{DoxyCompactList}
 \item \contentsline{section}{logic\+::Observable\texorpdfstring{$<$}{<} Ghost\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1Observable}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{logic\+::Ghost\+Model}{\pageref{classlogic_1_1GhostModel}}{}
@@ -205,10 +209,6 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \item \contentsline{section}{logic\+::Observable\texorpdfstring{$<$}{<} Player\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1Observable}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{logic\+::Player\+Model}{\pageref{classlogic_1_1PlayerModel}}{}
-\end{DoxyCompactList}
-\item \contentsline{section}{logic\+::Observable\texorpdfstring{$<$}{<} Powerup\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1Observable}}{}
-\begin{DoxyCompactList}
-\item \contentsline{section}{logic\+::Powerup\+Model}{\pageref{classlogic_1_1PowerupModel}}{}
 \end{DoxyCompactList}
 \item \contentsline{section}{logic\+::Observable\texorpdfstring{$<$}{<} Score \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1Observable}}{}
 \begin{DoxyCompactList}
@@ -238,16 +238,16 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \begin{DoxyCompactList}
 \item \contentsline{section}{logic\+::Coin\+Model}{\pageref{classlogic_1_1CoinModel}}{}
 \end{DoxyCompactList}
+\item \contentsline{section}{logic\+::Entity\+Model\texorpdfstring{$<$}{<} Fruit\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1EntityModel}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{logic\+::Fruit\+Model}{\pageref{classlogic_1_1FruitModel}}{}
+\end{DoxyCompactList}
 \item \contentsline{section}{logic\+::Entity\+Model\texorpdfstring{$<$}{<} Ghost\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1EntityModel}}{}
 \item \contentsline{section}{logic\+::Entity\+Model\texorpdfstring{$<$}{<} Entity\+Model\+Type \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1EntityModel}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{logic\+::Moving\+Entity\+Model\texorpdfstring{$<$}{<} Entity\+Model\+Type \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1MovingEntityModel}}{}
 \end{DoxyCompactList}
 \item \contentsline{section}{logic\+::Entity\+Model\texorpdfstring{$<$}{<} Player\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1EntityModel}}{}
-\item \contentsline{section}{logic\+::Entity\+Model\texorpdfstring{$<$}{<} Powerup\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1EntityModel}}{}
-\begin{DoxyCompactList}
-\item \contentsline{section}{logic\+::Powerup\+Model}{\pageref{classlogic_1_1PowerupModel}}{}
-\end{DoxyCompactList}
 \item \contentsline{section}{logic\+::Entity\+Model\texorpdfstring{$<$}{<} Wall\+Model \texorpdfstring{$>$}{>}}{\pageref{classlogic_1_1EntityModel}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{logic\+::Wall\+Model}{\pageref{classlogic_1_1WallModel}}{}

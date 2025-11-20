@@ -89,6 +89,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1EntityModel.html">EntityModel</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1FruitModel.html">FruitModel</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1GhostController.html">GhostController</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a></td></tr>
@@ -126,8 +128,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Position.html">Position</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1PowerupController.html">PowerupController</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1PowerupModel.html">PowerupModel</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Random.html">Random</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,6 +170,8 @@ Enumerations</h2></td></tr>
 <tr class="separator:a5ee5130fbbf0b7c9c16c7375e2510c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3617a50a32f5e13787b434372fa21ac6" id="r_a3617a50a32f5e13787b434372fa21ac6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelogic.html#a3617a50a32f5e13787b434372fa21ac6">CollisionType</a> { <a class="el" href="namespacelogic.html#a3617a50a32f5e13787b434372fa21ac6a6ab44a0dd51ce1bbf0e5d75e5cd34337">COIN</a>
 , <a class="el" href="namespacelogic.html#a3617a50a32f5e13787b434372fa21ac6a4222be6880172fadf298bafa79adb682">PLAYER</a>
+, <a class="el" href="namespacelogic.html#a3617a50a32f5e13787b434372fa21ac6ab3ce4e64f1233ea35c27784de4ad9703">FRUIT</a>
+, <a class="el" href="namespacelogic.html#a3617a50a32f5e13787b434372fa21ac6aa1fd58b65bdf575068f8eef4f7295634">GHOST</a>
  }</td></tr>
 <tr class="separator:a3617a50a32f5e13787b434372fa21ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36053e250f7e1339ba0a6cbecbdf1b4b" id="r_a36053e250f7e1339ba0a6cbecbdf1b4b"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelogic.html#a36053e250f7e1339ba0a6cbecbdf1b4b">GhostType</a> { <a class="el" href="namespacelogic.html#a36053e250f7e1339ba0a6cbecbdf1b4baa2d9547b5d3dd9f05984475f7c926da0">RED</a>
@@ -202,6 +204,8 @@ Functions</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3617a50a32f5e13787b434372fa21ac6a6ab44a0dd51ce1bbf0e5d75e5cd34337" name="a3617a50a32f5e13787b434372fa21ac6a6ab44a0dd51ce1bbf0e5d75e5cd34337"></a>COIN&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a3617a50a32f5e13787b434372fa21ac6a4222be6880172fadf298bafa79adb682" name="a3617a50a32f5e13787b434372fa21ac6a4222be6880172fadf298bafa79adb682"></a>PLAYER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3617a50a32f5e13787b434372fa21ac6ab3ce4e64f1233ea35c27784de4ad9703" name="a3617a50a32f5e13787b434372fa21ac6ab3ce4e64f1233ea35c27784de4ad9703"></a>FRUIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3617a50a32f5e13787b434372fa21ac6aa1fd58b65bdf575068f8eef4f7295634" name="a3617a50a32f5e13787b434372fa21ac6aa1fd58b65bdf575068f8eef4f7295634"></a>GHOST&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>

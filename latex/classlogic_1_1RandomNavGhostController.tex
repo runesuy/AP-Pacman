@@ -29,7 +29,7 @@ Collaboration diagram for logic\+::Random\+Nav\+Ghost\+Controller\+:
 \item 
 void \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a81f28729a077fa04040f443217df058f}{process\+Command}} (\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}} command, \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&entity) override
 \item 
-void \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a2f10d41e673e1f325d1b074ab3425355}{on\+Collision}} (\mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&entity, const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other) override
+void \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a7e3e9afc28bb56c3233f709ee1be72bf}{on\+Collision}} (\mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&entity, const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other, \mbox{\hyperlink{classlogic_1_1World}{World}} \&world) override
 \item 
 void \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a1710c2ac9420f3cf75941aefb0d9da0e}{update}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world, \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&entity) override
 \item 
@@ -39,6 +39,8 @@ void \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_af1b25d3570b8af506a
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classlogic_1_1GhostController_a8b06b2000603ac58aafbbbb3032dcb0a}{update}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world, \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&entity) override
+\item 
+void \mbox{\hyperlink{classlogic_1_1GhostController_aeba3f9707ff49bd10c53c721c48b5002}{handle\+World\+Event}} (\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{World\+Object\+::\+World\+EventT}} event, \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&entity) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1MovingEntityController}{logic\+::\+Moving\+Entity\+Controller$<$ Ghost\+Model $>$}}}
 \begin{DoxyCompactItemize}
@@ -52,7 +54,9 @@ virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_a7488094fb1442b613
 \item 
 virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_a6a070b8f37b4a331c949c19a1b676365}{process\+Command}} (\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}} command, Derived\+Entity\+Model \&entity)=0
 \item 
-virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_aecb8e1520605760c2e2f10e66e9eb5b2}{on\+Collision}} (Derived\+Entity\+Model \&entity, const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other)=0
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_ae3b0e2339729244ae589ed4221c8c591}{on\+Collision}} (Derived\+Entity\+Model \&entity, const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other, \mbox{\hyperlink{classlogic_1_1World}{World}} \&world)=0
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_afc00d163ce088cd89b18b282ddf7e3e0}{handle\+World\+Event}} (\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{World\+Object\+::\+World\+EventT}} event, Derived\+Entity\+Model \&entity)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -101,11 +105,11 @@ Here is the call graph for this function\+:
 \doxysubsubsection{\texorpdfstring{getViableDirections()}{getViableDirections()}}
 {\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{logic\+::\+Direction}} $>$ logic\+::\+Random\+Nav\+Ghost\+Controller\+::get\+Viable\+Directions (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{const \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-\Hypertarget{classlogic_1_1RandomNavGhostController_a2f10d41e673e1f325d1b074ab3425355}\label{classlogic_1_1RandomNavGhostController_a2f10d41e673e1f325d1b074ab3425355} 
+\Hypertarget{classlogic_1_1RandomNavGhostController_a7e3e9afc28bb56c3233f709ee1be72bf}\label{classlogic_1_1RandomNavGhostController_a7e3e9afc28bb56c3233f709ee1be72bf} 
 \index{logic::RandomNavGhostController@{logic::RandomNavGhostController}!onCollision@{onCollision}}
 \index{onCollision@{onCollision}!logic::RandomNavGhostController@{logic::RandomNavGhostController}}
 \doxysubsubsection{\texorpdfstring{onCollision()}{onCollision()}}
-{\footnotesize\ttfamily void logic\+::\+Random\+Nav\+Ghost\+Controller\+::on\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&}]{entity,  }\item[{const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+{\footnotesize\ttfamily void logic\+::\+Random\+Nav\+Ghost\+Controller\+::on\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&}]{entity,  }\item[{const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&}]{other,  }\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
 
 \Hypertarget{classlogic_1_1RandomNavGhostController_af1b25d3570b8af506ace0f0b024f300b}\label{classlogic_1_1RandomNavGhostController_af1b25d3570b8af506ace0f0b024f300b} 
 \index{logic::RandomNavGhostController@{logic::RandomNavGhostController}!onWallCollision@{onWallCollision}}
