@@ -19,6 +19,13 @@ namespace logic {
 
         void onWallCollision(logic::World &world, logic::GhostModel &entity) override;
 
+        /**
+         * Choose a direction to request based on the viable options.
+         * Entity has a 50% chance of changing directions, otherwise entity will continue on its current path.
+         * Entity will only turn 180 degrees in one time if this is the only option.
+         * @param world
+         * @param entity
+         */
         static void chooseDirection(logic::World &world, logic::GhostModel &entity);
 
         static std::vector<Direction> getViableDirections(const World &world, const GhostModel &entity);

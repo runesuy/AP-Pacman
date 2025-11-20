@@ -47,6 +47,11 @@ void logic::RandomNavGhostController::chooseDirection(logic::World &world, logic
     if (!change) return;
     std::vector<Direction> viableDirections = getViableDirections(world, entity);
     if (!viableDirections.empty()) {
+        // if more than one direction to choose from, remove opposite of currentDirection from viableDirections
+        if (viableDirections.size() > 1) {
+            erase(viableDirections, getOppositeDirection(entity.getDirection()));
+        }
+
         Direction randomDirection = viableDirections[Random::getInstance()->getIntInRange(0, static_cast<int>(viableDirections.size()) - 1)];
         entity.setRequestedDirection(randomDirection);
     }
