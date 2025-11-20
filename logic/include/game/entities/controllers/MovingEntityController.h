@@ -26,6 +26,8 @@ namespace logic {
          */
         static std::tuple<bool,Position> _isPastOrOnCenter(const logic::World &world, const EntityModelType &entity, Direction direction) ;
 
+        static std::tuple<bool,Position> _isPastCenter(const logic::World &world, const EntityModelType &entity, Direction direction) ;
+
         static TileMap::TileType getTileInDirection(const World& world, const EntityModelType& entity, Direction direction) ;
 
     public:
@@ -33,6 +35,16 @@ namespace logic {
 
         virtual void onWallCollision(logic::World &world, EntityModelType &entity) {};
         };
+
+    template<typename EntityModelType>
+    std::tuple<bool, Position>
+    MovingEntityController<EntityModelType>::_isPastOrOnCenter(const World &world, const EntityModelType &entity,
+                                                           Direction direction) {
+        const float epsilon = 0.0001f;
+        const auto [isPastCenter, tileCenter] = _isPastCenter(world, entity, direction);
+        bool isOnCenter = std::abs(tileCenter.getX()-entity.getPosition().getX()) < epsilon && std::abs(tileCenter.getY()-entity.getPosition().getY()) < epsilon;
+        return {isPastCenter || isOnCenter, tileCenter};
+    }
 
     template<typename EntityModelType>
     void MovingEntityController<EntityModelType>::update(World &world, EntityModelType &entity) {
@@ -98,14 +110,10 @@ namespace logic {
 
     template<typename EntityModelType>
     std::tuple<bool, Position>
-    MovingEntityController<EntityModelType>::_isPastOrOnCenter(const World &world, const EntityModelType &entity,
+    MovingEntityController<EntityModelType>::_isPastCenter(const World &world, const EntityModelType &entity,
                                                                Direction direction) {
         auto [row, col] = world.getConfig().getTileMap().getGridPosition(entity.getPosition());
         Position tileCenter = world.getConfig().getTileMap().getTileCenterPosition(row, col);
-        const float epsilon = 0.0001f;
-        if (std::abs(tileCenter.getX()-entity.getPosition().getX()) < epsilon && std::abs(tileCenter.getY()-entity.getPosition().getY()) < epsilon) {
-            return {true, tileCenter};
-        }
         switch (direction) {
             case Direction::LEFT:
                 return {entity.getPosition().getX() < tileCenter.getX(), tileCenter};
@@ -115,7 +123,7 @@ namespace logic {
                 return {entity.getPosition().getY() > tileCenter.getY(), tileCenter};
             case Direction::DOWN:
                 return {entity.getPosition().getY() < tileCenter.getY(), tileCenter};
-            default:return {false, Position(0,0)};
+            default:return {false, tileCenter};
         }
     }
 };

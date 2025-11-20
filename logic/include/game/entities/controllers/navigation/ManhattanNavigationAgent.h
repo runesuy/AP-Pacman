@@ -9,12 +9,12 @@
 namespace logic {
 
     class ManhattanNavigationAgent : public INavigationAgent{
-        double _calculateManhattanDistance(const Position &current, const Position &target) const;
-        double
+        [[nodiscard]] double _calculateManhattanDistance(const Position &current, const Position &target) const;
+        [[nodiscard]] double
         _calculateManhattanDistance(Position::CoordinateType row, Position::CoordinateType col, const World &world,
                                     const Position &target) const;
     public:
-        Direction
+        [[nodiscard]] Direction
         getNavigationDirection(const Position &current, const Position &target, const World &world) const override;
     };
 
