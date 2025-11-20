@@ -69,6 +69,10 @@ const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \& \mbox{\hyperlink{cl
 void \mbox{\hyperlink{classlogic_1_1GhostModel_a865048e98dc3cab20192c39e67ae3db2}{set\+Return\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&return\+Position)
 \item 
 void \mbox{\hyperlink{classlogic_1_1GhostModel_a0be928fc21c21965bc82b17524edc716}{set\+Mode}} (\mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{Mode}} mode)
+\item 
+float \mbox{\hyperlink{classlogic_1_1GhostModel_add46b750cd95aac3868ea8553acca093}{get\+Start\+Delay}} () const
+\item 
+void \mbox{\hyperlink{classlogic_1_1GhostModel_a432fa53a7aa293542b923ac4291bb3a0}{set\+Start\+Delay}} (float start\+Delay)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1MovingEntityModel}{logic\+::\+Moving\+Entity\+Model$<$ Ghost\+Model $>$}}}
 \begin{DoxyCompactItemize}
@@ -118,11 +122,6 @@ void \mbox{\hyperlink{classlogic_1_1Observable_afb2547e65fdf6b4c090f5170df4bf66d
 bool \mbox{\hyperlink{classlogic_1_1Observable_ad7cb2d9214c5dd7f5aa8a36ef7ce43b9}{has\+Observers}} () const
 \item 
 bool \mbox{\hyperlink{classlogic_1_1Observable_a54bfc543d21f11be7137efce418394c2}{has\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} $>$ $>$ \&observer) const
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Static Public Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-static float \mbox{\hyperlink{classlogic_1_1GhostModel_a53ae80c730c31a5732cea30f3122cc6a}{get\+Start\+Delay}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classlogic_1_1EntityModel}{logic\+::\+Entity\+Model$<$ Derived $>$}}}
@@ -194,11 +193,11 @@ A constant or variable speed of the moving entity.
 
 Implements \mbox{\hyperlink{classlogic_1_1MovingEntityModel_aa6fca2f79efe199960c3e9e295a11936}{logic\+::\+Moving\+Entity\+Model$<$ Ghost\+Model $>$}}.
 
-\Hypertarget{classlogic_1_1GhostModel_a53ae80c730c31a5732cea30f3122cc6a}\label{classlogic_1_1GhostModel_a53ae80c730c31a5732cea30f3122cc6a} 
+\Hypertarget{classlogic_1_1GhostModel_add46b750cd95aac3868ea8553acca093}\label{classlogic_1_1GhostModel_add46b750cd95aac3868ea8553acca093} 
 \index{logic::GhostModel@{logic::GhostModel}!getStartDelay@{getStartDelay}}
 \index{getStartDelay@{getStartDelay}!logic::GhostModel@{logic::GhostModel}}
 \doxysubsubsection{\texorpdfstring{getStartDelay()}{getStartDelay()}}
-{\footnotesize\ttfamily float logic\+::\+Ghost\+Model\+::get\+Start\+Delay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily float logic\+::\+Ghost\+Model\+::get\+Start\+Delay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 \Hypertarget{classlogic_1_1GhostModel_add1e77e061893880c511f64a2aa1cb12}\label{classlogic_1_1GhostModel_add1e77e061893880c511f64a2aa1cb12} 
 \index{logic::GhostModel@{logic::GhostModel}!getStartTimer@{getStartTimer}}
@@ -305,6 +304,12 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{classlogic_1_1GhostModel_afac1e9b8ff51aa840c87fe7936d7a477_cgraph}
 \end{center}
 \end{figure}
+\Hypertarget{classlogic_1_1GhostModel_a432fa53a7aa293542b923ac4291bb3a0}\label{classlogic_1_1GhostModel_a432fa53a7aa293542b923ac4291bb3a0} 
+\index{logic::GhostModel@{logic::GhostModel}!setStartDelay@{setStartDelay}}
+\index{setStartDelay@{setStartDelay}!logic::GhostModel@{logic::GhostModel}}
+\doxysubsubsection{\texorpdfstring{setStartDelay()}{setStartDelay()}}
+{\footnotesize\ttfamily void logic\+::\+Ghost\+Model\+::set\+Start\+Delay (\begin{DoxyParamCaption}\item[{float}]{start\+Delay }\end{DoxyParamCaption})}
+
 \Hypertarget{classlogic_1_1GhostModel_ac455ae19d66e47094f399e08ae17f43f}\label{classlogic_1_1GhostModel_ac455ae19d66e47094f399e08ae17f43f} 
 \index{logic::GhostModel@{logic::GhostModel}!setStartTimer@{setStartTimer}}
 \index{setStartTimer@{setStartTimer}!logic::GhostModel@{logic::GhostModel}}
