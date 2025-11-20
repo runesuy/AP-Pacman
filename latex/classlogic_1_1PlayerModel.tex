@@ -36,6 +36,8 @@ void \mbox{\hyperlink{classlogic_1_1PlayerModel_a7f0a16442d85d987d4a2472737d674d
 float \mbox{\hyperlink{classlogic_1_1PlayerModel_a715b6f22aa65e8bf3a48363ab8dbbe03}{get\+Speed}} () override
 \item 
 void \mbox{\hyperlink{classlogic_1_1PlayerModel_a922483df1be2c9d583712a7fac95fc76}{set\+Direction}} (\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} direction) override
+\item 
+\mbox{\hyperlink{classlogic_1_1SizedWorldObject_a059ee03db27e3962f0c11f71cf0e2bd0}{Collision\+TypeT}} \mbox{\hyperlink{classlogic_1_1PlayerModel_a1ac95ef635939a02bd2c2196089b653e}{get\+Collision\+Type}} () const override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1MovingEntityModel}{logic\+::\+Moving\+Entity\+Model$<$ Player\+Model $>$}}}
 \begin{DoxyCompactItemize}
@@ -61,8 +63,6 @@ void \mbox{\hyperlink{classlogic_1_1EntityModel_a804ac2ca9115200dd15d1d207ea9de6
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classlogic_1_1Size}{Size}} \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a35d3332f6e228334cd195bb9af478cbd}{get\+Size}} () const
-\item 
-virtual \mbox{\hyperlink{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2}{Collision\+Type}} \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a2aa2949b03b2ec7087cfdf942d2ad1b4}{get\+Collision\+Type}} () const
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1WorldObject}{logic\+::\+World\+Object}}}
 \begin{DoxyCompactItemize}
@@ -94,7 +94,7 @@ bool \mbox{\hyperlink{classlogic_1_1Observable_a54bfc543d21f11be7137efce418394c2
 \doxysubsection*{Public Types inherited from \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{logic\+::\+Sized\+World\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
-using \mbox{\hyperlink{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2}{Collision\+Type}} = int
+using \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a059ee03db27e3962f0c11f71cf0e2bd0}{Collision\+TypeT}} = int
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Types inherited from \mbox{\hyperlink{classlogic_1_1WorldObject}{logic\+::\+World\+Object}}}
 \begin{DoxyCompactItemize}
@@ -131,6 +131,19 @@ Here is the call graph for this function\+:
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1PlayerModel_a1ac95ef635939a02bd2c2196089b653e}\label{classlogic_1_1PlayerModel_a1ac95ef635939a02bd2c2196089b653e} 
+\index{logic::PlayerModel@{logic::PlayerModel}!getCollisionType@{getCollisionType}}
+\index{getCollisionType@{getCollisionType}!logic::PlayerModel@{logic::PlayerModel}}
+\doxysubsubsection{\texorpdfstring{getCollisionType()}{getCollisionType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a059ee03db27e3962f0c11f71cf0e2bd0}{Sized\+World\+Object\+::\+Collision\+TypeT}} logic\+::\+Player\+Model\+::get\+Collision\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Return the ID type for collisions. Can be used to identify the other colliding object. \begin{DoxyReturn}{Returns}
+-\/1 by default. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a2a81e70fcac5476dc056ea22d78095c3}{logic\+::\+Sized\+World\+Object}}.
+
 \Hypertarget{classlogic_1_1PlayerModel_a715b6f22aa65e8bf3a48363ab8dbbe03}\label{classlogic_1_1PlayerModel_a715b6f22aa65e8bf3a48363ab8dbbe03} 
 \index{logic::PlayerModel@{logic::PlayerModel}!getSpeed@{getSpeed}}
 \index{getSpeed@{getSpeed}!logic::PlayerModel@{logic::PlayerModel}}

@@ -27,7 +27,7 @@ Collaboration diagram for logic\+::Sized\+World\+Object\+:
 \doxysubsubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-using \mbox{\hyperlink{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2}{Collision\+Type}} = int
+using \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a059ee03db27e3962f0c11f71cf0e2bd0}{Collision\+TypeT}} = int
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Types inherited from \mbox{\hyperlink{classlogic_1_1WorldObject}{logic\+::\+World\+Object}}}
 \begin{DoxyCompactItemize}
@@ -43,7 +43,7 @@ virtual void \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a779988657f15c88c04
 \item 
 virtual void \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a32b7587ef4e60c33ff9899257c19c4d3}{on\+Collision}} (const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other, \mbox{\hyperlink{classlogic_1_1World}{World}} \&world)
 \item 
-virtual \mbox{\hyperlink{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2}{Collision\+Type}} \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a2aa2949b03b2ec7087cfdf942d2ad1b4}{get\+Collision\+Type}} () const
+virtual \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a059ee03db27e3962f0c11f71cf0e2bd0}{Collision\+TypeT}} \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a2a81e70fcac5476dc056ea22d78095c3}{get\+Collision\+Type}} () const
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1WorldObject}{logic\+::\+World\+Object}}}
 \begin{DoxyCompactItemize}
@@ -66,24 +66,28 @@ bool \mbox{\hyperlink{classlogic_1_1WorldObject_adae3a3c45f13113f3ebcbdaed719077
 A world object containing a size and able to handle collisions. 
 
 \doxysubsection{Member Typedef Documentation}
-\Hypertarget{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2}\label{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2} 
-\index{logic::SizedWorldObject@{logic::SizedWorldObject}!CollisionType@{CollisionType}}
-\index{CollisionType@{CollisionType}!logic::SizedWorldObject@{logic::SizedWorldObject}}
-\doxysubsubsection{\texorpdfstring{CollisionType}{CollisionType}}
-{\footnotesize\ttfamily using \mbox{\hyperlink{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2}{logic\+::\+Sized\+World\+Object\+::\+Collision\+Type}} =  int}
+\Hypertarget{classlogic_1_1SizedWorldObject_a059ee03db27e3962f0c11f71cf0e2bd0}\label{classlogic_1_1SizedWorldObject_a059ee03db27e3962f0c11f71cf0e2bd0} 
+\index{logic::SizedWorldObject@{logic::SizedWorldObject}!CollisionTypeT@{CollisionTypeT}}
+\index{CollisionTypeT@{CollisionTypeT}!logic::SizedWorldObject@{logic::SizedWorldObject}}
+\doxysubsubsection{\texorpdfstring{CollisionTypeT}{CollisionTypeT}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a059ee03db27e3962f0c11f71cf0e2bd0}{logic\+::\+Sized\+World\+Object\+::\+Collision\+TypeT}} =  int}
 
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classlogic_1_1SizedWorldObject_a2aa2949b03b2ec7087cfdf942d2ad1b4}\label{classlogic_1_1SizedWorldObject_a2aa2949b03b2ec7087cfdf942d2ad1b4} 
+\Hypertarget{classlogic_1_1SizedWorldObject_a2a81e70fcac5476dc056ea22d78095c3}\label{classlogic_1_1SizedWorldObject_a2a81e70fcac5476dc056ea22d78095c3} 
 \index{logic::SizedWorldObject@{logic::SizedWorldObject}!getCollisionType@{getCollisionType}}
 \index{getCollisionType@{getCollisionType}!logic::SizedWorldObject@{logic::SizedWorldObject}}
 \doxysubsubsection{\texorpdfstring{getCollisionType()}{getCollisionType()}}
-{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlogic_1_1SizedWorldObject_ab48c8a4be8cf40566e48fa99f90225e2}{Collision\+Type}} logic\+::\+Sized\+World\+Object\+::get\+Collision\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a059ee03db27e3962f0c11f71cf0e2bd0}{Collision\+TypeT}} logic\+::\+Sized\+World\+Object\+::get\+Collision\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 Return the ID type for collisions. Can be used to identify the other colliding object. \begin{DoxyReturn}{Returns}
 -\/1 by default. 
 \end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classlogic_1_1CoinModel_a2492ed57891abec17988d21de99404f5}{logic\+::\+Coin\+Model}}, and \mbox{\hyperlink{classlogic_1_1PlayerModel_a1ac95ef635939a02bd2c2196089b653e}{logic\+::\+Player\+Model}}.
+
 \Hypertarget{classlogic_1_1SizedWorldObject_a35d3332f6e228334cd195bb9af478cbd}\label{classlogic_1_1SizedWorldObject_a35d3332f6e228334cd195bb9af478cbd} 
 \index{logic::SizedWorldObject@{logic::SizedWorldObject}!getSize@{getSize}}
 \index{getSize@{getSize}!logic::SizedWorldObject@{logic::SizedWorldObject}}

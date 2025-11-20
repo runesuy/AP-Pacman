@@ -89,28 +89,34 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define AP_PACMAN_COINMODEL_H</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="EntityModel_8h.html">core/entity/EntityModel.h</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelogic.html">logic</a> {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classlogic_1_1CoinModel.html">   12</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classlogic_1_1CoinModel.html">CoinModel</a> : <span class="keyword">public</span> <a class="code hl_class" href="classlogic_1_1EntityModel.html">EntityModel</a>&lt;CoinModel&gt;, <span class="keyword">public</span> <a class="code hl_class" href="classlogic_1_1Observable.html">Observable</a>&lt;CoinModel&gt; {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_function" href="classlogic_1_1CoinModel.html#a1660f533129810829fc9daa8b48b3cc2">CoinModel</a>();</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classlogic_1_1CoinModel.html#accad02ca7c67b16d3d24b53aeb2bfd17">setSize</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlogic_1_1Size.html">Size</a> &amp;size) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="CollisionTypes_8h.html">CollisionTypes.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelogic.html">logic</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classlogic_1_1CoinModel.html">   13</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classlogic_1_1CoinModel.html">CoinModel</a> : <span class="keyword">public</span> <a class="code hl_class" href="classlogic_1_1EntityModel.html">EntityModel</a>&lt;CoinModel&gt;, <span class="keyword">public</span> <a class="code hl_class" href="classlogic_1_1Observable.html">Observable</a>&lt;CoinModel&gt; {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_enumeration" href="namespacelogic.html#a3617a50a32f5e13787b434372fa21ac6">CollisionType</a> collisionType = <a class="code hl_enumvalue" href="namespacelogic.html#a3617a50a32f5e13787b434372fa21ac6a6ab44a0dd51ce1bbf0e5d75e5cd34337">COIN</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <a class="code hl_function" href="classlogic_1_1CoinModel.html#a1660f533129810829fc9daa8b48b3cc2">CoinModel</a>();</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classlogic_1_1CoinModel.html#a4632ebe719e2421116e4915794ce7b5e">setPosition</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlogic_1_1Position.html">Position</a> &amp;position) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classlogic_1_1CoinModel.html#accad02ca7c67b16d3d24b53aeb2bfd17">setSize</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlogic_1_1Size.html">Size</a> &amp;size) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classlogic_1_1CoinModel.html#a2dcfc1318f085ceeef06c5d5b9e587df">markForRemoval</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    };</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classlogic_1_1CoinModel.html#a4632ebe719e2421116e4915794ce7b5e">setPosition</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlogic_1_1Position.html">Position</a> &amp;position) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classlogic_1_1CoinModel.html#a2dcfc1318f085ceeef06c5d5b9e587df">markForRemoval</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_typedef" href="classlogic_1_1SizedWorldObject.html#a059ee03db27e3962f0c11f71cf0e2bd0">CollisionTypeT</a> <a class="code hl_function" href="classlogic_1_1CoinModel.html#a2492ed57891abec17988d21de99404f5">getCollisionType</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    };</div>
 </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>} <span class="comment">// logic</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_COINMODEL_H</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>} <span class="comment">// logic</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_COINMODEL_H</span></div>
+<div class="ttc" id="aCollisionTypes_8h_html"><div class="ttname"><a href="CollisionTypes_8h.html">CollisionTypes.h</a></div></div>
 <div class="ttc" id="aEntityModel_8h_html"><div class="ttname"><a href="EntityModel_8h.html">EntityModel.h</a></div></div>
-<div class="ttc" id="aclasslogic_1_1CoinModel_html"><div class="ttname"><a href="classlogic_1_1CoinModel.html">logic::CoinModel</a></div><div class="ttdef"><b>Definition</b> CoinModel.h:12</div></div>
+<div class="ttc" id="aclasslogic_1_1CoinModel_html"><div class="ttname"><a href="classlogic_1_1CoinModel.html">logic::CoinModel</a></div><div class="ttdef"><b>Definition</b> CoinModel.h:13</div></div>
 <div class="ttc" id="aclasslogic_1_1CoinModel_html_a1660f533129810829fc9daa8b48b3cc2"><div class="ttname"><a href="classlogic_1_1CoinModel.html#a1660f533129810829fc9daa8b48b3cc2">logic::CoinModel::CoinModel</a></div><div class="ttdeci">CoinModel()</div><div class="ttdef"><b>Definition</b> CoinModel.cpp:25</div></div>
+<div class="ttc" id="aclasslogic_1_1CoinModel_html_a2492ed57891abec17988d21de99404f5"><div class="ttname"><a href="classlogic_1_1CoinModel.html#a2492ed57891abec17988d21de99404f5">logic::CoinModel::getCollisionType</a></div><div class="ttdeci">CollisionTypeT getCollisionType() const override</div><div class="ttdef"><b>Definition</b> CoinModel.cpp:29</div></div>
 <div class="ttc" id="aclasslogic_1_1CoinModel_html_a2dcfc1318f085ceeef06c5d5b9e587df"><div class="ttname"><a href="classlogic_1_1CoinModel.html#a2dcfc1318f085ceeef06c5d5b9e587df">logic::CoinModel::markForRemoval</a></div><div class="ttdeci">void markForRemoval() override</div><div class="ttdef"><b>Definition</b> CoinModel.cpp:20</div></div>
 <div class="ttc" id="aclasslogic_1_1CoinModel_html_a4632ebe719e2421116e4915794ce7b5e"><div class="ttname"><a href="classlogic_1_1CoinModel.html#a4632ebe719e2421116e4915794ce7b5e">logic::CoinModel::setPosition</a></div><div class="ttdeci">void setPosition(const Position &amp;position) override</div><div class="ttdef"><b>Definition</b> CoinModel.cpp:15</div></div>
 <div class="ttc" id="aclasslogic_1_1CoinModel_html_accad02ca7c67b16d3d24b53aeb2bfd17"><div class="ttname"><a href="classlogic_1_1CoinModel.html#accad02ca7c67b16d3d24b53aeb2bfd17">logic::CoinModel::setSize</a></div><div class="ttdeci">void setSize(const Size &amp;size) override</div><div class="ttdef"><b>Definition</b> CoinModel.cpp:10</div></div>
@@ -118,7 +124,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclasslogic_1_1Observable_html"><div class="ttname"><a href="classlogic_1_1Observable.html">logic::Observable</a></div><div class="ttdef"><b>Definition</b> Observable.h:19</div></div>
 <div class="ttc" id="aclasslogic_1_1Position_html"><div class="ttname"><a href="classlogic_1_1Position.html">logic::Position</a></div><div class="ttdef"><b>Definition</b> Position.h:16</div></div>
 <div class="ttc" id="aclasslogic_1_1Size_html"><div class="ttname"><a href="classlogic_1_1Size.html">logic::Size</a></div><div class="ttdef"><b>Definition</b> Size.h:16</div></div>
+<div class="ttc" id="aclasslogic_1_1SizedWorldObject_html_a059ee03db27e3962f0c11f71cf0e2bd0"><div class="ttname"><a href="classlogic_1_1SizedWorldObject.html#a059ee03db27e3962f0c11f71cf0e2bd0">logic::SizedWorldObject::CollisionTypeT</a></div><div class="ttdeci">int CollisionTypeT</div><div class="ttdef"><b>Definition</b> SizedWorldObject.h:40</div></div>
 <div class="ttc" id="anamespacelogic_html"><div class="ttname"><a href="namespacelogic.html">logic</a></div><div class="ttdef"><b>Definition</b> IConfig.h:11</div></div>
+<div class="ttc" id="anamespacelogic_html_a3617a50a32f5e13787b434372fa21ac6"><div class="ttname"><a href="namespacelogic.html#a3617a50a32f5e13787b434372fa21ac6">logic::CollisionType</a></div><div class="ttdeci">CollisionType</div><div class="ttdef"><b>Definition</b> CollisionTypes.h:10</div></div>
+<div class="ttc" id="anamespacelogic_html_a3617a50a32f5e13787b434372fa21ac6a6ab44a0dd51ce1bbf0e5d75e5cd34337"><div class="ttname"><a href="namespacelogic.html#a3617a50a32f5e13787b434372fa21ac6a6ab44a0dd51ce1bbf0e5d75e5cd34337">logic::COIN</a></div><div class="ttdeci">@ COIN</div><div class="ttdef"><b>Definition</b> CollisionTypes.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
