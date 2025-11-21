@@ -23,6 +23,6 @@ namespace logic {
     }
 
     void ManhattanFollowGhostController::onCollision(GhostModel &entity, const SizedWorldObject &other, World& world) {
-
+        GhostController::onCollision(entity, other, world);
     }
 } // logic

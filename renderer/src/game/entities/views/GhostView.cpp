@@ -16,6 +16,7 @@ namespace renderer {
                 getModule<AnimatedSpriteModule>()->setFrameDuration(FRAME_DURATION*2);
             }
         }
+        if (ghostMode == logic::GhostModel::RETURNING_HOME) animExt = "-returning";
 
         switch (direction) {
             case logic::Direction::RIGHT :{

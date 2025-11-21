@@ -18,6 +18,8 @@ namespace logic {
         void update(World &world, GhostModel &entity) override;
 
         void handleWorldEvent(WorldObject::WorldEventT event, GhostModel& entity) override;
+
+        void onCollision(GhostModel &entity, const SizedWorldObject &other, World &world) override;
     };
 
 } // logic

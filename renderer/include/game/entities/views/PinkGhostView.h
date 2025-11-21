@@ -48,7 +48,19 @@ namespace renderer {
                 },
                 {"move-down-frightened-end",
                         {"ghost-frightened-down_0",  "ghost-frightened-down_0_end",  "ghost-frightened-down_1",  "ghost-frightened-down_1_end"}
-                }
+                },
+                {"move-right-returning",
+                        {"ghost-returning-right"}
+                },
+                {"move-left-returning",
+                        {"ghost-returning-left"}
+                },
+                {"move-up-returning",
+                        {"ghost-returning-up"}
+                },
+                {"move-down-returning",
+                        {"ghost-returning-down"}
+                },
         };
 
     public:

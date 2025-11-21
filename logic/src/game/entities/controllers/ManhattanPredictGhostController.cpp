@@ -24,7 +24,7 @@ namespace logic {
     }
 
     void ManhattanPredictGhostController::onCollision(GhostModel &entity, const SizedWorldObject &other, World& world) {
-
+        GhostController::onCollision(entity, other, world);
     }
 
 } // logic

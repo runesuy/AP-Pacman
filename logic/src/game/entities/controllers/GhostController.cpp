@@ -62,4 +62,11 @@ namespace logic {
             }
         }
     }
+
+    void GhostController::onCollision(GhostModel &entity, const SizedWorldObject &other, World &world) {
+        if (other.getCollisionType() == PLAYER && entity.getMode() == GhostModel::FRIGHTENED) {
+            entity.setMode(GhostModel::RETURNING_HOME);
+        }
+    }
+
 } // logic

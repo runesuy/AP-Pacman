@@ -10,7 +10,7 @@ void logic::RandomNavGhostController::processCommand(logic::EntityCommand comman
 }
 
 void logic::RandomNavGhostController::onCollision(GhostModel &entity, const SizedWorldObject &other, World& world) {
-
+    GhostController::onCollision(entity, other, world);
 }
 
 void logic::RandomNavGhostController::update(logic::World &world, logic::GhostModel &entity) {
