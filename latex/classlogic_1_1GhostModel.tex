@@ -84,6 +84,8 @@ float \mbox{\hyperlink{classlogic_1_1GhostModel_ab075cfb8e3196d827b0aeae336a54f9
 void \mbox{\hyperlink{classlogic_1_1GhostModel_a164cda08501efb98f3db42d5cdaf3989}{set\+Frightened\+Timer}} (float frightened\+Timer)
 \item 
 float \mbox{\hyperlink{classlogic_1_1GhostModel_aa35123cb0da4657c142423dab37e050a}{get\+Frightened\+Duration}} () const
+\item 
+\mbox{\hyperlink{classlogic_1_1SizedWorldObject_a059ee03db27e3962f0c11f71cf0e2bd0}{Collision\+TypeT}} \mbox{\hyperlink{classlogic_1_1GhostModel_ac2358a754ee501655aaaac5f4fe82a9a}{get\+Collision\+Type}} () const override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1MovingEntityModel}{logic\+::\+Moving\+Entity\+Model$<$ Ghost\+Model $>$}}}
 \begin{DoxyCompactItemize}
@@ -113,8 +115,6 @@ const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \& \mbox{\hyperlink{cl
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classlogic_1_1Size}{Size}} \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a35d3332f6e228334cd195bb9af478cbd}{get\+Size}} () const
-\item 
-virtual \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a059ee03db27e3962f0c11f71cf0e2bd0}{Collision\+TypeT}} \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a2a81e70fcac5476dc056ea22d78095c3}{get\+Collision\+Type}} () const
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1WorldObject}{logic\+::\+World\+Object}}}
 \begin{DoxyCompactItemize}
@@ -187,6 +187,19 @@ WAITING&\\
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1GhostModel_ac2358a754ee501655aaaac5f4fe82a9a}\label{classlogic_1_1GhostModel_ac2358a754ee501655aaaac5f4fe82a9a} 
+\index{logic::GhostModel@{logic::GhostModel}!getCollisionType@{getCollisionType}}
+\index{getCollisionType@{getCollisionType}!logic::GhostModel@{logic::GhostModel}}
+\doxysubsubsection{\texorpdfstring{getCollisionType()}{getCollisionType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a059ee03db27e3962f0c11f71cf0e2bd0}{Sized\+World\+Object\+::\+Collision\+TypeT}} logic\+::\+Ghost\+Model\+::get\+Collision\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Return the ID type for collisions. Can be used to identify the other colliding object. \begin{DoxyReturn}{Returns}
+-\/1 by default. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a2a81e70fcac5476dc056ea22d78095c3}{logic\+::\+Sized\+World\+Object}}.
+
 \Hypertarget{classlogic_1_1GhostModel_aa35123cb0da4657c142423dab37e050a}\label{classlogic_1_1GhostModel_aa35123cb0da4657c142423dab37e050a} 
 \index{logic::GhostModel@{logic::GhostModel}!getFrightenedDuration@{getFrightenedDuration}}
 \index{getFrightenedDuration@{getFrightenedDuration}!logic::GhostModel@{logic::GhostModel}}
