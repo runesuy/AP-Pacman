@@ -12,7 +12,7 @@ void logic::Score::update(logic::PlayerModel &subject) {
 
 void logic::Score::update(PlayerModel &subject, Observable::EventType event) {
     if (event == ObserverEvent::PLAYER_COIN_COLLECTED) {
-        score += static_cast<int>(10*(1/(timeSinceLastCoin==0 ? 1 : 1+timeSinceLastCoin*10))); // Example: increase score by 10 for each point collected
+        score += static_cast<int>(COIN_COLLECT_REWARD*(1/(timeSinceLastCoin==0 ? 1 : 1+timeSinceLastCoin*COIN_COLLECT_REWARD))); // Example: increase score by 10 for each point collected
         timeSinceLastCoin = 0;
     }
     if (event == ObserverEvent::PLAYER_GHOST_KILLED) {

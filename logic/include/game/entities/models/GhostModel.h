@@ -6,6 +6,7 @@
 #define AP_PACMAN_GHOSTMODEL_H
 
 #include "MovingEntityModel.h"
+#include "CollisionTypes.h"
 
 namespace logic {
 
@@ -29,6 +30,8 @@ namespace logic {
 
         float frightenedTimer = 0.0f;
         const float FRIGHTENED_DURATION = 10;
+
+        const CollisionType collisionType = GHOST;
     public:
         explicit GhostModel();
 
@@ -63,6 +66,8 @@ namespace logic {
         void setFrightenedTimer(float frightenedTimer);
 
         [[nodiscard]] float getFrightenedDuration() const;
+
+        [[nodiscard]] CollisionTypeT getCollisionType() const override;
     };
 
 } // logic

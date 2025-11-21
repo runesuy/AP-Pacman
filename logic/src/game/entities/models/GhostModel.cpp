@@ -84,4 +84,8 @@ namespace logic {
     float GhostModel::getFrightenedDuration() const {
         return FRIGHTENED_DURATION;
     }
+
+    SizedWorldObject::CollisionTypeT GhostModel::getCollisionType() const {
+        return collisionType;
+    }
 } // logic
