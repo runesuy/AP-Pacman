@@ -78,9 +78,10 @@ namespace logic {
 
     void GhostModel::setFrightenedTimer(float frightenedTimer) {
         GhostModel::frightenedTimer = frightenedTimer;
+        updateObservers();
     }
 
-    const float GhostModel::getFrightenedDuration() const {
+    float GhostModel::getFrightenedDuration() const {
         return FRIGHTENED_DURATION;
     }
 } // logic

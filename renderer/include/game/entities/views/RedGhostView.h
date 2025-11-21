@@ -36,6 +36,18 @@ namespace renderer {
                 },
                 {"move-down-frightened",
                         {"ghost-frightened-down_0",  "ghost-frightened-down_1"}
+                },
+                {"move-right-frightened-end",
+                        {"ghost-frightened-right_0", "ghost-frightened-right_0_end", "ghost-frightened-right_1", "ghost-frightened-right_1_end"},
+                },
+                {"move-left-frightened-end",
+                        {"ghost-frightened-left_0",  "ghost-frightened-left_0_end",  "ghost-frightened-left_1",  "ghost-frightened-left_1_end"}
+                },
+                {"move-up-frightened-end",
+                        {"ghost-frightened-up_0",    "ghost-frightened-up_0_end",    "ghost-frightened-up_1",    "ghost-frightened-up_1_end"}
+                },
+                {"move-down-frightened-end",
+                        {"ghost-frightened-down_0",  "ghost-frightened-down_0_end",  "ghost-frightened-down_1",  "ghost-frightened-down_1_end"}
                 }
         };
 

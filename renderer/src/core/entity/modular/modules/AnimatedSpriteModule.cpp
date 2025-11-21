@@ -37,6 +37,7 @@ namespace renderer {
                         projectedSize.y / static_cast<float>(textureSize.y));
         sprite.setOrigin(static_cast<float>(textureSize.x) / 2.0f, static_cast<float>(textureSize.y) / 2.0f);
         return {std::make_shared<sf::Sprite>(sprite)};
+
     }
 
     std::vector<std::unique_ptr<sf::Text>> AnimatedSpriteModule::getSFTexts() const {

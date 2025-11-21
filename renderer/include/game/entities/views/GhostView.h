@@ -15,6 +15,10 @@ namespace renderer {
         bool markedForRemoval{false};
         logic::Direction direction = logic::NONE;
         logic::GhostModel::Mode ghostMode=logic::GhostModel::WAITING;
+        float frightenedTimer = 0;
+        const float FRIGHTENED_END_ANIM_START = 5;
+
+        const float FRAME_DURATION = 0.2f;
 
         void updateAnimation();
 
@@ -35,6 +39,8 @@ namespace renderer {
         [[nodiscard]] logic::GhostModel::Mode getGhostMode() const;
 
         void setGhostMode(logic::GhostModel::Mode ghostMode);
+
+        void setFrightenedTimer(float frightenedTimer);
     };
 
 } // renderer

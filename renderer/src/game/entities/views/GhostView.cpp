@@ -8,7 +8,15 @@
 namespace renderer {
     void GhostView::updateAnimation() {
         std::string animExt = "";
-        if (ghostMode == logic::GhostModel::FRIGHTENED) animExt = "-frightened";
+        getModule<AnimatedSpriteModule>()->setFrameDuration(FRAME_DURATION);
+        if (ghostMode == logic::GhostModel::FRIGHTENED) {
+            animExt = "-frightened";
+            if (frightenedTimer > FRIGHTENED_END_ANIM_START) {
+                animExt += "-end";
+                getModule<AnimatedSpriteModule>()->setFrameDuration(FRAME_DURATION*2);
+            }
+        }
+
         switch (direction) {
             case logic::Direction::RIGHT :{
                 auto module = getModule<AnimatedSpriteModule>();
@@ -48,6 +56,7 @@ namespace renderer {
         setSize(subject.getSize());
         setDirection(subject.getDirection());
         setGhostMode(subject.getMode());
+        setFrightenedTimer(subject.getFrightenedTimer());
         updateAnimation();
     }
 
@@ -64,7 +73,7 @@ namespace renderer {
         animatedSpriteModule->setSize(getSize());
         animatedSpriteModule->setAnimations(animationsMap);
         animatedSpriteModule->setCurrentAnimation("move-right");
-        animatedSpriteModule->setFrameDuration(0.2f);
+        animatedSpriteModule->setFrameDuration(FRAME_DURATION);
         addModule(animatedSpriteModule);
         addObserver(animatedSpriteModule);
     }
@@ -84,5 +93,9 @@ namespace renderer {
 
     void GhostView::setGhostMode(logic::GhostModel::Mode ghostMode) {
         GhostView::ghostMode = ghostMode;
+    }
+
+    void GhostView::setFrightenedTimer(float frightenedTimer) {
+        GhostView::frightenedTimer = frightenedTimer;
     }
 } // renderer

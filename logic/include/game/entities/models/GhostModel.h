@@ -58,11 +58,11 @@ namespace logic {
 
         void setStartDelay(float startDelay);
 
-        float getFrightenedTimer() const;
+        [[nodiscard]] float getFrightenedTimer() const;
 
         void setFrightenedTimer(float frightenedTimer);
 
-        const float getFrightenedDuration() const;
+        [[nodiscard]] float getFrightenedDuration() const;
     };
 
 } // logic
