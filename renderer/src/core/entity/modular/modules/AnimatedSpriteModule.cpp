@@ -26,9 +26,14 @@ namespace renderer {
         elapsedTime += logic::Stopwatch::getInstance()->getDeltaTime();
 
         while (elapsedTime >= frameDuration) {
+
             elapsedTime -= frameDuration;
-            currentFrameIndex = (currentFrameIndex + 1) % static_cast<int>(textures.at(currentAnimation).size());
+            currentFrameIndex = currentFrameIndex + 1;
         }
+
+        // placed here to make sure this is always within range
+        // if you switch animations and currentFrameIndex is f.e. 2, but new animation has only 1 frame, this keeps it within range
+        currentFrameIndex = currentFrameIndex% static_cast<int>(textures.at(currentAnimation).size());
 
         sprite.setTexture(*textures.at(currentAnimation).at(currentFrameIndex));
         sf::Vector2<unsigned int> textureSize = textures.at(currentAnimation).at(currentFrameIndex)->getSize();
