@@ -8,7 +8,7 @@
 #include "game/Game.h"
 #include "game/entities/views/PlayerView.h"
 #include "game/entities/views/CoinView.h"
-#include "game/entities/views/PowerupView.h"
+#include "game/entities/views/FruitView.h"
 #include "game/entities/views/RedGhostView.h"
 #include "game/entities/controllers/ManhattanFollowGhostController.h"
 #include "game/entities/controllers/RandomNavGhostController.h"
@@ -51,7 +51,7 @@ namespace renderer {
     }
 
     std::shared_ptr<logic::FruitModel> DefaultEntityFactory::createPowerupModel() {
-        auto powerupView = std::make_shared<PowerupView>();
+        auto powerupView = std::make_shared<FruitView>();
         auto powerupModel = std::make_shared<logic::FruitModel>();
         powerupModel->addObserver(powerupView);
         viewTarget->addObjectView(powerupView);

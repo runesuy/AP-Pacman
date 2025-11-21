@@ -54,7 +54,7 @@ namespace logic {
                     case TileType::POWER_UP: {
                         auto powerup = world.getConfig().getEntityFactory()->createPowerupModel();
                         powerup->setPosition({x, y});
-                        powerup->setSize({tileSize * 0.4f, tileSize * 0.4f});
+                        powerup->setSize({tileSize*0.9, tileSize*0.9});
                         world.addObject(powerup);
                         break;
                     }

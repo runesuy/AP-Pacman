@@ -2,8 +2,8 @@
 // Created by rune-suy on 11/12/25.
 //
 
-#ifndef AP_PACMAN_POWERUPVIEW_H
-#define AP_PACMAN_POWERUPVIEW_H
+#ifndef AP_PACMAN_FRUITVIEW_H
+#define AP_PACMAN_FRUITVIEW_H
 
 #include "core/observer/IObserver.h"
 #include "game/entities/models/FruitModel.h"
@@ -11,10 +11,10 @@
 
 namespace renderer {
 
-    class PowerupView : public ModularEntityView, public logic::IObserver<logic::FruitModel> {
+    class FruitView : public ModularEntityView, public logic::IObserver<logic::FruitModel> {
         bool markedForRemoval{false};
     public:
-        PowerupView();
+        FruitView();
 
         bool isMarkedForRemoval() override;
 
@@ -27,4 +27,4 @@ namespace renderer {
 
 } // renderer
 
-#endif //AP_PACMAN_POWERUPVIEW_H
+#endif //AP_PACMAN_FRUITVIEW_H
