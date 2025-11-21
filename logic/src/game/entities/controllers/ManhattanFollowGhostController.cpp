@@ -10,7 +10,7 @@ namespace logic {
         if (!player) {
             std::cerr << "No Player Found [ManhattanFollowGhostController::update]" << std::endl;
         }
-        if (!get<0>(_isPastCenter(world, entity, entity.getDirection())) && entity.getMode() != GhostModel::WAITING) {
+        if (!get<0>(_isPastCenter(world, entity, entity.getDirection())) && entity.getMode() == GhostModel::CHASE) {
             entity.setRequestedDirection(
                     navigationAgent->getNavigationDirection(entity.getPosition(), player->getPosition(), world));
         }

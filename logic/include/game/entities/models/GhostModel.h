@@ -18,12 +18,17 @@ namespace logic {
             WAITING
         };
     private:
-        const float SPEED = 0.2f;
+        float SPEED = 0.2f;
+        const float CHASE_SPEED = 0.2f;
+        const float FRIGHTENED_SPEED = 0.1f;
         Position returnPosition{0, 0};
 
         Mode mode = WAITING;
         float startTimer = 0.0f;
         float START_DELAY = 3.0f; // seconds
+
+        float frightenedTimer = 0.0f;
+        const float FRIGHTENED_DURATION = 10;
     public:
         explicit GhostModel();
 
@@ -52,6 +57,12 @@ namespace logic {
         [[nodiscard]] float getStartDelay() const;
 
         void setStartDelay(float startDelay);
+
+        float getFrightenedTimer() const;
+
+        void setFrightenedTimer(float frightenedTimer);
+
+        const float getFrightenedDuration() const;
     };
 
 } // logic

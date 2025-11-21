@@ -11,7 +11,9 @@ namespace logic {
 
     class INavigationAgent {
     public:
-        virtual Direction getNavigationDirection(const Position& current, const Position& target, const World& world) const=0;
+        [[nodiscard]] virtual Direction getNavigationDirection(const Position& current, const Position& target, const World& world) const=0;
+
+        [[nodiscard]] virtual Direction getNavigationDirectionAway(const Position& current, const Position& target, const World& world) const=0;
     };
 
 } // logic

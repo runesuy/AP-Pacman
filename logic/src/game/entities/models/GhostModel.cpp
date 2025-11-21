@@ -26,7 +26,12 @@ namespace logic {
     }
 
     float GhostModel::getSpeed() {
-        return SPEED;
+        switch (mode) {
+            default:
+                return CHASE_SPEED;
+            case (FRIGHTENED):
+                return FRIGHTENED_SPEED;
+        }
     }
 
     void GhostModel::setDirection(Direction direction) {
@@ -65,5 +70,17 @@ namespace logic {
 
     void GhostModel::setStartDelay(float startDelay) {
         START_DELAY = startDelay;
+    }
+
+    float GhostModel::getFrightenedTimer() const {
+        return frightenedTimer;
+    }
+
+    void GhostModel::setFrightenedTimer(float frightenedTimer) {
+        GhostModel::frightenedTimer = frightenedTimer;
+    }
+
+    const float GhostModel::getFrightenedDuration() const {
+        return FRIGHTENED_DURATION;
     }
 } // logic
