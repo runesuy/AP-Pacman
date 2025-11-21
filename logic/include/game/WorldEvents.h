@@ -5,10 +5,13 @@
 #ifndef AP_PACMAN_WORLDEVENTS_H
 #define AP_PACMAN_WORLDEVENTS_H
 
-#endif //AP_PACMAN_WORLDEVENTS_H
+
 
 namespace logic {
     enum WorldEvent {
-        FRUIT_EATEN_BY_PLAYER
+        FRUIT_EATEN_BY_PLAYER,
+        PLAYER_KILLED_W
     };
 }
+
+#endif //AP_PACMAN_WORLDEVENTS_H

@@ -36,7 +36,7 @@ namespace logic {
 
         switch (other.getCollisionType()) {
             case (CollisionType::COIN): {
-                entity.updateObservers(ObserverEvent::PLAYER_COIN_COLLECTED);
+                entity.updateObservers(static_cast<int>(ObserverEvent::PLAYER_COIN_COLLECTED));
                 break;
             }
             case(CollisionType::FRUIT): {
@@ -47,10 +47,14 @@ namespace logic {
                 const auto& ghost = dynamic_cast<const GhostModel&>(other);
                 if (ghost.getMode() == GhostModel::CHASE) {
                     entity.updateObservers(ObserverEvent::PLAYER_KILLED);
+                    world.sendWorldEvent(PLAYER_KILLED_W);
+                    entity.setPosition(entity.getSpawnPosition());
+                    entity.setDirection(NONE);
                 }
                 if (ghost.getMode() == GhostModel::FRIGHTENED) {
                     entity.updateObservers(ObserverEvent::PLAYER_GHOST_KILLED);
                 }
+                break;
             }
             default:{}
         }

@@ -59,6 +59,12 @@ namespace logic {
             case (WorldEvent::FRUIT_EATEN_BY_PLAYER): {
                 if (entity.getMode() == GhostModel::CHASE)
                     entity.setMode(GhostModel::FRIGHTENED);
+                break;
+            }
+            case (WorldEvent::PLAYER_KILLED_W): {
+                entity.setPosition(entity.getSpawnPosition());
+                entity.setDirection(NONE);
+                break;
             }
         }
     }
