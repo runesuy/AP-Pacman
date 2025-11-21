@@ -7,15 +7,11 @@
 
 #include "core/entity/modular/ModularEntityView.h"
 #include "game/entities/models/GhostModel.h"
+#include "GhostView.h"
 
 namespace renderer {
 
-    class RedGhostView : public ModularEntityView, public logic::IObserver<logic::GhostModel> {
-        bool markedForRemoval{false};
-        logic::Direction direction;
-
-        void updateAnimation();
-
+    class RedGhostView : public GhostView {
         inline static const std::map<std::string, std::vector<std::string>> animations{
                 {"move-right",
                         {"ghost-red-right_0", "ghost-red-right_1"},
@@ -28,21 +24,23 @@ namespace renderer {
                 },
                 {"move-down",
                         {"ghost-red-down_0",  "ghost-red-down_1"}
+                },
+                {"move-right-frightened",
+                        {"ghost-frightened-right_0", "ghost-frightened-right_1"},
+                },
+                {"move-left-frightened",
+                        {"ghost-frightened-left_0",  "ghost-frightened-left_1"}
+                },
+                {"move-up-frightened",
+                        {"ghost-frightened-up_0",    "ghost-frightened-up_1"}
+                },
+                {"move-down-frightened",
+                        {"ghost-frightened-down_0",  "ghost-frightened-down_1"}
                 }
         };
 
     public:
         RedGhostView();
-
-        void update(logic::GhostModel &subject) override;
-
-        bool isMarkedForRemoval() override;
-
-        void markForRemoval();
-
-        void setSize(const logic::Size &size) override;
-
-        void setDirection(logic::Direction direction);
     };
 
 } // renderer

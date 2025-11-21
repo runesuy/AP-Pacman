@@ -8,18 +8,12 @@
 #include "core/entity/modular/ModularEntityView.h"
 #include "game/entities/models/GhostModel.h"
 #include "game/entities/models/GhostModel.h"
+#include "GhostView.h"
 
 namespace renderer {
 
-    class OrangeGhostView : public ModularEntityView, public logic::IObserver<logic::GhostModel> {
-        bool markedForRemoval{false};
-        logic::Direction direction;
-
-        logic::GhostModel::Mode ghostMode=logic::GhostModel::WAITING;
-
-        void updateAnimation();
-
-        inline static const std::map<std::string, std::vector<std::string>> animations{
+    class OrangeGhostView : public GhostView {
+        inline static const AnimationsMap animations{
                 {"move-right",
                         {"ghost-orange-right_0", "ghost-orange-right_1"},
                 },
@@ -48,20 +42,6 @@ namespace renderer {
 
     public:
         OrangeGhostView();
-
-        void update(logic::GhostModel &subject) override;
-
-        bool isMarkedForRemoval() override;
-
-        void markForRemoval();
-
-        void setSize(const logic::Size &size) override;
-
-        void setDirection(logic::Direction direction);
-
-        logic::GhostModel::Mode getGhostMode() const;
-
-        void setGhostMode(logic::GhostModel::Mode ghostMode);
     };
 
 } // renderer

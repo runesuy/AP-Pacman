@@ -22,6 +22,8 @@ namespace renderer {
         mutable int currentFrameIndex=0;
         mutable sf::Sprite sprite;
     public:
+        using AnimationNamesMap = std::map<std::string,std::vector<std::string>>;
+
         AnimatedSpriteModule()=default;
 
         void update(ModularEntityView &subject) override;
@@ -34,7 +36,7 @@ namespace renderer {
 
         void setAnimations(const std::map<std::string,std::vector<std::shared_ptr<sf::Texture>>> &textures);
 
-        void setAnimations(const std::map<std::string,std::vector<std::string>> &textures);
+        void setAnimations(const AnimationNamesMap &textures);
 
         void setSize(const logic::Size &size);
 
