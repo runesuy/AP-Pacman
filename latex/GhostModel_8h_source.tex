@@ -22,44 +22,55 @@
 \DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4da39865ad4334e9169e5f9f11a30c021c4}{WAITING}}}
 \DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \};}
 \DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ SPEED\ =\ 0.2f;}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ returnPosition\{0,\ 0\};}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{Mode}}\ mode\ =\ \mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4da39865ad4334e9169e5f9f11a30c021c4}{WAITING}};}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ startTimer\ =\ 0.0f;}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ START\_DELAY\ =\ 3.0f;\ \textcolor{comment}{//\ seconds}}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classlogic_1_1GhostModel_a31c05f5c96be6bd4c409d1f143f2d387}{GhostModel}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ SPEED\ =\ 0.2f;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ CHASE\_SPEED\ =\ 0.2f;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ FRIGHTENED\_SPEED\ =\ 0.1f;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ returnPosition\{0,\ 0\};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{Mode}}\ mode\ =\ \mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4da39865ad4334e9169e5f9f11a30c021c4}{WAITING}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ startTimer\ =\ 0.0f;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ START\_DELAY\ =\ 3.0f;\ \textcolor{comment}{//\ seconds}}
 \DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostModel_afac1e9b8ff51aa840c87fe7936d7a477}{setSize}}(\textcolor{keyword}{const}\ Size\ \&size)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostModel_a1c0ddb635a6b41907577c67c01377cb9}{setPosition}}(\textcolor{keyword}{const}\ Position\ \&position)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostModel_af57a1128c94aaaaa9a82f99a8b6161b3}{markForRemoval}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classlogic_1_1GhostModel_a480aa2f7bd82fd2eb90f628dcfa99198}{getSpeed}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostModel_afced39fa5d71d4006c956ef1a3b1b95b}{setDirection}}(\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ direction)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classlogic_1_1GhostModel_add1e77e061893880c511f64a2aa1cb12}{getStartTimer}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostModel_ac455ae19d66e47094f399e08ae17f43f}{setStartTimer}}(\textcolor{keywordtype}{float}\ startTimer);}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{Mode}}\ \mbox{\hyperlink{classlogic_1_1GhostModel_af319b6eda1da39921f26ac2ae5711549}{getMode}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ Position\ \&\mbox{\hyperlink{classlogic_1_1GhostModel_a08bce7b616df091ca65fa6ac2c70bc95}{getReturnPosition}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostModel_a865048e98dc3cab20192c39e67ae3db2}{setReturnPosition}}(\textcolor{keyword}{const}\ Position\ \&returnPosition);}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostModel_a0be928fc21c21965bc82b17524edc716}{setMode}}(\mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{Mode}}\ mode);}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classlogic_1_1GhostModel_add46b750cd95aac3868ea8553acca093}{getStartDelay}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostModel_a432fa53a7aa293542b923ac4291bb3a0}{setStartDelay}}(\textcolor{keywordtype}{float}\ startDelay);}
-\DoxyCodeLine{00055\ \ \ \ \ \};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ frightenedTimer\ =\ 0.0f;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ FRIGHTENED\_DURATION\ =\ 10;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classlogic_1_1GhostModel_a31c05f5c96be6bd4c409d1f143f2d387}{GhostModel}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostModel_afac1e9b8ff51aa840c87fe7936d7a477}{setSize}}(\textcolor{keyword}{const}\ Size\ \&size)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostModel_a1c0ddb635a6b41907577c67c01377cb9}{setPosition}}(\textcolor{keyword}{const}\ Position\ \&position)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostModel_af57a1128c94aaaaa9a82f99a8b6161b3}{markForRemoval}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classlogic_1_1GhostModel_a480aa2f7bd82fd2eb90f628dcfa99198}{getSpeed}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostModel_afced39fa5d71d4006c956ef1a3b1b95b}{setDirection}}(\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ direction)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classlogic_1_1GhostModel_add1e77e061893880c511f64a2aa1cb12}{getStartTimer}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostModel_ac455ae19d66e47094f399e08ae17f43f}{setStartTimer}}(\textcolor{keywordtype}{float}\ startTimer);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{Mode}}\ \mbox{\hyperlink{classlogic_1_1GhostModel_af319b6eda1da39921f26ac2ae5711549}{getMode}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ Position\ \&\mbox{\hyperlink{classlogic_1_1GhostModel_a08bce7b616df091ca65fa6ac2c70bc95}{getReturnPosition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostModel_a865048e98dc3cab20192c39e67ae3db2}{setReturnPosition}}(\textcolor{keyword}{const}\ Position\ \&returnPosition);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostModel_a0be928fc21c21965bc82b17524edc716}{setMode}}(\mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{Mode}}\ mode);}
 \DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \}\ \textcolor{comment}{//\ logic}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classlogic_1_1GhostModel_add46b750cd95aac3868ea8553acca093}{getStartDelay}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00058\ }
-\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_GHOSTMODEL\_H}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostModel_a432fa53a7aa293542b923ac4291bb3a0}{setStartDelay}}(\textcolor{keywordtype}{float}\ startDelay);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classlogic_1_1GhostModel_ab075cfb8e3196d827b0aeae336a54f98}{getFrightenedTimer}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostModel_a164cda08501efb98f3db42d5cdaf3989}{setFrightenedTimer}}(\textcolor{keywordtype}{float}\ frightenedTimer);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classlogic_1_1GhostModel_a74ad3a274b451863f2ac9a3b3aad26b9}{getFrightenedDuration}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ \ \ \ \ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \}\ \textcolor{comment}{//\ logic}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_GHOSTMODEL\_H}}
 
 \end{DoxyCode}
