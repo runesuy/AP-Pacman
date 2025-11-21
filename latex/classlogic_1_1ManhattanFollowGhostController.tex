@@ -39,6 +39,8 @@ void \mbox{\hyperlink{classlogic_1_1ManhattanFollowGhostController_acd26c4cfcd95
 void \mbox{\hyperlink{classlogic_1_1GhostController_a8b06b2000603ac58aafbbbb3032dcb0a}{update}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world, \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&entity) override
 \item 
 void \mbox{\hyperlink{classlogic_1_1GhostController_aeba3f9707ff49bd10c53c721c48b5002}{handle\+World\+Event}} (\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{World\+Object\+::\+World\+EventT}} event, \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&entity) override
+\item 
+void \mbox{\hyperlink{classlogic_1_1GhostController_a1cb9229b0097664fc029929d9aa1827f}{on\+Collision}} (\mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&entity, const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other, \mbox{\hyperlink{classlogic_1_1World}{World}} \&world) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1MovingEntityController}{logic\+::\+Moving\+Entity\+Controller$<$ Ghost\+Model $>$}}}
 \begin{DoxyCompactItemize}
@@ -77,6 +79,14 @@ static \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}
 \doxysubsubsection{\texorpdfstring{onCollision()}{onCollision()}}
 {\footnotesize\ttfamily void logic\+::\+Manhattan\+Follow\+Ghost\+Controller\+::on\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&}]{entity,  }\item[{const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&}]{other,  }\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1ManhattanFollowGhostController_acd26c4cfcd957473b5aaf34ec2a9cde1_cgraph}
+\end{center}
+\end{figure}
 \Hypertarget{classlogic_1_1ManhattanFollowGhostController_a287bd626c0a630a430d4b5cf0a38d04f}\label{classlogic_1_1ManhattanFollowGhostController_a287bd626c0a630a430d4b5cf0a38d04f} 
 \index{logic::ManhattanFollowGhostController@{logic::ManhattanFollowGhostController}!processCommand@{processCommand}}
 \index{processCommand@{processCommand}!logic::ManhattanFollowGhostController@{logic::ManhattanFollowGhostController}}
