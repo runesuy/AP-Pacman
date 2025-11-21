@@ -28,16 +28,25 @@ Collaboration diagram for renderer\+::Blue\+Ghost\+View\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classrenderer_1_1BlueGhostView_abd6fb603d952e30821845c9d8ceb3e7c}{Blue\+Ghost\+View}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1GhostView}{renderer\+::\+Ghost\+View}}}
+\begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classrenderer_1_1BlueGhostView_a41746adf9d09e87f5c60b3818a428f0a}{update}} (\mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} \&subject) override
+\mbox{\hyperlink{classrenderer_1_1GhostView_aabd278cd4d7554975c4877c000c6ba2a}{Ghost\+View}} (const \mbox{\hyperlink{classrenderer_1_1GhostView_a273f8a9fdb59412c9f731bfd79f7be01}{Animations\+Map}} \&animations\+Map)
 \item 
-bool \mbox{\hyperlink{classrenderer_1_1BlueGhostView_ac3ec24f9ee430125e336597f3056c7de}{is\+Marked\+For\+Removal}} () override
+void \mbox{\hyperlink{classrenderer_1_1GhostView_a113c8884fd63c09f0958927275f3d7b8}{update}} (\mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} \&subject) override
 \item 
-void \mbox{\hyperlink{classrenderer_1_1BlueGhostView_aa0a9f2091c1872bde0adfb56c5ef62cd}{mark\+For\+Removal}} ()
+bool \mbox{\hyperlink{classrenderer_1_1GhostView_ac7dde94d459b88fb436c67d9045a1f53}{is\+Marked\+For\+Removal}} () override
 \item 
-void \mbox{\hyperlink{classrenderer_1_1BlueGhostView_a204104a5891adb6220b2096eeef060d0}{set\+Size}} (const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&size) override
+void \mbox{\hyperlink{classrenderer_1_1GhostView_a5cdf74858a9dff06714ff952e970bc48}{mark\+For\+Removal}} ()
 \item 
-void \mbox{\hyperlink{classrenderer_1_1BlueGhostView_a0f49f524742ea2e3cf50012ad4a8f379}{set\+Direction}} (\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{logic\+::\+Direction}} direction)
+void \mbox{\hyperlink{classrenderer_1_1GhostView_a1c02630707e2d9365e17ac26dec20fd3}{set\+Size}} (const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&size) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1GhostView_a479c3dc1b04c6003f2ad7e87a03debed}{set\+Direction}} (\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{logic\+::\+Direction}} direction)
+\item 
+\mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{logic\+::\+Ghost\+Model\+::\+Mode}} \mbox{\hyperlink{classrenderer_1_1GhostView_a5c0c2c9485131f073ef80c5075b245fd}{get\+Ghost\+Mode}} () const
+\item 
+void \mbox{\hyperlink{classrenderer_1_1GhostView_af770248169adbeca94e67069014279b7}{set\+Ghost\+Mode}} (\mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{logic\+::\+Ghost\+Model\+::\+Mode}} ghost\+Mode)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1ModularEntityView}{renderer\+::\+Modular\+Entity\+View}}}
 \begin{DoxyCompactItemize}
@@ -91,6 +100,11 @@ virtual void \mbox{\hyperlink{classlogic_1_1IObserver_aa1e644dd23114de669503363e
 virtual void \mbox{\hyperlink{classlogic_1_1IObserver_acdde4b1d124989fc652801832b036eea}{on\+Observable\+Destroyed}} (\mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} \&subject)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classrenderer_1_1GhostView}{renderer\+::\+Ghost\+View}}}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classrenderer_1_1GhostView_a273f8a9fdb59412c9f731bfd79f7be01}{Animations\+Map}} = \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a4a96e25d9dc165b9b518431cf7a69365}{Animated\+Sprite\+Module\+::\+Animation\+Names\+Map}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Types inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ Modular\+Entity\+View $>$}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -105,85 +119,6 @@ enum \mbox{\hyperlink{classlogic_1_1Observable_a637139aff6f941cdc9096713a3f38ea7
 \doxysubsubsection{\texorpdfstring{BlueGhostView()}{BlueGhostView()}}
 {\footnotesize\ttfamily renderer\+::\+Blue\+Ghost\+View\+::\+Blue\+Ghost\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classrenderer_1_1BlueGhostView_abd6fb603d952e30821845c9d8ceb3e7c_cgraph}
-\end{center}
-\end{figure}
-
-
-\doxysubsection{Member Function Documentation}
-\Hypertarget{classrenderer_1_1BlueGhostView_ac3ec24f9ee430125e336597f3056c7de}\label{classrenderer_1_1BlueGhostView_ac3ec24f9ee430125e336597f3056c7de} 
-\index{renderer::BlueGhostView@{renderer::BlueGhostView}!isMarkedForRemoval@{isMarkedForRemoval}}
-\index{isMarkedForRemoval@{isMarkedForRemoval}!renderer::BlueGhostView@{renderer::BlueGhostView}}
-\doxysubsubsection{\texorpdfstring{isMarkedForRemoval()}{isMarkedForRemoval()}}
-{\footnotesize\ttfamily bool renderer\+::\+Blue\+Ghost\+View\+::is\+Marked\+For\+Removal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \mbox{\hyperlink{classrenderer_1_1IWorldObjectView_ad486098155a47b33991193ee5e7311a3}{renderer\+::\+IWorld\+Object\+View}}.
-
-\Hypertarget{classrenderer_1_1BlueGhostView_aa0a9f2091c1872bde0adfb56c5ef62cd}\label{classrenderer_1_1BlueGhostView_aa0a9f2091c1872bde0adfb56c5ef62cd} 
-\index{renderer::BlueGhostView@{renderer::BlueGhostView}!markForRemoval@{markForRemoval}}
-\index{markForRemoval@{markForRemoval}!renderer::BlueGhostView@{renderer::BlueGhostView}}
-\doxysubsubsection{\texorpdfstring{markForRemoval()}{markForRemoval()}}
-{\footnotesize\ttfamily void renderer\+::\+Blue\+Ghost\+View\+::mark\+For\+Removal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\Hypertarget{classrenderer_1_1BlueGhostView_a0f49f524742ea2e3cf50012ad4a8f379}\label{classrenderer_1_1BlueGhostView_a0f49f524742ea2e3cf50012ad4a8f379} 
-\index{renderer::BlueGhostView@{renderer::BlueGhostView}!setDirection@{setDirection}}
-\index{setDirection@{setDirection}!renderer::BlueGhostView@{renderer::BlueGhostView}}
-\doxysubsubsection{\texorpdfstring{setDirection()}{setDirection()}}
-{\footnotesize\ttfamily void renderer\+::\+Blue\+Ghost\+View\+::set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{logic\+::\+Direction}}}]{direction }\end{DoxyParamCaption})}
-
-\Hypertarget{classrenderer_1_1BlueGhostView_a204104a5891adb6220b2096eeef060d0}\label{classrenderer_1_1BlueGhostView_a204104a5891adb6220b2096eeef060d0} 
-\index{renderer::BlueGhostView@{renderer::BlueGhostView}!setSize@{setSize}}
-\index{setSize@{setSize}!renderer::BlueGhostView@{renderer::BlueGhostView}}
-\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
-{\footnotesize\ttfamily void renderer\+::\+Blue\+Ghost\+View\+::set\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-Set the size of the entity view. 
-\begin{DoxyParams}{Parameters}
-{\em size} & \\
-\hline
-\end{DoxyParams}
-
-
-Reimplemented from \mbox{\hyperlink{classrenderer_1_1EntityView_ab1a10febe0d9e2415040418075de0217}{renderer\+::\+Entity\+View}}.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=346pt]{classrenderer_1_1BlueGhostView_a204104a5891adb6220b2096eeef060d0_cgraph}
-\end{center}
-\end{figure}
-\Hypertarget{classrenderer_1_1BlueGhostView_a41746adf9d09e87f5c60b3818a428f0a}\label{classrenderer_1_1BlueGhostView_a41746adf9d09e87f5c60b3818a428f0a} 
-\index{renderer::BlueGhostView@{renderer::BlueGhostView}!update@{update}}
-\index{update@{update}!renderer::BlueGhostView@{renderer::BlueGhostView}}
-\doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void renderer\+::\+Blue\+Ghost\+View\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} \&}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-Called when the subject being observed has changed. 
-\begin{DoxyParams}{Parameters}
-{\em subject} & The subject being observed. \\
-\hline
-\end{DoxyParams}
-
-
-Implements \mbox{\hyperlink{classlogic_1_1IObserver_ac01efa8f0fbc7495847489c0a8651b28}{logic\+::\+IObserver$<$ logic\+::\+Ghost\+Model $>$}}.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classrenderer_1_1BlueGhostView_a41746adf9d09e87f5c60b3818a428f0a_cgraph}
-\end{center}
-\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

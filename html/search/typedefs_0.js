@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['collisiontypet_0',['CollisionTypeT',['../classlogic_1_1SizedWorldObject.html#a059ee03db27e3962f0c11f71cf0e2bd0',1,'logic::SizedWorldObject']]],
-  ['coordinatetype_1',['CoordinateType',['../classlogic_1_1ICoordinate.html#a3d35c6be08adc094e27f987c1be77ec1',1,'logic::ICoordinate']]]
+  ['animationnamesmap_0',['AnimationNamesMap',['../classrenderer_1_1AnimatedSpriteModule.html#a4a96e25d9dc165b9b518431cf7a69365',1,'renderer::AnimatedSpriteModule']]],
+  ['animationsmap_1',['AnimationsMap',['../classrenderer_1_1GhostView.html#a273f8a9fdb59412c9f731bfd79f7be01',1,'renderer::GhostView']]]
 ];

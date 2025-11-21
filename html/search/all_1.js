@@ -7,5 +7,7 @@ var searchData=
   ['addrow_4',['addRow',['../classlogic_1_1TileMap.html#aa01a7a80be57dd3e85d3c0a570d07d7c',1,'logic::TileMap']]],
   ['animatedspritemodule_5',['animatedspritemodule',['../classrenderer_1_1AnimatedSpriteModule.html',1,'renderer::AnimatedSpriteModule'],['../classrenderer_1_1AnimatedSpriteModule.html#ac913ec6b379df50362fdb516cdd650f5',1,'renderer::AnimatedSpriteModule::AnimatedSpriteModule()']]],
   ['animatedspritemodule_2ecpp_6',['AnimatedSpriteModule.cpp',['../AnimatedSpriteModule_8cpp.html',1,'']]],
-  ['animatedspritemodule_2eh_7',['AnimatedSpriteModule.h',['../AnimatedSpriteModule_8h.html',1,'']]]
+  ['animatedspritemodule_2eh_7',['AnimatedSpriteModule.h',['../AnimatedSpriteModule_8h.html',1,'']]],
+  ['animationnamesmap_8',['AnimationNamesMap',['../classrenderer_1_1AnimatedSpriteModule.html#a4a96e25d9dc165b9b518431cf7a69365',1,'renderer::AnimatedSpriteModule']]],
+  ['animationsmap_9',['AnimationsMap',['../classrenderer_1_1GhostView.html#a273f8a9fdb59412c9f731bfd79f7be01',1,'renderer::GhostView']]]
 ];

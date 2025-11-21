@@ -28,20 +28,25 @@ Collaboration diagram for renderer\+::Orange\+Ghost\+View\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classrenderer_1_1OrangeGhostView_a62dd03b73343724bc6003b45aa58640e}{Orange\+Ghost\+View}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1GhostView}{renderer\+::\+Ghost\+View}}}
+\begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classrenderer_1_1OrangeGhostView_a61a22f63ccb18670477aa90f5f1f698f}{update}} (\mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} \&subject) override
+\mbox{\hyperlink{classrenderer_1_1GhostView_aabd278cd4d7554975c4877c000c6ba2a}{Ghost\+View}} (const \mbox{\hyperlink{classrenderer_1_1GhostView_a273f8a9fdb59412c9f731bfd79f7be01}{Animations\+Map}} \&animations\+Map)
 \item 
-bool \mbox{\hyperlink{classrenderer_1_1OrangeGhostView_a2462dd9f18948b3c925c1056e408b056}{is\+Marked\+For\+Removal}} () override
+void \mbox{\hyperlink{classrenderer_1_1GhostView_a113c8884fd63c09f0958927275f3d7b8}{update}} (\mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} \&subject) override
 \item 
-void \mbox{\hyperlink{classrenderer_1_1OrangeGhostView_aeaf44b5aab8f568df5595f7d430fae02}{mark\+For\+Removal}} ()
+bool \mbox{\hyperlink{classrenderer_1_1GhostView_ac7dde94d459b88fb436c67d9045a1f53}{is\+Marked\+For\+Removal}} () override
 \item 
-void \mbox{\hyperlink{classrenderer_1_1OrangeGhostView_ab7a4de2ea09fa739907eb88a511fcd4c}{set\+Size}} (const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&size) override
+void \mbox{\hyperlink{classrenderer_1_1GhostView_a5cdf74858a9dff06714ff952e970bc48}{mark\+For\+Removal}} ()
 \item 
-void \mbox{\hyperlink{classrenderer_1_1OrangeGhostView_a67924c229f59b43167b57d544658998b}{set\+Direction}} (\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{logic\+::\+Direction}} direction)
+void \mbox{\hyperlink{classrenderer_1_1GhostView_a1c02630707e2d9365e17ac26dec20fd3}{set\+Size}} (const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&size) override
 \item 
-\mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{logic\+::\+Ghost\+Model\+::\+Mode}} \mbox{\hyperlink{classrenderer_1_1OrangeGhostView_a3823a866ccfd3ad04da3bdd6afff3d13}{get\+Ghost\+Mode}} () const
+void \mbox{\hyperlink{classrenderer_1_1GhostView_a479c3dc1b04c6003f2ad7e87a03debed}{set\+Direction}} (\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{logic\+::\+Direction}} direction)
 \item 
-void \mbox{\hyperlink{classrenderer_1_1OrangeGhostView_ad720c25d1e9168513fb67039dd5258df}{set\+Ghost\+Mode}} (\mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{logic\+::\+Ghost\+Model\+::\+Mode}} ghost\+Mode)
+\mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{logic\+::\+Ghost\+Model\+::\+Mode}} \mbox{\hyperlink{classrenderer_1_1GhostView_a5c0c2c9485131f073ef80c5075b245fd}{get\+Ghost\+Mode}} () const
+\item 
+void \mbox{\hyperlink{classrenderer_1_1GhostView_af770248169adbeca94e67069014279b7}{set\+Ghost\+Mode}} (\mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{logic\+::\+Ghost\+Model\+::\+Mode}} ghost\+Mode)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1ModularEntityView}{renderer\+::\+Modular\+Entity\+View}}}
 \begin{DoxyCompactItemize}
@@ -95,6 +100,11 @@ virtual void \mbox{\hyperlink{classlogic_1_1IObserver_aa1e644dd23114de669503363e
 virtual void \mbox{\hyperlink{classlogic_1_1IObserver_acdde4b1d124989fc652801832b036eea}{on\+Observable\+Destroyed}} (\mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} \&subject)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classrenderer_1_1GhostView}{renderer\+::\+Ghost\+View}}}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classrenderer_1_1GhostView_a273f8a9fdb59412c9f731bfd79f7be01}{Animations\+Map}} = \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a4a96e25d9dc165b9b518431cf7a69365}{Animated\+Sprite\+Module\+::\+Animation\+Names\+Map}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Types inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ Modular\+Entity\+View $>$}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -109,97 +119,6 @@ enum \mbox{\hyperlink{classlogic_1_1Observable_a637139aff6f941cdc9096713a3f38ea7
 \doxysubsubsection{\texorpdfstring{OrangeGhostView()}{OrangeGhostView()}}
 {\footnotesize\ttfamily renderer\+::\+Orange\+Ghost\+View\+::\+Orange\+Ghost\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classrenderer_1_1OrangeGhostView_a62dd03b73343724bc6003b45aa58640e_cgraph}
-\end{center}
-\end{figure}
-
-
-\doxysubsection{Member Function Documentation}
-\Hypertarget{classrenderer_1_1OrangeGhostView_a3823a866ccfd3ad04da3bdd6afff3d13}\label{classrenderer_1_1OrangeGhostView_a3823a866ccfd3ad04da3bdd6afff3d13} 
-\index{renderer::OrangeGhostView@{renderer::OrangeGhostView}!getGhostMode@{getGhostMode}}
-\index{getGhostMode@{getGhostMode}!renderer::OrangeGhostView@{renderer::OrangeGhostView}}
-\doxysubsubsection{\texorpdfstring{getGhostMode()}{getGhostMode()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{logic\+::\+Ghost\+Model\+::\+Mode}} renderer\+::\+Orange\+Ghost\+View\+::get\+Ghost\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-\Hypertarget{classrenderer_1_1OrangeGhostView_a2462dd9f18948b3c925c1056e408b056}\label{classrenderer_1_1OrangeGhostView_a2462dd9f18948b3c925c1056e408b056} 
-\index{renderer::OrangeGhostView@{renderer::OrangeGhostView}!isMarkedForRemoval@{isMarkedForRemoval}}
-\index{isMarkedForRemoval@{isMarkedForRemoval}!renderer::OrangeGhostView@{renderer::OrangeGhostView}}
-\doxysubsubsection{\texorpdfstring{isMarkedForRemoval()}{isMarkedForRemoval()}}
-{\footnotesize\ttfamily bool renderer\+::\+Orange\+Ghost\+View\+::is\+Marked\+For\+Removal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \mbox{\hyperlink{classrenderer_1_1IWorldObjectView_ad486098155a47b33991193ee5e7311a3}{renderer\+::\+IWorld\+Object\+View}}.
-
-\Hypertarget{classrenderer_1_1OrangeGhostView_aeaf44b5aab8f568df5595f7d430fae02}\label{classrenderer_1_1OrangeGhostView_aeaf44b5aab8f568df5595f7d430fae02} 
-\index{renderer::OrangeGhostView@{renderer::OrangeGhostView}!markForRemoval@{markForRemoval}}
-\index{markForRemoval@{markForRemoval}!renderer::OrangeGhostView@{renderer::OrangeGhostView}}
-\doxysubsubsection{\texorpdfstring{markForRemoval()}{markForRemoval()}}
-{\footnotesize\ttfamily void renderer\+::\+Orange\+Ghost\+View\+::mark\+For\+Removal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-\Hypertarget{classrenderer_1_1OrangeGhostView_a67924c229f59b43167b57d544658998b}\label{classrenderer_1_1OrangeGhostView_a67924c229f59b43167b57d544658998b} 
-\index{renderer::OrangeGhostView@{renderer::OrangeGhostView}!setDirection@{setDirection}}
-\index{setDirection@{setDirection}!renderer::OrangeGhostView@{renderer::OrangeGhostView}}
-\doxysubsubsection{\texorpdfstring{setDirection()}{setDirection()}}
-{\footnotesize\ttfamily void renderer\+::\+Orange\+Ghost\+View\+::set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{logic\+::\+Direction}}}]{direction }\end{DoxyParamCaption})}
-
-\Hypertarget{classrenderer_1_1OrangeGhostView_ad720c25d1e9168513fb67039dd5258df}\label{classrenderer_1_1OrangeGhostView_ad720c25d1e9168513fb67039dd5258df} 
-\index{renderer::OrangeGhostView@{renderer::OrangeGhostView}!setGhostMode@{setGhostMode}}
-\index{setGhostMode@{setGhostMode}!renderer::OrangeGhostView@{renderer::OrangeGhostView}}
-\doxysubsubsection{\texorpdfstring{setGhostMode()}{setGhostMode()}}
-{\footnotesize\ttfamily void renderer\+::\+Orange\+Ghost\+View\+::set\+Ghost\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1GhostModel_aa30135f88fabf78373f93b9cc9da0e4d}{logic\+::\+Ghost\+Model\+::\+Mode}}}]{ghost\+Mode }\end{DoxyParamCaption})}
-
-\Hypertarget{classrenderer_1_1OrangeGhostView_ab7a4de2ea09fa739907eb88a511fcd4c}\label{classrenderer_1_1OrangeGhostView_ab7a4de2ea09fa739907eb88a511fcd4c} 
-\index{renderer::OrangeGhostView@{renderer::OrangeGhostView}!setSize@{setSize}}
-\index{setSize@{setSize}!renderer::OrangeGhostView@{renderer::OrangeGhostView}}
-\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
-{\footnotesize\ttfamily void renderer\+::\+Orange\+Ghost\+View\+::set\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-Set the size of the entity view. 
-\begin{DoxyParams}{Parameters}
-{\em size} & \\
-\hline
-\end{DoxyParams}
-
-
-Reimplemented from \mbox{\hyperlink{classrenderer_1_1EntityView_ab1a10febe0d9e2415040418075de0217}{renderer\+::\+Entity\+View}}.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classrenderer_1_1OrangeGhostView_ab7a4de2ea09fa739907eb88a511fcd4c_cgraph}
-\end{center}
-\end{figure}
-\Hypertarget{classrenderer_1_1OrangeGhostView_a61a22f63ccb18670477aa90f5f1f698f}\label{classrenderer_1_1OrangeGhostView_a61a22f63ccb18670477aa90f5f1f698f} 
-\index{renderer::OrangeGhostView@{renderer::OrangeGhostView}!update@{update}}
-\index{update@{update}!renderer::OrangeGhostView@{renderer::OrangeGhostView}}
-\doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void renderer\+::\+Orange\+Ghost\+View\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} \&}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-Called when the subject being observed has changed. 
-\begin{DoxyParams}{Parameters}
-{\em subject} & The subject being observed. \\
-\hline
-\end{DoxyParams}
-
-
-Implements \mbox{\hyperlink{classlogic_1_1IObserver_ac01efa8f0fbc7495847489c0a8651b28}{logic\+::\+IObserver$<$ logic\+::\+Ghost\+Model $>$}}.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classrenderer_1_1OrangeGhostView_a61a22f63ccb18670477aa90f5f1f698f_cgraph}
-\end{center}
-\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

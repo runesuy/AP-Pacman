@@ -90,63 +90,53 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="ModularEntityView_8h.html">core/entity/modular/ModularEntityView.h</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="GhostModel_8h.html">game/entities/models/GhostModel.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerenderer.html">renderer</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classrenderer_1_1PinkGhostView.html">   13</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1PinkGhostView.html">PinkGhostView</a> : <span class="keyword">public</span> <a class="code hl_class" href="classrenderer_1_1ModularEntityView.html">ModularEntityView</a>, <span class="keyword">public</span> <a class="code hl_class" href="classlogic_1_1IObserver.html">logic::IObserver</a>&lt;logic::GhostModel&gt; {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordtype">bool</span> markedForRemoval{<span class="keyword">false</span>};</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_enumeration" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">logic::Direction</a> direction;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordtype">void</span> updateAnimation();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> std::map&lt;std::string, std::vector&lt;std::string&gt;&gt; animations{</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                {<span class="stringliteral">&quot;move-right&quot;</span>,</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                        {<span class="stringliteral">&quot;ghost-pink-right_0&quot;</span>, <span class="stringliteral">&quot;ghost-pink-right_1&quot;</span>},</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                },</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                {<span class="stringliteral">&quot;move-left&quot;</span>,</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                        {<span class="stringliteral">&quot;ghost-pink-left_0&quot;</span>,  <span class="stringliteral">&quot;ghost-pink-left_1&quot;</span>}</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                },</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                {<span class="stringliteral">&quot;move-up&quot;</span>,</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                        {<span class="stringliteral">&quot;ghost-pink-up_0&quot;</span>,    <span class="stringliteral">&quot;ghost-pink-up_1&quot;</span>}</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                },</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                {<span class="stringliteral">&quot;move-down&quot;</span>,</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                        {<span class="stringliteral">&quot;ghost-pink-down_0&quot;</span>,  <span class="stringliteral">&quot;ghost-pink-down_1&quot;</span>}</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                }</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        };</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_function" href="classrenderer_1_1PinkGhostView.html#a2f117978ad014311306c03d3a814c063">PinkGhostView</a>();</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classrenderer_1_1PinkGhostView.html#a7d5c1e0bdf1e98eb82963d2362f224ad">update</a>(<a class="code hl_class" href="classlogic_1_1GhostModel.html">logic::GhostModel</a> &amp;subject) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classrenderer_1_1PinkGhostView.html#a731534ca16371b1eba263fc9baac0ed3">isMarkedForRemoval</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classrenderer_1_1PinkGhostView.html#a5ca6d3c3ef07be0099cfaa88e87901d4">markForRemoval</a>();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classrenderer_1_1PinkGhostView.html#aab9bee8f61ae8853875682374d602023">setSize</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlogic_1_1Size.html">logic::Size</a> &amp;size) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classrenderer_1_1PinkGhostView.html#ab5938431bd65303cc1ba9345378f6304">setDirection</a>(<a class="code hl_enumeration" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">logic::Direction</a> direction);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    };</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="GhostView_8h.html">GhostView.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerenderer.html">renderer</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classrenderer_1_1PinkGhostView.html">   14</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1PinkGhostView.html">PinkGhostView</a> : <span class="keyword">public</span> <a class="code hl_class" href="classrenderer_1_1GhostView.html">GhostView</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> std::map&lt;std::string, std::vector&lt;std::string&gt;&gt; animations{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                {<span class="stringliteral">&quot;move-right&quot;</span>,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                        {<span class="stringliteral">&quot;ghost-pink-right_0&quot;</span>, <span class="stringliteral">&quot;ghost-pink-right_1&quot;</span>},</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                },</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                {<span class="stringliteral">&quot;move-left&quot;</span>,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                        {<span class="stringliteral">&quot;ghost-pink-left_0&quot;</span>,  <span class="stringliteral">&quot;ghost-pink-left_1&quot;</span>}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                },</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                {<span class="stringliteral">&quot;move-up&quot;</span>,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                        {<span class="stringliteral">&quot;ghost-pink-up_0&quot;</span>,    <span class="stringliteral">&quot;ghost-pink-up_1&quot;</span>}</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                },</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                {<span class="stringliteral">&quot;move-down&quot;</span>,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                        {<span class="stringliteral">&quot;ghost-pink-down_0&quot;</span>,  <span class="stringliteral">&quot;ghost-pink-down_1&quot;</span>}</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                },</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                {<span class="stringliteral">&quot;move-right-frightened&quot;</span>,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                        {<span class="stringliteral">&quot;ghost-frightened-right_0&quot;</span>, <span class="stringliteral">&quot;ghost-frightened-right_1&quot;</span>},</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                },</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                {<span class="stringliteral">&quot;move-left-frightened&quot;</span>,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                        {<span class="stringliteral">&quot;ghost-frightened-left_0&quot;</span>,  <span class="stringliteral">&quot;ghost-frightened-left_1&quot;</span>}</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                },</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                {<span class="stringliteral">&quot;move-up-frightened&quot;</span>,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                        {<span class="stringliteral">&quot;ghost-frightened-up_0&quot;</span>,    <span class="stringliteral">&quot;ghost-frightened-up_1&quot;</span>}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                },</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                {<span class="stringliteral">&quot;move-down-frightened&quot;</span>,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                        {<span class="stringliteral">&quot;ghost-frightened-down_0&quot;</span>,  <span class="stringliteral">&quot;ghost-frightened-down_1&quot;</span>}</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        };</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_function" href="classrenderer_1_1PinkGhostView.html#a2f117978ad014311306c03d3a814c063">PinkGhostView</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    };</div>
 </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>} <span class="comment">// renderer</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>} <span class="comment">// renderer</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_PINKGHOSTVIEW_H</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_PINKGHOSTVIEW_H</span></div>
 <div class="ttc" id="aGhostModel_8h_html"><div class="ttname"><a href="GhostModel_8h.html">GhostModel.h</a></div></div>
+<div class="ttc" id="aGhostView_8h_html"><div class="ttname"><a href="GhostView_8h.html">GhostView.h</a></div></div>
 <div class="ttc" id="aModularEntityView_8h_html"><div class="ttname"><a href="ModularEntityView_8h.html">ModularEntityView.h</a></div></div>
-<div class="ttc" id="aclasslogic_1_1GhostModel_html"><div class="ttname"><a href="classlogic_1_1GhostModel.html">logic::GhostModel</a></div><div class="ttdef"><b>Definition</b> GhostModel.h:12</div></div>
-<div class="ttc" id="aclasslogic_1_1IObserver_html"><div class="ttname"><a href="classlogic_1_1IObserver.html">logic::IObserver</a></div><div class="ttdef"><b>Definition</b> IObserver.h:15</div></div>
-<div class="ttc" id="aclasslogic_1_1Size_html"><div class="ttname"><a href="classlogic_1_1Size.html">logic::Size</a></div><div class="ttdef"><b>Definition</b> Size.h:16</div></div>
-<div class="ttc" id="aclassrenderer_1_1ModularEntityView_html"><div class="ttname"><a href="classrenderer_1_1ModularEntityView.html">renderer::ModularEntityView</a></div><div class="ttdef"><b>Definition</b> ModularEntityView.h:16</div></div>
-<div class="ttc" id="aclassrenderer_1_1PinkGhostView_html"><div class="ttname"><a href="classrenderer_1_1PinkGhostView.html">renderer::PinkGhostView</a></div><div class="ttdef"><b>Definition</b> PinkGhostView.h:13</div></div>
-<div class="ttc" id="aclassrenderer_1_1PinkGhostView_html_a2f117978ad014311306c03d3a814c063"><div class="ttname"><a href="classrenderer_1_1PinkGhostView.html#a2f117978ad014311306c03d3a814c063">renderer::PinkGhostView::PinkGhostView</a></div><div class="ttdeci">PinkGhostView()</div><div class="ttdef"><b>Definition</b> PinkGhostView.cpp:32</div></div>
-<div class="ttc" id="aclassrenderer_1_1PinkGhostView_html_a5ca6d3c3ef07be0099cfaa88e87901d4"><div class="ttname"><a href="classrenderer_1_1PinkGhostView.html#a5ca6d3c3ef07be0099cfaa88e87901d4">renderer::PinkGhostView::markForRemoval</a></div><div class="ttdeci">void markForRemoval()</div><div class="ttdef"><b>Definition</b> PinkGhostView.cpp:23</div></div>
-<div class="ttc" id="aclassrenderer_1_1PinkGhostView_html_a731534ca16371b1eba263fc9baac0ed3"><div class="ttname"><a href="classrenderer_1_1PinkGhostView.html#a731534ca16371b1eba263fc9baac0ed3">renderer::PinkGhostView::isMarkedForRemoval</a></div><div class="ttdeci">bool isMarkedForRemoval() override</div><div class="ttdef"><b>Definition</b> PinkGhostView.cpp:19</div></div>
-<div class="ttc" id="aclassrenderer_1_1PinkGhostView_html_a7d5c1e0bdf1e98eb82963d2362f224ad"><div class="ttname"><a href="classrenderer_1_1PinkGhostView.html#a7d5c1e0bdf1e98eb82963d2362f224ad">renderer::PinkGhostView::update</a></div><div class="ttdeci">void update(logic::GhostModel &amp;subject) override</div><div class="ttdef"><b>Definition</b> PinkGhostView.cpp:12</div></div>
-<div class="ttc" id="aclassrenderer_1_1PinkGhostView_html_aab9bee8f61ae8853875682374d602023"><div class="ttname"><a href="classrenderer_1_1PinkGhostView.html#aab9bee8f61ae8853875682374d602023">renderer::PinkGhostView::setSize</a></div><div class="ttdeci">void setSize(const logic::Size &amp;size) override</div><div class="ttdef"><b>Definition</b> PinkGhostView.cpp:27</div></div>
-<div class="ttc" id="aclassrenderer_1_1PinkGhostView_html_ab5938431bd65303cc1ba9345378f6304"><div class="ttname"><a href="classrenderer_1_1PinkGhostView.html#ab5938431bd65303cc1ba9345378f6304">renderer::PinkGhostView::setDirection</a></div><div class="ttdeci">void setDirection(logic::Direction direction)</div><div class="ttdef"><b>Definition</b> PinkGhostView.cpp:77</div></div>
-<div class="ttc" id="anamespacelogic_html_a5ee5130fbbf0b7c9c16c7375e2510c52"><div class="ttname"><a href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">logic::Direction</a></div><div class="ttdeci">Direction</div><div class="ttdef"><b>Definition</b> Directions.h:14</div></div>
+<div class="ttc" id="aclassrenderer_1_1GhostView_html"><div class="ttname"><a href="classrenderer_1_1GhostView.html">renderer::GhostView</a></div><div class="ttdef"><b>Definition</b> GhostView.h:14</div></div>
+<div class="ttc" id="aclassrenderer_1_1PinkGhostView_html"><div class="ttname"><a href="classrenderer_1_1PinkGhostView.html">renderer::PinkGhostView</a></div><div class="ttdef"><b>Definition</b> PinkGhostView.h:14</div></div>
+<div class="ttc" id="aclassrenderer_1_1PinkGhostView_html_a2f117978ad014311306c03d3a814c063"><div class="ttname"><a href="classrenderer_1_1PinkGhostView.html#a2f117978ad014311306c03d3a814c063">renderer::PinkGhostView::PinkGhostView</a></div><div class="ttdeci">PinkGhostView()</div><div class="ttdef"><b>Definition</b> PinkGhostView.cpp:12</div></div>
 <div class="ttc" id="anamespacerenderer_html"><div class="ttname"><a href="namespacerenderer.html">renderer</a></div><div class="ttdef"><b>Definition</b> IAppConfig.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
