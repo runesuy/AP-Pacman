@@ -57,7 +57,8 @@ namespace logic {
             default: {
             }
             case (WorldEvent::FRUIT_EATEN_BY_PLAYER): {
-                entity.setMode(GhostModel::FRIGHTENED);
+                if (entity.getMode() == GhostModel::CHASE)
+                    entity.setMode(GhostModel::FRIGHTENED);
             }
         }
     }
