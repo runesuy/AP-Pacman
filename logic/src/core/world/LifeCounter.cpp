@@ -6,7 +6,7 @@
 #include <algorithm>
 
 namespace logic {
-    const unsigned int LifeCounter::getLifeStart() {
+    unsigned int LifeCounter::getLifeStart() {
         return lifeStart;
     }
 
@@ -22,5 +22,17 @@ namespace logic {
     void LifeCounter::removeLives(unsigned int amount) {
         if (livesLeft < amount) livesLeft = 0;
         else livesLeft -= amount;
+    }
+
+    void LifeCounter::setLivesLeft(unsigned int livesLeft) {
+        LifeCounter::livesLeft = livesLeft;
+    }
+
+    void LifeCounter::update(PlayerModel &subject) {
+
+    }
+
+    void LifeCounter::update(PlayerModel &subject, const std::string &event) {
+        IObserver::update(subject, event);
     }
 } // logic

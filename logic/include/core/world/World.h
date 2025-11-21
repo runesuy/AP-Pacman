@@ -10,6 +10,7 @@
 #include "core/config/IConfig.h"
 #include "Score.h"
 #include <vector>
+#include "LifeCounter.h"
 
 namespace logic {
     class World : public Observable<World> {
@@ -26,6 +27,8 @@ namespace logic {
         std::vector<std::shared_ptr<WorldObject>> objects;
 
         std::shared_ptr<Score> score = std::make_shared<Score>();
+
+        std::shared_ptr<LifeCounter> lifeCounter = std::make_shared<LifeCounter>();
 
         void _handleCollisions();
 

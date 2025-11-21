@@ -5,13 +5,19 @@
 #ifndef AP_PACMAN_LIFECOUNTER_H
 #define AP_PACMAN_LIFECOUNTER_H
 
+#include "game/entities/models/PlayerModel.h"
+
 namespace logic {
 
-    class LifeCounter {
+    class LifeCounter : public IObserver<PlayerModel>, public Observable<LifeCounter> {
         inline static const int lifeStart = 3;
         unsigned int livesLeft = lifeStart;
     public:
-        static const unsigned int getLifeStart();
+        void setLivesLeft(unsigned int livesLeft);
+
+    public:
+        LifeCounter()=default;
+        static unsigned int getLifeStart();
 
         [[nodiscard]] unsigned int getLivesLeft() const;
 
@@ -26,6 +32,10 @@ namespace logic {
          * @param amount
          */
         void removeLives(unsigned int amount);
+
+        void update(PlayerModel &subject) override;
+
+        void update(PlayerModel &subject, const std::string &event) override;
     };
 
 
