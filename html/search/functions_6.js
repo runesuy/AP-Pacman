@@ -11,7 +11,7 @@ var searchData=
   ['getdirection_8',['getDirection',['../classlogic_1_1MovingEntityModel.html#ac60a9bf73b3bbd94b6969cc14f142453',1,'logic::MovingEntityModel']]],
   ['getentityfactory_9',['getentityfactory',['../classlogic_1_1IConfig.html#ad6fb44297695811606ac8b078f1bc076',1,'logic::IConfig::getEntityFactory()'],['../classrenderer_1_1DefaultLogicConfig.html#af4d75b6cb4d070523d368c7230e87f94',1,'renderer::DefaultLogicConfig::getEntityFactory()']]],
   ['getfactorycollection_10',['getfactorycollection',['../classrenderer_1_1IAppConfig.html#ab7b6ad3a0353d446bb2b949252eff4ae',1,'renderer::IAppConfig::getFactoryCollection()'],['../classrenderer_1_1DefaultAppConfig.html#ac2668b14cfbe620fb7329bc6018fe459',1,'renderer::DefaultAppConfig::getFactoryCollection()']]],
-  ['getfrightenedduration_11',['getFrightenedDuration',['../classlogic_1_1GhostModel.html#a74ad3a274b451863f2ac9a3b3aad26b9',1,'logic::GhostModel']]],
+  ['getfrightenedduration_11',['getFrightenedDuration',['../classlogic_1_1GhostModel.html#aa35123cb0da4657c142423dab37e050a',1,'logic::GhostModel']]],
   ['getfrightenedtimer_12',['getFrightenedTimer',['../classlogic_1_1GhostModel.html#ab075cfb8e3196d827b0aeae336a54f98',1,'logic::GhostModel']]],
   ['getghostmode_13',['getGhostMode',['../classrenderer_1_1GhostView.html#a5c0c2c9485131f073ef80c5075b245fd',1,'renderer::GhostView']]],
   ['getgridposition_14',['getGridPosition',['../classlogic_1_1TileMap.html#af2e5cc47d879b59b10bfb532a43afb44',1,'logic::TileMap']]],
