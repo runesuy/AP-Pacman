@@ -21,7 +21,7 @@ Collaboration diagram for logic\+::Moving\+Entity\+Model\texorpdfstring{$<$}{<} 
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=203pt]{classlogic_1_1MovingEntityModel__coll__graph}
+\includegraphics[width=299pt]{classlogic_1_1MovingEntityModel__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
@@ -49,6 +49,8 @@ void \mbox{\hyperlink{classlogic_1_1EntityModel_a20ff77425bb7eb04e201d33ab3f3318
 void \mbox{\hyperlink{classlogic_1_1EntityModel_a804ac2ca9115200dd15d1d207ea9de63}{on\+Collision}} (const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other, \mbox{\hyperlink{classlogic_1_1World}{World}} \&world) final
 \item 
 void \mbox{\hyperlink{classlogic_1_1EntityModel_a4886f0f78a18dbcffc94502a29404505}{handle\+World\+Event}} (\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{World\+EventT}} t) override
+\item 
+const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \& \mbox{\hyperlink{classlogic_1_1EntityModel_a76d63d0763404f03a378e3f0ede85d98}{get\+Spawn\+Position}} () const
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{logic\+::\+Sized\+World\+Object}}}
 \begin{DoxyCompactItemize}
@@ -85,6 +87,10 @@ using \mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d4373
 \begin{DoxyCompactItemize}
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IEntityController}{IEntity\+Controller}}$<$ Entity\+Model\+Type $>$ $>$ \mbox{\hyperlink{classlogic_1_1EntityModel_aee24e152c4f10d4aa870336c34517d13}{controller}}
+\item 
+bool \mbox{\hyperlink{classlogic_1_1EntityModel_a1736b426f60ad3c130bdbb7b381b6bc7}{spawn\+Position\+Set}}
+\item 
+\mbox{\hyperlink{classlogic_1_1Position}{Position}} \mbox{\hyperlink{classlogic_1_1EntityModel_a8d674700220bd1fed0f8c50e896bda8f}{spawn\+Position}}
 \end{DoxyCompactItemize}
 
 
