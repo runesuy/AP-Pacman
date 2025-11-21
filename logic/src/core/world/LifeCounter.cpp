@@ -32,7 +32,7 @@ namespace logic {
 
     }
 
-    void LifeCounter::update(PlayerModel &subject, const std::string &event) {
+    void LifeCounter::update(PlayerModel &subject, int event) {
         IObserver::update(subject, event);
     }
 } // logic

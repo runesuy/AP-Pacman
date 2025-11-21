@@ -24,7 +24,7 @@ namespace logic {
         std::vector<std::shared_ptr<IObserver<T>>> _observers;
 
     public:
-        enum EventType {};
+        using EventType = int;
 
         /**
          * Call update in all observers.
@@ -39,7 +39,7 @@ namespace logic {
          * Update all observers with an event.
          * @param event String event passed to observers.
          */
-        void updateObservers(const std::string &event);
+        void updateObservers(EventType event);
 
         virtual ~Observable();
 
@@ -65,7 +65,7 @@ namespace logic {
     //---------------------- Implementation ------------------------//
 
     template<typename T>
-    void Observable<T>::updateObservers(const std::string &event) {
+    void Observable<T>::updateObservers(EventType event) {
         for (auto &observer: _observers) {
             observer->update(static_cast<T&>(*this), event);
         }

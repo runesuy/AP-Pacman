@@ -41,7 +41,7 @@ namespace logic {
          * Update score based on player event.
          * @param subject
          */
-        void update(PlayerModel &subject, const std::string &event) override;
+        void update(PlayerModel &subject, Observable::EventType event) override;
 
         /**
          * Load the highscores from file.

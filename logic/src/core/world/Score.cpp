@@ -4,13 +4,14 @@
 
 #include "core/world/Score.h"
 #include "core/utils/Stopwatch.h"
+#include "game/entities/ObserverEvents.h"
 
 void logic::Score::update(logic::PlayerModel &subject) {
 
 }
 
-void logic::Score::update(PlayerModel &subject, const std::string &event) {
-    if (event == "COIN_COLLECTED") {
+void logic::Score::update(PlayerModel &subject, Observable::EventType event) {
+    if (event == ObserverEvent::PLAYER_COIN_COLLECTED) {
         score += static_cast<int>(10*(1/(timeSinceLastCoin==0 ? 1 : 1+timeSinceLastCoin*10))); // Example: increase score by 10 for each point collected
         timeSinceLastCoin = 0;
     }

@@ -9,6 +9,7 @@
 #include <typeinfo>
 #include "game/entities/models/CollisionTypes.h"
 #include "game/WorldEvents.h"
+#include "game/entities/ObserverEvents.h"
 
 namespace logic {
     void PlayerController::processCommand(EntityCommand command, PlayerModel &entity) {
@@ -35,7 +36,7 @@ namespace logic {
 
         switch (other.getCollisionType()) {
             case (CollisionType::COIN): {
-                entity.updateObservers("COIN_COLLECTED");
+                entity.updateObservers(ObserverEvent::PLAYER_COIN_COLLECTED);
                 break;
             }
             case(CollisionType::FRUIT): {

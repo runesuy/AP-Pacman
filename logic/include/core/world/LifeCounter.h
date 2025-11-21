@@ -35,7 +35,7 @@ namespace logic {
 
         void update(PlayerModel &subject) override;
 
-        void update(PlayerModel &subject, const std::string &event) override;
+        void update(PlayerModel &subject, int event) override;
     };
 
 
