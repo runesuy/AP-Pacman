@@ -43,6 +43,15 @@ namespace logic {
                 world.sendWorldEvent(WorldEvent::FRUIT_EATEN_BY_PLAYER);
                 break;
             }
+            case(CollisionType::GHOST): {
+                const auto& ghost = dynamic_cast<const GhostModel&>(other);
+                if (ghost.getMode() == GhostModel::CHASE) {
+                    entity.updateObservers(ObserverEvent::PLAYER_KILLED);
+                }
+                if (ghost.getMode() == GhostModel::FRIGHTENED) {
+                    entity.updateObservers(ObserverEvent::PLAYER_GHOST_KILLED);
+                }
+            }
             default:{}
         }
     }
