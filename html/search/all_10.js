@@ -10,13 +10,14 @@ var searchData=
   ['rectanglemodule_2ecpp_7',['RectangleModule.cpp',['../RectangleModule_8cpp.html',1,'']]],
   ['rectanglemodule_2eh_8',['RectangleModule.h',['../RectangleModule_8h.html',1,'']]],
   ['red_9',['RED',['../namespacelogic.html#a36053e250f7e1339ba0a6cbecbdf1b4baa2d9547b5d3dd9f05984475f7c926da0',1,'logic']]],
-  ['redghostview_10',['redghostview',['../classrenderer_1_1RedGhostView.html#a39acb71e2d4e43f782bd443730cd4b84',1,'renderer::RedGhostView::RedGhostView()'],['../classrenderer_1_1RedGhostView.html',1,'renderer::RedGhostView']]],
+  ['redghostview_10',['redghostview',['../classrenderer_1_1RedGhostView.html',1,'renderer::RedGhostView'],['../classrenderer_1_1RedGhostView.html#a39acb71e2d4e43f782bd443730cd4b84',1,'renderer::RedGhostView::RedGhostView()']]],
   ['redghostview_2ecpp_11',['RedGhostView.cpp',['../RedGhostView_8cpp.html',1,'']]],
   ['redghostview_2eh_12',['RedGhostView.h',['../RedGhostView_8h.html',1,'']]],
-  ['removeobject_13',['removeObject',['../classlogic_1_1World.html#aa0ee63479670036e50b093909e6ccfcb',1,'logic::World']]],
-  ['renderer_14',['renderer',['../namespacerenderer.html',1,'']]],
-  ['renderer_3a_3aismoduletype_15',['IsModuleType',['../conceptrenderer_1_1IsModuleType.html',1,'renderer']]],
-  ['returning_5fhome_16',['RETURNING_HOME',['../classlogic_1_1GhostModel.html#aa30135f88fabf78373f93b9cc9da0e4da526cac4a5b3032d7b4f95d7423ec8660',1,'logic::GhostModel']]],
-  ['right_17',['RIGHT',['../namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52ac231e8df5dd5f8ea2500f2a19efbd972',1,'logic']]],
-  ['run_18',['run',['../classrenderer_1_1Game.html#a47e7e9dc327781e6797f3b5f43b9bc8d',1,'renderer::Game']]]
+  ['removelives_13',['removeLives',['../classlogic_1_1LifeCounter.html#ac5dc2d46e6a8617aff37af4da86f1c2a',1,'logic::LifeCounter']]],
+  ['removeobject_14',['removeObject',['../classlogic_1_1World.html#aa0ee63479670036e50b093909e6ccfcb',1,'logic::World']]],
+  ['renderer_15',['renderer',['../namespacerenderer.html',1,'']]],
+  ['renderer_3a_3aismoduletype_16',['IsModuleType',['../conceptrenderer_1_1IsModuleType.html',1,'renderer']]],
+  ['returning_5fhome_17',['RETURNING_HOME',['../classlogic_1_1GhostModel.html#aa30135f88fabf78373f93b9cc9da0e4da526cac4a5b3032d7b4f95d7423ec8660',1,'logic::GhostModel']]],
+  ['right_18',['RIGHT',['../namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52ac231e8df5dd5f8ea2500f2a19efbd972',1,'logic']]],
+  ['run_19',['run',['../classrenderer_1_1Game.html#a47e7e9dc327781e6797f3b5f43b9bc8d',1,'renderer::Game']]]
 ];

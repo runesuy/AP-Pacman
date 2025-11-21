@@ -1,0 +1,63 @@
+\doxysection{logic\+::Life\+Counter Class Reference}
+\hypertarget{classlogic_1_1LifeCounter}{}\label{classlogic_1_1LifeCounter}\index{logic::LifeCounter@{logic::LifeCounter}}
+
+
+{\ttfamily \#include $<$Life\+Counter.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classlogic_1_1LifeCounter_aff3ddfed8b9e4a59f2bcb56fcf99246b}{get\+Lives\+Left}} () const
+\item 
+void \mbox{\hyperlink{classlogic_1_1LifeCounter_a6910b73a8ab7230c78025a3af9898a4c}{add\+Lives}} (unsigned int amount)
+\item 
+void \mbox{\hyperlink{classlogic_1_1LifeCounter_ac5dc2d46e6a8617aff37af4da86f1c2a}{remove\+Lives}} (unsigned int amount)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned int \mbox{\hyperlink{classlogic_1_1LifeCounter_a97a5a235ec5d6044bb70d9082bff9331}{get\+Life\+Start}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1LifeCounter_a6910b73a8ab7230c78025a3af9898a4c}\label{classlogic_1_1LifeCounter_a6910b73a8ab7230c78025a3af9898a4c} 
+\index{logic::LifeCounter@{logic::LifeCounter}!addLives@{addLives}}
+\index{addLives@{addLives}!logic::LifeCounter@{logic::LifeCounter}}
+\doxysubsubsection{\texorpdfstring{addLives()}{addLives()}}
+{\footnotesize\ttfamily void logic\+::\+Life\+Counter\+::add\+Lives (\begin{DoxyParamCaption}\item[{unsigned int}]{amount }\end{DoxyParamCaption})}
+
+Sets lives\+Left to min(life\+Start, lives\+Left + amount) 
+\begin{DoxyParams}{Parameters}
+{\em amount} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlogic_1_1LifeCounter_a97a5a235ec5d6044bb70d9082bff9331}\label{classlogic_1_1LifeCounter_a97a5a235ec5d6044bb70d9082bff9331} 
+\index{logic::LifeCounter@{logic::LifeCounter}!getLifeStart@{getLifeStart}}
+\index{getLifeStart@{getLifeStart}!logic::LifeCounter@{logic::LifeCounter}}
+\doxysubsubsection{\texorpdfstring{getLifeStart()}{getLifeStart()}}
+{\footnotesize\ttfamily const unsigned int logic\+::\+Life\+Counter\+::get\+Life\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classlogic_1_1LifeCounter_aff3ddfed8b9e4a59f2bcb56fcf99246b}\label{classlogic_1_1LifeCounter_aff3ddfed8b9e4a59f2bcb56fcf99246b} 
+\index{logic::LifeCounter@{logic::LifeCounter}!getLivesLeft@{getLivesLeft}}
+\index{getLivesLeft@{getLivesLeft}!logic::LifeCounter@{logic::LifeCounter}}
+\doxysubsubsection{\texorpdfstring{getLivesLeft()}{getLivesLeft()}}
+{\footnotesize\ttfamily unsigned int logic\+::\+Life\+Counter\+::get\+Lives\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classlogic_1_1LifeCounter_ac5dc2d46e6a8617aff37af4da86f1c2a}\label{classlogic_1_1LifeCounter_ac5dc2d46e6a8617aff37af4da86f1c2a} 
+\index{logic::LifeCounter@{logic::LifeCounter}!removeLives@{removeLives}}
+\index{removeLives@{removeLives}!logic::LifeCounter@{logic::LifeCounter}}
+\doxysubsubsection{\texorpdfstring{removeLives()}{removeLives()}}
+{\footnotesize\ttfamily void logic\+::\+Life\+Counter\+::remove\+Lives (\begin{DoxyParamCaption}\item[{unsigned int}]{amount }\end{DoxyParamCaption})}
+
+Removes amount from lives. Lives will not go negative. 
+\begin{DoxyParams}{Parameters}
+{\em amount} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+logic/include/core/world/\mbox{\hyperlink{LifeCounter_8h}{Life\+Counter.\+h}}\item 
+logic/src/core/world/\mbox{\hyperlink{LifeCounter_8cpp}{Life\+Counter.\+cpp}}\end{DoxyCompactItemize}
