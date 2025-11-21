@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['json_0',['json',['../namespacerenderer.html#a616dfcf59236a05856c54829cca34174',1,'renderer']]]
+  ['eventtype_0',['EventType',['../classlogic_1_1Observable.html#a6add39447620f2e3b970478832fca944',1,'logic::Observable']]]
 ];
