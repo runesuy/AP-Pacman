@@ -33,6 +33,12 @@ namespace logic {
          */
         std::shared_ptr<IEntityController<Derived>> controller;
 
+        /**
+         * Position on first update.
+         */
+        bool spawnPositionSet = false;
+        Position spawnPosition;
+
     public:
         /**
          * Sets the controller.
@@ -64,7 +70,14 @@ namespace logic {
         void handleWorldEvent(WorldEventT t) override {
             if (controller) controller->handleWorldEvent(t, static_cast<Derived &>(*this));
         }
+
+        [[nodiscard]] const Position &getSpawnPosition() const;
     };
+
+    template<typename Derived>
+    const Position &EntityModel<Derived>::getSpawnPosition() const {
+        return spawnPosition;
+    }
 
 
     //----------------- Implementation -------------------//
@@ -77,6 +90,10 @@ namespace logic {
 
     template<typename Derived>
     void EntityModel<Derived>::update(World &world) {
+        if (!spawnPositionSet) {
+            spawnPositionSet = true;
+            spawnPosition = getPosition();
+        }
         if (controller) {
             try {
                 controller->update(world, static_cast<Derived &>(*this));
