@@ -60,14 +60,7 @@ namespace logic {
         void removeObject(const WorldObject& object);
 
         template<typename Target>
-        void sendCommandTo(EntityCommand command) {
-            for (const auto& object : objects) {
-                auto target = std::dynamic_pointer_cast<Target>(object);
-                if (target) {
-                    target->processCommand(command);
-                }
-            }
-        };
+        void sendCommandTo(EntityCommand command);
 
         template<typename Target>
         [[nodiscard]] std::vector<std::shared_ptr<Target>> getObjectsOfType() const;
@@ -75,7 +68,13 @@ namespace logic {
         [[nodiscard]] const Score &getScore() const;
 
         Score &getScore() ;
+
+        [[nodiscard]] bool levelComplete() const;
     };
+
+
+
+    //--------------- Implementation--------------------//
 
     template<typename Target>
     std::vector<std::shared_ptr<Target>> World::getObjectsOfType() const {
@@ -85,6 +84,16 @@ namespace logic {
             if (derived) result.push_back(derived);
         }
         return  result;
+    }
+
+    template<typename Target>
+    void World::sendCommandTo(logic::EntityCommand command) {
+        for (const auto& object : objects) {
+            auto target = std::dynamic_pointer_cast<Target>(object);
+            if (target) {
+                target->processCommand(command);
+            }
+        }
     }
 
 } // logic

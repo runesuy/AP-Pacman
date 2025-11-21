@@ -42,3 +42,7 @@ void logic::Score::setScore(int score) {
     Score::score = score;
     updateObservers();
 }
+
+const logic::LifeCounter &logic::Score::getLifeCounter() const {
+    return lifeCounter;
+}

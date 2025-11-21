@@ -78,4 +78,8 @@ namespace logic {
             obj->handleWorldEvent(event);
         }
     }
+
+    bool World::levelComplete() const {
+        return getObjectsOfType<CoinModel>().empty();
+    }
 } // logic

@@ -7,6 +7,7 @@
 
 #include "core/observer/IObserver.h"
 #include "game/entities/models/PlayerModel.h"
+#include "LifeCounter.h"
 
 namespace logic {
     /**
@@ -20,7 +21,10 @@ namespace logic {
         int highScores[5] = {-1, -1, -1, -1, -1};
 
         const int COIN_COLLECT_REWARD = 10;
+        const int GHOST_KILL_REWARD = 200;
         const int SCORE_DECAY_RATE = 1; // per second
+
+        LifeCounter lifeCounter;
     public:
         /**
          * Called on each tick.
@@ -61,6 +65,8 @@ namespace logic {
          * @param score
          */
         void setScore(int score);
+
+        [[nodiscard]] const LifeCounter &getLifeCounter() const;
     };
 }
 
