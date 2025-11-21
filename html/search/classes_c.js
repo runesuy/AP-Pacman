@@ -5,6 +5,5 @@ var searchData=
   ['playermodel_2',['PlayerModel',['../classlogic_1_1PlayerModel.html',1,'logic']]],
   ['playerview_3',['PlayerView',['../classrenderer_1_1PlayerView.html',1,'renderer']]],
   ['position_4',['Position',['../classlogic_1_1Position.html',1,'logic']]],
-  ['powerupcontroller_5',['PowerupController',['../classlogic_1_1PowerupController.html',1,'logic']]],
-  ['powerupview_6',['PowerupView',['../classrenderer_1_1PowerupView.html',1,'renderer']]]
+  ['powerupcontroller_5',['PowerupController',['../classlogic_1_1PowerupController.html',1,'logic']]]
 ];
