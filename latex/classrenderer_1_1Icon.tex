@@ -1,0 +1,147 @@
+\doxysection{renderer\+::Icon Class Reference}
+\hypertarget{classrenderer_1_1Icon}{}\label{classrenderer_1_1Icon}\index{renderer::Icon@{renderer::Icon}}
+
+
+{\ttfamily \#include $<$Icon.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::Icon\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classrenderer_1_1Icon__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::Icon\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classrenderer_1_1Icon__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrenderer_1_1Icon_a99bd901b0769456863d23239d3caccf9}{Icon}} ()=default
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Icon_a8929f988e3a4b035065d78a2a3567434}{get\+SFShapes}} (sf\+::\+Render\+Window \&window) override
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Icon_afcd6b558821369ec228b0ad7e0dbeccc}{get\+SFSprites}} (sf\+::\+Render\+Window \&window) override
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Icon_ab540d52b39531cc09cca31bf26a9f970}{get\+SFTexts}} (sf\+::\+Render\+Window \&window) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Icon_ad8e43d34e6163c911fce8e07a65e29a8}{set\+Texture}} (const sf\+::\+Texture \&texture)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Icon_a0a67136606e3310bb6bb8f85b2e52257}{set\+Size}} (const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1DrawObject}{renderer\+::\+Draw\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \& \mbox{\hyperlink{classrenderer_1_1DrawObject_a1317e66b07b34c0fa2fbf7472f45207e}{get\+Position}} () const
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&position)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de728}{draw}} (sf\+::\+Render\+Window \&window) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrenderer_1_1Icon_a99bd901b0769456863d23239d3caccf9}\label{classrenderer_1_1Icon_a99bd901b0769456863d23239d3caccf9} 
+\index{renderer::Icon@{renderer::Icon}!Icon@{Icon}}
+\index{Icon@{Icon}!renderer::Icon@{renderer::Icon}}
+\doxysubsubsection{\texorpdfstring{Icon()}{Icon()}}
+{\footnotesize\ttfamily renderer\+::\+Icon\+::\+Icon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1Icon_a8929f988e3a4b035065d78a2a3567434}\label{classrenderer_1_1Icon_a8929f988e3a4b035065d78a2a3567434} 
+\index{renderer::Icon@{renderer::Icon}!getSFShapes@{getSFShapes}}
+\index{getSFShapes@{getSFShapes}!renderer::Icon@{renderer::Icon}}
+\doxysubsubsection{\texorpdfstring{getSFShapes()}{getSFShapes()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ renderer\+::\+Icon\+::get\+SFShapes (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get the SFML shapes representing the draw object. \begin{DoxyWarning}{Warning}
+Use the \doxylink{classlogic_1_1Position}{logic\+::\+Position} and \doxylink{classlogic_1_1Size}{logic\+::\+Size} system when giving positions and sizes to the shapes. 
+
+positions are relative to the \doxylink{classrenderer_1_1DrawObject}{Draw\+Object} position. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1DrawObject_a9612dd69d98b224a4088b73b266a9716}{renderer\+::\+Draw\+Object}}.
+
+\Hypertarget{classrenderer_1_1Icon_afcd6b558821369ec228b0ad7e0dbeccc}\label{classrenderer_1_1Icon_afcd6b558821369ec228b0ad7e0dbeccc} 
+\index{renderer::Icon@{renderer::Icon}!getSFSprites@{getSFSprites}}
+\index{getSFSprites@{getSFSprites}!renderer::Icon@{renderer::Icon}}
+\doxysubsubsection{\texorpdfstring{getSFSprites()}{getSFSprites()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ renderer\+::\+Icon\+::get\+SFSprites (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get the SFML sprites representing the draw object. \begin{DoxyWarning}{Warning}
+Use the \doxylink{classlogic_1_1Position}{logic\+::\+Position} and \doxylink{classlogic_1_1Size}{logic\+::\+Size} system when giving positions and sizes 
+
+positions are relative to the \doxylink{classrenderer_1_1DrawObject}{Draw\+Object} position. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1DrawObject_acac924ad07a7f2ee44bec57f13161c31}{renderer\+::\+Draw\+Object}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1Icon_afcd6b558821369ec228b0ad7e0dbeccc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1Icon_ab540d52b39531cc09cca31bf26a9f970}\label{classrenderer_1_1Icon_ab540d52b39531cc09cca31bf26a9f970} 
+\index{renderer::Icon@{renderer::Icon}!getSFTexts@{getSFTexts}}
+\index{getSFTexts@{getSFTexts}!renderer::Icon@{renderer::Icon}}
+\doxysubsubsection{\texorpdfstring{getSFTexts()}{getSFTexts()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ renderer\+::\+Icon\+::get\+SFTexts (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get the SFML texts representing the draw object. \begin{DoxyWarning}{Warning}
+Use the \doxylink{classlogic_1_1Position}{logic\+::\+Position} and \doxylink{classlogic_1_1Size}{logic\+::\+Size} system when giving positions and sizes 
+
+positions are relative to the \doxylink{classrenderer_1_1DrawObject}{Draw\+Object} position. 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1DrawObject_aa4d5616621231dc20620faa1dc5c1b6c}{renderer\+::\+Draw\+Object}}.
+
+\Hypertarget{classrenderer_1_1Icon_a0a67136606e3310bb6bb8f85b2e52257}\label{classrenderer_1_1Icon_a0a67136606e3310bb6bb8f85b2e52257} 
+\index{renderer::Icon@{renderer::Icon}!setSize@{setSize}}
+\index{setSize@{setSize}!renderer::Icon@{renderer::Icon}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void renderer\+::\+Icon\+::set\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&}]{size }\end{DoxyParamCaption})}
+
+\Hypertarget{classrenderer_1_1Icon_ad8e43d34e6163c911fce8e07a65e29a8}\label{classrenderer_1_1Icon_ad8e43d34e6163c911fce8e07a65e29a8} 
+\index{renderer::Icon@{renderer::Icon}!setTexture@{setTexture}}
+\index{setTexture@{setTexture}!renderer::Icon@{renderer::Icon}}
+\doxysubsubsection{\texorpdfstring{setTexture()}{setTexture()}}
+{\footnotesize\ttfamily void renderer\+::\+Icon\+::set\+Texture (\begin{DoxyParamCaption}\item[{const sf\+::\+Texture \&}]{texture }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/core/drawable/ui/\mbox{\hyperlink{Icon_8h}{Icon.\+h}}\item 
+renderer/src/core/drawable/ui/\mbox{\hyperlink{Icon_8cpp}{Icon.\+cpp}}\end{DoxyCompactItemize}

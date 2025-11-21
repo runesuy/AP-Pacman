@@ -17,7 +17,7 @@ var searchData=
   ['levelupdatehandler_14',['LevelUpdateHandler',['../classrenderer_1_1LevelUpdateHandler.html',1,'renderer']]],
   ['levelupdatehandler_2ecpp_15',['LevelUpdateHandler.cpp',['../LevelUpdateHandler_8cpp.html',1,'']]],
   ['levelupdatehandler_2eh_16',['LevelUpdateHandler.h',['../LevelUpdateHandler_8h.html',1,'']]],
-  ['lifecounter_17',['LifeCounter',['../classlogic_1_1LifeCounter.html',1,'logic']]],
+  ['lifecounter_17',['lifecounter',['../classlogic_1_1LifeCounter.html',1,'logic::LifeCounter'],['../classlogic_1_1LifeCounter.html#adc9a66aefb92780e8f4027aa711c6462',1,'logic::LifeCounter::LifeCounter()']]],
   ['lifecounter_2ecpp_18',['LifeCounter.cpp',['../LifeCounter_8cpp.html',1,'']]],
   ['lifecounter_2eh_19',['LifeCounter.h',['../LifeCounter_8h.html',1,'']]],
   ['list_20',['Todo List',['../todo.html',1,'']]],

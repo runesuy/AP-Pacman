@@ -4,20 +4,85 @@
 
 {\ttfamily \#include $<$Life\+Counter.\+h$>$}
 
+
+
+Inheritance diagram for logic\+::Life\+Counter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classlogic_1_1LifeCounter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for logic\+::Life\+Counter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classlogic_1_1LifeCounter__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlogic_1_1LifeCounter_a45bcb66feb5d63a0888a24ce75454150}{set\+Lives\+Left}} (unsigned int lives\+Left)
+\item 
+\mbox{\hyperlink{classlogic_1_1LifeCounter_adc9a66aefb92780e8f4027aa711c6462}{Life\+Counter}} ()=default
 \item 
 unsigned int \mbox{\hyperlink{classlogic_1_1LifeCounter_aff3ddfed8b9e4a59f2bcb56fcf99246b}{get\+Lives\+Left}} () const
 \item 
 void \mbox{\hyperlink{classlogic_1_1LifeCounter_a6910b73a8ab7230c78025a3af9898a4c}{add\+Lives}} (unsigned int amount)
 \item 
 void \mbox{\hyperlink{classlogic_1_1LifeCounter_ac5dc2d46e6a8617aff37af4da86f1c2a}{remove\+Lives}} (unsigned int amount)
+\item 
+void \mbox{\hyperlink{classlogic_1_1LifeCounter_abcca1ee6cf1343398de86928ee4b9b89}{update}} (\mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&subject) override
+\item 
+void \mbox{\hyperlink{classlogic_1_1LifeCounter_afb54959d3766f482ee5ba51e8d1ffcdd}{update}} (\mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&subject, const std\+::string \&event) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IObserver}{logic\+::\+IObserver$<$ Player\+Model $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1IObserver_aa3736db37cb39a0e8f1570c7c3201b33}{\texorpdfstring{$\sim$}{\string~}\+IObserver}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_acdde4b1d124989fc652801832b036eea}{on\+Observable\+Destroyed}} (\mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&subject)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ Life\+Counter $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_afd56bfb66920d8e1d38a3ac3259e85d9}{update\+Observers}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_a73e3a3b1f7ffdd12ffa269541a551ec6}{update\+Observers}} (const std\+::string \&event)
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1Observable_a1f7f0337470804741ddd21ffe82103c1}{\texorpdfstring{$\sim$}{\string~}\+Observable}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_afb2547e65fdf6b4c090f5170df4bf66d}{add\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ \mbox{\hyperlink{classlogic_1_1LifeCounter}{Life\+Counter}} $>$ $>$ \&observer)
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Observable_ad7cb2d9214c5dd7f5aa8a36ef7ce43b9}{has\+Observers}} () const
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Observable_a54bfc543d21f11be7137efce418394c2}{has\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ \mbox{\hyperlink{classlogic_1_1LifeCounter}{Life\+Counter}} $>$ $>$ \&observer) const
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static const unsigned int \mbox{\hyperlink{classlogic_1_1LifeCounter_a97a5a235ec5d6044bb70d9082bff9331}{get\+Life\+Start}} ()
+static unsigned int \mbox{\hyperlink{classlogic_1_1LifeCounter_aaa5a70ff837a3e136a83530802d4491b}{get\+Life\+Start}} ()
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ Life\+Counter $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classlogic_1_1Observable_a637139aff6f941cdc9096713a3f38ea7}{Event\+Type}} 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classlogic_1_1LifeCounter_adc9a66aefb92780e8f4027aa711c6462}\label{classlogic_1_1LifeCounter_adc9a66aefb92780e8f4027aa711c6462} 
+\index{logic::LifeCounter@{logic::LifeCounter}!LifeCounter@{LifeCounter}}
+\index{LifeCounter@{LifeCounter}!logic::LifeCounter@{logic::LifeCounter}}
+\doxysubsubsection{\texorpdfstring{LifeCounter()}{LifeCounter()}}
+{\footnotesize\ttfamily logic\+::\+Life\+Counter\+::\+Life\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -32,11 +97,11 @@ Sets lives\+Left to min(life\+Start, lives\+Left + amount)
 {\em amount} & \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classlogic_1_1LifeCounter_a97a5a235ec5d6044bb70d9082bff9331}\label{classlogic_1_1LifeCounter_a97a5a235ec5d6044bb70d9082bff9331} 
+\Hypertarget{classlogic_1_1LifeCounter_aaa5a70ff837a3e136a83530802d4491b}\label{classlogic_1_1LifeCounter_aaa5a70ff837a3e136a83530802d4491b} 
 \index{logic::LifeCounter@{logic::LifeCounter}!getLifeStart@{getLifeStart}}
 \index{getLifeStart@{getLifeStart}!logic::LifeCounter@{logic::LifeCounter}}
 \doxysubsubsection{\texorpdfstring{getLifeStart()}{getLifeStart()}}
-{\footnotesize\ttfamily const unsigned int logic\+::\+Life\+Counter\+::get\+Life\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily unsigned int logic\+::\+Life\+Counter\+::get\+Life\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 \Hypertarget{classlogic_1_1LifeCounter_aff3ddfed8b9e4a59f2bcb56fcf99246b}\label{classlogic_1_1LifeCounter_aff3ddfed8b9e4a59f2bcb56fcf99246b} 
 \index{logic::LifeCounter@{logic::LifeCounter}!getLivesLeft@{getLivesLeft}}
@@ -55,6 +120,52 @@ Removes amount from lives. Lives will not go negative.
 {\em amount} & \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classlogic_1_1LifeCounter_a45bcb66feb5d63a0888a24ce75454150}\label{classlogic_1_1LifeCounter_a45bcb66feb5d63a0888a24ce75454150} 
+\index{logic::LifeCounter@{logic::LifeCounter}!setLivesLeft@{setLivesLeft}}
+\index{setLivesLeft@{setLivesLeft}!logic::LifeCounter@{logic::LifeCounter}}
+\doxysubsubsection{\texorpdfstring{setLivesLeft()}{setLivesLeft()}}
+{\footnotesize\ttfamily void logic\+::\+Life\+Counter\+::set\+Lives\+Left (\begin{DoxyParamCaption}\item[{unsigned int}]{lives\+Left }\end{DoxyParamCaption})}
+
+\Hypertarget{classlogic_1_1LifeCounter_abcca1ee6cf1343398de86928ee4b9b89}\label{classlogic_1_1LifeCounter_abcca1ee6cf1343398de86928ee4b9b89} 
+\index{logic::LifeCounter@{logic::LifeCounter}!update@{update}}
+\index{update@{update}!logic::LifeCounter@{logic::LifeCounter}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void logic\+::\+Life\+Counter\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called when the subject being observed has changed. 
+\begin{DoxyParams}{Parameters}
+{\em subject} & The subject being observed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1IObserver_ac01efa8f0fbc7495847489c0a8651b28}{logic\+::\+IObserver$<$ Player\+Model $>$}}.
+
+\Hypertarget{classlogic_1_1LifeCounter_afb54959d3766f482ee5ba51e8d1ffcdd}\label{classlogic_1_1LifeCounter_afb54959d3766f482ee5ba51e8d1ffcdd} 
+\index{logic::LifeCounter@{logic::LifeCounter}!update@{update}}
+\index{update@{update}!logic::LifeCounter@{logic::LifeCounter}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void logic\+::\+Life\+Counter\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&}]{subject,  }\item[{const std\+::string \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called when the subject being observed has changed. 
+\begin{DoxyParams}{Parameters}
+{\em subject} & The subject being observed. \\
+\hline
+{\em event} & The event the subject passed. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classlogic_1_1IObserver_aa1e644dd23114de669503363e1dff6e8}{logic\+::\+IObserver$<$ Player\+Model $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classlogic_1_1LifeCounter_afb54959d3766f482ee5ba51e8d1ffcdd_cgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

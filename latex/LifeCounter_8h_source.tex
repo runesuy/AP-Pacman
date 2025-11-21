@@ -9,26 +9,36 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_LIFECOUNTER\_H}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_LIFECOUNTER\_H}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{PlayerModel_8h}{game/entities/models/PlayerModel.h}}"{}}}
 \DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1LifeCounter}{LifeCounter}}\ \{}
-\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ lifeStart\ =\ 3;}
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ livesLeft\ =\ lifeStart;}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classlogic_1_1LifeCounter_a97a5a235ec5d6044bb70d9082bff9331}{getLifeStart}}();}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classlogic_1_1LifeCounter_aff3ddfed8b9e4a59f2bcb56fcf99246b}{getLivesLeft}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1LifeCounter}{LifeCounter}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}<PlayerModel>,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1Observable}{Observable}}<LifeCounter>\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ lifeStart\ =\ 3;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ livesLeft\ =\ lifeStart;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1LifeCounter_a45bcb66feb5d63a0888a24ce75454150}{setLivesLeft}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ livesLeft);}
 \DoxyCodeLine{00017\ }
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1LifeCounter_a6910b73a8ab7230c78025a3af9898a4c}{addLives}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ amount);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1LifeCounter_adc9a66aefb92780e8f4027aa711c6462}{LifeCounter}}()=\textcolor{keywordflow}{default};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classlogic_1_1LifeCounter_aaa5a70ff837a3e136a83530802d4491b}{getLifeStart}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classlogic_1_1LifeCounter_aff3ddfed8b9e4a59f2bcb56fcf99246b}{getLivesLeft}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00023\ }
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1LifeCounter_ac5dc2d46e6a8617aff37af4da86f1c2a}{removeLives}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ amount);}
-\DoxyCodeLine{00029\ \ \ \ \ \};}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \}\ \textcolor{comment}{//\ logic}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1LifeCounter_a6910b73a8ab7230c78025a3af9898a4c}{addLives}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ amount);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1LifeCounter_ac5dc2d46e6a8617aff37af4da86f1c2a}{removeLives}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ amount);}
 \DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_LIFECOUNTER\_H}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1LifeCounter_abcca1ee6cf1343398de86928ee4b9b89}{update}}(\mbox{\hyperlink{classlogic_1_1PlayerModel}{PlayerModel}}\ \&subject)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1LifeCounter_abcca1ee6cf1343398de86928ee4b9b89}{update}}(\mbox{\hyperlink{classlogic_1_1PlayerModel}{PlayerModel}}\ \&subject,\ \textcolor{keyword}{const}\ std::string\ \&event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ \ \ \ \ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \}\ \textcolor{comment}{//\ logic}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_LIFECOUNTER\_H}}
 
 \end{DoxyCode}
