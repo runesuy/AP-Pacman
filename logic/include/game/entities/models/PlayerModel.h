@@ -13,7 +13,7 @@ namespace logic {
     class PlayerModel : public MovingEntityModel<PlayerModel>, public Observable<PlayerModel> {
     public:
     private:
-        const float SPEED = 0.3f;
+        const float SPEED = 5.0;
         inline static const CollisionType collisionType = PLAYER;
     public:
         PlayerModel();
@@ -22,7 +22,7 @@ namespace logic {
 
         void setSize(const Size &size) override;
 
-        float getSpeed() override;
+        float getSpeed() const override;
 
         void setDirection(Direction direction) override;
 

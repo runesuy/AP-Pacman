@@ -31,7 +31,7 @@ namespace logic {
         /**
          * @return A constant or variable speed of the moving entity.
          */
-        virtual float getSpeed() = 0;
+        [[nodiscard]] virtual float getSpeed() const = 0;
 
         /**
          * Request the entity to turn to requestedDirection when possible.

@@ -20,7 +20,7 @@ namespace logic {
         setController(std::make_shared<PlayerController>());
     }
 
-    float PlayerModel::getSpeed() {
+    float PlayerModel::getSpeed() const {
         return SPEED;
     }
 

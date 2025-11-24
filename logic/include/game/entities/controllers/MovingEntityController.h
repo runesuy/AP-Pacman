@@ -30,11 +30,19 @@ namespace logic {
 
         static TileMap::TileType getTileInDirection(const World& world, const EntityModelType& entity, Direction direction) ;
 
+        double _getTileScaledSpeed(World& world, const EntityModelType &entity) const;
+
     public:
         void update(World &world, EntityModelType &entity) override;
 
         virtual void onWallCollision(logic::World &world, EntityModelType &entity) {};
         };
+
+    template<typename EntityModelType>
+    double MovingEntityController<EntityModelType>::_getTileScaledSpeed(World& world, const EntityModelType &entity) const {
+        float tileSize = world.getConfig().getTileMap().getTileSize();
+        return entity.getSpeed()*tileSize;
+    }
 
     template<typename EntityModelType>
     std::tuple<bool, Position>
@@ -64,15 +72,17 @@ namespace logic {
 
         TileMap::TileType tileInFront = getTileInDirection(world, entity, entity.getDirection());
         auto [isPastCenter, tileCenter] = _isPastOrOnCenter(world, entity, entity.getDirection());
+
         if (tileInFront != TileMap::TileType::WALL || !isPastCenter) {
+            double scaledSpeed = _getTileScaledSpeed(world, entity);
             if (entity.getDirection() == Direction::LEFT)
-                entity.setPosition(entity.getPosition() + Position(-entity.getSpeed(), 0)* delta);
+                entity.setPosition(entity.getPosition() + Position(-scaledSpeed, 0)* delta);
             else if (entity.getDirection() == Direction::RIGHT)
-                entity.setPosition(entity.getPosition() + Position(entity.getSpeed(), 0)*delta);
+                entity.setPosition(entity.getPosition() + Position(scaledSpeed, 0)*delta);
             else if (entity.getDirection() == Direction::UP)
-                entity.setPosition(entity.getPosition() + Position(0, entity.getSpeed())*delta);
+                entity.setPosition(entity.getPosition() + Position(0, scaledSpeed)*delta);
             else if (entity.getDirection() == Direction::DOWN)
-                entity.setPosition(entity.getPosition() + Position(0, -entity.getSpeed())*delta);
+                entity.setPosition(entity.getPosition() + Position(0, -scaledSpeed)*delta);
         }
         else {
             auto [isPastCenter, tileCenter] = _isPastOrOnCenter(world, entity, entity.getDirection());

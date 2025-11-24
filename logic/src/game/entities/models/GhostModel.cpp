@@ -25,7 +25,7 @@ namespace logic {
         updateObservers();
     }
 
-    float GhostModel::getSpeed() {
+    float GhostModel::getSpeed() const {
         switch (mode) {
             default:
                 return CHASE_SPEED;

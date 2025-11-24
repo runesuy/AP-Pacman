@@ -19,9 +19,8 @@ namespace logic {
             WAITING
         };
     private:
-        float SPEED = 0.2f;
-        const float CHASE_SPEED = 0.2f;
-        const float FRIGHTENED_SPEED = 0.1f;
+        const float CHASE_SPEED = 3.0f;
+        const float FRIGHTENED_SPEED = 1.0f;
         Position returnPosition{0, 0};
 
         Mode mode = WAITING;
@@ -41,7 +40,7 @@ namespace logic {
 
         void markForRemoval() override;
 
-        float getSpeed() override;
+        float getSpeed() const override;
 
         void setDirection(Direction direction) override;
 
