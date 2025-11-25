@@ -14,6 +14,9 @@ namespace logic {
     class GhostController : public MovingEntityController<GhostModel> {
         const std::unique_ptr<INavigationAgent> returnNavigationAgent = std::make_unique<ManhattanNavigationAgent>();
         const std::unique_ptr<INavigationAgent> frightenedNavigationAgent = std::make_unique<ManhattanNavigationAgent>();
+    protected:
+        static std::vector<Direction> getViableDirections(const World &world, const GhostModel &entity);
+        static bool isAtIntersectionOrDeadEnd(const World &world, const GhostModel &entity);
     public:
         void update(World &world, GhostModel &entity) override;
 

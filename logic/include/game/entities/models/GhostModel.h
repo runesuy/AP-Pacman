@@ -40,7 +40,7 @@ namespace logic {
 
         void markForRemoval() override;
 
-        float getSpeed() const override;
+        [[nodiscard]] float getSpeed() const override;
 
         void setDirection(Direction direction) override;
 

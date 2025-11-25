@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <map>
 #include <limits>
+#include <iostream>
 #include "core/utils/Random.h"
 
 namespace logic {
@@ -18,17 +19,20 @@ namespace logic {
         // calculate options | result : vector with directions with the smallest distance
         std::vector<Direction> options;
         double minimumDistance = std::numeric_limits<double>::infinity();
+        const double eps = 0.01;
         for (const auto &[d, pr]: m) {
-            if (pr.first < minimumDistance) {
+            if (pr.first - minimumDistance < -eps) {
                 minimumDistance = pr.first;
                 options = {d};
-            } else if (pr.first == minimumDistance) {
+            } else if (std::abs(pr.first-minimumDistance) < eps) {
                 options.push_back(d);
             }
         }
 
         // choose random one of options
         if (options.empty()) return NONE;
+        if (options.size() > 1) {
+            std::cout << "AAAAA"; }
         int randomInt = Random::getInstance()->getIntInRange(0, options.size() - 1);
         return options.at(randomInt);
     }

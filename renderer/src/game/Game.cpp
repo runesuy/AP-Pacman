@@ -27,6 +27,7 @@ int renderer::Game::run() {
         logic::Stopwatch::getInstance()->tick();
         //--------- Process Input ---------
         sf::Event event{};
+        bool cont = false;
         while (window.pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
@@ -34,10 +35,13 @@ int renderer::Game::run() {
             if (event.type == sf::Event::Resized) {
                 sf::FloatRect visibleArea(0, 0, event.size.width, event.size.height);
                 window.setView(sf::View(visibleArea));
+                cont = true;
             }
 
             stateManager->processInput(event);
         }
+        if (cont) continue;
+        if (logic::Stopwatch::getInstance()->getDeltaTime() >0.1) continue;
 
         //--------- Update ---------
         stateManager->update();

@@ -27,8 +27,6 @@ namespace logic {
          * @param entity
          */
         static void chooseDirection(logic::World &world, logic::GhostModel &entity);
-
-        static std::vector<Direction> getViableDirections(const World &world, const GhostModel &entity);
     };
 
 }

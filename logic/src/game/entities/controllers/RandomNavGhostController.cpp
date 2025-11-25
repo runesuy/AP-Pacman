@@ -30,18 +30,6 @@ void logic::RandomNavGhostController::onWallCollision(logic::World &world, logic
     chooseDirection(world, entity);
 }
 
-std::vector<logic::Direction>
-logic::RandomNavGhostController::getViableDirections(const logic::World &world, const logic::GhostModel &entity) {
-    std::vector<Direction> viableDirections;
-    for (Direction dir : {Direction::UP, Direction::DOWN, Direction::LEFT, Direction::RIGHT}) {
-        TileMap::TileType tileInDirection = getTileInDirection(world, entity, dir);
-        if (tileInDirection != TileMap::TileType::WALL) {
-            viableDirections.push_back(dir);
-        }
-    }
-    return viableDirections;
-}
-
 void logic::RandomNavGhostController::chooseDirection(logic::World &world, logic::GhostModel &entity) {
     bool change = Random::getInstance()->getIntInRange(0,1);
     if (!change) return;

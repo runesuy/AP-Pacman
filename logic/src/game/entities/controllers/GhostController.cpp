@@ -31,11 +31,13 @@ namespace logic {
         }
 
         // returning mode
-        if (!get<0>(_isPastCenter(world, entity, entity.getDirection())) &&
-            entity.getMode() == GhostModel::RETURNING_HOME) {
-            entity.setRequestedDirection(
-                    returnNavigationAgent->getNavigationDirection(entity.getPosition(), entity.getReturnPosition(),
-                                                                  world));
+        if (!get<0>(_isPastCenter(world, entity, entity.getDirection()))) {
+            if (entity.getMode() == GhostModel::RETURNING_HOME && (entity.getDirection() == NONE ||
+                                                                   isAtIntersectionOrDeadEnd(world, entity))) {
+                entity.setRequestedDirection(
+                        returnNavigationAgent->getNavigationDirection(entity.getPosition(), entity.getReturnPosition(),
+                                                                      world));
+            }
             const auto &tileMap = world.getConfig().getTileMap();
             if (tileMap.getGridPosition(entity.getPosition()) == tileMap.getGridPosition(entity.getReturnPosition())) {
                 entity.setMode(GhostModel::CHASE);
@@ -74,5 +76,25 @@ namespace logic {
             entity.setMode(GhostModel::RETURNING_HOME);
         }
     }
+
+    std::vector<logic::Direction>
+    logic::GhostController::getViableDirections(const logic::World &world, const logic::GhostModel &entity) {
+        std::vector<Direction> viableDirections;
+        for (Direction dir : {Direction::UP, Direction::DOWN, Direction::LEFT, Direction::RIGHT}) {
+            TileMap::TileType tileInDirection = getTileInDirection(world, entity, dir);
+            if (tileInDirection != TileMap::TileType::WALL) {
+                viableDirections.push_back(dir);
+            }
+        }
+        return viableDirections;
+    }
+
+    bool GhostController::isAtIntersectionOrDeadEnd(const World &world, const GhostModel &entity) {
+        auto viableDirections = getViableDirections(world, entity);
+        return viableDirections.size() != 2 ||
+        std::find(viableDirections.begin(), viableDirections.end(), entity.getDirection())==viableDirections.end() ||
+        std::find(viableDirections.begin(), viableDirections.end(), getOppositeDirection(entity.getDirection()))==viableDirections.end();
+    }
+
 
 } // logic
