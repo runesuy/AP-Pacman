@@ -51,11 +51,12 @@ virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_ae3b0e2339729244ae
 \item 
 virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_afc00d163ce088cd89b18b282ddf7e3e0}{handle\+World\+Event}} (\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{World\+Object\+::\+World\+EventT}} event, Derived\+Entity\+Model \&entity)
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Additional Inherited Members}
-\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classlogic_1_1MovingEntityController}{logic\+::\+Moving\+Entity\+Controller$<$ Ghost\+Model $>$}}}
+\doxysubsubsection*{Static Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-double \mbox{\hyperlink{classlogic_1_1MovingEntityController_a695645ec08000e5e158b719f3093c14e}{\+\_\+get\+Tile\+Scaled\+Speed}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world, const \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&entity) const
+static std\+::vector$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} $>$ \mbox{\hyperlink{classlogic_1_1GhostController_a2555cbdaeaaada701f2e2775896bd43d}{get\+Viable\+Directions}} (const \mbox{\hyperlink{classlogic_1_1World}{World}} \&world, const \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&entity)
+\item 
+static bool \mbox{\hyperlink{classlogic_1_1GhostController_a06ad5ac2574e45ad07df65a7068e3ad3}{is\+At\+Intersection\+Or\+Dead\+End}} (const \mbox{\hyperlink{classlogic_1_1World}{World}} \&world, const \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&entity)
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{classlogic_1_1MovingEntityController}{logic\+::\+Moving\+Entity\+Controller$<$ Ghost\+Model $>$}}}
 \begin{DoxyCompactItemize}
@@ -66,9 +67,21 @@ static std\+::tuple$<$ bool, \mbox{\hyperlink{classlogic_1_1Position}{Position}}
 \item 
 static \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}{Tile\+Map\+::\+Tile\+Type}} \mbox{\hyperlink{classlogic_1_1MovingEntityController_ae3016077b6427131d2ba9c73cd7b0541}{get\+Tile\+In\+Direction}} (const \mbox{\hyperlink{classlogic_1_1World}{World}} \&world, const \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&entity, \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} direction)
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classlogic_1_1MovingEntityController}{logic\+::\+Moving\+Entity\+Controller$<$ Ghost\+Model $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classlogic_1_1MovingEntityController_a695645ec08000e5e158b719f3093c14e}{\+\_\+get\+Tile\+Scaled\+Speed}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world, const \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&entity) const
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1GhostController_a2555cbdaeaaada701f2e2775896bd43d}\label{classlogic_1_1GhostController_a2555cbdaeaaada701f2e2775896bd43d} 
+\index{logic::GhostController@{logic::GhostController}!getViableDirections@{getViableDirections}}
+\index{getViableDirections@{getViableDirections}!logic::GhostController@{logic::GhostController}}
+\doxysubsubsection{\texorpdfstring{getViableDirections()}{getViableDirections()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{logic\+::\+Direction}} $>$ logic\+::\+Ghost\+Controller\+::get\+Viable\+Directions (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{const \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
 \Hypertarget{classlogic_1_1GhostController_aeba3f9707ff49bd10c53c721c48b5002}\label{classlogic_1_1GhostController_aeba3f9707ff49bd10c53c721c48b5002} 
 \index{logic::GhostController@{logic::GhostController}!handleWorldEvent@{handleWorldEvent}}
 \index{handleWorldEvent@{handleWorldEvent}!logic::GhostController@{logic::GhostController}}
@@ -81,6 +94,20 @@ Here is the call graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classlogic_1_1GhostController_aeba3f9707ff49bd10c53c721c48b5002_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlogic_1_1GhostController_a06ad5ac2574e45ad07df65a7068e3ad3}\label{classlogic_1_1GhostController_a06ad5ac2574e45ad07df65a7068e3ad3} 
+\index{logic::GhostController@{logic::GhostController}!isAtIntersectionOrDeadEnd@{isAtIntersectionOrDeadEnd}}
+\index{isAtIntersectionOrDeadEnd@{isAtIntersectionOrDeadEnd}!logic::GhostController@{logic::GhostController}}
+\doxysubsubsection{\texorpdfstring{isAtIntersectionOrDeadEnd()}{isAtIntersectionOrDeadEnd()}}
+{\footnotesize\ttfamily bool logic\+::\+Ghost\+Controller\+::is\+At\+Intersection\+Or\+Dead\+End (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{const \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1GhostController_a06ad5ac2574e45ad07df65a7068e3ad3_cgraph}
 \end{center}
 \end{figure}
 \Hypertarget{classlogic_1_1GhostController_a1cb9229b0097664fc029929d9aa1827f}\label{classlogic_1_1GhostController_a1cb9229b0097664fc029929d9aa1827f} 

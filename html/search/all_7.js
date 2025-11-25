@@ -56,7 +56,7 @@ var searchData=
   ['gettilemap_53',['gettilemap',['../classlogic_1_1IConfig.html#aa6cde30e5eb1db08d33c49ed30d72f5f',1,'logic::IConfig::getTileMap()'],['../classrenderer_1_1DefaultLogicConfig.html#ae7baef062c61c68b042a88d669ee47f5',1,'renderer::DefaultLogicConfig::getTileMap()']]],
   ['gettilesize_54',['getTileSize',['../classlogic_1_1TileMap.html#a1b57cd4600c865db3cbfb791b42717bf',1,'logic::TileMap']]],
   ['gettiletype_55',['gettiletype',['../classlogic_1_1TileMap.html#adb53cb4ee7398b449c8d084d25ea4510',1,'logic::TileMap::getTileType(const Position &amp;position) const'],['../classlogic_1_1TileMap.html#a281c7d3d6623b61a65695c79490b8c62',1,'logic::TileMap::getTileType(unsigned int row, unsigned int col) const']]],
-  ['getviabledirections_56',['getViableDirections',['../classlogic_1_1RandomNavGhostController.html#ac11832e834e4e82fe419e20463cf8c00',1,'logic::RandomNavGhostController']]],
+  ['getviabledirections_56',['getViableDirections',['../classlogic_1_1GhostController.html#a2555cbdaeaaada701f2e2775896bd43d',1,'logic::GhostController']]],
   ['getviewtarget_57',['getViewTarget',['../classrenderer_1_1DefaultEntityFactory.html#ac433a23050444f6d2aaae43fb2671369',1,'renderer::DefaultEntityFactory']]],
   ['getworld_58',['getWorld',['../classrenderer_1_1LevelState.html#a985a6130dc1cd71665ef27ff2ecc15c9',1,'renderer::LevelState']]],
   ['getworldview_59',['getWorldView',['../classrenderer_1_1LevelState.html#aab7f1d9df1307f492ebbd7904f952153',1,'renderer::LevelState']]],

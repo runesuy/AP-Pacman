@@ -75,6 +75,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="classlogic_1_1GhostController-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">logic::GhostController Class Reference</div></div>
 </div><!--header-->
@@ -135,11 +136,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afc00d163ce088cd89b18b282ddf7e3e0 inherit pub_methods_classlogic_1_1IEntityController" id="r_afc00d163ce088cd89b18b282ddf7e3e0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IEntityController.html#afc00d163ce088cd89b18b282ddf7e3e0">handleWorldEvent</a> (<a class="el" href="classlogic_1_1WorldObject.html#a2c8c9cce37d13cbc0acf8a6d3d437373">WorldObject::WorldEventT</a> event, DerivedEntityModel &amp;entity)</td></tr>
 <tr class="separator:afc00d163ce088cd89b18b282ddf7e3e0 inherit pub_methods_classlogic_1_1IEntityController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_classlogic_1_1MovingEntityController"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classlogic_1_1MovingEntityController')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classlogic_1_1MovingEntityController.html">logic::MovingEntityController&lt; GhostModel &gt;</a></td></tr>
-<tr class="memitem:a695645ec08000e5e158b719f3093c14e inherit pro_methods_classlogic_1_1MovingEntityController" id="r_a695645ec08000e5e158b719f3093c14e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1MovingEntityController.html#a695645ec08000e5e158b719f3093c14e">_getTileScaledSpeed</a> (<a class="el" href="classlogic_1_1World.html">World</a> &amp;world, const <a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> &amp;entity) const</td></tr>
-<tr class="separator:a695645ec08000e5e158b719f3093c14e inherit pro_methods_classlogic_1_1MovingEntityController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a2555cbdaeaaada701f2e2775896bd43d" id="r_a2555cbdaeaaada701f2e2775896bd43d"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1GhostController.html#a2555cbdaeaaada701f2e2775896bd43d">getViableDirections</a> (const <a class="el" href="classlogic_1_1World.html">World</a> &amp;world, const <a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> &amp;entity)</td></tr>
+<tr class="separator:a2555cbdaeaaada701f2e2775896bd43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ad5ac2574e45ad07df65a7068e3ad3" id="r_a06ad5ac2574e45ad07df65a7068e3ad3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1GhostController.html#a06ad5ac2574e45ad07df65a7068e3ad3">isAtIntersectionOrDeadEnd</a> (const <a class="el" href="classlogic_1_1World.html">World</a> &amp;world, const <a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> &amp;entity)</td></tr>
+<tr class="separator:a06ad5ac2574e45ad07df65a7068e3ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_methods_classlogic_1_1MovingEntityController"><td colspan="2" onclick="javascript:toggleInherit('pro_static_methods_classlogic_1_1MovingEntityController')"><img src="closed.png" alt="-"/>&#160;Static Protected Member Functions inherited from <a class="el" href="classlogic_1_1MovingEntityController.html">logic::MovingEntityController&lt; GhostModel &gt;</a></td></tr>
 <tr class="memitem:a73ec56f81d7b0e35cd2870596c47a904 inherit pro_static_methods_classlogic_1_1MovingEntityController" id="r_a73ec56f81d7b0e35cd2870596c47a904"><td class="memItemLeft" align="right" valign="top">static std::tuple&lt; bool, <a class="el" href="classlogic_1_1Position.html">Position</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1MovingEntityController.html#a73ec56f81d7b0e35cd2870596c47a904">_isPastOrOnCenter</a> (const <a class="el" href="classlogic_1_1World.html">logic::World</a> &amp;world, const <a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> &amp;entity, <a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a> direction)</td></tr>
 <tr class="separator:a73ec56f81d7b0e35cd2870596c47a904 inherit pro_static_methods_classlogic_1_1MovingEntityController"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,8 +149,50 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ac1e017f33e1035f879e14e4be09b455c inherit pro_static_methods_classlogic_1_1MovingEntityController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3016077b6427131d2ba9c73cd7b0541 inherit pro_static_methods_classlogic_1_1MovingEntityController" id="r_ae3016077b6427131d2ba9c73cd7b0541"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classlogic_1_1TileMap.html#a5da8a4243a7f7605c4fa1d8c84db37f9">TileMap::TileType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1MovingEntityController.html#ae3016077b6427131d2ba9c73cd7b0541">getTileInDirection</a> (const <a class="el" href="classlogic_1_1World.html">World</a> &amp;world, const <a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> &amp;entity, <a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a> direction)</td></tr>
 <tr class="separator:ae3016077b6427131d2ba9c73cd7b0541 inherit pro_static_methods_classlogic_1_1MovingEntityController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classlogic_1_1MovingEntityController"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classlogic_1_1MovingEntityController')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classlogic_1_1MovingEntityController.html">logic::MovingEntityController&lt; GhostModel &gt;</a></td></tr>
+<tr class="memitem:a695645ec08000e5e158b719f3093c14e inherit pro_methods_classlogic_1_1MovingEntityController" id="r_a695645ec08000e5e158b719f3093c14e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1MovingEntityController.html#a695645ec08000e5e158b719f3093c14e">_getTileScaledSpeed</a> (<a class="el" href="classlogic_1_1World.html">World</a> &amp;world, const <a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> &amp;entity) const</td></tr>
+<tr class="separator:a695645ec08000e5e158b719f3093c14e inherit pro_methods_classlogic_1_1MovingEntityController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2555cbdaeaaada701f2e2775896bd43d" name="a2555cbdaeaaada701f2e2775896bd43d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2555cbdaeaaada701f2e2775896bd43d">&#9670;&#160;</a></span>getViableDirections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">logic::Direction</a> &gt; logic::GhostController::getViableDirections </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlogic_1_1World.html">World</a> &amp;&#160;</td>
+          <td class="paramname"><em>world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> &amp;&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aeba3f9707ff49bd10c53c721c48b5002" name="aeba3f9707ff49bd10c53c721c48b5002"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeba3f9707ff49bd10c53c721c48b5002">&#9670;&#160;</a></span>handleWorldEvent()</h2>
 
@@ -206,6 +250,56 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="329,265,397,244,399,250,330,270"/>
 <area shape="rect" href="classlogic_1_1WorldObject.html#ae414bee61532c20edbaf252f5dbeae74" title=" " alt="" coords="421,267,546,307"/>
 <area shape="poly" title=" " alt="" coords="330,284,405,284,405,290,330,290"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a06ad5ac2574e45ad07df65a7068e3ad3" name="a06ad5ac2574e45ad07df65a7068e3ad3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06ad5ac2574e45ad07df65a7068e3ad3">&#9670;&#160;</a></span>isAtIntersectionOrDeadEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool logic::GhostController::isAtIntersectionOrDeadEnd </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlogic_1_1World.html">World</a> &amp;&#160;</td>
+          <td class="paramname"><em>world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> &amp;&#160;</td>
+          <td class="paramname"><em>entity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classlogic_1_1GhostController_a06ad5ac2574e45ad07df65a7068e3ad3_cgraph.png" border="0" usemap="#aclasslogic_1_1GhostController_a06ad5ac2574e45ad07df65a7068e3ad3_cgraph" alt=""/></div>
+<map name="aclasslogic_1_1GhostController_a06ad5ac2574e45ad07df65a7068e3ad3_cgraph" id="aclasslogic_1_1GhostController_a06ad5ac2574e45ad07df65a7068e3ad3_cgraph">
+<area shape="rect" title=" " alt="" coords="5,63,190,103"/>
+<area shape="rect" href="classlogic_1_1MovingEntityModel.html#ac60a9bf73b3bbd94b6969cc14f142453" title=" " alt="" coords="244,5,407,46"/>
+<area shape="poly" title=" " alt="" coords="180,60,228,47,229,52,181,65"/>
+<area shape="rect" href="namespacelogic.html#a2209715fe15bb3f89c92ef8073de9b04" title=" " alt="" coords="238,70,413,96"/>
+<area shape="poly" title=" " alt="" coords="190,80,222,80,222,86,190,86"/>
+<area shape="rect" href="classlogic_1_1GhostController.html#a2555cbdaeaaada701f2e2775896bd43d" title=" " alt="" coords="253,120,398,161"/>
+<area shape="poly" title=" " alt="" coords="181,101,238,116,237,121,180,106"/>
 </map>
 </div>
 
@@ -307,52 +401,59 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classlogic_1_1GhostController_a8b06b2000603ac58aafbbbb3032dcb0a_cgraph.png" border="0" usemap="#aclasslogic_1_1GhostController_a8b06b2000603ac58aafbbbb3032dcb0a_cgraph" alt=""/></div>
 <map name="aclasslogic_1_1GhostController_a8b06b2000603ac58aafbbbb3032dcb0a_cgraph" id="aclasslogic_1_1GhostController_a8b06b2000603ac58aafbbbb3032dcb0a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,529,150,570"/>
+<area shape="rect" title=" " alt="" coords="5,563,150,603"/>
 <area shape="rect" href="classlogic_1_1MovingEntityController.html#ac1e017f33e1035f879e14e4be09b455c" title=" " alt="" coords="198,5,399,46"/>
-<area shape="poly" title=" " alt="" coords="78,529,91,430,116,288,132,215,150,149,172,94,196,56,197,54,201,58,200,59,176,96,155,150,137,217,121,289,97,431,84,530"/>
+<area shape="poly" title=" " alt="" coords="78,562,90,457,114,305,130,227,148,156,170,97,196,56,197,54,201,58,200,59,175,99,154,157,135,229,119,306,96,458,83,563"/>
 <area shape="rect" href="classlogic_1_1World.html#a16d6a106df682d833d19735fc8f0a1ea" title=" " alt="" coords="225,70,372,96"/>
-<area shape="poly" title=" " alt="" coords="79,529,93,438,118,311,134,247,152,188,173,139,196,106,209,96,212,101,200,110,178,142,157,190,139,248,123,313,98,439,84,529"/>
-<area shape="rect" href="classlogic_1_1MovingEntityModel.html#ac60a9bf73b3bbd94b6969cc14f142453" title=" " alt="" coords="217,120,380,161"/>
-<area shape="poly" title=" " alt="" coords="76,529,82,461,99,366,114,314,134,263,161,215,196,172,202,166,205,170,200,175,166,218,139,265,119,316,104,367,87,462,82,529"/>
-<area shape="rect" href="classlogic_1_1GhostModel.html#aa35123cb0da4657c142423dab37e050a" title=" " alt="" coords="224,185,373,226"/>
-<area shape="poly" title=" " alt="" coords="78,529,87,471,107,394,122,352,142,310,166,271,196,237,209,227,212,231,200,241,170,275,146,313,127,354,112,395,92,473,83,529"/>
-<area shape="rect" href="classlogic_1_1GhostModel.html#ab075cfb8e3196d827b0aeae336a54f98" title=" " alt="" coords="232,251,365,291"/>
-<area shape="poly" title=" " alt="" coords="81,528,94,483,117,424,150,362,172,333,196,308,216,293,219,298,199,312,176,337,155,365,122,427,99,485,86,530"/>
-<area shape="rect" href="classlogic_1_1Stopwatch.html#ac6a008dc21f2179c8783caacf0114c0e" title=" " alt="" coords="447,537,637,562"/>
-<area shape="poly" title=" " alt="" coords="82,528,95,488,118,438,151,390,172,368,196,351,250,327,298,319,346,328,400,351,426,367,448,387,486,433,515,481,533,521,528,523,510,483,482,436,445,391,422,371,398,356,344,333,298,325,252,332,199,356,175,372,155,393,122,441,100,490,87,530"/>
-<area shape="rect" href="classlogic_1_1GhostModel.html#af319b6eda1da39921f26ac2ae5711549" title=" " alt="" coords="233,365,364,406"/>
-<area shape="poly" title=" " alt="" coords="90,527,133,473,163,443,196,417,218,405,220,410,199,421,167,447,137,476,95,531"/>
-<area shape="rect" href="classlogic_1_1World.html#a8982fe868e154e8595bd3736b57305ca" title=" " alt="" coords="220,431,377,471"/>
-<area shape="poly" title=" " alt="" coords="112,526,197,482,214,475,216,480,199,487,114,531"/>
-<area shape="rect" href="classlogic_1_1WorldObject.html#aac0f498afeff654fee790e435617de04" title=" " alt="" coords="236,496,361,537"/>
-<area shape="poly" title=" " alt="" coords="150,536,220,525,221,531,151,541"/>
-<area shape="rect" href="classlogic_1_1GhostModel.html#a08bce7b616df091ca65fa6ac2c70bc95" title=" " alt="" coords="233,561,364,602"/>
-<area shape="poly" title=" " alt="" coords="151,558,218,567,217,573,150,563"/>
-<area shape="rect" href="classlogic_1_1GhostModel.html#add46b750cd95aac3868ea8553acca093" title=" " alt="" coords="233,627,364,667"/>
-<area shape="poly" title=" " alt="" coords="115,568,199,611,220,620,218,625,197,616,113,573"/>
-<area shape="rect" href="classlogic_1_1GhostModel.html#add1e77e061893880c511f64a2aa1cb12" title=" " alt="" coords="233,692,364,733"/>
-<area shape="poly" title=" " alt="" coords="95,569,138,623,167,652,199,677,220,688,218,693,196,681,163,656,134,626,91,572"/>
-<area shape="rect" href="classlogic_1_1IConfig.html#aa6cde30e5eb1db08d33c49ed30d72f5f" title=" " alt="" coords="216,757,381,783"/>
-<area shape="poly" title=" " alt="" coords="88,569,103,607,126,654,158,702,199,742,207,747,204,752,196,746,154,705,121,657,98,609,83,571"/>
-<area shape="rect" href="classlogic_1_1GhostModel.html#a164cda08501efb98f3db42d5cdaf3989" title=" " alt="" coords="476,872,609,913"/>
-<area shape="poly" title=" " alt="" coords="82,570,89,629,107,708,122,750,142,790,167,826,199,857,218,867,244,875,311,885,388,890,460,891,460,897,387,896,310,891,242,880,216,872,196,861,163,830,137,793,117,752,102,710,84,630,77,571"/>
-<area shape="rect" href="classlogic_1_1GhostModel.html#a0be928fc21c21965bc82b17524edc716" title=" " alt="" coords="477,991,607,1031"/>
-<area shape="poly" title=" " alt="" coords="83,570,94,670,116,813,132,886,151,951,173,1004,186,1023,199,1037,231,1056,267,1067,304,1072,343,1071,418,1057,482,1035,484,1040,419,1062,343,1076,304,1077,266,1073,229,1061,196,1041,182,1026,169,1006,146,953,126,887,111,814,89,671,78,570"/>
-<area shape="rect" href="classlogic_1_1MovingEntityModel.html#a36a87400133117f50cba0f14d6f459e0" title=" " alt="" coords="217,921,380,962"/>
-<area shape="poly" title=" " alt="" coords="83,570,89,633,108,721,123,769,143,817,168,861,200,901,211,911,207,915,196,905,164,864,138,819,118,771,103,723,84,634,77,571"/>
-<area shape="rect" href="classlogic_1_1GhostModel.html#ac455ae19d66e47094f399e08ae17f43f" title=" " alt="" coords="233,987,364,1027"/>
-<area shape="poly" title=" " alt="" coords="81,570,83,645,98,753,113,811,134,869,162,924,200,972,221,987,218,992,196,976,158,927,129,871,108,813,93,754,78,646,76,571"/>
-<area shape="rect" href="classlogic_1_1MovingEntityController.html#a6dc0f5fe7e6001eb437664da3441ab63" title=" " alt="" coords="207,807,390,847"/>
-<area shape="poly" title=" " alt="" coords="86,570,98,616,120,676,153,739,175,768,199,793,203,796,200,800,196,797,171,771,149,742,115,678,93,617,80,571"/>
-<area shape="rect" href="classlogic_1_1Observable.html#afd56bfb66920d8e1d38a3ac3259e85d9" title=" " alt="" coords="685,872,896,913"/>
-<area shape="poly" title=" " alt="" coords="609,890,670,890,670,895,609,895"/>
-<area shape="poly" title=" " alt="" coords="586,988,731,918,733,922,588,992"/>
-<area shape="poly" title=" " alt="" coords="380,804,397,793,423,769,446,742,484,682,512,623,530,576,535,578,517,626,489,684,450,745,427,773,401,797,383,808"/>
-<area shape="rect" href="classlogic_1_1GhostModel.html#a1c0ddb635a6b41907577c67c01377cb9" title=" " alt="" coords="477,807,607,847"/>
-<area shape="poly" title=" " alt="" coords="390,824,461,824,461,830,390,830"/>
-<area shape="poly" title=" " alt="" coords="608,841,696,865,695,870,607,847"/>
-<area shape="rect" href="classlogic_1_1WorldObject.html#ae414bee61532c20edbaf252f5dbeae74" title=" " alt="" coords="728,807,853,847"/>
-<area shape="poly" title=" " alt="" coords="607,824,712,824,712,830,607,830"/>
+<area shape="poly" title=" " alt="" coords="79,562,92,467,117,333,133,264,152,201,173,149,196,113,210,101,213,106,200,117,177,151,157,203,138,265,122,334,98,468,84,563"/>
+<area shape="rect" href="classlogic_1_1MovingEntityModel.html#ac60a9bf73b3bbd94b6969cc14f142453" title=" " alt="" coords="461,147,624,187"/>
+<area shape="poly" title=" " alt="" coords="79,562,92,473,116,350,132,287,150,231,172,186,196,157,228,138,262,126,298,119,335,117,407,124,471,139,469,144,406,130,335,123,298,124,263,131,230,143,199,161,176,189,155,233,137,289,121,351,97,474,84,563"/>
+<area shape="rect" href="classlogic_1_1GhostModel.html#aa35123cb0da4657c142423dab37e050a" title=" " alt="" coords="224,171,373,211"/>
+<area shape="poly" title=" " alt="" coords="77,562,83,497,101,407,116,357,136,309,163,263,196,222,208,212,212,216,200,226,167,266,141,311,121,359,106,408,88,498,82,563"/>
+<area shape="rect" href="classlogic_1_1GhostModel.html#ab075cfb8e3196d827b0aeae336a54f98" title=" " alt="" coords="232,236,365,277"/>
+<area shape="poly" title=" " alt="" coords="79,562,88,508,109,434,124,395,144,356,167,320,196,288,216,273,219,278,199,292,171,323,148,359,129,397,114,436,94,509,84,563"/>
+<area shape="rect" href="classlogic_1_1Stopwatch.html#ac6a008dc21f2179c8783caacf0114c0e" title=" " alt="" coords="447,809,637,835"/>
+<area shape="poly" title=" " alt="" coords="86,603,99,645,121,699,154,752,175,775,199,794,229,810,260,822,327,835,393,838,453,834,453,840,393,843,326,840,259,827,226,815,196,799,171,779,149,755,116,701,94,647,81,605"/>
+<area shape="rect" href="classlogic_1_1GhostModel.html#af319b6eda1da39921f26ac2ae5711549" title=" " alt="" coords="233,367,364,407"/>
+<area shape="poly" title=" " alt="" coords="86,561,128,491,159,452,196,418,218,406,220,410,199,422,163,456,132,494,91,564"/>
+<area shape="rect" href="classlogic_1_1World.html#a8982fe868e154e8595bd3736b57305ca" title=" " alt="" coords="220,432,377,473"/>
+<area shape="poly" title=" " alt="" coords="98,560,141,522,196,483,210,477,212,481,199,488,144,526,101,564"/>
+<area shape="rect" href="classlogic_1_1WorldObject.html#aac0f498afeff654fee790e435617de04" title=" " alt="" coords="236,497,361,538"/>
+<area shape="poly" title=" " alt="" coords="148,560,220,538,221,543,149,565"/>
+<area shape="rect" href="classlogic_1_1GhostModel.html#a08bce7b616df091ca65fa6ac2c70bc95" title=" " alt="" coords="233,563,364,603"/>
+<area shape="poly" title=" " alt="" coords="150,580,218,580,218,586,150,586"/>
+<area shape="rect" href="classlogic_1_1GhostModel.html#add46b750cd95aac3868ea8553acca093" title=" " alt="" coords="233,628,364,669"/>
+<area shape="poly" title=" " alt="" coords="149,601,219,622,217,627,148,606"/>
+<area shape="rect" href="classlogic_1_1GhostModel.html#add1e77e061893880c511f64a2aa1cb12" title=" " alt="" coords="233,693,364,734"/>
+<area shape="poly" title=" " alt="" coords="101,602,144,640,199,678,220,688,218,693,196,683,141,644,98,606"/>
+<area shape="rect" href="classlogic_1_1IConfig.html#aa6cde30e5eb1db08d33c49ed30d72f5f" title=" " alt="" coords="216,758,381,784"/>
+<area shape="poly" title=" " alt="" coords="90,602,107,634,131,672,162,711,199,744,209,749,206,754,196,748,158,715,126,675,102,637,86,605"/>
+<area shape="rect" href="classlogic_1_1GhostController.html#a06ad5ac2574e45ad07df65a7068e3ad3" title=" " alt="" coords="206,301,391,342"/>
+<area shape="poly" title=" " alt="" coords="81,561,95,518,118,462,151,404,172,377,196,353,202,348,205,352,199,357,176,380,155,407,123,464,100,520,87,563"/>
+<area shape="rect" href="classlogic_1_1GhostModel.html#a164cda08501efb98f3db42d5cdaf3989" title=" " alt="" coords="476,1043,609,1083"/>
+<area shape="poly" title=" " alt="" coords="83,603,93,707,115,856,130,932,150,1000,173,1054,186,1075,199,1089,231,1108,267,1120,304,1124,343,1123,418,1109,482,1087,484,1092,419,1114,343,1128,304,1129,266,1125,229,1113,196,1093,181,1078,168,1057,144,1002,125,933,109,857,88,708,78,604"/>
+<area shape="rect" href="classlogic_1_1GhostModel.html#a0be928fc21c21965bc82b17524edc716" title=" " alt="" coords="477,924,607,965"/>
+<area shape="poly" title=" " alt="" coords="82,604,87,665,104,750,119,794,140,837,166,876,199,909,218,919,244,927,312,938,389,943,462,943,462,949,389,948,311,943,243,932,216,924,196,913,162,880,135,840,114,796,99,751,82,666,77,604"/>
+<area shape="rect" href="classlogic_1_1MovingEntityModel.html#a36a87400133117f50cba0f14d6f459e0" title=" " alt="" coords="217,973,380,1014"/>
+<area shape="poly" title=" " alt="" coords="82,604,88,670,106,763,121,813,141,864,167,911,200,953,211,963,207,967,196,957,162,914,136,866,115,815,100,764,83,670,77,604"/>
+<area shape="rect" href="classlogic_1_1GhostModel.html#ac455ae19d66e47094f399e08ae17f43f" title=" " alt="" coords="233,1039,364,1079"/>
+<area shape="poly" title=" " alt="" coords="81,604,82,681,87,735,96,794,110,855,132,916,161,973,200,1024,221,1039,217,1044,196,1028,157,976,127,918,105,857,91,795,82,735,77,682,75,604"/>
+<area shape="rect" href="classlogic_1_1MovingEntityController.html#a6dc0f5fe7e6001eb437664da3441ab63" title=" " alt="" coords="207,859,390,899"/>
+<area shape="poly" title=" " alt="" coords="85,603,98,651,120,714,153,780,175,811,199,838,212,849,209,853,196,842,170,814,148,783,115,716,92,652,80,604"/>
+<area shape="poly" title=" " alt="" coords="372,298,398,286,459,242,509,197,513,201,463,247,400,291,374,303"/>
+<area shape="rect" href="namespacelogic.html#a2209715fe15bb3f89c92ef8073de9b04" title=" " alt="" coords="455,338,630,364"/>
+<area shape="poly" title=" " alt="" coords="391,330,439,336,438,341,391,335"/>
+<area shape="rect" href="classlogic_1_1GhostController.html#a2555cbdaeaaada701f2e2775896bd43d" title=" " alt="" coords="470,273,614,314"/>
+<area shape="poly" title=" " alt="" coords="391,308,454,301,455,306,391,314"/>
+<area shape="rect" href="classlogic_1_1Observable.html#afd56bfb66920d8e1d38a3ac3259e85d9" title=" " alt="" coords="685,924,896,965"/>
+<area shape="poly" title=" " alt="" coords="586,1040,731,970,733,974,588,1044"/>
+<area shape="poly" title=" " alt="" coords="607,942,670,942,670,947,607,947"/>
+<area shape="poly" title=" " alt="" coords="387,855,469,836,470,841,388,861"/>
+<area shape="rect" href="classlogic_1_1GhostModel.html#a1c0ddb635a6b41907577c67c01377cb9" title=" " alt="" coords="477,859,607,899"/>
+<area shape="poly" title=" " alt="" coords="390,876,461,876,461,882,390,882"/>
+<area shape="poly" title=" " alt="" coords="608,893,696,917,695,922,607,899"/>
+<area shape="rect" href="classlogic_1_1WorldObject.html#ae414bee61532c20edbaf252f5dbeae74" title=" " alt="" coords="728,859,853,899"/>
+<area shape="poly" title=" " alt="" coords="607,876,712,876,712,882,607,882"/>
 </map>
 </div>
 
