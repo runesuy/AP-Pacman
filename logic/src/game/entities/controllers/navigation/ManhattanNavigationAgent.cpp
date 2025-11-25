@@ -31,8 +31,6 @@ namespace logic {
 
         // choose random one of options
         if (options.empty()) return NONE;
-        if (options.size() > 1) {
-            std::cout << "AAAAA"; }
         int randomInt = Random::getInstance()->getIntInRange(0, options.size() - 1);
         return options.at(randomInt);
     }
