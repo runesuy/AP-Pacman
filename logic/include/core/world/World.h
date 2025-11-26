@@ -73,6 +73,8 @@ namespace logic {
         Score &getScore() ;
 
         [[nodiscard]] bool levelComplete() const;
+
+        [[nodiscard]] bool isGameOver() const;
     };
 
 

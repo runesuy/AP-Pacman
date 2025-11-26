@@ -18,6 +18,9 @@ void logic::Score::update(PlayerModel &subject, Observable::EventType event) {
     if (event == ObserverEvent::PLAYER_GHOST_KILLED) {
         score += GHOST_KILL_REWARD;
     }
+    if (event == ObserverEvent::PLAYER_KILLED) {
+        lifeCounter.removeLives(1);
+    }
     updateObservers();
 }
 

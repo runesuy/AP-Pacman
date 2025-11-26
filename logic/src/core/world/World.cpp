@@ -82,4 +82,8 @@ namespace logic {
     bool World::levelComplete() const {
         return getObjectsOfType<CoinModel>().empty();
     }
+
+    bool World::isGameOver() const {
+        return lifeCounter->getLivesLeft() == 0;
+    }
 } // logic
