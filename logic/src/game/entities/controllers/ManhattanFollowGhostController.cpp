@@ -14,7 +14,8 @@ namespace logic {
         if (!get<0>(_isPastCenter(world, entity, entity.getDirection())) && entity.getMode() == GhostModel::CHASE
         && (isAtIntersectionOrDeadEnd(world, entity)||entity.getDirection() == NONE)) {
             entity.setRequestedDirection(
-                    navigationAgent->getNavigationDirection(entity.getPosition(), player->getPosition(), world));
+                    navigationAgent->getNavigationDirection(entity.getPosition(), player->getPosition(), world, {
+                            getOppositeDirection(entity.getDirection())}));
         }
 
         GhostController::update(world, entity);

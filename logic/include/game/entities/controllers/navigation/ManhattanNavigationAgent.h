@@ -7,11 +7,13 @@
 
 #include "core/entity/INavigationAgent.h"
 #include <map>
+#include <functional>
 
 namespace logic {
 
     class ManhattanNavigationAgent : public INavigationAgent {
-        using DirectionsMap = std::map<Direction, std::pair<double, TileMap::TileType>>;
+        using DirectionsMapPair = std::pair<double, TileMap::TileType>;
+        using DirectionsMap = std::map<Direction, DirectionsMapPair>;
         [[nodiscard]] static double _calculateManhattanDistance(const Position &current, const Position &target) ;
 
         [[nodiscard]] static double
@@ -24,12 +26,14 @@ namespace logic {
 
         static void _removeNonViableDirections(DirectionsMap& m);
 
+        static std::set<Direction> _selectBestOptions(const DirectionsMap& , double start, const std::function<bool(double current, double compare)> &compare);
+
     public:
         [[nodiscard]] Direction
-        getNavigationDirection(const Position &current, const Position &target, const World &world) const override;
+        getNavigationDirection(const Position &current, const Position &target, const World &world,std::set<Direction> excludeIfOtherOptions) const override;
 
         Direction
-        getNavigationDirectionAway(const Position &current, const Position &target, const World &world) const override;
+        getNavigationDirectionAway(const Position &current, const Position &target, const World &world, std::set<Direction> excludeIfOtherOptions) const override;
     };
 
 } // logic

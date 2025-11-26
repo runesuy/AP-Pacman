@@ -4,8 +4,7 @@
 
 #ifndef AP_PACMAN_DIRECTIONS_H
 #define AP_PACMAN_DIRECTIONS_H
-
-#endif //AP_PACMAN_DIRECTIONS_H
+#include <vector>
 
 namespace logic {
     /**
@@ -27,3 +26,4 @@ namespace logic {
      */
     Direction getOppositeDirection(Direction direction);
 }
+#endif //AP_PACMAN_DIRECTIONS_H

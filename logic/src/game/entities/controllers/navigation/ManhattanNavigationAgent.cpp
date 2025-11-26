@@ -12,27 +12,34 @@
 
 namespace logic {
     Direction ManhattanNavigationAgent::getNavigationDirection(const Position &current, const Position &target,
-                                                               const World &world) const {
+                                                               const World &world,
+                                                               std::set<Direction> excludeIfOtherOptions) const {
         auto m = _getDirectionMap(current, target, world);
         _removeNonViableDirections(m);
 
         // calculate options | result : vector with directions with the smallest distance
-        std::vector<Direction> options;
         double minimumDistance = std::numeric_limits<double>::infinity();
-        const double eps = 0.01;
-        for (const auto &[d, pr]: m) {
-            if (pr.first - minimumDistance < -eps) {
-                minimumDistance = pr.first;
-                options = {d};
-            } else if (std::abs(pr.first-minimumDistance) < eps) {
-                options.push_back(d);
-            }
+        // calculate options | result : vector with directions with the least distance
+        auto comp = [](double current, double compare) -> bool {
+            return current < compare;
+        };
+
+        // in order for more dynamic movement and to not get stuck in certain corners
+        // we will only turn 180 degrees if this is the only option:
+        auto mWithoutExclude = m;
+        erase_if(mWithoutExclude, [excludeIfOtherOptions](auto d) { return excludeIfOtherOptions.contains(d.first); });
+
+        std::set<Direction> options = _selectBestOptions(mWithoutExclude,minimumDistance, comp);
+        if (options.empty()) {
+            options = _selectBestOptions(m,minimumDistance, comp);
         }
+
 
         // choose random one of options
         if (options.empty()) return NONE;
         int randomInt = Random::getInstance()->getIntInRange(0, options.size() - 1);
-        return options.at(randomInt);
+        std::vector<Direction> temp = {options.begin(), options.end()};
+        return temp.at(randomInt);
     }
 
     double ManhattanNavigationAgent::_calculateManhattanDistance(const Position &current, const Position &target) {
@@ -78,25 +85,51 @@ namespace logic {
     }
 
     Direction ManhattanNavigationAgent::getNavigationDirectionAway(const Position &current, const Position &target,
-                                                                   const World &world) const {
+                                                                   const World &world,
+                                                                   std::set<Direction> excludeIfOtherOptions) const {
         auto m = _getDirectionMap(current, target, world);
         _removeNonViableDirections(m);
 
         // calculate options | result : vector with directions with the largest distance
-        std::vector<Direction> options;
-        double maximumDistance = -std::numeric_limits<double>::infinity();
-        for (const auto &[d, pr]: m) {
-            if (pr.first > maximumDistance) {
-                maximumDistance = pr.first;
-                options = {d};
-            } else if (pr.first == maximumDistance) {
-                options.push_back(d);
-            }
+        auto comp = [](double current, double compare) -> bool {
+            return current > compare;
+        };
+
+        // in order for more dynamic movement and to not get stuck in certain corners
+        // we will only turn 180 degrees if this is the only option:
+        auto mWithoutExclude = m;
+        erase_if(mWithoutExclude, [excludeIfOtherOptions](auto d) { return excludeIfOtherOptions.contains(d.first); });
+
+        std::set<Direction> options = _selectBestOptions(mWithoutExclude,-1, comp);
+        if (options.empty()) {
+            options = _selectBestOptions(m, -1, comp);
         }
 
         // choose random one of options
         if (options.empty()) return NONE;
         int randomInt = Random::getInstance()->getIntInRange(0, options.size() - 1);
-        return options.at(randomInt);
+        std::vector<Direction> temp = {options.begin(), options.end()};
+        return temp.at(randomInt);
+    }
+
+    std::set<Direction>
+    ManhattanNavigationAgent::_selectBestOptions(const ManhattanNavigationAgent::DirectionsMap &directionsMap,
+                                                 double start,
+                                                 const std::function<bool(double current,
+                                                                          double compare)> &compare) {
+
+        std::set<Direction> options;
+        const double eps = 0.01;
+        double maximumDistance = start;
+        for (const auto &[d, pr]: directionsMap) {
+            if (std::abs(pr.first - maximumDistance)<eps) {
+                options.insert(d);
+            }
+            else if (compare(pr.first, maximumDistance)) {
+                maximumDistance = pr.first;
+                options = {d};
+            }
+        }
+        return options;
     }
 } // logic

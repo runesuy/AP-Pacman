@@ -2,6 +2,8 @@
 // Created by runes on 20/11/2025.
 //
 #include "core/world/space/Directions.h"
+#include <vector>
+#include <algorithm>
 
 namespace logic {
 

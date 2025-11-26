@@ -36,7 +36,7 @@ namespace logic {
                                                                    isAtIntersectionOrDeadEnd(world, entity))) {
                 entity.setRequestedDirection(
                         returnNavigationAgent->getNavigationDirection(entity.getPosition(), entity.getReturnPosition(),
-                                                                      world));
+                                                                      world, {getOppositeDirection(entity.getDirection())}));
             }
             const auto &tileMap = world.getConfig().getTileMap();
             if (tileMap.getGridPosition(entity.getPosition()) == tileMap.getGridPosition(entity.getReturnPosition())) {
@@ -50,7 +50,7 @@ namespace logic {
             auto player = world.getObjectsOfType<PlayerModel>().at(0);
             entity.setRequestedDirection(
                     frightenedNavigationAgent->getNavigationDirectionAway(entity.getPosition(), player->getPosition(),
-                                                                          world));
+                                                                          world, {getOppositeDirection(entity.getDirection())}));
         }
     }
 
