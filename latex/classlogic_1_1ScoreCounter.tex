@@ -1,0 +1,143 @@
+\doxysection{logic\+::Score\+Counter Class Reference}
+\hypertarget{classlogic_1_1ScoreCounter}{}\label{classlogic_1_1ScoreCounter}\index{logic::ScoreCounter@{logic::ScoreCounter}}
+
+
+{\ttfamily \#include $<$Score\+Counter.\+h$>$}
+
+
+
+Inheritance diagram for logic\+::Score\+Counter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classlogic_1_1ScoreCounter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for logic\+::Score\+Counter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classlogic_1_1ScoreCounter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlogic_1_1ScoreCounter_a30fb3775a759c50d553704148827b54a}{process\+Event}} (\mbox{\hyperlink{classlogic_1_1ObservableTypes_a2e3a4285a9bc569d4d2939ae894937af}{Observable\+Types\+::\+Event\+Type}} event)
+\item 
+void \mbox{\hyperlink{classlogic_1_1ScoreCounter_a8d2cd9b487b6992c9ad886187585b8d7}{load\+High\+Scores}} (const std\+::string \&filename)
+\item 
+void \mbox{\hyperlink{classlogic_1_1ScoreCounter_a99bd490710c39a431717a02c6de16919}{save\+High\+Scores}} (const std\+::string \&filename) const
+\item 
+int \mbox{\hyperlink{classlogic_1_1ScoreCounter_a755cf1c8450edbec95de8e559f9fdc5f}{get\+Score}} () const
+\item 
+void \mbox{\hyperlink{classlogic_1_1ScoreCounter_ac56ea1b1be7db845ebed8df886d05837}{set\+Score}} (int score)
+\item 
+void \mbox{\hyperlink{classlogic_1_1ScoreCounter_a5c13f3c12207bfc936bd9f7433255d00}{on\+Tick}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ Score\+Counter $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_afd56bfb66920d8e1d38a3ac3259e85d9}{update\+Observers}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_a75facf45b44f9a29a42eb91355bf3629}{update\+Observers}} (\mbox{\hyperlink{classlogic_1_1ObservableTypes_a2e3a4285a9bc569d4d2939ae894937af}{Observable\+Types\+::\+Event\+Type}} event)
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1Observable_a1f7f0337470804741ddd21ffe82103c1}{\texorpdfstring{$\sim$}{\string~}\+Observable}} ()
+\item 
+void \mbox{\hyperlink{classlogic_1_1Observable_afb2547e65fdf6b4c090f5170df4bf66d}{add\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ \mbox{\hyperlink{classlogic_1_1ScoreCounter}{Score\+Counter}} $>$ $>$ \&observer)
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Observable_ad7cb2d9214c5dd7f5aa8a36ef7ce43b9}{has\+Observers}} () const
+\item 
+bool \mbox{\hyperlink{classlogic_1_1Observable_a54bfc543d21f11be7137efce418394c2}{has\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ \mbox{\hyperlink{classlogic_1_1ScoreCounter}{Score\+Counter}} $>$ $>$ \&observer) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1ScoreCounter_a755cf1c8450edbec95de8e559f9fdc5f}\label{classlogic_1_1ScoreCounter_a755cf1c8450edbec95de8e559f9fdc5f} 
+\index{logic::ScoreCounter@{logic::ScoreCounter}!getScore@{getScore}}
+\index{getScore@{getScore}!logic::ScoreCounter@{logic::ScoreCounter}}
+\doxysubsubsection{\texorpdfstring{getScore()}{getScore()}}
+{\footnotesize\ttfamily int logic\+::\+Score\+Counter\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The current score. 
+\end{DoxyReturn}
+\Hypertarget{classlogic_1_1ScoreCounter_a8d2cd9b487b6992c9ad886187585b8d7}\label{classlogic_1_1ScoreCounter_a8d2cd9b487b6992c9ad886187585b8d7} 
+\index{logic::ScoreCounter@{logic::ScoreCounter}!loadHighScores@{loadHighScores}}
+\index{loadHighScores@{loadHighScores}!logic::ScoreCounter@{logic::ScoreCounter}}
+\doxysubsubsection{\texorpdfstring{loadHighScores()}{loadHighScores()}}
+{\footnotesize\ttfamily void logic\+::\+Score\+Counter\+::load\+High\+Scores (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Load the highscores from file. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlogic_1_1ScoreCounter_a5c13f3c12207bfc936bd9f7433255d00}\label{classlogic_1_1ScoreCounter_a5c13f3c12207bfc936bd9f7433255d00} 
+\index{logic::ScoreCounter@{logic::ScoreCounter}!onTick@{onTick}}
+\index{onTick@{onTick}!logic::ScoreCounter@{logic::ScoreCounter}}
+\doxysubsubsection{\texorpdfstring{onTick()}{onTick()}}
+{\footnotesize\ttfamily void logic\+::\+Score\+Counter\+::on\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1ScoreCounter_a5c13f3c12207bfc936bd9f7433255d00_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlogic_1_1ScoreCounter_a30fb3775a759c50d553704148827b54a}\label{classlogic_1_1ScoreCounter_a30fb3775a759c50d553704148827b54a} 
+\index{logic::ScoreCounter@{logic::ScoreCounter}!processEvent@{processEvent}}
+\index{processEvent@{processEvent}!logic::ScoreCounter@{logic::ScoreCounter}}
+\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}}
+{\footnotesize\ttfamily void logic\+::\+Score\+Counter\+::process\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1ObservableTypes_a2e3a4285a9bc569d4d2939ae894937af}{Observable\+Types\+::\+Event\+Type}}}]{event }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1ScoreCounter_a30fb3775a759c50d553704148827b54a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlogic_1_1ScoreCounter_a99bd490710c39a431717a02c6de16919}\label{classlogic_1_1ScoreCounter_a99bd490710c39a431717a02c6de16919} 
+\index{logic::ScoreCounter@{logic::ScoreCounter}!saveHighScores@{saveHighScores}}
+\index{saveHighScores@{saveHighScores}!logic::ScoreCounter@{logic::ScoreCounter}}
+\doxysubsubsection{\texorpdfstring{saveHighScores()}{saveHighScores()}}
+{\footnotesize\ttfamily void logic\+::\+Score\+Counter\+::save\+High\+Scores (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const}
+
+Load save the highscores to file. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlogic_1_1ScoreCounter_ac56ea1b1be7db845ebed8df886d05837}\label{classlogic_1_1ScoreCounter_ac56ea1b1be7db845ebed8df886d05837} 
+\index{logic::ScoreCounter@{logic::ScoreCounter}!setScore@{setScore}}
+\index{setScore@{setScore}!logic::ScoreCounter@{logic::ScoreCounter}}
+\doxysubsubsection{\texorpdfstring{setScore()}{setScore()}}
+{\footnotesize\ttfamily void logic\+::\+Score\+Counter\+::set\+Score (\begin{DoxyParamCaption}\item[{int}]{score }\end{DoxyParamCaption})}
+
+Set the score; 
+\begin{DoxyParams}{Parameters}
+{\em score} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1ScoreCounter_ac56ea1b1be7db845ebed8df886d05837_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+logic/include/core/world/\mbox{\hyperlink{ScoreCounter_8h}{Score\+Counter.\+h}}\item 
+logic/src/core/world/space/\mbox{\hyperlink{ScoreCounter_8cpp}{Score\+Counter.\+cpp}}\end{DoxyCompactItemize}

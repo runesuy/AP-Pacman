@@ -16,5 +16,5 @@ var searchData=
   ['entityview_13',['EntityView',['../classrenderer_1_1EntityView.html',1,'renderer']]],
   ['entityview_2ecpp_14',['EntityView.cpp',['../EntityView_8cpp.html',1,'']]],
   ['entityview_2eh_15',['EntityView.h',['../EntityView_8h.html',1,'']]],
-  ['eventtype_16',['EventType',['../classlogic_1_1Observable.html#a6add39447620f2e3b970478832fca944',1,'logic::Observable']]]
+  ['eventtype_16',['EventType',['../classlogic_1_1ObservableTypes.html#a2e3a4285a9bc569d4d2939ae894937af',1,'logic::ObservableTypes']]]
 ];

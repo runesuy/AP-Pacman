@@ -27,7 +27,7 @@ var searchData=
   ['iobserver_3c_20logic_3a_3aghostmodel_20_3e_24',['IObserver&lt; logic::GhostModel &gt;',['../classlogic_1_1IObserver.html',1,'logic']]],
   ['iobserver_3c_20logic_3a_3alifecounter_20_3e_25',['IObserver&lt; logic::LifeCounter &gt;',['../classlogic_1_1IObserver.html',1,'logic']]],
   ['iobserver_3c_20logic_3a_3aplayermodel_20_3e_26',['IObserver&lt; logic::PlayerModel &gt;',['../classlogic_1_1IObserver.html',1,'logic']]],
-  ['iobserver_3c_20logic_3a_3ascore_20_3e_27',['IObserver&lt; logic::Score &gt;',['../classlogic_1_1IObserver.html',1,'logic']]],
+  ['iobserver_3c_20logic_3a_3ascorecounter_20_3e_27',['IObserver&lt; logic::ScoreCounter &gt;',['../classlogic_1_1IObserver.html',1,'logic']]],
   ['iobserver_3c_20logic_3a_3awallmodel_20_3e_28',['IObserver&lt; logic::WallModel &gt;',['../classlogic_1_1IObserver.html',1,'logic']]],
   ['iobserver_3c_20logic_3a_3aworld_20_3e_29',['IObserver&lt; logic::World &gt;',['../classlogic_1_1IObserver.html',1,'logic']]],
   ['iobserver_3c_20modularentityview_20_3e_30',['IObserver&lt; ModularEntityView &gt;',['../classlogic_1_1IObserver.html',1,'logic']]],

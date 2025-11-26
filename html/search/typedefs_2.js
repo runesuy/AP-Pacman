@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['eventtype_0',['EventType',['../classlogic_1_1Observable.html#a6add39447620f2e3b970478832fca944',1,'logic::Observable']]]
+  ['eventtype_0',['EventType',['../classlogic_1_1ObservableTypes.html#a2e3a4285a9bc569d4d2939ae894937af',1,'logic::ObservableTypes']]]
 ];

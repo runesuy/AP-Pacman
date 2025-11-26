@@ -7,8 +7,9 @@ var searchData=
   ['observable_3c_20lifecounter_20_3e_4',['Observable&lt; LifeCounter &gt;',['../classlogic_1_1Observable.html',1,'logic']]],
   ['observable_3c_20modularentityview_20_3e_5',['Observable&lt; ModularEntityView &gt;',['../classlogic_1_1Observable.html',1,'logic']]],
   ['observable_3c_20playermodel_20_3e_6',['Observable&lt; PlayerModel &gt;',['../classlogic_1_1Observable.html',1,'logic']]],
-  ['observable_3c_20score_20_3e_7',['Observable&lt; Score &gt;',['../classlogic_1_1Observable.html',1,'logic']]],
+  ['observable_3c_20scorecounter_20_3e_7',['Observable&lt; ScoreCounter &gt;',['../classlogic_1_1Observable.html',1,'logic']]],
   ['observable_3c_20wallmodel_20_3e_8',['Observable&lt; WallModel &gt;',['../classlogic_1_1Observable.html',1,'logic']]],
   ['observable_3c_20world_20_3e_9',['Observable&lt; World &gt;',['../classlogic_1_1Observable.html',1,'logic']]],
-  ['orangeghostview_10',['OrangeGhostView',['../classrenderer_1_1OrangeGhostView.html',1,'renderer']]]
+  ['observabletypes_10',['ObservableTypes',['../classlogic_1_1ObservableTypes.html',1,'logic']]],
+  ['orangeghostview_11',['OrangeGhostView',['../classrenderer_1_1OrangeGhostView.html',1,'renderer']]]
 ];

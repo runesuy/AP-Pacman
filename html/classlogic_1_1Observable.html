@@ -74,7 +74,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classlogic_1_1Observable-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">logic::Observable&lt; T &gt; Class Template Reference</div></div>
@@ -83,17 +82,12 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="Observable_8h_source.html">Observable.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a6add39447620f2e3b970478832fca944" id="r_a6add39447620f2e3b970478832fca944"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Observable.html#a6add39447620f2e3b970478832fca944">EventType</a> = int</td></tr>
-<tr class="separator:a6add39447620f2e3b970478832fca944"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afd56bfb66920d8e1d38a3ac3259e85d9" id="r_afd56bfb66920d8e1d38a3ac3259e85d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Observable.html#afd56bfb66920d8e1d38a3ac3259e85d9">updateObservers</a> ()</td></tr>
 <tr class="separator:afd56bfb66920d8e1d38a3ac3259e85d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accdf7e56714fba8484eeffd376cf7257" id="r_accdf7e56714fba8484eeffd376cf7257"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Observable.html#accdf7e56714fba8484eeffd376cf7257">updateObservers</a> (<a class="el" href="classlogic_1_1Observable.html#a6add39447620f2e3b970478832fca944">EventType</a> event)</td></tr>
-<tr class="separator:accdf7e56714fba8484eeffd376cf7257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75facf45b44f9a29a42eb91355bf3629" id="r_a75facf45b44f9a29a42eb91355bf3629"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Observable.html#a75facf45b44f9a29a42eb91355bf3629">updateObservers</a> (<a class="el" href="classlogic_1_1ObservableTypes.html#a2e3a4285a9bc569d4d2939ae894937af">ObservableTypes::EventType</a> event)</td></tr>
+<tr class="separator:a75facf45b44f9a29a42eb91355bf3629"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f7f0337470804741ddd21ffe82103c1" id="r_a1f7f0337470804741ddd21ffe82103c1"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Observable.html#a1f7f0337470804741ddd21ffe82103c1">~Observable</a> ()</td></tr>
 <tr class="separator:a1f7f0337470804741ddd21ffe82103c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb2547e65fdf6b4c090f5170df4bf66d" id="r_afb2547e65fdf6b4c090f5170df4bf66d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Observable.html#afb2547e65fdf6b4c090f5170df4bf66d">addObserver</a> (const std::shared_ptr&lt; <a class="el" href="classlogic_1_1IObserver.html">IObserver</a>&lt; T &gt; &gt; &amp;observer)</td></tr>
@@ -106,24 +100,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
 class logic::Observable&lt; T &gt;</div><p>An class containing observing logic for integrating with the <a class="el" href="classlogic_1_1IObserver.html">IObserver</a> class. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a6add39447620f2e3b970478832fca944" name="a6add39447620f2e3b970478832fca944"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6add39447620f2e3b970478832fca944">&#9670;&#160;</a></span>EventType</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classlogic_1_1Observable.html">logic::Observable</a>&lt; T &gt;::EventType =  int</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1f7f0337470804741ddd21ffe82103c1" name="a1f7f0337470804741ddd21ffe82103c1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1f7f0337470804741ddd21ffe82103c1">&#9670;&#160;</a></span>~Observable()</h2>
 
@@ -271,8 +248,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="accdf7e56714fba8484eeffd376cf7257" name="accdf7e56714fba8484eeffd376cf7257"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#accdf7e56714fba8484eeffd376cf7257">&#9670;&#160;</a></span>updateObservers() <span class="overload">[2/2]</span></h2>
+<a id="a75facf45b44f9a29a42eb91355bf3629" name="a75facf45b44f9a29a42eb91355bf3629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75facf45b44f9a29a42eb91355bf3629">&#9670;&#160;</a></span>updateObservers() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,7 +259,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classlogic_1_1Observable.html">logic::Observable</a>&lt; T &gt;::updateObservers </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classlogic_1_1Observable.html#a6add39447620f2e3b970478832fca944">EventType</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classlogic_1_1ObservableTypes.html#a2e3a4285a9bc569d4d2939ae894937af">ObservableTypes::EventType</a>&#160;</td>
           <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
         </tr>

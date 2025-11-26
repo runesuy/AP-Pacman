@@ -13,7 +13,7 @@
 \DoxyCodeLine{00009\ }
 \DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
 \DoxyCodeLine{00011\ }
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1LifeCounter}{LifeCounter}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}<PlayerModel>,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1Observable}{Observable}}<LifeCounter>\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1LifeCounter}{LifeCounter}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1Observable}{Observable}}<LifeCounter>\ \{}
 \DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ lifeStart\ =\ 3;}
 \DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ livesLeft\ =\ lifeStart;}
 \DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
@@ -29,16 +29,14 @@
 \DoxyCodeLine{00032\ }
 \DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1LifeCounter_a1851f0902c5b2e61fc585895c95e9d2f}{removeLives}}(\mbox{\hyperlink{classlogic_1_1LifeCounter_af8d1d5478b1e56f5e3154025bcd1c039}{LivesAmountType}}\ amount);}
 \DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1LifeCounter_abcca1ee6cf1343398de86928ee4b9b89}{update}}(\mbox{\hyperlink{classlogic_1_1PlayerModel}{PlayerModel}}\ \&subject)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1LifeCounter_abcca1ee6cf1343398de86928ee4b9b89}{update}}(\mbox{\hyperlink{classlogic_1_1PlayerModel}{PlayerModel}}\ \&subject,\ \textcolor{keywordtype}{int}\ event)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00042\ \ \ \ \ \};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1LifeCounter_aeb0b16d9056dcdc9ab36a9f3567cde3a}{processEvent}}(\mbox{\hyperlink{classlogic_1_1ObservableTypes_a2e3a4285a9bc569d4d2939ae894937af}{ObservableTypes::EventType}}\ event);}
+\DoxyCodeLine{00040\ \ \ \ \ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
 \DoxyCodeLine{00043\ }
 \DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00045\ \}\ \textcolor{comment}{//\ logic}}
 \DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \}\ \textcolor{comment}{//\ logic}}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_LIFECOUNTER\_H}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_LIFECOUNTER\_H}}
 
 \end{DoxyCode}
