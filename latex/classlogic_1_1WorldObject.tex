@@ -43,7 +43,7 @@ bool \mbox{\hyperlink{classlogic_1_1WorldObject_adae3a3c45f13113f3ebcbdaed719077
 \doxysubsubsection{\texorpdfstring{WorldEventT}{WorldEventT}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{logic\+::\+World\+Object\+::\+World\+EventT}} =  int}
 
-
+Type of the events that can be passed to all objects in the world. 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classlogic_1_1WorldObject_aac0f498afeff654fee790e435617de04}\label{classlogic_1_1WorldObject_aac0f498afeff654fee790e435617de04} 
@@ -53,7 +53,7 @@ bool \mbox{\hyperlink{classlogic_1_1WorldObject_adae3a3c45f13113f3ebcbdaed719077
 {\footnotesize\ttfamily const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \& logic\+::\+World\+Object\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
 \begin{DoxyReturn}{Returns}
-the position of the world object 
+the position of the world object. 
 \end{DoxyReturn}
 \Hypertarget{classlogic_1_1WorldObject_aa8afa55395cbe77bd51771c8e176aff9}\label{classlogic_1_1WorldObject_aa8afa55395cbe77bd51771c8e176aff9} 
 \index{logic::WorldObject@{logic::WorldObject}!handleWorldEvent@{handleWorldEvent}}
@@ -61,9 +61,9 @@ the position of the world object
 \doxysubsubsection{\texorpdfstring{handleWorldEvent()}{handleWorldEvent()}}
 {\footnotesize\ttfamily virtual void logic\+::\+World\+Object\+::handle\+World\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{World\+EventT}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
+React on world\+Event 
 
-
-Reimplemented in \mbox{\hyperlink{classlogic_1_1EntityModel_a4886f0f78a18dbcffc94502a29404505}{logic\+::\+Entity\+Model$<$ Derived $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a4886f0f78a18dbcffc94502a29404505}{logic\+::\+Entity\+Model$<$ Coin\+Model $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a4886f0f78a18dbcffc94502a29404505}{logic\+::\+Entity\+Model$<$ Entity\+Model\+Type $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a4886f0f78a18dbcffc94502a29404505}{logic\+::\+Entity\+Model$<$ Fruit\+Model $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a4886f0f78a18dbcffc94502a29404505}{logic\+::\+Entity\+Model$<$ Ghost\+Model $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a4886f0f78a18dbcffc94502a29404505}{logic\+::\+Entity\+Model$<$ Player\+Model $>$}}, and \mbox{\hyperlink{classlogic_1_1EntityModel_a4886f0f78a18dbcffc94502a29404505}{logic\+::\+Entity\+Model$<$ Wall\+Model $>$}}.
+Reimplemented in \mbox{\hyperlink{classlogic_1_1EntityModel_a6c8bbd5ff7678da02e2cd27f9da06fb7}{logic\+::\+Entity\+Model$<$ Derived $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a6c8bbd5ff7678da02e2cd27f9da06fb7}{logic\+::\+Entity\+Model$<$ Coin\+Model $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a6c8bbd5ff7678da02e2cd27f9da06fb7}{logic\+::\+Entity\+Model$<$ Entity\+Model\+Type $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a6c8bbd5ff7678da02e2cd27f9da06fb7}{logic\+::\+Entity\+Model$<$ Fruit\+Model $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a6c8bbd5ff7678da02e2cd27f9da06fb7}{logic\+::\+Entity\+Model$<$ Ghost\+Model $>$}}, \mbox{\hyperlink{classlogic_1_1EntityModel_a6c8bbd5ff7678da02e2cd27f9da06fb7}{logic\+::\+Entity\+Model$<$ Player\+Model $>$}}, and \mbox{\hyperlink{classlogic_1_1EntityModel_a6c8bbd5ff7678da02e2cd27f9da06fb7}{logic\+::\+Entity\+Model$<$ Wall\+Model $>$}}.
 
 \Hypertarget{classlogic_1_1WorldObject_adae3a3c45f13113f3ebcbdaed7190770}\label{classlogic_1_1WorldObject_adae3a3c45f13113f3ebcbdaed7190770} 
 \index{logic::WorldObject@{logic::WorldObject}!isMarkedForRemoval@{isMarkedForRemoval}}
@@ -71,13 +71,16 @@ Reimplemented in \mbox{\hyperlink{classlogic_1_1EntityModel_a4886f0f78a18dbcffc9
 \doxysubsubsection{\texorpdfstring{isMarkedForRemoval()}{isMarkedForRemoval()}}
 {\footnotesize\ttfamily bool logic\+::\+World\+Object\+::is\+Marked\+For\+Removal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+\begin{DoxyReturn}{Returns}
+Wetter or not the object is marked for removal on the end of this update. 
+\end{DoxyReturn}
 \Hypertarget{classlogic_1_1WorldObject_ad57fa60da3633757434ef70a266f8e14}\label{classlogic_1_1WorldObject_ad57fa60da3633757434ef70a266f8e14} 
 \index{logic::WorldObject@{logic::WorldObject}!markForRemoval@{markForRemoval}}
 \index{markForRemoval@{markForRemoval}!logic::WorldObject@{logic::WorldObject}}
 \doxysubsubsection{\texorpdfstring{markForRemoval()}{markForRemoval()}}
 {\footnotesize\ttfamily void logic\+::\+World\+Object\+::mark\+For\+Removal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-
+Mark the object to be removed at the end of this update. 
 
 Reimplemented in \mbox{\hyperlink{classlogic_1_1CoinModel_a2dcfc1318f085ceeef06c5d5b9e587df}{logic\+::\+Coin\+Model}}, \mbox{\hyperlink{classlogic_1_1FruitModel_a0f9c763c3ae80ac0280fcea4de1e2796}{logic\+::\+Fruit\+Model}}, and \mbox{\hyperlink{classlogic_1_1GhostModel_af57a1128c94aaaaa9a82f99a8b6161b3}{logic\+::\+Ghost\+Model}}.
 

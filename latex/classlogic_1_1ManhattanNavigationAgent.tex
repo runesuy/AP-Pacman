@@ -40,6 +40,20 @@ Collaboration diagram for logic\+::Manhattan\+Navigation\+Agent\+:
 \doxysubsubsection{\texorpdfstring{getNavigationDirection()}{getNavigationDirection()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} logic\+::\+Manhattan\+Navigation\+Agent\+::get\+Navigation\+Direction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{current,  }\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{target,  }\item[{const \mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{std\+::set$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} $>$}]{exclude\+If\+Other\+Options }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Get directions from current to target. 
+\begin{DoxyParams}{Parameters}
+{\em current} & The current position from which is navigated. \\
+\hline
+{\em target} & The position current wants to go to. \\
+\hline
+{\em world} & The game world. \\
+\hline
+{\em exclude\+If\+Other\+Options} & Directions only to be used if no other options are available. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A direction to proceed to in order to get from current to target. 
+\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classlogic_1_1INavigationAgent_ae647e21c79e19f2d2bcdf083dc52b955}{logic\+::\+INavigation\+Agent}}.
@@ -58,6 +72,20 @@ Here is the call graph for this function\+:
 \doxysubsubsection{\texorpdfstring{getNavigationDirectionAway()}{getNavigationDirectionAway()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} logic\+::\+Manhattan\+Navigation\+Agent\+::get\+Navigation\+Direction\+Away (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{current,  }\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{target,  }\item[{const \mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{std\+::set$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} $>$}]{exclude\+If\+Other\+Options }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Get directions from current away from target. 
+\begin{DoxyParams}{Parameters}
+{\em current} & The current position from which is navigated. \\
+\hline
+{\em target} & The position current wants to get away from. \\
+\hline
+{\em world} & The game world. \\
+\hline
+{\em exclude\+If\+Other\+Options} & Directions only to be used if no other options are available. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A direction to proceed to in order to get away from target. 
+\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classlogic_1_1INavigationAgent_ac8b515e26ede33c63b4f132c4384e5cf}{logic\+::\+INavigation\+Agent}}.

@@ -106,8 +106,8 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9f871c6da97a9a77dd4f692c8910069c" id="r_a9f871c6da97a9a77dd4f692c8910069c"><td class="memItemLeft" align="right" valign="top">const auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1TileMap.html#a9f871c6da97a9a77dd4f692c8910069c">getMapData</a> () const</td></tr>
 <tr class="separator:a9f871c6da97a9a77dd4f692c8910069c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b07dc60b6b58bc5faacb8717610fcea" id="r_a6b07dc60b6b58bc5faacb8717610fcea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1TileMap.html#a6b07dc60b6b58bc5faacb8717610fcea">loadToWorld</a> (<a class="el" href="classlogic_1_1World.html">World</a> &amp;world)</td></tr>
-<tr class="separator:a6b07dc60b6b58bc5faacb8717610fcea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475b315235436124ec52b1387750c09d" id="r_a475b315235436124ec52b1387750c09d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1TileMap.html#a475b315235436124ec52b1387750c09d">loadToWorld</a> (<a class="el" href="classlogic_1_1World.html">World</a> &amp;world) const</td></tr>
+<tr class="separator:a475b315235436124ec52b1387750c09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa01a7a80be57dd3e85d3c0a570d07d7c" id="r_aa01a7a80be57dd3e85d3c0a570d07d7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1TileMap.html#aa01a7a80be57dd3e85d3c0a570d07d7c">addRow</a> (const std::vector&lt; <a class="el" href="classlogic_1_1TileMap.html#a5da8a4243a7f7605c4fa1d8c84db37f9">TileType</a> &gt; &amp;row)</td></tr>
 <tr class="separator:aa01a7a80be57dd3e85d3c0a570d07d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb53cb4ee7398b449c8d084d25ea4510" id="r_adb53cb4ee7398b449c8d084d25ea4510"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlogic_1_1TileMap.html#a5da8a4243a7f7605c4fa1d8c84db37f9">TileType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1TileMap.html#adb53cb4ee7398b449c8d084d25ea4510">getTileType</a> (const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;position) const</td></tr>
@@ -200,6 +200,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The amount of columns of the map. </dd></dl>
 
 </div>
 </div>
@@ -272,6 +273,7 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The amount of rows of the map. </dd></dl>
 
 </div>
 </div>
@@ -300,6 +302,14 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>The map row of the requested tile. </td></tr>
+    <tr><td class="paramname">col</td><td>The map column of the requested tile. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The center position of the requested tile. </dd></dl>
 
 </div>
 </div>
@@ -317,6 +327,7 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The size of the grid tiles in the world. </dd></dl>
 
 </div>
 </div>
@@ -335,6 +346,13 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td><a class="el" href="classlogic_1_1World.html">World</a> position. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The original tile at the given position in the world. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -378,6 +396,14 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>The map row of the requested tile. </td></tr>
+    <tr><td class="paramname">col</td><td>The map column of the requested tile. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The original tile at the given position in the world. </dd></dl>
 
 </div>
 </div>
@@ -395,6 +421,7 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The amount the map is shifted down in order to center it in the middle of the screen. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -408,8 +435,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a6b07dc60b6b58bc5faacb8717610fcea" name="a6b07dc60b6b58bc5faacb8717610fcea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b07dc60b6b58bc5faacb8717610fcea">&#9670;&#160;</a></span>loadToWorld()</h2>
+<a id="a475b315235436124ec52b1387750c09d" name="a475b315235436124ec52b1387750c09d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a475b315235436124ec52b1387750c09d">&#9670;&#160;</a></span>loadToWorld()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -419,11 +446,11 @@ Here is the call graph for this function:</div>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classlogic_1_1World.html">World</a> &amp;&#160;</td>
           <td class="paramname"><em>world</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Load the tile map into the given world. An entity is created for each tile based on its type. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Load the tile map into the given world. An entity is created for each tile based on its type. Afterwards the entity is added to the world. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">world</td><td></td></tr>
   </table>
@@ -432,8 +459,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classlogic_1_1TileMap_a6b07dc60b6b58bc5faacb8717610fcea_cgraph.png" border="0" usemap="#aclasslogic_1_1TileMap_a6b07dc60b6b58bc5faacb8717610fcea_cgraph" alt=""/></div>
-<map name="aclasslogic_1_1TileMap_a6b07dc60b6b58bc5faacb8717610fcea_cgraph" id="aclasslogic_1_1TileMap_a6b07dc60b6b58bc5faacb8717610fcea_cgraph">
+<div class="center"><img src="classlogic_1_1TileMap_a475b315235436124ec52b1387750c09d_cgraph.png" border="0" usemap="#aclasslogic_1_1TileMap_a475b315235436124ec52b1387750c09d_cgraph" alt=""/></div>
+<map name="aclasslogic_1_1TileMap_a475b315235436124ec52b1387750c09d_cgraph" id="aclasslogic_1_1TileMap_a475b315235436124ec52b1387750c09d_cgraph">
 <area shape="rect" title=" " alt="" coords="5,84,184,110"/>
 <area shape="rect" href="classlogic_1_1World.html#a0283bebe131b2e3d14961195cfeb5993" title=" " alt="" coords="241,5,393,31"/>
 <area shape="poly" title=" " alt="" coords="125,81,231,40,250,33,252,38,233,45,127,86"/>

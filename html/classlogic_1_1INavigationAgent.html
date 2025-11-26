@@ -99,7 +99,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac8b515e26ede33c63b4f132c4384e5cf" id="r_ac8b515e26ede33c63b4f132c4384e5cf"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1INavigationAgent.html#ac8b515e26ede33c63b4f132c4384e5cf">getNavigationDirectionAway</a> (const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;current, const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;target, const <a class="el" href="classlogic_1_1World.html">World</a> &amp;world, std::set&lt; <a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a> &gt; excludeIfOtherOptions={}) const =0</td></tr>
 <tr class="separator:ac8b515e26ede33c63b4f132c4384e5cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A navigationAgent providing directions based on the current position, targetPosition and world. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae647e21c79e19f2d2bcdf083dc52b955" name="ae647e21c79e19f2d2bcdf083dc52b955"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae647e21c79e19f2d2bcdf083dc52b955">&#9670;&#160;</a></span>getNavigationDirection()</h2>
 
@@ -145,6 +147,16 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get directions from current to target. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">current</td><td>The current position from which is navigated. </td></tr>
+    <tr><td class="paramname">target</td><td>The position current wants to go to. </td></tr>
+    <tr><td class="paramname">world</td><td>The game world. </td></tr>
+    <tr><td class="paramname">excludeIfOtherOptions</td><td>Directions only to be used if no other options are available. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A direction to proceed to in order to get from current to target. </dd></dl>
 
 <p>Implemented in <a class="el" href="classlogic_1_1ManhattanNavigationAgent.html#aead3e5b54535f01bda2ae65a919f99b0">logic::ManhattanNavigationAgent</a>.</p>
 
@@ -195,6 +207,16 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get directions from current away from target. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">current</td><td>The current position from which is navigated. </td></tr>
+    <tr><td class="paramname">target</td><td>The position current wants to get away from. </td></tr>
+    <tr><td class="paramname">world</td><td>The game world. </td></tr>
+    <tr><td class="paramname">excludeIfOtherOptions</td><td>Directions only to be used if no other options are available. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A direction to proceed to in order to get away from target. </dd></dl>
 
 <p>Implemented in <a class="el" href="classlogic_1_1ManhattanNavigationAgent.html#a8ab172923721b0b6111a2569cd2723ca">logic::ManhattanNavigationAgent</a>.</p>
 

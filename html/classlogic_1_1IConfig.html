@@ -96,13 +96,14 @@ Inheritance diagram for logic::IConfig:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4280f4f8aadff9169b8db63d468c1a71" id="r_a4280f4f8aadff9169b8db63d468c1a71"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IConfig.html#a4280f4f8aadff9169b8db63d468c1a71">~IConfig</a> ()=default</td></tr>
 <tr class="separator:a4280f4f8aadff9169b8db63d468c1a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6cde30e5eb1db08d33c49ed30d72f5f" id="r_aa6cde30e5eb1db08d33c49ed30d72f5f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classlogic_1_1TileMap.html">TileMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IConfig.html#aa6cde30e5eb1db08d33c49ed30d72f5f">getTileMap</a> () const =0</td></tr>
-<tr class="separator:aa6cde30e5eb1db08d33c49ed30d72f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac6ec27e1da1c1d3d28b35055d1d6e36" id="r_aac6ec27e1da1c1d3d28b35055d1d6e36"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classlogic_1_1TileMap.html">TileMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IConfig.html#aac6ec27e1da1c1d3d28b35055d1d6e36">getTileMap</a> () const =0</td></tr>
+<tr class="separator:aac6ec27e1da1c1d3d28b35055d1d6e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6fb44297695811606ac8b078f1bc076" id="r_ad6fb44297695811606ac8b078f1bc076"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classlogic_1_1IEntityFactory.html">logic::IEntityFactory</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IConfig.html#ad6fb44297695811606ac8b078f1bc076">getEntityFactory</a> () const =0</td></tr>
 <tr class="separator:ad6fb44297695811606ac8b078f1bc076"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Config interface for the logic. Needs to be passed to world. </p>
+<div class="textblock"><p>Config interface for the logic. Needs to be passed to world.</p>
+<p>The Config contains info for the game's logic section to improve customizability of the game without extensive redesigning of the original code. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4280f4f8aadff9169b8db63d468c1a71" name="a4280f4f8aadff9169b8db63d468c1a71"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4280f4f8aadff9169b8db63d468c1a71">&#9670;&#160;</a></span>~IConfig()</h2>
@@ -152,14 +153,16 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the entity factory for creating game entities. </p><dl class="section return"><dt>Returns</dt><dd>A shared ptr to the factory </dd></dl>
+<p>Get the entity factory for creating game entities. </p><dl class="section return"><dt>Returns</dt><dd>A shared ptr to the factory.</dd></dl>
+<p>The entity factory gives the logic an easy interface for creating the logic entities and executing needed rendering logic while keeping logic and rendering separate.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classlogic_1_1IEntityFactory.html">logic::IEntityFactory</a> </dd></dl>
 
 <p>Implemented in <a class="el" href="classrenderer_1_1DefaultLogicConfig.html#af4d75b6cb4d070523d368c7230e87f94">renderer::DefaultLogicConfig</a>.</p>
 
 </div>
 </div>
-<a id="aa6cde30e5eb1db08d33c49ed30d72f5f" name="aa6cde30e5eb1db08d33c49ed30d72f5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6cde30e5eb1db08d33c49ed30d72f5f">&#9670;&#160;</a></span>getTileMap()</h2>
+<a id="aac6ec27e1da1c1d3d28b35055d1d6e36" name="aac6ec27e1da1c1d3d28b35055d1d6e36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac6ec27e1da1c1d3d28b35055d1d6e36">&#9670;&#160;</a></span>getTileMap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,7 +171,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classlogic_1_1TileMap.html">TileMap</a> logic::IConfig::getTileMap </td>
+          <td class="memname">virtual const <a class="el" href="classlogic_1_1TileMap.html">TileMap</a> &amp; logic::IConfig::getTileMap </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -180,9 +183,11 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the tile map configuration. This map is loaded in the world on creation. </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>Get the tile map configuration. This map is loaded in the world on creation.</p>
+<dl class="section return"><dt>Returns</dt><dd>The currently loaded tilemap.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classlogic_1_1TileMap.html">logic::TileMap</a> </dd></dl>
 
-<p>Implemented in <a class="el" href="classrenderer_1_1DefaultLogicConfig.html#ae7baef062c61c68b042a88d669ee47f5">renderer::DefaultLogicConfig</a>.</p>
+<p>Implemented in <a class="el" href="classrenderer_1_1DefaultLogicConfig.html#aa274e162f5d00331767601ee109a5add">renderer::DefaultLogicConfig</a>.</p>
 
 </div>
 </div>

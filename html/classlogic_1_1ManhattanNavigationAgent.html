@@ -155,6 +155,16 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get directions from current to target. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">current</td><td>The current position from which is navigated. </td></tr>
+    <tr><td class="paramname">target</td><td>The position current wants to go to. </td></tr>
+    <tr><td class="paramname">world</td><td>The game world. </td></tr>
+    <tr><td class="paramname">excludeIfOtherOptions</td><td>Directions only to be used if no other options are available. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A direction to proceed to in order to get from current to target. </dd></dl>
 
 <p>Implements <a class="el" href="classlogic_1_1INavigationAgent.html#ae647e21c79e19f2d2bcdf083dc52b955">logic::INavigationAgent</a>.</p>
 <div class="dynheader">
@@ -215,6 +225,16 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get directions from current away from target. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">current</td><td>The current position from which is navigated. </td></tr>
+    <tr><td class="paramname">target</td><td>The position current wants to get away from. </td></tr>
+    <tr><td class="paramname">world</td><td>The game world. </td></tr>
+    <tr><td class="paramname">excludeIfOtherOptions</td><td>Directions only to be used if no other options are available. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A direction to proceed to in order to get away from target. </dd></dl>
 
 <p>Implements <a class="el" href="classlogic_1_1INavigationAgent.html#ac8b515e26ede33c63b4f132c4384e5cf">logic::INavigationAgent</a>.</p>
 <div class="dynheader">

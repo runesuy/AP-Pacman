@@ -63,7 +63,7 @@ bool \mbox{\hyperlink{classlogic_1_1WorldObject_adae3a3c45f13113f3ebcbdaed719077
 
 
 \doxysubsection{Detailed Description}
-A world object containing a size and able to handle collisions. 
+A world object containing a size and able to handle collisions. The hitbox is defined by the size and position of the object, with the position in the middle of the resulting rectangle. 
 
 \doxysubsection{Member Typedef Documentation}
 \Hypertarget{classlogic_1_1SizedWorldObject_a059ee03db27e3962f0c11f71cf0e2bd0}\label{classlogic_1_1SizedWorldObject_a059ee03db27e3962f0c11f71cf0e2bd0} 
@@ -72,7 +72,7 @@ A world object containing a size and able to handle collisions.
 \doxysubsubsection{\texorpdfstring{CollisionTypeT}{CollisionTypeT}}
 {\footnotesize\ttfamily using \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a059ee03db27e3962f0c11f71cf0e2bd0}{logic\+::\+Sized\+World\+Object\+::\+Collision\+TypeT}} =  int}
 
-
+Typed used for identifying the object during collision handling to avoid expensive casts; 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classlogic_1_1SizedWorldObject_a2a81e70fcac5476dc056ea22d78095c3}\label{classlogic_1_1SizedWorldObject_a2a81e70fcac5476dc056ea22d78095c3} 
@@ -95,7 +95,7 @@ Reimplemented in \mbox{\hyperlink{classlogic_1_1CoinModel_a2492ed57891abec17988d
 {\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1Size}{Size}} logic\+::\+Sized\+World\+Object\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 \begin{DoxyReturn}{Returns}
-The size of the object. 
+The size of the object. The size represents the hitbox of the object. 
 \end{DoxyReturn}
 \Hypertarget{classlogic_1_1SizedWorldObject_a32b7587ef4e60c33ff9899257c19c4d3}\label{classlogic_1_1SizedWorldObject_a32b7587ef4e60c33ff9899257c19c4d3} 
 \index{logic::SizedWorldObject@{logic::SizedWorldObject}!onCollision@{onCollision}}
@@ -103,7 +103,7 @@ The size of the object.
 \doxysubsubsection{\texorpdfstring{onCollision()}{onCollision()}}
 {\footnotesize\ttfamily virtual void logic\+::\+Sized\+World\+Object\+::on\+Collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&}]{other,  }\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
-Handle a collision with other. 
+Handle a collision from this to the other. 
 \begin{DoxyParams}{Parameters}
 {\em other} & \\
 \hline
@@ -118,7 +118,7 @@ Reimplemented in \mbox{\hyperlink{classlogic_1_1EntityModel_a804ac2ca9115200dd15
 \doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
 {\footnotesize\ttfamily void logic\+::\+Sized\+World\+Object\+::set\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Size}{Size}} \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
-Sets the size of the object. 
+Sets the size of the object. The size represents the hitbox of the object. 
 \begin{DoxyParams}{Parameters}
 {\em size} & \\
 \hline

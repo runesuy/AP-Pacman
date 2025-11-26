@@ -4,7 +4,7 @@ var searchData=
   ['empty_5fchar_1',['EMPTY_CHAR',['../classrenderer_1_1TXTMapParser.html#a144f86e0695521ee53d704452fad46d0',1,'renderer::TXTMapParser']]],
   ['entitycommand_2',['EntityCommand',['../namespacelogic.html#a8c969071a5f036b8ad64f854267522fb',1,'logic']]],
   ['entitycommands_2eh_3',['EntityCommands.h',['../EntityCommands_8h.html',1,'']]],
-  ['entitymodel_4',['EntityModel',['../classlogic_1_1EntityModel.html',1,'logic']]],
+  ['entitymodel_4',['entitymodel',['../classlogic_1_1EntityModel.html#ad58478eb847763a0e1042cb23e4667d2',1,'logic::EntityModel::EntityModel()'],['../classlogic_1_1EntityModel.html',1,'logic::EntityModel&lt; Derived &gt;']]],
   ['entitymodel_2ecpp_5',['EntityModel.cpp',['../EntityModel_8cpp.html',1,'']]],
   ['entitymodel_2eh_6',['EntityModel.h',['../EntityModel_8h.html',1,'']]],
   ['entitymodel_3c_20coinmodel_20_3e_7',['EntityModel&lt; CoinModel &gt;',['../classlogic_1_1EntityModel.html',1,'logic']]],

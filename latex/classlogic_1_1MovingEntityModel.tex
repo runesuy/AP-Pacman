@@ -40,6 +40,10 @@ virtual void \mbox{\hyperlink{classlogic_1_1MovingEntityModel_a89594315ce1312737
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1EntityModel}{logic\+::\+Entity\+Model$<$ Entity\+Model\+Type $>$}}}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classlogic_1_1EntityModel_ad58478eb847763a0e1042cb23e4667d2}{Entity\+Model}} ()=default
+\item 
+\mbox{\hyperlink{classlogic_1_1EntityModel_a39e1076f15db40c5aecb11bb9d35502c}{\texorpdfstring{$\sim$}{\string~}\+Entity\+Model}} ()=default
+\item 
 void \mbox{\hyperlink{classlogic_1_1EntityModel_a1db9f7ad3cd006dd62c8d932a2382d48}{set\+Controller}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IEntityController}{IEntity\+Controller}}$<$ Entity\+Model\+Type $>$ $>$ \&controller)
 \item 
 void \mbox{\hyperlink{classlogic_1_1EntityModel_a8be02b6525f2322a08af1fd72c88f57a}{process\+Command}} (\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}} command)
@@ -48,7 +52,7 @@ void \mbox{\hyperlink{classlogic_1_1EntityModel_a20ff77425bb7eb04e201d33ab3f3318
 \item 
 void \mbox{\hyperlink{classlogic_1_1EntityModel_a804ac2ca9115200dd15d1d207ea9de63}{on\+Collision}} (const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other, \mbox{\hyperlink{classlogic_1_1World}{World}} \&world) final
 \item 
-void \mbox{\hyperlink{classlogic_1_1EntityModel_a4886f0f78a18dbcffc94502a29404505}{handle\+World\+Event}} (\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{World\+EventT}} t) override
+void \mbox{\hyperlink{classlogic_1_1EntityModel_a6c8bbd5ff7678da02e2cd27f9da06fb7}{handle\+World\+Event}} (\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{World\+EventT}} t) final
 \item 
 const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \& \mbox{\hyperlink{classlogic_1_1EntityModel_a76d63d0763404f03a378e3f0ede85d98}{get\+Spawn\+Position}} () const
 \end{DoxyCompactItemize}

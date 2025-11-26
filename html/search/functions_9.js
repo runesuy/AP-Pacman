@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['label_0',['label',['../classrenderer_1_1Label.html#a6a43d6b85e5393c7d3a1fc2102ee75ac',1,'renderer::Label::Label()'],['../classrenderer_1_1Label.html#a53eacf0ab24c25be2fa51660a49d9c8d',1,'renderer::Label::Label(const std::string &amp;str)'],['../classrenderer_1_1Label.html#aae61a022e1f80b87da516d4fd8705962',1,'renderer::Label::Label(const std::string &amp;str, const sf::Font &amp;font)']]],
-  ['levelcomplete_1',['levelComplete',['../classlogic_1_1World.html#a931a7c9174861dc9881f7d78075d62e6',1,'logic::World']]],
-  ['levelstate_2',['LevelState',['../classrenderer_1_1LevelState.html#af2a45acafe8669485a54a21fd6a7ef95',1,'renderer::LevelState']]],
-  ['lifecounter_3',['LifeCounter',['../classlogic_1_1LifeCounter.html#adc9a66aefb92780e8f4027aa711c6462',1,'logic::LifeCounter']]],
-  ['livesview_4',['LivesView',['../classrenderer_1_1LivesView.html#a68ff7221256d3ea91ecfe4f9c1338ebd',1,'renderer::LivesView']]],
-  ['loadconfigfile_5',['loadconfigfile',['../classrenderer_1_1IConfigParser.html#a7bca04342b5562edc5de2352d996a113',1,'renderer::IConfigParser::loadConfigFile()'],['../classrenderer_1_1JSONConfigParser.html#a69b9aec32b78a8f49fdb34f76fcc5970',1,'renderer::JSONConfigParser::loadConfigFile()']]],
-  ['loadhighscores_6',['loadHighScores',['../classlogic_1_1ScoreCounter.html#a8d2cd9b487b6992c9ad886187585b8d7',1,'logic::ScoreCounter']]],
-  ['loadmap_7',['loadmap',['../classrenderer_1_1IMapParser.html#a798e681ba3e9b3191291d793026cd13a',1,'renderer::IMapParser::loadMap()'],['../classrenderer_1_1TXTMapParser.html#a1d53757b1580783bb2c6aea54a1341b7',1,'renderer::TXTMapParser::loadMap()']]],
-  ['loadtextures_8',['loadtextures',['../classrenderer_1_1ITextureParser.html#acd0207832ea88fd1cae6e130003f67a9',1,'renderer::ITextureParser::loadTextures()'],['../classrenderer_1_1DefaultTextureParser.html#acbc29caeb10668c094fcd593ed163bf7',1,'renderer::DefaultTextureParser::loadTextures()']]],
-  ['loadtoworld_9',['loadToWorld',['../classlogic_1_1TileMap.html#a6b07dc60b6b58bc5faacb8717610fcea',1,'logic::TileMap']]]
+  ['icon_0',['Icon',['../classrenderer_1_1Icon.html#a99bd901b0769456863d23239d3caccf9',1,'renderer::Icon']]],
+  ['initializeinstance_1',['initializeInstance',['../classrenderer_1_1Game.html#a24b97de74e7d577eb4cb2e4f07214a05',1,'renderer::Game']]],
+  ['invalidtexturenameexception_2',['InvalidTextureNameException',['../classrenderer_1_1InvalidTextureNameException.html#a8342f25e3d6491be38a8a66c433c5228',1,'renderer::InvalidTextureNameException']]],
+  ['isatintersectionordeadend_3',['isAtIntersectionOrDeadEnd',['../classlogic_1_1GhostController.html#a06ad5ac2574e45ad07df65a7068e3ad3',1,'logic::GhostController']]],
+  ['isgameover_4',['isGameOver',['../classlogic_1_1World.html#ae50253dfcf0258eaa787083abdee95c3',1,'logic::World']]],
+  ['ismarkedforremoval_5',['ismarkedforremoval',['../classlogic_1_1WorldObject.html#adae3a3c45f13113f3ebcbdaed7190770',1,'logic::WorldObject::isMarkedForRemoval()'],['../classrenderer_1_1IWorldObjectView.html#ad486098155a47b33991193ee5e7311a3',1,'renderer::IWorldObjectView::isMarkedForRemoval()'],['../classrenderer_1_1CoinView.html#a1d9726c203396e9f20a5f0ec9feb71c2',1,'renderer::CoinView::isMarkedForRemoval()'],['../classrenderer_1_1FruitView.html#a7f908cb9aa2af363d9720b950efdd60c',1,'renderer::FruitView::isMarkedForRemoval()'],['../classrenderer_1_1GhostView.html#ac7dde94d459b88fb436c67d9045a1f53',1,'renderer::GhostView::isMarkedForRemoval()'],['../classrenderer_1_1PlayerView.html#a32f565b2f568975d6cd5c5748f83e970',1,'renderer::PlayerView::isMarkedForRemoval()'],['../classrenderer_1_1WallView.html#a5c742dafd06e3b70a69e4bb42b90ab5e',1,'renderer::WallView::isMarkedForRemoval()']]]
 ];

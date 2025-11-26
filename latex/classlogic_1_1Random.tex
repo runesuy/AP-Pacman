@@ -17,7 +17,7 @@ void \mbox{\hyperlink{classlogic_1_1Random_afbd6916c2e4b03e5623c6397c87bd2dc}{op
 \item 
 void \mbox{\hyperlink{classlogic_1_1Random_aab4cdee2395937c4b92fd69f6bb91635}{operator=}} (\mbox{\hyperlink{classlogic_1_1Random}{Random}} \&\&) noexcept=delete
 \item 
-int \mbox{\hyperlink{classlogic_1_1Random_aa92ad7b96fffccde940c394337e30ff3}{get\+Int\+In\+Range}} (int min, int max)
+int \mbox{\hyperlink{classlogic_1_1Random_a686e4fa82aa4d5d037df7df2a5c86273}{get\+Int\+In\+Range}} (int min, int max) const
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -60,12 +60,22 @@ A random class for all the game random logic. Singleton class.
 Get the \doxylink{classlogic_1_1Random}{Random} instance. \begin{DoxyReturn}{Returns}
 a pointer to the instance. 
 \end{DoxyReturn}
-\Hypertarget{classlogic_1_1Random_aa92ad7b96fffccde940c394337e30ff3}\label{classlogic_1_1Random_aa92ad7b96fffccde940c394337e30ff3} 
+\Hypertarget{classlogic_1_1Random_a686e4fa82aa4d5d037df7df2a5c86273}\label{classlogic_1_1Random_a686e4fa82aa4d5d037df7df2a5c86273} 
 \index{logic::Random@{logic::Random}!getIntInRange@{getIntInRange}}
 \index{getIntInRange@{getIntInRange}!logic::Random@{logic::Random}}
 \doxysubsubsection{\texorpdfstring{getIntInRange()}{getIntInRange()}}
-{\footnotesize\ttfamily int logic\+::\+Random\+::get\+Int\+In\+Range (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int logic\+::\+Random\+::get\+Int\+In\+Range (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption}) const}
 
+Get a random in in between min and max (including both) using an uniform distribution. 
+\begin{DoxyParams}{Parameters}
+{\em min} & The minimum value of the random int. \\
+\hline
+{\em max} & The maximum value of the random int. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \Hypertarget{classlogic_1_1Random_aab4cdee2395937c4b92fd69f6bb91635}\label{classlogic_1_1Random_aab4cdee2395937c4b92fd69f6bb91635} 
 \index{logic::Random@{logic::Random}!operator=@{operator=}}
 \index{operator=@{operator=}!logic::Random@{logic::Random}}

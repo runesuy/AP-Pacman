@@ -51,6 +51,10 @@ void \mbox{\hyperlink{classlogic_1_1MovingEntityModel_a36a87400133117f50cba0f14d
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1EntityModel}{logic\+::\+Entity\+Model$<$ Derived $>$}}}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classlogic_1_1EntityModel_ad58478eb847763a0e1042cb23e4667d2}{Entity\+Model}} ()=default
+\item 
+\mbox{\hyperlink{classlogic_1_1EntityModel_a39e1076f15db40c5aecb11bb9d35502c}{\texorpdfstring{$\sim$}{\string~}\+Entity\+Model}} ()=default
+\item 
 void \mbox{\hyperlink{classlogic_1_1EntityModel_a1db9f7ad3cd006dd62c8d932a2382d48}{set\+Controller}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IEntityController}{IEntity\+Controller}}$<$ Derived $>$ $>$ \&\mbox{\hyperlink{classlogic_1_1EntityModel_aee24e152c4f10d4aa870336c34517d13}{controller}})
 \item 
 void \mbox{\hyperlink{classlogic_1_1EntityModel_a8be02b6525f2322a08af1fd72c88f57a}{process\+Command}} (\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}} command)
@@ -59,7 +63,7 @@ void \mbox{\hyperlink{classlogic_1_1EntityModel_a20ff77425bb7eb04e201d33ab3f3318
 \item 
 void \mbox{\hyperlink{classlogic_1_1EntityModel_a804ac2ca9115200dd15d1d207ea9de63}{on\+Collision}} (const \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} \&other, \mbox{\hyperlink{classlogic_1_1World}{World}} \&world) final
 \item 
-void \mbox{\hyperlink{classlogic_1_1EntityModel_a4886f0f78a18dbcffc94502a29404505}{handle\+World\+Event}} (\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{World\+EventT}} t) override
+void \mbox{\hyperlink{classlogic_1_1EntityModel_a6c8bbd5ff7678da02e2cd27f9da06fb7}{handle\+World\+Event}} (\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{World\+EventT}} t) final
 \item 
 const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \& \mbox{\hyperlink{classlogic_1_1EntityModel_a76d63d0763404f03a378e3f0ede85d98}{get\+Spawn\+Position}} () const
 \end{DoxyCompactItemize}
@@ -80,17 +84,17 @@ bool \mbox{\hyperlink{classlogic_1_1WorldObject_adae3a3c45f13113f3ebcbdaed719077
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ Player\+Model $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classlogic_1_1Observable_afd56bfb66920d8e1d38a3ac3259e85d9}{update\+Observers}} ()
+virtual \mbox{\hyperlink{classlogic_1_1Observable_abbbfab37e8417e4232bd1b6e59fd9661}{\texorpdfstring{$\sim$}{\string~}\+Observable}} ()
 \item 
-void \mbox{\hyperlink{classlogic_1_1Observable_a75facf45b44f9a29a42eb91355bf3629}{update\+Observers}} (\mbox{\hyperlink{classlogic_1_1ObservableTypes_a2e3a4285a9bc569d4d2939ae894937af}{Observable\+Types\+::\+Event\+Type}} event)
+void \mbox{\hyperlink{classlogic_1_1Observable_ae2afa81ef02b0ff52b53889ae9b1a50f}{update\+Observers}} ()
 \item 
-virtual \mbox{\hyperlink{classlogic_1_1Observable_a1f7f0337470804741ddd21ffe82103c1}{\texorpdfstring{$\sim$}{\string~}\+Observable}} ()
+void \mbox{\hyperlink{classlogic_1_1Observable_ac24ccf3686a7a29ef068f8172f512790}{update\+Observers}} (\mbox{\hyperlink{classlogic_1_1ObservableTypes_a2e3a4285a9bc569d4d2939ae894937af}{Observable\+Types\+::\+Event\+Type}} event)
 \item 
-void \mbox{\hyperlink{classlogic_1_1Observable_afb2547e65fdf6b4c090f5170df4bf66d}{add\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ \mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} $>$ $>$ \&observer)
+void \mbox{\hyperlink{classlogic_1_1Observable_a11cd868251853d453f3aa62ae2c4d7d0}{add\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ \mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} $>$ $>$ \&observer)
 \item 
-bool \mbox{\hyperlink{classlogic_1_1Observable_ad7cb2d9214c5dd7f5aa8a36ef7ce43b9}{has\+Observers}} () const
+bool \mbox{\hyperlink{classlogic_1_1Observable_ac7f39ee24dbed7975e64567ef5f9b042}{has\+Observers}} () const
 \item 
-bool \mbox{\hyperlink{classlogic_1_1Observable_a54bfc543d21f11be7137efce418394c2}{has\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ \mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} $>$ $>$ \&observer) const
+bool \mbox{\hyperlink{classlogic_1_1Observable_a71abcb587440135f5287317d1e87ad3e}{has\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ \mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} $>$ $>$ \&observer) const
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Public Types inherited from \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{logic\+::\+Sized\+World\+Object}}}
@@ -210,7 +214,7 @@ Here is the call graph for this function\+:
 \doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
 {\footnotesize\ttfamily void logic\+::\+Player\+Model\+::set\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Size}{Size}} \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
-Sets the size of the object. 
+Sets the size of the object. The size represents the hitbox of the object. 
 \begin{DoxyParams}{Parameters}
 {\em size} & \\
 \hline

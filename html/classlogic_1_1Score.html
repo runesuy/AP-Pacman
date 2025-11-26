@@ -125,7 +125,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acdde4b1d124989fc652801832b036eea inherit pub_methods_classlogic_1_1IObserver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>An observer class to track and manage the player's score. </p>
+<div class="textblock"><p>An observer class to track and manage the player's score and lives. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a7a10747d443f1a36d269d9c9f0c115ea" name="a7a10747d443f1a36d269d9c9f0c115ea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a10747d443f1a36d269d9c9f0c115ea">&#9670;&#160;</a></span>getLifeCounter() <span class="overload">[1/2]</span></h2>
@@ -141,6 +141,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classlogic_1_1LifeCounter.html">LifeCounter</a> instance that handles the player lives. </dd></dl>
 
 </div>
 </div>
@@ -158,6 +159,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classlogic_1_1LifeCounter.html">LifeCounter</a> instance that handles the player lives. </dd></dl>
 
 </div>
 </div>
@@ -175,6 +177,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classlogic_1_1ScoreCounter.html">ScoreCounter</a> instance that handles the player score. </dd></dl>
 
 </div>
 </div>
@@ -192,6 +195,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classlogic_1_1ScoreCounter.html">ScoreCounter</a> instance that handles the player score. </dd></dl>
 
 </div>
 </div>
@@ -209,7 +213,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Called on each tick. </p>
+<p>Called on each tick. Changes the score based on the deltaTime provided by StopWatch </p>
 
 </div>
 </div>
@@ -236,7 +240,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Update score based on player change. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Update score and lives based on player change. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">subject</td><td></td></tr>
   </table>
@@ -280,7 +284,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Update score based on player event. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Update score and lives based on player event. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">subject</td><td></td></tr>
   </table>

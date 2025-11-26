@@ -51,7 +51,7 @@ virtual void \mbox{\hyperlink{classlogic_1_1IObserver_acdde4b1d124989fc652801832
 
 
 \doxysubsection{Detailed Description}
-An observer class to track and manage the player\textquotesingle{}s score. 
+An observer class to track and manage the player\textquotesingle{}s score and lives. 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classlogic_1_1Score_a7a10747d443f1a36d269d9c9f0c115ea}\label{classlogic_1_1Score_a7a10747d443f1a36d269d9c9f0c115ea} 
@@ -60,37 +60,49 @@ An observer class to track and manage the player\textquotesingle{}s score.
 \doxysubsubsection{\texorpdfstring{getLifeCounter()}{getLifeCounter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1LifeCounter}{logic\+::\+Life\+Counter}} \& logic\+::\+Score\+::get\+Life\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Returns}
+The \doxylink{classlogic_1_1LifeCounter}{Life\+Counter} instance that handles the player lives. 
+\end{DoxyReturn}
 \Hypertarget{classlogic_1_1Score_ab44eeb0ec4a8805b5caddbb1ef419027}\label{classlogic_1_1Score_ab44eeb0ec4a8805b5caddbb1ef419027} 
 \index{logic::Score@{logic::Score}!getLifeCounter@{getLifeCounter}}
 \index{getLifeCounter@{getLifeCounter}!logic::Score@{logic::Score}}
 \doxysubsubsection{\texorpdfstring{getLifeCounter()}{getLifeCounter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{classlogic_1_1LifeCounter}{logic\+::\+Life\+Counter}} \& logic\+::\+Score\+::get\+Life\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+\begin{DoxyReturn}{Returns}
+The \doxylink{classlogic_1_1LifeCounter}{Life\+Counter} instance that handles the player lives. 
+\end{DoxyReturn}
 \Hypertarget{classlogic_1_1Score_aef813ee3f1af3ca995d86efc4794e95a}\label{classlogic_1_1Score_aef813ee3f1af3ca995d86efc4794e95a} 
 \index{logic::Score@{logic::Score}!getScoreCounter@{getScoreCounter}}
 \index{getScoreCounter@{getScoreCounter}!logic::Score@{logic::Score}}
 \doxysubsubsection{\texorpdfstring{getScoreCounter()}{getScoreCounter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1ScoreCounter}{logic\+::\+Score\+Counter}} \& logic\+::\+Score\+::get\+Score\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Returns}
+The \doxylink{classlogic_1_1ScoreCounter}{Score\+Counter} instance that handles the player score. 
+\end{DoxyReturn}
 \Hypertarget{classlogic_1_1Score_a1d5019742c20e530abdc36f01faf9a7a}\label{classlogic_1_1Score_a1d5019742c20e530abdc36f01faf9a7a} 
 \index{logic::Score@{logic::Score}!getScoreCounter@{getScoreCounter}}
 \index{getScoreCounter@{getScoreCounter}!logic::Score@{logic::Score}}
 \doxysubsubsection{\texorpdfstring{getScoreCounter()}{getScoreCounter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{classlogic_1_1ScoreCounter}{logic\+::\+Score\+Counter}} \& logic\+::\+Score\+::get\+Score\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+\begin{DoxyReturn}{Returns}
+The \doxylink{classlogic_1_1ScoreCounter}{Score\+Counter} instance that handles the player score. 
+\end{DoxyReturn}
 \Hypertarget{classlogic_1_1Score_a24a5466920e34282c89abee1c32373dc}\label{classlogic_1_1Score_a24a5466920e34282c89abee1c32373dc} 
 \index{logic::Score@{logic::Score}!onTick@{onTick}}
 \index{onTick@{onTick}!logic::Score@{logic::Score}}
 \doxysubsubsection{\texorpdfstring{onTick()}{onTick()}}
 {\footnotesize\ttfamily void logic\+::\+Score\+::on\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Called on each tick. \Hypertarget{classlogic_1_1Score_a7dc0b66e765a991456c0402e4b31af2b}\label{classlogic_1_1Score_a7dc0b66e765a991456c0402e4b31af2b} 
+Called on each tick. Changes the score based on the delta\+Time provided by Stop\+Watch \Hypertarget{classlogic_1_1Score_a7dc0b66e765a991456c0402e4b31af2b}\label{classlogic_1_1Score_a7dc0b66e765a991456c0402e4b31af2b} 
 \index{logic::Score@{logic::Score}!update@{update}}
 \index{update@{update}!logic::Score@{logic::Score}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void logic\+::\+Score\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1PlayerModel}{logic\+::\+Player\+Model}} \&}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
-Update score based on player change. 
+Update score and lives based on player change. 
 \begin{DoxyParams}{Parameters}
 {\em subject} & \\
 \hline
@@ -105,7 +117,7 @@ Implements \mbox{\hyperlink{classlogic_1_1IObserver_ac01efa8f0fbc7495847489c0a86
 \doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void logic\+::\+Score\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&}]{subject,  }\item[{\mbox{\hyperlink{classlogic_1_1ObservableTypes_a2e3a4285a9bc569d4d2939ae894937af}{Observable\+Types\+::\+Event\+Type}}}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
-Update score based on player event. 
+Update score and lives based on player event. 
 \begin{DoxyParams}{Parameters}
 {\em subject} & \\
 \hline

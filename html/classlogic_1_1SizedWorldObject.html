@@ -166,7 +166,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adae3a3c45f13113f3ebcbdaed7190770 inherit pub_methods_classlogic_1_1WorldObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A world object containing a size and able to handle collisions. </p>
+<div class="textblock"><p>A world object containing a size and able to handle collisions. The hitbox is defined by the size and position of the object, with the position in the middle of the resulting rectangle. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a059ee03db27e3962f0c11f71cf0e2bd0" name="a059ee03db27e3962f0c11f71cf0e2bd0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a059ee03db27e3962f0c11f71cf0e2bd0">&#9670;&#160;</a></span>CollisionTypeT</h2>
@@ -179,6 +179,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Typed used for identifying the object during collision handling to avoid expensive casts; </p>
 
 </div>
 </div>
@@ -225,7 +226,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>The size of the object. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The size of the object. The size represents the hitbox of the object. </dd></dl>
 
 </div>
 </div>
@@ -262,7 +263,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Handle a collision with other. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Handle a collision from this to the other. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">other</td><td></td></tr>
   </table>
@@ -296,7 +297,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets the size of the object. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Sets the size of the object. The size represents the hitbox of the object. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td></td></tr>
   </table>

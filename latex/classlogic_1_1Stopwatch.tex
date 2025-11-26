@@ -19,7 +19,7 @@ static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1Stopwatch}{Stopw
 
 
 \doxysubsection{Detailed Description}
-Calculates and holds the time in seconds between the last two ticks. 
+Calculates and holds the time in seconds between the last two ticks. Can be used for dynamic framerates int the game, by using delta\+Time provided by \doxylink{classlogic_1_1Stopwatch}{Stopwatch}. 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classlogic_1_1Stopwatch_a57842f923d53f18a5484bb63b79684e8}\label{classlogic_1_1Stopwatch_a57842f923d53f18a5484bb63b79684e8} 
@@ -37,6 +37,9 @@ The time between the previous two ticks in seconds. 0 if tick has only been call
 \doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
 {\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1Stopwatch}{logic\+::\+Stopwatch}} $>$ logic\+::\+Stopwatch\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+\begin{DoxyReturn}{Returns}
+The singleton instance. 
+\end{DoxyReturn}
 \Hypertarget{classlogic_1_1Stopwatch_ab6dbfd64fce4ebf995ada2b1b5fa3d07}\label{classlogic_1_1Stopwatch_ab6dbfd64fce4ebf995ada2b1b5fa3d07} 
 \index{logic::Stopwatch@{logic::Stopwatch}!tick@{tick}}
 \index{tick@{tick}!logic::Stopwatch@{logic::Stopwatch}}

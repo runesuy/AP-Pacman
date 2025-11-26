@@ -13,6 +13,14 @@ static void \mbox{\hyperlink{classlogic_1_1CollisionHandler_a954562b8dd593407776
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Handles collisions between World\+Objects and calls their on\+Collision methods when the rectangles given by the position and size of the objects intersect. By default the position sits in the center of the rectangle described above.
+
+\begin{DoxyNote}{Note}
+This means only Sized\+World\+Objects have collisions. 
+\end{DoxyNote}
+
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classlogic_1_1CollisionHandler_a954562b8dd5934077765a860829c7ca9}\label{classlogic_1_1CollisionHandler_a954562b8dd5934077765a860829c7ca9} 
 \index{logic::CollisionHandler@{logic::CollisionHandler}!handleCollision@{handleCollision}}
@@ -20,7 +28,7 @@ static void \mbox{\hyperlink{classlogic_1_1CollisionHandler_a954562b8dd593407776
 \doxysubsubsection{\texorpdfstring{handleCollision()}{handleCollision()}}
 {\footnotesize\ttfamily void logic\+::\+Collision\+Handler\+::handle\+Collision (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} $>$ \&}]{objectA,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{Sized\+World\+Object}} $>$ \&}]{objectB,  }\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-Handle a collision from object a to object b. 
+Handle a collision from object a to object b. Calls the on\+Collision method in method a with param b. 
 \begin{DoxyParams}{Parameters}
 {\em objectA} & \\
 \hline
@@ -41,7 +49,7 @@ Here is the call graph for this function\+:
 \doxysubsubsection{\texorpdfstring{handleCollisions()}{handleCollisions()}}
 {\footnotesize\ttfamily void logic\+::\+Collision\+Handler\+::handle\+Collisions (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1WorldObject}{World\+Object}} $>$ $>$ \&}]{objects,  }\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-Handle collisions between objects of the list. \begin{DoxyNote}{Note}
+Handle collisions between objects of the list. When the rectangles defined by the size and position of the object intersect, their on\+Collision method is called. By default the position sits in the middle of this rectangle. \begin{DoxyNote}{Note}
 Only Sized\+World\+Objects have collisions. 
 \end{DoxyNote}
 

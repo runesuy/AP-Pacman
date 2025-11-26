@@ -89,7 +89,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a954562b8dd5934077765a860829c7ca9" id="r_a954562b8dd5934077765a860829c7ca9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1CollisionHandler.html#a954562b8dd5934077765a860829c7ca9">handleCollision</a> (const std::shared_ptr&lt; <a class="el" href="classlogic_1_1SizedWorldObject.html">SizedWorldObject</a> &gt; &amp;objectA, const std::shared_ptr&lt; <a class="el" href="classlogic_1_1SizedWorldObject.html">SizedWorldObject</a> &gt; &amp;objectB, <a class="el" href="classlogic_1_1World.html">World</a> &amp;world)</td></tr>
 <tr class="separator:a954562b8dd5934077765a860829c7ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Handles collisions between WorldObjects and calls their onCollision methods when the rectangles given by the position and size of the objects intersect. By default the position sits in the center of the rectangle described above.</p>
+<dl class="section note"><dt>Note</dt><dd>This means only SizedWorldObjects have collisions. </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a954562b8dd5934077765a860829c7ca9" name="a954562b8dd5934077765a860829c7ca9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a954562b8dd5934077765a860829c7ca9">&#9670;&#160;</a></span>handleCollision()</h2>
 
@@ -129,7 +132,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Handle a collision from object a to object b. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Handle a collision from object a to object b. Calls the onCollision method in method a with param b. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">objectA</td><td></td></tr>
     <tr><td class="paramname">objectB</td><td></td></tr>
@@ -188,7 +191,7 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Handle collisions between objects of the list. </p><dl class="section note"><dt>Note</dt><dd>Only SizedWorldObjects have collisions. </dd></dl>
+<p>Handle collisions between objects of the list. When the rectangles defined by the size and position of the object intersect, their onCollision method is called. By default the position sits in the middle of this rectangle. </p><dl class="section note"><dt>Note</dt><dd>Only SizedWorldObjects have collisions. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">objects</td><td>List of objects. </td></tr>

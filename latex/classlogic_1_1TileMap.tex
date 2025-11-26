@@ -27,7 +27,7 @@ enum \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}{T
 \item 
 const auto \& \mbox{\hyperlink{classlogic_1_1TileMap_a9f871c6da97a9a77dd4f692c8910069c}{get\+Map\+Data}} () const
 \item 
-void \mbox{\hyperlink{classlogic_1_1TileMap_a6b07dc60b6b58bc5faacb8717610fcea}{load\+To\+World}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world)
+void \mbox{\hyperlink{classlogic_1_1TileMap_a475b315235436124ec52b1387750c09d}{load\+To\+World}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world) const
 \item 
 void \mbox{\hyperlink{classlogic_1_1TileMap_aa01a7a80be57dd3e85d3c0a570d07d7c}{add\+Row}} (const std\+::vector$<$ \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}{Tile\+Type}} $>$ \&row)
 \item 
@@ -123,6 +123,9 @@ Add a row to the tile map.
 \doxysubsubsection{\texorpdfstring{getColumnCount()}{getColumnCount()}}
 {\footnotesize\ttfamily unsigned int logic\+::\+Tile\+Map\+::get\+Column\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+\begin{DoxyReturn}{Returns}
+The amount of columns of the map. 
+\end{DoxyReturn}
 \Hypertarget{classlogic_1_1TileMap_af2e5cc47d879b59b10bfb532a43afb44}\label{classlogic_1_1TileMap_af2e5cc47d879b59b10bfb532a43afb44} 
 \index{logic::TileMap@{logic::TileMap}!getGridPosition@{getGridPosition}}
 \index{getGridPosition@{getGridPosition}!logic::TileMap@{logic::TileMap}}
@@ -160,24 +163,48 @@ A row major 2d grid representing the tile map\textquotesingle{}s tile types.
 \doxysubsubsection{\texorpdfstring{getRowCount()}{getRowCount()}}
 {\footnotesize\ttfamily unsigned int logic\+::\+Tile\+Map\+::get\+Row\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+\begin{DoxyReturn}{Returns}
+The amount of rows of the map. 
+\end{DoxyReturn}
 \Hypertarget{classlogic_1_1TileMap_a3510541030b3af363b3538f833105753}\label{classlogic_1_1TileMap_a3510541030b3af363b3538f833105753} 
 \index{logic::TileMap@{logic::TileMap}!getTileCenterPosition@{getTileCenterPosition}}
 \index{getTileCenterPosition@{getTileCenterPosition}!logic::TileMap@{logic::TileMap}}
 \doxysubsubsection{\texorpdfstring{getTileCenterPosition()}{getTileCenterPosition()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1Position}{Position}} logic\+::\+Tile\+Map\+::get\+Tile\+Center\+Position (\begin{DoxyParamCaption}\item[{unsigned int}]{row,  }\item[{unsigned int}]{col }\end{DoxyParamCaption}) const}
 
+
+\begin{DoxyParams}{Parameters}
+{\em row} & The map row of the requested tile. \\
+\hline
+{\em col} & The map column of the requested tile. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The center position of the requested tile. 
+\end{DoxyReturn}
 \Hypertarget{classlogic_1_1TileMap_a1b57cd4600c865db3cbfb791b42717bf}\label{classlogic_1_1TileMap_a1b57cd4600c865db3cbfb791b42717bf} 
 \index{logic::TileMap@{logic::TileMap}!getTileSize@{getTileSize}}
 \index{getTileSize@{getTileSize}!logic::TileMap@{logic::TileMap}}
 \doxysubsubsection{\texorpdfstring{getTileSize()}{getTileSize()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Size\+::\+Coordinate\+Type}} logic\+::\+Tile\+Map\+::get\+Tile\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+\begin{DoxyReturn}{Returns}
+The size of the grid tiles in the world. 
+\end{DoxyReturn}
 \Hypertarget{classlogic_1_1TileMap_adb53cb4ee7398b449c8d084d25ea4510}\label{classlogic_1_1TileMap_adb53cb4ee7398b449c8d084d25ea4510} 
 \index{logic::TileMap@{logic::TileMap}!getTileType@{getTileType}}
 \index{getTileType@{getTileType}!logic::TileMap@{logic::TileMap}}
 \doxysubsubsection{\texorpdfstring{getTileType()}{getTileType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}{Tile\+Map\+::\+Tile\+Type}} logic\+::\+Tile\+Map\+::get\+Tile\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{position }\end{DoxyParamCaption}) const}
 
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \doxylink{classlogic_1_1World}{World} position. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The original tile at the given position in the world. 
+\end{DoxyReturn}
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -192,12 +219,25 @@ Here is the call graph for this function\+:
 \doxysubsubsection{\texorpdfstring{getTileType()}{getTileType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}{Tile\+Map\+::\+Tile\+Type}} logic\+::\+Tile\+Map\+::get\+Tile\+Type (\begin{DoxyParamCaption}\item[{unsigned int}]{row,  }\item[{unsigned int}]{col }\end{DoxyParamCaption}) const}
 
+
+\begin{DoxyParams}{Parameters}
+{\em row} & The map row of the requested tile. \\
+\hline
+{\em col} & The map column of the requested tile. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The original tile at the given position in the world. 
+\end{DoxyReturn}
 \Hypertarget{classlogic_1_1TileMap_a4b64392a0c764b051d4e81f49e00f794}\label{classlogic_1_1TileMap_a4b64392a0c764b051d4e81f49e00f794} 
 \index{logic::TileMap@{logic::TileMap}!getYOffsetForCentering@{getYOffsetForCentering}}
 \index{getYOffsetForCentering@{getYOffsetForCentering}!logic::TileMap@{logic::TileMap}}
 \doxysubsubsection{\texorpdfstring{getYOffsetForCentering()}{getYOffsetForCentering()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{Size\+::\+Coordinate\+Type}} logic\+::\+Tile\+Map\+::get\+YOffset\+For\+Centering (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+\begin{DoxyReturn}{Returns}
+The amount the map is shifted down in order to center it in the middle of the screen. 
+\end{DoxyReturn}
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -206,13 +246,13 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{classlogic_1_1TileMap_a4b64392a0c764b051d4e81f49e00f794_cgraph}
 \end{center}
 \end{figure}
-\Hypertarget{classlogic_1_1TileMap_a6b07dc60b6b58bc5faacb8717610fcea}\label{classlogic_1_1TileMap_a6b07dc60b6b58bc5faacb8717610fcea} 
+\Hypertarget{classlogic_1_1TileMap_a475b315235436124ec52b1387750c09d}\label{classlogic_1_1TileMap_a475b315235436124ec52b1387750c09d} 
 \index{logic::TileMap@{logic::TileMap}!loadToWorld@{loadToWorld}}
 \index{loadToWorld@{loadToWorld}!logic::TileMap@{logic::TileMap}}
 \doxysubsubsection{\texorpdfstring{loadToWorld()}{loadToWorld()}}
-{\footnotesize\ttfamily void logic\+::\+Tile\+Map\+::load\+To\+World (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void logic\+::\+Tile\+Map\+::load\+To\+World (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world }\end{DoxyParamCaption}) const}
 
-Load the tile map into the given world. An entity is created for each tile based on its type. 
+Load the tile map into the given world. An entity is created for each tile based on its type. Afterwards the entity is added to the world. 
 \begin{DoxyParams}{Parameters}
 {\em world} & \\
 \hline
@@ -222,7 +262,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classlogic_1_1TileMap_a6b07dc60b6b58bc5faacb8717610fcea_cgraph}
+\includegraphics[width=350pt]{classlogic_1_1TileMap_a475b315235436124ec52b1387750c09d_cgraph}
 \end{center}
 \end{figure}
 
