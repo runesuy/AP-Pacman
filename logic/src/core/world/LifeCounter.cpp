@@ -17,15 +17,18 @@ namespace logic {
     void LifeCounter::addLives(unsigned int amount) {
         if (amount + livesLeft > lifeStart) livesLeft = lifeStart;
         else livesLeft += amount;
+        updateObservers();
     }
 
     void LifeCounter::removeLives(unsigned int amount) {
         if (livesLeft < amount) livesLeft = 0;
         else livesLeft -= amount;
+        updateObservers();
     }
 
     void LifeCounter::setLivesLeft(unsigned int livesLeft) {
         LifeCounter::livesLeft = livesLeft;
+        updateObservers();
     }
 
     void LifeCounter::update(PlayerModel &subject) {

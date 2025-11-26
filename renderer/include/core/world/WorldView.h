@@ -7,7 +7,8 @@
 #include "core/observer/IObserver.h"
 #include "core/world/World.h"
 #include "IWorldObjectView.h"
-#include "ScoreView.h"
+#include "game/ScoreView.h"
+#include "game/LivesView.h"
 
 namespace renderer {
 
@@ -21,6 +22,7 @@ class WorldView : public logic::IObserver<logic::World> {
     void _cleanUpViews();
 
     std::shared_ptr<ScoreView> scoreView = std::make_shared<ScoreView>();
+    std::shared_ptr<LivesView> livesView = std::make_shared<LivesView>();
 
 public:
     void update(logic::World &subject) override;

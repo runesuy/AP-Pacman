@@ -47,7 +47,10 @@ namespace logic {
          * Add an observer to this observable.
          * @param observer The observer to add
          */
-        void addObserver(const std::shared_ptr<IObserver<T>>& observer) { _observers.push_back(observer); };
+        void addObserver(const std::shared_ptr<IObserver<T>>& observer) {
+            _observers.push_back(observer);
+            updateObservers();
+        };
 
         /**
          * @return true if this has any observers

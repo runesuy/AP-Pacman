@@ -26,7 +26,7 @@ namespace renderer {
          * @param window The render window to project to.
          * @return The screen X position in pixels.
          */
-        static float projectX(float posX, const sf::RenderWindow& window);
+        static float projectX(logic::Position::CoordinateType posX, const sf::RenderWindow& window);
 
         /**
          * Projects the logical position to the screen position.
@@ -42,7 +42,7 @@ namespace renderer {
          * @param window The render window to project to.
          * @return The screen Y position in pixels.
          */
-        static float projectY(float posY, const sf::RenderWindow& window);
+        static float projectY(logic::Position::CoordinateType posY, const sf::RenderWindow& window);
 
         /**
          * Projects the logical position to the screen position.
@@ -75,7 +75,7 @@ namespace renderer {
          * @param window The render window to project to.
          * @return The screen X size in pixels.
          */
-        static float sizeX(float sizeX, const sf::RenderWindow& window);
+        static float sizeX(logic::Position::CoordinateType, const sf::RenderWindow& window);
 
         /**
          * Projects the logical size to the screen size.
@@ -83,7 +83,7 @@ namespace renderer {
          * @param window The render window to project to.
          * @return The screen Y size in pixels.
          */
-        static float sizeY(float sizeY, const sf::RenderWindow& window);
+        static float sizeY(logic::Position::CoordinateType, const sf::RenderWindow& window);
     };
 }
 

@@ -50,3 +50,7 @@ void logic::Score::setScore(int score) {
 const logic::LifeCounter &logic::Score::getLifeCounter() const {
     return lifeCounter;
 }
+
+ logic::LifeCounter &logic::Score::getLifeCounter() {
+    return lifeCounter;
+}

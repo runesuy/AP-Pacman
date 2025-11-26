@@ -11,6 +11,9 @@ namespace renderer {
         if (!subject.getScore().hasObserver(scoreView)) {
            subject.getScore().addObserver(scoreView);
         }
+        if (!subject.getScore().getLifeCounter().hasObserver(livesView)) {
+            subject.getScore().getLifeCounter().addObserver(livesView);
+        }
     }
 
     void WorldView::_cleanUpViews() {
@@ -28,8 +31,12 @@ namespace renderer {
             view->draw(window);
         }
         scoreView->draw(window);
+        livesView->draw(window);
+        livesView->setHorizontalOrigin(Label::RIGHT);
+        scoreView->setHorizontalOrigin(Label::LEFT);
         const logic::TileMap &tileMap = Game::getInstance()->getAppConfig().getLogicConfig().getTileMap();
         scoreView->setPosition(tileMap.getTileCenterPosition(tileMap.getRowCount(), 0));
+        livesView->setPosition(tileMap.getTileCenterPosition(tileMap.getRowCount(), tileMap.getColumnCount()-1));
     }
 
     void WorldView::addObjectView(const std::shared_ptr<IWorldObjectView> &objectView) {

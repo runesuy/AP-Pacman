@@ -12,9 +12,18 @@ namespace renderer {
      * A simple UI label for displaying text.
      */
     class Label : public DrawObject {
+    public:
+        enum HorizontalOriginType {
+            LEFT, MIDDLE, RIGHT
+        };
+    private:
+
         sf::Font font;
-        sf::Text text;
+        mutable sf::Text text;
         float characterSize = 0.05;
+        HorizontalOriginType horizontalOrigin = LEFT;
+
+        void _applyOriginProps() const;
     public:
         Label();
         explicit Label(const std::string &str);
@@ -23,6 +32,8 @@ namespace renderer {
         void setString(const std::string &str);
         void setFont(const sf::Font &font);
         void setCharacterSize(float size);
+
+        void setHorizontalOrigin(HorizontalOriginType horizontalOrigin);
 
         std::vector<std::unique_ptr<sf::Shape>> getSFShapes(sf::RenderWindow &window) override;
 

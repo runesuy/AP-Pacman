@@ -9,29 +9,32 @@
 
 namespace logic {
 
+    /**
+     * Keeps track of the amount of lives of the player.
+     */
     class LifeCounter : public IObserver<PlayerModel>, public Observable<LifeCounter> {
-        inline static const int lifeStart = 3;
+        inline static const unsigned int lifeStart = 3;
         unsigned int livesLeft = lifeStart;
     public:
-        void setLivesLeft(unsigned int livesLeft);
+        using LivesAmountType = unsigned int;
+        void setLivesLeft(LivesAmountType livesLeft);
 
-    public:
         LifeCounter()=default;
-        static unsigned int getLifeStart();
+        static LivesAmountType getLifeStart();
 
-        [[nodiscard]] unsigned int getLivesLeft() const;
+        [[nodiscard]] LivesAmountType getLivesLeft() const;
 
         /**
          * Sets livesLeft to min(lifeStart, livesLeft + amount)
          * @param amount
          */
-        void addLives(unsigned int amount);
+        void addLives(LivesAmountType amount);
 
         /**
          * Removes amount from lives. Lives will not go negative.
          * @param amount
          */
-        void removeLives(unsigned int amount);
+        void removeLives(LivesAmountType amount);
 
         void update(PlayerModel &subject) override;
 

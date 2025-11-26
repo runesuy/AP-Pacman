@@ -67,6 +67,8 @@ namespace logic {
         void setScore(int score);
 
         [[nodiscard]] const LifeCounter &getLifeCounter() const;
+
+        [[nodiscard]] LifeCounter &getLifeCounter();
     };
 }
 
