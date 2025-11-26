@@ -2,7 +2,7 @@
 // Created by runes on 21/11/2025.
 //
 
-#include "../../../../include/core/drawable/ui/Icon.h"
+#include "core/drawable/ui/Icon.h"
 #include "core/utils/Camera.h"
 
 namespace renderer {

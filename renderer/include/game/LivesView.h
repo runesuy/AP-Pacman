@@ -5,7 +5,6 @@
 #ifndef AP_PACMAN_LIVESVIEW_H
 #define AP_PACMAN_LIVESVIEW_H
 
-#include "../../../../../../SFML-2.6.2/include/SFML/Graphics/Text.hpp"
 #include "core/observer/IObserver.h"
 #include "core/world/Score.h"
 #include "../core/drawable/ui/Label.h"

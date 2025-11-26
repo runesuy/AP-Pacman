@@ -2,7 +2,7 @@
 // Created by rune-suy on 11/8/25.
 //
 
-#include "../../../../include/game/entities/views/CoinView.h"
+#include "game/entities/views/CoinView.h"
 #include "core/entity/modular/modules/CircleModule.h"
 
 namespace renderer {
