@@ -24,18 +24,28 @@ Collaboration diagram for logic\+::Life\+Counter\+:
 \includegraphics[width=314pt]{classlogic_1_1LifeCounter__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classlogic_1_1LifeCounter_af8d1d5478b1e56f5e3154025bcd1c039}{Lives\+Amount\+Type}} = unsigned int
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ Life\+Counter $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classlogic_1_1Observable_a6add39447620f2e3b970478832fca944}{Event\+Type}} = int
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classlogic_1_1LifeCounter_a45bcb66feb5d63a0888a24ce75454150}{set\+Lives\+Left}} (unsigned int lives\+Left)
+void \mbox{\hyperlink{classlogic_1_1LifeCounter_a4987a0e6cc3e62f9fdc12604950d7571}{set\+Lives\+Left}} (\mbox{\hyperlink{classlogic_1_1LifeCounter_af8d1d5478b1e56f5e3154025bcd1c039}{Lives\+Amount\+Type}} lives\+Left)
 \item 
 \mbox{\hyperlink{classlogic_1_1LifeCounter_adc9a66aefb92780e8f4027aa711c6462}{Life\+Counter}} ()=default
 \item 
-unsigned int \mbox{\hyperlink{classlogic_1_1LifeCounter_aff3ddfed8b9e4a59f2bcb56fcf99246b}{get\+Lives\+Left}} () const
+\mbox{\hyperlink{classlogic_1_1LifeCounter_af8d1d5478b1e56f5e3154025bcd1c039}{Lives\+Amount\+Type}} \mbox{\hyperlink{classlogic_1_1LifeCounter_aff3ddfed8b9e4a59f2bcb56fcf99246b}{get\+Lives\+Left}} () const
 \item 
-void \mbox{\hyperlink{classlogic_1_1LifeCounter_a6910b73a8ab7230c78025a3af9898a4c}{add\+Lives}} (unsigned int amount)
+void \mbox{\hyperlink{classlogic_1_1LifeCounter_a4aaf85a6f400beb0eedcf62e89b40363}{add\+Lives}} (\mbox{\hyperlink{classlogic_1_1LifeCounter_af8d1d5478b1e56f5e3154025bcd1c039}{Lives\+Amount\+Type}} amount)
 \item 
-void \mbox{\hyperlink{classlogic_1_1LifeCounter_ac5dc2d46e6a8617aff37af4da86f1c2a}{remove\+Lives}} (unsigned int amount)
+void \mbox{\hyperlink{classlogic_1_1LifeCounter_a1851f0902c5b2e61fc585895c95e9d2f}{remove\+Lives}} (\mbox{\hyperlink{classlogic_1_1LifeCounter_af8d1d5478b1e56f5e3154025bcd1c039}{Lives\+Amount\+Type}} amount)
 \item 
 void \mbox{\hyperlink{classlogic_1_1LifeCounter_abcca1ee6cf1343398de86928ee4b9b89}{update}} (\mbox{\hyperlink{classlogic_1_1PlayerModel}{Player\+Model}} \&subject) override
 \item 
@@ -66,14 +76,20 @@ bool \mbox{\hyperlink{classlogic_1_1Observable_a54bfc543d21f11be7137efce418394c2
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static unsigned int \mbox{\hyperlink{classlogic_1_1LifeCounter_aaa5a70ff837a3e136a83530802d4491b}{get\+Life\+Start}} ()
+static \mbox{\hyperlink{classlogic_1_1LifeCounter_af8d1d5478b1e56f5e3154025bcd1c039}{Lives\+Amount\+Type}} \mbox{\hyperlink{classlogic_1_1LifeCounter_aaa5a70ff837a3e136a83530802d4491b}{get\+Life\+Start}} ()
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Additional Inherited Members}
-\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ Life\+Counter $>$}}}
-\begin{DoxyCompactItemize}
-\item 
-using \mbox{\hyperlink{classlogic_1_1Observable_a6add39447620f2e3b970478832fca944}{Event\+Type}} = int
-\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Keeps track of the amount of lives of the player. 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classlogic_1_1LifeCounter_af8d1d5478b1e56f5e3154025bcd1c039}\label{classlogic_1_1LifeCounter_af8d1d5478b1e56f5e3154025bcd1c039} 
+\index{logic::LifeCounter@{logic::LifeCounter}!LivesAmountType@{LivesAmountType}}
+\index{LivesAmountType@{LivesAmountType}!logic::LifeCounter@{logic::LifeCounter}}
+\doxysubsubsection{\texorpdfstring{LivesAmountType}{LivesAmountType}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classlogic_1_1LifeCounter_af8d1d5478b1e56f5e3154025bcd1c039}{logic\+::\+Life\+Counter\+::\+Lives\+Amount\+Type}} =  unsigned int}
+
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -86,17 +102,25 @@ using \mbox{\hyperlink{classlogic_1_1Observable_a6add39447620f2e3b970478832fca94
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classlogic_1_1LifeCounter_a6910b73a8ab7230c78025a3af9898a4c}\label{classlogic_1_1LifeCounter_a6910b73a8ab7230c78025a3af9898a4c} 
+\Hypertarget{classlogic_1_1LifeCounter_a4aaf85a6f400beb0eedcf62e89b40363}\label{classlogic_1_1LifeCounter_a4aaf85a6f400beb0eedcf62e89b40363} 
 \index{logic::LifeCounter@{logic::LifeCounter}!addLives@{addLives}}
 \index{addLives@{addLives}!logic::LifeCounter@{logic::LifeCounter}}
 \doxysubsubsection{\texorpdfstring{addLives()}{addLives()}}
-{\footnotesize\ttfamily void logic\+::\+Life\+Counter\+::add\+Lives (\begin{DoxyParamCaption}\item[{unsigned int}]{amount }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void logic\+::\+Life\+Counter\+::add\+Lives (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1LifeCounter_af8d1d5478b1e56f5e3154025bcd1c039}{Lives\+Amount\+Type}}}]{amount }\end{DoxyParamCaption})}
 
 Sets lives\+Left to min(life\+Start, lives\+Left + amount) 
 \begin{DoxyParams}{Parameters}
 {\em amount} & \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1LifeCounter_a4aaf85a6f400beb0eedcf62e89b40363_cgraph}
+\end{center}
+\end{figure}
 \Hypertarget{classlogic_1_1LifeCounter_aaa5a70ff837a3e136a83530802d4491b}\label{classlogic_1_1LifeCounter_aaa5a70ff837a3e136a83530802d4491b} 
 \index{logic::LifeCounter@{logic::LifeCounter}!getLifeStart@{getLifeStart}}
 \index{getLifeStart@{getLifeStart}!logic::LifeCounter@{logic::LifeCounter}}
@@ -109,23 +133,39 @@ Sets lives\+Left to min(life\+Start, lives\+Left + amount)
 \doxysubsubsection{\texorpdfstring{getLivesLeft()}{getLivesLeft()}}
 {\footnotesize\ttfamily unsigned int logic\+::\+Life\+Counter\+::get\+Lives\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-\Hypertarget{classlogic_1_1LifeCounter_ac5dc2d46e6a8617aff37af4da86f1c2a}\label{classlogic_1_1LifeCounter_ac5dc2d46e6a8617aff37af4da86f1c2a} 
+\Hypertarget{classlogic_1_1LifeCounter_a1851f0902c5b2e61fc585895c95e9d2f}\label{classlogic_1_1LifeCounter_a1851f0902c5b2e61fc585895c95e9d2f} 
 \index{logic::LifeCounter@{logic::LifeCounter}!removeLives@{removeLives}}
 \index{removeLives@{removeLives}!logic::LifeCounter@{logic::LifeCounter}}
 \doxysubsubsection{\texorpdfstring{removeLives()}{removeLives()}}
-{\footnotesize\ttfamily void logic\+::\+Life\+Counter\+::remove\+Lives (\begin{DoxyParamCaption}\item[{unsigned int}]{amount }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void logic\+::\+Life\+Counter\+::remove\+Lives (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1LifeCounter_af8d1d5478b1e56f5e3154025bcd1c039}{Lives\+Amount\+Type}}}]{amount }\end{DoxyParamCaption})}
 
 Removes amount from lives. Lives will not go negative. 
 \begin{DoxyParams}{Parameters}
 {\em amount} & \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classlogic_1_1LifeCounter_a45bcb66feb5d63a0888a24ce75454150}\label{classlogic_1_1LifeCounter_a45bcb66feb5d63a0888a24ce75454150} 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1LifeCounter_a1851f0902c5b2e61fc585895c95e9d2f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlogic_1_1LifeCounter_a4987a0e6cc3e62f9fdc12604950d7571}\label{classlogic_1_1LifeCounter_a4987a0e6cc3e62f9fdc12604950d7571} 
 \index{logic::LifeCounter@{logic::LifeCounter}!setLivesLeft@{setLivesLeft}}
 \index{setLivesLeft@{setLivesLeft}!logic::LifeCounter@{logic::LifeCounter}}
 \doxysubsubsection{\texorpdfstring{setLivesLeft()}{setLivesLeft()}}
-{\footnotesize\ttfamily void logic\+::\+Life\+Counter\+::set\+Lives\+Left (\begin{DoxyParamCaption}\item[{unsigned int}]{lives\+Left }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void logic\+::\+Life\+Counter\+::set\+Lives\+Left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1LifeCounter_af8d1d5478b1e56f5e3154025bcd1c039}{Lives\+Amount\+Type}}}]{lives\+Left }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1LifeCounter_a4987a0e6cc3e62f9fdc12604950d7571_cgraph}
+\end{center}
+\end{figure}
 \Hypertarget{classlogic_1_1LifeCounter_abcca1ee6cf1343398de86928ee4b9b89}\label{classlogic_1_1LifeCounter_abcca1ee6cf1343398de86928ee4b9b89} 
 \index{logic::LifeCounter@{logic::LifeCounter}!update@{update}}
 \index{update@{update}!logic::LifeCounter@{logic::LifeCounter}}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['none_0',['NONE',['../namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52a20a55e99eb2e2128f8088d553b78afd5',1,'logic']]]
+  ['middle_0',['MIDDLE',['../classrenderer_1_1Label.html#a3e746e8c97a5003ae5bd23f73a43e35aa81d1512bdfd7cd39b5743834fb47b3e7',1,'renderer::Label']]]
 ];

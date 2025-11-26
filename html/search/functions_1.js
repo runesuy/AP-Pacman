@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['addlives_0',['addLives',['../classlogic_1_1LifeCounter.html#a6910b73a8ab7230c78025a3af9898a4c',1,'logic::LifeCounter']]],
+  ['addlives_0',['addLives',['../classlogic_1_1LifeCounter.html#a4aaf85a6f400beb0eedcf62e89b40363',1,'logic::LifeCounter']]],
   ['addmodule_1',['addModule',['../classrenderer_1_1ModularEntityView.html#ad01af13e596e5ba0f121343774c303e3',1,'renderer::ModularEntityView']]],
   ['addobject_2',['addObject',['../classlogic_1_1World.html#a0283bebe131b2e3d14961195cfeb5993',1,'logic::World']]],
   ['addobjectview_3',['addObjectView',['../classrenderer_1_1WorldView.html#a6cf03a68e886f61755f2954824f53875',1,'renderer::WorldView']]],

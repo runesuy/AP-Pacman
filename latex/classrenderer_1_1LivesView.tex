@@ -1,0 +1,124 @@
+\doxysection{renderer\+::Lives\+View Class Reference}
+\hypertarget{classrenderer_1_1LivesView}{}\label{classrenderer_1_1LivesView}\index{renderer::LivesView@{renderer::LivesView}}
+
+
+{\ttfamily \#include $<$Lives\+View.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::Lives\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classrenderer_1_1LivesView__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::Lives\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classrenderer_1_1LivesView__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrenderer_1_1LivesView_a68ff7221256d3ea91ecfe4f9c1338ebd}{Lives\+View}} ()
+\item 
+void \mbox{\hyperlink{classrenderer_1_1LivesView_a07dbbaa7b697497887b400b8da171349}{update}} (\mbox{\hyperlink{classlogic_1_1LifeCounter}{logic\+::\+Life\+Counter}} \&subject) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IObserver}{logic\+::\+IObserver$<$ logic\+::\+Life\+Counter $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1IObserver_aa3736db37cb39a0e8f1570c7c3201b33}{\texorpdfstring{$\sim$}{\string~}\+IObserver}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_aca5bbaf530bc7594de4e8de3a6093db4}{update}} (\mbox{\hyperlink{classlogic_1_1LifeCounter}{logic\+::\+Life\+Counter}} \&subject, int event)
+\item 
+virtual void \mbox{\hyperlink{classlogic_1_1IObserver_acdde4b1d124989fc652801832b036eea}{on\+Observable\+Destroyed}} (\mbox{\hyperlink{classlogic_1_1LifeCounter}{logic\+::\+Life\+Counter}} \&subject)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1Label}{renderer\+::\+Label}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrenderer_1_1Label_a6a43d6b85e5393c7d3a1fc2102ee75ac}{Label}} ()
+\item 
+\mbox{\hyperlink{classrenderer_1_1Label_a53eacf0ab24c25be2fa51660a49d9c8d}{Label}} (const std\+::string \&str)
+\item 
+\mbox{\hyperlink{classrenderer_1_1Label_aae61a022e1f80b87da516d4fd8705962}{Label}} (const std\+::string \&str, const sf\+::\+Font \&font)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Label_ad9a62b724b8a8b3c2358c483d11c8e13}{set\+String}} (const std\+::string \&str)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Label_ab7ab0ab215594f5deaf00b8d64a7d2d1}{set\+Font}} (const sf\+::\+Font \&font)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Label_a1e2c6c4b7c1290d03e10aa2de2898b60}{set\+Character\+Size}} (float size)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Label_ab285c653898ec0eeff7b2e37d08e7e4b}{set\+Horizontal\+Origin}} (\mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{Horizontal\+Origin\+Type}} horizontal\+Origin)
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Label_afc92ec67b6a0d2666f3667b49cd97a36}{get\+SFShapes}} (sf\+::\+Render\+Window \&window) override
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Label_ab674bb75a394790149de702cb7d3a491}{get\+SFSprites}} (sf\+::\+Render\+Window \&window) override
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Label_ae6bb2428dffea2093599d1a94bf394cd}{get\+SFTexts}} (sf\+::\+Render\+Window \&window) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1DrawObject}{renderer\+::\+Draw\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \& \mbox{\hyperlink{classrenderer_1_1DrawObject_a1317e66b07b34c0fa2fbf7472f45207e}{get\+Position}} () const
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&position)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de728}{draw}} (sf\+::\+Render\+Window \&window) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{classrenderer_1_1Label}{renderer\+::\+Label}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{Horizontal\+Origin\+Type}} \{ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa83fe1b8ff4b890556ec33926812dff1e}{LEFT}}
+, \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa81d1512bdfd7cd39b5743834fb47b3e7}{MIDDLE}}
+, \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aae20f27c56137863b568e286d26ba1291}{RIGHT}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrenderer_1_1LivesView_a68ff7221256d3ea91ecfe4f9c1338ebd}\label{classrenderer_1_1LivesView_a68ff7221256d3ea91ecfe4f9c1338ebd} 
+\index{renderer::LivesView@{renderer::LivesView}!LivesView@{LivesView}}
+\index{LivesView@{LivesView}!renderer::LivesView@{renderer::LivesView}}
+\doxysubsubsection{\texorpdfstring{LivesView()}{LivesView()}}
+{\footnotesize\ttfamily renderer\+::\+Lives\+View\+::\+Lives\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1LivesView_a07dbbaa7b697497887b400b8da171349}\label{classrenderer_1_1LivesView_a07dbbaa7b697497887b400b8da171349} 
+\index{renderer::LivesView@{renderer::LivesView}!update@{update}}
+\index{update@{update}!renderer::LivesView@{renderer::LivesView}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void renderer\+::\+Lives\+View\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1LifeCounter}{logic\+::\+Life\+Counter}} \&}]{subject }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called when the subject being observed has changed. 
+\begin{DoxyParams}{Parameters}
+{\em subject} & The subject being observed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1IObserver_ac01efa8f0fbc7495847489c0a8651b28}{logic\+::\+IObserver$<$ logic\+::\+Life\+Counter $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classrenderer_1_1LivesView_a07dbbaa7b697497887b400b8da171349_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/game/\mbox{\hyperlink{LivesView_8h}{Lives\+View.\+h}}\item 
+renderer/src/game/\mbox{\hyperlink{LivesView_8cpp}{Lives\+View.\+cpp}}\end{DoxyCompactItemize}

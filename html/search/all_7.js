@@ -19,7 +19,7 @@ var searchData=
   ['getgridposition_16',['getGridPosition',['../classlogic_1_1TileMap.html#af2e5cc47d879b59b10bfb532a43afb44',1,'logic::TileMap']]],
   ['getinstance_17',['getinstance',['../classrenderer_1_1Game.html#a89a7541d8ae8bbc17b2ba07119bf2032',1,'renderer::Game::getInstance()'],['../classlogic_1_1Stopwatch.html#ac6a008dc21f2179c8783caacf0114c0e',1,'logic::Stopwatch::getInstance()'],['../classlogic_1_1Random.html#a6767cf2d0c7ea34dfad8bcf8f478bd51',1,'logic::Random::getInstance()']]],
   ['getintinrange_18',['getIntInRange',['../classlogic_1_1Random.html#aa92ad7b96fffccde940c394337e30ff3',1,'logic::Random']]],
-  ['getlifecounter_19',['getLifeCounter',['../classlogic_1_1Score.html#ab44eeb0ec4a8805b5caddbb1ef419027',1,'logic::Score']]],
+  ['getlifecounter_19',['getlifecounter',['../classlogic_1_1Score.html#a7a10747d443f1a36d269d9c9f0c115ea',1,'logic::Score::getLifeCounter()'],['../classlogic_1_1Score.html#ab44eeb0ec4a8805b5caddbb1ef419027',1,'logic::Score::getLifeCounter() const']]],
   ['getlifestart_20',['getLifeStart',['../classlogic_1_1LifeCounter.html#aaa5a70ff837a3e136a83530802d4491b',1,'logic::LifeCounter']]],
   ['getlivesleft_21',['getLivesLeft',['../classlogic_1_1LifeCounter.html#aff3ddfed8b9e4a59f2bcb56fcf99246b',1,'logic::LifeCounter']]],
   ['getlogicconfig_22',['getlogicconfig',['../classrenderer_1_1DefaultAppConfig.html#a41d2261686e8837e2856e3d7a51a1da1',1,'renderer::DefaultAppConfig::getLogicConfig()'],['../classrenderer_1_1IAppConfig.html#a851a6789f451f0ce8908a446727f366b',1,'renderer::IAppConfig::getLogicConfig()']]],

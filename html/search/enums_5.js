@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['observerevent_0',['ObserverEvent',['../namespacelogic.html#aeb87c1b72e16073c553fd4533aeb4afb',1,'logic']]]
+  ['mode_0',['Mode',['../classlogic_1_1GhostModel.html#aa30135f88fabf78373f93b9cc9da0e4d',1,'logic::GhostModel']]]
 ];

@@ -11,5 +11,7 @@ var searchData=
   ['levelupdatehandler_2ecpp_8',['LevelUpdateHandler.cpp',['../LevelUpdateHandler_8cpp.html',1,'']]],
   ['levelupdatehandler_2eh_9',['LevelUpdateHandler.h',['../LevelUpdateHandler_8h.html',1,'']]],
   ['lifecounter_2ecpp_10',['LifeCounter.cpp',['../LifeCounter_8cpp.html',1,'']]],
-  ['lifecounter_2eh_11',['LifeCounter.h',['../LifeCounter_8h.html',1,'']]]
+  ['lifecounter_2eh_11',['LifeCounter.h',['../LifeCounter_8h.html',1,'']]],
+  ['livesview_2ecpp_12',['LivesView.cpp',['../LivesView_8cpp.html',1,'']]],
+  ['livesview_2eh_13',['LivesView.h',['../LivesView_8h.html',1,'']]]
 ];

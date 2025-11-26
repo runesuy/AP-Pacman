@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mode_0',['Mode',['../classlogic_1_1GhostModel.html#aa30135f88fabf78373f93b9cc9da0e4d',1,'logic::GhostModel']]]
+  ['horizontalorigintype_0',['HorizontalOriginType',['../classrenderer_1_1Label.html#a3e746e8c97a5003ae5bd23f73a43e35a',1,'renderer::Label']]]
 ];

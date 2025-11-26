@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['worldeventt_0',['WorldEventT',['../classlogic_1_1WorldObject.html#a2c8c9cce37d13cbc0acf8a6d3d437373',1,'logic::WorldObject']]]
+  ['livesamounttype_0',['LivesAmountType',['../classlogic_1_1LifeCounter.html#af8d1d5478b1e56f5e3154025bcd1c039',1,'logic::LifeCounter']]]
 ];

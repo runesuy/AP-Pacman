@@ -11,7 +11,7 @@ Inheritance diagram for renderer\+::Label\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=187pt]{classrenderer_1_1Label__inherit__graph}
+\includegraphics[width=302pt]{classrenderer_1_1Label__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -24,6 +24,14 @@ Collaboration diagram for renderer\+::Label\+:
 \includegraphics[width=187pt]{classrenderer_1_1Label__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{Horizontal\+Origin\+Type}} \{ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa83fe1b8ff4b890556ec33926812dff1e}{LEFT}}
+, \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa81d1512bdfd7cd39b5743834fb47b3e7}{MIDDLE}}
+, \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aae20f27c56137863b568e286d26ba1291}{RIGHT}}
+ \}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,6 +46,8 @@ void \mbox{\hyperlink{classrenderer_1_1Label_ad9a62b724b8a8b3c2358c483d11c8e13}{
 void \mbox{\hyperlink{classrenderer_1_1Label_ab7ab0ab215594f5deaf00b8d64a7d2d1}{set\+Font}} (const sf\+::\+Font \&font)
 \item 
 void \mbox{\hyperlink{classrenderer_1_1Label_a1e2c6c4b7c1290d03e10aa2de2898b60}{set\+Character\+Size}} (float size)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Label_ab285c653898ec0eeff7b2e37d08e7e4b}{set\+Horizontal\+Origin}} (\mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{Horizontal\+Origin\+Type}} horizontal\+Origin)
 \item 
 std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Label_afc92ec67b6a0d2666f3667b49cd97a36}{get\+SFShapes}} (sf\+::\+Render\+Window \&window) override
 \item 
@@ -58,6 +68,29 @@ void \mbox{\hyperlink{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de
 
 \doxysubsection{Detailed Description}
 A simple UI label for displaying text. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}\label{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a} 
+\index{renderer::Label@{renderer::Label}!HorizontalOriginType@{HorizontalOriginType}}
+\index{HorizontalOriginType@{HorizontalOriginType}!renderer::Label@{renderer::Label}}
+\doxysubsubsection{\texorpdfstring{HorizontalOriginType}{HorizontalOriginType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{renderer\+::\+Label\+::\+Horizontal\+Origin\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT@{LEFT}!renderer::Label@{renderer::Label}}\index{renderer::Label@{renderer::Label}!LEFT@{LEFT}}}\Hypertarget{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa83fe1b8ff4b890556ec33926812dff1e}\label{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa83fe1b8ff4b890556ec33926812dff1e} 
+LEFT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIDDLE@{MIDDLE}!renderer::Label@{renderer::Label}}\index{renderer::Label@{renderer::Label}!MIDDLE@{MIDDLE}}}\Hypertarget{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa81d1512bdfd7cd39b5743834fb47b3e7}\label{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa81d1512bdfd7cd39b5743834fb47b3e7} 
+MIDDLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT@{RIGHT}!renderer::Label@{renderer::Label}}\index{renderer::Label@{renderer::Label}!RIGHT@{RIGHT}}}\Hypertarget{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aae20f27c56137863b568e286d26ba1291}\label{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aae20f27c56137863b568e286d26ba1291} 
+RIGHT&\\
+\hline
+
+\end{DoxyEnumFields}
+
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classrenderer_1_1Label_a6a43d6b85e5393c7d3a1fc2102ee75ac}\label{classrenderer_1_1Label_a6a43d6b85e5393c7d3a1fc2102ee75ac} 
@@ -175,6 +208,12 @@ Here is the call graph for this function\+:
 \index{setFont@{setFont}!renderer::Label@{renderer::Label}}
 \doxysubsubsection{\texorpdfstring{setFont()}{setFont()}}
 {\footnotesize\ttfamily void renderer\+::\+Label\+::set\+Font (\begin{DoxyParamCaption}\item[{const sf\+::\+Font \&}]{font }\end{DoxyParamCaption})}
+
+\Hypertarget{classrenderer_1_1Label_ab285c653898ec0eeff7b2e37d08e7e4b}\label{classrenderer_1_1Label_ab285c653898ec0eeff7b2e37d08e7e4b} 
+\index{renderer::Label@{renderer::Label}!setHorizontalOrigin@{setHorizontalOrigin}}
+\index{setHorizontalOrigin@{setHorizontalOrigin}!renderer::Label@{renderer::Label}}
+\doxysubsubsection{\texorpdfstring{setHorizontalOrigin()}{setHorizontalOrigin()}}
+{\footnotesize\ttfamily void renderer\+::\+Label\+::set\+Horizontal\+Origin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{Label\+::\+Horizontal\+Origin\+Type}}}]{horizontal\+Origin }\end{DoxyParamCaption})}
 
 \Hypertarget{classrenderer_1_1Label_ad9a62b724b8a8b3c2358c483d11c8e13}\label{classrenderer_1_1Label_ad9a62b724b8a8b3c2358c483d11c8e13} 
 \index{renderer::Label@{renderer::Label}!setString@{setString}}
