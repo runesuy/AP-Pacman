@@ -3,6 +3,7 @@
 //
 
 #include "core/world/LifeCounter.h"
+#include "game/entities/ObserverEvents.h"
 #include <algorithm>
 
 namespace logic {
@@ -31,11 +32,9 @@ namespace logic {
         updateObservers();
     }
 
-    void LifeCounter::update(PlayerModel &subject) {
-
-    }
-
-    void LifeCounter::update(PlayerModel &subject, int event) {
-        IObserver::update(subject, event);
+    void LifeCounter::processEvent(ObservableTypes::EventType event) {
+        if (event == ObserverEvent::PLAYER_KILLED) {
+            removeLives(1);
+        }
     }
 } // logic

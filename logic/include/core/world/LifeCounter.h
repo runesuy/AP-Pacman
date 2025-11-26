@@ -12,7 +12,7 @@ namespace logic {
     /**
      * Keeps track of the amount of lives of the player.
      */
-    class LifeCounter : public IObserver<PlayerModel>, public Observable<LifeCounter> {
+    class LifeCounter : public Observable<LifeCounter> {
         inline static const unsigned int lifeStart = 3;
         unsigned int livesLeft = lifeStart;
     public:
@@ -36,9 +36,7 @@ namespace logic {
          */
         void removeLives(LivesAmountType amount);
 
-        void update(PlayerModel &subject) override;
-
-        void update(PlayerModel &subject, int event) override;
+        void processEvent(ObservableTypes::EventType event);
     };
 
 

@@ -8,8 +8,8 @@
 namespace renderer {
     void WorldView::update(logic::World &subject) {
         _cleanUpViews();
-        if (!subject.getScore().hasObserver(scoreView)) {
-           subject.getScore().addObserver(scoreView);
+        if (!subject.getScore().getScoreCounter().hasObserver(scoreView)) {
+           subject.getScore().getScoreCounter().addObserver(scoreView);
         }
         if (!subject.getScore().getLifeCounter().hasObserver(livesView)) {
             subject.getScore().getLifeCounter().addObserver(livesView);

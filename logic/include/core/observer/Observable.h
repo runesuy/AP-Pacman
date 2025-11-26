@@ -9,6 +9,7 @@
 #include <memory>
 #include <vector>
 #include "IObserver.h"
+#include "ObservableTypes.h"
 
 namespace logic {
 
@@ -24,8 +25,6 @@ namespace logic {
         std::vector<std::shared_ptr<IObserver<T>>> _observers;
 
     public:
-        using EventType = int;
-
         /**
          * Call update in all observers.
          */
@@ -39,7 +38,7 @@ namespace logic {
          * Update all observers with an event.
          * @param event String event passed to observers.
          */
-        void updateObservers(EventType event);
+        void updateObservers(ObservableTypes::EventType event);
 
         virtual ~Observable();
 
@@ -68,7 +67,7 @@ namespace logic {
     //---------------------- Implementation ------------------------//
 
     template<typename T>
-    void Observable<T>::updateObservers(EventType event) {
+    void Observable<T>::updateObservers(ObservableTypes::EventType event) {
         for (auto &observer: _observers) {
             observer->update(static_cast<T&>(*this), event);
         }

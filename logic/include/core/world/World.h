@@ -28,8 +28,6 @@ namespace logic {
 
         std::shared_ptr<Score> score = std::make_shared<Score>();
 
-        std::shared_ptr<LifeCounter> lifeCounter = std::make_shared<LifeCounter>();
-
         void _handleCollisions();
 
         void _removeMarkedObjects();
@@ -39,6 +37,12 @@ namespace logic {
          * @param config Logic configuration reference.
          */
         explicit World(const IConfig& config);
+
+        /**
+         * Construct a World with the given configuration.
+         * @param config Logic configuration reference.
+         */
+        explicit World(const IConfig& config, std::shared_ptr<Score> score);
 
         /**
          * Update all objects in the world.
@@ -70,7 +74,7 @@ namespace logic {
 
         [[nodiscard]] const Score &getScore() const;
 
-        Score &getScore() ;
+        [[nodiscard]] Score &getScore();
 
         [[nodiscard]] bool levelComplete() const;
 

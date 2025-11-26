@@ -5,7 +5,7 @@
 #include "game/ScoreView.h"
 
 namespace renderer {
-    void ScoreView::update(logic::Score &subject) {
+    void ScoreView::update(logic::ScoreCounter &subject) {
         setString("SCORE: " + std::to_string(subject.getScore()));
     }
 

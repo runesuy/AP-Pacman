@@ -12,10 +12,10 @@
 
 namespace renderer {
 
-class ScoreView : public logic::IObserver<logic::Score>, public Label{
+class ScoreView : public logic::IObserver<logic::ScoreCounter>, public Label{
     public:
         ScoreView();
-        void update(logic::Score &subject) override;
+        void update(logic::ScoreCounter &subject) override;
 
 };
 

@@ -4,6 +4,7 @@
 
 #include <memory>
 #include <iostream>
+#include <utility>
 #include "core/world/World.h"
 #include "core/world/TileMap.h"
 #include "core/world/objects/CollisionHandler.h"
@@ -84,6 +85,11 @@ namespace logic {
     }
 
     bool World::isGameOver() const {
-        return lifeCounter->getLivesLeft() == 0;
+        return score->getLifeCounter().getLivesLeft() == 0;
+    }
+
+    World::World(const IConfig &config, std::shared_ptr<Score> score): config(config) {
+        this->score = std::move(score);
+        config.getTileMap().loadToWorld(*this);
     }
 } // logic
