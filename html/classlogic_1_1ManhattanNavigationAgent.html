@@ -104,14 +104,14 @@ Collaboration diagram for logic::ManhattanNavigationAgent:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0372ce9f843bcb164b2cb1755988b159" id="r_a0372ce9f843bcb164b2cb1755988b159"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1ManhattanNavigationAgent.html#a0372ce9f843bcb164b2cb1755988b159">getNavigationDirection</a> (const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;current, const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;target, const <a class="el" href="classlogic_1_1World.html">World</a> &amp;world) const override</td></tr>
-<tr class="separator:a0372ce9f843bcb164b2cb1755988b159"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51155535b60829237ecd17ba1e0079f5" id="r_a51155535b60829237ecd17ba1e0079f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1ManhattanNavigationAgent.html#a51155535b60829237ecd17ba1e0079f5">getNavigationDirectionAway</a> (const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;current, const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;target, const <a class="el" href="classlogic_1_1World.html">World</a> &amp;world) const override</td></tr>
-<tr class="separator:a51155535b60829237ecd17ba1e0079f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aead3e5b54535f01bda2ae65a919f99b0" id="r_aead3e5b54535f01bda2ae65a919f99b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1ManhattanNavigationAgent.html#aead3e5b54535f01bda2ae65a919f99b0">getNavigationDirection</a> (const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;current, const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;target, const <a class="el" href="classlogic_1_1World.html">World</a> &amp;world, std::set&lt; <a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a> &gt; excludeIfOtherOptions) const override</td></tr>
+<tr class="separator:aead3e5b54535f01bda2ae65a919f99b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ab172923721b0b6111a2569cd2723ca" id="r_a8ab172923721b0b6111a2569cd2723ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1ManhattanNavigationAgent.html#a8ab172923721b0b6111a2569cd2723ca">getNavigationDirectionAway</a> (const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;current, const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;target, const <a class="el" href="classlogic_1_1World.html">World</a> &amp;world, std::set&lt; <a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a> &gt; excludeIfOtherOptions) const override</td></tr>
+<tr class="separator:a8ab172923721b0b6111a2569cd2723ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0372ce9f843bcb164b2cb1755988b159" name="a0372ce9f843bcb164b2cb1755988b159"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0372ce9f843bcb164b2cb1755988b159">&#9670;&#160;</a></span>getNavigationDirection()</h2>
+<a id="aead3e5b54535f01bda2ae65a919f99b0" name="aead3e5b54535f01bda2ae65a919f99b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aead3e5b54535f01bda2ae65a919f99b0">&#9670;&#160;</a></span>getNavigationDirection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -135,7 +135,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classlogic_1_1World.html">World</a> &amp;&#160;</td>
-          <td class="paramname"><em>world</em>&#160;</td>
+          <td class="paramname"><em>world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::set&lt; <a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a> &gt;&#160;</td>
+          <td class="paramname"><em>excludeIfOtherOptions</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -150,12 +156,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classlogic_1_1INavigationAgent.html#a99020bae6b8a47731e49e032511b1762">logic::INavigationAgent</a>.</p>
+<p>Implements <a class="el" href="classlogic_1_1INavigationAgent.html#ae647e21c79e19f2d2bcdf083dc52b955">logic::INavigationAgent</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classlogic_1_1ManhattanNavigationAgent_a0372ce9f843bcb164b2cb1755988b159_cgraph.png" border="0" usemap="#aclasslogic_1_1ManhattanNavigationAgent_a0372ce9f843bcb164b2cb1755988b159_cgraph" alt=""/></div>
-<map name="aclasslogic_1_1ManhattanNavigationAgent_a0372ce9f843bcb164b2cb1755988b159_cgraph" id="aclasslogic_1_1ManhattanNavigationAgent_a0372ce9f843bcb164b2cb1755988b159_cgraph">
+<div class="center"><img src="classlogic_1_1ManhattanNavigationAgent_aead3e5b54535f01bda2ae65a919f99b0_cgraph.png" border="0" usemap="#aclasslogic_1_1ManhattanNavigationAgent_aead3e5b54535f01bda2ae65a919f99b0_cgraph" alt=""/></div>
+<map name="aclasslogic_1_1ManhattanNavigationAgent_aead3e5b54535f01bda2ae65a919f99b0_cgraph" id="aclasslogic_1_1ManhattanNavigationAgent_aead3e5b54535f01bda2ae65a919f99b0_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,198,46"/>
 <area shape="rect" href="classlogic_1_1Random.html#a6767cf2d0c7ea34dfad8bcf8f478bd51" title=" " alt="" coords="246,13,422,39"/>
 <area shape="poly" title=" " alt="" coords="198,23,230,23,230,28,198,28"/>
@@ -164,8 +170,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a51155535b60829237ecd17ba1e0079f5" name="a51155535b60829237ecd17ba1e0079f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51155535b60829237ecd17ba1e0079f5">&#9670;&#160;</a></span>getNavigationDirectionAway()</h2>
+<a id="a8ab172923721b0b6111a2569cd2723ca" name="a8ab172923721b0b6111a2569cd2723ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ab172923721b0b6111a2569cd2723ca">&#9670;&#160;</a></span>getNavigationDirectionAway()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,7 +195,13 @@ Here is the call graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classlogic_1_1World.html">World</a> &amp;&#160;</td>
-          <td class="paramname"><em>world</em>&#160;</td>
+          <td class="paramname"><em>world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::set&lt; <a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a> &gt;&#160;</td>
+          <td class="paramname"><em>excludeIfOtherOptions</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -204,12 +216,12 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classlogic_1_1INavigationAgent.html#aea23d6e9fefb01693cbc07befb8f169a">logic::INavigationAgent</a>.</p>
+<p>Implements <a class="el" href="classlogic_1_1INavigationAgent.html#ac8b515e26ede33c63b4f132c4384e5cf">logic::INavigationAgent</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classlogic_1_1ManhattanNavigationAgent_a51155535b60829237ecd17ba1e0079f5_cgraph.png" border="0" usemap="#aclasslogic_1_1ManhattanNavigationAgent_a51155535b60829237ecd17ba1e0079f5_cgraph" alt=""/></div>
-<map name="aclasslogic_1_1ManhattanNavigationAgent_a51155535b60829237ecd17ba1e0079f5_cgraph" id="aclasslogic_1_1ManhattanNavigationAgent_a51155535b60829237ecd17ba1e0079f5_cgraph">
+<div class="center"><img src="classlogic_1_1ManhattanNavigationAgent_a8ab172923721b0b6111a2569cd2723ca_cgraph.png" border="0" usemap="#aclasslogic_1_1ManhattanNavigationAgent_a8ab172923721b0b6111a2569cd2723ca_cgraph" alt=""/></div>
+<map name="aclasslogic_1_1ManhattanNavigationAgent_a8ab172923721b0b6111a2569cd2723ca_cgraph" id="aclasslogic_1_1ManhattanNavigationAgent_a8ab172923721b0b6111a2569cd2723ca_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,230,46"/>
 <area shape="rect" href="classlogic_1_1Random.html#a6767cf2d0c7ea34dfad8bcf8f478bd51" title=" " alt="" coords="278,13,454,39"/>
 <area shape="poly" title=" " alt="" coords="230,23,262,23,262,28,230,28"/>

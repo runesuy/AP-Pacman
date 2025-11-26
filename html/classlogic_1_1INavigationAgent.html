@@ -94,14 +94,14 @@ Inheritance diagram for logic::INavigationAgent:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a99020bae6b8a47731e49e032511b1762" id="r_a99020bae6b8a47731e49e032511b1762"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1INavigationAgent.html#a99020bae6b8a47731e49e032511b1762">getNavigationDirection</a> (const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;current, const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;target, const <a class="el" href="classlogic_1_1World.html">World</a> &amp;world) const =0</td></tr>
-<tr class="separator:a99020bae6b8a47731e49e032511b1762"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea23d6e9fefb01693cbc07befb8f169a" id="r_aea23d6e9fefb01693cbc07befb8f169a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1INavigationAgent.html#aea23d6e9fefb01693cbc07befb8f169a">getNavigationDirectionAway</a> (const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;current, const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;target, const <a class="el" href="classlogic_1_1World.html">World</a> &amp;world) const =0</td></tr>
-<tr class="separator:aea23d6e9fefb01693cbc07befb8f169a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae647e21c79e19f2d2bcdf083dc52b955" id="r_ae647e21c79e19f2d2bcdf083dc52b955"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1INavigationAgent.html#ae647e21c79e19f2d2bcdf083dc52b955">getNavigationDirection</a> (const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;current, const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;target, const <a class="el" href="classlogic_1_1World.html">World</a> &amp;world, std::set&lt; <a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a> &gt; excludeIfOtherOptions={}) const =0</td></tr>
+<tr class="separator:ae647e21c79e19f2d2bcdf083dc52b955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8b515e26ede33c63b4f132c4384e5cf" id="r_ac8b515e26ede33c63b4f132c4384e5cf"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1INavigationAgent.html#ac8b515e26ede33c63b4f132c4384e5cf">getNavigationDirectionAway</a> (const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;current, const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;target, const <a class="el" href="classlogic_1_1World.html">World</a> &amp;world, std::set&lt; <a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a> &gt; excludeIfOtherOptions={}) const =0</td></tr>
+<tr class="separator:ac8b515e26ede33c63b4f132c4384e5cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a99020bae6b8a47731e49e032511b1762" name="a99020bae6b8a47731e49e032511b1762"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99020bae6b8a47731e49e032511b1762">&#9670;&#160;</a></span>getNavigationDirection()</h2>
+<a id="ae647e21c79e19f2d2bcdf083dc52b955" name="ae647e21c79e19f2d2bcdf083dc52b955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae647e21c79e19f2d2bcdf083dc52b955">&#9670;&#160;</a></span>getNavigationDirection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -125,7 +125,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classlogic_1_1World.html">World</a> &amp;&#160;</td>
-          <td class="paramname"><em>world</em>&#160;</td>
+          <td class="paramname"><em>world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::set&lt; <a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a> &gt;&#160;</td>
+          <td class="paramname"><em>excludeIfOtherOptions</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -140,12 +146,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classlogic_1_1ManhattanNavigationAgent.html#a0372ce9f843bcb164b2cb1755988b159">logic::ManhattanNavigationAgent</a>.</p>
+<p>Implemented in <a class="el" href="classlogic_1_1ManhattanNavigationAgent.html#aead3e5b54535f01bda2ae65a919f99b0">logic::ManhattanNavigationAgent</a>.</p>
 
 </div>
 </div>
-<a id="aea23d6e9fefb01693cbc07befb8f169a" name="aea23d6e9fefb01693cbc07befb8f169a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea23d6e9fefb01693cbc07befb8f169a">&#9670;&#160;</a></span>getNavigationDirectionAway()</h2>
+<a id="ac8b515e26ede33c63b4f132c4384e5cf" name="ac8b515e26ede33c63b4f132c4384e5cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8b515e26ede33c63b4f132c4384e5cf">&#9670;&#160;</a></span>getNavigationDirectionAway()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,7 +175,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classlogic_1_1World.html">World</a> &amp;&#160;</td>
-          <td class="paramname"><em>world</em>&#160;</td>
+          <td class="paramname"><em>world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::set&lt; <a class="el" href="namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52">Direction</a> &gt;&#160;</td>
+          <td class="paramname"><em>excludeIfOtherOptions</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -184,7 +196,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classlogic_1_1ManhattanNavigationAgent.html#a51155535b60829237ecd17ba1e0079f5">logic::ManhattanNavigationAgent</a>.</p>
+<p>Implemented in <a class="el" href="classlogic_1_1ManhattanNavigationAgent.html#a8ab172923721b0b6111a2569cd2723ca">logic::ManhattanNavigationAgent</a>.</p>
 
 </div>
 </div>
