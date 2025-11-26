@@ -12,7 +12,7 @@
 
 namespace logic {
     /**
-     * An observer class to track and manage the player's score.
+     * An observer class to track and manage the player's score and lives.
      */
     class Score : public IObserver<PlayerModel> {
 
@@ -21,27 +21,40 @@ namespace logic {
     public:
         /**
          * Called on each tick.
+         * Changes the score based on the deltaTime provided by StopWatch
          */
         void onTick();
 
         /**
-         * Update score based on player change.
+         * Update score and lives based on player change.
          * @param subject
          */
         void update(PlayerModel &subject) override;
 
         /**
-         * Update score based on player event.
+         * Update score and lives based on player event.
          * @param subject
          */
         void update(PlayerModel &subject, ObservableTypes::EventType event) override;
 
+        /**
+         * @return The LifeCounter instance that handles the player lives.
+         */
         [[nodiscard]] const LifeCounter &getLifeCounter() const;
 
+        /**
+         * @return The LifeCounter instance that handles the player lives.
+         */
         [[nodiscard]] LifeCounter &getLifeCounter();
 
+        /**
+         * @return The ScoreCounter instance that handles the player score.
+         */
         [[nodiscard]] const ScoreCounter &getScoreCounter() const;
 
+        /**
+         * @return The ScoreCounter instance that handles the player score.
+         */
         [[nodiscard]] ScoreCounter &getScoreCounter();
     };
 }

@@ -12,6 +12,9 @@ namespace logic {
      */
     class ICoordinate {
     public:
+        /**
+         * Type used in the 2D coördinate system.
+         */
         using CoordinateType = double;
 
         /**

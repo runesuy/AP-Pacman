@@ -26,10 +26,20 @@ namespace logic {
          */
         std::vector<std::shared_ptr<WorldObject>> objects;
 
+        /**
+         * The score tracks player score and lives based on the world and the player.
+         */
         std::shared_ptr<Score> score = std::make_shared<Score>();
 
+        /**
+         * Let the CollisionHandles handle all collisions between the worldObjects
+         * @see CollisionHandler
+         */
         void _handleCollisions();
 
+        /**
+         * Remove all objects with isMarkedForRemoval==true
+         */
         void _removeMarkedObjects();
     public:
         /**
@@ -55,6 +65,10 @@ namespace logic {
          */
         [[nodiscard]] const IConfig &getConfig() const;
 
+        /**
+         * Send a world event to all worldObjects in the world.
+         * @param event
+         */
         void sendWorldEvent(WorldObject::WorldEventT event);
 
         /**
@@ -64,20 +78,49 @@ namespace logic {
          */
         void addObject(const std::shared_ptr<WorldObject>& object);
 
+        /**
+         * Remove object if present in the worldObjects.
+         * @param object
+         */
         void removeObject(const WorldObject& object);
 
+        /**
+         * Send entityCommand command to all worldObjects of type Target
+         * @tparam Target
+         * @param command
+         */
         template<typename Target>
         void sendCommandTo(EntityCommand command);
 
+        /**
+         * @tparam Target
+         * @return A std::vector of all worldObjects of type Target present in the world.
+         */
         template<typename Target>
         [[nodiscard]] std::vector<std::shared_ptr<Target>> getObjectsOfType() const;
 
+        /**
+         * @return The score instance.
+         *
+         * Score provides score and player life logic.
+         */
         [[nodiscard]] const Score &getScore() const;
 
+        /**
+         * @return The score instance.
+         *
+         * Score provides score and player life logic.
+         */
         [[nodiscard]] Score &getScore();
 
+        /**
+         * @return true if all coins are collected
+         */
         [[nodiscard]] bool levelComplete() const;
 
+        /**
+         * @return true the player has no lives left
+         */
         [[nodiscard]] bool isGameOver() const;
     };
 

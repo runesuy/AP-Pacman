@@ -44,9 +44,10 @@ namespace logic {
         /**
          * Load the tile map into the given world.
          * An entity is created for each tile based on its type.
+         * Afterwards the entity is added to the world.
          * @param world
          */
-        void loadToWorld(World &world);
+        void loadToWorld(World &world) const;
 
         /**
          * Add a row to the tile map.
@@ -55,6 +56,10 @@ namespace logic {
          */
         void addRow(const std::vector<TileType> &row);
 
+        /**
+         * @param position World position.
+         * @return The original tile at the given position in the world.
+         */
         [[nodiscard]] TileType getTileType(const Position &position) const;
 
         /**
@@ -63,16 +68,39 @@ namespace logic {
          */
         [[nodiscard]] std::pair<int, int> getGridPosition(const Position &position) const;
 
+        /**
+         *
+         * @param row The map row of the requested tile.
+         * @param col The map column of the requested tile.
+         * @return The original tile at the given position in the world.
+         */
         [[nodiscard]] TileType getTileType(unsigned int row, unsigned int col) const;
 
+        /**
+         * @param row The map row of the requested tile.
+         * @param col The map column of the requested tile.
+         * @return The center position of the requested tile.
+         */
         [[nodiscard]] Position getTileCenterPosition(unsigned int row, unsigned int col) const;
 
+        /**
+         * @return  The size of the grid tiles in the world.
+         */
         [[nodiscard]] Size::CoordinateType getTileSize() const;
 
+        /**
+         * @return The amount the map is shifted down in order to center it in the middle of the screen.
+         */
         [[nodiscard]] Size::CoordinateType getYOffsetForCentering() const;
 
+        /**
+         * @return The amount of rows of the map.
+         */
         [[nodiscard]] unsigned int getRowCount() const;
 
+        /**
+         * @return The amount of columns of the map.
+         */
         [[nodiscard]] unsigned int getColumnCount() const;
     };
 

@@ -11,10 +11,19 @@
 
 namespace logic {
 
+    /**
+     * Handles collisions between WorldObjects and calls their onCollision methods when the rectangles given by the
+     * position and size of the objects intersect.
+     * By default the position sits in the center of the rectangle described above.
+     *
+     * @note This means only SizedWorldObjects have collisions.
+     */
     class CollisionHandler {
     public:
         /**
          * Handle collisions between objects of the list.
+         * When the rectangles defined by the size and position of the object intersect, their onCollision method is called.
+         * By default the position sits in the middle of this rectangle.
          * @note Only SizedWorldObjects have collisions.
          * @param objects List of objects.
          */
@@ -22,6 +31,7 @@ namespace logic {
 
         /**
          * Handle a collision from object a to object b.
+         * Calls the onCollision method in method a with param b.
          * @param objectA
          * @param objectB
          */

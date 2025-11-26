@@ -15,9 +15,13 @@ namespace logic {
     class EntityModel;
 
     /**
-     * A controller that can be linked to a model.
-     * Handles all data change for the model.
+     * A controller for customizable logic for an entityModel.
+     * EntityControllers read and modify the models based on updates, events and commands.
+     *
+     * The Derived type of the entityModel.
      * @tparam DerivedEntityModel
+     *
+     * @see EntityModel
      */
     template<typename DerivedEntityModel>
     class IEntityController {

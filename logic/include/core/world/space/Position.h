@@ -25,6 +25,9 @@ namespace logic {
          */
         Position(CoordinateType x, CoordinateType y);
 
+        /**
+         * Create a default position instance.
+         */
         Position() = default;
 
         Position(Position &&) noexcept = default;
@@ -37,8 +40,18 @@ namespace logic {
 
         Position &operator+=(const Position &other);
 
+        /**
+         * Add up the corresponding x and y values.
+         * @param other
+         * @return
+         */
         Position operator+(const Position &other) const;
 
+        /**
+         * Multiply x and y with a scalar.
+         * @param scalar
+         * @return
+         */
         Position operator*(float scalar) const;
 
         bool operator==(const Position &other) const;

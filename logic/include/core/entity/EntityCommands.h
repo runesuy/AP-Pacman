@@ -7,7 +7,10 @@
 
 namespace logic {
     /**
-     * Commands for entities.
+     * Commands that can be passed to the entities.
+     * These commands can be used in the entityControllers.
+     *
+     * @see IEntityController::processCommand(...)
      */
     enum EntityCommand {
         TURN_LEFT,

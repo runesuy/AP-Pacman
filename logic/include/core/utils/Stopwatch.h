@@ -11,6 +11,7 @@ namespace logic {
 
     /**
      * Calculates and holds the time in seconds between the last two ticks.
+     * Can be used for dynamic framerates int the game, by using deltaTime provided by Stopwatch.
      */
     class Stopwatch {
         /**
@@ -45,6 +46,9 @@ namespace logic {
          */
         [[nodiscard]] float getDeltaTime() const noexcept;
 
+        /**
+         * @return The singleton instance.
+         */
         static std::shared_ptr<Stopwatch> getInstance();
     };
 }

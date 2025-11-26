@@ -7,8 +7,14 @@
 
 namespace logic {
 
+    /**
+     * Types used for the Observable and Observer classes.
+     */
     class ObservableTypes {
     public:
+        /**
+         * Type of events that can be passed from observable to observer.
+         */
         using EventType = int;
     };
 

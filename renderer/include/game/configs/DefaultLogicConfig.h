@@ -30,7 +30,7 @@ namespace renderer {
          * Get the tile map to be used in the game world.
          * @return
          */
-        [[nodiscard]] logic::TileMap getTileMap() const override;
+        [[nodiscard]] const logic::TileMap & getTileMap() const override;
 
         /**
          * Get the entity factory for creating game entities.

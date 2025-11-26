@@ -22,7 +22,7 @@ namespace logic {
      * Returns the opposite of direction.
      * Opposite of NONE is NONE
      * @param direction
-     * @return
+     * @return The opposite direction of direction
      */
     Direction getOppositeDirection(Direction direction);
 }

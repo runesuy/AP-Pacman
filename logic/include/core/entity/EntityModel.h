@@ -15,13 +15,17 @@
 #include "EntityCommands.h"
 
 namespace logic {
+
     template<typename EntityModelType>
     class IEntityController;
 
     /**
      * In world logical representation of an entity.
      * Consists of size attribute in addition to WorldObject attributes.
+     * Modifying happens via a EntityController
      * @tparam Derived
+     *
+     * @see EntityController<>
      */
     template<typename Derived>
     class EntityModel : public SizedWorldObject {
@@ -37,11 +41,22 @@ namespace logic {
          * Position on first update.
          */
         bool spawnPositionSet = false;
+
+        /**
+         * The initial position of the entity on the first update.
+         */
         Position spawnPosition;
 
     public:
         /**
+         * Creates a default EntityModel.
+         */
+        EntityModel()=default;
+        ~EntityModel()=default;
+
+        /**
          * Sets the controller.
+         * Controller is used for changing the model data.
          * @param controller
          */
         void setController(const std::shared_ptr<IEntityController<Derived>> &controller);
@@ -67,12 +82,23 @@ namespace logic {
          */
         void onCollision(const SizedWorldObject &other, World &world) final;
 
-        void handleWorldEvent(WorldEventT t) override {
-            if (controller) controller->handleWorldEvent(t, static_cast<Derived &>(*this));
-        }
+        /**
+         * Handle the worldEvent.
+         * Calls the controller.
+         * @param t
+         */
+        void handleWorldEvent(WorldEventT t) final;
 
+        /**
+         * @return The position the before the first update.
+         */
         [[nodiscard]] const Position &getSpawnPosition() const;
     };
+
+    template<typename Derived>
+    void EntityModel<Derived>::handleWorldEvent(WorldObject::WorldEventT t) {
+        if (controller) controller->handleWorldEvent(t, static_cast<Derived &>(*this));
+    }
 
     template<typename Derived>
     const Position &EntityModel<Derived>::getSpawnPosition() const {

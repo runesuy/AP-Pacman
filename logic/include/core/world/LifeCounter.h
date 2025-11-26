@@ -11,17 +11,31 @@ namespace logic {
 
     /**
      * Keeps track of the amount of lives of the player.
+     * @see Score
      */
     class LifeCounter : public Observable<LifeCounter> {
         inline static const unsigned int lifeStart = 3;
         unsigned int livesLeft = lifeStart;
     public:
         using LivesAmountType = unsigned int;
-        void setLivesLeft(LivesAmountType livesLeft);
 
         LifeCounter()=default;
+
+        /**
+         * Set the amount of lives left.
+         * updates the observers.
+         * @param livesLeft
+         */
+        void setLivesLeft(LivesAmountType livesLeft);
+
+        /**
+         * @return the amount of lives the counter starts on on creation.
+         */
         static LivesAmountType getLifeStart();
 
+        /**
+         * @return The amount of lives the player has left.
+         */
         [[nodiscard]] LivesAmountType getLivesLeft() const;
 
         /**
@@ -36,6 +50,10 @@ namespace logic {
          */
         void removeLives(LivesAmountType amount);
 
+        /**
+         * Change the amount of lives based on the provided event.
+         * @param event
+         */
         void processEvent(ObservableTypes::EventType event);
     };
 

@@ -10,7 +10,11 @@ namespace logic {
     template <typename T>
     /**
      * A default observer class.
+     *
+     * Observers watch an logic::Observable for changes, and react on these changes.
+     *
      * @tparam T the class this observer observes
+     * @see logic::Observable
      */
 class IObserver{
     public:

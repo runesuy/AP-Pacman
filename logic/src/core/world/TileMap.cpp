@@ -18,7 +18,7 @@ namespace logic {
         mapData.push_back(row);
     }
 
-    void TileMap::loadToWorld(World &world) {
+    void TileMap::loadToWorld(World &world) const{
         const auto tileSize = getTileSize();
         const auto yOffsetForCentering = (2.0 - tileSize * mapData.size()) / 2.0;
         for (int row=0; row<mapData.size(); row++) {

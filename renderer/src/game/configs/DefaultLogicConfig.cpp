@@ -9,7 +9,7 @@
 #include "core/utils/Random.h"
 
 namespace renderer {
-    logic::TileMap DefaultLogicConfig::getTileMap() const {
+    const logic::TileMap & DefaultLogicConfig::getTileMap() const {
         if (tileMapLoaded) {
             return tileMap;
         }

@@ -52,7 +52,7 @@ namespace logic {
 
         /**
          * Creates and returns a shared pointer to a GhostModel instance of the specified type.
-         * @return
+         * @return A shared pointer to the created ghost of type.
          */
         virtual std::shared_ptr<GhostModel> createGhostModel(GhostType type) = 0;
     };

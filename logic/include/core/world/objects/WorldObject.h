@@ -17,18 +17,27 @@ namespace logic {
          */
         Position position;
 
+        /**
+         * If true the world will remove this object at the end of this update.
+         */
         bool markedForRemoval = false;
     public:
+
         /**
-         * @return the position of the world object
+         * Type of the events that can be passed to all objects in the world.
          */
-        [[nodiscard]] virtual const Position & getPosition() const;
+        using WorldEventT = int;
+
+        /**
+         * @return the position of the world object.
+         */
+        [[nodiscard]] virtual const Position &getPosition() const;
 
         /**
          * Set the position of the world object
          * @param position The new position
          */
-        virtual void setPosition(const Position& position);
+        virtual void setPosition(const Position &position);
 
         /**
          * Update the world object.
@@ -36,11 +45,19 @@ namespace logic {
          */
         virtual void update(World &world) = 0;
 
+        /**
+         * Mark the object to be removed at the end of this update.
+         */
         virtual void markForRemoval();
 
-        using WorldEventT = int;
-        virtual void handleWorldEvent(WorldEventT){};
+        /**
+         * React on worldEvent
+         */
+        virtual void handleWorldEvent(WorldEventT) {};
 
+        /**
+         * @return Wetter or not the object is marked for removal on the end of this update.
+         */
         bool isMarkedForRemoval() const;
     };
 
