@@ -13,6 +13,13 @@
 #include "LifeCounter.h"
 
 namespace logic {
+    /**
+     * World is the center of the logic part of the game.
+     *
+     * update(...) to simulate
+     * simulation only starts when the ON_KEY_PRESSED command is sent,
+     * and stops on each player death, send ON_KEY_PRESSED again to continue
+     */
     class World : public Observable<World> {
 
         /**
@@ -41,6 +48,14 @@ namespace logic {
          * Remove all objects with isMarkedForRemoval==true
          */
         void _removeMarkedObjects();
+
+        /**
+         * Used for making simulation wait until the pacman makes his first move.
+         */
+        bool _initialKeyPressed = false;
+
+
+        void _handleWorldEvent(WorldObject::WorldEventT worldEvent);
     public:
         /**
          * Construct a World with the given configuration.
@@ -122,6 +137,9 @@ namespace logic {
          * @return true the player has no lives left
          */
         [[nodiscard]] bool isGameOver() const;
+
+        using WorldCommandType = int;
+        void receiveCommand(WorldCommandType command);
     };
 
 

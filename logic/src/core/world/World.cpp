@@ -8,14 +8,18 @@
 #include "core/world/World.h"
 #include "core/world/TileMap.h"
 #include "core/world/objects/CollisionHandler.h"
+#include "game/WorldCommand.h"
+#include "game/WorldEvents.h"
 
 namespace logic {
     void World::update() {
+        if (!_initialKeyPressed) return;
         score->onTick();
 
         // look for collisions between objects
         _handleCollisions();
 
+        if (!_initialKeyPressed) return;
         // Update all objects in the world
         for (const auto &object: objects) {
             object->update(*this);
@@ -78,6 +82,7 @@ namespace logic {
         for (auto &obj: objects) {
             obj->handleWorldEvent(event);
         }
+        _handleWorldEvent(event);
     }
 
     bool World::levelComplete() const {
@@ -91,5 +96,17 @@ namespace logic {
     World::World(const IConfig &config, std::shared_ptr<Score> score): config(config) {
         this->score = std::move(score);
         config.getTileMap().loadToWorld(*this);
+    }
+
+    void World::receiveCommand(World::WorldCommandType command) {
+        if (command == ON_KEY_PRESS) {
+            _initialKeyPressed = true;
+        }
+    }
+
+    void World::_handleWorldEvent(WorldObject::WorldEventT worldEvent) {
+        if (worldEvent == WorldEvent::PLAYER_KILLED_W) {
+            _initialKeyPressed = false;
+        }
     }
 } // logic
