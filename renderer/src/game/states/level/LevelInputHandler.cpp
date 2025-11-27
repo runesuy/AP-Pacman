@@ -5,6 +5,9 @@
 #include "game/states/level/LevelInputHandler.h"
 #include "game/states/level/LevelState.h"
 #include "game/WorldCommand.h"
+#include "core/states/StateManager.h"
+#include "game/Game.h"
+#include "core/factories/IStateFactory.h"
 
 namespace renderer {
     void LevelInputHandler::processInput(sf::Event &event, StateManager &stateManager, IState &state) {
@@ -25,6 +28,8 @@ namespace renderer {
                     case sf::Keyboard::Down:
                         levelState.getWorld()->sendCommandTo<logic::PlayerModel>(logic::EntityCommand::TURN_DOWN);
                         break;
+                    case sf::Keyboard::Escape:
+                        stateManager.pushState(Game::getInstance()->getAppConfig().getFactoryCollection().getStateFactory()->createPausedState());
                     default:
                         break;
                 }

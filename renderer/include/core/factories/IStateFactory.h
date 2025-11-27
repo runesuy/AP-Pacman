@@ -18,6 +18,8 @@ namespace renderer {
         virtual std::unique_ptr<MenuState> createMenuState()=0;
 
         virtual std::unique_ptr<LevelState> createLevelState()=0;
+
+        virtual std::unique_ptr<LevelState> createPausedState()=0;
     };
 
 } // renderer

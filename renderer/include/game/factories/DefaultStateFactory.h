@@ -17,6 +17,8 @@ namespace renderer {
         std::unique_ptr<MenuState> createMenuState() override;
 
         std::unique_ptr<LevelState> createLevelState() override;
+
+        std::unique_ptr<LevelState> createPausedState() override;
     };
 
 } // renderer

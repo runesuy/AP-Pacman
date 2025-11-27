@@ -11,6 +11,9 @@
 #include "game/states/level/LevelDrawHandler.h"
 #include "game/states/menu/MenuState.h"
 #include "game/states/level/LevelState.h"
+#include "game/states/paused/PausedStateDrawHandler.h"
+#include "game/states/paused/PausedStateUpdateHandler.h"
+#include "game/states/paused/PausedStateInputHandler.h"
 
 namespace renderer {
     std::unique_ptr<MenuState> DefaultStateFactory::createMenuState() {
@@ -24,6 +27,13 @@ namespace renderer {
         auto updateHandler = std::make_unique<LevelUpdateHandler>();
         auto inputHandler =  std::make_unique<LevelInputHandler>();
         auto drawHandler =  std::make_unique<LevelDrawHandler>();
+        return std::make_unique<LevelState>(std::move(updateHandler), std::move(inputHandler), std::move(drawHandler));
+    }
+
+    std::unique_ptr<LevelState> DefaultStateFactory::createPausedState() {
+        auto updateHandler = std::make_unique<PausedStateUpdateHandler>();
+        auto inputHandler =  std::make_unique<PausedStateInputHandler>();
+        auto drawHandler =  std::make_unique<PausedStateDrawHandler>();
         return std::make_unique<LevelState>(std::move(updateHandler), std::move(inputHandler), std::move(drawHandler));
     }
 } // renderer
