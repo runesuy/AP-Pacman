@@ -98,14 +98,17 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classrenderer_1_1IStateFactory.html#a3299896614b5cbe80352e8ce7d2b3f98">   18</a></span>        <span class="keyword">virtual</span> std::unique_ptr&lt;MenuState&gt; <a class="code hl_function" href="classrenderer_1_1IStateFactory.html#a3299896614b5cbe80352e8ce7d2b3f98">createMenuState</a>()=0;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classrenderer_1_1IStateFactory.html#ab5ba35efd6828be7f2fc20209449abe1">   20</a></span>        <span class="keyword">virtual</span> std::unique_ptr&lt;LevelState&gt; <a class="code hl_function" href="classrenderer_1_1IStateFactory.html#ab5ba35efd6828be7f2fc20209449abe1">createLevelState</a>()=0;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    };</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classrenderer_1_1IStateFactory.html#a8d46c0db6503ef7834aa28318ab2bd3d">   22</a></span>        <span class="keyword">virtual</span> std::unique_ptr&lt;LevelState&gt; <a class="code hl_function" href="classrenderer_1_1IStateFactory.html#a8d46c0db6503ef7834aa28318ab2bd3d">createPausedState</a>()=0;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    };</div>
 </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>} <span class="comment">// renderer</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_ISTATEFACTORY_H</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>} <span class="comment">// renderer</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_ISTATEFACTORY_H</span></div>
 <div class="ttc" id="aclassrenderer_1_1IStateFactory_html"><div class="ttname"><a href="classrenderer_1_1IStateFactory.html">renderer::IStateFactory</a></div><div class="ttdef"><b>Definition</b> IStateFactory.h:16</div></div>
 <div class="ttc" id="aclassrenderer_1_1IStateFactory_html_a3299896614b5cbe80352e8ce7d2b3f98"><div class="ttname"><a href="classrenderer_1_1IStateFactory.html#a3299896614b5cbe80352e8ce7d2b3f98">renderer::IStateFactory::createMenuState</a></div><div class="ttdeci">virtual std::unique_ptr&lt; MenuState &gt; createMenuState()=0</div></div>
+<div class="ttc" id="aclassrenderer_1_1IStateFactory_html_a8d46c0db6503ef7834aa28318ab2bd3d"><div class="ttname"><a href="classrenderer_1_1IStateFactory.html#a8d46c0db6503ef7834aa28318ab2bd3d">renderer::IStateFactory::createPausedState</a></div><div class="ttdeci">virtual std::unique_ptr&lt; LevelState &gt; createPausedState()=0</div></div>
 <div class="ttc" id="aclassrenderer_1_1IStateFactory_html_ab5ba35efd6828be7f2fc20209449abe1"><div class="ttname"><a href="classrenderer_1_1IStateFactory.html#ab5ba35efd6828be7f2fc20209449abe1">renderer::IStateFactory::createLevelState</a></div><div class="ttdeci">virtual std::unique_ptr&lt; LevelState &gt; createLevelState()=0</div></div>
 <div class="ttc" id="anamespacerenderer_html"><div class="ttname"><a href="namespacerenderer.html">renderer</a></div><div class="ttdef"><b>Definition</b> IAppConfig.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->

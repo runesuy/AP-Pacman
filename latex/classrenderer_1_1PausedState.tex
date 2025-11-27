@@ -1,0 +1,62 @@
+\doxysection{renderer\+::Paused\+State Class Reference}
+\hypertarget{classrenderer_1_1PausedState}{}\label{classrenderer_1_1PausedState}\index{renderer::PausedState@{renderer::PausedState}}
+
+
+{\ttfamily \#include $<$Paused\+State.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::Paused\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classrenderer_1_1PausedState__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::Paused\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classrenderer_1_1PausedState__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrenderer_1_1PausedState_ac32c91ca0a70d52947f2890c6e0b2b6c}{Paused\+State}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IState\+Update\+Handler}} $>$ \&\&update\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IState\+Input\+Handler}} $>$ \&\&input\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IState\+Draw\+Handler}} $>$ \&\&draw\+Handler)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1DelegatingState}{renderer\+::\+Delegating\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrenderer_1_1DelegatingState_ae8fb84b37fa1c44a02072b581a2b073a}{Delegating\+State}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IState\+Update\+Handler}} $>$ \&\&update\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IState\+Input\+Handler}} $>$ \&\&input\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IState\+Draw\+Handler}} $>$ \&\&draw\+Handler)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DelegatingState_af34dff5edb2725d7fe9061369dd2ca55}{update}} () override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DelegatingState_a0f2edc8f97d5dec5ed8b97571ceb0050}{process\+Input}} (sf\+::\+Event \&event, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1DelegatingState_a78ad8e7bbf4ad31de6d7c62074f894e1}{draw}} (sf\+::\+Render\+Window \&window) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1IState}{renderer\+::\+IState}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classrenderer_1_1IState_ac0eccb586fc4819e616966f4c761c39d}{\texorpdfstring{$\sim$}{\string~}\+IState}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrenderer_1_1PausedState_ac32c91ca0a70d52947f2890c6e0b2b6c}\label{classrenderer_1_1PausedState_ac32c91ca0a70d52947f2890c6e0b2b6c} 
+\index{renderer::PausedState@{renderer::PausedState}!PausedState@{PausedState}}
+\index{PausedState@{PausedState}!renderer::PausedState@{renderer::PausedState}}
+\doxysubsubsection{\texorpdfstring{PausedState()}{PausedState()}}
+{\footnotesize\ttfamily renderer\+::\+Paused\+State\+::\+Paused\+State (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IState\+Update\+Handler}} $>$ \&\&}]{update\+Handler,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IState\+Input\+Handler}} $>$ \&\&}]{input\+Handler,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IState\+Draw\+Handler}} $>$ \&\&}]{draw\+Handler }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/game/states/paused/\mbox{\hyperlink{PausedState_8h}{Paused\+State.\+h}}\item 
+renderer/src/game/states/paused/\mbox{\hyperlink{PausedState_8cpp}{Paused\+State.\+cpp}}\end{DoxyCompactItemize}
