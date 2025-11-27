@@ -32,8 +32,8 @@ namespace renderer {
         }
         scoreView->draw(window);
         livesView->draw(window);
-        livesView->setHorizontalOrigin(Label::RIGHT);
-        scoreView->setHorizontalOrigin(Label::LEFT);
+        livesView->setHorizontalOrigin(Label::HorizontalOriginType::RIGHT);
+        scoreView->setHorizontalOrigin(Label::HorizontalOriginType::LEFT);
         const logic::TileMap &tileMap = Game::getInstance()->getAppConfig().getLogicConfig().getTileMap();
         scoreView->setPosition(tileMap.getTileCenterPosition(tileMap.getRowCount(), 0));
         livesView->setPosition(tileMap.getTileCenterPosition(tileMap.getRowCount(), tileMap.getColumnCount()-1));

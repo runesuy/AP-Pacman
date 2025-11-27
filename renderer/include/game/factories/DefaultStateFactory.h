@@ -7,6 +7,7 @@
 
 #include <memory>
 #include "core/factories/IStateFactory.h"
+#include "game/states/paused/PausedState.h"
 
 namespace renderer {
     class MenuState;
@@ -18,7 +19,7 @@ namespace renderer {
 
         std::unique_ptr<LevelState> createLevelState() override;
 
-        std::unique_ptr<LevelState> createPausedState() override;
+        std::unique_ptr<PausedState> createPausedState() override;
     };
 
 } // renderer

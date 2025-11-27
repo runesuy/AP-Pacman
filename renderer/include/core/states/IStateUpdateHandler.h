@@ -12,9 +12,10 @@ namespace renderer {
     /**
      * Interface for handling updates specific to a game state.
      */
+    template<typename DerivedState>
     class IStateUpdateHandler : public logic::IUpdateHandler {
     public:
-        virtual void update(IState& state) = 0;
+        virtual void update(DerivedState& state) = 0;
         void update() override {};
     };
 

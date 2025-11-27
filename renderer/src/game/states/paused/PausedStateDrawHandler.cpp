@@ -6,19 +6,22 @@
 #include "core/utils/Camera.h"
 
 namespace renderer {
-    void PausedStateDrawHandler::draw(sf::RenderWindow &window, IState &state) {
+    void PausedStateDrawHandler::draw(sf::RenderWindow &window, PausedState &state, StateManager& stateManager) {
         pausedLabel.draw(window);
-        descrLabel.draw(window);
+        menuButton.draw(window);
+        continueButton.draw(window);
     }
 
     PausedStateDrawHandler::PausedStateDrawHandler() {
         pausedLabel.setString(pausedLabelText);
-        descrLabel.setString(descrLabelText);
-        pausedLabel.setHorizontalOrigin(Label::MIDDLE);
-        descrLabel.setHorizontalOrigin(Label::MIDDLE);
+        pausedLabel.setHorizontalOrigin(Label::HorizontalOriginType::MIDDLE);
         pausedLabel.setCharacterSize(pausedLabelCharSize);
-        descrLabel.setCharacterSize(descrLabelCharSize);
         pausedLabel.setPosition({0,0.3});
-        descrLabel.setPosition({0,0});
+        menuButton.setString(menuButtonText);
+        menuButton.setCharacterSize(0.05);
+        menuButton.setPosition({-0.3,0});
+        continueButton.setString(continueButtonText);
+        continueButton.setCharacterSize(0.05);
+        continueButton.setPosition({0.3, 0});
     }
 } // renderer

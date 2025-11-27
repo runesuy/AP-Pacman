@@ -7,7 +7,7 @@
 
 namespace renderer {
 
-    void LevelUpdateHandler::update(IState &state) {
+    void LevelUpdateHandler::update(LevelState &state) {
         try {
             auto &levelState = dynamic_cast<LevelState &>(state);
             levelState.getWorld()->update();

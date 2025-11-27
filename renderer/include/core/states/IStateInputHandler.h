@@ -14,9 +14,10 @@ namespace renderer {
     /**
      * Interface for handling input specific to a game state.
      */
+    template<typename DerivedState>
     class IStateInputHandler : public renderer::IInputHandler {
     public:
-        virtual void processInput(sf::Event& event, StateManager &stateManager, IState& state)=0;
+        virtual void processInput(sf::Event& event, StateManager &stateManager, DerivedState& state)=0;
 
         void processInput(sf::Event &event) override {};
     };

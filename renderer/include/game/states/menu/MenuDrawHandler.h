@@ -8,16 +8,22 @@
 #include <SFML/Graphics/Font.hpp>
 #include "core/states/IState.h"
 #include "core/states/IStateDrawHandler.h"
+#include "core/drawable/ui/Button.h"
+#include "MenuState.h"
 
 namespace renderer {
     /**
      * Draw handler for the MenuState, responsible for rendering the main menu.
      */
-class MenuDrawHandler : public IStateDrawHandler {
+class MenuDrawHandler : public IStateDrawHandler<MenuState> {
         bool _fontLoaded = false;
         sf::Font _font;
+        Button playButton;
     public:
-        void draw(sf::RenderWindow &window, IState& state) override;
+        MenuDrawHandler();
+        void draw(sf::RenderWindow &window, MenuState& state, StateManager& stateManager) override;
+
+        void onPlayButtonClick(StateManager& stateManager) const;
     };
 }
 #endif //AP_PACMAN_MENUDRAWHANDLER_H

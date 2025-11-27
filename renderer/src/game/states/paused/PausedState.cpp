@@ -5,9 +5,9 @@
 #include "game/states/paused/PausedState.h"
 
 namespace renderer {
-    PausedState::PausedState(std::unique_ptr<IStateUpdateHandler> &&updateHandler,
-                             std::unique_ptr<IStateInputHandler> &&inputHandler,
-                             std::unique_ptr<IStateDrawHandler> &&drawHandler) :
+    PausedState::PausedState(std::unique_ptr<IStateUpdateHandler<PausedState>> &&updateHandler,
+                             std::unique_ptr<IStateInputHandler<PausedState>> &&inputHandler,
+                             std::unique_ptr<IStateDrawHandler<PausedState>> &&drawHandler) :
             DelegatingState(std::move(updateHandler),std::move(inputHandler), std::move(drawHandler)) {
 
     }

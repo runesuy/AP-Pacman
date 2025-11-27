@@ -63,18 +63,44 @@ namespace renderer {
 
     void Label::_applyOriginProps() const {
         switch (horizontalOrigin) {
-            case LEFT: {
+            case HorizontalOriginType::LEFT: {
                 text.setOrigin(0, text.getOrigin().y);
                 break;
             }
-            case MIDDLE: {
+            case HorizontalOriginType::MIDDLE: {
                 text.setOrigin(text.getLocalBounds().width/2, text.getOrigin().y);
                 break;
             }
-            case RIGHT: {
+            case HorizontalOriginType::RIGHT: {
                 text.setOrigin(text.getLocalBounds().width, text.getOrigin().y);
                 break;
             }
         }
+        switch (verticalOrigin) {
+            case VerticalOriginType::TOP: {
+                text.setOrigin(text.getOrigin().x, 0);
+                break;
+            }
+            case VerticalOriginType::MIDDLE: {
+                text.setOrigin(text.getOrigin().x, text.getLocalBounds().height/2);
+                break;
+            }
+            case VerticalOriginType::BOTTOM: {
+                text.setOrigin(text.getOrigin().x, text.getLocalBounds().height);
+                break;
+            }
+        }
+    }
+
+    float Label::getCharacterSize() const {
+        return characterSize;
+    }
+
+    const  std::string::size_type Label::getStringSize() const {
+        return text.getString().getSize();
+    }
+
+    void Label::setVerticalOrigin(Label::VerticalOriginType verticalOrigin) {
+        this->verticalOrigin = verticalOrigin;
     }
 } // renderer

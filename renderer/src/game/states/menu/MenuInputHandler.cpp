@@ -10,10 +10,10 @@
 #include "core/states/IStateUpdateHandler.h"
 
 namespace renderer {
-    void MenuInputHandler::processInput(sf::Event &event, StateManager &stateManager, IState &state) {
+    void MenuInputHandler::processInput(sf::Event &event, StateManager &stateManager, MenuState &state) {
         if (event.type == sf::Event::KeyPressed) {
 
-            std::unique_ptr<LevelState> levelState = Game::getInstance()->getAppConfig().getFactoryCollection().getStateFactory()->createLevelState();
+            std::unique_ptr<IState> levelState = Game::getInstance()->getAppConfig().getFactoryCollection().getStateFactory()->createLevelState();
             stateManager.pushState(std::move(levelState));
         }
     }

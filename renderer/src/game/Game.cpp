@@ -13,11 +13,12 @@
 int renderer::Game::run() {
 
     running = true;
+    // load config file
+    loadResources();
+
     std::unique_ptr<StateManager> stateManager = appConfig.getFactoryCollection().getStateManagerFactory()
             ->createStateManager(appConfig.getFactoryCollection().getStateFactory());
 
-    // load config file
-    loadResources();
 
     //create sfml window
     sf::RenderWindow window(sf::VideoMode(800, 600), "Pacman");

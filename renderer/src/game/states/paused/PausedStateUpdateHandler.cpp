@@ -5,7 +5,7 @@
 #include "game/states/paused/PausedStateUpdateHandler.h"
 
 namespace renderer {
-    void PausedStateUpdateHandler::update(IState &state) {
+    void PausedStateUpdateHandler::update(PausedState &state) {
 
     }
 } // renderer

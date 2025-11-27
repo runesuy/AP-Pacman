@@ -6,8 +6,10 @@
 #include "game/Game.h"
 #include <SFML/Graphics.hpp>
 #include "core/utils/Camera.h"
+#include "core/factories/IStateFactory.h"
+#include "game/states/level/LevelState.h"
 
-void renderer::MenuDrawHandler::draw(sf::RenderWindow &window, IState& state) {
+void renderer::MenuDrawHandler::draw(sf::RenderWindow &window, MenuState& state, StateManager& stateManager) {
     if (!_fontLoaded) {
         std::string fileName = renderer::Game::getInstance()->getAppConfig().getConfigParser().getDefaultFontPath();
         if (!_font.loadFromFile(fileName)) {
@@ -33,13 +35,19 @@ void renderer::MenuDrawHandler::draw(sf::RenderWindow &window, IState& state) {
     pressToPlay.setPosition(Camera::project(logic::Position{0, 0}, window));
     pressToPlay.setOrigin(pressToPlay.getLocalBounds().width / 2, pressToPlay.getLocalBounds().height / 2);
 
-    /*sf::RectangleShape rect;
-    rect.setPosition(Camera::project(logic::Position{-1,1}, window));
-    rect.setFillColor(sf::Color::Red);
-    rect.setSize(Camera::project(logic::Size{2,2}, window));
-    window.draw(rect);*/
-    // Testing Rect
-
     window.draw(title);
     window.draw(pressToPlay);
+    playButton.setOnClick([this, &stateManager](){this->onPlayButtonClick(stateManager);});
+    playButton.draw(window);
+}
+
+renderer::MenuDrawHandler::MenuDrawHandler() {
+    playButton.setString("PLAY");
+    playButton.setCharacterSize(0.1);
+    playButton.setPosition({0,-0.2});
+}
+
+void renderer::MenuDrawHandler::onPlayButtonClick(StateManager& stateManager) const {
+    std::unique_ptr<IState> levelState = Game::getInstance()->getAppConfig().getFactoryCollection().getStateFactory()->createLevelState();
+    stateManager.pushState(std::move(levelState));
 }

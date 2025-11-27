@@ -6,19 +6,24 @@
 #define AP_PACMAN_PAUSEDSTATEDRAWHANDLER_H
 #include "core/states/IStateDrawHandler.h"
 #include "core/drawable/ui/Label.h"
+#include "core/drawable/ui/Button.h"
+#include "PausedState.h"
 
 namespace renderer {
 
-    class PausedStateDrawHandler : public IStateDrawHandler{
+    class PausedStateDrawHandler : public IStateDrawHandler<PausedState>{
         Label pausedLabel;
         inline static const std::string pausedLabelText = "PAUSED";
         inline static const float pausedLabelCharSize = 0.1;
-        Label descrLabel;
-        inline static const std::string descrLabelText = "PRESS ANY KEY TO CONTINUE";
-        inline static const float descrLabelCharSize = 0.05;
+
+        Button continueButton;
+        inline static const std::string continueButtonText = "CONTINUE";
+        Button menuButton;
+        inline static const std::string menuButtonText = "MENU";
+
     public:
         PausedStateDrawHandler();
-        void draw(sf::RenderWindow &window, IState &state) override;
+        void draw(sf::RenderWindow &window, PausedState &state, StateManager& stateManager) override;
     };
 
 } // renderer

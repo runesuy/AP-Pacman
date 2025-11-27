@@ -8,8 +8,8 @@
 #include "core/states/IStateUpdateHandler.h"
 
 namespace renderer {
-    MenuState::MenuState(std::unique_ptr<IStateUpdateHandler> &&updateHandler, std::unique_ptr<IStateInputHandler> &&inputHandler,
-                         std::unique_ptr<IStateDrawHandler>&& drawHandler) : DelegatingState(std::move(updateHandler), std::move(inputHandler), std::move(drawHandler)) {
+    MenuState::MenuState(std::unique_ptr<IStateUpdateHandler<MenuState>> &&updateHandler, std::unique_ptr<IStateInputHandler<MenuState>> &&inputHandler,
+                         std::unique_ptr<IStateDrawHandler<MenuState>>&& drawHandler) : DelegatingState(std::move(updateHandler), std::move(inputHandler), std::move(drawHandler)) {
 
     }
 

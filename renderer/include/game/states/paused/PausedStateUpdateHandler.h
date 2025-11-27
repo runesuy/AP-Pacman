@@ -5,12 +5,13 @@
 #ifndef AP_PACMAN_PAUSEDSTATEUPDATEHANDLER_H
 #define AP_PACMAN_PAUSEDSTATEUPDATEHANDLER_H
 #include "core/states/IStateUpdateHandler.h"
+#include "PausedState.h"
 
 namespace renderer {
 
-    class PausedStateUpdateHandler : public IStateUpdateHandler {
+    class PausedStateUpdateHandler : public IStateUpdateHandler<PausedState> {
     public:
-        void update(IState &state) override;
+        void update(PausedState &state) override;
     };
 
 } // renderer

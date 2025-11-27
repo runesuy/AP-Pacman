@@ -7,15 +7,16 @@
 
 #include "core/states/IStateDrawHandler.h"
 #include "core/states/IState.h"
+#include "LevelState.h"
 
 namespace renderer {
 
     /**
      * Draw handler for the LevelState, responsible for rendering the game level and its entities.
      */
-class LevelDrawHandler : public IStateDrawHandler{
+class LevelDrawHandler : public IStateDrawHandler<LevelState>{
     public:
-    void draw(sf::RenderWindow &window, IState &state) override;
+    void draw(sf::RenderWindow &window, LevelState &state, StateManager& stateManager) override;
 };
 
 } // renderer

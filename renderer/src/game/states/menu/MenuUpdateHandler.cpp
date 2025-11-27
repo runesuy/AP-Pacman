@@ -5,7 +5,7 @@
 #include "game/states/menu/MenuUpdateHandler.h"
 
 namespace renderer {
-    void MenuUpdateHandler::update(IState &state) {
+    void MenuUpdateHandler::update(MenuState &state) {
 
     }
 } // renderer

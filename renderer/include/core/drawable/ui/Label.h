@@ -5,6 +5,7 @@
 #ifndef AP_PACMAN_LABEL_H
 #define AP_PACMAN_LABEL_H
 #include "core/drawable/DrawObject.h"
+#include "core/world/space/Size.h"
 
 namespace renderer {
 
@@ -13,15 +14,19 @@ namespace renderer {
      */
     class Label : public DrawObject {
     public:
-        enum HorizontalOriginType {
+        enum class HorizontalOriginType {
             LEFT, MIDDLE, RIGHT
+        };
+        enum class VerticalOriginType {
+            TOP, MIDDLE, BOTTOM
         };
     private:
 
         sf::Font font;
-        mutable sf::Text text;
+         mutable sf::Text text;
         float characterSize = 0.05;
-        HorizontalOriginType horizontalOrigin = LEFT;
+        HorizontalOriginType horizontalOrigin = HorizontalOriginType::LEFT;
+        VerticalOriginType verticalOrigin = VerticalOriginType::TOP;
 
         void _applyOriginProps() const;
     public:
@@ -33,7 +38,12 @@ namespace renderer {
         void setFont(const sf::Font &font);
         void setCharacterSize(float size);
 
+        float getCharacterSize() const;
+
+        const std::string::size_type getStringSize() const;
+
         void setHorizontalOrigin(HorizontalOriginType horizontalOrigin);
+        void setVerticalOrigin(VerticalOriginType verticalOrigin);
 
         std::vector<std::unique_ptr<sf::Shape>> getSFShapes(sf::RenderWindow &window) override;
 

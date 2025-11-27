@@ -33,7 +33,7 @@ namespace renderer {
          * Draw the state onto the provided render window.
          * @param window
          */
-        virtual void draw(sf::RenderWindow& window)=0;
+        virtual void draw(sf::RenderWindow &window, StateManager &stateManager) =0;
 
         virtual ~IState()=default;
     };

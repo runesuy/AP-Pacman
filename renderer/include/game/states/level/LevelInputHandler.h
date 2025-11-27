@@ -6,6 +6,7 @@
 #define AP_PACMAN_LEVELINPUTHANDLER_H
 
 #include "core/states/IStateInputHandler.h"
+#include "LevelState.h"
 
 namespace renderer {
     class IState;
@@ -13,9 +14,9 @@ namespace renderer {
     /**
      * Input handler for the LevelState, processing user inputs during gameplay and passing it to logic.
      */
-    class LevelInputHandler : public IStateInputHandler {
+    class LevelInputHandler : public IStateInputHandler<LevelState> {
     public:
-        void processInput(sf::Event &event, StateManager& stateManager, IState& state) override;
+        void processInput(sf::Event &event, StateManager& stateManager, LevelState& state) override;
     };
 
 } // renderer

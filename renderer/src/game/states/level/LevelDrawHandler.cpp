@@ -7,7 +7,7 @@
 
 namespace renderer {
 
-    void LevelDrawHandler::draw(sf::RenderWindow &window, IState &state) {
+    void LevelDrawHandler::draw(sf::RenderWindow &window, LevelState &state, StateManager& stateManager) {
         auto& levelState = dynamic_cast<LevelState&>(state);
         levelState.getWorldView()->draw(window);
     }

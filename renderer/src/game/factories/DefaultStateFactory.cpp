@@ -30,10 +30,10 @@ namespace renderer {
         return std::make_unique<LevelState>(std::move(updateHandler), std::move(inputHandler), std::move(drawHandler));
     }
 
-    std::unique_ptr<LevelState> DefaultStateFactory::createPausedState() {
+    std::unique_ptr<PausedState> DefaultStateFactory::createPausedState() {
         auto updateHandler = std::make_unique<PausedStateUpdateHandler>();
         auto inputHandler =  std::make_unique<PausedStateInputHandler>();
         auto drawHandler =  std::make_unique<PausedStateDrawHandler>();
-        return std::make_unique<LevelState>(std::move(updateHandler), std::move(inputHandler), std::move(drawHandler));
+        return std::make_unique<PausedState>(std::move(updateHandler), std::move(inputHandler), std::move(drawHandler));
     }
 } // renderer

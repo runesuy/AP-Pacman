@@ -30,7 +30,7 @@ public:
      * Set the position of the draw object.
      * @param position
      */
-    void setPosition(const logic::Position &position);
+    virtual void setPosition(const logic::Position &position);
 
     /**
      * Draw the object onto the provided render window.

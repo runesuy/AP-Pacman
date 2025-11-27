@@ -16,11 +16,13 @@ namespace renderer {
      *
      * Displays title and press key to go to level state.
      */
-    class MenuState : public DelegatingState {
+    class MenuState : public DelegatingState<MenuState> {
     public:
-        MenuState(std::unique_ptr<IStateUpdateHandler>&& updateHandler,
-                  std::unique_ptr<IStateInputHandler>&& inputHandler,
-                  std::unique_ptr<IStateDrawHandler>&& drawHandler);
+        MenuState(std::unique_ptr<IStateUpdateHandler<MenuState>>&& updateHandler,
+                  std::unique_ptr<IStateInputHandler<MenuState>>&& inputHandler,
+                  std::unique_ptr<IStateDrawHandler<MenuState>>&& drawHandler);
+
+        friend class MenuInputHandler;
     };
 
 } // renderer

@@ -10,10 +10,10 @@
 #include "game/factories/DefaultEntityFactory.h"
 
 namespace renderer {
-    LevelState::LevelState(std::unique_ptr<IStateUpdateHandler> &&updateHandler,
-                           std::unique_ptr<IStateInputHandler> &&inputHandler, std::unique_ptr<IStateDrawHandler> &&drawHandler)
-            : DelegatingState(std::move(updateHandler), std::move(inputHandler), std::move(drawHandler)) {
-
+    LevelState::LevelState(std::unique_ptr<IStateUpdateHandler<renderer::LevelState>> &&updateHandler,
+                           std::unique_ptr<IStateInputHandler<renderer::LevelState>> &&inputHandler,
+                           std::unique_ptr<IStateDrawHandler<renderer::LevelState>> &&drawHandler) : DelegatingState(
+            std::move(updateHandler), std::move(inputHandler), std::move(drawHandler)) {
         auto &logicConfig = Game::getInstance()->getAppConfig().getLogicConfig();
         auto entityFactory = logicConfig.getEntityFactory();
         auto defaultFactory = std::dynamic_pointer_cast<DefaultEntityFactory>(entityFactory);
@@ -23,7 +23,6 @@ namespace renderer {
         }
         _world = std::make_unique<logic::World>(logicConfig);
         _world->addObserver(_worldView);
-
     }
 
     std::unique_ptr<logic::World> &LevelState::getWorld() {

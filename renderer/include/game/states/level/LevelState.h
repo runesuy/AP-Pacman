@@ -15,13 +15,13 @@ namespace renderer {
      * State representing the main gameplay level.
      * Loads a map on the screen and lets player play the game.
      */
-    class LevelState : public DelegatingState {
+    class LevelState : public DelegatingState<LevelState> {
         std::unique_ptr<logic::World> _world;
         std::shared_ptr<WorldView> _worldView;
 
     public:
-        LevelState(std::unique_ptr<IStateUpdateHandler> &&updateHandler, std::unique_ptr<IStateInputHandler> &&inputHandler,
-                   std::unique_ptr<IStateDrawHandler> &&drawHandler);
+        LevelState(std::unique_ptr<IStateUpdateHandler<LevelState>> &&updateHandler, std::unique_ptr<IStateInputHandler<LevelState>> &&inputHandler,
+                   std::unique_ptr<IStateDrawHandler<LevelState>> &&drawHandler);
 
         std::unique_ptr<logic::World> &getWorld();
 

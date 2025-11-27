@@ -15,20 +15,46 @@ namespace renderer {
 
     class IStateFactory;
 
+    template<typename Derived>
     class DelegatingState : public IState  {
-        std::unique_ptr<IStateUpdateHandler> _updateHandler;
-        std::unique_ptr<IStateInputHandler> _inputHandler;
-        std::unique_ptr<IStateDrawHandler> _drawHandler;
+        std::unique_ptr<IStateUpdateHandler<Derived>> _updateHandler;
+        std::unique_ptr<IStateInputHandler<Derived>> _inputHandler;
+        std::unique_ptr<IStateDrawHandler<Derived>> _drawHandler;
     public:
-        DelegatingState(std::unique_ptr<IStateUpdateHandler> &&updateHandler,
-                        std::unique_ptr<IStateInputHandler> &&inputHandler,
-                        std::unique_ptr<IStateDrawHandler> &&drawHandler);
+        DelegatingState(std::unique_ptr<IStateUpdateHandler<Derived>> &&updateHandler,
+                        std::unique_ptr<IStateInputHandler<Derived>> &&inputHandler,
+                        std::unique_ptr<IStateDrawHandler<Derived>> &&drawHandler);
 
         void update() override;
 
         void processInput(sf::Event &event, StateManager& stateManager) override;
 
-        void draw(sf::RenderWindow &window) override;
+        void draw(sf::RenderWindow &window, StateManager &stateManager) override;
     };
+
+    template<typename Derived>
+    void renderer::DelegatingState<Derived>::update() {
+        _updateHandler->update(static_cast<Derived&>(*this));
+    }
+
+    template<typename Derived>
+    void renderer::DelegatingState<Derived>::processInput(sf::Event &event, StateManager& stateManager) {
+        _inputHandler->processInput(event, stateManager, static_cast<Derived&>(*this));
+    }
+
+    template<typename Derived>
+    void renderer::DelegatingState<Derived>::draw(sf::RenderWindow &window, StateManager &stateManager) {
+        _drawHandler->draw(window, static_cast<Derived &>(*this), stateManager);
+    }
+
+    template<typename Derived>
+    renderer::DelegatingState<Derived>::DelegatingState(std::unique_ptr<IStateUpdateHandler<Derived>> &&updateHandler,
+                                               std::unique_ptr<IStateInputHandler<Derived>> &&inputHandler,
+                                               std::unique_ptr<IStateDrawHandler<Derived>> &&drawHandler) :
+            _updateHandler(std::move(updateHandler)),
+            _inputHandler(std::move(inputHandler)),
+            _drawHandler(std::move(drawHandler)) {
+
+    }
 }
 #endif //AP_PACMAN_DELEGATINGSTATE_H

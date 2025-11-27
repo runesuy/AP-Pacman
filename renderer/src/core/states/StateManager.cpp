@@ -20,7 +20,7 @@ void renderer::StateManager::processInput(sf::Event &event) {
 
 void renderer::StateManager::draw(sf::RenderWindow &window) {
     if (!stack.empty()) {
-        stack.top()->draw(window);
+        stack.top()->draw(window, *this);
     }
 }
 

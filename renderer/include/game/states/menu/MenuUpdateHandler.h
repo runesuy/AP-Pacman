@@ -6,6 +6,7 @@
 #define AP_PACMAN_MENUUPDATEHANDLER_H
 
 #include "core/states/IStateUpdateHandler.h"
+#include "MenuState.h"
 
 namespace renderer {
     class IState;
@@ -13,9 +14,9 @@ namespace renderer {
     /**
      * Update handler for the MenuState, managing updates specific to the main menu.
      */
-    class MenuUpdateHandler : public IStateUpdateHandler {
+    class MenuUpdateHandler : public IStateUpdateHandler<MenuState> {
     public:
-        void update(IState& state) override;
+        void update(MenuState& state) override;
     };
 
 } // renderer

@@ -6,6 +6,7 @@
 #define AP_PACMAN_LEVELUPDATEHANDLER_H
 
 #include "core/states/IStateUpdateHandler.h"
+#include "LevelState.h"
 
 namespace renderer {
     class IState;
@@ -13,9 +14,9 @@ namespace renderer {
     /**
      * Update handler for the LevelState, managing game logic updates during gameplay.
      */
-    class LevelUpdateHandler : public IStateUpdateHandler {
+    class LevelUpdateHandler : public IStateUpdateHandler<LevelState> {
     public:
-        void update(IState& state) override;
+        void update(LevelState& state) override;
     };
 
 } // renderer

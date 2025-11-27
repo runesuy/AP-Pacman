@@ -5,6 +5,8 @@
 #ifndef AP_PACMAN_ISTATEFACTORY_H
 #define AP_PACMAN_ISTATEFACTORY_H
 
+#include "game/states/paused/PausedState.h"
+
 namespace renderer {
     class MenuState;
     class LevelState;
@@ -19,7 +21,7 @@ namespace renderer {
 
         virtual std::unique_ptr<LevelState> createLevelState()=0;
 
-        virtual std::unique_ptr<LevelState> createPausedState()=0;
+        virtual std::unique_ptr<PausedState> createPausedState()=0;
     };
 
 } // renderer

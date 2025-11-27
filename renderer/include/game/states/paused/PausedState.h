@@ -8,11 +8,11 @@
 
 namespace renderer {
 
-    class PausedState  : public DelegatingState {
+    class PausedState  : public DelegatingState<PausedState> {
     public:
-        PausedState(std::unique_ptr<IStateUpdateHandler> &&updateHandler,
-                    std::unique_ptr<IStateInputHandler> &&inputHandler,
-                    std::unique_ptr<IStateDrawHandler> &&drawHandler);
+        PausedState(std::unique_ptr<IStateUpdateHandler<PausedState>> &&updateHandler,
+                    std::unique_ptr<IStateInputHandler<PausedState>> &&inputHandler,
+                    std::unique_ptr<IStateDrawHandler<PausedState>> &&drawHandler);
     };
 
 } // renderer
