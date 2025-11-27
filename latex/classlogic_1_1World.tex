@@ -24,6 +24,11 @@ Collaboration diagram for logic\+::World\+:
 \includegraphics[width=176pt]{classlogic_1_1World__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classlogic_1_1World_aa64337ca3e88db5040788acc5aa09625}{World\+Command\+Type}} = int
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -52,6 +57,8 @@ const \mbox{\hyperlink{classlogic_1_1Score}{Score}} \& \mbox{\hyperlink{classlog
 bool \mbox{\hyperlink{classlogic_1_1World_a931a7c9174861dc9881f7d78075d62e6}{level\+Complete}} () const
 \item 
 bool \mbox{\hyperlink{classlogic_1_1World_ae50253dfcf0258eaa787083abdee95c3}{is\+Game\+Over}} () const
+\item 
+void \mbox{\hyperlink{classlogic_1_1World_aab6eea40afdf5f8d142f2a7dc9dd272f}{receive\+Command}} (\mbox{\hyperlink{classlogic_1_1World_aa64337ca3e88db5040788acc5aa09625}{World\+Command\+Type}} command)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1Observable}{logic\+::\+Observable$<$ World $>$}}}
 \begin{DoxyCompactItemize}
@@ -68,6 +75,20 @@ bool \mbox{\hyperlink{classlogic_1_1Observable_ac7f39ee24dbed7975e64567ef5f9b042
 \item 
 bool \mbox{\hyperlink{classlogic_1_1Observable_a71abcb587440135f5287317d1e87ad3e}{has\+Observer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IObserver}{IObserver}}$<$ \mbox{\hyperlink{classlogic_1_1World}{World}} $>$ $>$ \&observer) const
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classlogic_1_1World}{World} is the center of the logic part of the game.
+
+update(...) to simulate simulation only starts when the ON\+\_\+\+KEY\+\_\+\+PRESSED command is sent, and stops on each player death, send ON\+\_\+\+KEY\+\_\+\+PRESSED again to continue 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classlogic_1_1World_aa64337ca3e88db5040788acc5aa09625}\label{classlogic_1_1World_aa64337ca3e88db5040788acc5aa09625} 
+\index{logic::World@{logic::World}!WorldCommandType@{WorldCommandType}}
+\index{WorldCommandType@{WorldCommandType}!logic::World@{logic::World}}
+\doxysubsubsection{\texorpdfstring{WorldCommandType}{WorldCommandType}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classlogic_1_1World_aa64337ca3e88db5040788acc5aa09625}{logic\+::\+World\+::\+World\+Command\+Type}} =  int}
+
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -183,6 +204,12 @@ true the player has no lives left
 \begin{DoxyReturn}{Returns}
 true if all coins are collected 
 \end{DoxyReturn}
+\Hypertarget{classlogic_1_1World_aab6eea40afdf5f8d142f2a7dc9dd272f}\label{classlogic_1_1World_aab6eea40afdf5f8d142f2a7dc9dd272f} 
+\index{logic::World@{logic::World}!receiveCommand@{receiveCommand}}
+\index{receiveCommand@{receiveCommand}!logic::World@{logic::World}}
+\doxysubsubsection{\texorpdfstring{receiveCommand()}{receiveCommand()}}
+{\footnotesize\ttfamily void logic\+::\+World\+::receive\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1World_aa64337ca3e88db5040788acc5aa09625}{World\+::\+World\+Command\+Type}}}]{command }\end{DoxyParamCaption})}
+
 \Hypertarget{classlogic_1_1World_aa0ee63479670036e50b093909e6ccfcb}\label{classlogic_1_1World_aa0ee63479670036e50b093909e6ccfcb} 
 \index{logic::World@{logic::World}!removeObject@{removeObject}}
 \index{removeObject@{removeObject}!logic::World@{logic::World}}
