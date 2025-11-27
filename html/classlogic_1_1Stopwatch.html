@@ -74,6 +74,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classlogic_1_1Stopwatch-members.html">List of all members</a>  </div>
@@ -83,12 +85,24 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="Stopwatch_8h_source.html">Stopwatch.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Stopwatch_1_1Timer.html">Timer</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ada31c84af7218b93aebc267b2df95bf1" id="r_ada31c84af7218b93aebc267b2df95bf1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Stopwatch.html#ada31c84af7218b93aebc267b2df95bf1">TimeType</a> = float</td></tr>
+<tr class="separator:ada31c84af7218b93aebc267b2df95bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab6dbfd64fce4ebf995ada2b1b5fa3d07" id="r_ab6dbfd64fce4ebf995ada2b1b5fa3d07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Stopwatch.html#ab6dbfd64fce4ebf995ada2b1b5fa3d07">tick</a> () noexcept</td></tr>
 <tr class="separator:ab6dbfd64fce4ebf995ada2b1b5fa3d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57842f923d53f18a5484bb63b79684e8" id="r_a57842f923d53f18a5484bb63b79684e8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Stopwatch.html#a57842f923d53f18a5484bb63b79684e8">getDeltaTime</a> () const noexcept</td></tr>
-<tr class="separator:a57842f923d53f18a5484bb63b79684e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5b754117a7a8403def1f9ae695d7a26" id="r_ad5b754117a7a8403def1f9ae695d7a26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlogic_1_1Stopwatch.html#ada31c84af7218b93aebc267b2df95bf1">TimeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Stopwatch.html#ad5b754117a7a8403def1f9ae695d7a26">getDeltaTime</a> () const noexcept</td></tr>
+<tr class="separator:ad5b754117a7a8403def1f9ae695d7a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c99332415c04ea6d3540660e0514ae9" id="r_a7c99332415c04ea6d3540660e0514ae9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Stopwatch.html#a7c99332415c04ea6d3540660e0514ae9">addTimer</a> (const std::shared_ptr&lt; <a class="el" href="classlogic_1_1Stopwatch_1_1Timer.html">Timer</a> &gt; &amp;timer) const</td></tr>
+<tr class="separator:a7c99332415c04ea6d3540660e0514ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -97,9 +111,44 @@ Static Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Calculates and holds the time in seconds between the last two ticks. Can be used for dynamic framerates int the game, by using deltaTime provided by <a class="el" href="classlogic_1_1Stopwatch.html">Stopwatch</a>. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a57842f923d53f18a5484bb63b79684e8" name="a57842f923d53f18a5484bb63b79684e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57842f923d53f18a5484bb63b79684e8">&#9670;&#160;</a></span>getDeltaTime()</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="ada31c84af7218b93aebc267b2df95bf1" name="ada31c84af7218b93aebc267b2df95bf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada31c84af7218b93aebc267b2df95bf1">&#9670;&#160;</a></span>TimeType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classlogic_1_1Stopwatch.html#ada31c84af7218b93aebc267b2df95bf1">logic::Stopwatch::TimeType</a> =  float</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The type used for displaying the deltaTime and durations </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7c99332415c04ea6d3540660e0514ae9" name="a7c99332415c04ea6d3540660e0514ae9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c99332415c04ea6d3540660e0514ae9">&#9670;&#160;</a></span>addTimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void logic::Stopwatch::addTimer </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classlogic_1_1Stopwatch_1_1Timer.html">Timer</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add a timer to be updated on each tick. </p>
+
+</div>
+</div>
+<a id="ad5b754117a7a8403def1f9ae695d7a26" name="ad5b754117a7a8403def1f9ae695d7a26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5b754117a7a8403def1f9ae695d7a26">&#9670;&#160;</a></span>getDeltaTime()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -108,7 +157,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float logic::Stopwatch::getDeltaTime </td>
+          <td class="memname"><a class="el" href="classlogic_1_1Stopwatch.html#ada31c84af7218b93aebc267b2df95bf1">logic::Stopwatch::TimeType</a> logic::Stopwatch::getDeltaTime </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -172,7 +221,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Update the deltaTime Sets deltaTime to the gap in seconds between this and the previous tick. Returns zero first time <a class="el" href="classlogic_1_1Stopwatch.html#ab6dbfd64fce4ebf995ada2b1b5fa3d07">tick()</a> is called. </p>
+<p>Update the deltaTime Sets deltaTime to the gap in seconds between this and the previous tick. Updates all timers with deltaTime. Returns zero first time <a class="el" href="classlogic_1_1Stopwatch.html#ab6dbfd64fce4ebf995ada2b1b5fa3d07">tick()</a> is called. </p>
 
 </div>
 </div>

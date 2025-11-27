@@ -14,26 +14,34 @@
 \DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{using\ namespace\ }std::chrono;}
 \DoxyCodeLine{00011\ }
 \DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1Stopwatch}{Stopwatch}}\ \{}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ time\_point<high\_resolution\_clock,\ high\_resolution\_clock\ ::duration>\ \_previous;}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_firstTick\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ deltaTime=0;}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ std::shared\_ptr<Stopwatch>\ \_instance;}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1Stopwatch}{Stopwatch}}()=\textcolor{keywordflow}{default};}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1Stopwatch_ab6dbfd64fce4ebf995ada2b1b5fa3d07}{tick}}()\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1Stopwatch_1_1Timer}{Timer}};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classlogic_1_1Stopwatch_ada31c84af7218b93aebc267b2df95bf1}{TimeType}}\ =\ float;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ time\_point<high\_resolution\_clock,\ high\_resolution\_clock\ ::duration>\ \_previous;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_firstTick\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1Stopwatch_ada31c84af7218b93aebc267b2df95bf1}{TimeType}}\ deltaTime=0;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ std::vector<std::shared\_ptr<Stopwatch::Timer>>\ \_timers;}
 \DoxyCodeLine{00043\ }
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classlogic_1_1Stopwatch_a57842f923d53f18a5484bb63b79684e8}{getDeltaTime}}()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ std::shared\_ptr<Stopwatch>\ \_instance;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1Stopwatch}{Stopwatch}}()=\textcolor{keywordflow}{default};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00048\ }
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<Stopwatch>\ \mbox{\hyperlink{classlogic_1_1Stopwatch_ac6a008dc21f2179c8783caacf0114c0e}{getInstance}}();}
-\DoxyCodeLine{00053\ \ \ \ \ \};}
-\DoxyCodeLine{00054\ \}}
-\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1Stopwatch_ab6dbfd64fce4ebf995ada2b1b5fa3d07}{tick}}()\ noexcept;}
 \DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_STOPWATCH\_H}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlogic_1_1Stopwatch_ada31c84af7218b93aebc267b2df95bf1}{TimeType}}\ \mbox{\hyperlink{classlogic_1_1Stopwatch_ad5b754117a7a8403def1f9ae695d7a26}{getDeltaTime}}()\ const\ noexcept;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ static\ std::shared\_ptr<\mbox{\hyperlink{classlogic_1_1Stopwatch}{Stopwatch}}>\ \mbox{\hyperlink{classlogic_1_1Stopwatch_ac6a008dc21f2179c8783caacf0114c0e}{getInstance}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1Stopwatch_a7c99332415c04ea6d3540660e0514ae9}{addTimer}}(const\ std::shared\_ptr<\mbox{\hyperlink{classlogic_1_1Stopwatch_1_1Timer}{Timer}}>\&\ timer)\ const;}
+\DoxyCodeLine{00071\ \ \ \ \ \};}
+\DoxyCodeLine{00072\ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_STOPWATCH\_H}}
 
 \end{DoxyCode}

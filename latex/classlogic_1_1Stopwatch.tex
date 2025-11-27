@@ -4,12 +4,24 @@
 
 {\ttfamily \#include $<$Stopwatch.\+h$>$}
 
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlogic_1_1Stopwatch_1_1Timer}{Timer}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classlogic_1_1Stopwatch_ada31c84af7218b93aebc267b2df95bf1}{Time\+Type}} = float
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classlogic_1_1Stopwatch_ab6dbfd64fce4ebf995ada2b1b5fa3d07}{tick}} () noexcept
 \item 
-float \mbox{\hyperlink{classlogic_1_1Stopwatch_a57842f923d53f18a5484bb63b79684e8}{get\+Delta\+Time}} () const noexcept
+\mbox{\hyperlink{classlogic_1_1Stopwatch_ada31c84af7218b93aebc267b2df95bf1}{Time\+Type}} \mbox{\hyperlink{classlogic_1_1Stopwatch_ad5b754117a7a8403def1f9ae695d7a26}{get\+Delta\+Time}} () const noexcept
+\item 
+void \mbox{\hyperlink{classlogic_1_1Stopwatch_a7c99332415c04ea6d3540660e0514ae9}{add\+Timer}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1Stopwatch_1_1Timer}{Timer}} $>$ \&timer) const
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -21,12 +33,27 @@ static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1Stopwatch}{Stopw
 \doxysubsection{Detailed Description}
 Calculates and holds the time in seconds between the last two ticks. Can be used for dynamic framerates int the game, by using delta\+Time provided by \doxylink{classlogic_1_1Stopwatch}{Stopwatch}. 
 
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classlogic_1_1Stopwatch_ada31c84af7218b93aebc267b2df95bf1}\label{classlogic_1_1Stopwatch_ada31c84af7218b93aebc267b2df95bf1} 
+\index{logic::Stopwatch@{logic::Stopwatch}!TimeType@{TimeType}}
+\index{TimeType@{TimeType}!logic::Stopwatch@{logic::Stopwatch}}
+\doxysubsubsection{\texorpdfstring{TimeType}{TimeType}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classlogic_1_1Stopwatch_ada31c84af7218b93aebc267b2df95bf1}{logic\+::\+Stopwatch\+::\+Time\+Type}} =  float}
+
+The type used for displaying the delta\+Time and durations 
+
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classlogic_1_1Stopwatch_a57842f923d53f18a5484bb63b79684e8}\label{classlogic_1_1Stopwatch_a57842f923d53f18a5484bb63b79684e8} 
+\Hypertarget{classlogic_1_1Stopwatch_a7c99332415c04ea6d3540660e0514ae9}\label{classlogic_1_1Stopwatch_a7c99332415c04ea6d3540660e0514ae9} 
+\index{logic::Stopwatch@{logic::Stopwatch}!addTimer@{addTimer}}
+\index{addTimer@{addTimer}!logic::Stopwatch@{logic::Stopwatch}}
+\doxysubsubsection{\texorpdfstring{addTimer()}{addTimer()}}
+{\footnotesize\ttfamily void logic\+::\+Stopwatch\+::add\+Timer (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1Stopwatch_1_1Timer}{Timer}} $>$ \&}]{timer }\end{DoxyParamCaption}) const}
+
+Add a timer to be updated on each tick. \Hypertarget{classlogic_1_1Stopwatch_ad5b754117a7a8403def1f9ae695d7a26}\label{classlogic_1_1Stopwatch_ad5b754117a7a8403def1f9ae695d7a26} 
 \index{logic::Stopwatch@{logic::Stopwatch}!getDeltaTime@{getDeltaTime}}
 \index{getDeltaTime@{getDeltaTime}!logic::Stopwatch@{logic::Stopwatch}}
 \doxysubsubsection{\texorpdfstring{getDeltaTime()}{getDeltaTime()}}
-{\footnotesize\ttfamily float logic\+::\+Stopwatch\+::get\+Delta\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1Stopwatch_ada31c84af7218b93aebc267b2df95bf1}{logic\+::\+Stopwatch\+::\+Time\+Type}} logic\+::\+Stopwatch\+::get\+Delta\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 \begin{DoxyReturn}{Returns}
 The time between the previous two ticks in seconds. 0 if tick has only been called once. 
@@ -46,7 +73,7 @@ The singleton instance.
 \doxysubsubsection{\texorpdfstring{tick()}{tick()}}
 {\footnotesize\ttfamily void logic\+::\+Stopwatch\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-Update the delta\+Time Sets delta\+Time to the gap in seconds between this and the previous tick. Returns zero first time \doxylink{classlogic_1_1Stopwatch_ab6dbfd64fce4ebf995ada2b1b5fa3d07}{tick()} is called. 
+Update the delta\+Time Sets delta\+Time to the gap in seconds between this and the previous tick. Updates all timers with delta\+Time. Returns zero first time \doxylink{classlogic_1_1Stopwatch_ab6dbfd64fce4ebf995ada2b1b5fa3d07}{tick()} is called. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
