@@ -27,18 +27,34 @@ Collaboration diagram for renderer\+::Button\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classrenderer_1_1Button_a1c7d9256ae0a14d145ee01d3079c71d0}{Button}} ()
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Button_aeea1b970da458f0c28282bec1f8cfe26}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&position) override
+\item 
 std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Button_a918eb9efe3f25e9be22ccb9eecdf50db}{get\+SFShapes}} (sf\+::\+Render\+Window \&window) override
 \item 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Button_a596db4cb3bdd79adc7e63af455df1e61}{get\+SFSprites}} (sf\+::\+Render\+Window \&window) override
 \item 
 std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Button_add05e62ac67f5e94402a3fd13643c73c}{get\+SFTexts}} (sf\+::\+Render\+Window \&window) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Button_a75055e5460285510015689cd6f95b640}{draw}} (sf\+::\+Render\+Window \&window) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Button_a2d9ecbba534c987add7bba33abaadf37}{set\+String}} (const std\+::string \&str)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Button_a6660cad640c9c99afc39f0ebd5bedf1a}{set\+Font}} (const sf\+::\+Font \&font)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Button_a6eff6988cf4a1351ce8b4d0966452a55}{set\+Character\+Size}} (float size)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Button_acbad078f23caae8c1935bf51a38f36bb}{set\+Width}} (\mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{logic\+::\+Size\+::\+Coordinate\+Type}} width)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Button_a2da7e7b3fb2ede6183ff27dbf5958fee}{set\+On\+Click}} (const std\+::function$<$ void()$>$ \&on\+Click)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Button_a07ab426be53b55ea8768b0f8985c9aec}{process\+Event}} (const sf\+::\+Event \&event, sf\+::\+Render\+Window \&window)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1DrawObject}{renderer\+::\+Draw\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \& \mbox{\hyperlink{classrenderer_1_1DrawObject_a1317e66b07b34c0fa2fbf7472f45207e}{get\+Position}} () const
-\item 
-void \mbox{\hyperlink{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&position)
 \item 
 void \mbox{\hyperlink{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de728}{draw}} (sf\+::\+Render\+Window \&window) override
 \end{DoxyCompactItemize}
@@ -49,7 +65,47 @@ Class representing a UI button in the game. \begin{DoxyRefDesc}{Todo}
 \item[\mbox{\hyperlink{todo__todo000001}{Todo}}]finish implementation \end{DoxyRefDesc}
 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrenderer_1_1Button_a1c7d9256ae0a14d145ee01d3079c71d0}\label{classrenderer_1_1Button_a1c7d9256ae0a14d145ee01d3079c71d0} 
+\index{renderer::Button@{renderer::Button}!Button@{Button}}
+\index{Button@{Button}!renderer::Button@{renderer::Button}}
+\doxysubsubsection{\texorpdfstring{Button()}{Button()}}
+{\footnotesize\ttfamily renderer\+::\+Button\+::\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1Button_a1c7d9256ae0a14d145ee01d3079c71d0_cgraph}
+\end{center}
+\end{figure}
+
+
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1Button_a75055e5460285510015689cd6f95b640}\label{classrenderer_1_1Button_a75055e5460285510015689cd6f95b640} 
+\index{renderer::Button@{renderer::Button}!draw@{draw}}
+\index{draw@{draw}!renderer::Button@{renderer::Button}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void renderer\+::\+Button\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draw the object onto the provided render window. 
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IDrawable_a7a7cdfdbea7a25ac8c46453657a7e355}{renderer\+::\+IDrawable}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1Button_a75055e5460285510015689cd6f95b640_cgraph}
+\end{center}
+\end{figure}
 \Hypertarget{classrenderer_1_1Button_a918eb9efe3f25e9be22ccb9eecdf50db}\label{classrenderer_1_1Button_a918eb9efe3f25e9be22ccb9eecdf50db} 
 \index{renderer::Button@{renderer::Button}!getSFShapes@{getSFShapes}}
 \index{getSFShapes@{getSFShapes}!renderer::Button@{renderer::Button}}
@@ -73,6 +129,14 @@ positions are relative to the \doxylink{classrenderer_1_1DrawObject}{Draw\+Objec
 
 Implements \mbox{\hyperlink{classrenderer_1_1DrawObject_a9612dd69d98b224a4088b73b266a9716}{renderer\+::\+Draw\+Object}}.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1Button_a918eb9efe3f25e9be22ccb9eecdf50db_cgraph}
+\end{center}
+\end{figure}
 \Hypertarget{classrenderer_1_1Button_a596db4cb3bdd79adc7e63af455df1e61}\label{classrenderer_1_1Button_a596db4cb3bdd79adc7e63af455df1e61} 
 \index{renderer::Button@{renderer::Button}!getSFSprites@{getSFSprites}}
 \index{getSFSprites@{getSFSprites}!renderer::Button@{renderer::Button}}
@@ -108,6 +172,105 @@ positions are relative to the \doxylink{classrenderer_1_1DrawObject}{Draw\+Objec
 
 
 Implements \mbox{\hyperlink{classrenderer_1_1DrawObject_aa4d5616621231dc20620faa1dc5c1b6c}{renderer\+::\+Draw\+Object}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1Button_add05e62ac67f5e94402a3fd13643c73c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1Button_a07ab426be53b55ea8768b0f8985c9aec}\label{classrenderer_1_1Button_a07ab426be53b55ea8768b0f8985c9aec} 
+\index{renderer::Button@{renderer::Button}!processEvent@{processEvent}}
+\index{processEvent@{processEvent}!renderer::Button@{renderer::Button}}
+\doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}}
+{\footnotesize\ttfamily void renderer\+::\+Button\+::process\+Event (\begin{DoxyParamCaption}\item[{const sf\+::\+Event \&}]{event,  }\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1Button_a07ab426be53b55ea8768b0f8985c9aec_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1Button_a6eff6988cf4a1351ce8b4d0966452a55}\label{classrenderer_1_1Button_a6eff6988cf4a1351ce8b4d0966452a55} 
+\index{renderer::Button@{renderer::Button}!setCharacterSize@{setCharacterSize}}
+\index{setCharacterSize@{setCharacterSize}!renderer::Button@{renderer::Button}}
+\doxysubsubsection{\texorpdfstring{setCharacterSize()}{setCharacterSize()}}
+{\footnotesize\ttfamily void renderer\+::\+Button\+::set\+Character\+Size (\begin{DoxyParamCaption}\item[{float}]{size }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1Button_a6eff6988cf4a1351ce8b4d0966452a55_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1Button_a6660cad640c9c99afc39f0ebd5bedf1a}\label{classrenderer_1_1Button_a6660cad640c9c99afc39f0ebd5bedf1a} 
+\index{renderer::Button@{renderer::Button}!setFont@{setFont}}
+\index{setFont@{setFont}!renderer::Button@{renderer::Button}}
+\doxysubsubsection{\texorpdfstring{setFont()}{setFont()}}
+{\footnotesize\ttfamily void renderer\+::\+Button\+::set\+Font (\begin{DoxyParamCaption}\item[{const sf\+::\+Font \&}]{font }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1Button_a6660cad640c9c99afc39f0ebd5bedf1a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1Button_a2da7e7b3fb2ede6183ff27dbf5958fee}\label{classrenderer_1_1Button_a2da7e7b3fb2ede6183ff27dbf5958fee} 
+\index{renderer::Button@{renderer::Button}!setOnClick@{setOnClick}}
+\index{setOnClick@{setOnClick}!renderer::Button@{renderer::Button}}
+\doxysubsubsection{\texorpdfstring{setOnClick()}{setOnClick()}}
+{\footnotesize\ttfamily void renderer\+::\+Button\+::set\+On\+Click (\begin{DoxyParamCaption}\item[{const std\+::function$<$ void()$>$ \&}]{on\+Click }\end{DoxyParamCaption})}
+
+\Hypertarget{classrenderer_1_1Button_aeea1b970da458f0c28282bec1f8cfe26}\label{classrenderer_1_1Button_aeea1b970da458f0c28282bec1f8cfe26} 
+\index{renderer::Button@{renderer::Button}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!renderer::Button@{renderer::Button}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void renderer\+::\+Button\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Set the position of the draw object. 
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}{renderer\+::\+Draw\+Object}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1Button_aeea1b970da458f0c28282bec1f8cfe26_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1Button_a2d9ecbba534c987add7bba33abaadf37}\label{classrenderer_1_1Button_a2d9ecbba534c987add7bba33abaadf37} 
+\index{renderer::Button@{renderer::Button}!setString@{setString}}
+\index{setString@{setString}!renderer::Button@{renderer::Button}}
+\doxysubsubsection{\texorpdfstring{setString()}{setString()}}
+{\footnotesize\ttfamily void renderer\+::\+Button\+::set\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1Button_a2d9ecbba534c987add7bba33abaadf37_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1Button_acbad078f23caae8c1935bf51a38f36bb}\label{classrenderer_1_1Button_acbad078f23caae8c1935bf51a38f36bb} 
+\index{renderer::Button@{renderer::Button}!setWidth@{setWidth}}
+\index{setWidth@{setWidth}!renderer::Button@{renderer::Button}}
+\doxysubsubsection{\texorpdfstring{setWidth()}{setWidth()}}
+{\footnotesize\ttfamily void renderer\+::\+Button\+::set\+Width (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{logic\+::\+Size\+::\+Coordinate\+Type}}}]{width }\end{DoxyParamCaption})}
 
 
 

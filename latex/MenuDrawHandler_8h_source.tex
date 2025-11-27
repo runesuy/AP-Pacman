@@ -12,15 +12,21 @@
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <SFML/Graphics/Font.hpp>}}
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IState_8h}{core/states/IState.h}}"{}}}
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IStateDrawHandler_8h}{core/states/IStateDrawHandler.h}}"{}}}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
-\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1MenuDrawHandler}{MenuDrawHandler}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IStateDrawHandler}}\ \{}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_fontLoaded\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ sf::Font\ \_font;}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1MenuDrawHandler_adb8c67e964e31f10d3648d705cfbb8b6}{draw}}(sf::RenderWindow\ \&window,\ \mbox{\hyperlink{classrenderer_1_1IState}{IState}}\&\ state)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00021\ \ \ \ \ \};}
-\DoxyCodeLine{00022\ \}}
-\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_MENUDRAWHANDLER\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Button_8h}{core/drawable/ui/Button.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MenuState_8h}{MenuState.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1MenuDrawHandler}{MenuDrawHandler}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IStateDrawHandler}}<MenuState>\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_fontLoaded\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ sf::Font\ \_font;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Button}{Button}}\ playButton;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1MenuDrawHandler_a9835705678adad5a2d2348c6618ec0c1}{MenuDrawHandler}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1MenuDrawHandler_a6b2b24d85e82283b34c02db33e09e9db}{draw}}(sf::RenderWindow\ \&window,\ \mbox{\hyperlink{classrenderer_1_1MenuState}{MenuState}}\&\ state,\ \mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}\&\ stateManager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1MenuDrawHandler_a7c487f58f57e2b5250bf985e2aa735a9}{onPlayButtonClick}}(\mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}\&\ stateManager)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \ \ \ \ \};}
+\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_MENUDRAWHANDLER\_H}}
 
 \end{DoxyCode}

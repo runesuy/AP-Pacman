@@ -10,23 +10,28 @@
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_PAUSEDSTATEDRAWHANDLER\_H}}
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IStateDrawHandler_8h}{core/states/IStateDrawHandler.h}}"{}}}
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Label_8h}{core/drawable/ui/Label.h}}"{}}}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Button_8h}{core/drawable/ui/Button.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{PausedState_8h}{PausedState.h}}"{}}}
 \DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1PausedStateDrawHandler}{PausedStateDrawHandler}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IStateDrawHandler}}\{}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label}{Label}}\ pausedLabel;}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ pausedLabelText\ =\ \textcolor{stringliteral}{"{}PAUSED"{}};}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ pausedLabelCharSize\ =\ 0.1;}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label}{Label}}\ descrLabel;}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ descrLabelText\ =\ \textcolor{stringliteral}{"{}PRESS\ ANY\ KEY\ TO\ CONTINUE"{}};}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ descrLabelCharSize\ =\ 0.05;}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1PausedStateDrawHandler_a55fa46855d326cadaa000af9da356f91}{PausedStateDrawHandler}}();}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1PausedStateDrawHandler_a18a9545c7420b2255ff939891fa45957}{draw}}(sf::RenderWindow\ \&window,\ \mbox{\hyperlink{classrenderer_1_1IState}{IState}}\ \&state)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00022\ \ \ \ \ \};}
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1PausedStateDrawHandler}{PausedStateDrawHandler}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IStateDrawHandler}}<PausedState>\{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label}{Label}}\ pausedLabel;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ pausedLabelText\ =\ \textcolor{stringliteral}{"{}PAUSED"{}};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ pausedLabelCharSize\ =\ 0.1;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Button}{Button}}\ continueButton;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ continueButtonText\ =\ \textcolor{stringliteral}{"{}CONTINUE"{}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Button}{Button}}\ menuButton;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ menuButtonText\ =\ \textcolor{stringliteral}{"{}MENU"{}};}
 \DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \}\ \textcolor{comment}{//\ renderer}}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_PAUSEDSTATEDRAWHANDLER\_H}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1PausedStateDrawHandler_a55fa46855d326cadaa000af9da356f91}{PausedStateDrawHandler}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1PausedStateDrawHandler_af15faeeed8a64d0d2d6d2c97d4188ea9}{draw}}(sf::RenderWindow\ \&window,\ \mbox{\hyperlink{classrenderer_1_1PausedState}{PausedState}}\ \&state,\ \mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}\&\ stateManager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ \ \ \ \ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_PAUSEDSTATEDRAWHANDLER\_H}}
 
 \end{DoxyCode}

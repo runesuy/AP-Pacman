@@ -27,18 +27,18 @@ Collaboration diagram for renderer\+::Paused\+State\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classrenderer_1_1PausedState_ac32c91ca0a70d52947f2890c6e0b2b6c}{Paused\+State}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IState\+Update\+Handler}} $>$ \&\&update\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IState\+Input\+Handler}} $>$ \&\&input\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IState\+Draw\+Handler}} $>$ \&\&draw\+Handler)
+\mbox{\hyperlink{classrenderer_1_1PausedState_acff78ee8e521b8d473689922349cc9c6}{Paused\+State}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IState\+Update\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1PausedState}{Paused\+State}} $>$ $>$ \&\&update\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IState\+Input\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1PausedState}{Paused\+State}} $>$ $>$ \&\&input\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IState\+Draw\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1PausedState}{Paused\+State}} $>$ $>$ \&\&draw\+Handler)
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1DelegatingState}{renderer\+::\+Delegating\+State}}}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1DelegatingState}{renderer\+::\+Delegating\+State$<$ Paused\+State $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classrenderer_1_1DelegatingState_ae8fb84b37fa1c44a02072b581a2b073a}{Delegating\+State}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IState\+Update\+Handler}} $>$ \&\&update\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IState\+Input\+Handler}} $>$ \&\&input\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IState\+Draw\+Handler}} $>$ \&\&draw\+Handler)
+\mbox{\hyperlink{classrenderer_1_1DelegatingState_a58b1d25e965ad88a0571a4a79c004652}{Delegating\+State}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IState\+Update\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1PausedState}{Paused\+State}} $>$ $>$ \&\&update\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IState\+Input\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1PausedState}{Paused\+State}} $>$ $>$ \&\&input\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IState\+Draw\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1PausedState}{Paused\+State}} $>$ $>$ \&\&draw\+Handler)
 \item 
-void \mbox{\hyperlink{classrenderer_1_1DelegatingState_af34dff5edb2725d7fe9061369dd2ca55}{update}} () override
+void \mbox{\hyperlink{classrenderer_1_1DelegatingState_a0298b462b736bff13f9433f539422f40}{update}} () override
 \item 
-void \mbox{\hyperlink{classrenderer_1_1DelegatingState_a0f2edc8f97d5dec5ed8b97571ceb0050}{process\+Input}} (sf\+::\+Event \&event, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
+void \mbox{\hyperlink{classrenderer_1_1DelegatingState_a706a8f2102b8870db355632c46888c40}{process\+Input}} (sf\+::\+Event \&event, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
 \item 
-void \mbox{\hyperlink{classrenderer_1_1DelegatingState_a78ad8e7bbf4ad31de6d7c62074f894e1}{draw}} (sf\+::\+Render\+Window \&window) override
+void \mbox{\hyperlink{classrenderer_1_1DelegatingState_a218946be351acc60bf8db18bb95d9668}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1IState}{renderer\+::\+IState}}}
 \begin{DoxyCompactItemize}
@@ -48,11 +48,11 @@ virtual \mbox{\hyperlink{classrenderer_1_1IState_ac0eccb586fc4819e616966f4c761c3
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classrenderer_1_1PausedState_ac32c91ca0a70d52947f2890c6e0b2b6c}\label{classrenderer_1_1PausedState_ac32c91ca0a70d52947f2890c6e0b2b6c} 
+\Hypertarget{classrenderer_1_1PausedState_acff78ee8e521b8d473689922349cc9c6}\label{classrenderer_1_1PausedState_acff78ee8e521b8d473689922349cc9c6} 
 \index{renderer::PausedState@{renderer::PausedState}!PausedState@{PausedState}}
 \index{PausedState@{PausedState}!renderer::PausedState@{renderer::PausedState}}
 \doxysubsubsection{\texorpdfstring{PausedState()}{PausedState()}}
-{\footnotesize\ttfamily renderer\+::\+Paused\+State\+::\+Paused\+State (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IState\+Update\+Handler}} $>$ \&\&}]{update\+Handler,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IState\+Input\+Handler}} $>$ \&\&}]{input\+Handler,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IState\+Draw\+Handler}} $>$ \&\&}]{draw\+Handler }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily renderer\+::\+Paused\+State\+::\+Paused\+State (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IState\+Update\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1PausedState}{Paused\+State}} $>$ $>$ \&\&}]{update\+Handler,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IState\+Input\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1PausedState}{Paused\+State}} $>$ $>$ \&\&}]{input\+Handler,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IState\+Draw\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1PausedState}{Paused\+State}} $>$ $>$ \&\&}]{draw\+Handler }\end{DoxyParamCaption})}
 
 
 

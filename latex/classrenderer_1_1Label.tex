@@ -27,9 +27,14 @@ Collaboration diagram for renderer\+::Label\+:
 \doxysubsubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{Horizontal\+Origin\+Type}} \{ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa83fe1b8ff4b890556ec33926812dff1e}{LEFT}}
-, \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa81d1512bdfd7cd39b5743834fb47b3e7}{MIDDLE}}
-, \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aae20f27c56137863b568e286d26ba1291}{RIGHT}}
+enum class \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{Horizontal\+Origin\+Type}} \{ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa684d325a7303f52e64011467ff5c5758}{LEFT}}
+, \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa43eedd8685eb86592022f8da962e3474}{MIDDLE}}
+, \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa21507b40c80068eda19865706fdc2403}{RIGHT}}
+ \}
+\item 
+enum class \mbox{\hyperlink{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6}{Vertical\+Origin\+Type}} \{ \mbox{\hyperlink{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6a6705777b712ee811e76fb07162081d63}{TOP}}
+, \mbox{\hyperlink{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6a43eedd8685eb86592022f8da962e3474}{MIDDLE}}
+, \mbox{\hyperlink{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6a1fabf63de5c96c78e2a40805bcdeb73b}{BOTTOM}}
  \}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
@@ -47,7 +52,13 @@ void \mbox{\hyperlink{classrenderer_1_1Label_ab7ab0ab215594f5deaf00b8d64a7d2d1}{
 \item 
 void \mbox{\hyperlink{classrenderer_1_1Label_a1e2c6c4b7c1290d03e10aa2de2898b60}{set\+Character\+Size}} (float size)
 \item 
+float \mbox{\hyperlink{classrenderer_1_1Label_a2fd3345eeb14c2bd483d8e286e4d8e82}{get\+Character\+Size}} () const
+\item 
+const std\+::string\+::size\+\_\+type \mbox{\hyperlink{classrenderer_1_1Label_ac10db6c68a2d69da6ffc81b194ac1f23}{get\+String\+Size}} () const
+\item 
 void \mbox{\hyperlink{classrenderer_1_1Label_ab285c653898ec0eeff7b2e37d08e7e4b}{set\+Horizontal\+Origin}} (\mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{Horizontal\+Origin\+Type}} horizontal\+Origin)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Label_a582d69bd759963175bf94daae0cf3731}{set\+Vertical\+Origin}} (\mbox{\hyperlink{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6}{Vertical\+Origin\+Type}} vertical\+Origin)
 \item 
 std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Label_afc92ec67b6a0d2666f3667b49cd97a36}{get\+SFShapes}} (sf\+::\+Render\+Window \&window) override
 \item 
@@ -60,7 +71,7 @@ std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ \mbox{\hyperlink
 \item 
 const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \& \mbox{\hyperlink{classrenderer_1_1DrawObject_a1317e66b07b34c0fa2fbf7472f45207e}{get\+Position}} () const
 \item 
-void \mbox{\hyperlink{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&position)
+virtual void \mbox{\hyperlink{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&position)
 \item 
 void \mbox{\hyperlink{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de728}{draw}} (sf\+::\+Render\+Window \&window) override
 \end{DoxyCompactItemize}
@@ -74,19 +85,39 @@ A simple UI label for displaying text.
 \index{renderer::Label@{renderer::Label}!HorizontalOriginType@{HorizontalOriginType}}
 \index{HorizontalOriginType@{HorizontalOriginType}!renderer::Label@{renderer::Label}}
 \doxysubsubsection{\texorpdfstring{HorizontalOriginType}{HorizontalOriginType}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{renderer\+::\+Label\+::\+Horizontal\+Origin\+Type}}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{renderer\+::\+Label\+::\+Horizontal\+Origin\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
 
 \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT@{LEFT}!renderer::Label@{renderer::Label}}\index{renderer::Label@{renderer::Label}!LEFT@{LEFT}}}\Hypertarget{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa83fe1b8ff4b890556ec33926812dff1e}\label{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa83fe1b8ff4b890556ec33926812dff1e} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT@{LEFT}!renderer::Label@{renderer::Label}}\index{renderer::Label@{renderer::Label}!LEFT@{LEFT}}}\Hypertarget{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa684d325a7303f52e64011467ff5c5758}\label{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa684d325a7303f52e64011467ff5c5758} 
 LEFT&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{MIDDLE@{MIDDLE}!renderer::Label@{renderer::Label}}\index{renderer::Label@{renderer::Label}!MIDDLE@{MIDDLE}}}\Hypertarget{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa81d1512bdfd7cd39b5743834fb47b3e7}\label{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa81d1512bdfd7cd39b5743834fb47b3e7} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIDDLE@{MIDDLE}!renderer::Label@{renderer::Label}}\index{renderer::Label@{renderer::Label}!MIDDLE@{MIDDLE}}}\Hypertarget{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa43eedd8685eb86592022f8da962e3474}\label{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa43eedd8685eb86592022f8da962e3474} 
 MIDDLE&\\
 \hline
 
-\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT@{RIGHT}!renderer::Label@{renderer::Label}}\index{renderer::Label@{renderer::Label}!RIGHT@{RIGHT}}}\Hypertarget{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aae20f27c56137863b568e286d26ba1291}\label{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aae20f27c56137863b568e286d26ba1291} 
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT@{RIGHT}!renderer::Label@{renderer::Label}}\index{renderer::Label@{renderer::Label}!RIGHT@{RIGHT}}}\Hypertarget{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa21507b40c80068eda19865706fdc2403}\label{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa21507b40c80068eda19865706fdc2403} 
 RIGHT&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6}\label{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6} 
+\index{renderer::Label@{renderer::Label}!VerticalOriginType@{VerticalOriginType}}
+\index{VerticalOriginType@{VerticalOriginType}!renderer::Label@{renderer::Label}}
+\doxysubsubsection{\texorpdfstring{VerticalOriginType}{VerticalOriginType}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6}{renderer\+::\+Label\+::\+Vertical\+Origin\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOP@{TOP}!renderer::Label@{renderer::Label}}\index{renderer::Label@{renderer::Label}!TOP@{TOP}}}\Hypertarget{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6a6705777b712ee811e76fb07162081d63}\label{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6a6705777b712ee811e76fb07162081d63} 
+TOP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MIDDLE@{MIDDLE}!renderer::Label@{renderer::Label}}\index{renderer::Label@{renderer::Label}!MIDDLE@{MIDDLE}}}\Hypertarget{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6a43eedd8685eb86592022f8da962e3474}\label{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6a43eedd8685eb86592022f8da962e3474} 
+MIDDLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BOTTOM@{BOTTOM}!renderer::Label@{renderer::Label}}\index{renderer::Label@{renderer::Label}!BOTTOM@{BOTTOM}}}\Hypertarget{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6a1fabf63de5c96c78e2a40805bcdeb73b}\label{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6a1fabf63de5c96c78e2a40805bcdeb73b} 
+BOTTOM&\\
 \hline
 
 \end{DoxyEnumFields}
@@ -130,6 +161,12 @@ Here is the call graph for this function\+:
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1Label_a2fd3345eeb14c2bd483d8e286e4d8e82}\label{classrenderer_1_1Label_a2fd3345eeb14c2bd483d8e286e4d8e82} 
+\index{renderer::Label@{renderer::Label}!getCharacterSize@{getCharacterSize}}
+\index{getCharacterSize@{getCharacterSize}!renderer::Label@{renderer::Label}}
+\doxysubsubsection{\texorpdfstring{getCharacterSize()}{getCharacterSize()}}
+{\footnotesize\ttfamily float renderer\+::\+Label\+::get\+Character\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 \Hypertarget{classrenderer_1_1Label_afc92ec67b6a0d2666f3667b49cd97a36}\label{classrenderer_1_1Label_afc92ec67b6a0d2666f3667b49cd97a36} 
 \index{renderer::Label@{renderer::Label}!getSFShapes@{getSFShapes}}
 \index{getSFShapes@{getSFShapes}!renderer::Label@{renderer::Label}}
@@ -197,6 +234,12 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{classrenderer_1_1Label_ae6bb2428dffea2093599d1a94bf394cd_cgraph}
 \end{center}
 \end{figure}
+\Hypertarget{classrenderer_1_1Label_ac10db6c68a2d69da6ffc81b194ac1f23}\label{classrenderer_1_1Label_ac10db6c68a2d69da6ffc81b194ac1f23} 
+\index{renderer::Label@{renderer::Label}!getStringSize@{getStringSize}}
+\index{getStringSize@{getStringSize}!renderer::Label@{renderer::Label}}
+\doxysubsubsection{\texorpdfstring{getStringSize()}{getStringSize()}}
+{\footnotesize\ttfamily const std\+::string\+::size\+\_\+type renderer\+::\+Label\+::get\+String\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 \Hypertarget{classrenderer_1_1Label_a1e2c6c4b7c1290d03e10aa2de2898b60}\label{classrenderer_1_1Label_a1e2c6c4b7c1290d03e10aa2de2898b60} 
 \index{renderer::Label@{renderer::Label}!setCharacterSize@{setCharacterSize}}
 \index{setCharacterSize@{setCharacterSize}!renderer::Label@{renderer::Label}}
@@ -220,6 +263,12 @@ Here is the call graph for this function\+:
 \index{setString@{setString}!renderer::Label@{renderer::Label}}
 \doxysubsubsection{\texorpdfstring{setString()}{setString()}}
 {\footnotesize\ttfamily void renderer\+::\+Label\+::set\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+\Hypertarget{classrenderer_1_1Label_a582d69bd759963175bf94daae0cf3731}\label{classrenderer_1_1Label_a582d69bd759963175bf94daae0cf3731} 
+\index{renderer::Label@{renderer::Label}!setVerticalOrigin@{setVerticalOrigin}}
+\index{setVerticalOrigin@{setVerticalOrigin}!renderer::Label@{renderer::Label}}
+\doxysubsubsection{\texorpdfstring{setVerticalOrigin()}{setVerticalOrigin()}}
+{\footnotesize\ttfamily void renderer\+::\+Label\+::set\+Vertical\+Origin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6}{Label\+::\+Vertical\+Origin\+Type}}}]{vertical\+Origin }\end{DoxyParamCaption})}
 
 
 

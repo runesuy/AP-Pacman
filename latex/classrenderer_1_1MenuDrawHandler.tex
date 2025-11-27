@@ -27,12 +27,16 @@ Collaboration diagram for renderer\+::Menu\+Draw\+Handler\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classrenderer_1_1MenuDrawHandler_adb8c67e964e31f10d3648d705cfbb8b6}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classrenderer_1_1IState}{IState}} \&state) override
+\mbox{\hyperlink{classrenderer_1_1MenuDrawHandler_a9835705678adad5a2d2348c6618ec0c1}{Menu\+Draw\+Handler}} ()
+\item 
+void \mbox{\hyperlink{classrenderer_1_1MenuDrawHandler_a6b2b24d85e82283b34c02db33e09e9db}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classrenderer_1_1MenuState}{Menu\+State}} \&state, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1MenuDrawHandler_a7c487f58f57e2b5250bf985e2aa735a9}{on\+Play\+Button\+Click}} (\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) const
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{renderer\+::\+IState\+Draw\+Handler}}}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{renderer\+::\+IState\+Draw\+Handler$<$ Menu\+State $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler_a7791b1885b94a6c02ffef13f4e5233b6}{draw}} (sf\+::\+Render\+Window \&window) final
+void \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler_a380552397c9ac0af58cd25666760dd13}{draw}} (sf\+::\+Render\+Window \&window) final
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1IDrawHandler}{renderer\+::\+IDraw\+Handler}}}
 \begin{DoxyCompactItemize}
@@ -44,23 +48,46 @@ virtual \mbox{\hyperlink{classrenderer_1_1IDrawHandler_a88348f96cd49ace9cd829ab4
 \doxysubsection{Detailed Description}
 Draw handler for the \doxylink{classrenderer_1_1MenuState}{Menu\+State}, responsible for rendering the main menu. 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrenderer_1_1MenuDrawHandler_a9835705678adad5a2d2348c6618ec0c1}\label{classrenderer_1_1MenuDrawHandler_a9835705678adad5a2d2348c6618ec0c1} 
+\index{renderer::MenuDrawHandler@{renderer::MenuDrawHandler}!MenuDrawHandler@{MenuDrawHandler}}
+\index{MenuDrawHandler@{MenuDrawHandler}!renderer::MenuDrawHandler@{renderer::MenuDrawHandler}}
+\doxysubsubsection{\texorpdfstring{MenuDrawHandler()}{MenuDrawHandler()}}
+{\footnotesize\ttfamily renderer\+::\+Menu\+Draw\+Handler\+::\+Menu\+Draw\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classrenderer_1_1MenuDrawHandler_adb8c67e964e31f10d3648d705cfbb8b6}\label{classrenderer_1_1MenuDrawHandler_adb8c67e964e31f10d3648d705cfbb8b6} 
+\Hypertarget{classrenderer_1_1MenuDrawHandler_a6b2b24d85e82283b34c02db33e09e9db}\label{classrenderer_1_1MenuDrawHandler_a6b2b24d85e82283b34c02db33e09e9db} 
 \index{renderer::MenuDrawHandler@{renderer::MenuDrawHandler}!draw@{draw}}
 \index{draw@{draw}!renderer::MenuDrawHandler@{renderer::MenuDrawHandler}}
 \doxysubsubsection{\texorpdfstring{draw()}{draw()}}
-{\footnotesize\ttfamily void renderer\+::\+Menu\+Draw\+Handler\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classrenderer_1_1IState}{IState}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void renderer\+::\+Menu\+Draw\+Handler\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classrenderer_1_1MenuState}{Menu\+State}} \&}]{state,  }\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler_ae6dce360af811f80d27f0a5a289ac398}{renderer\+::\+IState\+Draw\+Handler}}.
+Implements \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler_a15ee740993ead7b12d63b6f2ba142253}{renderer\+::\+IState\+Draw\+Handler$<$ Menu\+State $>$}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classrenderer_1_1MenuDrawHandler_adb8c67e964e31f10d3648d705cfbb8b6_cgraph}
+\includegraphics[width=350pt]{classrenderer_1_1MenuDrawHandler_a6b2b24d85e82283b34c02db33e09e9db_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1MenuDrawHandler_a7c487f58f57e2b5250bf985e2aa735a9}\label{classrenderer_1_1MenuDrawHandler_a7c487f58f57e2b5250bf985e2aa735a9} 
+\index{renderer::MenuDrawHandler@{renderer::MenuDrawHandler}!onPlayButtonClick@{onPlayButtonClick}}
+\index{onPlayButtonClick@{onPlayButtonClick}!renderer::MenuDrawHandler@{renderer::MenuDrawHandler}}
+\doxysubsubsection{\texorpdfstring{onPlayButtonClick()}{onPlayButtonClick()}}
+{\footnotesize\ttfamily void renderer\+::\+Menu\+Draw\+Handler\+::on\+Play\+Button\+Click (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1MenuDrawHandler_a7c487f58f57e2b5250bf985e2aa735a9_cgraph}
 \end{center}
 \end{figure}
 

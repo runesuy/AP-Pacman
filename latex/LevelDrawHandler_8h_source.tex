@@ -11,16 +11,17 @@
 \DoxyCodeLine{00007\ }
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IStateDrawHandler_8h}{core/states/IStateDrawHandler.h}}"{}}}
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IState_8h}{core/states/IState.h}}"{}}}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1LevelDrawHandler}{LevelDrawHandler}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IStateDrawHandler}}\{}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1LevelDrawHandler_a3770576610ac940861f7be84222f9b27}{draw}}(sf::RenderWindow\ \&window,\ \mbox{\hyperlink{classrenderer_1_1IState}{IState}}\ \&state)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00019\ \};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \}\ \textcolor{comment}{//\ renderer}}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_LEVELDRAWHANDLER\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{LevelState_8h}{LevelState.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1LevelDrawHandler}{LevelDrawHandler}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IStateDrawHandler}}<LevelState>\{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1LevelDrawHandler_a3c90701152bcae42cc3da3beac30e3a1}{draw}}(sf::RenderWindow\ \&window,\ \mbox{\hyperlink{classrenderer_1_1LevelState}{LevelState}}\ \&state,\ \mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}\&\ stateManager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_LEVELDRAWHANDLER\_H}}
 
 \end{DoxyCode}

@@ -89,25 +89,27 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define AP_PACMAN_LEVELINPUTHANDLER_H</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="IStateInputHandler_8h.html">core/states/IStateInputHandler.h</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerenderer.html">renderer</a> {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">class </span>IState;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classrenderer_1_1LevelInputHandler.html">   16</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1LevelInputHandler.html">LevelInputHandler</a> : <span class="keyword">public</span> <a class="code hl_class" href="classrenderer_1_1IStateInputHandler.html">IStateInputHandler</a> {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classrenderer_1_1LevelInputHandler.html#ac7797c26768d36454a8f775be580299f">processInput</a>(sf::Event &amp;event, <a class="code hl_class" href="classrenderer_1_1StateManager.html">StateManager</a>&amp; stateManager, <a class="code hl_class" href="classrenderer_1_1IState.html">IState</a>&amp; state) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    };</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="LevelState_8h.html">LevelState.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerenderer.html">renderer</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">class </span>IState;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classrenderer_1_1LevelInputHandler.html">   17</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1LevelInputHandler.html">LevelInputHandler</a> : <span class="keyword">public</span> <a class="code hl_class" href="classrenderer_1_1IStateInputHandler.html">IStateInputHandler</a>&lt;LevelState&gt; {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classrenderer_1_1LevelInputHandler.html#a47694c81cc0f0cb9e96f2f677fa66087">processInput</a>(sf::Event &amp;event, <a class="code hl_class" href="classrenderer_1_1StateManager.html">StateManager</a>&amp; stateManager, <a class="code hl_class" href="classrenderer_1_1LevelState.html">LevelState</a>&amp; state) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    };</div>
 </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>} <span class="comment">// renderer</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_LEVELINPUTHANDLER_H</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>} <span class="comment">// renderer</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_LEVELINPUTHANDLER_H</span></div>
 <div class="ttc" id="aIStateInputHandler_8h_html"><div class="ttname"><a href="IStateInputHandler_8h.html">IStateInputHandler.h</a></div></div>
-<div class="ttc" id="aclassrenderer_1_1IStateInputHandler_html"><div class="ttname"><a href="classrenderer_1_1IStateInputHandler.html">renderer::IStateInputHandler</a></div><div class="ttdef"><b>Definition</b> IStateInputHandler.h:17</div></div>
-<div class="ttc" id="aclassrenderer_1_1IState_html"><div class="ttname"><a href="classrenderer_1_1IState.html">renderer::IState</a></div><div class="ttdef"><b>Definition</b> IState.h:18</div></div>
-<div class="ttc" id="aclassrenderer_1_1LevelInputHandler_html"><div class="ttname"><a href="classrenderer_1_1LevelInputHandler.html">renderer::LevelInputHandler</a></div><div class="ttdef"><b>Definition</b> LevelInputHandler.h:16</div></div>
-<div class="ttc" id="aclassrenderer_1_1LevelInputHandler_html_ac7797c26768d36454a8f775be580299f"><div class="ttname"><a href="classrenderer_1_1LevelInputHandler.html#ac7797c26768d36454a8f775be580299f">renderer::LevelInputHandler::processInput</a></div><div class="ttdeci">void processInput(sf::Event &amp;event, StateManager &amp;stateManager, IState &amp;state) override</div><div class="ttdef"><b>Definition</b> LevelInputHandler.cpp:13</div></div>
+<div class="ttc" id="aLevelState_8h_html"><div class="ttname"><a href="LevelState_8h.html">LevelState.h</a></div></div>
+<div class="ttc" id="aclassrenderer_1_1IStateInputHandler_html"><div class="ttname"><a href="classrenderer_1_1IStateInputHandler.html">renderer::IStateInputHandler</a></div><div class="ttdef"><b>Definition</b> IStateInputHandler.h:18</div></div>
+<div class="ttc" id="aclassrenderer_1_1LevelInputHandler_html"><div class="ttname"><a href="classrenderer_1_1LevelInputHandler.html">renderer::LevelInputHandler</a></div><div class="ttdef"><b>Definition</b> LevelInputHandler.h:17</div></div>
+<div class="ttc" id="aclassrenderer_1_1LevelInputHandler_html_a47694c81cc0f0cb9e96f2f677fa66087"><div class="ttname"><a href="classrenderer_1_1LevelInputHandler.html#a47694c81cc0f0cb9e96f2f677fa66087">renderer::LevelInputHandler::processInput</a></div><div class="ttdeci">void processInput(sf::Event &amp;event, StateManager &amp;stateManager, LevelState &amp;state) override</div><div class="ttdef"><b>Definition</b> LevelInputHandler.cpp:13</div></div>
+<div class="ttc" id="aclassrenderer_1_1LevelState_html"><div class="ttname"><a href="classrenderer_1_1LevelState.html">renderer::LevelState</a></div><div class="ttdef"><b>Definition</b> LevelState.h:18</div></div>
 <div class="ttc" id="aclassrenderer_1_1StateManager_html"><div class="ttname"><a href="classrenderer_1_1StateManager.html">renderer::StateManager</a></div><div class="ttdef"><b>Definition</b> StateManager.h:23</div></div>
 <div class="ttc" id="anamespacerenderer_html"><div class="ttname"><a href="namespacerenderer.html">renderer</a></div><div class="ttdef"><b>Definition</b> IAppConfig.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->

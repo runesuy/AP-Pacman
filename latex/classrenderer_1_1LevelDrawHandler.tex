@@ -27,12 +27,12 @@ Collaboration diagram for renderer\+::Level\+Draw\+Handler\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classrenderer_1_1LevelDrawHandler_a3770576610ac940861f7be84222f9b27}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classrenderer_1_1IState}{IState}} \&state) override
+void \mbox{\hyperlink{classrenderer_1_1LevelDrawHandler_a3c90701152bcae42cc3da3beac30e3a1}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classrenderer_1_1LevelState}{Level\+State}} \&state, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{renderer\+::\+IState\+Draw\+Handler}}}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{renderer\+::\+IState\+Draw\+Handler$<$ Level\+State $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler_a7791b1885b94a6c02ffef13f4e5233b6}{draw}} (sf\+::\+Render\+Window \&window) final
+void \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler_a380552397c9ac0af58cd25666760dd13}{draw}} (sf\+::\+Render\+Window \&window) final
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1IDrawHandler}{renderer\+::\+IDraw\+Handler}}}
 \begin{DoxyCompactItemize}
@@ -45,22 +45,22 @@ virtual \mbox{\hyperlink{classrenderer_1_1IDrawHandler_a88348f96cd49ace9cd829ab4
 Draw handler for the \doxylink{classrenderer_1_1LevelState}{Level\+State}, responsible for rendering the game level and its entities. 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classrenderer_1_1LevelDrawHandler_a3770576610ac940861f7be84222f9b27}\label{classrenderer_1_1LevelDrawHandler_a3770576610ac940861f7be84222f9b27} 
+\Hypertarget{classrenderer_1_1LevelDrawHandler_a3c90701152bcae42cc3da3beac30e3a1}\label{classrenderer_1_1LevelDrawHandler_a3c90701152bcae42cc3da3beac30e3a1} 
 \index{renderer::LevelDrawHandler@{renderer::LevelDrawHandler}!draw@{draw}}
 \index{draw@{draw}!renderer::LevelDrawHandler@{renderer::LevelDrawHandler}}
 \doxysubsubsection{\texorpdfstring{draw()}{draw()}}
-{\footnotesize\ttfamily void renderer\+::\+Level\+Draw\+Handler\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classrenderer_1_1IState}{IState}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void renderer\+::\+Level\+Draw\+Handler\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classrenderer_1_1LevelState}{Level\+State}} \&}]{state,  }\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler_ae6dce360af811f80d27f0a5a289ac398}{renderer\+::\+IState\+Draw\+Handler}}.
+Implements \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler_a15ee740993ead7b12d63b6f2ba142253}{renderer\+::\+IState\+Draw\+Handler$<$ Level\+State $>$}}.
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classrenderer_1_1LevelDrawHandler_a3770576610ac940861f7be84222f9b27_cgraph}
+\includegraphics[width=350pt]{classrenderer_1_1LevelDrawHandler_a3c90701152bcae42cc3da3beac30e3a1_cgraph}
 \end{center}
 \end{figure}
 

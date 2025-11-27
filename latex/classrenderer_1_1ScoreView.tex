@@ -55,7 +55,13 @@ void \mbox{\hyperlink{classrenderer_1_1Label_ab7ab0ab215594f5deaf00b8d64a7d2d1}{
 \item 
 void \mbox{\hyperlink{classrenderer_1_1Label_a1e2c6c4b7c1290d03e10aa2de2898b60}{set\+Character\+Size}} (float size)
 \item 
+float \mbox{\hyperlink{classrenderer_1_1Label_a2fd3345eeb14c2bd483d8e286e4d8e82}{get\+Character\+Size}} () const
+\item 
+const std\+::string\+::size\+\_\+type \mbox{\hyperlink{classrenderer_1_1Label_ac10db6c68a2d69da6ffc81b194ac1f23}{get\+String\+Size}} () const
+\item 
 void \mbox{\hyperlink{classrenderer_1_1Label_ab285c653898ec0eeff7b2e37d08e7e4b}{set\+Horizontal\+Origin}} (\mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{Horizontal\+Origin\+Type}} horizontal\+Origin)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1Label_a582d69bd759963175bf94daae0cf3731}{set\+Vertical\+Origin}} (\mbox{\hyperlink{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6}{Vertical\+Origin\+Type}} vertical\+Origin)
 \item 
 std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Shape $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Label_afc92ec67b6a0d2666f3667b49cd97a36}{get\+SFShapes}} (sf\+::\+Render\+Window \&window) override
 \item 
@@ -68,7 +74,7 @@ std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ \mbox{\hyperlink
 \item 
 const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \& \mbox{\hyperlink{classrenderer_1_1DrawObject_a1317e66b07b34c0fa2fbf7472f45207e}{get\+Position}} () const
 \item 
-void \mbox{\hyperlink{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&position)
+virtual void \mbox{\hyperlink{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&position)
 \item 
 void \mbox{\hyperlink{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de728}{draw}} (sf\+::\+Render\+Window \&window) override
 \end{DoxyCompactItemize}
@@ -76,9 +82,14 @@ void \mbox{\hyperlink{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de
 \doxysubsection*{Public Types inherited from \mbox{\hyperlink{classrenderer_1_1Label}{renderer\+::\+Label}}}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{Horizontal\+Origin\+Type}} \{ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa83fe1b8ff4b890556ec33926812dff1e}{LEFT}}
-, \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa81d1512bdfd7cd39b5743834fb47b3e7}{MIDDLE}}
-, \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aae20f27c56137863b568e286d26ba1291}{RIGHT}}
+enum class \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{Horizontal\+Origin\+Type}} \{ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa684d325a7303f52e64011467ff5c5758}{LEFT}}
+, \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa43eedd8685eb86592022f8da962e3474}{MIDDLE}}
+, \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa21507b40c80068eda19865706fdc2403}{RIGHT}}
+ \}
+\item 
+enum class \mbox{\hyperlink{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6}{Vertical\+Origin\+Type}} \{ \mbox{\hyperlink{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6a6705777b712ee811e76fb07162081d63}{TOP}}
+, \mbox{\hyperlink{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6a43eedd8685eb86592022f8da962e3474}{MIDDLE}}
+, \mbox{\hyperlink{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6a1fabf63de5c96c78e2a40805bcdeb73b}{BOTTOM}}
  \}
 \end{DoxyCompactItemize}
 

@@ -13,14 +13,15 @@
 \DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
 \DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }IState;}
 \DoxyCodeLine{00011\ }
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IStateUpdateHandler}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1IUpdateHandler}{logic::IUpdateHandler}}\ \{}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler_a4a383f41823cc934711a5c4d73ef9d0d}{update}}(\mbox{\hyperlink{classrenderer_1_1IState}{IState}}\&\ state)\ =\ 0;}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler_a57b4657720a91fa449434f6bdadf8aa8}{update}}()\textcolor{keyword}{\ override\ }\{\};}
-\DoxyCodeLine{00019\ \ \ \ \ \};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \}\ \textcolor{comment}{//\ renderer}}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_ISTATEUPDATEHANDLER\_H}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ DerivedState>}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IStateUpdateHandler}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1IUpdateHandler}{logic::IUpdateHandler}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler_a6f8492cb070b42db66569faf2f53276c}{update}}(DerivedState\&\ state)\ =\ 0;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler_afbf0815f9e312deb857d341f4a44ab3e}{update}}()\textcolor{keyword}{\ override\ }\{\};}
+\DoxyCodeLine{00020\ \ \ \ \ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_ISTATEUPDATEHANDLER\_H}}
 
 \end{DoxyCode}

@@ -140,7 +140,7 @@ Collaboration diagram for renderer::DrawObject:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1317e66b07b34c0fa2fbf7472f45207e" id="r_a1317e66b07b34c0fa2fbf7472f45207e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classlogic_1_1Position.html">logic::Position</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1DrawObject.html#a1317e66b07b34c0fa2fbf7472f45207e">getPosition</a> () const</td></tr>
 <tr class="separator:a1317e66b07b34c0fa2fbf7472f45207e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad80f72aa4619db64741f3fa19967a51f" id="r_ad80f72aa4619db64741f3fa19967a51f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1DrawObject.html#ad80f72aa4619db64741f3fa19967a51f">setPosition</a> (const <a class="el" href="classlogic_1_1Position.html">logic::Position</a> &amp;position)</td></tr>
+<tr class="memitem:ad80f72aa4619db64741f3fa19967a51f" id="r_ad80f72aa4619db64741f3fa19967a51f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1DrawObject.html#ad80f72aa4619db64741f3fa19967a51f">setPosition</a> (const <a class="el" href="classlogic_1_1Position.html">logic::Position</a> &amp;position)</td></tr>
 <tr class="separator:ad80f72aa4619db64741f3fa19967a51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51f6b825ea93033df3fb09681e3de728" id="r_a51f6b825ea93033df3fb09681e3de728"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1DrawObject.html#a51f6b825ea93033df3fb09681e3de728">draw</a> (sf::RenderWindow &amp;window) override</td></tr>
 <tr class="separator:a51f6b825ea93033df3fb09681e3de728"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -333,6 +333,9 @@ positions are relative to the <a class="el" href="classrenderer_1_1DrawObject.ht
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void renderer::DrawObject::setPosition </td>
@@ -342,6 +345,11 @@ positions are relative to the <a class="el" href="classrenderer_1_1DrawObject.ht
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Set the position of the draw object. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -349,6 +357,8 @@ positions are relative to the <a class="el" href="classrenderer_1_1DrawObject.ht
   </table>
   </dd>
 </dl>
+
+<p>Reimplemented in <a class="el" href="classrenderer_1_1Button.html#aeea1b970da458f0c28282bec1f8cfe26">renderer::Button</a>.</p>
 
 </div>
 </div>

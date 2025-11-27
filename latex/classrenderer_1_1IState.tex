@@ -21,7 +21,7 @@ virtual void \mbox{\hyperlink{classrenderer_1_1IState_aeae0f541281a7ba2112e3bc10
 \item 
 virtual void \mbox{\hyperlink{classrenderer_1_1IState_a7795fde03ef5a5504a6ba8f7834c5bd9}{process\+Input}} (sf\+::\+Event \&event, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager)=0
 \item 
-virtual void \mbox{\hyperlink{classrenderer_1_1IState_aae962641c4ec98033b21fabb8b9af699}{draw}} (sf\+::\+Render\+Window \&window)=0
+virtual void \mbox{\hyperlink{classrenderer_1_1IState_aa5da08382450c63f1fa0a6d2ee81bc8b}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager)=0
 \item 
 virtual \mbox{\hyperlink{classrenderer_1_1IState_ac0eccb586fc4819e616966f4c761c39d}{\texorpdfstring{$\sim$}{\string~}\+IState}} ()=default
 \end{DoxyCompactItemize}
@@ -40,11 +40,11 @@ Interface for game states, defining methods for updating, processing input, and 
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classrenderer_1_1IState_aae962641c4ec98033b21fabb8b9af699}\label{classrenderer_1_1IState_aae962641c4ec98033b21fabb8b9af699} 
+\Hypertarget{classrenderer_1_1IState_aa5da08382450c63f1fa0a6d2ee81bc8b}\label{classrenderer_1_1IState_aa5da08382450c63f1fa0a6d2ee81bc8b} 
 \index{renderer::IState@{renderer::IState}!draw@{draw}}
 \index{draw@{draw}!renderer::IState@{renderer::IState}}
 \doxysubsubsection{\texorpdfstring{draw()}{draw()}}
-{\footnotesize\ttfamily virtual void renderer\+::\+IState\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void renderer\+::\+IState\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 Draw the state onto the provided render window. 
 \begin{DoxyParams}{Parameters}
@@ -53,7 +53,7 @@ Draw the state onto the provided render window.
 \end{DoxyParams}
 
 
-Implemented in \mbox{\hyperlink{classrenderer_1_1DelegatingState_a78ad8e7bbf4ad31de6d7c62074f894e1}{renderer\+::\+Delegating\+State}}.
+Implemented in \mbox{\hyperlink{classrenderer_1_1DelegatingState_a218946be351acc60bf8db18bb95d9668}{renderer\+::\+Delegating\+State$<$ Derived $>$}}, \mbox{\hyperlink{classrenderer_1_1DelegatingState_a218946be351acc60bf8db18bb95d9668}{renderer\+::\+Delegating\+State$<$ Level\+State $>$}}, \mbox{\hyperlink{classrenderer_1_1DelegatingState_a218946be351acc60bf8db18bb95d9668}{renderer\+::\+Delegating\+State$<$ Menu\+State $>$}}, and \mbox{\hyperlink{classrenderer_1_1DelegatingState_a218946be351acc60bf8db18bb95d9668}{renderer\+::\+Delegating\+State$<$ Paused\+State $>$}}.
 
 \Hypertarget{classrenderer_1_1IState_a7795fde03ef5a5504a6ba8f7834c5bd9}\label{classrenderer_1_1IState_a7795fde03ef5a5504a6ba8f7834c5bd9} 
 \index{renderer::IState@{renderer::IState}!processInput@{processInput}}
@@ -70,7 +70,7 @@ Process input events for the state.
 \end{DoxyParams}
 
 
-Implemented in \mbox{\hyperlink{classrenderer_1_1DelegatingState_a0f2edc8f97d5dec5ed8b97571ceb0050}{renderer\+::\+Delegating\+State}}.
+Implemented in \mbox{\hyperlink{classrenderer_1_1DelegatingState_a706a8f2102b8870db355632c46888c40}{renderer\+::\+Delegating\+State$<$ Derived $>$}}, \mbox{\hyperlink{classrenderer_1_1DelegatingState_a706a8f2102b8870db355632c46888c40}{renderer\+::\+Delegating\+State$<$ Level\+State $>$}}, \mbox{\hyperlink{classrenderer_1_1DelegatingState_a706a8f2102b8870db355632c46888c40}{renderer\+::\+Delegating\+State$<$ Menu\+State $>$}}, and \mbox{\hyperlink{classrenderer_1_1DelegatingState_a706a8f2102b8870db355632c46888c40}{renderer\+::\+Delegating\+State$<$ Paused\+State $>$}}.
 
 \Hypertarget{classrenderer_1_1IState_aeae0f541281a7ba2112e3bc10695f91c}\label{classrenderer_1_1IState_aeae0f541281a7ba2112e3bc10695f91c} 
 \index{renderer::IState@{renderer::IState}!update@{update}}
@@ -80,7 +80,7 @@ Implemented in \mbox{\hyperlink{classrenderer_1_1DelegatingState_a0f2edc8f97d5de
 
 Update the state logic. 
 
-Implemented in \mbox{\hyperlink{classrenderer_1_1DelegatingState_af34dff5edb2725d7fe9061369dd2ca55}{renderer\+::\+Delegating\+State}}.
+Implemented in \mbox{\hyperlink{classrenderer_1_1DelegatingState_a0298b462b736bff13f9433f539422f40}{renderer\+::\+Delegating\+State$<$ Derived $>$}}, \mbox{\hyperlink{classrenderer_1_1DelegatingState_a0298b462b736bff13f9433f539422f40}{renderer\+::\+Delegating\+State$<$ Level\+State $>$}}, \mbox{\hyperlink{classrenderer_1_1DelegatingState_a0298b462b736bff13f9433f539422f40}{renderer\+::\+Delegating\+State$<$ Menu\+State $>$}}, and \mbox{\hyperlink{classrenderer_1_1DelegatingState_a0298b462b736bff13f9433f539422f40}{renderer\+::\+Delegating\+State$<$ Paused\+State $>$}}.
 
 
 

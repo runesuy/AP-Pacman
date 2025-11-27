@@ -94,19 +94,25 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerenderer.html">renderer</a> {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classrenderer_1_1MenuState.html">   19</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1MenuState.html">MenuState</a> : <span class="keyword">public</span> <a class="code hl_class" href="classrenderer_1_1DelegatingState.html">DelegatingState</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classrenderer_1_1MenuState.html">   19</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1MenuState.html">MenuState</a> : <span class="keyword">public</span> <a class="code hl_class" href="classrenderer_1_1DelegatingState.html">DelegatingState</a>&lt;MenuState&gt; {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_class" href="classrenderer_1_1MenuState.html">MenuState</a>(std::unique_ptr&lt;IStateUpdateHandler&gt;&amp;&amp; updateHandler,</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                  std::unique_ptr&lt;IStateInputHandler&gt;&amp;&amp; inputHandler,</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                  std::unique_ptr&lt;IStateDrawHandler&gt;&amp;&amp; drawHandler);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    };</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_class" href="classrenderer_1_1MenuState.html">MenuState</a>(std::unique_ptr&lt;<a class="code hl_class" href="classrenderer_1_1IStateUpdateHandler.html">IStateUpdateHandler&lt;MenuState&gt;</a>&gt;&amp;&amp; updateHandler,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                  std::unique_ptr&lt;<a class="code hl_class" href="classrenderer_1_1IStateInputHandler.html">IStateInputHandler&lt;MenuState&gt;</a>&gt;&amp;&amp; inputHandler,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                  std::unique_ptr&lt;<a class="code hl_class" href="classrenderer_1_1IStateDrawHandler.html">IStateDrawHandler&lt;MenuState&gt;</a>&gt;&amp;&amp; drawHandler);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classrenderer_1_1MenuState.html#a10c0219034ba6b56b6a61865d76f1eee">   25</a></span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1MenuInputHandler.html">MenuInputHandler</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    };</div>
 </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>} <span class="comment">// renderer</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_MENUSTATE_H</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>} <span class="comment">// renderer</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_MENUSTATE_H</span></div>
 <div class="ttc" id="aDelegatingState_8h_html"><div class="ttname"><a href="DelegatingState_8h.html">DelegatingState.h</a></div></div>
-<div class="ttc" id="aclassrenderer_1_1DelegatingState_html"><div class="ttname"><a href="classrenderer_1_1DelegatingState.html">renderer::DelegatingState</a></div><div class="ttdef"><b>Definition</b> DelegatingState.h:18</div></div>
+<div class="ttc" id="aclassrenderer_1_1DelegatingState_html"><div class="ttname"><a href="classrenderer_1_1DelegatingState.html">renderer::DelegatingState</a></div><div class="ttdef"><b>Definition</b> DelegatingState.h:19</div></div>
+<div class="ttc" id="aclassrenderer_1_1IStateDrawHandler_html"><div class="ttname"><a href="classrenderer_1_1IStateDrawHandler.html">renderer::IStateDrawHandler</a></div><div class="ttdef"><b>Definition</b> IStateDrawHandler.h:14</div></div>
+<div class="ttc" id="aclassrenderer_1_1IStateInputHandler_html"><div class="ttname"><a href="classrenderer_1_1IStateInputHandler.html">renderer::IStateInputHandler</a></div><div class="ttdef"><b>Definition</b> IStateInputHandler.h:18</div></div>
+<div class="ttc" id="aclassrenderer_1_1IStateUpdateHandler_html"><div class="ttname"><a href="classrenderer_1_1IStateUpdateHandler.html">renderer::IStateUpdateHandler</a></div><div class="ttdef"><b>Definition</b> IStateUpdateHandler.h:16</div></div>
+<div class="ttc" id="aclassrenderer_1_1MenuInputHandler_html"><div class="ttname"><a href="classrenderer_1_1MenuInputHandler.html">renderer::MenuInputHandler</a></div><div class="ttdef"><b>Definition</b> MenuInputHandler.h:18</div></div>
 <div class="ttc" id="aclassrenderer_1_1MenuState_html"><div class="ttname"><a href="classrenderer_1_1MenuState.html">renderer::MenuState</a></div><div class="ttdef"><b>Definition</b> MenuState.h:19</div></div>
 <div class="ttc" id="anamespacerenderer_html"><div class="ttname"><a href="namespacerenderer.html">renderer</a></div><div class="ttdef"><b>Definition</b> IAppConfig.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->

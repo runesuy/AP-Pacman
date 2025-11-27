@@ -1,22 +1,22 @@
-\doxysection{renderer\+::IState\+Draw\+Handler Class Reference}
-\hypertarget{classrenderer_1_1IStateDrawHandler}{}\label{classrenderer_1_1IStateDrawHandler}\index{renderer::IStateDrawHandler@{renderer::IStateDrawHandler}}
+\doxysection{renderer\+::IState\+Draw\+Handler\texorpdfstring{$<$}{<} Derived\+State \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classrenderer_1_1IStateDrawHandler}{}\label{classrenderer_1_1IStateDrawHandler}\index{renderer::IStateDrawHandler$<$ DerivedState $>$@{renderer::IStateDrawHandler$<$ DerivedState $>$}}
 
 
 {\ttfamily \#include $<$IState\+Draw\+Handler.\+h$>$}
 
 
 
-Inheritance diagram for renderer\+::IState\+Draw\+Handler\+:
+Inheritance diagram for renderer\+::IState\+Draw\+Handler\texorpdfstring{$<$}{<} Derived\+State \texorpdfstring{$>$}{>}\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classrenderer_1_1IStateDrawHandler__inherit__graph}
+\includegraphics[width=218pt]{classrenderer_1_1IStateDrawHandler__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for renderer\+::IState\+Draw\+Handler\+:
+Collaboration diagram for renderer\+::IState\+Draw\+Handler\texorpdfstring{$<$}{<} Derived\+State \texorpdfstring{$>$}{>}\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -27,9 +27,9 @@ Collaboration diagram for renderer\+::IState\+Draw\+Handler\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler_a7791b1885b94a6c02ffef13f4e5233b6}{draw}} (sf\+::\+Render\+Window \&window) final
+void \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler_a380552397c9ac0af58cd25666760dd13}{draw}} (sf\+::\+Render\+Window \&window) final
 \item 
-virtual void \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler_ae6dce360af811f80d27f0a5a289ac398}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classrenderer_1_1IState}{IState}} \&state)=0
+virtual void \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler_a15ee740993ead7b12d63b6f2ba142253}{draw}} (sf\+::\+Render\+Window \&window, Derived\+State \&state, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager)=0
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1IDrawHandler}{renderer\+::\+IDraw\+Handler}}}
 \begin{DoxyCompactItemize}
@@ -39,11 +39,12 @@ virtual \mbox{\hyperlink{classrenderer_1_1IDrawHandler_a88348f96cd49ace9cd829ab4
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classrenderer_1_1IStateDrawHandler_a7791b1885b94a6c02ffef13f4e5233b6}\label{classrenderer_1_1IStateDrawHandler_a7791b1885b94a6c02ffef13f4e5233b6} 
-\index{renderer::IStateDrawHandler@{renderer::IStateDrawHandler}!draw@{draw}}
-\index{draw@{draw}!renderer::IStateDrawHandler@{renderer::IStateDrawHandler}}
+\Hypertarget{classrenderer_1_1IStateDrawHandler_a380552397c9ac0af58cd25666760dd13}\label{classrenderer_1_1IStateDrawHandler_a380552397c9ac0af58cd25666760dd13} 
+\index{renderer::IStateDrawHandler$<$ DerivedState $>$@{renderer::IStateDrawHandler$<$ DerivedState $>$}!draw@{draw}}
+\index{draw@{draw}!renderer::IStateDrawHandler$<$ DerivedState $>$@{renderer::IStateDrawHandler$<$ DerivedState $>$}}
 \doxysubsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void renderer\+::\+IState\+Draw\+Handler\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily template$<$typename Derived\+State $>$ \\
+void \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{renderer\+::\+IState\+Draw\+Handler}}$<$ Derived\+State $>$\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
 
 Draw the game elements onto the provided render window. 
 \begin{DoxyParams}{Parameters}
@@ -54,15 +55,16 @@ Draw the game elements onto the provided render window.
 
 Implements \mbox{\hyperlink{classrenderer_1_1IDrawHandler_aad3d41c3ae68392a4523c07aba437283}{renderer\+::\+IDraw\+Handler}}.
 
-\Hypertarget{classrenderer_1_1IStateDrawHandler_ae6dce360af811f80d27f0a5a289ac398}\label{classrenderer_1_1IStateDrawHandler_ae6dce360af811f80d27f0a5a289ac398} 
-\index{renderer::IStateDrawHandler@{renderer::IStateDrawHandler}!draw@{draw}}
-\index{draw@{draw}!renderer::IStateDrawHandler@{renderer::IStateDrawHandler}}
+\Hypertarget{classrenderer_1_1IStateDrawHandler_a15ee740993ead7b12d63b6f2ba142253}\label{classrenderer_1_1IStateDrawHandler_a15ee740993ead7b12d63b6f2ba142253} 
+\index{renderer::IStateDrawHandler$<$ DerivedState $>$@{renderer::IStateDrawHandler$<$ DerivedState $>$}!draw@{draw}}
+\index{draw@{draw}!renderer::IStateDrawHandler$<$ DerivedState $>$@{renderer::IStateDrawHandler$<$ DerivedState $>$}}
 \doxysubsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual void renderer\+::\+IState\+Draw\+Handler\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classrenderer_1_1IState}{IState}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily template$<$typename Derived\+State $>$ \\
+virtual void \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{renderer\+::\+IState\+Draw\+Handler}}$<$ Derived\+State $>$\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{Derived\+State \&}]{state,  }\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Implemented in \mbox{\hyperlink{classrenderer_1_1LevelDrawHandler_a3770576610ac940861f7be84222f9b27}{renderer\+::\+Level\+Draw\+Handler}}, \mbox{\hyperlink{classrenderer_1_1MenuDrawHandler_adb8c67e964e31f10d3648d705cfbb8b6}{renderer\+::\+Menu\+Draw\+Handler}}, and \mbox{\hyperlink{classrenderer_1_1PausedStateDrawHandler_a18a9545c7420b2255ff939891fa45957}{renderer\+::\+Paused\+State\+Draw\+Handler}}.
+Implemented in \mbox{\hyperlink{classrenderer_1_1LevelDrawHandler_a3c90701152bcae42cc3da3beac30e3a1}{renderer\+::\+Level\+Draw\+Handler}}, \mbox{\hyperlink{classrenderer_1_1MenuDrawHandler_a6b2b24d85e82283b34c02db33e09e9db}{renderer\+::\+Menu\+Draw\+Handler}}, and \mbox{\hyperlink{classrenderer_1_1PausedStateDrawHandler_af15faeeed8a64d0d2d6d2c97d4188ea9}{renderer\+::\+Paused\+State\+Draw\+Handler}}.
 
 
 

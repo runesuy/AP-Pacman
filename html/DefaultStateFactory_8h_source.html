@@ -90,31 +90,33 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="IStateFactory_8h.html">core/factories/IStateFactory.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerenderer.html">renderer</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">class </span>MenuState;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">class </span>LevelState;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classrenderer_1_1DefaultStateFactory.html">   15</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1DefaultStateFactory.html">DefaultStateFactory</a> : <span class="keyword">public</span> <a class="code hl_class" href="classrenderer_1_1IStateFactory.html">IStateFactory</a> {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        std::unique_ptr&lt;MenuState&gt; <a class="code hl_function" href="classrenderer_1_1DefaultStateFactory.html#adfa5b4b5ef5a32888e18c7630dd1f278">createMenuState</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        std::unique_ptr&lt;LevelState&gt; <a class="code hl_function" href="classrenderer_1_1DefaultStateFactory.html#aeea53a552115621ceed32a1cc406f3a5">createLevelState</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        std::unique_ptr&lt;LevelState&gt; <a class="code hl_function" href="classrenderer_1_1DefaultStateFactory.html#a37b5d1c2dc70df9cc8d72ac421bde8f7">createPausedState</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    };</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="PausedState_8h.html">game/states/paused/PausedState.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerenderer.html">renderer</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">class </span>MenuState;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">class </span>LevelState;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classrenderer_1_1DefaultStateFactory.html">   16</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1DefaultStateFactory.html">DefaultStateFactory</a> : <span class="keyword">public</span> <a class="code hl_class" href="classrenderer_1_1IStateFactory.html">IStateFactory</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        std::unique_ptr&lt;MenuState&gt; <a class="code hl_function" href="classrenderer_1_1DefaultStateFactory.html#adfa5b4b5ef5a32888e18c7630dd1f278">createMenuState</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        std::unique_ptr&lt;LevelState&gt; <a class="code hl_function" href="classrenderer_1_1DefaultStateFactory.html#aeea53a552115621ceed32a1cc406f3a5">createLevelState</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        std::unique_ptr&lt;PausedState&gt; <a class="code hl_function" href="classrenderer_1_1DefaultStateFactory.html#ab185106bfaa130708eefb3547232f51c">createPausedState</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    };</div>
 </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>} <span class="comment">// renderer</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_DEFAULTSTATEFACTORY_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>} <span class="comment">// renderer</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_DEFAULTSTATEFACTORY_H</span></div>
 <div class="ttc" id="aIStateFactory_8h_html"><div class="ttname"><a href="IStateFactory_8h.html">IStateFactory.h</a></div></div>
-<div class="ttc" id="aclassrenderer_1_1DefaultStateFactory_html"><div class="ttname"><a href="classrenderer_1_1DefaultStateFactory.html">renderer::DefaultStateFactory</a></div><div class="ttdef"><b>Definition</b> DefaultStateFactory.h:15</div></div>
-<div class="ttc" id="aclassrenderer_1_1DefaultStateFactory_html_a37b5d1c2dc70df9cc8d72ac421bde8f7"><div class="ttname"><a href="classrenderer_1_1DefaultStateFactory.html#a37b5d1c2dc70df9cc8d72ac421bde8f7">renderer::DefaultStateFactory::createPausedState</a></div><div class="ttdeci">std::unique_ptr&lt; LevelState &gt; createPausedState() override</div><div class="ttdef"><b>Definition</b> DefaultStateFactory.cpp:33</div></div>
+<div class="ttc" id="aPausedState_8h_html"><div class="ttname"><a href="PausedState_8h.html">PausedState.h</a></div></div>
+<div class="ttc" id="aclassrenderer_1_1DefaultStateFactory_html"><div class="ttname"><a href="classrenderer_1_1DefaultStateFactory.html">renderer::DefaultStateFactory</a></div><div class="ttdef"><b>Definition</b> DefaultStateFactory.h:16</div></div>
+<div class="ttc" id="aclassrenderer_1_1DefaultStateFactory_html_ab185106bfaa130708eefb3547232f51c"><div class="ttname"><a href="classrenderer_1_1DefaultStateFactory.html#ab185106bfaa130708eefb3547232f51c">renderer::DefaultStateFactory::createPausedState</a></div><div class="ttdeci">std::unique_ptr&lt; PausedState &gt; createPausedState() override</div><div class="ttdef"><b>Definition</b> DefaultStateFactory.cpp:33</div></div>
 <div class="ttc" id="aclassrenderer_1_1DefaultStateFactory_html_adfa5b4b5ef5a32888e18c7630dd1f278"><div class="ttname"><a href="classrenderer_1_1DefaultStateFactory.html#adfa5b4b5ef5a32888e18c7630dd1f278">renderer::DefaultStateFactory::createMenuState</a></div><div class="ttdeci">std::unique_ptr&lt; MenuState &gt; createMenuState() override</div><div class="ttdef"><b>Definition</b> DefaultStateFactory.cpp:19</div></div>
 <div class="ttc" id="aclassrenderer_1_1DefaultStateFactory_html_aeea53a552115621ceed32a1cc406f3a5"><div class="ttname"><a href="classrenderer_1_1DefaultStateFactory.html#aeea53a552115621ceed32a1cc406f3a5">renderer::DefaultStateFactory::createLevelState</a></div><div class="ttdeci">std::unique_ptr&lt; LevelState &gt; createLevelState() override</div><div class="ttdef"><b>Definition</b> DefaultStateFactory.cpp:26</div></div>
-<div class="ttc" id="aclassrenderer_1_1IStateFactory_html"><div class="ttname"><a href="classrenderer_1_1IStateFactory.html">renderer::IStateFactory</a></div><div class="ttdef"><b>Definition</b> IStateFactory.h:16</div></div>
+<div class="ttc" id="aclassrenderer_1_1IStateFactory_html"><div class="ttname"><a href="classrenderer_1_1IStateFactory.html">renderer::IStateFactory</a></div><div class="ttdef"><b>Definition</b> IStateFactory.h:18</div></div>
 <div class="ttc" id="anamespacerenderer_html"><div class="ttname"><a href="namespacerenderer.html">renderer</a></div><div class="ttdef"><b>Definition</b> IAppConfig.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -19,6 +19,6 @@ var searchData=
   ['renderer_16',['renderer',['../namespacerenderer.html',1,'']]],
   ['renderer_3a_3aismoduletype_17',['IsModuleType',['../conceptrenderer_1_1IsModuleType.html',1,'renderer']]],
   ['returning_5fhome_18',['RETURNING_HOME',['../classlogic_1_1GhostModel.html#aa30135f88fabf78373f93b9cc9da0e4da526cac4a5b3032d7b4f95d7423ec8660',1,'logic::GhostModel']]],
-  ['right_19',['right',['../classrenderer_1_1Label.html#a3e746e8c97a5003ae5bd23f73a43e35aae20f27c56137863b568e286d26ba1291',1,'renderer::Label::RIGHT'],['../namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52ac231e8df5dd5f8ea2500f2a19efbd972',1,'logic::RIGHT']]],
+  ['right_19',['right',['../classrenderer_1_1Label.html#a3e746e8c97a5003ae5bd23f73a43e35aa21507b40c80068eda19865706fdc2403',1,'renderer::Label::RIGHT'],['../namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52ac231e8df5dd5f8ea2500f2a19efbd972',1,'logic::RIGHT']]],
   ['run_20',['run',['../classrenderer_1_1Game.html#a47e7e9dc327781e6797f3b5f43b9bc8d',1,'renderer::Game']]]
 ];

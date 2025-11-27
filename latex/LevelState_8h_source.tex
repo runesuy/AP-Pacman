@@ -15,13 +15,13 @@
 \DoxyCodeLine{00011\ }
 \DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
 \DoxyCodeLine{00013\ }
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1LevelState}{LevelState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1DelegatingState}{DelegatingState}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1LevelState}{LevelState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1DelegatingState}{DelegatingState}}<LevelState>\ \{}
 \DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::unique\_ptr<logic::World>\ \_world;}
 \DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::shared\_ptr<WorldView>\ \_worldView;}
 \DoxyCodeLine{00021\ }
 \DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1LevelState}{LevelState}}(std::unique\_ptr<IStateUpdateHandler>\ \&\&updateHandler,\ std::unique\_ptr<IStateInputHandler>\ \&\&inputHandler,}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<IStateDrawHandler>\ \&\&drawHandler);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1LevelState}{LevelState}}(std::unique\_ptr<\mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IStateUpdateHandler<LevelState>}}>\ \&\&updateHandler,\ std::unique\_ptr<\mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IStateInputHandler<LevelState>}}>\ \&\&inputHandler,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<\mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IStateDrawHandler<LevelState>}}>\ \&\&drawHandler);}
 \DoxyCodeLine{00025\ }
 \DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::unique\_ptr<logic::World>\ \&\mbox{\hyperlink{classrenderer_1_1LevelState_a985a6130dc1cd71665ef27ff2ecc15c9}{getWorld}}();}
 \DoxyCodeLine{00027\ }

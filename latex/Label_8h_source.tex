@@ -9,42 +9,52 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_LABEL\_H}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_LABEL\_H}}
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{DrawObject_8h}{core/drawable/DrawObject.h}}"{}}}
-\DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1Label}{Label}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1DrawObject}{DrawObject}}\ \{}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{HorizontalOriginType}}\ \{}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa83fe1b8ff4b890556ec33926812dff1e}{LEFT}},\ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa81d1512bdfd7cd39b5743834fb47b3e7}{MIDDLE}},\ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aae20f27c56137863b568e286d26ba1291}{RIGHT}}}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ sf::Font\ font;}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ sf::Text\ text;}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ characterSize\ =\ 0.05;}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{HorizontalOriginType}}\ horizontalOrigin\ =\ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa83fe1b8ff4b890556ec33926812dff1e}{LEFT}};}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_applyOriginProps()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label_a6a43d6b85e5393c7d3a1fc2102ee75ac}{Label}}();}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classrenderer_1_1Label_a6a43d6b85e5393c7d3a1fc2102ee75ac}{Label}}(\textcolor{keyword}{const}\ std::string\ \&str);}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label_a6a43d6b85e5393c7d3a1fc2102ee75ac}{Label}}(\textcolor{keyword}{const}\ std::string\ \&str,\ \textcolor{keyword}{const}\ sf::Font\ \&font);}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Label_ad9a62b724b8a8b3c2358c483d11c8e13}{setString}}(\textcolor{keyword}{const}\ std::string\ \&str);}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Label_ab7ab0ab215594f5deaf00b8d64a7d2d1}{setFont}}(\textcolor{keyword}{const}\ sf::Font\ \&font);}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Label_a1e2c6c4b7c1290d03e10aa2de2898b60}{setCharacterSize}}(\textcolor{keywordtype}{float}\ size);}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Label_ab285c653898ec0eeff7b2e37d08e7e4b}{setHorizontalOrigin}}(\mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{HorizontalOriginType}}\ horizontalOrigin);}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Shape>>\ \mbox{\hyperlink{classrenderer_1_1Label_afc92ec67b6a0d2666f3667b49cd97a36}{getSFShapes}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<sf::Sprite>>\ \mbox{\hyperlink{classrenderer_1_1Label_ab674bb75a394790149de702cb7d3a491}{getSFSprites}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Text>>\ \mbox{\hyperlink{classrenderer_1_1Label_ae6bb2428dffea2093599d1a94bf394cd}{getSFTexts}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00043\ \ \ \ \ \};}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Size_8h}{core/world/space/Size.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1Label}{Label}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1DrawObject}{DrawObject}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{HorizontalOriginType}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa684d325a7303f52e64011467ff5c5758}{LEFT}},\ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa43eedd8685eb86592022f8da962e3474}{MIDDLE}},\ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa21507b40c80068eda19865706fdc2403}{RIGHT}}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6}{VerticalOriginType}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6a6705777b712ee811e76fb07162081d63}{TOP}},\ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa43eedd8685eb86592022f8da962e3474}{MIDDLE}},\ \mbox{\hyperlink{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6a1fabf63de5c96c78e2a40805bcdeb73b}{BOTTOM}}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ sf::Font\ font;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ sf::Text\ text;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ characterSize\ =\ 0.05;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{HorizontalOriginType}}\ horizontalOrigin\ =\ \mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35aa684d325a7303f52e64011467ff5c5758}{HorizontalOriginType::LEFT}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6}{VerticalOriginType}}\ verticalOrigin\ =\ \mbox{\hyperlink{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6a6705777b712ee811e76fb07162081d63}{VerticalOriginType::TOP}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_applyOriginProps()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label_a6a43d6b85e5393c7d3a1fc2102ee75ac}{Label}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classrenderer_1_1Label_a6a43d6b85e5393c7d3a1fc2102ee75ac}{Label}}(\textcolor{keyword}{const}\ std::string\ \&str);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label_a6a43d6b85e5393c7d3a1fc2102ee75ac}{Label}}(\textcolor{keyword}{const}\ std::string\ \&str,\ \textcolor{keyword}{const}\ sf::Font\ \&font);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Label_ad9a62b724b8a8b3c2358c483d11c8e13}{setString}}(\textcolor{keyword}{const}\ std::string\ \&str);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Label_ab7ab0ab215594f5deaf00b8d64a7d2d1}{setFont}}(\textcolor{keyword}{const}\ sf::Font\ \&font);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Label_a1e2c6c4b7c1290d03e10aa2de2898b60}{setCharacterSize}}(\textcolor{keywordtype}{float}\ size);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classrenderer_1_1Label_a2fd3345eeb14c2bd483d8e286e4d8e82}{getCharacterSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string::size\_type\ \mbox{\hyperlink{classrenderer_1_1Label_ac10db6c68a2d69da6ffc81b194ac1f23}{getStringSize}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \}\ \textcolor{comment}{//\ renderer}}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_LABEL\_H}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Label_ab285c653898ec0eeff7b2e37d08e7e4b}{setHorizontalOrigin}}(\mbox{\hyperlink{classrenderer_1_1Label_a3e746e8c97a5003ae5bd23f73a43e35a}{HorizontalOriginType}}\ horizontalOrigin);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Label_a582d69bd759963175bf94daae0cf3731}{setVerticalOrigin}}(\mbox{\hyperlink{classrenderer_1_1Label_a5aa622ef2bf0b5ef08c066b218aff4c6}{VerticalOriginType}}\ verticalOrigin);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Shape>>\ \mbox{\hyperlink{classrenderer_1_1Label_afc92ec67b6a0d2666f3667b49cd97a36}{getSFShapes}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<sf::Sprite>>\ \mbox{\hyperlink{classrenderer_1_1Label_ab674bb75a394790149de702cb7d3a491}{getSFSprites}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Text>>\ \mbox{\hyperlink{classrenderer_1_1Label_ae6bb2428dffea2093599d1a94bf394cd}{getSFTexts}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00053\ \ \ \ \ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_LABEL\_H}}
 
 \end{DoxyCode}

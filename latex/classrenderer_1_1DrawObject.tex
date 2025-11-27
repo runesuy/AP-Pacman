@@ -29,7 +29,7 @@ Collaboration diagram for renderer\+::Draw\+Object\+:
 \item 
 const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \& \mbox{\hyperlink{classrenderer_1_1DrawObject_a1317e66b07b34c0fa2fbf7472f45207e}{get\+Position}} () const
 \item 
-void \mbox{\hyperlink{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&position)
+virtual void \mbox{\hyperlink{classrenderer_1_1DrawObject_ad80f72aa4619db64741f3fa19967a51f}{set\+Position}} (const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&position)
 \item 
 void \mbox{\hyperlink{classrenderer_1_1DrawObject_a51f6b825ea93033df3fb09681e3de728}{draw}} (sf\+::\+Render\+Window \&window) override
 \item 
@@ -137,13 +137,17 @@ Implemented in \mbox{\hyperlink{classrenderer_1_1Button_add05e62ac67f5e94402a3fd
 \index{renderer::DrawObject@{renderer::DrawObject}!setPosition@{setPosition}}
 \index{setPosition@{setPosition}!renderer::DrawObject@{renderer::DrawObject}}
 \doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
-{\footnotesize\ttfamily void renderer\+::\+Draw\+Object\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&}]{position }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void renderer\+::\+Draw\+Object\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{logic\+::\+Position}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 Set the position of the draw object. 
 \begin{DoxyParams}{Parameters}
 {\em position} & \\
 \hline
 \end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classrenderer_1_1Button_aeea1b970da458f0c28282bec1f8cfe26}{renderer\+::\+Button}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

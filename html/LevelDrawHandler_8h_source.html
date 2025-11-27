@@ -90,25 +90,28 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="IStateDrawHandler_8h.html">core/states/IStateDrawHandler.h</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="IState_8h.html">core/states/IState.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerenderer.html">renderer</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classrenderer_1_1LevelDrawHandler.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1LevelDrawHandler.html">LevelDrawHandler</a> : <span class="keyword">public</span> <a class="code hl_class" href="classrenderer_1_1IStateDrawHandler.html">IStateDrawHandler</a>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classrenderer_1_1LevelDrawHandler.html#a3770576610ac940861f7be84222f9b27">draw</a>(sf::RenderWindow &amp;window, <a class="code hl_class" href="classrenderer_1_1IState.html">IState</a> &amp;state) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="LevelState_8h.html">LevelState.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerenderer.html">renderer</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classrenderer_1_1LevelDrawHandler.html">   17</a></span><span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1LevelDrawHandler.html">LevelDrawHandler</a> : <span class="keyword">public</span> <a class="code hl_class" href="classrenderer_1_1IStateDrawHandler.html">IStateDrawHandler</a>&lt;LevelState&gt;{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classrenderer_1_1LevelDrawHandler.html#a3c90701152bcae42cc3da3beac30e3a1">draw</a>(sf::RenderWindow &amp;window, <a class="code hl_class" href="classrenderer_1_1LevelState.html">LevelState</a> &amp;state, <a class="code hl_class" href="classrenderer_1_1StateManager.html">StateManager</a>&amp; stateManager) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
 </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>} <span class="comment">// renderer</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_LEVELDRAWHANDLER_H</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>} <span class="comment">// renderer</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_LEVELDRAWHANDLER_H</span></div>
 <div class="ttc" id="aIStateDrawHandler_8h_html"><div class="ttname"><a href="IStateDrawHandler_8h.html">IStateDrawHandler.h</a></div></div>
 <div class="ttc" id="aIState_8h_html"><div class="ttname"><a href="IState_8h.html">IState.h</a></div></div>
-<div class="ttc" id="aclassrenderer_1_1IStateDrawHandler_html"><div class="ttname"><a href="classrenderer_1_1IStateDrawHandler.html">renderer::IStateDrawHandler</a></div><div class="ttdef"><b>Definition</b> IStateDrawHandler.h:13</div></div>
-<div class="ttc" id="aclassrenderer_1_1IState_html"><div class="ttname"><a href="classrenderer_1_1IState.html">renderer::IState</a></div><div class="ttdef"><b>Definition</b> IState.h:18</div></div>
-<div class="ttc" id="aclassrenderer_1_1LevelDrawHandler_html"><div class="ttname"><a href="classrenderer_1_1LevelDrawHandler.html">renderer::LevelDrawHandler</a></div><div class="ttdef"><b>Definition</b> LevelDrawHandler.h:16</div></div>
-<div class="ttc" id="aclassrenderer_1_1LevelDrawHandler_html_a3770576610ac940861f7be84222f9b27"><div class="ttname"><a href="classrenderer_1_1LevelDrawHandler.html#a3770576610ac940861f7be84222f9b27">renderer::LevelDrawHandler::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window, IState &amp;state) override</div><div class="ttdef"><b>Definition</b> LevelDrawHandler.cpp:10</div></div>
+<div class="ttc" id="aLevelState_8h_html"><div class="ttname"><a href="LevelState_8h.html">LevelState.h</a></div></div>
+<div class="ttc" id="aclassrenderer_1_1IStateDrawHandler_html"><div class="ttname"><a href="classrenderer_1_1IStateDrawHandler.html">renderer::IStateDrawHandler</a></div><div class="ttdef"><b>Definition</b> IStateDrawHandler.h:14</div></div>
+<div class="ttc" id="aclassrenderer_1_1LevelDrawHandler_html"><div class="ttname"><a href="classrenderer_1_1LevelDrawHandler.html">renderer::LevelDrawHandler</a></div><div class="ttdef"><b>Definition</b> LevelDrawHandler.h:17</div></div>
+<div class="ttc" id="aclassrenderer_1_1LevelDrawHandler_html_a3c90701152bcae42cc3da3beac30e3a1"><div class="ttname"><a href="classrenderer_1_1LevelDrawHandler.html#a3c90701152bcae42cc3da3beac30e3a1">renderer::LevelDrawHandler::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window, LevelState &amp;state, StateManager &amp;stateManager) override</div><div class="ttdef"><b>Definition</b> LevelDrawHandler.cpp:10</div></div>
+<div class="ttc" id="aclassrenderer_1_1LevelState_html"><div class="ttname"><a href="classrenderer_1_1LevelState.html">renderer::LevelState</a></div><div class="ttdef"><b>Definition</b> LevelState.h:18</div></div>
+<div class="ttc" id="aclassrenderer_1_1StateManager_html"><div class="ttname"><a href="classrenderer_1_1StateManager.html">renderer::StateManager</a></div><div class="ttdef"><b>Definition</b> StateManager.h:23</div></div>
 <div class="ttc" id="anamespacerenderer_html"><div class="ttname"><a href="namespacerenderer.html">renderer</a></div><div class="ttdef"><b>Definition</b> IAppConfig.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

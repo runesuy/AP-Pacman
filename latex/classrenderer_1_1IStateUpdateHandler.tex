@@ -1,22 +1,22 @@
-\doxysection{renderer\+::IState\+Update\+Handler Class Reference}
-\hypertarget{classrenderer_1_1IStateUpdateHandler}{}\label{classrenderer_1_1IStateUpdateHandler}\index{renderer::IStateUpdateHandler@{renderer::IStateUpdateHandler}}
+\doxysection{renderer\+::IState\+Update\+Handler\texorpdfstring{$<$}{<} Derived\+State \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classrenderer_1_1IStateUpdateHandler}{}\label{classrenderer_1_1IStateUpdateHandler}\index{renderer::IStateUpdateHandler$<$ DerivedState $>$@{renderer::IStateUpdateHandler$<$ DerivedState $>$}}
 
 
 {\ttfamily \#include $<$IState\+Update\+Handler.\+h$>$}
 
 
 
-Inheritance diagram for renderer\+::IState\+Update\+Handler\+:
+Inheritance diagram for renderer\+::IState\+Update\+Handler\texorpdfstring{$<$}{<} Derived\+State \texorpdfstring{$>$}{>}\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classrenderer_1_1IStateUpdateHandler__inherit__graph}
+\includegraphics[width=227pt]{classrenderer_1_1IStateUpdateHandler__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for renderer\+::IState\+Update\+Handler\+:
+Collaboration diagram for renderer\+::IState\+Update\+Handler\texorpdfstring{$<$}{<} Derived\+State \texorpdfstring{$>$}{>}\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -27,9 +27,9 @@ Collaboration diagram for renderer\+::IState\+Update\+Handler\+:
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler_a4a383f41823cc934711a5c4d73ef9d0d}{update}} (\mbox{\hyperlink{classrenderer_1_1IState}{IState}} \&state)=0
+virtual void \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler_a6f8492cb070b42db66569faf2f53276c}{update}} (Derived\+State \&state)=0
 \item 
-void \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler_a57b4657720a91fa449434f6bdadf8aa8}{update}} () override
+void \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler_afbf0815f9e312deb857d341f4a44ab3e}{update}} () override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IUpdateHandler}{logic\+::\+IUpdate\+Handler}}}
 \begin{DoxyCompactItemize}
@@ -39,28 +39,32 @@ virtual \mbox{\hyperlink{classlogic_1_1IUpdateHandler_ae7df05b12b4361fa53a0b213c
 
 
 \doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Derived\+State$>$\newline
+class renderer\+::\+IState\+Update\+Handler$<$ Derived\+State $>$}
 Interface for handling updates specific to a game state. 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classrenderer_1_1IStateUpdateHandler_a57b4657720a91fa449434f6bdadf8aa8}\label{classrenderer_1_1IStateUpdateHandler_a57b4657720a91fa449434f6bdadf8aa8} 
-\index{renderer::IStateUpdateHandler@{renderer::IStateUpdateHandler}!update@{update}}
-\index{update@{update}!renderer::IStateUpdateHandler@{renderer::IStateUpdateHandler}}
+\Hypertarget{classrenderer_1_1IStateUpdateHandler_afbf0815f9e312deb857d341f4a44ab3e}\label{classrenderer_1_1IStateUpdateHandler_afbf0815f9e312deb857d341f4a44ab3e} 
+\index{renderer::IStateUpdateHandler$<$ DerivedState $>$@{renderer::IStateUpdateHandler$<$ DerivedState $>$}!update@{update}}
+\index{update@{update}!renderer::IStateUpdateHandler$<$ DerivedState $>$@{renderer::IStateUpdateHandler$<$ DerivedState $>$}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void renderer\+::\+IState\+Update\+Handler\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily template$<$typename Derived\+State $>$ \\
+void \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{renderer\+::\+IState\+Update\+Handler}}$<$ Derived\+State $>$\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
 Update the game state. 
 
 Implements \mbox{\hyperlink{classlogic_1_1IUpdateHandler_a15a888cd1242714cb3211ed11dbe0bef}{logic\+::\+IUpdate\+Handler}}.
 
-\Hypertarget{classrenderer_1_1IStateUpdateHandler_a4a383f41823cc934711a5c4d73ef9d0d}\label{classrenderer_1_1IStateUpdateHandler_a4a383f41823cc934711a5c4d73ef9d0d} 
-\index{renderer::IStateUpdateHandler@{renderer::IStateUpdateHandler}!update@{update}}
-\index{update@{update}!renderer::IStateUpdateHandler@{renderer::IStateUpdateHandler}}
+\Hypertarget{classrenderer_1_1IStateUpdateHandler_a6f8492cb070b42db66569faf2f53276c}\label{classrenderer_1_1IStateUpdateHandler_a6f8492cb070b42db66569faf2f53276c} 
+\index{renderer::IStateUpdateHandler$<$ DerivedState $>$@{renderer::IStateUpdateHandler$<$ DerivedState $>$}!update@{update}}
+\index{update@{update}!renderer::IStateUpdateHandler$<$ DerivedState $>$@{renderer::IStateUpdateHandler$<$ DerivedState $>$}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily virtual void renderer\+::\+IState\+Update\+Handler\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrenderer_1_1IState}{IState}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily template$<$typename Derived\+State $>$ \\
+virtual void \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{renderer\+::\+IState\+Update\+Handler}}$<$ Derived\+State $>$\+::update (\begin{DoxyParamCaption}\item[{Derived\+State \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Implemented in \mbox{\hyperlink{classrenderer_1_1LevelUpdateHandler_adb74d43274ac5430adc2adcc909c99ab}{renderer\+::\+Level\+Update\+Handler}}, \mbox{\hyperlink{classrenderer_1_1MenuUpdateHandler_a3938f5278e792929edb913e47c28dc6a}{renderer\+::\+Menu\+Update\+Handler}}, and \mbox{\hyperlink{classrenderer_1_1PausedStateUpdateHandler_a1fbe84cccffd24775d62986490d32ad5}{renderer\+::\+Paused\+State\+Update\+Handler}}.
+Implemented in \mbox{\hyperlink{classrenderer_1_1LevelUpdateHandler_a72c30cbf6b64cb8023d1e5ab81ccc387}{renderer\+::\+Level\+Update\+Handler}}, \mbox{\hyperlink{classrenderer_1_1MenuUpdateHandler_ade2cd546b7289137afbf2dccce0562e4}{renderer\+::\+Menu\+Update\+Handler}}, and \mbox{\hyperlink{classrenderer_1_1PausedStateUpdateHandler_a89779ab5f8a060f83775ddd2a7cde1eb}{renderer\+::\+Paused\+State\+Update\+Handler}}.
 
 
 
