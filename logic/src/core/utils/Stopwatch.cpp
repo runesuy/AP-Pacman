@@ -3,6 +3,7 @@
 //
 
 #include "core/utils/Stopwatch.h"
+#include "core/utils/Timer.h"
 
 using namespace std::chrono;
 
@@ -20,9 +21,13 @@ void logic::Stopwatch::tick() noexcept{
         deltaTime = std::chrono::duration_cast<DoubleSeconds>(elapsed_duration).count();
     }
     _previous = newTime;
+
+    for (const auto& timer : _timers) {
+        timer->tick();
+    }
 }
 
-float logic::Stopwatch::getDeltaTime() const noexcept{
+logic::Stopwatch::TimeType logic::Stopwatch::getDeltaTime() const noexcept{
     return deltaTime;
 }
 
@@ -31,4 +36,8 @@ std::shared_ptr<logic::Stopwatch> logic::Stopwatch::getInstance() {
         _instance = std::shared_ptr<Stopwatch>(new Stopwatch());
     }
     return _instance;
+}
+
+void logic::Stopwatch::addTimer(const std::shared_ptr<Timer>& timer) const {
+    _timers.push_back(timer);
 }
