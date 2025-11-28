@@ -9,7 +9,7 @@
 namespace renderer {
     logic::TileMap TXTMapParser::loadMap(const std::string &filename) {
         std::ifstream inputFile(filename);
-        if (!inputFile.is_open()) throw FileNotOpenedException(filename);
+        if (!inputFile.is_open()) throw logic::FileNotOpenedException(filename, "TXTMapParser::loadMap(const std::string &filename)");
 
         logic::TileMap tileMap;
         std::string::size_type width = -1;

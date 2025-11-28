@@ -18,7 +18,7 @@ namespace renderer {
     void JSONConfigParser::loadConfigFile() {
         std::ifstream inputFile(configFilePath);
         if (!inputFile.is_open()) {
-            throw FileNotOpenedException(configFilePath);
+            throw logic::FileNotOpenedException(configFilePath, "JSONConfigParser::loadConfigFile()");
         }
 
         try {
