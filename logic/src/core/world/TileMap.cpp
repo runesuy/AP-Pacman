@@ -59,7 +59,7 @@ namespace logic {
                         break;
                     }
                     case TileType::GHOST_RED: {
-                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::RED);
+                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::RED, 1);
                         ghost->setPosition({x, y});
                         ghost->setReturnPosition({x,y});
                         ghost->setSize({tileSize, tileSize});
@@ -67,7 +67,7 @@ namespace logic {
                         break;
                     }
                     case TileType::GHOST_PINK: {
-                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::PINK);
+                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::PINK, 1);
                         ghost->setPosition({x, y});
                         ghost->setReturnPosition({x,y});
                         ghost->setSize({tileSize, tileSize});
@@ -75,7 +75,7 @@ namespace logic {
                         break;
                     }
                     case TileType::GHOST_ORANGE: {
-                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::ORANGE);
+                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::ORANGE, 1);
                         ghost->setPosition({x, y});
                         ghost->setReturnPosition({x,y});
                         ghost->setSize({tileSize, tileSize});
@@ -83,7 +83,7 @@ namespace logic {
                         break;
                     }
                     case TileType::GHOST_BLUE: {
-                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::BLUE);
+                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::BLUE, 1);
                         ghost->setPosition({x, y});
                         ghost->setReturnPosition({x,y});
                         ghost->setSize({tileSize, tileSize});

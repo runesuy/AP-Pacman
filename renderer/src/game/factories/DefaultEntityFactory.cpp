@@ -58,11 +58,12 @@ namespace renderer {
         return powerupModel;
     }
 
-    std::shared_ptr<logic::GhostModel> DefaultEntityFactory::createGhostModel(logic::GhostType type) {
+    std::shared_ptr<logic::GhostModel>
+    DefaultEntityFactory::createGhostModel(logic::GhostType type, float difficultyMultiplier) {
         switch (type) {
             case logic::GhostType::RED: {
                 auto ghostView = std::make_shared<RedGhostView>();
-                auto ghostModel = std::make_shared<logic::GhostModel>();
+                auto ghostModel = std::make_shared<logic::GhostModel>(difficultyMultiplier);
                 ghostModel->addObserver(ghostView);
                 ghostModel->setController(std::make_shared<logic::RandomNavGhostController>());
                 viewTarget->addObjectView(ghostView);
@@ -71,7 +72,7 @@ namespace renderer {
             }
             case logic::GhostType::PINK: {
                 auto ghostView = std::make_shared<PinkGhostView>();
-                auto ghostModel = std::make_shared<logic::GhostModel>();
+                auto ghostModel = std::make_shared<logic::GhostModel>(difficultyMultiplier);
                 ghostModel->addObserver(ghostView);
                 ghostModel->setController(std::make_shared<logic::ManhattanFollowGhostController>());
                 viewTarget->addObjectView(ghostView);
@@ -80,7 +81,7 @@ namespace renderer {
             }
             case logic::GhostType::ORANGE: {
                 auto ghostView = std::make_shared<OrangeGhostView>();
-                auto ghostModel = std::make_shared<logic::GhostModel>();
+                auto ghostModel = std::make_shared<logic::GhostModel>(difficultyMultiplier);
                 ghostModel->addObserver(ghostView);
                 ghostModel->setController(std::make_shared<logic::ManhattanPredictGhostController>());
                 viewTarget->addObjectView(ghostView);
@@ -89,7 +90,7 @@ namespace renderer {
             }
             case logic::GhostType::BLUE: {
                 auto ghostView = std::make_shared<BlueGhostView>();
-                auto ghostModel = std::make_shared<logic::GhostModel>();
+                auto ghostModel = std::make_shared<logic::GhostModel>(difficultyMultiplier);
                 ghostModel->addObserver(ghostView);
                 ghostModel->setController(std::make_shared<logic::ManhattanPredictGhostController>());
                 viewTarget->addObjectView(ghostView);

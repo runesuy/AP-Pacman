@@ -34,3 +34,11 @@ const logic::ScoreCounter &logic::Score::getScoreCounter() const {
 logic::ScoreCounter &logic::Score::getScoreCounter() {
     return scoreCounter;
 }
+
+float logic::Score::getDifficultyMultiplier() const {
+    return difficultyMultiplier;
+}
+
+void logic::Score::increaseDifficultyMultiplier() {
+    difficultyMultiplier += DIFFICULTY_INCREASE;
+}

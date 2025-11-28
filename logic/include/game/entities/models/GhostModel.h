@@ -19,6 +19,7 @@ namespace logic {
             WAITING
         };
     private:
+        const float difficultyMultiplier=1;
         const float CHASE_SPEED = 3.0f;
         const float FRIGHTENED_SPEED = 1.0f;
         Position returnPosition{0, 0};
@@ -28,11 +29,12 @@ namespace logic {
         float START_DELAY = 3.0f; // seconds
 
         float frightenedTimer = 0.0f;
-        const float FRIGHTENED_DURATION = 10;
+        const float FRIGHTENED_DURATION = 10/difficultyMultiplier;
 
         const CollisionType collisionType = GHOST;
     public:
         explicit GhostModel();
+        explicit GhostModel(float difficultyMultiplier);
 
         void setSize(const Size &size) override;
 

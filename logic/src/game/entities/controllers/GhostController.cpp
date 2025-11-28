@@ -7,6 +7,7 @@
 
 namespace logic {
     void GhostController::update(World &world, GhostModel &entity) {
+
         MovingEntityController::update(world, entity);
         if (entity.getMode() == GhostModel::WAITING) {
             if (entity.getStartTimer() < entity.getStartDelay())
@@ -66,6 +67,8 @@ namespace logic {
             case (WorldEvent::PLAYER_KILLED_W): {
                 entity.setPosition(entity.getSpawnPosition());
                 entity.setDirection(NONE);
+                entity.setFrightenedTimer(0);
+                entity.setMode(GhostModel::CHASE);
                 break;
             }
         }

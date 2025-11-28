@@ -28,9 +28,9 @@ namespace logic {
     float GhostModel::getSpeed() const {
         switch (mode) {
             default:
-                return CHASE_SPEED;
+                return CHASE_SPEED*difficultyMultiplier;
             case (FRIGHTENED):
-                return FRIGHTENED_SPEED;
+                return FRIGHTENED_SPEED*difficultyMultiplier;
         }
     }
 
@@ -87,5 +87,9 @@ namespace logic {
 
     SizedWorldObject::CollisionTypeT GhostModel::getCollisionType() const {
         return collisionType;
+    }
+
+    GhostModel::GhostModel(float difficultyMultiplier) : difficultyMultiplier(difficultyMultiplier) {
+        controller = std::make_shared<logic::RandomNavGhostController>();
     }
 } // logic

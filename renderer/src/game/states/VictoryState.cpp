@@ -25,6 +25,7 @@ namespace renderer {
 
     VictoryState::VictoryState(const std::shared_ptr<logic::Score> &passToNextLevel) {
         this->passToNextLevel = passToNextLevel;
+        passToNextLevel->increaseDifficultyMultiplier();
         victoryLabel.setCharacterSize(0.2);
         victoryLabel.setVerticalOrigin(Label::VerticalOriginType::BOTTOM);
         victoryLabel.setHorizontalOrigin(Label::HorizontalOriginType::MIDDLE);

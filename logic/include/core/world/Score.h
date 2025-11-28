@@ -18,6 +18,8 @@ namespace logic {
 
         ScoreCounter scoreCounter;
         LifeCounter lifeCounter;
+        float difficultyMultiplier=1;
+        inline static const float DIFFICULTY_INCREASE = 0.1;
     public:
         /**
          * Called on each tick.
@@ -56,6 +58,10 @@ namespace logic {
          * @return The ScoreCounter instance that handles the player score.
          */
         [[nodiscard]] ScoreCounter &getScoreCounter();
+
+        float getDifficultyMultiplier() const;
+
+        void increaseDifficultyMultiplier();
     };
 }
 

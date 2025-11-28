@@ -29,7 +29,7 @@ namespace renderer {
 
         void setViewTarget(const std::shared_ptr<WorldView> &viewTarget);
 
-        std::shared_ptr<logic::GhostModel> createGhostModel(logic::GhostType type) override;
+        std::shared_ptr<logic::GhostModel> createGhostModel(logic::GhostType type, float difficultyMultiplier) override;
     };
 
 } // renderer
