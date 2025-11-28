@@ -104,8 +104,8 @@ Collaboration diagram for renderer::IStateInputHandler&lt; DerivedState &gt;:</d
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a84c3ab693fad0e258f627187e917460d" id="r_a84c3ab693fad0e258f627187e917460d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1IStateInputHandler.html#a84c3ab693fad0e258f627187e917460d">processInput</a> (sf::Event &amp;event, <a class="el" href="classrenderer_1_1StateManager.html">StateManager</a> &amp;stateManager, DerivedState &amp;state)=0</td></tr>
-<tr class="separator:a84c3ab693fad0e258f627187e917460d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a583aa5e19064fa1e354c12230e2d35b7" id="r_a583aa5e19064fa1e354c12230e2d35b7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1IStateInputHandler.html#a583aa5e19064fa1e354c12230e2d35b7">processInput</a> (sf::Event &amp;event, <a class="el" href="classrenderer_1_1StateManager.html">StateManager</a> &amp;stateManager, DerivedState &amp;state, const sf::RenderWindow &amp;window)=0</td></tr>
+<tr class="separator:a583aa5e19064fa1e354c12230e2d35b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a684230f689f6de3e774c6890acbccffa" id="r_a684230f689f6de3e774c6890acbccffa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1IStateInputHandler.html#a684230f689f6de3e774c6890acbccffa">processInput</a> (sf::Event &amp;event) override</td></tr>
 <tr class="separator:a684230f689f6de3e774c6890acbccffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classrenderer_1_1IInputHandler"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classrenderer_1_1IInputHandler')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classrenderer_1_1IInputHandler.html">renderer::IInputHandler</a></td></tr>
@@ -146,8 +146,8 @@ template&lt;typename DerivedState &gt; </div>
 
 </div>
 </div>
-<a id="a84c3ab693fad0e258f627187e917460d" name="a84c3ab693fad0e258f627187e917460d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84c3ab693fad0e258f627187e917460d">&#9670;&#160;</a></span>processInput() <span class="overload">[2/2]</span></h2>
+<a id="a583aa5e19064fa1e354c12230e2d35b7" name="a583aa5e19064fa1e354c12230e2d35b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a583aa5e19064fa1e354c12230e2d35b7">&#9670;&#160;</a></span>processInput() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,7 +173,13 @@ template&lt;typename DerivedState &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">DerivedState &amp;&#160;</td>
-          <td class="paramname"><em>state</em>&#160;</td>
+          <td class="paramname"><em>state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sf::RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>window</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -188,7 +194,7 @@ template&lt;typename DerivedState &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classrenderer_1_1LevelInputHandler.html#a47694c81cc0f0cb9e96f2f677fa66087">renderer::LevelInputHandler</a>, <a class="el" href="classrenderer_1_1MenuInputHandler.html#ad97b414a710640ae5af6394044f552ce">renderer::MenuInputHandler</a>, and <a class="el" href="classrenderer_1_1PausedStateInputHandler.html#a22b232bb227222492f58d8afd4025cef">renderer::PausedStateInputHandler</a>.</p>
+<p>Implemented in <a class="el" href="classrenderer_1_1LevelInputHandler.html#a6dd7e721657e0241c948a4e6c0346287">renderer::LevelInputHandler</a>.</p>
 
 </div>
 </div>

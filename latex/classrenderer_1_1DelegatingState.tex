@@ -31,7 +31,7 @@ Collaboration diagram for renderer\+::Delegating\+State\texorpdfstring{$<$}{<} D
 \item 
 void \mbox{\hyperlink{classrenderer_1_1DelegatingState_a0298b462b736bff13f9433f539422f40}{update}} () override
 \item 
-void \mbox{\hyperlink{classrenderer_1_1DelegatingState_a706a8f2102b8870db355632c46888c40}{process\+Input}} (sf\+::\+Event \&event, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
+void \mbox{\hyperlink{classrenderer_1_1DelegatingState_a5e06901dcb7c1938f81ef279c4d295c3}{process\+Input}} (sf\+::\+Event \&event, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager, const sf\+::\+Render\+Window \&window) override
 \item 
 void \mbox{\hyperlink{classrenderer_1_1DelegatingState_a218946be351acc60bf8db18bb95d9668}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
 \end{DoxyCompactItemize}
@@ -69,12 +69,12 @@ Draw the state onto the provided render window.
 
 Implements \mbox{\hyperlink{classrenderer_1_1IState_aa5da08382450c63f1fa0a6d2ee81bc8b}{renderer\+::\+IState}}.
 
-\Hypertarget{classrenderer_1_1DelegatingState_a706a8f2102b8870db355632c46888c40}\label{classrenderer_1_1DelegatingState_a706a8f2102b8870db355632c46888c40} 
+\Hypertarget{classrenderer_1_1DelegatingState_a5e06901dcb7c1938f81ef279c4d295c3}\label{classrenderer_1_1DelegatingState_a5e06901dcb7c1938f81ef279c4d295c3} 
 \index{renderer::DelegatingState$<$ Derived $>$@{renderer::DelegatingState$<$ Derived $>$}!processInput@{processInput}}
 \index{processInput@{processInput}!renderer::DelegatingState$<$ Derived $>$@{renderer::DelegatingState$<$ Derived $>$}}
 \doxysubsubsection{\texorpdfstring{processInput()}{processInput()}}
 {\footnotesize\ttfamily template$<$typename Derived $>$ \\
-void \mbox{\hyperlink{classrenderer_1_1DelegatingState}{renderer\+::\+Delegating\+State}}$<$ Derived $>$\+::process\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event,  }\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+void \mbox{\hyperlink{classrenderer_1_1DelegatingState}{renderer\+::\+Delegating\+State}}$<$ Derived $>$\+::process\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event,  }\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager,  }\item[{const sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 Process input events for the state. 
 \begin{DoxyParams}{Parameters}
@@ -85,7 +85,7 @@ Process input events for the state.
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{classrenderer_1_1IState_a7795fde03ef5a5504a6ba8f7834c5bd9}{renderer\+::\+IState}}.
+Implements \mbox{\hyperlink{classrenderer_1_1IState_a07cfa1ed487621d0f8504c973557ac88}{renderer\+::\+IState}}.
 
 \Hypertarget{classrenderer_1_1DelegatingState_a0298b462b736bff13f9433f539422f40}\label{classrenderer_1_1DelegatingState_a0298b462b736bff13f9433f539422f40} 
 \index{renderer::DelegatingState$<$ Derived $>$@{renderer::DelegatingState$<$ Derived $>$}!update@{update}}

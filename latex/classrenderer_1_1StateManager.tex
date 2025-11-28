@@ -9,7 +9,7 @@
 \item 
 \mbox{\hyperlink{classrenderer_1_1StateManager_ae90e7e39af15555e9ca36058f93317f9}{State\+Manager}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IState}{IState}} $>$ \&\&initial\+State, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateFactory}{IState\+Factory}} $>$ \&\&state\+Factory)
 \item 
-void \mbox{\hyperlink{classrenderer_1_1StateManager_a4a4847e98bec7c688ca9ad423e5c4804}{process\+Input}} (sf\+::\+Event \&event)
+void \mbox{\hyperlink{classrenderer_1_1StateManager_a2817f9241cfd076972064900da72283c}{process\+Input}} (sf\+::\+Event \&event, sf\+::\+Render\+Window \&window)
 \item 
 void \mbox{\hyperlink{classrenderer_1_1StateManager_ac58e08abe78bb06670171aa4866df68b}{draw}} (sf\+::\+Render\+Window \&window)
 \item 
@@ -51,11 +51,11 @@ Draw the current state to the given window. Forwards the draw call to the curren
 \doxysubsubsection{\texorpdfstring{popState()}{popState()}}
 {\footnotesize\ttfamily void renderer\+::\+State\+Manager\+::pop\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\Hypertarget{classrenderer_1_1StateManager_a4a4847e98bec7c688ca9ad423e5c4804}\label{classrenderer_1_1StateManager_a4a4847e98bec7c688ca9ad423e5c4804} 
+\Hypertarget{classrenderer_1_1StateManager_a2817f9241cfd076972064900da72283c}\label{classrenderer_1_1StateManager_a2817f9241cfd076972064900da72283c} 
 \index{renderer::StateManager@{renderer::StateManager}!processInput@{processInput}}
 \index{processInput@{processInput}!renderer::StateManager@{renderer::StateManager}}
 \doxysubsubsection{\texorpdfstring{processInput()}{processInput()}}
-{\footnotesize\ttfamily void renderer\+::\+State\+Manager\+::process\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void renderer\+::\+State\+Manager\+::process\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event,  }\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
 
 Process input events and forward them to the current state. 
 \begin{DoxyParams}{Parameters}

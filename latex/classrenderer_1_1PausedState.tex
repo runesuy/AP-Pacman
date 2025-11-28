@@ -11,7 +11,7 @@ Inheritance diagram for renderer\+::Paused\+State\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=205pt]{classrenderer_1_1PausedState__inherit__graph}
+\includegraphics[width=192pt]{classrenderer_1_1PausedState__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -21,24 +21,19 @@ Collaboration diagram for renderer\+::Paused\+State\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=205pt]{classrenderer_1_1PausedState__coll__graph}
+\includegraphics[width=192pt]{classrenderer_1_1PausedState__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classrenderer_1_1PausedState_acff78ee8e521b8d473689922349cc9c6}{Paused\+State}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IState\+Update\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1PausedState}{Paused\+State}} $>$ $>$ \&\&update\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IState\+Input\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1PausedState}{Paused\+State}} $>$ $>$ \&\&input\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IState\+Draw\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1PausedState}{Paused\+State}} $>$ $>$ \&\&draw\+Handler)
-\end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1DelegatingState}{renderer\+::\+Delegating\+State$<$ Paused\+State $>$}}}
-\begin{DoxyCompactItemize}
+\mbox{\hyperlink{classrenderer_1_1PausedState_a5412f89e624741bc98991ebefca24137}{Paused\+State}} ()
 \item 
-\mbox{\hyperlink{classrenderer_1_1DelegatingState_a58b1d25e965ad88a0571a4a79c004652}{Delegating\+State}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IState\+Update\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1PausedState}{Paused\+State}} $>$ $>$ \&\&update\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IState\+Input\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1PausedState}{Paused\+State}} $>$ $>$ \&\&input\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IState\+Draw\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1PausedState}{Paused\+State}} $>$ $>$ \&\&draw\+Handler)
+void \mbox{\hyperlink{classrenderer_1_1PausedState_a7e62a460ab3689e7361a8e85ffbd4f92}{update}} () override
 \item 
-void \mbox{\hyperlink{classrenderer_1_1DelegatingState_a0298b462b736bff13f9433f539422f40}{update}} () override
+void \mbox{\hyperlink{classrenderer_1_1PausedState_a4f07372736d853ba71db072908f02847}{process\+Input}} (sf\+::\+Event \&event, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager, const sf\+::\+Render\+Window \&window) override
 \item 
-void \mbox{\hyperlink{classrenderer_1_1DelegatingState_a706a8f2102b8870db355632c46888c40}{process\+Input}} (sf\+::\+Event \&event, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
-\item 
-void \mbox{\hyperlink{classrenderer_1_1DelegatingState_a218946be351acc60bf8db18bb95d9668}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
+void \mbox{\hyperlink{classrenderer_1_1PausedState_a56549a05487c1909614b5f15131b6837}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1IState}{renderer\+::\+IState}}}
 \begin{DoxyCompactItemize}
@@ -48,11 +43,80 @@ virtual \mbox{\hyperlink{classrenderer_1_1IState_ac0eccb586fc4819e616966f4c761c3
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classrenderer_1_1PausedState_acff78ee8e521b8d473689922349cc9c6}\label{classrenderer_1_1PausedState_acff78ee8e521b8d473689922349cc9c6} 
+\Hypertarget{classrenderer_1_1PausedState_a5412f89e624741bc98991ebefca24137}\label{classrenderer_1_1PausedState_a5412f89e624741bc98991ebefca24137} 
 \index{renderer::PausedState@{renderer::PausedState}!PausedState@{PausedState}}
 \index{PausedState@{PausedState}!renderer::PausedState@{renderer::PausedState}}
 \doxysubsubsection{\texorpdfstring{PausedState()}{PausedState()}}
-{\footnotesize\ttfamily renderer\+::\+Paused\+State\+::\+Paused\+State (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IState\+Update\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1PausedState}{Paused\+State}} $>$ $>$ \&\&}]{update\+Handler,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IState\+Input\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1PausedState}{Paused\+State}} $>$ $>$ \&\&}]{input\+Handler,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IState\+Draw\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1PausedState}{Paused\+State}} $>$ $>$ \&\&}]{draw\+Handler }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily renderer\+::\+Paused\+State\+::\+Paused\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1PausedState_a5412f89e624741bc98991ebefca24137_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1PausedState_a56549a05487c1909614b5f15131b6837}\label{classrenderer_1_1PausedState_a56549a05487c1909614b5f15131b6837} 
+\index{renderer::PausedState@{renderer::PausedState}!draw@{draw}}
+\index{draw@{draw}!renderer::PausedState@{renderer::PausedState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void renderer\+::\+Paused\+State\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draw the state onto the provided render window. 
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IState_aa5da08382450c63f1fa0a6d2ee81bc8b}{renderer\+::\+IState}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1PausedState_a56549a05487c1909614b5f15131b6837_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1PausedState_a4f07372736d853ba71db072908f02847}\label{classrenderer_1_1PausedState_a4f07372736d853ba71db072908f02847} 
+\index{renderer::PausedState@{renderer::PausedState}!processInput@{processInput}}
+\index{processInput@{processInput}!renderer::PausedState@{renderer::PausedState}}
+\doxysubsubsection{\texorpdfstring{processInput()}{processInput()}}
+{\footnotesize\ttfamily void renderer\+::\+Paused\+State\+::process\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event,  }\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager,  }\item[{const sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Process input events for the state. 
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+{\em state\+Manager} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IState_a07cfa1ed487621d0f8504c973557ac88}{renderer\+::\+IState}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1PausedState_a4f07372736d853ba71db072908f02847_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1PausedState_a7e62a460ab3689e7361a8e85ffbd4f92}\label{classrenderer_1_1PausedState_a7e62a460ab3689e7361a8e85ffbd4f92} 
+\index{renderer::PausedState@{renderer::PausedState}!update@{update}}
+\index{update@{update}!renderer::PausedState@{renderer::PausedState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void renderer\+::\+Paused\+State\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the state logic. 
+
+Implements \mbox{\hyperlink{classrenderer_1_1IState_aeae0f541281a7ba2112e3bc10695f91c}{renderer\+::\+IState}}.
 
 
 

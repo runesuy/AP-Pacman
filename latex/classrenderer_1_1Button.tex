@@ -37,8 +37,6 @@ std\+::vector$<$ std\+::shared\+\_\+ptr$<$ sf\+::\+Sprite $>$ $>$ \mbox{\hyperli
 \item 
 std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ \mbox{\hyperlink{classrenderer_1_1Button_add05e62ac67f5e94402a3fd13643c73c}{get\+SFTexts}} (sf\+::\+Render\+Window \&window) override
 \item 
-void \mbox{\hyperlink{classrenderer_1_1Button_a75055e5460285510015689cd6f95b640}{draw}} (sf\+::\+Render\+Window \&window) override
-\item 
 void \mbox{\hyperlink{classrenderer_1_1Button_a2d9ecbba534c987add7bba33abaadf37}{set\+String}} (const std\+::string \&str)
 \item 
 void \mbox{\hyperlink{classrenderer_1_1Button_a6660cad640c9c99afc39f0ebd5bedf1a}{set\+Font}} (const sf\+::\+Font \&font)
@@ -49,7 +47,7 @@ void \mbox{\hyperlink{classrenderer_1_1Button_acbad078f23caae8c1935bf51a38f36bb}
 \item 
 void \mbox{\hyperlink{classrenderer_1_1Button_a2da7e7b3fb2ede6183ff27dbf5958fee}{set\+On\+Click}} (const std\+::function$<$ void()$>$ \&on\+Click)
 \item 
-void \mbox{\hyperlink{classrenderer_1_1Button_a07ab426be53b55ea8768b0f8985c9aec}{process\+Event}} (const sf\+::\+Event \&event, sf\+::\+Render\+Window \&window)
+void \mbox{\hyperlink{classrenderer_1_1Button_ad65902647a8a1c799177dbda98a9042a}{process\+Event}} (const sf\+::\+Event \&event, const sf\+::\+Render\+Window \&window)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1DrawObject}{renderer\+::\+Draw\+Object}}}
 \begin{DoxyCompactItemize}
@@ -83,29 +81,6 @@ Here is the call graph for this function\+:
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classrenderer_1_1Button_a75055e5460285510015689cd6f95b640}\label{classrenderer_1_1Button_a75055e5460285510015689cd6f95b640} 
-\index{renderer::Button@{renderer::Button}!draw@{draw}}
-\index{draw@{draw}!renderer::Button@{renderer::Button}}
-\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
-{\footnotesize\ttfamily void renderer\+::\+Button\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-Draw the object onto the provided render window. 
-\begin{DoxyParams}{Parameters}
-{\em window} & \\
-\hline
-\end{DoxyParams}
-
-
-Implements \mbox{\hyperlink{classrenderer_1_1IDrawable_a7a7cdfdbea7a25ac8c46453657a7e355}{renderer\+::\+IDrawable}}.
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classrenderer_1_1Button_a75055e5460285510015689cd6f95b640_cgraph}
-\end{center}
-\end{figure}
 \Hypertarget{classrenderer_1_1Button_a918eb9efe3f25e9be22ccb9eecdf50db}\label{classrenderer_1_1Button_a918eb9efe3f25e9be22ccb9eecdf50db} 
 \index{renderer::Button@{renderer::Button}!getSFShapes@{getSFShapes}}
 \index{getSFShapes@{getSFShapes}!renderer::Button@{renderer::Button}}
@@ -181,18 +156,18 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{classrenderer_1_1Button_add05e62ac67f5e94402a3fd13643c73c_cgraph}
 \end{center}
 \end{figure}
-\Hypertarget{classrenderer_1_1Button_a07ab426be53b55ea8768b0f8985c9aec}\label{classrenderer_1_1Button_a07ab426be53b55ea8768b0f8985c9aec} 
+\Hypertarget{classrenderer_1_1Button_ad65902647a8a1c799177dbda98a9042a}\label{classrenderer_1_1Button_ad65902647a8a1c799177dbda98a9042a} 
 \index{renderer::Button@{renderer::Button}!processEvent@{processEvent}}
 \index{processEvent@{processEvent}!renderer::Button@{renderer::Button}}
 \doxysubsubsection{\texorpdfstring{processEvent()}{processEvent()}}
-{\footnotesize\ttfamily void renderer\+::\+Button\+::process\+Event (\begin{DoxyParamCaption}\item[{const sf\+::\+Event \&}]{event,  }\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void renderer\+::\+Button\+::process\+Event (\begin{DoxyParamCaption}\item[{const sf\+::\+Event \&}]{event,  }\item[{const sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classrenderer_1_1Button_a07ab426be53b55ea8768b0f8985c9aec_cgraph}
+\includegraphics[width=350pt]{classrenderer_1_1Button_ad65902647a8a1c799177dbda98a9042a_cgraph}
 \end{center}
 \end{figure}
 \Hypertarget{classrenderer_1_1Button_a6eff6988cf4a1351ce8b4d0966452a55}\label{classrenderer_1_1Button_a6eff6988cf4a1351ce8b4d0966452a55} 

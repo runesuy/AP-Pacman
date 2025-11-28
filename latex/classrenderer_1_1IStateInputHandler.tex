@@ -27,7 +27,7 @@ Collaboration diagram for renderer\+::IState\+Input\+Handler\texorpdfstring{$<$}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \mbox{\hyperlink{classrenderer_1_1IStateInputHandler_a84c3ab693fad0e258f627187e917460d}{process\+Input}} (sf\+::\+Event \&event, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager, Derived\+State \&state)=0
+virtual void \mbox{\hyperlink{classrenderer_1_1IStateInputHandler_a583aa5e19064fa1e354c12230e2d35b7}{process\+Input}} (sf\+::\+Event \&event, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager, Derived\+State \&state, const sf\+::\+Render\+Window \&window)=0
 \item 
 void \mbox{\hyperlink{classrenderer_1_1IStateInputHandler_a684230f689f6de3e774c6890acbccffa}{process\+Input}} (sf\+::\+Event \&event) override
 \end{DoxyCompactItemize}
@@ -55,16 +55,16 @@ void \mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{renderer\+::\+IState\
 
 Implements \mbox{\hyperlink{classrenderer_1_1IInputHandler_a720663b29dfb041da4d8bae6d5cf5188}{renderer\+::\+IInput\+Handler}}.
 
-\Hypertarget{classrenderer_1_1IStateInputHandler_a84c3ab693fad0e258f627187e917460d}\label{classrenderer_1_1IStateInputHandler_a84c3ab693fad0e258f627187e917460d} 
+\Hypertarget{classrenderer_1_1IStateInputHandler_a583aa5e19064fa1e354c12230e2d35b7}\label{classrenderer_1_1IStateInputHandler_a583aa5e19064fa1e354c12230e2d35b7} 
 \index{renderer::IStateInputHandler$<$ DerivedState $>$@{renderer::IStateInputHandler$<$ DerivedState $>$}!processInput@{processInput}}
 \index{processInput@{processInput}!renderer::IStateInputHandler$<$ DerivedState $>$@{renderer::IStateInputHandler$<$ DerivedState $>$}}
 \doxysubsubsection{\texorpdfstring{processInput()}{processInput()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename Derived\+State $>$ \\
-virtual void \mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{renderer\+::\+IState\+Input\+Handler}}$<$ Derived\+State $>$\+::process\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event,  }\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager,  }\item[{Derived\+State \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+virtual void \mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{renderer\+::\+IState\+Input\+Handler}}$<$ Derived\+State $>$\+::process\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event,  }\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager,  }\item[{Derived\+State \&}]{state,  }\item[{const sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Implemented in \mbox{\hyperlink{classrenderer_1_1LevelInputHandler_a47694c81cc0f0cb9e96f2f677fa66087}{renderer\+::\+Level\+Input\+Handler}}, \mbox{\hyperlink{classrenderer_1_1MenuInputHandler_ad97b414a710640ae5af6394044f552ce}{renderer\+::\+Menu\+Input\+Handler}}, and \mbox{\hyperlink{classrenderer_1_1PausedStateInputHandler_a22b232bb227222492f58d8afd4025cef}{renderer\+::\+Paused\+State\+Input\+Handler}}.
+Implemented in \mbox{\hyperlink{classrenderer_1_1LevelInputHandler_a6dd7e721657e0241c948a4e6c0346287}{renderer\+::\+Level\+Input\+Handler}}.
 
 
 

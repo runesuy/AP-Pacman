@@ -10,19 +10,21 @@
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_ISTATEINPUTHANDLER\_H}}
 \DoxyCodeLine{00007\ }
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IInputHandler_8h}{core/handlers/IInputHandler.h}}"{}}}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class\ }StateManager;}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }IState;}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ DerivedState>}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IStateInputHandler}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IInputHandler}{renderer::IInputHandler}}\ \{}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler_a84c3ab693fad0e258f627187e917460d}{processInput}}(sf::Event\&\ event,\ \mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}\ \&stateManager,\ DerivedState\&\ state)=0;}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler_a684230f689f6de3e774c6890acbccffa}{processInput}}(sf::Event\ \&event)\textcolor{keyword}{\ override\ }\{\};}
-\DoxyCodeLine{00023\ \ \ \ \ \};}
-\DoxyCodeLine{00024\ \}}
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_ISTATEINPUTHANDLER\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}SFML/Graphics.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }StateManager;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{class\ }IState;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ DerivedState>}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IStateInputHandler}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IInputHandler}{renderer::IInputHandler}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler_a583aa5e19064fa1e354c12230e2d35b7}{processInput}}(sf::Event\ \&event,\ \mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}\ \&stateManager,\ DerivedState\ \&state,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ sf::RenderWindow\ \&window)\ =0;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler_a684230f689f6de3e774c6890acbccffa}{processInput}}(sf::Event\ \&event)\textcolor{keyword}{\ override\ }\{\};}
+\DoxyCodeLine{00025\ \ \ \ \ \};}
+\DoxyCodeLine{00026\ \}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_ISTATEINPUTHANDLER\_H}}
 
 \end{DoxyCode}
