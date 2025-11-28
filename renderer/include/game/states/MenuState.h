@@ -8,6 +8,7 @@
 #include "core/states/DelegatingState.h"
 #include "core/drawable/ui/Button.h"
 #include <memory>
+#include "core/parsers/TXTHighScoreParser.h"
 
 namespace renderer {
 
@@ -21,6 +22,9 @@ namespace renderer {
         Button playButton;
         bool _fontLoaded = false;
         sf::Font _font;
+
+        Label highScoreLabel;
+        std::unique_ptr<logic::IHighScoreParser> highScoreParser = std::make_unique<logic::TXTHighScoreParser>();
 
         void onPlayButtonClick(StateManager& stateManager) const;
     public:
