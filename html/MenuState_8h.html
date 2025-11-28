@@ -82,70 +82,75 @@ $(function() {
 <div class="textblock"><code>#include &quot;<a class="el" href="DelegatingState_8h_source.html">core/states/DelegatingState.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Button_8h_source.html">core/drawable/ui/Button.h</a>&quot;</code><br />
 <code>#include &lt;memory&gt;</code><br />
+<code>#include &quot;<a class="el" href="TXTHighScoreParser_8h_source.html">core/parsers/TXTHighScoreParser.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for MenuState.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="MenuState_8h__incl.png" border="0" usemap="#arenderer_2include_2game_2states_2MenuState_8h" alt=""/></div>
 <map name="arenderer_2include_2game_2states_2MenuState_8h" id="arenderer_2include_2game_2states_2MenuState_8h">
-<area shape="rect" title=" " alt="" coords="747,5,896,46"/>
-<area shape="rect" href="DelegatingState_8h.html" title=" " alt="" coords="343,94,535,120"/>
-<area shape="poly" title=" " alt="" coords="747,45,513,93,512,88,746,40"/>
-<area shape="rect" title=" " alt="" coords="527,323,594,348"/>
-<area shape="poly" title=" " alt="" coords="829,46,836,91,838,150,835,182,828,213,816,242,798,269,777,289,755,301,733,307,711,308,663,308,637,310,608,318,603,319,601,314,606,312,636,305,663,303,711,303,733,301,753,296,774,285,794,265,811,240,823,211,830,181,833,150,830,91,823,47"/>
-<area shape="rect" href="Button_8h.html" title=" " alt="" coords="920,94,1088,120"/>
-<area shape="poly" title=" " alt="" coords="868,44,963,85,961,90,866,49"/>
-<area shape="rect" href="IState_8h.html" title=" " alt="" coords="222,241,288,267"/>
-<area shape="poly" title=" " alt="" coords="421,122,351,170,279,233,276,229,348,166,418,118"/>
-<area shape="poly" title=" " alt="" coords="469,118,501,137,529,166,547,201,557,240,563,306,558,307,552,240,542,203,525,169,497,142,466,123"/>
-<area shape="rect" href="IDrawHandler_8h.html" title=" " alt="" coords="5,241,198,267"/>
-<area shape="poly" title=" " alt="" coords="343,119,221,138,169,152,135,170,124,182,116,196,107,227,102,225,112,194,120,179,132,166,167,147,220,133,342,114"/>
-<area shape="rect" href="IStateUpdateHandler_8h.html" title=" " alt="" coords="362,168,516,193"/>
-<area shape="poly" title=" " alt="" coords="442,120,442,152,436,152,436,120"/>
-<area shape="rect" href="IStateInputHandler_8h.html" title=" " alt="" coords="618,168,758,193"/>
-<area shape="poly" title=" " alt="" coords="482,118,632,160,631,166,480,123"/>
-<area shape="rect" href="IStateDrawHandler_8h.html" title=" " alt="" coords="146,168,287,193"/>
-<area shape="poly" title=" " alt="" coords="402,123,269,165,268,160,400,118"/>
-<area shape="rect" title=" " alt="" coords="141,404,369,429"/>
-<area shape="poly" title=" " alt="" coords="258,268,258,388,252,388,252,268"/>
-<area shape="poly" title=" " alt="" coords="289,262,301,264,409,286,456,296,516,312,520,314,519,319,514,318,455,301,408,291,300,270,288,267"/>
-<area shape="poly" title=" " alt="" coords="115,266,235,390,231,394,111,269"/>
-<area shape="rect" href="IUpdateHandler_8h.html" title=" " alt="" coords="313,241,517,267"/>
-<area shape="poly" title=" " alt="" coords="437,194,426,228,421,226,432,193"/>
-<area shape="rect" href="IInputHandler_8h.html" title=" " alt="" coords="593,241,784,267"/>
-<area shape="poly" title=" " alt="" coords="691,194,691,226,686,226,686,194"/>
-<area shape="rect" title=" " alt="" coords="860,241,997,267"/>
-<area shape="poly" title=" " alt="" coords="730,191,874,234,872,239,728,196"/>
-<area shape="rect" title=" " alt="" coords="335,323,503,348"/>
-<area shape="poly" title=" " alt="" coords="647,270,476,320,474,315,646,265"/>
-<area shape="poly" title=" " alt="" coords="225,192,243,226,239,229,220,195"/>
-<area shape="poly" title=" " alt="" coords="198,196,135,235,133,230,195,192"/>
-<area shape="poly" title=" " alt="" coords="993,122,974,143,956,169,943,198,936,227,930,226,938,197,951,166,970,140,989,118"/>
-<area shape="rect" href="DrawObject_8h.html" title=" " alt="" coords="1021,241,1206,267"/>
-<area shape="poly" title=" " alt="" coords="1017,118,1057,166,1100,227,1096,230,1053,169,1013,122"/>
-<area shape="rect" href="Label_8h.html" title=" " alt="" coords="1118,168,1280,193"/>
-<area shape="poly" title=" " alt="" coords="1038,118,1152,159,1150,164,1036,123"/>
-<area shape="rect" title=" " alt="" coords="966,168,1043,193"/>
-<area shape="poly" title=" " alt="" coords="1007,120,1007,152,1002,152,1002,120"/>
-<area shape="poly" title=" " alt="" coords="1021,269,607,318,601,319,600,314,606,312,1021,263"/>
-<area shape="rect" title=" " alt="" coords="816,323,995,348"/>
-<area shape="poly" title=" " alt="" coords="1082,270,953,319,951,314,1081,265"/>
-<area shape="rect" title=" " alt="" coords="1019,323,1195,348"/>
-<area shape="poly" title=" " alt="" coords="1115,268,1112,307,1106,307,1110,267"/>
-<area shape="rect" title=" " alt="" coords="1218,323,1385,348"/>
-<area shape="poly" title=" " alt="" coords="1143,265,1260,314,1258,319,1141,270"/>
-<area shape="rect" href="IDrawable_8h.html" title=" " alt="" coords="618,323,793,348"/>
-<area shape="poly" title=" " alt="" coords="1051,270,805,318,784,322,783,316,804,312,1050,265"/>
-<area shape="rect" href="WorldObject_8h.html" title=" " alt="" coords="1409,315,1536,356"/>
-<area shape="poly" title=" " alt="" coords="1175,265,1394,312,1392,317,1174,270"/>
-<area shape="poly" title=" " alt="" coords="643,351,606,358,344,403,343,398,605,353,642,346"/>
-<area shape="rect" href="Position_8h.html" title=" " alt="" coords="1358,404,1539,429"/>
-<area shape="poly" title=" " alt="" coords="1469,357,1459,389,1454,388,1464,355"/>
-<area shape="rect" href="ICoordinate_8h.html" title=" " alt="" coords="1497,477,1594,503"/>
-<area shape="poly" title=" " alt="" coords="1466,428,1519,466,1516,470,1463,432"/>
-<area shape="poly" title=" " alt="" coords="1186,196,1141,233,1138,229,1183,192"/>
-<area shape="rect" href="Size_8h.html" title=" " alt="" coords="1563,404,1723,429"/>
-<area shape="poly" title=" " alt="" coords="1252,191,1315,209,1392,235,1473,269,1550,313,1594,351,1627,389,1623,393,1590,354,1547,317,1470,274,1390,240,1314,214,1251,197"/>
-<area shape="poly" title=" " alt="" coords="1628,432,1575,470,1572,466,1625,428"/>
+<area shape="rect" title=" " alt="" coords="625,5,775,46"/>
+<area shape="rect" href="DelegatingState_8h.html" title=" " alt="" coords="344,102,536,127"/>
+<area shape="poly" title=" " alt="" coords="642,49,492,99,490,94,640,44"/>
+<area shape="rect" title=" " alt="" coords="238,338,306,363"/>
+<area shape="poly" title=" " alt="" coords="625,39,485,60,316,92,234,112,160,134,99,159,56,185,32,208,14,231,9,255,12,267,19,280,32,291,52,301,105,319,166,332,223,341,222,346,165,337,104,324,50,306,29,296,15,284,7,269,3,255,9,229,28,204,53,181,97,154,158,129,232,107,315,87,484,55,625,34"/>
+<area shape="rect" href="Button_8h.html" title=" " alt="" coords="879,102,1047,127"/>
+<area shape="poly" title=" " alt="" coords="760,44,912,94,910,99,759,49"/>
+<area shape="rect" href="TXTHighScoreParser_8h.html" title=" " alt="" coords="1167,94,1350,135"/>
+<area shape="poly" title=" " alt="" coords="775,36,1152,94,1151,99,774,41"/>
+<area shape="rect" href="IState_8h.html" title=" " alt="" coords="310,256,376,282"/>
+<area shape="poly" title=" " alt="" coords="419,130,387,152,360,184,349,212,345,241,340,241,344,211,355,181,384,148,416,125"/>
+<area shape="poly" title=" " alt="" coords="419,130,382,153,345,185,318,218,300,257,280,323,275,322,295,255,314,215,341,181,379,149,416,125"/>
+<area shape="rect" href="IDrawHandler_8h.html" title=" " alt="" coords="400,256,592,282"/>
+<area shape="poly" title=" " alt="" coords="466,126,498,148,513,163,525,182,529,198,528,214,516,244,511,242,523,213,524,198,520,184,509,167,495,152,463,130"/>
+<area shape="rect" href="IStateUpdateHandler_8h.html" title=" " alt="" coords="67,183,221,208"/>
+<area shape="poly" title=" " alt="" coords="395,130,205,181,204,176,394,125"/>
+<area shape="rect" href="IStateInputHandler_8h.html" title=" " alt="" coords="642,183,782,208"/>
+<area shape="poly" title=" " alt="" coords="483,125,656,175,655,180,481,130"/>
+<area shape="rect" href="IStateDrawHandler_8h.html" title=" " alt="" coords="369,183,511,208"/>
+<area shape="poly" title=" " alt="" coords="443,128,443,167,437,167,437,128"/>
+<area shape="rect" title=" " alt="" coords="279,419,508,444"/>
+<area shape="poly" title=" " alt="" coords="349,282,387,403,382,404,344,283"/>
+<area shape="poly" title=" " alt="" coords="334,284,295,327,291,324,330,281"/>
+<area shape="poly" title=" " alt="" coords="474,285,446,304,421,331,405,368,398,404,393,403,400,366,416,329,443,300,471,280"/>
+<area shape="rect" href="IUpdateHandler_8h.html" title=" " alt="" coords="30,256,234,282"/>
+<area shape="poly" title=" " alt="" coords="145,209,139,241,134,240,139,208"/>
+<area shape="rect" href="IInputHandler_8h.html" title=" " alt="" coords="616,256,808,282"/>
+<area shape="poly" title=" " alt="" coords="715,209,715,241,709,241,709,209"/>
+<area shape="rect" title=" " alt="" coords="831,256,969,282"/>
+<area shape="poly" title=" " alt="" coords="745,206,855,248,853,253,743,211"/>
+<area shape="rect" title=" " alt="" coords="431,338,599,363"/>
+<area shape="poly" title=" " alt="" coords="683,285,560,334,558,329,681,280"/>
+<area shape="poly" title=" " alt="" coords="425,211,373,249,369,245,422,207"/>
+<area shape="poly" title=" " alt="" coords="451,207,479,242,475,246,447,210"/>
+<area shape="poly" title=" " alt="" coords="960,129,913,243,908,241,955,127"/>
+<area shape="rect" href="DrawObject_8h.html" title=" " alt="" coords="993,256,1178,282"/>
+<area shape="poly" title=" " alt="" coords="966,127,972,165,979,187,990,207,1014,230,1041,247,1038,251,1010,234,986,210,974,189,967,167,961,128"/>
+<area shape="rect" href="Label_8h.html" title=" " alt="" coords="1000,183,1163,208"/>
+<area shape="poly" title=" " alt="" coords="982,125,1052,171,1049,176,979,130"/>
+<area shape="rect" title=" " alt="" coords="1187,183,1264,208"/>
+<area shape="poly" title=" " alt="" coords="1004,125,1172,175,1171,181,1002,130"/>
+<area shape="poly" title=" " alt="" coords="993,283,982,285,700,308,419,333,322,345,321,339,418,327,700,302,981,279,993,278"/>
+<area shape="rect" title=" " alt="" coords="822,338,1000,363"/>
+<area shape="poly" title=" " alt="" coords="1060,285,952,333,950,328,1057,280"/>
+<area shape="rect" title=" " alt="" coords="1024,338,1200,363"/>
+<area shape="poly" title=" " alt="" coords="1092,282,1106,322,1100,323,1087,283"/>
+<area shape="rect" title=" " alt="" coords="1224,338,1390,363"/>
+<area shape="poly" title=" " alt="" coords="1120,280,1259,329,1258,334,1119,285"/>
+<area shape="rect" href="IDrawable_8h.html" title=" " alt="" coords="624,338,798,363"/>
+<area shape="poly" title=" " alt="" coords="1028,285,784,336,783,331,1027,280"/>
+<area shape="rect" href="WorldObject_8h.html" title=" " alt="" coords="1414,330,1541,371"/>
+<area shape="poly" title=" " alt="" coords="1157,280,1399,327,1398,332,1156,285"/>
+<area shape="poly" title=" " alt="" coords="662,366,458,417,456,412,661,361"/>
+<area shape="rect" href="Position_8h.html" title=" " alt="" coords="1363,419,1544,444"/>
+<area shape="poly" title=" " alt="" coords="1474,372,1464,404,1459,403,1469,370"/>
+<area shape="rect" href="ICoordinate_8h.html" title=" " alt="" coords="1502,492,1599,518"/>
+<area shape="poly" title=" " alt="" coords="1471,443,1524,481,1521,485,1468,447"/>
+<area shape="poly" title=" " alt="" coords="1085,208,1086,241,1081,241,1079,209"/>
+<area shape="rect" href="Size_8h.html" title=" " alt="" coords="1568,419,1728,444"/>
+<area shape="poly" title=" " alt="" coords="1139,206,1361,260,1475,294,1521,311,1555,328,1579,345,1600,365,1634,405,1629,408,1596,369,1575,349,1552,332,1519,316,1473,299,1360,265,1138,212"/>
+<area shape="poly" title=" " alt="" coords="1633,447,1581,485,1577,481,1630,443"/>
+<area shape="rect" href="IHighScoreParser_8h.html" title=" " alt="" coords="1288,183,1422,208"/>
+<area shape="poly" title=" " alt="" coords="1284,133,1330,171,1327,175,1281,137"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
