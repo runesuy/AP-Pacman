@@ -39,7 +39,7 @@ const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1WorldView}{Wor
 \item 
 void \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_a8c325cc7e30dd7b9aba92dc0180d98ce}{set\+View\+Target}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1WorldView}{World\+View}} $>$ \&view\+Target)
 \item 
-std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} $>$ \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_a20f9fdaa9e516f2b021e074b6374f8e6}{create\+Ghost\+Model}} (\mbox{\hyperlink{namespacelogic_a36053e250f7e1339ba0a6cbecbdf1b4b}{logic\+::\+Ghost\+Type}} type) override
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} $>$ \mbox{\hyperlink{classrenderer_1_1DefaultEntityFactory_aba448a382ac8113ecab25738b5a37009}{create\+Ghost\+Model}} (\mbox{\hyperlink{namespacelogic_a36053e250f7e1339ba0a6cbecbdf1b4b}{logic\+::\+Ghost\+Type}} type, float difficulty\+Multiplier) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IEntityFactory}{logic\+::\+IEntity\+Factory}}}
 \begin{DoxyCompactItemize}
@@ -65,18 +65,18 @@ A shared pointer to the created Coin\+Model.
 
 Implements \mbox{\hyperlink{classlogic_1_1IEntityFactory_a681cfc3ed8fef2b023f6c402a164207d}{logic\+::\+IEntity\+Factory}}.
 
-\Hypertarget{classrenderer_1_1DefaultEntityFactory_a20f9fdaa9e516f2b021e074b6374f8e6}\label{classrenderer_1_1DefaultEntityFactory_a20f9fdaa9e516f2b021e074b6374f8e6} 
+\Hypertarget{classrenderer_1_1DefaultEntityFactory_aba448a382ac8113ecab25738b5a37009}\label{classrenderer_1_1DefaultEntityFactory_aba448a382ac8113ecab25738b5a37009} 
 \index{renderer::DefaultEntityFactory@{renderer::DefaultEntityFactory}!createGhostModel@{createGhostModel}}
 \index{createGhostModel@{createGhostModel}!renderer::DefaultEntityFactory@{renderer::DefaultEntityFactory}}
 \doxysubsubsection{\texorpdfstring{createGhostModel()}{createGhostModel()}}
-{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} $>$ renderer\+::\+Default\+Entity\+Factory\+::create\+Ghost\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelogic_a36053e250f7e1339ba0a6cbecbdf1b4b}{logic\+::\+Ghost\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} $>$ renderer\+::\+Default\+Entity\+Factory\+::create\+Ghost\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacelogic_a36053e250f7e1339ba0a6cbecbdf1b4b}{logic\+::\+Ghost\+Type}}}]{type,  }\item[{float}]{difficulty\+Multiplier }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 Creates and returns a shared pointer to a Ghost\+Model instance of the specified type. \begin{DoxyReturn}{Returns}
 A shared pointer to the created ghost of type. 
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classlogic_1_1IEntityFactory_a50a2d30662b07e2e949de98d0b2dcd8f}{logic\+::\+IEntity\+Factory}}.
+Implements \mbox{\hyperlink{classlogic_1_1IEntityFactory_ad8112cb9a0073d610d4c6d91d0d3ea64}{logic\+::\+IEntity\+Factory}}.
 
 \Hypertarget{classrenderer_1_1DefaultEntityFactory_a497423527503fbb10efb90c63543efee}\label{classrenderer_1_1DefaultEntityFactory_a497423527503fbb10efb90c63543efee} 
 \index{renderer::DefaultEntityFactory@{renderer::DefaultEntityFactory}!createPlayerModel@{createPlayerModel}}

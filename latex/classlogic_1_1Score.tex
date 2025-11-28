@@ -40,6 +40,10 @@ const \mbox{\hyperlink{classlogic_1_1LifeCounter}{Life\+Counter}} \& \mbox{\hype
 const \mbox{\hyperlink{classlogic_1_1ScoreCounter}{Score\+Counter}} \& \mbox{\hyperlink{classlogic_1_1Score_a1d5019742c20e530abdc36f01faf9a7a}{get\+Score\+Counter}} () const
 \item 
 \mbox{\hyperlink{classlogic_1_1ScoreCounter}{Score\+Counter}} \& \mbox{\hyperlink{classlogic_1_1Score_aef813ee3f1af3ca995d86efc4794e95a}{get\+Score\+Counter}} ()
+\item 
+float \mbox{\hyperlink{classlogic_1_1Score_abf8076430c886430006be3bbe53e2958}{get\+Difficulty\+Multiplier}} () const
+\item 
+void \mbox{\hyperlink{classlogic_1_1Score_af16cc96543c5a227d4ea8132e26752bb}{increase\+Difficulty\+Multiplier}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IObserver}{logic\+::\+IObserver$<$ Player\+Model $>$}}}
 \begin{DoxyCompactItemize}
@@ -54,6 +58,12 @@ virtual void \mbox{\hyperlink{classlogic_1_1IObserver_acdde4b1d124989fc652801832
 An observer class to track and manage the player\textquotesingle{}s score and lives. 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1Score_abf8076430c886430006be3bbe53e2958}\label{classlogic_1_1Score_abf8076430c886430006be3bbe53e2958} 
+\index{logic::Score@{logic::Score}!getDifficultyMultiplier@{getDifficultyMultiplier}}
+\index{getDifficultyMultiplier@{getDifficultyMultiplier}!logic::Score@{logic::Score}}
+\doxysubsubsection{\texorpdfstring{getDifficultyMultiplier()}{getDifficultyMultiplier()}}
+{\footnotesize\ttfamily float logic\+::\+Score\+::get\+Difficulty\+Multiplier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
 \Hypertarget{classlogic_1_1Score_a7a10747d443f1a36d269d9c9f0c115ea}\label{classlogic_1_1Score_a7a10747d443f1a36d269d9c9f0c115ea} 
 \index{logic::Score@{logic::Score}!getLifeCounter@{getLifeCounter}}
 \index{getLifeCounter@{getLifeCounter}!logic::Score@{logic::Score}}
@@ -90,6 +100,12 @@ The \doxylink{classlogic_1_1ScoreCounter}{Score\+Counter} instance that handles 
 \begin{DoxyReturn}{Returns}
 The \doxylink{classlogic_1_1ScoreCounter}{Score\+Counter} instance that handles the player score. 
 \end{DoxyReturn}
+\Hypertarget{classlogic_1_1Score_af16cc96543c5a227d4ea8132e26752bb}\label{classlogic_1_1Score_af16cc96543c5a227d4ea8132e26752bb} 
+\index{logic::Score@{logic::Score}!increaseDifficultyMultiplier@{increaseDifficultyMultiplier}}
+\index{increaseDifficultyMultiplier@{increaseDifficultyMultiplier}!logic::Score@{logic::Score}}
+\doxysubsubsection{\texorpdfstring{increaseDifficultyMultiplier()}{increaseDifficultyMultiplier()}}
+{\footnotesize\ttfamily void logic\+::\+Score\+::increase\+Difficulty\+Multiplier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \Hypertarget{classlogic_1_1Score_a24a5466920e34282c89abee1c32373dc}\label{classlogic_1_1Score_a24a5466920e34282c89abee1c32373dc} 
 \index{logic::Score@{logic::Score}!onTick@{onTick}}
 \index{onTick@{onTick}!logic::Score@{logic::Score}}

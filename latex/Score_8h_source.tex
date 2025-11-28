@@ -19,24 +19,30 @@
 \DoxyCodeLine{00018\ }
 \DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1ScoreCounter}{ScoreCounter}}\ scoreCounter;}
 \DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1LifeCounter}{LifeCounter}}\ lifeCounter;}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1Score_a24a5466920e34282c89abee1c32373dc}{onTick}}();}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1Score_a7dc0b66e765a991456c0402e4b31af2b}{update}}(\mbox{\hyperlink{classlogic_1_1PlayerModel}{PlayerModel}}\ \&subject)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1Score_a7dc0b66e765a991456c0402e4b31af2b}{update}}(\mbox{\hyperlink{classlogic_1_1PlayerModel}{PlayerModel}}\ \&subject,\ \mbox{\hyperlink{classlogic_1_1ObservableTypes_a2e3a4285a9bc569d4d2939ae894937af}{ObservableTypes::EventType}}\ event)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1LifeCounter}{LifeCounter}}\ \&\mbox{\hyperlink{classlogic_1_1Score_ab44eeb0ec4a8805b5caddbb1ef419027}{getLifeCounter}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlogic_1_1LifeCounter}{LifeCounter}}\ \&\mbox{\hyperlink{classlogic_1_1Score_ab44eeb0ec4a8805b5caddbb1ef419027}{getLifeCounter}}();}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1ScoreCounter}{ScoreCounter}}\ \&\mbox{\hyperlink{classlogic_1_1Score_a1d5019742c20e530abdc36f01faf9a7a}{getScoreCounter}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlogic_1_1ScoreCounter}{ScoreCounter}}\ \&\mbox{\hyperlink{classlogic_1_1Score_a1d5019742c20e530abdc36f01faf9a7a}{getScoreCounter}}();}
-\DoxyCodeLine{00059\ \ \ \ \ \};}
-\DoxyCodeLine{00060\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ difficultyMultiplier=1;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ DIFFICULTY\_INCREASE\ =\ 0.1;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1Score_a24a5466920e34282c89abee1c32373dc}{onTick}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1Score_a7dc0b66e765a991456c0402e4b31af2b}{update}}(\mbox{\hyperlink{classlogic_1_1PlayerModel}{PlayerModel}}\ \&subject)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1Score_a7dc0b66e765a991456c0402e4b31af2b}{update}}(\mbox{\hyperlink{classlogic_1_1PlayerModel}{PlayerModel}}\ \&subject,\ \mbox{\hyperlink{classlogic_1_1ObservableTypes_a2e3a4285a9bc569d4d2939ae894937af}{ObservableTypes::EventType}}\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1LifeCounter}{LifeCounter}}\ \&\mbox{\hyperlink{classlogic_1_1Score_ab44eeb0ec4a8805b5caddbb1ef419027}{getLifeCounter}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlogic_1_1LifeCounter}{LifeCounter}}\ \&\mbox{\hyperlink{classlogic_1_1Score_ab44eeb0ec4a8805b5caddbb1ef419027}{getLifeCounter}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1ScoreCounter}{ScoreCounter}}\ \&\mbox{\hyperlink{classlogic_1_1Score_a1d5019742c20e530abdc36f01faf9a7a}{getScoreCounter}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlogic_1_1ScoreCounter}{ScoreCounter}}\ \&\mbox{\hyperlink{classlogic_1_1Score_a1d5019742c20e530abdc36f01faf9a7a}{getScoreCounter}}();}
 \DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ }
-\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_SCORE\_H}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classlogic_1_1Score_abf8076430c886430006be3bbe53e2958}{getDifficultyMultiplier}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1Score_af16cc96543c5a227d4ea8132e26752bb}{increaseDifficultyMultiplier}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \};}
+\DoxyCodeLine{00066\ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_SCORE\_H}}
 
 \end{DoxyCode}

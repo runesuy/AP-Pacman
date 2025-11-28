@@ -104,8 +104,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a681cfc3ed8fef2b023f6c402a164207d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6cf715e54a24f75743af85b4c9f319b" id="r_ad6cf715e54a24f75743af85b4c9f319b"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classlogic_1_1FruitModel.html">FruitModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IEntityFactory.html#ad6cf715e54a24f75743af85b4c9f319b">createPowerupModel</a> ()=0</td></tr>
 <tr class="separator:ad6cf715e54a24f75743af85b4c9f319b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50a2d30662b07e2e949de98d0b2dcd8f" id="r_a50a2d30662b07e2e949de98d0b2dcd8f"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IEntityFactory.html#a50a2d30662b07e2e949de98d0b2dcd8f">createGhostModel</a> (<a class="el" href="namespacelogic.html#a36053e250f7e1339ba0a6cbecbdf1b4b">GhostType</a> type)=0</td></tr>
-<tr class="separator:a50a2d30662b07e2e949de98d0b2dcd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8112cb9a0073d610d4c6d91d0d3ea64" id="r_ad8112cb9a0073d610d4c6d91d0d3ea64"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IEntityFactory.html#ad8112cb9a0073d610d4c6d91d0d3ea64">createGhostModel</a> (<a class="el" href="namespacelogic.html#a36053e250f7e1339ba0a6cbecbdf1b4b">GhostType</a> type, float difficultyMultiplier=1)=0</td></tr>
+<tr class="separator:ad8112cb9a0073d610d4c6d91d0d3ea64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Factory interface for creating entity models. Provides methods to create different types of entities. </p><dl class="section note"><dt>Note</dt><dd>This is an interface and should be implemented by concrete factory classes. </dd>
@@ -170,8 +170,8 @@ Each method should also initialize any necessary components for the entity on th
 
 </div>
 </div>
-<a id="a50a2d30662b07e2e949de98d0b2dcd8f" name="a50a2d30662b07e2e949de98d0b2dcd8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50a2d30662b07e2e949de98d0b2dcd8f">&#9670;&#160;</a></span>createGhostModel()</h2>
+<a id="ad8112cb9a0073d610d4c6d91d0d3ea64" name="ad8112cb9a0073d610d4c6d91d0d3ea64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8112cb9a0073d610d4c6d91d0d3ea64">&#9670;&#160;</a></span>createGhostModel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -183,8 +183,18 @@ Each method should also initialize any necessary components for the entity on th
           <td class="memname">virtual std::shared_ptr&lt; <a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> &gt; logic::IEntityFactory::createGhostModel </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacelogic.html#a36053e250f7e1339ba0a6cbecbdf1b4b">GhostType</a>&#160;</td>
-          <td class="paramname"><em>type</em></td><td>)</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>difficultyMultiplier</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -195,7 +205,7 @@ Each method should also initialize any necessary components for the entity on th
 </div><div class="memdoc">
 <p>Creates and returns a shared pointer to a <a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> instance of the specified type. </p><dl class="section return"><dt>Returns</dt><dd>A shared pointer to the created ghost of type. </dd></dl>
 
-<p>Implemented in <a class="el" href="classrenderer_1_1DefaultEntityFactory.html#a20f9fdaa9e516f2b021e074b6374f8e6">renderer::DefaultEntityFactory</a>.</p>
+<p>Implemented in <a class="el" href="classrenderer_1_1DefaultEntityFactory.html#aba448a382ac8113ecab25738b5a37009">renderer::DefaultEntityFactory</a>.</p>
 
 </div>
 </div>
