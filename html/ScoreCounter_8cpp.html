@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Pacman: logic/src/core/world/space/ScoreCounter.cpp File Reference</title>
+<title>Pacman: logic/src/core/world/ScoreCounter.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0f9694b8de2575528c6c0ae9f79dda65.html">logic</a></li><li class="navelem"><a class="el" href="dir_98de9e47f37a019cddc1d6619996a644.html">src</a></li><li class="navelem"><a class="el" href="dir_18680ea4496aa16a20a19da3e1a647b7.html">core</a></li><li class="navelem"><a class="el" href="dir_187a0122112f48f08c5909eba0f14471.html">world</a></li><li class="navelem"><a class="el" href="dir_23fe77683a0406a581049c8af0e659c7.html">space</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_0f9694b8de2575528c6c0ae9f79dda65.html">logic</a></li><li class="navelem"><a class="el" href="dir_98de9e47f37a019cddc1d6619996a644.html">src</a></li><li class="navelem"><a class="el" href="dir_18680ea4496aa16a20a19da3e1a647b7.html">core</a></li><li class="navelem"><a class="el" href="dir_187a0122112f48f08c5909eba0f14471.html">world</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -84,28 +84,33 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ScoreCounter.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="ScoreCounter_8cpp__incl.png" border="0" usemap="#alogic_2src_2core_2world_2space_2ScoreCounter_8cpp" alt=""/></div>
-<map name="alogic_2src_2core_2world_2space_2ScoreCounter_8cpp" id="alogic_2src_2core_2world_2space_2ScoreCounter_8cpp">
-<area shape="rect" title=" " alt="" coords="230,5,397,46"/>
-<area shape="rect" href="ScoreCounter_8h.html" title=" " alt="" coords="12,94,186,120"/>
-<area shape="poly" title=" " alt="" coords="261,49,147,91,145,86,259,44"/>
-<area shape="rect" href="ObserverEvents_8h.html" title=" " alt="" coords="210,94,417,120"/>
-<area shape="poly" title=" " alt="" coords="316,46,316,78,311,78,311,46"/>
-<area shape="rect" href="Stopwatch_8h.html" title=" " alt="" coords="441,94,591,120"/>
-<area shape="poly" title=" " alt="" coords="365,44,472,85,470,90,363,49"/>
-<area shape="rect" href="Observable_8h.html" title=" " alt="" coords="9,168,189,193"/>
-<area shape="poly" title=" " alt="" coords="101,120,101,152,96,152,96,120"/>
-<area shape="rect" title=" " alt="" coords="32,315,99,341"/>
-<area shape="poly" title=" " alt="" coords="68,196,36,215,23,228,12,242,8,258,13,274,24,289,38,303,34,307,20,293,9,277,3,259,7,240,19,224,33,211,65,192"/>
-<area shape="rect" title=" " alt="" coords="22,241,79,267"/>
-<area shape="poly" title=" " alt="" coords="93,195,70,230,65,227,89,192"/>
-<area shape="rect" href="IObserver_8h.html" title=" " alt="" coords="104,241,192,267"/>
-<area shape="poly" title=" " alt="" coords="109,192,133,227,129,230,105,195"/>
-<area shape="rect" href="ObservableTypes_8h.html" title=" " alt="" coords="217,241,349,267"/>
-<area shape="poly" title=" " alt="" coords="131,191,238,233,236,238,129,196"/>
-<area shape="poly" title=" " alt="" coords="136,270,92,307,89,303,132,266"/>
-<area shape="rect" title=" " alt="" coords="486,168,546,193"/>
-<area shape="poly" title=" " alt="" coords="519,120,519,152,513,152,513,120"/>
+<div class="center"><img src="ScoreCounter_8cpp__incl.png" border="0" usemap="#alogic_2src_2core_2world_2ScoreCounter_8cpp" alt=""/></div>
+<map name="alogic_2src_2core_2world_2ScoreCounter_8cpp" id="alogic_2src_2core_2world_2ScoreCounter_8cpp">
+<area shape="rect" title=" " alt="" coords="498,5,632,46"/>
+<area shape="rect" href="ScoreCounter_8h.html" title=" " alt="" coords="263,94,437,120"/>
+<area shape="poly" title=" " alt="" coords="512,49,398,91,396,86,510,44"/>
+<area shape="rect" href="ObserverEvents_8h.html" title=" " alt="" coords="462,94,668,120"/>
+<area shape="poly" title=" " alt="" coords="567,46,567,78,562,78,562,46"/>
+<area shape="rect" href="Stopwatch_8h.html" title=" " alt="" coords="692,94,843,120"/>
+<area shape="poly" title=" " alt="" coords="616,44,723,85,721,90,614,49"/>
+<area shape="rect" href="Observable_8h.html" title=" " alt="" coords="59,175,239,201"/>
+<area shape="poly" title=" " alt="" coords="320,123,195,171,193,167,318,118"/>
+<area shape="rect" href="IHighScoreParser_8h.html" title=" " alt="" coords="374,256,585,282"/>
+<area shape="poly" title=" " alt="" coords="353,120,358,161,365,185,378,207,402,230,431,247,428,252,399,234,373,210,361,187,353,162,348,120"/>
+<area shape="rect" href="TXTHighScoreParser_8h.html" title=" " alt="" coords="388,168,571,208"/>
+<area shape="poly" title=" " alt="" coords="371,118,436,157,434,162,368,122"/>
+<area shape="rect" title=" " alt="" coords="32,330,100,356"/>
+<area shape="poly" title=" " alt="" coords="93,204,48,224,28,239,12,258,8,273,13,289,24,304,39,318,35,322,20,308,8,291,3,273,8,255,24,235,45,219,91,199"/>
+<area shape="rect" title=" " alt="" coords="23,256,80,282"/>
+<area shape="poly" title=" " alt="" coords="136,203,80,249,76,244,132,199"/>
+<area shape="rect" href="IObserver_8h.html" title=" " alt="" coords="105,256,193,282"/>
+<area shape="poly" title=" " alt="" coords="151,201,151,240,146,240,146,201"/>
+<area shape="rect" href="ObservableTypes_8h.html" title=" " alt="" coords="217,256,350,282"/>
+<area shape="poly" title=" " alt="" coords="171,199,251,246,248,250,168,204"/>
+<area shape="poly" title=" " alt="" coords="136,285,93,322,90,318,133,281"/>
+<area shape="poly" title=" " alt="" coords="482,209,482,241,477,241,477,209"/>
+<area shape="rect" title=" " alt="" coords="737,175,798,201"/>
+<area shape="poly" title=" " alt="" coords="770,120,770,159,765,159,765,120"/>
 </map>
 </div>
 </div><table class="memberdecls">

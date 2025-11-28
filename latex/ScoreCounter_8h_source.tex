@@ -10,35 +10,42 @@
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_SCORECOUNTER\_H}}
 \DoxyCodeLine{00007\ }
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Observable_8h}{core/observer/Observable.h}}"{}}}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IHighScoreParser_8h}{core/parsers/IHighScoreParser.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{TXTHighScoreParser_8h}{core/parsers/TXTHighScoreParser.h}}"{}}}
 \DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1ScoreCounter}{ScoreCounter}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1Observable}{Observable}}<ScoreCounter>\ \{}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ score\ =\ 0;}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ timeSinceLastCoin\ =\ 0.0f;}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ timeSinceLastDecay\ =\ 0.0f;}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ highScores[5]\ =\ \{-\/1,\ -\/1,\ -\/1,\ -\/1,\ -\/1\};}
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1ScoreCounter}{ScoreCounter}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1Observable}{Observable}}<ScoreCounter>\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ score\ =\ 0;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ timeSinceLastCoin\ =\ 0.0f;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ timeSinceLastDecay\ =\ 0.0f;}
 \DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ COIN\_COLLECT\_REWARD\ =\ 10;}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ GHOST\_KILL\_REWARD\ =\ 200;}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ SCORE\_DECAY\_RATE\ =\ 1;\ \textcolor{comment}{//\ per\ second}}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ScoreCounter_a30fb3775a759c50d553704148827b54a}{processEvent}}(\mbox{\hyperlink{classlogic_1_1ObservableTypes_a2e3a4285a9bc569d4d2939ae894937af}{ObservableTypes::EventType}}\ event);}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ScoreCounter_a8d2cd9b487b6992c9ad886187585b8d7}{loadHighScores}}(\textcolor{keyword}{const}\ std::string\ \&filename);}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ScoreCounter_a99bd490710c39a431717a02c6de16919}{saveHighScores}}(\textcolor{keyword}{const}\ std::string\ \&filename)\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classlogic_1_1ScoreCounter_a755cf1c8450edbec95de8e559f9fdc5f}{getScore}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ScoreCounter_ac56ea1b1be7db845ebed8df886d05837}{setScore}}(\textcolor{keywordtype}{int}\ score);}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ScoreCounter_a5c13f3c12207bfc936bd9f7433255d00}{onTick}}();}
-\DoxyCodeLine{00059\ \ \ \ \ \};}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \}\ \textcolor{comment}{//\ logic}}
-\DoxyCodeLine{00062\ }
-\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_SCORECOUNTER\_H}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }HighScoresList\ =\ std::vector<int>;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ HighScoresList\ highScores\ =\ \{-\/1,\ -\/1,\ -\/1,\ -\/1,\ -\/1\};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ COIN\_COLLECT\_REWARD\ =\ 10;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ GHOST\_KILL\_REWARD\ =\ 200;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ SCORE\_DECAY\_RATE\ =\ 1;\ \textcolor{comment}{//\ per\ second}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::unique\_ptr<IHighScoreParser>\ highScoreParser\ =\ std::make\_unique<TXTHighScoreParser>();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ highScoreFilePath\ =\ \textcolor{stringliteral}{"{}resources/highscores.txt"{}};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1ScoreCounter_a5b6858b8d10f967aa425f2ec29ffa6db}{ScoreCounter}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ScoreCounter_a30fb3775a759c50d553704148827b54a}{processEvent}}(\mbox{\hyperlink{classlogic_1_1ObservableTypes_a2e3a4285a9bc569d4d2939ae894937af}{ObservableTypes::EventType}}\ event);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ScoreCounter_a0dca59a5a2ee84297fa50487bd949dd5}{loadHighScores}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ScoreCounter_aa7c10f8d136744b2f9260b58cd6e9563}{saveHighScores}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classlogic_1_1ScoreCounter_a755cf1c8450edbec95de8e559f9fdc5f}{getScore}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ScoreCounter_ac56ea1b1be7db845ebed8df886d05837}{setScore}}(\textcolor{keywordtype}{int}\ score);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ScoreCounter_a5c13f3c12207bfc936bd9f7433255d00}{onTick}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \}\ \textcolor{comment}{//\ logic}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_SCORECOUNTER\_H}}
 
 \end{DoxyCode}

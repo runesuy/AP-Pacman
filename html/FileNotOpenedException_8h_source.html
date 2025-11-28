@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Pacman: renderer/include/core/exceptions/FileNotOpenedException.h Source File</title>
+<title>Pacman: logic/include/core/exceptions/FileNotOpenedException.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d10aa5f1e26260a914a037377583e9a7.html">renderer</a></li><li class="navelem"><a class="el" href="dir_38d06604e9df36157c4a7ee987c246f7.html">include</a></li><li class="navelem"><a class="el" href="dir_a41f80271da4ea7c3316afc8fe4dd8b1.html">core</a></li><li class="navelem"><a class="el" href="dir_9256c1640630dc4a36e3c956b58ac8b9.html">exceptions</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_0f9694b8de2575528c6c0ae9f79dda65.html">logic</a></li><li class="navelem"><a class="el" href="dir_e4e8245d806fca2c0392d09558f3823f.html">include</a></li><li class="navelem"><a class="el" href="dir_0a19aaa8a93f2d0dcb4a32774024022d.html">core</a></li><li class="navelem"><a class="el" href="dir_522d26c5cdd6a8d204b081b22a9b571d.html">exceptions</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -89,35 +89,38 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define AP_PACMAN_FILENOTOPENEDEXCEPTION_H</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerenderer.html">renderer</a> {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classrenderer_1_1FileNotOpenedException.html">   15</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1FileNotOpenedException.html">FileNotOpenedException</a> : <span class="keyword">public</span> std::runtime_error {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        std::string path;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classrenderer_1_1FileNotOpenedException.html#a04d160e5649473cb73ab297786911028">   18</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="classrenderer_1_1FileNotOpenedException.html#a04d160e5649473cb73ab297786911028">FileNotOpenedException</a>(<span class="keyword">const</span> std::string&amp; path) : path(path), std::runtime_error(</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                <span class="stringliteral">&quot;Failed to open file at path: &quot;</span> + path</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                ){};</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelogic.html">logic</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classlogic_1_1FileNotOpenedException.html">   16</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classlogic_1_1FileNotOpenedException.html">FileNotOpenedException</a> : <span class="keyword">public</span> std::runtime_error {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        std::string path;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classlogic_1_1FileNotOpenedException.html#a49937ffddeb36cc9ebd390c4a988402d">   19</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="classlogic_1_1FileNotOpenedException.html#a49937ffddeb36cc9ebd390c4a988402d">FileNotOpenedException</a>(<span class="keyword">const</span> std::string&amp; path, <span class="keyword">const</span> std::string&amp; where) : path(path), std::runtime_error(</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                <span class="stringliteral">&quot;Failed to open file at path: &quot;</span> + path</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                ){</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            std::cerr &lt;&lt; <span class="stringliteral">&quot;At &quot;</span> &lt;&lt; where &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        };</div>
 </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classrenderer_1_1FileNotOpenedException.html#a4bdd469395c570520f9b61fb21d6e43a">   22</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="classrenderer_1_1FileNotOpenedException.html#a4bdd469395c570520f9b61fb21d6e43a">getPath</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keywordflow">return</span> path;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        }</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classlogic_1_1FileNotOpenedException.html#aa0d11bac48019309139e1324ca057a6b">   25</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="classlogic_1_1FileNotOpenedException.html#aa0d11bac48019309139e1324ca057a6b">getPath</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keywordflow">return</span> path;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
 </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    };</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    };</div>
 </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>} <span class="comment">// renderer</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_FILENOTOPENEDEXCEPTION_H</span></div>
-<div class="ttc" id="aclassrenderer_1_1FileNotOpenedException_html"><div class="ttname"><a href="classrenderer_1_1FileNotOpenedException.html">renderer::FileNotOpenedException</a></div><div class="ttdef"><b>Definition</b> FileNotOpenedException.h:15</div></div>
-<div class="ttc" id="aclassrenderer_1_1FileNotOpenedException_html_a04d160e5649473cb73ab297786911028"><div class="ttname"><a href="classrenderer_1_1FileNotOpenedException.html#a04d160e5649473cb73ab297786911028">renderer::FileNotOpenedException::FileNotOpenedException</a></div><div class="ttdeci">FileNotOpenedException(const std::string &amp;path)</div><div class="ttdef"><b>Definition</b> FileNotOpenedException.h:18</div></div>
-<div class="ttc" id="aclassrenderer_1_1FileNotOpenedException_html_a4bdd469395c570520f9b61fb21d6e43a"><div class="ttname"><a href="classrenderer_1_1FileNotOpenedException.html#a4bdd469395c570520f9b61fb21d6e43a">renderer::FileNotOpenedException::getPath</a></div><div class="ttdeci">std::string getPath() const</div><div class="ttdef"><b>Definition</b> FileNotOpenedException.h:22</div></div>
-<div class="ttc" id="anamespacerenderer_html"><div class="ttname"><a href="namespacerenderer.html">renderer</a></div><div class="ttdef"><b>Definition</b> IAppConfig.h:12</div></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>} <span class="comment">// renderer</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_FILENOTOPENEDEXCEPTION_H</span></div>
+<div class="ttc" id="aclasslogic_1_1FileNotOpenedException_html"><div class="ttname"><a href="classlogic_1_1FileNotOpenedException.html">logic::FileNotOpenedException</a></div><div class="ttdef"><b>Definition</b> FileNotOpenedException.h:16</div></div>
+<div class="ttc" id="aclasslogic_1_1FileNotOpenedException_html_a49937ffddeb36cc9ebd390c4a988402d"><div class="ttname"><a href="classlogic_1_1FileNotOpenedException.html#a49937ffddeb36cc9ebd390c4a988402d">logic::FileNotOpenedException::FileNotOpenedException</a></div><div class="ttdeci">FileNotOpenedException(const std::string &amp;path, const std::string &amp;where)</div><div class="ttdef"><b>Definition</b> FileNotOpenedException.h:19</div></div>
+<div class="ttc" id="aclasslogic_1_1FileNotOpenedException_html_aa0d11bac48019309139e1324ca057a6b"><div class="ttname"><a href="classlogic_1_1FileNotOpenedException.html#aa0d11bac48019309139e1324ca057a6b">logic::FileNotOpenedException::getPath</a></div><div class="ttdeci">std::string getPath() const</div><div class="ttdef"><b>Definition</b> FileNotOpenedException.h:25</div></div>
+<div class="ttc" id="anamespacelogic_html"><div class="ttname"><a href="namespacelogic.html">logic</a></div><div class="ttdef"><b>Definition</b> IConfig.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
