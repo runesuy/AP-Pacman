@@ -106,8 +106,8 @@ Collaboration diagram for renderer::DelegatingState&lt; Derived &gt;:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a58b1d25e965ad88a0571a4a79c004652" id="r_a58b1d25e965ad88a0571a4a79c004652"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1DelegatingState.html#a58b1d25e965ad88a0571a4a79c004652">DelegatingState</a> (std::unique_ptr&lt; <a class="el" href="classrenderer_1_1IStateUpdateHandler.html">IStateUpdateHandler</a>&lt; Derived &gt; &gt; &amp;&amp;updateHandler, std::unique_ptr&lt; <a class="el" href="classrenderer_1_1IStateInputHandler.html">IStateInputHandler</a>&lt; Derived &gt; &gt; &amp;&amp;inputHandler, std::unique_ptr&lt; <a class="el" href="classrenderer_1_1IStateDrawHandler.html">IStateDrawHandler</a>&lt; Derived &gt; &gt; &amp;&amp;drawHandler)</td></tr>
 <tr class="separator:a58b1d25e965ad88a0571a4a79c004652"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0298b462b736bff13f9433f539422f40" id="r_a0298b462b736bff13f9433f539422f40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1DelegatingState.html#a0298b462b736bff13f9433f539422f40">update</a> () override</td></tr>
-<tr class="separator:a0298b462b736bff13f9433f539422f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc36810cb40ae3fb6af56b0e8f8a98e9" id="r_abc36810cb40ae3fb6af56b0e8f8a98e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1DelegatingState.html#abc36810cb40ae3fb6af56b0e8f8a98e9">update</a> (<a class="el" href="classrenderer_1_1StateManager.html">StateManager</a> &amp;stateManager) override</td></tr>
+<tr class="separator:abc36810cb40ae3fb6af56b0e8f8a98e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e06901dcb7c1938f81ef279c4d295c3" id="r_a5e06901dcb7c1938f81ef279c4d295c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1DelegatingState.html#a5e06901dcb7c1938f81ef279c4d295c3">processInput</a> (sf::Event &amp;event, <a class="el" href="classrenderer_1_1StateManager.html">StateManager</a> &amp;stateManager, const sf::RenderWindow &amp;window) override</td></tr>
 <tr class="separator:a5e06901dcb7c1938f81ef279c4d295c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a218946be351acc60bf8db18bb95d9668" id="r_a218946be351acc60bf8db18bb95d9668"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1DelegatingState.html#a218946be351acc60bf8db18bb95d9668">draw</a> (sf::RenderWindow &amp;window, <a class="el" href="classrenderer_1_1StateManager.html">StateManager</a> &amp;stateManager) override</td></tr>
@@ -253,8 +253,8 @@ template&lt;typename Derived &gt; </div>
 
 </div>
 </div>
-<a id="a0298b462b736bff13f9433f539422f40" name="a0298b462b736bff13f9433f539422f40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0298b462b736bff13f9433f539422f40">&#9670;&#160;</a></span>update()</h2>
+<a id="abc36810cb40ae3fb6af56b0e8f8a98e9" name="abc36810cb40ae3fb6af56b0e8f8a98e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc36810cb40ae3fb6af56b0e8f8a98e9">&#9670;&#160;</a></span>update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -267,7 +267,8 @@ template&lt;typename Derived &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classrenderer_1_1DelegatingState.html">renderer::DelegatingState</a>&lt; Derived &gt;::update </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classrenderer_1_1StateManager.html">StateManager</a> &amp;&#160;</td>
+          <td class="paramname"><em>stateManager</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -279,7 +280,7 @@ template&lt;typename Derived &gt; </div>
 </div><div class="memdoc">
 <p>Update the state logic. </p>
 
-<p>Implements <a class="el" href="classrenderer_1_1IState.html#aeae0f541281a7ba2112e3bc10695f91c">renderer::IState</a>.</p>
+<p>Implements <a class="el" href="classrenderer_1_1IState.html#aa6a0dbc9249ec35934bb2fa74560b9fa">renderer::IState</a>.</p>
 
 </div>
 </div>

@@ -11,7 +11,7 @@ Inheritance diagram for renderer\+::Level\+State\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=205pt]{classrenderer_1_1LevelState__inherit__graph}
+\includegraphics[width=183pt]{classrenderer_1_1LevelState__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -21,28 +21,25 @@ Collaboration diagram for renderer\+::Level\+State\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=205pt]{classrenderer_1_1LevelState__coll__graph}
+\includegraphics[width=183pt]{classrenderer_1_1LevelState__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classrenderer_1_1LevelState_af36f0dde5b8287b3b54ae0d3cd768598}{Level\+State}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IState\+Update\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1LevelState}{Level\+State}} $>$ $>$ \&\&update\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IState\+Input\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1LevelState}{Level\+State}} $>$ $>$ \&\&input\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IState\+Draw\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1LevelState}{Level\+State}} $>$ $>$ \&\&draw\+Handler)
+\mbox{\hyperlink{classrenderer_1_1LevelState_ab7e1c92c42e5534f1be4d146055490d6}{Level\+State}} ()
+\item 
+\mbox{\hyperlink{classrenderer_1_1LevelState_a4244caf26d95d0757d506541459752d2}{Level\+State}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1Score}{logic\+::\+Score}} $>$ \&score)
 \item 
 std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1World}{logic\+::\+World}} $>$ \& \mbox{\hyperlink{classrenderer_1_1LevelState_a985a6130dc1cd71665ef27ff2ecc15c9}{get\+World}} ()
 \item 
 const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1WorldView}{World\+View}} $>$ \& \mbox{\hyperlink{classrenderer_1_1LevelState_aab7f1d9df1307f492ebbd7904f952153}{get\+World\+View}} () const
-\end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1DelegatingState}{renderer\+::\+Delegating\+State$<$ Level\+State $>$}}}
-\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classrenderer_1_1DelegatingState_a58b1d25e965ad88a0571a4a79c004652}{Delegating\+State}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IState\+Update\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1LevelState}{Level\+State}} $>$ $>$ \&\&update\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IState\+Input\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1LevelState}{Level\+State}} $>$ $>$ \&\&input\+Handler, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IState\+Draw\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1LevelState}{Level\+State}} $>$ $>$ \&\&draw\+Handler)
+void \mbox{\hyperlink{classrenderer_1_1LevelState_a6df739911ba5b9f0ff504a7aa3a6bff1}{update}} (\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
 \item 
-void \mbox{\hyperlink{classrenderer_1_1DelegatingState_a0298b462b736bff13f9433f539422f40}{update}} () override
+void \mbox{\hyperlink{classrenderer_1_1LevelState_ad6982856b712e69cea693e20fca8ebcc}{process\+Input}} (sf\+::\+Event \&event, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager, const sf\+::\+Render\+Window \&window) override
 \item 
-void \mbox{\hyperlink{classrenderer_1_1DelegatingState_a5e06901dcb7c1938f81ef279c4d295c3}{process\+Input}} (sf\+::\+Event \&event, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager, const sf\+::\+Render\+Window \&window) override
-\item 
-void \mbox{\hyperlink{classrenderer_1_1DelegatingState_a218946be351acc60bf8db18bb95d9668}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
+void \mbox{\hyperlink{classrenderer_1_1LevelState_a48d26de224efcea400efea0abba3b057}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1IState}{renderer\+::\+IState}}}
 \begin{DoxyCompactItemize}
@@ -55,23 +52,60 @@ virtual \mbox{\hyperlink{classrenderer_1_1IState_ac0eccb586fc4819e616966f4c761c3
 State representing the main gameplay level. Loads a map on the screen and lets player play the game. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classrenderer_1_1LevelState_af36f0dde5b8287b3b54ae0d3cd768598}\label{classrenderer_1_1LevelState_af36f0dde5b8287b3b54ae0d3cd768598} 
+\Hypertarget{classrenderer_1_1LevelState_ab7e1c92c42e5534f1be4d146055490d6}\label{classrenderer_1_1LevelState_ab7e1c92c42e5534f1be4d146055490d6} 
 \index{renderer::LevelState@{renderer::LevelState}!LevelState@{LevelState}}
 \index{LevelState@{LevelState}!renderer::LevelState@{renderer::LevelState}}
-\doxysubsubsection{\texorpdfstring{LevelState()}{LevelState()}}
-{\footnotesize\ttfamily renderer\+::\+Level\+State\+::\+Level\+State (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IState\+Update\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1LevelState}{Level\+State}} $>$ $>$ \&\&}]{update\+Handler,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IState\+Input\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1LevelState}{Level\+State}} $>$ $>$ \&\&}]{input\+Handler,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IState\+Draw\+Handler}}$<$ \mbox{\hyperlink{classrenderer_1_1LevelState}{Level\+State}} $>$ $>$ \&\&}]{draw\+Handler }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{LevelState()}{LevelState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily renderer\+::\+Level\+State\+::\+Level\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classrenderer_1_1LevelState_af36f0dde5b8287b3b54ae0d3cd768598_cgraph}
+\includegraphics[width=350pt]{classrenderer_1_1LevelState_ab7e1c92c42e5534f1be4d146055490d6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1LevelState_a4244caf26d95d0757d506541459752d2}\label{classrenderer_1_1LevelState_a4244caf26d95d0757d506541459752d2} 
+\index{renderer::LevelState@{renderer::LevelState}!LevelState@{LevelState}}
+\index{LevelState@{LevelState}!renderer::LevelState@{renderer::LevelState}}
+\doxysubsubsection{\texorpdfstring{LevelState()}{LevelState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily renderer\+::\+Level\+State\+::\+Level\+State (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1Score}{logic\+::\+Score}} $>$ \&}]{score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1LevelState_a4244caf26d95d0757d506541459752d2_cgraph}
 \end{center}
 \end{figure}
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1LevelState_a48d26de224efcea400efea0abba3b057}\label{classrenderer_1_1LevelState_a48d26de224efcea400efea0abba3b057} 
+\index{renderer::LevelState@{renderer::LevelState}!draw@{draw}}
+\index{draw@{draw}!renderer::LevelState@{renderer::LevelState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void renderer\+::\+Level\+State\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draw the state onto the provided render window. 
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IState_aa5da08382450c63f1fa0a6d2ee81bc8b}{renderer\+::\+IState}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classrenderer_1_1LevelState_a48d26de224efcea400efea0abba3b057_cgraph}
+\end{center}
+\end{figure}
 \Hypertarget{classrenderer_1_1LevelState_a985a6130dc1cd71665ef27ff2ecc15c9}\label{classrenderer_1_1LevelState_a985a6130dc1cd71665ef27ff2ecc15c9} 
 \index{renderer::LevelState@{renderer::LevelState}!getWorld@{getWorld}}
 \index{getWorld@{getWorld}!renderer::LevelState@{renderer::LevelState}}
@@ -84,9 +118,52 @@ Here is the call graph for this function\+:
 \doxysubsubsection{\texorpdfstring{getWorldView()}{getWorldView()}}
 {\footnotesize\ttfamily const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classrenderer_1_1WorldView}{World\+View}} $>$ \& renderer\+::\+Level\+State\+::get\+World\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+\Hypertarget{classrenderer_1_1LevelState_ad6982856b712e69cea693e20fca8ebcc}\label{classrenderer_1_1LevelState_ad6982856b712e69cea693e20fca8ebcc} 
+\index{renderer::LevelState@{renderer::LevelState}!processInput@{processInput}}
+\index{processInput@{processInput}!renderer::LevelState@{renderer::LevelState}}
+\doxysubsubsection{\texorpdfstring{processInput()}{processInput()}}
+{\footnotesize\ttfamily void renderer\+::\+Level\+State\+::process\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event,  }\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager,  }\item[{const sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Process input events for the state. 
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+{\em state\+Manager} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IState_a07cfa1ed487621d0f8504c973557ac88}{renderer\+::\+IState}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1LevelState_ad6982856b712e69cea693e20fca8ebcc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1LevelState_a6df739911ba5b9f0ff504a7aa3a6bff1}\label{classrenderer_1_1LevelState_a6df739911ba5b9f0ff504a7aa3a6bff1} 
+\index{renderer::LevelState@{renderer::LevelState}!update@{update}}
+\index{update@{update}!renderer::LevelState@{renderer::LevelState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void renderer\+::\+Level\+State\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the state logic. 
+
+Implements \mbox{\hyperlink{classrenderer_1_1IState_aa6a0dbc9249ec35934bb2fa74560b9fa}{renderer\+::\+IState}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classrenderer_1_1LevelState_a6df739911ba5b9f0ff504a7aa3a6bff1_cgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-renderer/include/game/states/level/\mbox{\hyperlink{LevelState_8h}{Level\+State.\+h}}\item 
-renderer/src/game/states/level/\mbox{\hyperlink{LevelState_8cpp}{Level\+State.\+cpp}}\end{DoxyCompactItemize}
+renderer/include/game/states/\mbox{\hyperlink{LevelState_8h}{Level\+State.\+h}}\item 
+renderer/src/game/states/\mbox{\hyperlink{LevelState_8cpp}{Level\+State.\+cpp}}\end{DoxyCompactItemize}

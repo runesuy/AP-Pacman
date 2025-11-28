@@ -34,13 +34,10 @@ var searchData=
   ['iobserver_3c_20playermodel_20_3e_31',['IObserver&lt; PlayerModel &gt;',['../classlogic_1_1IObserver.html',1,'logic']]],
   ['istate_32',['IState',['../classrenderer_1_1IState.html',1,'renderer']]],
   ['istatedrawhandler_33',['IStateDrawHandler',['../classrenderer_1_1IStateDrawHandler.html',1,'renderer']]],
-  ['istatedrawhandler_3c_20levelstate_20_3e_34',['IStateDrawHandler&lt; LevelState &gt;',['../classrenderer_1_1IStateDrawHandler.html',1,'renderer']]],
-  ['istatefactory_35',['IStateFactory',['../classrenderer_1_1IStateFactory.html',1,'renderer']]],
-  ['istateinputhandler_36',['IStateInputHandler',['../classrenderer_1_1IStateInputHandler.html',1,'renderer']]],
-  ['istateinputhandler_3c_20levelstate_20_3e_37',['IStateInputHandler&lt; LevelState &gt;',['../classrenderer_1_1IStateInputHandler.html',1,'renderer']]],
-  ['istateupdatehandler_38',['IStateUpdateHandler',['../classrenderer_1_1IStateUpdateHandler.html',1,'renderer']]],
-  ['istateupdatehandler_3c_20levelstate_20_3e_39',['IStateUpdateHandler&lt; LevelState &gt;',['../classrenderer_1_1IStateUpdateHandler.html',1,'renderer']]],
-  ['itextureparser_40',['ITextureParser',['../classrenderer_1_1ITextureParser.html',1,'renderer']]],
-  ['iupdatehandler_41',['IUpdateHandler',['../classlogic_1_1IUpdateHandler.html',1,'logic']]],
-  ['iworldobjectview_42',['IWorldObjectView',['../classrenderer_1_1IWorldObjectView.html',1,'renderer']]]
+  ['istatefactory_34',['IStateFactory',['../classrenderer_1_1IStateFactory.html',1,'renderer']]],
+  ['istateinputhandler_35',['IStateInputHandler',['../classrenderer_1_1IStateInputHandler.html',1,'renderer']]],
+  ['istateupdatehandler_36',['IStateUpdateHandler',['../classrenderer_1_1IStateUpdateHandler.html',1,'renderer']]],
+  ['itextureparser_37',['ITextureParser',['../classrenderer_1_1ITextureParser.html',1,'renderer']]],
+  ['iupdatehandler_38',['IUpdateHandler',['../classlogic_1_1IUpdateHandler.html',1,'logic']]],
+  ['iworldobjectview_39',['IWorldObjectView',['../classrenderer_1_1IWorldObjectView.html',1,'renderer']]]
 ];

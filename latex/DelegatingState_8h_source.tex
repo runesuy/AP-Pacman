@@ -25,11 +25,11 @@
 \DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::unique\_ptr<IStateInputHandler<Derived>>\ \_inputHandler;}
 \DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::unique\_ptr<IStateDrawHandler<Derived>>\ \_drawHandler;}
 \DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1DelegatingState_a58b1d25e965ad88a0571a4a79c004652}{DelegatingState}}(std::unique\_ptr<\mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IStateUpdateHandler<Derived>}}>\ \&\&updateHandler,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1DelegatingState}{DelegatingState}}(std::unique\_ptr<\mbox{\hyperlink{classrenderer_1_1IStateUpdateHandler}{IStateUpdateHandler<Derived>}}>\ \&\&updateHandler,}
 \DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<\mbox{\hyperlink{classrenderer_1_1IStateInputHandler}{IStateInputHandler<Derived>}}>\ \&\&inputHandler,}
 \DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<\mbox{\hyperlink{classrenderer_1_1IStateDrawHandler}{IStateDrawHandler<Derived>}}>\ \&\&drawHandler);}
 \DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1DelegatingState_a0298b462b736bff13f9433f539422f40}{update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1DelegatingState_abc36810cb40ae3fb6af56b0e8f8a98e9}{update}}(\mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}\ \&stateManager)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00029\ }
 \DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1DelegatingState_a5e06901dcb7c1938f81ef279c4d295c3}{processInput}}(sf::Event\ \&event,\ \mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}\ \&stateManager,\ \textcolor{keyword}{const}\ sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00031\ }
@@ -37,7 +37,7 @@
 \DoxyCodeLine{00033\ \ \ \ \ \};}
 \DoxyCodeLine{00034\ }
 \DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Derived>}
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1DelegatingState_a0298b462b736bff13f9433f539422f40}{renderer::DelegatingState<Derived>::update}}()\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1DelegatingState_abc36810cb40ae3fb6af56b0e8f8a98e9}{renderer::DelegatingState<Derived>::update}}(\mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}\ \&stateManager)\ \{}
 \DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \_updateHandler-\/>update(\textcolor{keyword}{static\_cast<}Derived\&\textcolor{keyword}{>}(*\textcolor{keyword}{this}));}
 \DoxyCodeLine{00038\ \ \ \ \ \}}
 \DoxyCodeLine{00039\ }

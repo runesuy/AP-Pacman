@@ -11,13 +11,13 @@ Inheritance diagram for renderer\+::IState\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classrenderer_1_1IState__inherit__graph}
+\includegraphics[width=324pt]{classrenderer_1_1IState__inherit__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \mbox{\hyperlink{classrenderer_1_1IState_aeae0f541281a7ba2112e3bc10695f91c}{update}} ()=0
+virtual void \mbox{\hyperlink{classrenderer_1_1IState_aa6a0dbc9249ec35934bb2fa74560b9fa}{update}} (\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager)=0
 \item 
 virtual void \mbox{\hyperlink{classrenderer_1_1IState_a07cfa1ed487621d0f8504c973557ac88}{process\+Input}} (sf\+::\+Event \&event, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager, const sf\+::\+Render\+Window \&window)=0
 \item 
@@ -53,7 +53,7 @@ Draw the state onto the provided render window.
 \end{DoxyParams}
 
 
-Implemented in \mbox{\hyperlink{classrenderer_1_1DelegatingState_a218946be351acc60bf8db18bb95d9668}{renderer\+::\+Delegating\+State$<$ Derived $>$}}, \mbox{\hyperlink{classrenderer_1_1DelegatingState_a218946be351acc60bf8db18bb95d9668}{renderer\+::\+Delegating\+State$<$ Level\+State $>$}}, \mbox{\hyperlink{classrenderer_1_1MenuState_a8a732273c9273a1acf2b237ee75b39cb}{renderer\+::\+Menu\+State}}, and \mbox{\hyperlink{classrenderer_1_1PausedState_a56549a05487c1909614b5f15131b6837}{renderer\+::\+Paused\+State}}.
+Implemented in \mbox{\hyperlink{classrenderer_1_1DelegatingState_a218946be351acc60bf8db18bb95d9668}{renderer\+::\+Delegating\+State$<$ Derived $>$}}, \mbox{\hyperlink{classrenderer_1_1GameOverState_a62144a51ea949c8196768e35640b9771}{renderer\+::\+Game\+Over\+State}}, \mbox{\hyperlink{classrenderer_1_1LevelState_a48d26de224efcea400efea0abba3b057}{renderer\+::\+Level\+State}}, \mbox{\hyperlink{classrenderer_1_1MenuState_a8a732273c9273a1acf2b237ee75b39cb}{renderer\+::\+Menu\+State}}, \mbox{\hyperlink{classrenderer_1_1PausedState_a56549a05487c1909614b5f15131b6837}{renderer\+::\+Paused\+State}}, and \mbox{\hyperlink{classrenderer_1_1VictoryState_a866c450a9e995325239388d654cacb0a}{renderer\+::\+Victory\+State}}.
 
 \Hypertarget{classrenderer_1_1IState_a07cfa1ed487621d0f8504c973557ac88}\label{classrenderer_1_1IState_a07cfa1ed487621d0f8504c973557ac88} 
 \index{renderer::IState@{renderer::IState}!processInput@{processInput}}
@@ -70,17 +70,17 @@ Process input events for the state.
 \end{DoxyParams}
 
 
-Implemented in \mbox{\hyperlink{classrenderer_1_1DelegatingState_a5e06901dcb7c1938f81ef279c4d295c3}{renderer\+::\+Delegating\+State$<$ Derived $>$}}, \mbox{\hyperlink{classrenderer_1_1DelegatingState_a5e06901dcb7c1938f81ef279c4d295c3}{renderer\+::\+Delegating\+State$<$ Level\+State $>$}}, \mbox{\hyperlink{classrenderer_1_1MenuState_a3bdc60702238b8eac4533b83cd408fe2}{renderer\+::\+Menu\+State}}, and \mbox{\hyperlink{classrenderer_1_1PausedState_a4f07372736d853ba71db072908f02847}{renderer\+::\+Paused\+State}}.
+Implemented in \mbox{\hyperlink{classrenderer_1_1DelegatingState_a5e06901dcb7c1938f81ef279c4d295c3}{renderer\+::\+Delegating\+State$<$ Derived $>$}}, \mbox{\hyperlink{classrenderer_1_1GameOverState_a10676540136b73370172da3ee953ffd4}{renderer\+::\+Game\+Over\+State}}, \mbox{\hyperlink{classrenderer_1_1LevelState_ad6982856b712e69cea693e20fca8ebcc}{renderer\+::\+Level\+State}}, \mbox{\hyperlink{classrenderer_1_1MenuState_a3bdc60702238b8eac4533b83cd408fe2}{renderer\+::\+Menu\+State}}, \mbox{\hyperlink{classrenderer_1_1PausedState_a4f07372736d853ba71db072908f02847}{renderer\+::\+Paused\+State}}, and \mbox{\hyperlink{classrenderer_1_1VictoryState_ac22b4332042fccb98e6e6409992c0c4c}{renderer\+::\+Victory\+State}}.
 
-\Hypertarget{classrenderer_1_1IState_aeae0f541281a7ba2112e3bc10695f91c}\label{classrenderer_1_1IState_aeae0f541281a7ba2112e3bc10695f91c} 
+\Hypertarget{classrenderer_1_1IState_aa6a0dbc9249ec35934bb2fa74560b9fa}\label{classrenderer_1_1IState_aa6a0dbc9249ec35934bb2fa74560b9fa} 
 \index{renderer::IState@{renderer::IState}!update@{update}}
 \index{update@{update}!renderer::IState@{renderer::IState}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily virtual void renderer\+::\+IState\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void renderer\+::\+IState\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 Update the state logic. 
 
-Implemented in \mbox{\hyperlink{classrenderer_1_1DelegatingState_a0298b462b736bff13f9433f539422f40}{renderer\+::\+Delegating\+State$<$ Derived $>$}}, \mbox{\hyperlink{classrenderer_1_1DelegatingState_a0298b462b736bff13f9433f539422f40}{renderer\+::\+Delegating\+State$<$ Level\+State $>$}}, \mbox{\hyperlink{classrenderer_1_1MenuState_aaa386a72486d258b97c1726df2eea980}{renderer\+::\+Menu\+State}}, and \mbox{\hyperlink{classrenderer_1_1PausedState_a7e62a460ab3689e7361a8e85ffbd4f92}{renderer\+::\+Paused\+State}}.
+Implemented in \mbox{\hyperlink{classrenderer_1_1DelegatingState_abc36810cb40ae3fb6af56b0e8f8a98e9}{renderer\+::\+Delegating\+State$<$ Derived $>$}}, \mbox{\hyperlink{classrenderer_1_1GameOverState_a09f5ba8ec279d498148887420b9859c5}{renderer\+::\+Game\+Over\+State}}, \mbox{\hyperlink{classrenderer_1_1LevelState_a6df739911ba5b9f0ff504a7aa3a6bff1}{renderer\+::\+Level\+State}}, \mbox{\hyperlink{classrenderer_1_1MenuState_a61e49f6e7c644a8f24f7cf45d7920ac3}{renderer\+::\+Menu\+State}}, \mbox{\hyperlink{classrenderer_1_1PausedState_a1cff9ffcf5cd13c9b2a0e07caaba16eb}{renderer\+::\+Paused\+State}}, and \mbox{\hyperlink{classrenderer_1_1VictoryState_a3c156326b426dcc07927c29148127e7d}{renderer\+::\+Victory\+State}}.
 
 
 

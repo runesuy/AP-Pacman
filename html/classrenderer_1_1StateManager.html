@@ -96,6 +96,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2b8a71923469fe8908528592683c9be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48940184a09dce24ee08748a41b7e741" id="r_a48940184a09dce24ee08748a41b7e741"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1StateManager.html#a48940184a09dce24ee08748a41b7e741">popState</a> ()</td></tr>
 <tr class="separator:a48940184a09dce24ee08748a41b7e741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a275ac75c18d9b5cd61cc459663f6be27" id="r_a275ac75c18d9b5cd61cc459663f6be27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1StateManager.html#a275ac75c18d9b5cd61cc459663f6be27">replaceState</a> (std::unique_ptr&lt; <a class="el" href="classrenderer_1_1IState.html">IState</a> &gt; &amp;&amp;state)</td></tr>
+<tr class="separator:a275ac75c18d9b5cd61cc459663f6be27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages the stack of game states, allowing for state transitions and delegating input, update, and draw calls to the current state. </p>
@@ -220,6 +222,24 @@ Public Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">void renderer::StateManager::pushState </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classrenderer_1_1IState.html">IState</a> &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a275ac75c18d9b5cd61cc459663f6be27" name="a275ac75c18d9b5cd61cc459663f6be27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a275ac75c18d9b5cd61cc459663f6be27">&#9670;&#160;</a></span>replaceState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void renderer::StateManager::replaceState </td>
           <td>(</td>
           <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classrenderer_1_1IState.html">IState</a> &gt; &amp;&amp;&#160;</td>
           <td class="paramname"><em>state</em></td><td>)</td>

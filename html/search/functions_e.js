@@ -6,5 +6,6 @@ var searchData=
   ['redghostview_3',['RedGhostView',['../classrenderer_1_1RedGhostView.html#a39acb71e2d4e43f782bd443730cd4b84',1,'renderer::RedGhostView']]],
   ['removelives_4',['removeLives',['../classlogic_1_1LifeCounter.html#a1851f0902c5b2e61fc585895c95e9d2f',1,'logic::LifeCounter']]],
   ['removeobject_5',['removeObject',['../classlogic_1_1World.html#aa0ee63479670036e50b093909e6ccfcb',1,'logic::World']]],
-  ['run_6',['run',['../classrenderer_1_1Game.html#a47e7e9dc327781e6797f3b5f43b9bc8d',1,'renderer::Game']]]
+  ['replacestate_6',['replaceState',['../classrenderer_1_1StateManager.html#a275ac75c18d9b5cd61cc459663f6be27',1,'renderer::StateManager']]],
+  ['run_7',['run',['../classrenderer_1_1Game.html#a47e7e9dc327781e6797f3b5f43b9bc8d',1,'renderer::Game']]]
 ];

@@ -86,24 +86,26 @@ Inheritance diagram for renderer::IState:</div>
 <div class="dyncontent">
 <div class="center"><img src="classrenderer_1_1IState__inherit__graph.png" border="0" usemap="#arenderer_1_1IState_inherit__map" alt="Inheritance graph"/></div>
 <map name="arenderer_1_1IState_inherit__map" id="arenderer_1_1IState_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,108,115,133"/>
-<area shape="rect" href="classrenderer_1_1DelegatingState.html" title=" " alt="" coords="163,5,329,46"/>
-<area shape="poly" title=" " alt="" coords="92,97,161,57,189,44,191,49,164,61,95,101"/>
-<area shape="rect" href="classrenderer_1_1DelegatingState.html" title=" " alt="" coords="163,71,329,111"/>
-<area shape="poly" title=" " alt="" coords="130,107,162,102,162,107,131,112"/>
-<area shape="rect" href="classrenderer_1_1MenuState.html" title=" " alt="" coords="177,136,315,161"/>
-<area shape="poly" title=" " alt="" coords="131,128,177,135,176,141,130,133"/>
-<area shape="rect" href="classrenderer_1_1PausedState.html" title=" " alt="" coords="171,185,321,211"/>
-<area shape="poly" title=" " alt="" coords="98,139,164,171,194,182,192,187,162,176,95,143"/>
-<area shape="rect" href="classrenderer_1_1LevelState.html" title=" " alt="" coords="377,13,514,39"/>
-<area shape="poly" title=" " alt="" coords="345,23,377,23,377,28,345,28"/>
+<area shape="rect" title=" " alt="" coords="5,145,115,171"/>
+<area shape="rect" href="classrenderer_1_1DelegatingState.html" title=" " alt="" coords="164,5,330,46"/>
+<area shape="poly" title=" " alt="" coords="80,131,115,93,161,55,182,44,184,49,164,60,119,96,84,134"/>
+<area shape="rect" href="classrenderer_1_1GameOverState.html" title=" " alt="" coords="163,70,331,96"/>
+<area shape="poly" title=" " alt="" coords="97,135,162,105,193,94,195,99,164,109,99,140"/>
+<area shape="rect" href="classrenderer_1_1LevelState.html" title=" " alt="" coords="178,120,316,145"/>
+<area shape="poly" title=" " alt="" coords="130,146,177,139,178,144,131,151"/>
+<area shape="rect" href="classrenderer_1_1MenuState.html" title=" " alt="" coords="178,169,316,195"/>
+<area shape="poly" title=" " alt="" coords="131,164,178,170,177,175,130,169"/>
+<area shape="rect" href="classrenderer_1_1PausedState.html" title=" " alt="" coords="172,218,322,244"/>
+<area shape="poly" title=" " alt="" coords="100,176,164,205,195,215,193,220,162,209,98,180"/>
+<area shape="rect" href="classrenderer_1_1VictoryState.html" title=" " alt="" coords="174,268,320,293"/>
+<area shape="poly" title=" " alt="" coords="83,181,118,219,164,254,187,264,185,269,161,259,115,223,79,185"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeae0f541281a7ba2112e3bc10695f91c" id="r_aeae0f541281a7ba2112e3bc10695f91c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1IState.html#aeae0f541281a7ba2112e3bc10695f91c">update</a> ()=0</td></tr>
-<tr class="separator:aeae0f541281a7ba2112e3bc10695f91c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6a0dbc9249ec35934bb2fa74560b9fa" id="r_aa6a0dbc9249ec35934bb2fa74560b9fa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1IState.html#aa6a0dbc9249ec35934bb2fa74560b9fa">update</a> (<a class="el" href="classrenderer_1_1StateManager.html">StateManager</a> &amp;stateManager)=0</td></tr>
+<tr class="separator:aa6a0dbc9249ec35934bb2fa74560b9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07cfa1ed487621d0f8504c973557ac88" id="r_a07cfa1ed487621d0f8504c973557ac88"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1IState.html#a07cfa1ed487621d0f8504c973557ac88">processInput</a> (sf::Event &amp;event, <a class="el" href="classrenderer_1_1StateManager.html">StateManager</a> &amp;stateManager, const sf::RenderWindow &amp;window)=0</td></tr>
 <tr class="separator:a07cfa1ed487621d0f8504c973557ac88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5da08382450c63f1fa0a6d2ee81bc8b" id="r_aa5da08382450c63f1fa0a6d2ee81bc8b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1IState.html#aa5da08382450c63f1fa0a6d2ee81bc8b">draw</a> (sf::RenderWindow &amp;window, <a class="el" href="classrenderer_1_1StateManager.html">StateManager</a> &amp;stateManager)=0</td></tr>
@@ -180,7 +182,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classrenderer_1_1DelegatingState.html#a218946be351acc60bf8db18bb95d9668">renderer::DelegatingState&lt; Derived &gt;</a>, <a class="el" href="classrenderer_1_1DelegatingState.html#a218946be351acc60bf8db18bb95d9668">renderer::DelegatingState&lt; LevelState &gt;</a>, <a class="el" href="classrenderer_1_1MenuState.html#a8a732273c9273a1acf2b237ee75b39cb">renderer::MenuState</a>, and <a class="el" href="classrenderer_1_1PausedState.html#a56549a05487c1909614b5f15131b6837">renderer::PausedState</a>.</p>
+<p>Implemented in <a class="el" href="classrenderer_1_1DelegatingState.html#a218946be351acc60bf8db18bb95d9668">renderer::DelegatingState&lt; Derived &gt;</a>, <a class="el" href="classrenderer_1_1GameOverState.html#a62144a51ea949c8196768e35640b9771">renderer::GameOverState</a>, <a class="el" href="classrenderer_1_1LevelState.html#a48d26de224efcea400efea0abba3b057">renderer::LevelState</a>, <a class="el" href="classrenderer_1_1MenuState.html#a8a732273c9273a1acf2b237ee75b39cb">renderer::MenuState</a>, <a class="el" href="classrenderer_1_1PausedState.html#a56549a05487c1909614b5f15131b6837">renderer::PausedState</a>, and <a class="el" href="classrenderer_1_1VictoryState.html#a866c450a9e995325239388d654cacb0a">renderer::VictoryState</a>.</p>
 
 </div>
 </div>
@@ -231,12 +233,12 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classrenderer_1_1DelegatingState.html#a5e06901dcb7c1938f81ef279c4d295c3">renderer::DelegatingState&lt; Derived &gt;</a>, <a class="el" href="classrenderer_1_1DelegatingState.html#a5e06901dcb7c1938f81ef279c4d295c3">renderer::DelegatingState&lt; LevelState &gt;</a>, <a class="el" href="classrenderer_1_1MenuState.html#a3bdc60702238b8eac4533b83cd408fe2">renderer::MenuState</a>, and <a class="el" href="classrenderer_1_1PausedState.html#a4f07372736d853ba71db072908f02847">renderer::PausedState</a>.</p>
+<p>Implemented in <a class="el" href="classrenderer_1_1DelegatingState.html#a5e06901dcb7c1938f81ef279c4d295c3">renderer::DelegatingState&lt; Derived &gt;</a>, <a class="el" href="classrenderer_1_1GameOverState.html#a10676540136b73370172da3ee953ffd4">renderer::GameOverState</a>, <a class="el" href="classrenderer_1_1LevelState.html#ad6982856b712e69cea693e20fca8ebcc">renderer::LevelState</a>, <a class="el" href="classrenderer_1_1MenuState.html#a3bdc60702238b8eac4533b83cd408fe2">renderer::MenuState</a>, <a class="el" href="classrenderer_1_1PausedState.html#a4f07372736d853ba71db072908f02847">renderer::PausedState</a>, and <a class="el" href="classrenderer_1_1VictoryState.html#ac22b4332042fccb98e6e6409992c0c4c">renderer::VictoryState</a>.</p>
 
 </div>
 </div>
-<a id="aeae0f541281a7ba2112e3bc10695f91c" name="aeae0f541281a7ba2112e3bc10695f91c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeae0f541281a7ba2112e3bc10695f91c">&#9670;&#160;</a></span>update()</h2>
+<a id="aa6a0dbc9249ec35934bb2fa74560b9fa" name="aa6a0dbc9249ec35934bb2fa74560b9fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6a0dbc9249ec35934bb2fa74560b9fa">&#9670;&#160;</a></span>update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +249,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void renderer::IState::update </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classrenderer_1_1StateManager.html">StateManager</a> &amp;&#160;</td>
+          <td class="paramname"><em>stateManager</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -259,7 +262,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Update the state logic. </p>
 
-<p>Implemented in <a class="el" href="classrenderer_1_1DelegatingState.html#a0298b462b736bff13f9433f539422f40">renderer::DelegatingState&lt; Derived &gt;</a>, <a class="el" href="classrenderer_1_1DelegatingState.html#a0298b462b736bff13f9433f539422f40">renderer::DelegatingState&lt; LevelState &gt;</a>, <a class="el" href="classrenderer_1_1MenuState.html#aaa386a72486d258b97c1726df2eea980">renderer::MenuState</a>, and <a class="el" href="classrenderer_1_1PausedState.html#a7e62a460ab3689e7361a8e85ffbd4f92">renderer::PausedState</a>.</p>
+<p>Implemented in <a class="el" href="classrenderer_1_1DelegatingState.html#abc36810cb40ae3fb6af56b0e8f8a98e9">renderer::DelegatingState&lt; Derived &gt;</a>, <a class="el" href="classrenderer_1_1GameOverState.html#a09f5ba8ec279d498148887420b9859c5">renderer::GameOverState</a>, <a class="el" href="classrenderer_1_1LevelState.html#a6df739911ba5b9f0ff504a7aa3a6bff1">renderer::LevelState</a>, <a class="el" href="classrenderer_1_1MenuState.html#a61e49f6e7c644a8f24f7cf45d7920ac3">renderer::MenuState</a>, <a class="el" href="classrenderer_1_1PausedState.html#a1cff9ffcf5cd13c9b2a0e07caaba16eb">renderer::PausedState</a>, and <a class="el" href="classrenderer_1_1VictoryState.html#a3c156326b426dcc07927c29148127e7d">renderer::VictoryState</a>.</p>
 
 </div>
 </div>

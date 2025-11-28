@@ -116,14 +116,17 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classrenderer_1_1StateManager.html#a2b8a71923469fe8908528592683c9be3">pushState</a>(std::unique_ptr&lt;IState&gt;&amp;&amp; state);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classrenderer_1_1StateManager.html#a48940184a09dce24ee08748a41b7e741">popState</a>();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    };</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classrenderer_1_1StateManager.html#a275ac75c18d9b5cd61cc459663f6be27">replaceState</a>(std::unique_ptr&lt;IState&gt;&amp;&amp; state);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    };</div>
 </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_STATEMANAGER_H</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_STATEMANAGER_H</span></div>
 <div class="ttc" id="aWorld_8h_html"><div class="ttname"><a href="World_8h.html">World.h</a></div></div>
 <div class="ttc" id="aclassrenderer_1_1StateManager_html"><div class="ttname"><a href="classrenderer_1_1StateManager.html">renderer::StateManager</a></div><div class="ttdef"><b>Definition</b> StateManager.h:23</div></div>
+<div class="ttc" id="aclassrenderer_1_1StateManager_html_a275ac75c18d9b5cd61cc459663f6be27"><div class="ttname"><a href="classrenderer_1_1StateManager.html#a275ac75c18d9b5cd61cc459663f6be27">renderer::StateManager::replaceState</a></div><div class="ttdeci">void replaceState(std::unique_ptr&lt; IState &gt; &amp;&amp;state)</div><div class="ttdef"><b>Definition</b> StateManager.cpp:41</div></div>
 <div class="ttc" id="aclassrenderer_1_1StateManager_html_a2817f9241cfd076972064900da72283c"><div class="ttname"><a href="classrenderer_1_1StateManager.html#a2817f9241cfd076972064900da72283c">renderer::StateManager::processInput</a></div><div class="ttdeci">void processInput(sf::Event &amp;event, sf::RenderWindow &amp;window)</div><div class="ttdef"><b>Definition</b> StateManager.cpp:15</div></div>
 <div class="ttc" id="aclassrenderer_1_1StateManager_html_a2b8a71923469fe8908528592683c9be3"><div class="ttname"><a href="classrenderer_1_1StateManager.html#a2b8a71923469fe8908528592683c9be3">renderer::StateManager::pushState</a></div><div class="ttdeci">void pushState(std::unique_ptr&lt; IState &gt; &amp;&amp;state)</div><div class="ttdef"><b>Definition</b> StateManager.cpp:33</div></div>
 <div class="ttc" id="aclassrenderer_1_1StateManager_html_a48940184a09dce24ee08748a41b7e741"><div class="ttname"><a href="classrenderer_1_1StateManager.html#a48940184a09dce24ee08748a41b7e741">renderer::StateManager::popState</a></div><div class="ttdeci">void popState()</div><div class="ttdef"><b>Definition</b> StateManager.cpp:37</div></div>

@@ -1,0 +1,126 @@
+\doxysection{renderer\+::Game\+Over\+State Class Reference}
+\hypertarget{classrenderer_1_1GameOverState}{}\label{classrenderer_1_1GameOverState}\index{renderer::GameOverState@{renderer::GameOverState}}
+
+
+{\ttfamily \#include $<$Game\+Over\+State.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::Game\+Over\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classrenderer_1_1GameOverState__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::Game\+Over\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{classrenderer_1_1GameOverState__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrenderer_1_1GameOverState_a9414884107d4f3fed489417ab213ccac}{Game\+Over\+State}} ()
+\item 
+void \mbox{\hyperlink{classrenderer_1_1GameOverState_a09f5ba8ec279d498148887420b9859c5}{update}} (\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1GameOverState_a10676540136b73370172da3ee953ffd4}{process\+Input}} (sf\+::\+Event \&event, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager, const sf\+::\+Render\+Window \&window) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1GameOverState_a62144a51ea949c8196768e35640b9771}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1IState}{renderer\+::\+IState}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classrenderer_1_1IState_ac0eccb586fc4819e616966f4c761c39d}{\texorpdfstring{$\sim$}{\string~}\+IState}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrenderer_1_1GameOverState_a9414884107d4f3fed489417ab213ccac}\label{classrenderer_1_1GameOverState_a9414884107d4f3fed489417ab213ccac} 
+\index{renderer::GameOverState@{renderer::GameOverState}!GameOverState@{GameOverState}}
+\index{GameOverState@{GameOverState}!renderer::GameOverState@{renderer::GameOverState}}
+\doxysubsubsection{\texorpdfstring{GameOverState()}{GameOverState()}}
+{\footnotesize\ttfamily renderer\+::\+Game\+Over\+State\+::\+Game\+Over\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1GameOverState_a9414884107d4f3fed489417ab213ccac_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1GameOverState_a62144a51ea949c8196768e35640b9771}\label{classrenderer_1_1GameOverState_a62144a51ea949c8196768e35640b9771} 
+\index{renderer::GameOverState@{renderer::GameOverState}!draw@{draw}}
+\index{draw@{draw}!renderer::GameOverState@{renderer::GameOverState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void renderer\+::\+Game\+Over\+State\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draw the state onto the provided render window. 
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IState_aa5da08382450c63f1fa0a6d2ee81bc8b}{renderer\+::\+IState}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1GameOverState_a62144a51ea949c8196768e35640b9771_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1GameOverState_a10676540136b73370172da3ee953ffd4}\label{classrenderer_1_1GameOverState_a10676540136b73370172da3ee953ffd4} 
+\index{renderer::GameOverState@{renderer::GameOverState}!processInput@{processInput}}
+\index{processInput@{processInput}!renderer::GameOverState@{renderer::GameOverState}}
+\doxysubsubsection{\texorpdfstring{processInput()}{processInput()}}
+{\footnotesize\ttfamily void renderer\+::\+Game\+Over\+State\+::process\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event,  }\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager,  }\item[{const sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Process input events for the state. 
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+{\em state\+Manager} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IState_a07cfa1ed487621d0f8504c973557ac88}{renderer\+::\+IState}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1GameOverState_a10676540136b73370172da3ee953ffd4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1GameOverState_a09f5ba8ec279d498148887420b9859c5}\label{classrenderer_1_1GameOverState_a09f5ba8ec279d498148887420b9859c5} 
+\index{renderer::GameOverState@{renderer::GameOverState}!update@{update}}
+\index{update@{update}!renderer::GameOverState@{renderer::GameOverState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void renderer\+::\+Game\+Over\+State\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the state logic. 
+
+Implements \mbox{\hyperlink{classrenderer_1_1IState_aa6a0dbc9249ec35934bb2fa74560b9fa}{renderer\+::\+IState}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/game/states/\mbox{\hyperlink{GameOverState_8h}{Game\+Over\+State.\+h}}\item 
+renderer/src/game/states/\mbox{\hyperlink{GameOverState_8cpp}{Game\+Over\+State.\+cpp}}\end{DoxyCompactItemize}

@@ -2,7 +2,7 @@ var searchData=
 [
   ['label_0',['label',['../classrenderer_1_1Label.html#a6a43d6b85e5393c7d3a1fc2102ee75ac',1,'renderer::Label::Label()'],['../classrenderer_1_1Label.html#a53eacf0ab24c25be2fa51660a49d9c8d',1,'renderer::Label::Label(const std::string &amp;str)'],['../classrenderer_1_1Label.html#aae61a022e1f80b87da516d4fd8705962',1,'renderer::Label::Label(const std::string &amp;str, const sf::Font &amp;font)']]],
   ['levelcomplete_1',['levelComplete',['../classlogic_1_1World.html#a931a7c9174861dc9881f7d78075d62e6',1,'logic::World']]],
-  ['levelstate_2',['LevelState',['../classrenderer_1_1LevelState.html#af36f0dde5b8287b3b54ae0d3cd768598',1,'renderer::LevelState']]],
+  ['levelstate_2',['levelstate',['../classrenderer_1_1LevelState.html#ab7e1c92c42e5534f1be4d146055490d6',1,'renderer::LevelState::LevelState()'],['../classrenderer_1_1LevelState.html#a4244caf26d95d0757d506541459752d2',1,'renderer::LevelState::LevelState(const std::shared_ptr&lt; logic::Score &gt; &amp;score)']]],
   ['lifecounter_3',['LifeCounter',['../classlogic_1_1LifeCounter.html#adc9a66aefb92780e8f4027aa711c6462',1,'logic::LifeCounter']]],
   ['livesview_4',['LivesView',['../classrenderer_1_1LivesView.html#a68ff7221256d3ea91ecfe4f9c1338ebd',1,'renderer::LivesView']]],
   ['loadconfigfile_5',['loadconfigfile',['../classrenderer_1_1IConfigParser.html#a7bca04342b5562edc5de2352d996a113',1,'renderer::IConfigParser::loadConfigFile()'],['../classrenderer_1_1JSONConfigParser.html#a69b9aec32b78a8f49fdb34f76fcc5970',1,'renderer::JSONConfigParser::loadConfigFile()']]],

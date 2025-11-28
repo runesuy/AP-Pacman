@@ -1,0 +1,37 @@
+\doxysection{Victory\+State.\+h}
+\hypertarget{VictoryState_8h_source}{}\label{VictoryState_8h_source}\index{renderer/include/game/states/VictoryState.h@{renderer/include/game/states/VictoryState.h}}
+\mbox{\hyperlink{VictoryState_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ runes\ on\ 28/11/2025.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_VICTORYSTATE\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_VICTORYSTATE\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IState_8h}{core/states/IState.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Score_8h}{core/world/Score.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Label_8h}{core/drawable/ui/Label.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1VictoryState}{VictoryState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IState}{IState}}\{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ std::shared\_ptr<logic::Score>\ passToNextLevel;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label}{Label}}\ victoryLabel\{\textcolor{stringliteral}{"{}LEVEL\ COMPLETE"{}}\};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label}{Label}}\ currentScoreLabel;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ currentScoreLabelPref\ =\ \textcolor{stringliteral}{"{}YOUR\ CURRENT\ SCORE\ IS:\ "{}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label}{Label}}\ descrLabel\{\textcolor{stringliteral}{"{}PRESS\ ANY\ KEY\ TO\ CONTINUE"{}}\};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classrenderer_1_1VictoryState}{VictoryState}}(\textcolor{keyword}{const}\ std::shared\_ptr<logic::Score>\&\ passToNextLevel);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1VictoryState_a3c156326b426dcc07927c29148127e7d}{update}}(\mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}\ \&stateManager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1VictoryState_ac22b4332042fccb98e6e6409992c0c4c}{processInput}}(sf::Event\ \&event,\ \mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}\ \&stateManager,\ \textcolor{keyword}{const}\ sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1VictoryState_a866c450a9e995325239388d654cacb0a}{draw}}(sf::RenderWindow\ \&window,\ \mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}\ \&stateManager)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ \ \ \ \ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_VICTORYSTATE\_H}}
+
+\end{DoxyCode}

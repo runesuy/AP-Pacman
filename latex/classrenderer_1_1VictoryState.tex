@@ -1,0 +1,126 @@
+\doxysection{renderer\+::Victory\+State Class Reference}
+\hypertarget{classrenderer_1_1VictoryState}{}\label{classrenderer_1_1VictoryState}\index{renderer::VictoryState@{renderer::VictoryState}}
+
+
+{\ttfamily \#include $<$Victory\+State.\+h$>$}
+
+
+
+Inheritance diagram for renderer\+::Victory\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classrenderer_1_1VictoryState__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for renderer\+::Victory\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classrenderer_1_1VictoryState__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrenderer_1_1VictoryState_a9753bdeaca054522882b51122291e0d9}{Victory\+State}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1Score}{logic\+::\+Score}} $>$ \&pass\+To\+Next\+Level)
+\item 
+void \mbox{\hyperlink{classrenderer_1_1VictoryState_a3c156326b426dcc07927c29148127e7d}{update}} (\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1VictoryState_ac22b4332042fccb98e6e6409992c0c4c}{process\+Input}} (sf\+::\+Event \&event, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager, const sf\+::\+Render\+Window \&window) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1VictoryState_a866c450a9e995325239388d654cacb0a}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1IState}{renderer\+::\+IState}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classrenderer_1_1IState_ac0eccb586fc4819e616966f4c761c39d}{\texorpdfstring{$\sim$}{\string~}\+IState}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrenderer_1_1VictoryState_a9753bdeaca054522882b51122291e0d9}\label{classrenderer_1_1VictoryState_a9753bdeaca054522882b51122291e0d9} 
+\index{renderer::VictoryState@{renderer::VictoryState}!VictoryState@{VictoryState}}
+\index{VictoryState@{VictoryState}!renderer::VictoryState@{renderer::VictoryState}}
+\doxysubsubsection{\texorpdfstring{VictoryState()}{VictoryState()}}
+{\footnotesize\ttfamily renderer\+::\+Victory\+State\+::\+Victory\+State (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1Score}{logic\+::\+Score}} $>$ \&}]{pass\+To\+Next\+Level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1VictoryState_a9753bdeaca054522882b51122291e0d9_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrenderer_1_1VictoryState_a866c450a9e995325239388d654cacb0a}\label{classrenderer_1_1VictoryState_a866c450a9e995325239388d654cacb0a} 
+\index{renderer::VictoryState@{renderer::VictoryState}!draw@{draw}}
+\index{draw@{draw}!renderer::VictoryState@{renderer::VictoryState}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void renderer\+::\+Victory\+State\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draw the state onto the provided render window. 
+\begin{DoxyParams}{Parameters}
+{\em window} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IState_aa5da08382450c63f1fa0a6d2ee81bc8b}{renderer\+::\+IState}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrenderer_1_1VictoryState_a866c450a9e995325239388d654cacb0a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1VictoryState_ac22b4332042fccb98e6e6409992c0c4c}\label{classrenderer_1_1VictoryState_ac22b4332042fccb98e6e6409992c0c4c} 
+\index{renderer::VictoryState@{renderer::VictoryState}!processInput@{processInput}}
+\index{processInput@{processInput}!renderer::VictoryState@{renderer::VictoryState}}
+\doxysubsubsection{\texorpdfstring{processInput()}{processInput()}}
+{\footnotesize\ttfamily void renderer\+::\+Victory\+State\+::process\+Input (\begin{DoxyParamCaption}\item[{sf\+::\+Event \&}]{event,  }\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager,  }\item[{const sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Process input events for the state. 
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+{\em state\+Manager} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classrenderer_1_1IState_a07cfa1ed487621d0f8504c973557ac88}{renderer\+::\+IState}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classrenderer_1_1VictoryState_ac22b4332042fccb98e6e6409992c0c4c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1VictoryState_a3c156326b426dcc07927c29148127e7d}\label{classrenderer_1_1VictoryState_a3c156326b426dcc07927c29148127e7d} 
+\index{renderer::VictoryState@{renderer::VictoryState}!update@{update}}
+\index{update@{update}!renderer::VictoryState@{renderer::VictoryState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void renderer\+::\+Victory\+State\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&}]{state\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the state logic. 
+
+Implements \mbox{\hyperlink{classrenderer_1_1IState_aa6a0dbc9249ec35934bb2fa74560b9fa}{renderer\+::\+IState}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+renderer/include/game/states/\mbox{\hyperlink{VictoryState_8h}{Victory\+State.\+h}}\item 
+renderer/src/game/states/\mbox{\hyperlink{VictoryState_8cpp}{Victory\+State.\+cpp}}\end{DoxyCompactItemize}
