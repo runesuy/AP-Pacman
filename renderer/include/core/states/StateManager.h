@@ -30,7 +30,7 @@ namespace renderer {
          * Process input events and forward them to the current state.
          * @param event The input event to process.
          */
-        void processInput(sf::Event& event);
+        void processInput(sf::Event &event, sf::RenderWindow &window);
 
         /**
          * Draw the current state to the given window.

@@ -12,9 +12,9 @@ renderer::StateManager::StateManager(std::unique_ptr<IState> &&initialState,
     stack.push(std::move(initialState));
 }
 
-void renderer::StateManager::processInput(sf::Event &event) {
+void renderer::StateManager::processInput(sf::Event &event, sf::RenderWindow &window) {
     if (!stack.empty()) {
-        stack.top()->processInput(event, *this);
+        stack.top()->processInput(event,*this, window);
     }
 }
 

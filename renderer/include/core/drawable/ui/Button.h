@@ -32,8 +32,6 @@ namespace renderer {
 
         std::vector<std::unique_ptr<sf::Text>> getSFTexts(sf::RenderWindow &window) override;
 
-        void draw(sf::RenderWindow &window) override;
-
         void setString(const std::string &str);
         void setFont(const sf::Font &font);
         void setCharacterSize(float size);
@@ -42,7 +40,7 @@ namespace renderer {
 
         void setOnClick(const std::function<void()> &onClick);
 
-        void processEvent(const sf::Event& event, sf::RenderWindow &window);
+        void processEvent(const sf::Event& event, const sf::RenderWindow &window);
     };
 
 } // renderer

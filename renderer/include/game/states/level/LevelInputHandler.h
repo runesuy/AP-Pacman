@@ -16,7 +16,7 @@ namespace renderer {
      */
     class LevelInputHandler : public IStateInputHandler<LevelState> {
     public:
-        void processInput(sf::Event &event, StateManager& stateManager, LevelState& state) override;
+        void processInput(sf::Event &event, StateManager& stateManager, LevelState& state, const sf::RenderWindow& window) override;
     };
 
 } // renderer

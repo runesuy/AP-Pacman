@@ -56,7 +56,7 @@ namespace renderer {
         Button::onClick = onClick;
     }
 
-    void Button::processEvent(const sf::Event &event, sf::RenderWindow &window) {
+    void Button::processEvent(const sf::Event &event, const sf::RenderWindow &window) {
         if (event.type == sf::Event::MouseButtonPressed) {
             auto pos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
             // globalBounds is in position system
@@ -68,11 +68,5 @@ namespace renderer {
                 onClick();
             }
         }
-    }
-
-    void Button::draw(sf::RenderWindow &window) {
-        DrawObject::draw(window);
-        sf::Event event{};
-        while (window.pollEvent(event)) { processEvent(event, window); }
     }
 } // renderer

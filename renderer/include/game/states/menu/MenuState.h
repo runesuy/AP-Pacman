@@ -6,6 +6,7 @@
 #define AP_PACMAN_MENUSTATE_H
 
 #include "core/states/DelegatingState.h"
+#include "core/drawable/ui/Button.h"
 #include <memory>
 
 namespace renderer {
@@ -16,13 +17,23 @@ namespace renderer {
      *
      * Displays title and press key to go to level state.
      */
-    class MenuState : public DelegatingState<MenuState> {
+    class MenuState : public IState {
+        Button playButton;
+        bool _fontLoaded = false;
+        sf::Font _font;
+
+        void onPlayButtonClick(StateManager& stateManager) const;
     public:
-        MenuState(std::unique_ptr<IStateUpdateHandler<MenuState>>&& updateHandler,
-                  std::unique_ptr<IStateInputHandler<MenuState>>&& inputHandler,
-                  std::unique_ptr<IStateDrawHandler<MenuState>>&& drawHandler);
+        MenuState();
 
         friend class MenuInputHandler;
+        friend class MenuDrawHandler;
+
+        void update() override;
+
+        void processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) override;
+
+        void draw(sf::RenderWindow &window, StateManager &stateManager) override;
     };
 
 } // renderer

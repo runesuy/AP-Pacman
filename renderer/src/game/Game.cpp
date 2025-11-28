@@ -39,7 +39,7 @@ int renderer::Game::run() {
                 cont = true;
             }
 
-            stateManager->processInput(event);
+            stateManager->processInput(event, window);
         }
         if (cont) continue;
         if (logic::Stopwatch::getInstance()->getDeltaTime() >0.1) continue;

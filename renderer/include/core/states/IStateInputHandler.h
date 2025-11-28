@@ -6,6 +6,7 @@
 #define AP_PACMAN_ISTATEINPUTHANDLER_H
 
 #include "core/handlers/IInputHandler.h"
+#include "SFML/Graphics.hpp"
 
 namespace renderer {
     class StateManager;
@@ -17,7 +18,8 @@ namespace renderer {
     template<typename DerivedState>
     class IStateInputHandler : public renderer::IInputHandler {
     public:
-        virtual void processInput(sf::Event& event, StateManager &stateManager, DerivedState& state)=0;
+        virtual void processInput(sf::Event &event, StateManager &stateManager, DerivedState &state,
+                                  const sf::RenderWindow &window) =0;
 
         void processInput(sf::Event &event) override {};
     };

@@ -27,7 +27,7 @@ namespace renderer {
          * @param event
          * @param stateManager
          */
-        virtual void processInput(sf::Event &event, StateManager& stateManager) =0;
+        virtual void processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) =0;
 
         /**
          * Draw the state onto the provided render window.

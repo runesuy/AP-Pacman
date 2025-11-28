@@ -10,7 +10,7 @@
 #include "core/factories/IStateFactory.h"
 
 namespace renderer {
-    void LevelInputHandler::processInput(sf::Event &event, StateManager &stateManager, LevelState &state) {
+    void LevelInputHandler::processInput(sf::Event &event, StateManager &stateManager, LevelState &state, const sf::RenderWindow& window) {
         auto& levelState = dynamic_cast<LevelState&>(state);
         switch (event.type) {
             case sf::Event::KeyPressed:

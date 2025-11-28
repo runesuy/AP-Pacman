@@ -27,7 +27,7 @@ namespace renderer {
 
         void update() override;
 
-        void processInput(sf::Event &event, StateManager& stateManager) override;
+        void processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) override;
 
         void draw(sf::RenderWindow &window, StateManager &stateManager) override;
     };
@@ -38,8 +38,9 @@ namespace renderer {
     }
 
     template<typename Derived>
-    void renderer::DelegatingState<Derived>::processInput(sf::Event &event, StateManager& stateManager) {
-        _inputHandler->processInput(event, stateManager, static_cast<Derived&>(*this));
+    void renderer::DelegatingState<Derived>::processInput(sf::Event &event, StateManager &stateManager,
+                                                          const sf::RenderWindow &window) {
+        _inputHandler->processInput(event, stateManager, static_cast<Derived &>(*this), window);
     }
 
     template<typename Derived>
