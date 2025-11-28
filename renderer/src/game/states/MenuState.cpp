@@ -2,18 +2,18 @@
 // Created by runes on 3/11/2025.
 //
 
-#include "game/states/menu/MenuState.h"
+#include "game/states/MenuState.h"
 #include "core/handlers/IDrawHandler.h"
 #include "core/states/IStateInputHandler.h"
 #include "core/states/IStateUpdateHandler.h"
 #include "core/utils/Camera.h"
 #include "game/Game.h"
 #include "core/factories/IStateFactory.h"
-#include "game/states/level/LevelState.h"
+#include "game/states/LevelState.h"
 
 namespace renderer {
 
-    void MenuState::update() {
+    void MenuState::update(StateManager &stateManager) {
 
     }
 

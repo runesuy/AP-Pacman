@@ -7972,7 +7972,7 @@ class lexer : public lexer_base<BasicJsonType>
     sign     | any2     | any2     | [error]  | [error] | [error] | [error]  | [error]
     any2     | any2     | any2     | done     | done    | done    | done     | done
 
-    The state machine is realized with one label per state (prefixed with
+    The state machine is realized with one victoryLabel per state (prefixed with
     "scan_number_") and `goto` statements between them. The state machine
     contains cycles, but any cycle can be left when EOF is read. Therefore,
     the function is guaranteed to terminate.

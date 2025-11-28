@@ -5,7 +5,7 @@
 #ifndef AP_PACMAN_ISTATEFACTORY_H
 #define AP_PACMAN_ISTATEFACTORY_H
 
-#include "game/states/paused/PausedState.h"
+#include "game/states/PausedState.h"
 
 namespace renderer {
     class MenuState;

@@ -48,6 +48,8 @@ namespace renderer {
         void pushState(std::unique_ptr<IState>&& state);
 
         void popState();
+
+        void replaceState(std::unique_ptr<IState>&& state);
     };
 }
 

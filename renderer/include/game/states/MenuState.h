@@ -29,7 +29,7 @@ namespace renderer {
         friend class MenuInputHandler;
         friend class MenuDrawHandler;
 
-        void update() override;
+        void update(StateManager &stateManager) override;
 
         void processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) override;
 

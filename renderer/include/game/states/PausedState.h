@@ -22,7 +22,7 @@ namespace renderer {
     public:
         PausedState();
 
-        void update() override;
+        void update(StateManager &stateManager) override;
 
         void processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) override;
 

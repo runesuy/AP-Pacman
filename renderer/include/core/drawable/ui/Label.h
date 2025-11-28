@@ -10,7 +10,7 @@
 namespace renderer {
 
     /**
-     * A simple UI label for displaying text.
+     * A simple UI victoryLabel for displaying text.
      */
     class Label : public DrawObject {
     public:

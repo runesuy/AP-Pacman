@@ -74,8 +74,8 @@ namespace logic {
         return *score;
     }
 
-    Score &World::getScore() {
-        return *score;
+    std::shared_ptr<Score> &World::getScore() {
+        return score;
     }
 
     void World::sendWorldEvent(WorldObject::WorldEventT event) {

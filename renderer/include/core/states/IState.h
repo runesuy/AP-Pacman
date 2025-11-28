@@ -20,7 +20,7 @@ namespace renderer {
         /**
          * Update the state logic.
          */
-        virtual void update()=0;
+        virtual void update(StateManager &stateManager) =0;
 
         /**
          * Process input events for the state.

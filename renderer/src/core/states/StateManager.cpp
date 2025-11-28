@@ -26,7 +26,7 @@ void renderer::StateManager::draw(sf::RenderWindow &window) {
 
 void renderer::StateManager::update() {
     if (!stack.empty()) {
-        stack.top()->update();
+        stack.top()->update(*this);
     }
 }
 
@@ -36,4 +36,9 @@ void renderer::StateManager::pushState(std::unique_ptr<IState> &&state) {
 
 void renderer::StateManager::popState() {
     stack.pop();
+}
+
+void renderer::StateManager::replaceState(std::unique_ptr<IState> &&state) {
+    stack.pop();
+    stack.push(std::move(state));
 }

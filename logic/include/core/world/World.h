@@ -126,7 +126,9 @@ namespace logic {
          *
          * Score provides score and player life logic.
          */
-        [[nodiscard]] Score &getScore();
+        [[nodiscard]] std::shared_ptr<Score> &getScore();
+
+
 
         /**
          * @return true if all coins are collected

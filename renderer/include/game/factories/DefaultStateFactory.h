@@ -7,7 +7,7 @@
 
 #include <memory>
 #include "core/factories/IStateFactory.h"
-#include "game/states/paused/PausedState.h"
+#include "game/states/PausedState.h"
 
 namespace renderer {
     class MenuState;

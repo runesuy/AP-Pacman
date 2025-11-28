@@ -2,7 +2,7 @@
 // Created by runes on 27/11/2025.
 //
 
-#include "game/states/paused/PausedState.h"
+#include "game/states/PausedState.h"
 #include "core/states/StateManager.h"
 
 namespace renderer {
@@ -19,7 +19,7 @@ namespace renderer {
         continueButton.setPosition({0.3, 0});
     }
 
-    void PausedState::update() {
+    void PausedState::update(StateManager &stateManager) {
 
     }
 

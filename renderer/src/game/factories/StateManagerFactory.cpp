@@ -4,7 +4,7 @@
 
 #include "game/factories/StateManagerFactory.h"
 #include "game/factories/DefaultStateFactory.h"
-#include "game/states/menu/MenuState.h"
+#include "game/states/MenuState.h"
 #include "core/states/IStateInputHandler.h"
 #include "core/states/IStateUpdateHandler.h"
 

@@ -25,7 +25,7 @@ namespace renderer {
                         std::unique_ptr<IStateInputHandler<Derived>> &&inputHandler,
                         std::unique_ptr<IStateDrawHandler<Derived>> &&drawHandler);
 
-        void update() override;
+        void update(StateManager &stateManager) override;
 
         void processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) override;
 
@@ -33,7 +33,7 @@ namespace renderer {
     };
 
     template<typename Derived>
-    void renderer::DelegatingState<Derived>::update() {
+    void renderer::DelegatingState<Derived>::update(StateManager &stateManager) {
         _updateHandler->update(static_cast<Derived&>(*this));
     }
 
