@@ -54,4 +54,8 @@ namespace logic {
     bool logic::Position::operator==(const logic::Position &other) const {
         return this->x == other.x && this->y == other.y;
     }
+
+    bool logic::Position::isEqualTo(const logic::Position &other, double eps) const {
+        return std::abs(this->x - other.x) < eps && std::abs(this->y - other.y) < eps;
+    }
 }

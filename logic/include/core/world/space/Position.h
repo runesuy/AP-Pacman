@@ -57,6 +57,14 @@ namespace logic {
         bool operator==(const Position &other) const;
 
         /**
+         * Check if this position is equal to another position within a certain epsilon.
+         * @param other
+         * @param eps
+         * @return
+         */
+        [[nodiscard]] bool isEqualTo(const logic::Position &other, double eps) const;
+
+        /**
          * @return the horizontal coördinate
          */
         [[nodiscard]] CoordinateType getX() const override;

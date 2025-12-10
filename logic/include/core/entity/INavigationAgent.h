@@ -16,6 +16,8 @@ namespace logic {
      */
     class INavigationAgent {
     public:
+        virtual ~INavigationAgent() = default;
+
         /**
          * Get directions from current to target.
          * @param current The current position from which is navigated.
