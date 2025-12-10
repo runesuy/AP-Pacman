@@ -124,6 +124,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aebd75e849ae695f916136fe97a674a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cc92303dd1483e4476e5ff1563dff20" id="r_a8cc92303dd1483e4476e5ff1563dff20"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Position.html#a8cc92303dd1483e4476e5ff1563dff20">operator==</a> (const <a class="el" href="classlogic_1_1Position.html">Position</a> &amp;other) const</td></tr>
 <tr class="separator:a8cc92303dd1483e4476e5ff1563dff20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8315435fab1b4d08cdb691675dbc7f71" id="r_a8315435fab1b4d08cdb691675dbc7f71"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Position.html#a8315435fab1b4d08cdb691675dbc7f71">isEqualTo</a> (const <a class="el" href="classlogic_1_1Position.html">logic::Position</a> &amp;other, double eps) const</td></tr>
+<tr class="separator:a8315435fab1b4d08cdb691675dbc7f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00a7d58e378c852a5a431d6ec60ad0a5" id="r_a00a7d58e378c852a5a431d6ec60ad0a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlogic_1_1ICoordinate.html#a3d35c6be08adc094e27f987c1be77ec1">CoordinateType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Position.html#a00a7d58e378c852a5a431d6ec60ad0a5">getX</a> () const override</td></tr>
 <tr class="separator:a00a7d58e378c852a5a431d6ec60ad0a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d7b15bef28628ed645f05810d540049" id="r_a6d7b15bef28628ed645f05810d540049"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1Position.html#a6d7b15bef28628ed645f05810d540049">setX</a> (<a class="el" href="classlogic_1_1ICoordinate.html#a3d35c6be08adc094e27f987c1be77ec1">CoordinateType</a> x) override</td></tr>
@@ -312,6 +314,42 @@ y is between -1 and 1 </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>the vertical coördinate </dd></dl>
 
 <p>Implements <a class="el" href="classlogic_1_1ICoordinate.html#a851d6934686081c99912dc4c69608e4b">logic::ICoordinate</a>.</p>
+
+</div>
+</div>
+<a id="a8315435fab1b4d08cdb691675dbc7f71" name="a8315435fab1b4d08cdb691675dbc7f71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8315435fab1b4d08cdb691675dbc7f71">&#9670;&#160;</a></span>isEqualTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool logic::Position::isEqualTo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlogic_1_1Position.html">logic::Position</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>eps</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if this position is equal to another position within a certain epsilon. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td></td></tr>
+    <tr><td class="paramname">eps</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>

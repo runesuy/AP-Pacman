@@ -11,11 +11,13 @@ Inheritance diagram for logic\+::INavigation\+Agent\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=213pt]{classlogic_1_1INavigationAgent__inherit__graph}
+\includegraphics[width=350pt]{classlogic_1_1INavigationAgent__inherit__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1INavigationAgent_a99975ec9e8447d2fc9651dc3b52803b6}{\texorpdfstring{$\sim$}{\string~}\+INavigation\+Agent}} ()=default
 \item 
 virtual \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} \mbox{\hyperlink{classlogic_1_1INavigationAgent_ae647e21c79e19f2d2bcdf083dc52b955}{get\+Navigation\+Direction}} (const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&current, const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&target, const \mbox{\hyperlink{classlogic_1_1World}{World}} \&world, std\+::set$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} $>$ exclude\+If\+Other\+Options=\{\}) const =0
 \item 
@@ -25,6 +27,15 @@ virtual \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direc
 
 \doxysubsection{Detailed Description}
 A navigation\+Agent providing directions based on the current position, target\+Position and world. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classlogic_1_1INavigationAgent_a99975ec9e8447d2fc9651dc3b52803b6}\label{classlogic_1_1INavigationAgent_a99975ec9e8447d2fc9651dc3b52803b6} 
+\index{logic::INavigationAgent@{logic::INavigationAgent}!````~INavigationAgent@{\texorpdfstring{$\sim$}{\string~}INavigationAgent}}
+\index{````~INavigationAgent@{\texorpdfstring{$\sim$}{\string~}INavigationAgent}!logic::INavigationAgent@{logic::INavigationAgent}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}INavigationAgent()}{\string~INavigationAgent()}}
+{\footnotesize\ttfamily virtual logic\+::\+INavigation\+Agent\+::\texorpdfstring{$\sim$}{\string~}\+INavigation\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classlogic_1_1INavigationAgent_ae647e21c79e19f2d2bcdf083dc52b955}\label{classlogic_1_1INavigationAgent_ae647e21c79e19f2d2bcdf083dc52b955} 
@@ -49,7 +60,7 @@ A direction to proceed to in order to get from current to target.
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classlogic_1_1ManhattanNavigationAgent_aead3e5b54535f01bda2ae65a919f99b0}{logic\+::\+Manhattan\+Navigation\+Agent}}.
+Implemented in \mbox{\hyperlink{classlogic_1_1AStarNavigationAgent_ab3a98eff731e23c84801940e2dbde7d2}{logic\+::\+AStar\+Navigation\+Agent}}, and \mbox{\hyperlink{classlogic_1_1ManhattanNavigationAgent_aead3e5b54535f01bda2ae65a919f99b0}{logic\+::\+Manhattan\+Navigation\+Agent}}.
 
 \Hypertarget{classlogic_1_1INavigationAgent_ac8b515e26ede33c63b4f132c4384e5cf}\label{classlogic_1_1INavigationAgent_ac8b515e26ede33c63b4f132c4384e5cf} 
 \index{logic::INavigationAgent@{logic::INavigationAgent}!getNavigationDirectionAway@{getNavigationDirectionAway}}
@@ -73,7 +84,7 @@ A direction to proceed to in order to get away from target.
 \end{DoxyReturn}
 
 
-Implemented in \mbox{\hyperlink{classlogic_1_1ManhattanNavigationAgent_a8ab172923721b0b6111a2569cd2723ca}{logic\+::\+Manhattan\+Navigation\+Agent}}.
+Implemented in \mbox{\hyperlink{classlogic_1_1AStarNavigationAgent_a731cf2803009e0e9354a849c7a84b0aa}{logic\+::\+AStar\+Navigation\+Agent}}, and \mbox{\hyperlink{classlogic_1_1ManhattanNavigationAgent_a8ab172923721b0b6111a2569cd2723ca}{logic\+::\+Manhattan\+Navigation\+Agent}}.
 
 
 

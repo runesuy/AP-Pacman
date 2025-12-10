@@ -117,19 +117,21 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordtype">bool</span> operator==(const <a class="code hl_class" href="classlogic_1_1Position.html">Position</a> &amp;other) const;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        [[nodiscard]] <a class="code hl_typedef" href="classlogic_1_1ICoordinate.html#a3d35c6be08adc094e27f987c1be77ec1">CoordinateType</a> <a class="code hl_function" href="classlogic_1_1Position.html#a00a7d58e378c852a5a431d6ec60ad0a5">getX</a>() const override;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classlogic_1_1Position.html#a6d7b15bef28628ed645f05810d540049">setX</a>(<a class="code hl_typedef" href="classlogic_1_1ICoordinate.html#a3d35c6be08adc094e27f987c1be77ec1">CoordinateType</a> x) override;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        [[nodiscard]] <a class="code hl_typedef" href="classlogic_1_1ICoordinate.html#a3d35c6be08adc094e27f987c1be77ec1">CoordinateType</a> <a class="code hl_function" href="classlogic_1_1Position.html#a8425d7c97e5a6c1855f8c9878db58ce1">getY</a>() const override;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classlogic_1_1Position.html#a2f44a7d6ebfae106103337eb3bfe6150">setY</a>(<a class="code hl_typedef" href="classlogic_1_1ICoordinate.html#a3d35c6be08adc094e27f987c1be77ec1">CoordinateType</a> y) override;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    };</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="classlogic_1_1Position.html#a8315435fab1b4d08cdb691675dbc7f71">isEqualTo</a>(const <a class="code hl_namespace" href="namespacelogic.html">logic</a>::<a class="code hl_class" href="classlogic_1_1Position.html">Position</a> &amp;other, <span class="keywordtype">double</span> eps) const;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        [[nodiscard]] <a class="code hl_typedef" href="classlogic_1_1ICoordinate.html#a3d35c6be08adc094e27f987c1be77ec1">CoordinateType</a> <a class="code hl_function" href="classlogic_1_1Position.html#a00a7d58e378c852a5a431d6ec60ad0a5">getX</a>() const override;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classlogic_1_1Position.html#a6d7b15bef28628ed645f05810d540049">setX</a>(<a class="code hl_typedef" href="classlogic_1_1ICoordinate.html#a3d35c6be08adc094e27f987c1be77ec1">CoordinateType</a> x) override;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        [[nodiscard]] <a class="code hl_typedef" href="classlogic_1_1ICoordinate.html#a3d35c6be08adc094e27f987c1be77ec1">CoordinateType</a> <a class="code hl_function" href="classlogic_1_1Position.html#a8425d7c97e5a6c1855f8c9878db58ce1">getY</a>() const override;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classlogic_1_1Position.html#a2f44a7d6ebfae106103337eb3bfe6150">setY</a>(<a class="code hl_typedef" href="classlogic_1_1ICoordinate.html#a3d35c6be08adc094e27f987c1be77ec1">CoordinateType</a> y) override;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    };</div>
 </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_POSITION_H</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_POSITION_H</span></div>
 <div class="ttc" id="aICoordinate_8h_html"><div class="ttname"><a href="ICoordinate_8h.html">ICoordinate.h</a></div></div>
 <div class="ttc" id="aclasslogic_1_1ICoordinate_html"><div class="ttname"><a href="classlogic_1_1ICoordinate.html">logic::ICoordinate</a></div><div class="ttdef"><b>Definition</b> ICoordinate.h:13</div></div>
 <div class="ttc" id="aclasslogic_1_1ICoordinate_html_a3d35c6be08adc094e27f987c1be77ec1"><div class="ttname"><a href="classlogic_1_1ICoordinate.html#a3d35c6be08adc094e27f987c1be77ec1">logic::ICoordinate::CoordinateType</a></div><div class="ttdeci">double CoordinateType</div><div class="ttdef"><b>Definition</b> ICoordinate.h:18</div></div>
@@ -139,6 +141,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclasslogic_1_1Position_html_a2f44a7d6ebfae106103337eb3bfe6150"><div class="ttname"><a href="classlogic_1_1Position.html#a2f44a7d6ebfae106103337eb3bfe6150">logic::Position::setY</a></div><div class="ttdeci">void setY(CoordinateType y) override</div><div class="ttdef"><b>Definition</b> Position.cpp:33</div></div>
 <div class="ttc" id="aclasslogic_1_1Position_html_a66a163a1ffba173b189d37f8a83f85f5"><div class="ttname"><a href="classlogic_1_1Position.html#a66a163a1ffba173b189d37f8a83f85f5">logic::Position::Position</a></div><div class="ttdeci">Position(Position &amp;&amp;) noexcept=default</div></div>
 <div class="ttc" id="aclasslogic_1_1Position_html_a6d7b15bef28628ed645f05810d540049"><div class="ttname"><a href="classlogic_1_1Position.html#a6d7b15bef28628ed645f05810d540049">logic::Position::setX</a></div><div class="ttdeci">void setX(CoordinateType x) override</div><div class="ttdef"><b>Definition</b> Position.cpp:22</div></div>
+<div class="ttc" id="aclasslogic_1_1Position_html_a8315435fab1b4d08cdb691675dbc7f71"><div class="ttname"><a href="classlogic_1_1Position.html#a8315435fab1b4d08cdb691675dbc7f71">logic::Position::isEqualTo</a></div><div class="ttdeci">bool isEqualTo(const logic::Position &amp;other, double eps) const</div><div class="ttdef"><b>Definition</b> Position.cpp:58</div></div>
 <div class="ttc" id="aclasslogic_1_1Position_html_a8425d7c97e5a6c1855f8c9878db58ce1"><div class="ttname"><a href="classlogic_1_1Position.html#a8425d7c97e5a6c1855f8c9878db58ce1">logic::Position::getY</a></div><div class="ttdeci">CoordinateType getY() const override</div><div class="ttdef"><b>Definition</b> Position.cpp:29</div></div>
 <div class="ttc" id="anamespacelogic_html"><div class="ttname"><a href="namespacelogic.html">logic</a></div><div class="ttdef"><b>Definition</b> IConfig.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -1,0 +1,31 @@
+\doxysection{AStar\+Navigation\+Agent.\+h}
+\hypertarget{AStarNavigationAgent_8h_source}{}\label{AStarNavigationAgent_8h_source}\index{logic/include/game/entities/controllers/navigation/AStarNavigationAgent.h@{logic/include/game/entities/controllers/navigation/AStarNavigationAgent.h}}
+\mbox{\hyperlink{AStarNavigationAgent_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ runes\ on\ 9/12/2025.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_ASTARNAVIGATIONAGENT\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_ASTARNAVIGATIONAGENT\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{INavigationAgent_8h}{core/entity/INavigationAgent.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ A*\ pathfinding\ algorithm\ implementation}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ based\ on:\ https://www.geeksforgeeks.org/dsa/a-\/search-\/algorithm/}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1AStarNavigationAgent}{AStarNavigationAgent}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1INavigationAgent}{INavigationAgent}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ \mbox{\hyperlink{classlogic_1_1AStarNavigationAgent_ab3a98eff731e23c84801940e2dbde7d2}{getNavigationDirection}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ \&current,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ \&target,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::set<Direction>\ excludeIfOtherOptions)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}\ \mbox{\hyperlink{classlogic_1_1AStarNavigationAgent_a731cf2803009e0e9354a849c7a84b0aa}{getNavigationDirectionAway}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ \&current,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ \&target,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::set<Direction>\ excludeIfOtherOptions)\textcolor{keyword}{\ const\ override}\{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52a20a55e99eb2e2128f8088d553b78afd5}{NONE}};\};}
+\DoxyCodeLine{00026\ \ \ \ \ \};}
+\DoxyCodeLine{00027\ \}\ \textcolor{comment}{//\ logic}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_ASTARNAVIGATIONAGENT\_H}}
+
+\end{DoxyCode}

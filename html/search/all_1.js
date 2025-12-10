@@ -11,5 +11,8 @@ var searchData=
   ['animatedspritemodule_2ecpp_8',['AnimatedSpriteModule.cpp',['../AnimatedSpriteModule_8cpp.html',1,'']]],
   ['animatedspritemodule_2eh_9',['AnimatedSpriteModule.h',['../AnimatedSpriteModule_8h.html',1,'']]],
   ['animationnamesmap_10',['AnimationNamesMap',['../classrenderer_1_1AnimatedSpriteModule.html#a4a96e25d9dc165b9b518431cf7a69365',1,'renderer::AnimatedSpriteModule']]],
-  ['animationsmap_11',['AnimationsMap',['../classrenderer_1_1GhostView.html#a273f8a9fdb59412c9f731bfd79f7be01',1,'renderer::GhostView']]]
+  ['animationsmap_11',['AnimationsMap',['../classrenderer_1_1GhostView.html#a273f8a9fdb59412c9f731bfd79f7be01',1,'renderer::GhostView']]],
+  ['astarnavigationagent_12',['AStarNavigationAgent',['../classlogic_1_1AStarNavigationAgent.html',1,'logic']]],
+  ['astarnavigationagent_2ecpp_13',['AStarNavigationAgent.cpp',['../AStarNavigationAgent_8cpp.html',1,'']]],
+  ['astarnavigationagent_2eh_14',['AStarNavigationAgent.h',['../AStarNavigationAgent_8h.html',1,'']]]
 ];

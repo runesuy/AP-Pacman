@@ -1,0 +1,109 @@
+\doxysection{logic\+::AStar\+Navigation\+Agent Class Reference}
+\hypertarget{classlogic_1_1AStarNavigationAgent}{}\label{classlogic_1_1AStarNavigationAgent}\index{logic::AStarNavigationAgent@{logic::AStarNavigationAgent}}
+
+
+{\ttfamily \#include $<$AStar\+Navigation\+Agent.\+h$>$}
+
+
+
+Inheritance diagram for logic\+::AStar\+Navigation\+Agent\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classlogic_1_1AStarNavigationAgent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for logic\+::AStar\+Navigation\+Agent\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classlogic_1_1AStarNavigationAgent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} \mbox{\hyperlink{classlogic_1_1AStarNavigationAgent_ab3a98eff731e23c84801940e2dbde7d2}{get\+Navigation\+Direction}} (const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&current, const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&target, const \mbox{\hyperlink{classlogic_1_1World}{World}} \&world, std\+::set$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} $>$ exclude\+If\+Other\+Options) const override
+\item 
+\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} \mbox{\hyperlink{classlogic_1_1AStarNavigationAgent_a731cf2803009e0e9354a849c7a84b0aa}{get\+Navigation\+Direction\+Away}} (const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&current, const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&target, const \mbox{\hyperlink{classlogic_1_1World}{World}} \&world, std\+::set$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} $>$ exclude\+If\+Other\+Options) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1INavigationAgent}{logic\+::\+INavigation\+Agent}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1INavigationAgent_a99975ec9e8447d2fc9651dc3b52803b6}{\texorpdfstring{$\sim$}{\string~}\+INavigation\+Agent}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Coputes navigation directions using the A\texorpdfstring{$\ast$}{*} pathfinding algorithm. \begin{DoxyWarning}{Warning}
+Does not support away navigation. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classlogic_1_1AStarNavigationAgent_ab3a98eff731e23c84801940e2dbde7d2}\label{classlogic_1_1AStarNavigationAgent_ab3a98eff731e23c84801940e2dbde7d2} 
+\index{logic::AStarNavigationAgent@{logic::AStarNavigationAgent}!getNavigationDirection@{getNavigationDirection}}
+\index{getNavigationDirection@{getNavigationDirection}!logic::AStarNavigationAgent@{logic::AStarNavigationAgent}}
+\doxysubsubsection{\texorpdfstring{getNavigationDirection()}{getNavigationDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} logic\+::\+AStar\+Navigation\+Agent\+::get\+Navigation\+Direction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{current,  }\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{target,  }\item[{const \mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{std\+::set$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} $>$}]{exclude\+If\+Other\+Options }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get directions from current to target. 
+\begin{DoxyParams}{Parameters}
+{\em current} & The current position from which is navigated. \\
+\hline
+{\em target} & The position current wants to go to. \\
+\hline
+{\em world} & The game world. \\
+\hline
+{\em exclude\+If\+Other\+Options} & Directions only to be used if no other options are available. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A direction to proceed to in order to get from current to target. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1INavigationAgent_ae647e21c79e19f2d2bcdf083dc52b955}{logic\+::\+INavigation\+Agent}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1AStarNavigationAgent_ab3a98eff731e23c84801940e2dbde7d2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlogic_1_1AStarNavigationAgent_a731cf2803009e0e9354a849c7a84b0aa}\label{classlogic_1_1AStarNavigationAgent_a731cf2803009e0e9354a849c7a84b0aa} 
+\index{logic::AStarNavigationAgent@{logic::AStarNavigationAgent}!getNavigationDirectionAway@{getNavigationDirectionAway}}
+\index{getNavigationDirectionAway@{getNavigationDirectionAway}!logic::AStarNavigationAgent@{logic::AStarNavigationAgent}}
+\doxysubsubsection{\texorpdfstring{getNavigationDirectionAway()}{getNavigationDirectionAway()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} logic\+::\+AStar\+Navigation\+Agent\+::get\+Navigation\+Direction\+Away (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{current,  }\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{target,  }\item[{const \mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{std\+::set$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} $>$}]{exclude\+If\+Other\+Options }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get directions from current away from target. 
+\begin{DoxyParams}{Parameters}
+{\em current} & The current position from which is navigated. \\
+\hline
+{\em target} & The position current wants to get away from. \\
+\hline
+{\em world} & The game world. \\
+\hline
+{\em exclude\+If\+Other\+Options} & Directions only to be used if no other options are available. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A direction to proceed to in order to get away from target. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classlogic_1_1INavigationAgent_ac8b515e26ede33c63b4f132c4384e5cf}{logic\+::\+INavigation\+Agent}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+logic/include/game/entities/controllers/navigation/\mbox{\hyperlink{AStarNavigationAgent_8h}{AStar\+Navigation\+Agent.\+h}}\item 
+logic/src/game/entities/controllers/navigation/\mbox{\hyperlink{AStarNavigationAgent_8cpp}{AStar\+Navigation\+Agent.\+cpp}}\end{DoxyCompactItemize}
