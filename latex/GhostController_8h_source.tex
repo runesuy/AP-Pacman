@@ -20,19 +20,20 @@
 \DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1GhostController}{GhostController}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1MovingEntityController}{MovingEntityController}}<GhostModel>\ \{}
 \DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::unique\_ptr<INavigationAgent>\ returnNavigationAgent\ =\ std::make\_unique<AStarNavigationAgent>();}
 \DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::unique\_ptr<INavigationAgent>\ frightenedNavigationAgent\ =\ std::make\_unique<ManhattanNavigationAgent>();}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<Direction>\ \mbox{\hyperlink{classlogic_1_1GhostController_a2555cbdaeaaada701f2e2775896bd43d}{getViableDirections}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity);}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classlogic_1_1GhostController_a06ad5ac2574e45ad07df65a7068e3ad3}{isAtIntersectionOrDeadEnd}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity);}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostController_a8b06b2000603ac58aafbbbb3032dcb0a}{update}}(\mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostController_aeba3f9707ff49bd10c53c721c48b5002}{handleWorldEvent}}(\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{WorldObject::WorldEventT}}\ event,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\&\ entity)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostController_a1cb9229b0097664fc029929d9aa1827f}{onCollision}}(\mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{SizedWorldObject}}\ \&other,\ \mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00028\ \ \ \ \ \};}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \}\ \textcolor{comment}{//\ logic}}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_GHOSTCONTROLLER\_H}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ justChangedToFrightened\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classlogic_1_1GhostController_a06ad5ac2574e45ad07df65a7068e3ad3}{isAtIntersectionOrDeadEnd}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostController_a8b06b2000603ac58aafbbbb3032dcb0a}{update}}(\mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostController_aeba3f9707ff49bd10c53c721c48b5002}{handleWorldEvent}}(\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{WorldObject::WorldEventT}}\ event,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\&\ entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1GhostController_a1cb9229b0097664fc029929d9aa1827f}{onCollision}}(\mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{SizedWorldObject}}\ \&other,\ \mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \}\ \textcolor{comment}{//\ logic}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_GHOSTCONTROLLER\_H}}
 
 \end{DoxyCode}

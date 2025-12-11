@@ -5,12 +5,13 @@ var searchData=
   ['_7eiconfig_2',['~IConfig',['../classlogic_1_1IConfig.html#a4280f4f8aadff9169b8db63d468c1a71',1,'logic::IConfig']]],
   ['_7eiconfigparser_3',['~IConfigParser',['../classrenderer_1_1IConfigParser.html#a0468f6857b2786528e83fd114f9b9780',1,'renderer::IConfigParser']]],
   ['_7eidrawhandler_4',['~IDrawHandler',['../classrenderer_1_1IDrawHandler.html#a88348f96cd49ace9cd829ab466b2c281',1,'renderer::IDrawHandler']]],
-  ['_7eientityfactory_5',['~IEntityFactory',['../classlogic_1_1IEntityFactory.html#a0e6d20caae0a051b0da5cfe0eb70f538',1,'logic::IEntityFactory']]],
-  ['_7eiinputhandler_6',['~IInputHandler',['../classrenderer_1_1IInputHandler.html#ac8f33e6a9115d6af37fe632e72b553cd',1,'renderer::IInputHandler']]],
-  ['_7einavigationagent_7',['~INavigationAgent',['../classlogic_1_1INavigationAgent.html#a99975ec9e8447d2fc9651dc3b52803b6',1,'logic::INavigationAgent']]],
-  ['_7eiobserver_8',['~IObserver',['../classlogic_1_1IObserver.html#aa3736db37cb39a0e8f1570c7c3201b33',1,'logic::IObserver']]],
-  ['_7eistate_9',['~IState',['../classrenderer_1_1IState.html#ac0eccb586fc4819e616966f4c761c39d',1,'renderer::IState']]],
-  ['_7eiupdatehandler_10',['~IUpdateHandler',['../classlogic_1_1IUpdateHandler.html#ae7df05b12b4361fa53a0b213c6facc0d',1,'logic::IUpdateHandler']]],
-  ['_7eobservable_11',['~Observable',['../classlogic_1_1Observable.html#abbbfab37e8417e4232bd1b6e59fd9661',1,'logic::Observable']]],
-  ['_7erandom_12',['~Random',['../classlogic_1_1Random.html#adcdfbf7e0f6849bae47f016b3ff5adad',1,'logic::Random']]]
+  ['_7eientitycontroller_5',['~IEntityController',['../classlogic_1_1IEntityController.html#a54871a58cfd7672084a9e3a145b0f308',1,'logic::IEntityController']]],
+  ['_7eientityfactory_6',['~IEntityFactory',['../classlogic_1_1IEntityFactory.html#a0e6d20caae0a051b0da5cfe0eb70f538',1,'logic::IEntityFactory']]],
+  ['_7eiinputhandler_7',['~IInputHandler',['../classrenderer_1_1IInputHandler.html#ac8f33e6a9115d6af37fe632e72b553cd',1,'renderer::IInputHandler']]],
+  ['_7einavigationagent_8',['~INavigationAgent',['../classlogic_1_1INavigationAgent.html#a99975ec9e8447d2fc9651dc3b52803b6',1,'logic::INavigationAgent']]],
+  ['_7eiobserver_9',['~IObserver',['../classlogic_1_1IObserver.html#aa3736db37cb39a0e8f1570c7c3201b33',1,'logic::IObserver']]],
+  ['_7eistate_10',['~IState',['../classrenderer_1_1IState.html#ac0eccb586fc4819e616966f4c761c39d',1,'renderer::IState']]],
+  ['_7eiupdatehandler_11',['~IUpdateHandler',['../classlogic_1_1IUpdateHandler.html#ae7df05b12b4361fa53a0b213c6facc0d',1,'logic::IUpdateHandler']]],
+  ['_7eobservable_12',['~Observable',['../classlogic_1_1Observable.html#abbbfab37e8417e4232bd1b6e59fd9661',1,'logic::Observable']]],
+  ['_7erandom_13',['~Random',['../classlogic_1_1Random.html#adcdfbf7e0f6849bae47f016b3ff5adad',1,'logic::Random']]]
 ];

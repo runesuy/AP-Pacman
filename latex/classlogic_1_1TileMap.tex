@@ -46,6 +46,10 @@ std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classlogic_1_1TileMap_af2e5cc47d879
 unsigned int \mbox{\hyperlink{classlogic_1_1TileMap_adad1323ec1fae76de2e3f3de5acfec88}{get\+Row\+Count}} () const
 \item 
 unsigned int \mbox{\hyperlink{classlogic_1_1TileMap_a6758aebdbe635b91541ef650ee805235}{get\+Column\+Count}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} $>$ \mbox{\hyperlink{classlogic_1_1TileMap_ab0c8972b170373d11753e22940fc7872}{get\+Viable\+Directions}} (const \mbox{\hyperlink{classlogic_1_1World}{World}} \&world, const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&position) const
+\item 
+\mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}{Tile\+Type}} \mbox{\hyperlink{classlogic_1_1TileMap_acc8d35e85b6e9d25a1c81d1947a45203}{get\+Tile\+In\+Direction}} (const \mbox{\hyperlink{classlogic_1_1World}{World}} \&world, const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&position, \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} direction) const
 \end{DoxyCompactItemize}
 
 
@@ -182,6 +186,20 @@ The amount of rows of the map.
 \begin{DoxyReturn}{Returns}
 The center position of the requested tile. 
 \end{DoxyReturn}
+\Hypertarget{classlogic_1_1TileMap_acc8d35e85b6e9d25a1c81d1947a45203}\label{classlogic_1_1TileMap_acc8d35e85b6e9d25a1c81d1947a45203} 
+\index{logic::TileMap@{logic::TileMap}!getTileInDirection@{getTileInDirection}}
+\index{getTileInDirection@{getTileInDirection}!logic::TileMap@{logic::TileMap}}
+\doxysubsubsection{\texorpdfstring{getTileInDirection()}{getTileInDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}{Tile\+Map\+::\+Tile\+Type}} logic\+::\+Tile\+Map\+::get\+Tile\+In\+Direction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{position,  }\item[{\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}}]{direction }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1TileMap_acc8d35e85b6e9d25a1c81d1947a45203_cgraph}
+\end{center}
+\end{figure}
 \Hypertarget{classlogic_1_1TileMap_a1b57cd4600c865db3cbfb791b42717bf}\label{classlogic_1_1TileMap_a1b57cd4600c865db3cbfb791b42717bf} 
 \index{logic::TileMap@{logic::TileMap}!getTileSize@{getTileSize}}
 \index{getTileSize@{getTileSize}!logic::TileMap@{logic::TileMap}}
@@ -229,6 +247,20 @@ Here is the call graph for this function\+:
 \begin{DoxyReturn}{Returns}
 The original tile at the given position in the world. 
 \end{DoxyReturn}
+\Hypertarget{classlogic_1_1TileMap_ab0c8972b170373d11753e22940fc7872}\label{classlogic_1_1TileMap_ab0c8972b170373d11753e22940fc7872} 
+\index{logic::TileMap@{logic::TileMap}!getViableDirections@{getViableDirections}}
+\index{getViableDirections@{getViableDirections}!logic::TileMap@{logic::TileMap}}
+\doxysubsubsection{\texorpdfstring{getViableDirections()}{getViableDirections()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{logic\+::\+Direction}} $>$ logic\+::\+Tile\+Map\+::get\+Viable\+Directions (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{position }\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlogic_1_1TileMap_ab0c8972b170373d11753e22940fc7872_cgraph}
+\end{center}
+\end{figure}
 \Hypertarget{classlogic_1_1TileMap_a4b64392a0c764b051d4e81f49e00f794}\label{classlogic_1_1TileMap_a4b64392a0c764b051d4e81f49e00f794} 
 \index{logic::TileMap@{logic::TileMap}!getYOffsetForCentering@{getYOffsetForCentering}}
 \index{getYOffsetForCentering@{getYOffsetForCentering}!logic::TileMap@{logic::TileMap}}

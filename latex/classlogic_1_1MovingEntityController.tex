@@ -29,10 +29,12 @@ Collaboration diagram for logic\+::Moving\+Entity\+Controller\texorpdfstring{$<$
 \item 
 void \mbox{\hyperlink{classlogic_1_1MovingEntityController_a6dc0f5fe7e6001eb437664da3441ab63}{update}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world, Entity\+Model\+Type \&entity) override
 \item 
-virtual void \mbox{\hyperlink{classlogic_1_1MovingEntityController_a75b2d8e1d0ad0e2924f7a11d771a72f8}{on\+Wall\+Collision}} (\mbox{\hyperlink{classlogic_1_1World}{logic\+::\+World}} \&world, Entity\+Model\+Type \&entity)
+virtual void \mbox{\hyperlink{classlogic_1_1MovingEntityController_aab128d8469c5da416eae7e0bdc8f9123}{on\+Wall\+Collision}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world, Entity\+Model\+Type \&entity)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IEntityController}{logic\+::\+IEntity\+Controller$<$ Entity\+Model\+Type $>$}}}
 \begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classlogic_1_1IEntityController_a54871a58cfd7672084a9e3a145b0f308}{\texorpdfstring{$\sim$}{\string~}\+IEntity\+Controller}} ()=default
 \item 
 virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_a6a070b8f37b4a331c949c19a1b676365}{process\+Command}} (\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{Entity\+Command}} command, Entity\+Model\+Type \&entity)=0
 \item 
@@ -40,59 +42,54 @@ virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_ae3b0e2339729244ae
 \item 
 virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_afc00d163ce088cd89b18b282ddf7e3e0}{handle\+World\+Event}} (\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{World\+Object\+::\+World\+EventT}} event, Entity\+Model\+Type \&entity)
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-double \mbox{\hyperlink{classlogic_1_1MovingEntityController_a695645ec08000e5e158b719f3093c14e}{\+\_\+get\+Tile\+Scaled\+Speed}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world, const Entity\+Model\+Type \&entity) const
-\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static std\+::tuple$<$ bool, \mbox{\hyperlink{classlogic_1_1Position}{Position}} $>$ \mbox{\hyperlink{classlogic_1_1MovingEntityController_a73ec56f81d7b0e35cd2870596c47a904}{\+\_\+is\+Past\+Or\+On\+Center}} (const \mbox{\hyperlink{classlogic_1_1World}{logic\+::\+World}} \&world, const Entity\+Model\+Type \&entity, \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} direction)
+static std\+::tuple$<$ bool, \mbox{\hyperlink{classlogic_1_1Position}{Position}} $>$ \mbox{\hyperlink{classlogic_1_1MovingEntityController_aed777bb3db8d24096f1398ccfb365418}{\+\_\+is\+Past\+Or\+On\+Center}} (const \mbox{\hyperlink{classlogic_1_1World}{World}} \&world, const Entity\+Model\+Type \&entity, \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} direction)
 \item 
-static std\+::tuple$<$ bool, \mbox{\hyperlink{classlogic_1_1Position}{Position}} $>$ \mbox{\hyperlink{classlogic_1_1MovingEntityController_ac1e017f33e1035f879e14e4be09b455c}{\+\_\+is\+Past\+Center}} (const \mbox{\hyperlink{classlogic_1_1World}{logic\+::\+World}} \&world, const Entity\+Model\+Type \&entity, \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} direction)
+static std\+::tuple$<$ bool, \mbox{\hyperlink{classlogic_1_1Position}{Position}} $>$ \mbox{\hyperlink{classlogic_1_1MovingEntityController_a2e1b6eddda55f0afb019da72aad29ca2}{\+\_\+is\+Past\+Center}} (const \mbox{\hyperlink{classlogic_1_1World}{World}} \&world, const Entity\+Model\+Type \&entity, \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} direction)
 \item 
-static \mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}{Tile\+Map\+::\+Tile\+Type}} \mbox{\hyperlink{classlogic_1_1MovingEntityController_ae3016077b6427131d2ba9c73cd7b0541}{get\+Tile\+In\+Direction}} (const \mbox{\hyperlink{classlogic_1_1World}{World}} \&world, const Entity\+Model\+Type \&entity, \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} direction)
+static double \mbox{\hyperlink{classlogic_1_1MovingEntityController_a3ce9110b988dfd2b7d8c402ad29f12a5}{\+\_\+get\+Tile\+Scaled\+Speed}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world, const Entity\+Model\+Type \&entity)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classlogic_1_1MovingEntityController_a695645ec08000e5e158b719f3093c14e}\label{classlogic_1_1MovingEntityController_a695645ec08000e5e158b719f3093c14e} 
+\Hypertarget{classlogic_1_1MovingEntityController_a3ce9110b988dfd2b7d8c402ad29f12a5}\label{classlogic_1_1MovingEntityController_a3ce9110b988dfd2b7d8c402ad29f12a5} 
 \index{logic::MovingEntityController$<$ EntityModelType $>$@{logic::MovingEntityController$<$ EntityModelType $>$}!\_getTileScaledSpeed@{\_getTileScaledSpeed}}
 \index{\_getTileScaledSpeed@{\_getTileScaledSpeed}!logic::MovingEntityController$<$ EntityModelType $>$@{logic::MovingEntityController$<$ EntityModelType $>$}}
 \doxysubsubsection{\texorpdfstring{\_getTileScaledSpeed()}{\_getTileScaledSpeed()}}
 {\footnotesize\ttfamily template$<$typename Entity\+Model\+Type $>$ \\
-double \mbox{\hyperlink{classlogic_1_1MovingEntityController}{logic\+::\+Moving\+Entity\+Controller}}$<$ Entity\+Model\+Type $>$\+::\+\_\+get\+Tile\+Scaled\+Speed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{const Entity\+Model\+Type \&}]{entity }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+double \mbox{\hyperlink{classlogic_1_1MovingEntityController}{logic\+::\+Moving\+Entity\+Controller}}$<$ Entity\+Model\+Type $>$\+::\+\_\+get\+Tile\+Scaled\+Speed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{const Entity\+Model\+Type \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classlogic_1_1MovingEntityController_a695645ec08000e5e158b719f3093c14e_cgraph}
+\includegraphics[width=350pt]{classlogic_1_1MovingEntityController_a3ce9110b988dfd2b7d8c402ad29f12a5_cgraph}
 \end{center}
 \end{figure}
-\Hypertarget{classlogic_1_1MovingEntityController_ac1e017f33e1035f879e14e4be09b455c}\label{classlogic_1_1MovingEntityController_ac1e017f33e1035f879e14e4be09b455c} 
+\Hypertarget{classlogic_1_1MovingEntityController_a2e1b6eddda55f0afb019da72aad29ca2}\label{classlogic_1_1MovingEntityController_a2e1b6eddda55f0afb019da72aad29ca2} 
 \index{logic::MovingEntityController$<$ EntityModelType $>$@{logic::MovingEntityController$<$ EntityModelType $>$}!\_isPastCenter@{\_isPastCenter}}
 \index{\_isPastCenter@{\_isPastCenter}!logic::MovingEntityController$<$ EntityModelType $>$@{logic::MovingEntityController$<$ EntityModelType $>$}}
 \doxysubsubsection{\texorpdfstring{\_isPastCenter()}{\_isPastCenter()}}
 {\footnotesize\ttfamily template$<$typename Entity\+Model\+Type $>$ \\
-std\+::tuple$<$ bool, \mbox{\hyperlink{classlogic_1_1Position}{Position}} $>$ \mbox{\hyperlink{classlogic_1_1MovingEntityController}{logic\+::\+Moving\+Entity\+Controller}}$<$ Entity\+Model\+Type $>$\+::\+\_\+is\+Past\+Center (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1World}{logic\+::\+World}} \&}]{world,  }\item[{const Entity\+Model\+Type \&}]{entity,  }\item[{\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+std\+::tuple$<$ bool, \mbox{\hyperlink{classlogic_1_1Position}{Position}} $>$ \mbox{\hyperlink{classlogic_1_1MovingEntityController}{logic\+::\+Moving\+Entity\+Controller}}$<$ Entity\+Model\+Type $>$\+::\+\_\+is\+Past\+Center (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{const Entity\+Model\+Type \&}]{entity,  }\item[{\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classlogic_1_1MovingEntityController_ac1e017f33e1035f879e14e4be09b455c_cgraph}
+\includegraphics[width=350pt]{classlogic_1_1MovingEntityController_a2e1b6eddda55f0afb019da72aad29ca2_cgraph}
 \end{center}
 \end{figure}
-\Hypertarget{classlogic_1_1MovingEntityController_a73ec56f81d7b0e35cd2870596c47a904}\label{classlogic_1_1MovingEntityController_a73ec56f81d7b0e35cd2870596c47a904} 
+\Hypertarget{classlogic_1_1MovingEntityController_aed777bb3db8d24096f1398ccfb365418}\label{classlogic_1_1MovingEntityController_aed777bb3db8d24096f1398ccfb365418} 
 \index{logic::MovingEntityController$<$ EntityModelType $>$@{logic::MovingEntityController$<$ EntityModelType $>$}!\_isPastOrOnCenter@{\_isPastOrOnCenter}}
 \index{\_isPastOrOnCenter@{\_isPastOrOnCenter}!logic::MovingEntityController$<$ EntityModelType $>$@{logic::MovingEntityController$<$ EntityModelType $>$}}
 \doxysubsubsection{\texorpdfstring{\_isPastOrOnCenter()}{\_isPastOrOnCenter()}}
 {\footnotesize\ttfamily template$<$typename Entity\+Model\+Type $>$ \\
-std\+::tuple$<$ bool, \mbox{\hyperlink{classlogic_1_1Position}{Position}} $>$ \mbox{\hyperlink{classlogic_1_1MovingEntityController}{logic\+::\+Moving\+Entity\+Controller}}$<$ Entity\+Model\+Type $>$\+::\+\_\+is\+Past\+Or\+On\+Center (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1World}{logic\+::\+World}} \&}]{world,  }\item[{const Entity\+Model\+Type \&}]{entity,  }\item[{\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+std\+::tuple$<$ bool, \mbox{\hyperlink{classlogic_1_1Position}{Position}} $>$ \mbox{\hyperlink{classlogic_1_1MovingEntityController}{logic\+::\+Moving\+Entity\+Controller}}$<$ Entity\+Model\+Type $>$\+::\+\_\+is\+Past\+Or\+On\+Center (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{const Entity\+Model\+Type \&}]{entity,  }\item[{\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
 
 Check if the player has passed the center of the current tile in the given direction. 
 \begin{DoxyParams}{Parameters}
@@ -106,27 +103,12 @@ Check if the player has passed the center of the current tile in the given direc
 \begin{DoxyReturn}{Returns}
 True and the center position if past center, false otherwise. 
 \end{DoxyReturn}
-\Hypertarget{classlogic_1_1MovingEntityController_ae3016077b6427131d2ba9c73cd7b0541}\label{classlogic_1_1MovingEntityController_ae3016077b6427131d2ba9c73cd7b0541} 
-\index{logic::MovingEntityController$<$ EntityModelType $>$@{logic::MovingEntityController$<$ EntityModelType $>$}!getTileInDirection@{getTileInDirection}}
-\index{getTileInDirection@{getTileInDirection}!logic::MovingEntityController$<$ EntityModelType $>$@{logic::MovingEntityController$<$ EntityModelType $>$}}
-\doxysubsubsection{\texorpdfstring{getTileInDirection()}{getTileInDirection()}}
-{\footnotesize\ttfamily template$<$typename Entity\+Model\+Type $>$ \\
-\mbox{\hyperlink{classlogic_1_1TileMap_a5da8a4243a7f7605c4fa1d8c84db37f9}{Tile\+Map\+::\+Tile\+Type}} \mbox{\hyperlink{classlogic_1_1MovingEntityController}{logic\+::\+Moving\+Entity\+Controller}}$<$ Entity\+Model\+Type $>$\+::get\+Tile\+In\+Direction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{const Entity\+Model\+Type \&}]{entity,  }\item[{\mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classlogic_1_1MovingEntityController_ae3016077b6427131d2ba9c73cd7b0541_cgraph}
-\end{center}
-\end{figure}
-\Hypertarget{classlogic_1_1MovingEntityController_a75b2d8e1d0ad0e2924f7a11d771a72f8}\label{classlogic_1_1MovingEntityController_a75b2d8e1d0ad0e2924f7a11d771a72f8} 
+\Hypertarget{classlogic_1_1MovingEntityController_aab128d8469c5da416eae7e0bdc8f9123}\label{classlogic_1_1MovingEntityController_aab128d8469c5da416eae7e0bdc8f9123} 
 \index{logic::MovingEntityController$<$ EntityModelType $>$@{logic::MovingEntityController$<$ EntityModelType $>$}!onWallCollision@{onWallCollision}}
 \index{onWallCollision@{onWallCollision}!logic::MovingEntityController$<$ EntityModelType $>$@{logic::MovingEntityController$<$ EntityModelType $>$}}
 \doxysubsubsection{\texorpdfstring{onWallCollision()}{onWallCollision()}}
 {\footnotesize\ttfamily template$<$typename Entity\+Model\+Type $>$ \\
-virtual void \mbox{\hyperlink{classlogic_1_1MovingEntityController}{logic\+::\+Moving\+Entity\+Controller}}$<$ Entity\+Model\+Type $>$\+::on\+Wall\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1World}{logic\+::\+World}} \&}]{world,  }\item[{Entity\+Model\+Type \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+virtual void \mbox{\hyperlink{classlogic_1_1MovingEntityController}{logic\+::\+Moving\+Entity\+Controller}}$<$ Entity\+Model\+Type $>$\+::on\+Wall\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{Entity\+Model\+Type \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
