@@ -85,7 +85,7 @@ namespace renderer {
                 ghostModel->addObserver(ghostView);
                 ghostModel->setController(std::make_shared<logic::ManhattanPredictGhostController>());
                 viewTarget->addObjectView(ghostView);
-                ghostModel->setStartDelay(10);
+                ghostModel->setStartDelay(5);
                 return ghostModel;
             }
             case logic::GhostType::BLUE: {
