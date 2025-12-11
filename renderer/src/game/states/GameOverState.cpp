@@ -12,18 +12,21 @@ namespace renderer {
     }
 
     void GameOverState::processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) {
-        if (event.type == sf::Event::KeyPressed) {
+        if (event.type == sf::Event::KeyReleased) {
+            keyReleased = true;
+        }
+        if (event.type == sf::Event::KeyPressed && keyReleased) {
             stateManager.popState();
-            return;
         }
     }
 
     void GameOverState::draw(sf::RenderWindow &window, StateManager &stateManager) {
         gameOverLabel.draw(window);
         descrLabel.draw(window);
+        currentScoreLabel.draw(window);
     }
 
-    GameOverState::GameOverState() {
+    GameOverState::GameOverState(const std::shared_ptr<logic::Score>& score) {
         gameOverLabel.setCharacterSize(0.2);
         gameOverLabel.setVerticalOrigin(Label::VerticalOriginType::BOTTOM);
         gameOverLabel.setHorizontalOrigin(Label::HorizontalOriginType::MIDDLE);
@@ -32,5 +35,10 @@ namespace renderer {
         descrLabel.setVerticalOrigin(Label::VerticalOriginType::BOTTOM);
         descrLabel.setHorizontalOrigin(Label::HorizontalOriginType::MIDDLE);
         descrLabel.setPosition({0, -0.1});
+        currentScoreLabel.setCharacterSize(0.05);
+        currentScoreLabel.setVerticalOrigin(Label::VerticalOriginType::BOTTOM);
+        currentScoreLabel.setHorizontalOrigin(Label::HorizontalOriginType::MIDDLE);
+        currentScoreLabel.setPosition({0, 0});
+        currentScoreLabel.setString("Your score is: " + std::to_string(score->getScoreCounter().getScore()));
     }
 } // renderer

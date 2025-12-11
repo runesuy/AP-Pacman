@@ -7,14 +7,17 @@
 
 #include "core/states/IState.h"
 #include "core/drawable/ui/Label.h"
+#include "core/world/Score.h"
 
 namespace renderer {
 
     class GameOverState : public IState{
         Label gameOverLabel{"GAME OVER"};
         Label descrLabel{"PRESS ANY KEY TO CONTINUE"};
+        Label currentScoreLabel;
+        bool keyReleased = false;
     public:
-        GameOverState();
+        GameOverState(const std::shared_ptr<logic::Score>& score);
         void update(StateManager &stateManager) override;
 
         void processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) override;

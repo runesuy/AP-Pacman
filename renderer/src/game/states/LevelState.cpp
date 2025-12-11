@@ -38,7 +38,7 @@ namespace renderer {
         getWorld()->update();
         if (getWorld()->isGameOver()) {
             getWorld()->getScore()->getScoreCounter().saveHighScores();
-            stateManager.replaceState(std::make_unique<GameOverState>());
+            stateManager.replaceState(std::make_unique<GameOverState>(getWorld()->getScore()));
             return;
         }
         if (getWorld()->levelComplete()){

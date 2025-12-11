@@ -11,7 +11,10 @@ namespace renderer {
     }
 
     void VictoryState::processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) {
-        if (event.type == sf::Event::KeyPressed) {
+        if (event.type == sf::Event::KeyReleased) {
+            keyReleased = true;
+        }
+        if (event.type == sf::Event::KeyPressed && keyReleased) {
             stateManager.replaceState(std::make_unique<LevelState>(passToNextLevel));
         }
     }
