@@ -8,6 +8,7 @@
 #include "core/observer/Observable.h"
 #include "core/world/objects/WorldObject.h"
 #include "core/world/space/Size.h"
+#include "core/world/space/Directions.h"
 
 namespace logic {
     class World;
@@ -102,6 +103,10 @@ namespace logic {
          * @return The amount of columns of the map.
          */
         [[nodiscard]] unsigned int getColumnCount() const;
+
+        std::vector<Direction> getViableDirections(const World &world, const Position& position) const;
+
+        TileType getTileInDirection(const World& world, const Position& position, Direction direction) const ;
     };
 
 } // logic

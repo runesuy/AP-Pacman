@@ -45,23 +45,27 @@ namespace logic {
             // get 4 successors of q
             std::vector<std::shared_ptr<Node> > successors;
             const double tileSize = world.getConfig().getTileMap().getTileSize();
-            for (const Direction &dir: {Direction::UP, Direction::DOWN, Direction::LEFT, Direction::RIGHT}) {
+            for (const Direction &dir: world.getConfig().getTileMap().getViableDirections(world, q->position)) {
                 auto successor = std::make_shared<Node>(0, 0, 0, Position{0, 0}, q);
                 // calculate position
                 double newX=0;
                 double newY=0;
                 switch (dir) {
                     case Direction::UP:
+                        newX = q->position.getX();
                         newY = q->position.getY() + tileSize;
                         break;
                     case Direction::DOWN:
+                        newX = q->position.getX();
                         newY = q->position.getY() - tileSize;
                         break;
                     case Direction::LEFT:
                         newX = q->position.getX() - tileSize;
+                        newY = q->position.getY();
                         break;
                     case Direction::RIGHT:
                         newX = q->position.getX() + tileSize;
+                        newY = q->position.getY();
                         break;
                     default:
                         break;

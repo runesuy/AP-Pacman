@@ -137,4 +137,41 @@ namespace logic {
         return mapData.empty() ? 0 : mapData[0].size();
     }
 
+    std::vector<logic::Direction>
+    TileMap::getViableDirections(const logic::World &world, const Position &position) const {
+        std::vector<Direction> viableDirections;
+        for (Direction dir : {Direction::UP, Direction::DOWN, Direction::LEFT, Direction::RIGHT}) {
+            TileType tileInDirection = getTileInDirection(world, position, dir);
+            if (tileInDirection != TileMap::TileType::WALL) {
+                viableDirections.push_back(dir);
+            }
+        }
+        return viableDirections;
+    }
+
+    TileMap::TileType TileMap::getTileInDirection(const World &world, const Position &position,
+                                                                Direction direction) const {
+        auto [row, col] = getGridPosition(position);
+
+        TileType tileInFront=EMPTY;
+        switch (direction) {
+            case LEFT:
+                tileInFront = getTileType(row, col - 1);
+                break;
+            case RIGHT:
+                tileInFront = getTileType(row, col + 1);
+                break;
+            case UP:
+                tileInFront = getTileType(row - 1, col);
+                break;
+            case DOWN:
+                tileInFront = getTileType(row + 1, col);
+                break;
+            case NONE:
+                tileInFront = getTileType(row, col);
+                break;
+        }
+        return tileInFront;
+    }
+
 } // logic

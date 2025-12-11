@@ -23,6 +23,11 @@ namespace logic {
         }
 
         if (entity.getMode() == GhostModel::FRIGHTENED) {
+            if (justChangedToFrightened) {
+                entity.setDirection(frightenedNavigationAgent->getNavigationDirection(entity.getPosition(), entity.getSpawnPosition(), world));
+                justChangedToFrightened = false;
+            }
+
             if (entity.getFrightenedTimer() < entity.getFrightenedDuration())
                 entity.setFrightenedTimer(entity.getFrightenedTimer() + Stopwatch::getInstance()->getDeltaTime());
             else {
@@ -62,6 +67,7 @@ namespace logic {
             case (WorldEvent::FRUIT_EATEN_BY_PLAYER): {
                 if (entity.getMode() == GhostModel::CHASE)
                     entity.setMode(GhostModel::FRIGHTENED);
+                    justChangedToFrightened = true;
                 break;
             }
             case (WorldEvent::PLAYER_KILLED_W): {
@@ -80,20 +86,8 @@ namespace logic {
         }
     }
 
-    std::vector<logic::Direction>
-    logic::GhostController::getViableDirections(const logic::World &world, const logic::GhostModel &entity) {
-        std::vector<Direction> viableDirections;
-        for (Direction dir : {Direction::UP, Direction::DOWN, Direction::LEFT, Direction::RIGHT}) {
-            TileMap::TileType tileInDirection = getTileInDirection(world, entity, dir);
-            if (tileInDirection != TileMap::TileType::WALL) {
-                viableDirections.push_back(dir);
-            }
-        }
-        return viableDirections;
-    }
-
     bool GhostController::isAtIntersectionOrDeadEnd(const World &world, const GhostModel &entity) {
-        auto viableDirections = getViableDirections(world, entity);
+        auto viableDirections = world.getConfig().getTileMap().getViableDirections(world, entity.getPosition());
         return viableDirections.size() != 2 ||
         std::find(viableDirections.begin(), viableDirections.end(), entity.getDirection())==viableDirections.end() ||
         std::find(viableDirections.begin(), viableDirections.end(), getOppositeDirection(entity.getDirection()))==viableDirections.end();

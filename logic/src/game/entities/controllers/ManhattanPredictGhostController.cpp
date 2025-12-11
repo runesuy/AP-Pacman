@@ -12,7 +12,7 @@ namespace logic {
         }
         // calculate position in front of player
         auto targetPosition = _calculatePositionInFrontOneStep(*player, world.getConfig().getTileMap().getTileSize());
-        unsigned directionOptions = getViableDirections(world, entity).size();
+        unsigned directionOptions = world.getConfig().getTileMap().getViableDirections(world, entity.getPosition()).size();
         if (!get<0>(_isPastCenter(world, entity, entity.getDirection())) && entity.getMode() == GhostModel::CHASE
         && (isAtIntersectionOrDeadEnd(world, entity) ||entity.getDirection() == NONE)) {
             entity.setRequestedDirection(

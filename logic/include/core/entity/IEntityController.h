@@ -26,6 +26,8 @@ namespace logic {
     template<typename DerivedEntityModel>
     class IEntityController {
     public:
+        virtual ~IEntityController() = default;
+
         /**
          * Update the entity based on world and stopwatch data.
          * @param world

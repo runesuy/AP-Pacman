@@ -24,23 +24,21 @@ namespace logic {
          * @param direction
          * @return True and the center position if past center, false otherwise.
          */
-        static std::tuple<bool,Position> _isPastOrOnCenter(const logic::World &world, const EntityModelType &entity, Direction direction) ;
+        static std::tuple<bool,Position> _isPastOrOnCenter(const World &world, const EntityModelType &entity, Direction direction) ;
 
-        static std::tuple<bool,Position> _isPastCenter(const logic::World &world, const EntityModelType &entity, Direction direction) ;
+        static std::tuple<bool,Position> _isPastCenter(const World &world, const EntityModelType &entity, Direction direction) ;
 
-        static TileMap::TileType getTileInDirection(const World& world, const EntityModelType& entity, Direction direction) ;
-
-        double _getTileScaledSpeed(World& world, const EntityModelType &entity) const;
+        static double _getTileScaledSpeed(World& world, const EntityModelType &entity);
 
     public:
         void update(World &world, EntityModelType &entity) override;
 
-        virtual void onWallCollision(logic::World &world, EntityModelType &entity) {};
+        virtual void onWallCollision(World &world, EntityModelType &entity) {};
         };
 
     template<typename EntityModelType>
-    double MovingEntityController<EntityModelType>::_getTileScaledSpeed(World& world, const EntityModelType &entity) const {
-        float tileSize = world.getConfig().getTileMap().getTileSize();
+    double MovingEntityController<EntityModelType>::_getTileScaledSpeed(World& world, const EntityModelType &entity) {
+        double tileSize = world.getConfig().getTileMap().getTileSize();
         return entity.getSpeed()*tileSize;
     }
 
@@ -58,30 +56,29 @@ namespace logic {
     void MovingEntityController<EntityModelType>::update(World &world, EntityModelType &entity) {
         float delta = Stopwatch::getInstance()->getDeltaTime();
 
-        TileMap::TileType tileInRequested = getTileInDirection(world, entity, entity.getRequestedDirection());
+        TileMap::TileType tileInRequested = world.getConfig().getTileMap().getTileInDirection(world, entity.getPosition(), entity.getRequestedDirection());
 
         if (entity.getRequestedDirection() != entity.getDirection() && tileInRequested != TileMap::TileType::WALL) {
             auto [isPastCenter, tileCenter] = _isPastOrOnCenter(world, entity, entity.getDirection());
-            auto ghost = dynamic_cast<GhostModel*>(&entity);
             if (isPastCenter) {
                 entity.setPosition(tileCenter);
                 entity.setDirection(entity.getRequestedDirection());
             }
         }
-        if (entity.getDirection()==Direction::NONE) return;
+        if (entity.getDirection()==NONE) return;
 
-        TileMap::TileType tileInFront = getTileInDirection(world, entity, entity.getDirection());
+        TileMap::TileType tileInFront = world.getConfig().getTileMap().getTileInDirection(world, entity.getPosition(), entity.getDirection());
         auto [isPastCenter, tileCenter] = _isPastOrOnCenter(world, entity, entity.getDirection());
 
         if (tileInFront != TileMap::TileType::WALL || !isPastCenter) {
             double scaledSpeed = _getTileScaledSpeed(world, entity);
-            if (entity.getDirection() == Direction::LEFT)
+            if (entity.getDirection() == LEFT)
                 entity.setPosition(entity.getPosition() + Position(-scaledSpeed, 0)* delta);
-            else if (entity.getDirection() == Direction::RIGHT)
+            else if (entity.getDirection() == RIGHT)
                 entity.setPosition(entity.getPosition() + Position(scaledSpeed, 0)*delta);
-            else if (entity.getDirection() == Direction::UP)
+            else if (entity.getDirection() == UP)
                 entity.setPosition(entity.getPosition() + Position(0, scaledSpeed)*delta);
-            else if (entity.getDirection() == Direction::DOWN)
+            else if (entity.getDirection() == DOWN)
                 entity.setPosition(entity.getPosition() + Position(0, -scaledSpeed)*delta);
         }
         else {
@@ -91,31 +88,6 @@ namespace logic {
                 onWallCollision(world, entity);
             }
         }
-    }
-
-    template<typename EntityModelType>
-    TileMap::TileType
-    MovingEntityController<EntityModelType>::getTileInDirection(const World &world, const EntityModelType &entity,
-                                                                Direction direction) {
-        auto [row, col] = world.getConfig().getTileMap().getGridPosition(entity.getPosition());
-
-        TileMap::TileType tileInFront;
-        switch (direction) {
-            case Direction::LEFT:
-                tileInFront = world.getConfig().getTileMap().getTileType(row, col - 1);
-                break;
-            case Direction::RIGHT:
-                tileInFront = world.getConfig().getTileMap().getTileType(row, col + 1);
-                break;
-            case Direction::UP:
-                tileInFront = world.getConfig().getTileMap().getTileType(row - 1, col);
-                break;
-            case Direction::DOWN:
-                tileInFront = world.getConfig().getTileMap().getTileType(row + 1, col);
-                break;
-            case Direction::NONE: break;
-        }
-        return tileInFront;
     }
 
     template<typename EntityModelType>

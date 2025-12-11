@@ -10,7 +10,6 @@ namespace logic {
         if (!player) {
             std::cerr << "No Player Found [ManhattanFollowGhostController::update]" << std::endl;
         }
-        unsigned directionOptions = getViableDirections(world, entity).size();
         if (!get<0>(_isPastCenter(world, entity, entity.getDirection())) && entity.getMode() == GhostModel::CHASE
         && (isAtIntersectionOrDeadEnd(world, entity)||entity.getDirection() == NONE)) {
             entity.setRequestedDirection(

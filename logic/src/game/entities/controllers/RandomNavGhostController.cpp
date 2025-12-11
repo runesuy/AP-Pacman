@@ -20,7 +20,7 @@ void logic::RandomNavGhostController::update(logic::World &world, logic::GhostMo
         chooseDirection(world, entity);
     }
     auto tilemap = world.getConfig().getTileMap();
-    if(getViableDirections(world, entity).size() > 2 && !get<0>(_isPastOrOnCenter(world, entity, entity.getDirection()))) {
+    if(world.getConfig().getTileMap().getViableDirections(world, entity.getPosition()).size() > 2 && !get<0>(_isPastOrOnCenter(world, entity, entity.getDirection()))) {
         chooseDirection(world, entity);
     }
 }
@@ -33,7 +33,7 @@ void logic::RandomNavGhostController::onWallCollision(logic::World &world, logic
 void logic::RandomNavGhostController::chooseDirection(logic::World &world, logic::GhostModel &entity) {
     bool change = Random::getInstance()->getIntInRange(0,1);
     if (!change) return;
-    std::vector<Direction> viableDirections = getViableDirections(world, entity);
+    std::vector<Direction> viableDirections = world.getConfig().getTileMap().getViableDirections(world, entity.getPosition());
     if (!viableDirections.empty()) {
         // if more than one direction to choose from, remove opposite of currentDirection from viableDirections
         if (viableDirections.size() > 1) {
