@@ -37,9 +37,8 @@ namespace logic {
         }
 
         // returning mode
-        if (!get<0>(_isPastCenter(world, entity, entity.getDirection()))) {
-            if (entity.getMode() == GhostModel::RETURNING_HOME && (entity.getDirection() == NONE ||
-                                                                   isAtIntersectionOrDeadEnd(world, entity))) {
+        if (!get<0>(_isPastCenter(world, entity, entity.getDirection())) && entity.getMode() == GhostModel::RETURNING_HOME ) {
+            if (entity.getDirection() == NONE ||isAtIntersectionOrDeadEnd(world, entity)) {
                 entity.setRequestedDirection(
                         returnNavigationAgent->getNavigationDirection(entity.getPosition(), entity.getReturnPosition(),
                                                                       world, {getOppositeDirection(entity.getDirection())}));
