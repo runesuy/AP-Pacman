@@ -1,7 +1,7 @@
 var searchData=
 [
   ['game_0',['game',['../classrenderer_1_1Game.html#a98a10959e1ea6df786e968b6a6c64781',1,'renderer::Game::Game(Game &amp;)=delete'],['../classrenderer_1_1Game.html#a4de75942c06178278abbb0d3feaf7007',1,'renderer::Game::Game(Game &amp;&amp;) noexcept=delete']]],
-  ['gameoverstate_1',['GameOverState',['../classrenderer_1_1GameOverState.html#a9414884107d4f3fed489417ab213ccac',1,'renderer::GameOverState']]],
+  ['gameoverstate_1',['GameOverState',['../classrenderer_1_1GameOverState.html#abdcefbda49c4a3d535628b4d10755f62',1,'renderer::GameOverState']]],
   ['getappconfig_2',['getAppConfig',['../classrenderer_1_1Game.html#aac50811bfd084fb78bc78cda1db242f2',1,'renderer::Game']]],
   ['getcharactersize_3',['getCharacterSize',['../classrenderer_1_1Label.html#a2fd3345eeb14c2bd483d8e286e4d8e82',1,'renderer::Label']]],
   ['getcollisiontype_4',['getcollisiontype',['../classlogic_1_1SizedWorldObject.html#a2a81e70fcac5476dc056ea22d78095c3',1,'logic::SizedWorldObject::getCollisionType()'],['../classlogic_1_1CoinModel.html#a2492ed57891abec17988d21de99404f5',1,'logic::CoinModel::getCollisionType()'],['../classlogic_1_1FruitModel.html#aa120c79b5db4179e6c99755f8c0665e4',1,'logic::FruitModel::getCollisionType()'],['../classlogic_1_1GhostModel.html#ac2358a754ee501655aaaac5f4fe82a9a',1,'logic::GhostModel::getCollisionType()'],['../classlogic_1_1PlayerModel.html#a1ac95ef635939a02bd2c2196089b653e',1,'logic::PlayerModel::getCollisionType()']]],

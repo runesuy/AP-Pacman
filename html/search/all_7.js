@@ -3,7 +3,7 @@ var searchData=
   ['game_0',['game',['../classrenderer_1_1Game.html#a98a10959e1ea6df786e968b6a6c64781',1,'renderer::Game::Game(Game &amp;)=delete'],['../classrenderer_1_1Game.html#a4de75942c06178278abbb0d3feaf7007',1,'renderer::Game::Game(Game &amp;&amp;) noexcept=delete'],['../classrenderer_1_1Game.html',1,'renderer::Game']]],
   ['game_2ecpp_1',['Game.cpp',['../Game_8cpp.html',1,'']]],
   ['game_2eh_2',['Game.h',['../Game_8h.html',1,'']]],
-  ['gameoverstate_3',['gameoverstate',['../classrenderer_1_1GameOverState.html',1,'renderer::GameOverState'],['../classrenderer_1_1GameOverState.html#a9414884107d4f3fed489417ab213ccac',1,'renderer::GameOverState::GameOverState()']]],
+  ['gameoverstate_3',['gameoverstate',['../classrenderer_1_1GameOverState.html',1,'renderer::GameOverState'],['../classrenderer_1_1GameOverState.html#abdcefbda49c4a3d535628b4d10755f62',1,'renderer::GameOverState::GameOverState()']]],
   ['gameoverstate_2ecpp_4',['GameOverState.cpp',['../GameOverState_8cpp.html',1,'']]],
   ['gameoverstate_2eh_5',['GameOverState.h',['../GameOverState_8h.html',1,'']]],
   ['getappconfig_6',['getAppConfig',['../classrenderer_1_1Game.html#aac50811bfd084fb78bc78cda1db242f2',1,'renderer::Game']]],
