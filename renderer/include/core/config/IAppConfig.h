@@ -42,6 +42,7 @@ namespace renderer {
          * @return
          */
         [[nodiscard]] virtual const logic::IConfig & getLogicConfig() const =0;
+        [[nodiscard]] virtual logic::IConfig & getLogicConfig()=0;
 
         [[nodiscard]] virtual const ITextureParser& getTextureParser() const =0;
 

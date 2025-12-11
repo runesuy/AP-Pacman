@@ -16,6 +16,7 @@
 namespace renderer {
     LevelState::LevelState() {
         auto &logicConfig = Game::getInstance()->getAppConfig().getLogicConfig();
+        logicConfig.loadTileMap();
         auto entityFactory = logicConfig.getEntityFactory();
         auto defaultFactory = std::dynamic_pointer_cast<DefaultEntityFactory>(entityFactory);
         _worldView = std::make_shared<WorldView>();

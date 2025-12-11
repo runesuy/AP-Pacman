@@ -10,15 +10,14 @@
 
 namespace renderer {
     const logic::TileMap & DefaultLogicConfig::getTileMap() const {
-        if (tileMapLoaded) {
-            return tileMap;
-        }
+        return tileMap;
+    }
+
+    void DefaultLogicConfig::loadTileMap() {
         TXTMapParser parser;
-        tileMapLoaded = true;
         const auto mapPaths = _getAllMapPaths();
         int randomI = logic::Random::getInstance()->getIntInRange(0, mapPaths.size()-1);
         tileMap = parser.loadMap(mapPaths.at(randomI));
-        return tileMap;
     }
 
     std::shared_ptr<logic::IEntityFactory> DefaultLogicConfig::getEntityFactory() const {
@@ -33,5 +32,9 @@ namespace renderer {
             }
         }
         return result;
+    }
+
+    void DefaultLogicConfig::loadRandomMap() const {
+
     }
 } // renderer

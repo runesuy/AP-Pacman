@@ -15,8 +15,7 @@ namespace renderer {
      * Default implementation of the logic configuration interface.
      */
     class DefaultLogicConfig : public logic::IConfig {
-        mutable bool tileMapLoaded = false;
-        mutable logic::TileMap tileMap;
+        logic::TileMap tileMap;
         std::shared_ptr<logic::IEntityFactory> entityFactory = std::make_shared<DefaultEntityFactory>();
 
         const std::string _MapFolderPath = "resources/maps/";
@@ -25,12 +24,16 @@ namespace renderer {
          * @return Paths to all txt files in _MapFolderPath
          */
         std::vector<std::string> _getAllMapPaths() const;
+
+        void loadRandomMap() const;
     public:
         /**
          * Get the tile map to be used in the game world.
          * @return
          */
         [[nodiscard]] const logic::TileMap & getTileMap() const override;
+
+        void loadTileMap() override;
 
         /**
          * Get the entity factory for creating game entities.

@@ -31,6 +31,11 @@ namespace logic {
         [[nodiscard]] virtual const TileMap &getTileMap() const = 0;
 
         /**
+         * Choose a new map and load it in the config.
+         */
+        virtual void loadTileMap() = 0;
+
+        /**
          * Get the entity factory for creating game entities.
          * @return A shared ptr to the factory.
          *

@@ -5,10 +5,7 @@
 #ifndef AP_PACMAN_GAME_H
 #define AP_PACMAN_GAME_H
 
-#include <SFML/Window/Event.hpp>
 #include "core/states/StateManager.h"
-#include "core/world/World.h"
-#include "core/factories/IFactoryCollection.h"
 #include "core/parser/IConfigParser.h"
 #include "core/config/IAppConfig.h"
 

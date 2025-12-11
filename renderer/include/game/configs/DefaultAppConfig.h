@@ -27,6 +27,8 @@ namespace renderer {
 
         [[nodiscard]] const logic::IConfig & getLogicConfig() const override;
 
+        [[nodiscard]]  logic::IConfig & getLogicConfig() override;
+
         [[nodiscard]] const DefaultTextureParser &getTextureParser() const override;
 
         ITextureParser &getTextureParser() override;
