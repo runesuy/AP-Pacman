@@ -35,6 +35,11 @@ namespace renderer {
          */
         virtual void draw(sf::RenderWindow &window, StateManager &stateManager) =0;
 
+        /**
+         * Called when the state becomes active again after being paused or another state is popped.
+         */
+        virtual void onManagerReActive() {}
+
         virtual ~IState()=default;
     };
 }

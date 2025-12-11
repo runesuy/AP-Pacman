@@ -60,6 +60,15 @@ namespace renderer {
         highScoreLabel.draw(window);
     }
 
+    void MenuState::onManagerReActive() {
+        const auto highScores = highScoreParser->getHighScores("resources/highscores.txt");
+        std::string highScoreLabelText = "HighScores: \n";
+        for (int i=0; i<5;i++) {
+            highScoreLabelText += std::to_string(i+1) + ". " + std::to_string(highScores.at(i)) + "\n";
+        }
+        highScoreLabel.setString(highScoreLabelText);
+    }
+
     MenuState::MenuState() {
         playButton.setString("PLAY");
         playButton.setCharacterSize(0.1);
@@ -79,5 +88,6 @@ namespace renderer {
         std::unique_ptr<IState> levelState = Game::getInstance()->getAppConfig().getFactoryCollection().getStateFactory()->createLevelState();
         stateManager.pushState(std::move(levelState));
     }
+
 
 } // renderer

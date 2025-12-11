@@ -38,6 +38,8 @@ namespace renderer {
         void processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) override;
 
         void draw(sf::RenderWindow &window, StateManager &stateManager) override;
+
+        void onManagerReActive() override;
     };
 
 } // renderer

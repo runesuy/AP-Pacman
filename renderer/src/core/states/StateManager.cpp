@@ -36,9 +36,13 @@ void renderer::StateManager::pushState(std::unique_ptr<IState> &&state) {
 
 void renderer::StateManager::popState() {
     stack.pop();
+    if (!stack.empty()) {
+        stack.top()->onManagerReActive();
+    }
 }
 
 void renderer::StateManager::replaceState(std::unique_ptr<IState> &&state) {
     stack.pop();
     stack.push(std::move(state));
+    stack.top()->onManagerReActive();
 }
