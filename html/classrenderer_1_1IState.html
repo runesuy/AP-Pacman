@@ -110,6 +110,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a07cfa1ed487621d0f8504c973557ac88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5da08382450c63f1fa0a6d2ee81bc8b" id="r_aa5da08382450c63f1fa0a6d2ee81bc8b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1IState.html#aa5da08382450c63f1fa0a6d2ee81bc8b">draw</a> (sf::RenderWindow &amp;window, <a class="el" href="classrenderer_1_1StateManager.html">StateManager</a> &amp;stateManager)=0</td></tr>
 <tr class="separator:aa5da08382450c63f1fa0a6d2ee81bc8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc1a4e51a2f13d6b33d4ce3f4af259b4" id="r_afc1a4e51a2f13d6b33d4ce3f4af259b4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1IState.html#afc1a4e51a2f13d6b33d4ce3f4af259b4">onManagerReActive</a> ()</td></tr>
+<tr class="separator:afc1a4e51a2f13d6b33d4ce3f4af259b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0eccb586fc4819e616966f4c761c39d" id="r_ac0eccb586fc4819e616966f4c761c39d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1IState.html#ac0eccb586fc4819e616966f4c761c39d">~IState</a> ()=default</td></tr>
 <tr class="separator:ac0eccb586fc4819e616966f4c761c39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -183,6 +185,34 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="classrenderer_1_1DelegatingState.html#a218946be351acc60bf8db18bb95d9668">renderer::DelegatingState&lt; Derived &gt;</a>, <a class="el" href="classrenderer_1_1GameOverState.html#a62144a51ea949c8196768e35640b9771">renderer::GameOverState</a>, <a class="el" href="classrenderer_1_1LevelState.html#a48d26de224efcea400efea0abba3b057">renderer::LevelState</a>, <a class="el" href="classrenderer_1_1MenuState.html#a8a732273c9273a1acf2b237ee75b39cb">renderer::MenuState</a>, <a class="el" href="classrenderer_1_1PausedState.html#a56549a05487c1909614b5f15131b6837">renderer::PausedState</a>, and <a class="el" href="classrenderer_1_1VictoryState.html#a866c450a9e995325239388d654cacb0a">renderer::VictoryState</a>.</p>
+
+</div>
+</div>
+<a id="afc1a4e51a2f13d6b33d4ce3f4af259b4" name="afc1a4e51a2f13d6b33d4ce3f4af259b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc1a4e51a2f13d6b33d4ce3f4af259b4">&#9670;&#160;</a></span>onManagerReActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void renderer::IState::onManagerReActive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Called when the state becomes active again after being paused or another state is popped. </p>
+
+<p>Reimplemented in <a class="el" href="classrenderer_1_1MenuState.html#a2c2ae896d9ed1af299ff0ecffaab624f">renderer::MenuState</a>.</p>
 
 </div>
 </div>

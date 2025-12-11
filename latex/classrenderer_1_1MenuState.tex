@@ -34,6 +34,8 @@ void \mbox{\hyperlink{classrenderer_1_1MenuState_a61e49f6e7c644a8f24f7cf45d7920a
 void \mbox{\hyperlink{classrenderer_1_1MenuState_a3bdc60702238b8eac4533b83cd408fe2}{process\+Input}} (sf\+::\+Event \&event, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager, const sf\+::\+Render\+Window \&window) override
 \item 
 void \mbox{\hyperlink{classrenderer_1_1MenuState_a8a732273c9273a1acf2b237ee75b39cb}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager) override
+\item 
+void \mbox{\hyperlink{classrenderer_1_1MenuState_a2c2ae896d9ed1af299ff0ecffaab624f}{on\+Manager\+Re\+Active}} () override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1IState}{renderer\+::\+IState}}}
 \begin{DoxyCompactItemize}
@@ -93,6 +95,24 @@ Here is the call graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classrenderer_1_1MenuState_a8a732273c9273a1acf2b237ee75b39cb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classrenderer_1_1MenuState_a2c2ae896d9ed1af299ff0ecffaab624f}\label{classrenderer_1_1MenuState_a2c2ae896d9ed1af299ff0ecffaab624f} 
+\index{renderer::MenuState@{renderer::MenuState}!onManagerReActive@{onManagerReActive}}
+\index{onManagerReActive@{onManagerReActive}!renderer::MenuState@{renderer::MenuState}}
+\doxysubsubsection{\texorpdfstring{onManagerReActive()}{onManagerReActive()}}
+{\footnotesize\ttfamily void renderer\+::\+Menu\+State\+::on\+Manager\+Re\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called when the state becomes active again after being paused or another state is popped. 
+
+Reimplemented from \mbox{\hyperlink{classrenderer_1_1IState_afc1a4e51a2f13d6b33d4ce3f4af259b4}{renderer\+::\+IState}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classrenderer_1_1MenuState_a2c2ae896d9ed1af299ff0ecffaab624f_cgraph}
 \end{center}
 \end{figure}
 \Hypertarget{classrenderer_1_1MenuState_a3bdc60702238b8eac4533b83cd408fe2}\label{classrenderer_1_1MenuState_a3bdc60702238b8eac4533b83cd408fe2} 

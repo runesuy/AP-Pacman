@@ -23,6 +23,8 @@ virtual void \mbox{\hyperlink{classrenderer_1_1IState_a07cfa1ed487621d0f8504c973
 \item 
 virtual void \mbox{\hyperlink{classrenderer_1_1IState_aa5da08382450c63f1fa0a6d2ee81bc8b}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classrenderer_1_1StateManager}{State\+Manager}} \&state\+Manager)=0
 \item 
+virtual void \mbox{\hyperlink{classrenderer_1_1IState_afc1a4e51a2f13d6b33d4ce3f4af259b4}{on\+Manager\+Re\+Active}} ()
+\item 
 virtual \mbox{\hyperlink{classrenderer_1_1IState_ac0eccb586fc4819e616966f4c761c39d}{\texorpdfstring{$\sim$}{\string~}\+IState}} ()=default
 \end{DoxyCompactItemize}
 
@@ -54,6 +56,16 @@ Draw the state onto the provided render window.
 
 
 Implemented in \mbox{\hyperlink{classrenderer_1_1DelegatingState_a218946be351acc60bf8db18bb95d9668}{renderer\+::\+Delegating\+State$<$ Derived $>$}}, \mbox{\hyperlink{classrenderer_1_1GameOverState_a62144a51ea949c8196768e35640b9771}{renderer\+::\+Game\+Over\+State}}, \mbox{\hyperlink{classrenderer_1_1LevelState_a48d26de224efcea400efea0abba3b057}{renderer\+::\+Level\+State}}, \mbox{\hyperlink{classrenderer_1_1MenuState_a8a732273c9273a1acf2b237ee75b39cb}{renderer\+::\+Menu\+State}}, \mbox{\hyperlink{classrenderer_1_1PausedState_a56549a05487c1909614b5f15131b6837}{renderer\+::\+Paused\+State}}, and \mbox{\hyperlink{classrenderer_1_1VictoryState_a866c450a9e995325239388d654cacb0a}{renderer\+::\+Victory\+State}}.
+
+\Hypertarget{classrenderer_1_1IState_afc1a4e51a2f13d6b33d4ce3f4af259b4}\label{classrenderer_1_1IState_afc1a4e51a2f13d6b33d4ce3f4af259b4} 
+\index{renderer::IState@{renderer::IState}!onManagerReActive@{onManagerReActive}}
+\index{onManagerReActive@{onManagerReActive}!renderer::IState@{renderer::IState}}
+\doxysubsubsection{\texorpdfstring{onManagerReActive()}{onManagerReActive()}}
+{\footnotesize\ttfamily virtual void renderer\+::\+IState\+::on\+Manager\+Re\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Called when the state becomes active again after being paused or another state is popped. 
+
+Reimplemented in \mbox{\hyperlink{classrenderer_1_1MenuState_a2c2ae896d9ed1af299ff0ecffaab624f}{renderer\+::\+Menu\+State}}.
 
 \Hypertarget{classrenderer_1_1IState_a07cfa1ed487621d0f8504c973557ac88}\label{classrenderer_1_1IState_a07cfa1ed487621d0f8504c973557ac88} 
 \index{renderer::IState@{renderer::IState}!processInput@{processInput}}
