@@ -21,6 +21,8 @@ virtual \mbox{\hyperlink{classlogic_1_1IConfig_a4280f4f8aadff9169b8db63d468c1a71
 \item 
 virtual const \mbox{\hyperlink{classlogic_1_1TileMap}{Tile\+Map}} \& \mbox{\hyperlink{classlogic_1_1IConfig_aac6ec27e1da1c1d3d28b35055d1d6e36}{get\+Tile\+Map}} () const =0
 \item 
+virtual void \mbox{\hyperlink{classlogic_1_1IConfig_a4daf0dfd6cfb4a8168fa683f14b02a26}{load\+Tile\+Map}} ()=0
+\item 
 virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IEntityFactory}{logic\+::\+IEntity\+Factory}} $>$ \mbox{\hyperlink{classlogic_1_1IConfig_ad6fb44297695811606ac8b078f1bc076}{get\+Entity\+Factory}} () const =0
 \end{DoxyCompactItemize}
 
@@ -75,6 +77,16 @@ The currently loaded tilemap.
 
 
 Implemented in \mbox{\hyperlink{classrenderer_1_1DefaultLogicConfig_aa274e162f5d00331767601ee109a5add}{renderer\+::\+Default\+Logic\+Config}}.
+
+\Hypertarget{classlogic_1_1IConfig_a4daf0dfd6cfb4a8168fa683f14b02a26}\label{classlogic_1_1IConfig_a4daf0dfd6cfb4a8168fa683f14b02a26} 
+\index{logic::IConfig@{logic::IConfig}!loadTileMap@{loadTileMap}}
+\index{loadTileMap@{loadTileMap}!logic::IConfig@{logic::IConfig}}
+\doxysubsubsection{\texorpdfstring{loadTileMap()}{loadTileMap()}}
+{\footnotesize\ttfamily virtual void logic\+::\+IConfig\+::load\+Tile\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Choose a new map and load it in the config. 
+
+Implemented in \mbox{\hyperlink{classrenderer_1_1DefaultLogicConfig_abeb12ef8454b051a50c0aafbb0277618}{renderer\+::\+Default\+Logic\+Config}}.
 
 
 

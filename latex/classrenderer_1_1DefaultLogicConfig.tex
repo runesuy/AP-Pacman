@@ -29,6 +29,8 @@ Collaboration diagram for renderer\+::Default\+Logic\+Config\+:
 \item 
 const \mbox{\hyperlink{classlogic_1_1TileMap}{logic\+::\+Tile\+Map}} \& \mbox{\hyperlink{classrenderer_1_1DefaultLogicConfig_aa274e162f5d00331767601ee109a5add}{get\+Tile\+Map}} () const override
 \item 
+void \mbox{\hyperlink{classrenderer_1_1DefaultLogicConfig_abeb12ef8454b051a50c0aafbb0277618}{load\+Tile\+Map}} () override
+\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlogic_1_1IEntityFactory}{logic\+::\+IEntity\+Factory}} $>$ \mbox{\hyperlink{classrenderer_1_1DefaultLogicConfig_af4d75b6cb4d070523d368c7230e87f94}{get\+Entity\+Factory}} () const override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1IConfig}{logic\+::\+IConfig}}}
@@ -68,12 +70,22 @@ Get the tile map to be used in the game world. \begin{DoxyReturn}{Returns}
 
 Implements \mbox{\hyperlink{classlogic_1_1IConfig_aac6ec27e1da1c1d3d28b35055d1d6e36}{logic\+::\+IConfig}}.
 
+\Hypertarget{classrenderer_1_1DefaultLogicConfig_abeb12ef8454b051a50c0aafbb0277618}\label{classrenderer_1_1DefaultLogicConfig_abeb12ef8454b051a50c0aafbb0277618} 
+\index{renderer::DefaultLogicConfig@{renderer::DefaultLogicConfig}!loadTileMap@{loadTileMap}}
+\index{loadTileMap@{loadTileMap}!renderer::DefaultLogicConfig@{renderer::DefaultLogicConfig}}
+\doxysubsubsection{\texorpdfstring{loadTileMap()}{loadTileMap()}}
+{\footnotesize\ttfamily void renderer\+::\+Default\+Logic\+Config\+::load\+Tile\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Choose a new map and load it in the config. 
+
+Implements \mbox{\hyperlink{classlogic_1_1IConfig_a4daf0dfd6cfb4a8168fa683f14b02a26}{logic\+::\+IConfig}}.
+
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classrenderer_1_1DefaultLogicConfig_aa274e162f5d00331767601ee109a5add_cgraph}
+\includegraphics[width=350pt]{classrenderer_1_1DefaultLogicConfig_abeb12ef8454b051a50c0aafbb0277618_cgraph}
 \end{center}
 \end{figure}
 

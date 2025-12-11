@@ -101,18 +101,21 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classlogic_1_1IConfig.html#aac6ec27e1da1c1d3d28b35055d1d6e36">   31</a></span>        [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code hl_class" href="classlogic_1_1TileMap.html">TileMap</a> &amp;<a class="code hl_function" href="classlogic_1_1IConfig.html#aac6ec27e1da1c1d3d28b35055d1d6e36">getTileMap</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classlogic_1_1IConfig.html#ad6fb44297695811606ac8b078f1bc076">   42</a></span>        [[nodiscard]] <span class="keyword">virtual</span> std::shared_ptr&lt;logic::IEntityFactory&gt; <a class="code hl_function" href="classlogic_1_1IConfig.html#ad6fb44297695811606ac8b078f1bc076">getEntityFactory</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    };</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classlogic_1_1IConfig.html#a4daf0dfd6cfb4a8168fa683f14b02a26">   36</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classlogic_1_1IConfig.html#a4daf0dfd6cfb4a8168fa683f14b02a26">loadTileMap</a>() = 0;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classlogic_1_1IConfig.html#ad6fb44297695811606ac8b078f1bc076">   47</a></span>        [[nodiscard]] <span class="keyword">virtual</span> std::shared_ptr&lt;logic::IEntityFactory&gt; <a class="code hl_function" href="classlogic_1_1IConfig.html#ad6fb44297695811606ac8b078f1bc076">getEntityFactory</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    };</div>
 </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>} <span class="comment">// logic</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>} <span class="comment">// logic</span></div>
 </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_ICONFIG_H</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_ICONFIG_H</span></div>
 <div class="ttc" id="aIEntityFactory_8h_html"><div class="ttname"><a href="IEntityFactory_8h.html">IEntityFactory.h</a></div></div>
 <div class="ttc" id="aTileMap_8h_html"><div class="ttname"><a href="TileMap_8h.html">TileMap.h</a></div></div>
 <div class="ttc" id="aclasslogic_1_1IConfig_html"><div class="ttname"><a href="classlogic_1_1IConfig.html">logic::IConfig</a></div><div class="ttdef"><b>Definition</b> IConfig.h:19</div></div>
 <div class="ttc" id="aclasslogic_1_1IConfig_html_a4280f4f8aadff9169b8db63d468c1a71"><div class="ttname"><a href="classlogic_1_1IConfig.html#a4280f4f8aadff9169b8db63d468c1a71">logic::IConfig::~IConfig</a></div><div class="ttdeci">virtual ~IConfig()=default</div></div>
+<div class="ttc" id="aclasslogic_1_1IConfig_html_a4daf0dfd6cfb4a8168fa683f14b02a26"><div class="ttname"><a href="classlogic_1_1IConfig.html#a4daf0dfd6cfb4a8168fa683f14b02a26">logic::IConfig::loadTileMap</a></div><div class="ttdeci">virtual void loadTileMap()=0</div></div>
 <div class="ttc" id="aclasslogic_1_1IConfig_html_aac6ec27e1da1c1d3d28b35055d1d6e36"><div class="ttname"><a href="classlogic_1_1IConfig.html#aac6ec27e1da1c1d3d28b35055d1d6e36">logic::IConfig::getTileMap</a></div><div class="ttdeci">virtual const TileMap &amp; getTileMap() const =0</div></div>
 <div class="ttc" id="aclasslogic_1_1IConfig_html_ad6fb44297695811606ac8b078f1bc076"><div class="ttname"><a href="classlogic_1_1IConfig.html#ad6fb44297695811606ac8b078f1bc076">logic::IConfig::getEntityFactory</a></div><div class="ttdeci">virtual std::shared_ptr&lt; logic::IEntityFactory &gt; getEntityFactory() const =0</div></div>
 <div class="ttc" id="aclasslogic_1_1TileMap_html"><div class="ttname"><a href="classlogic_1_1TileMap.html">logic::TileMap</a></div><div class="ttdef"><b>Definition</b> TileMap.h:16</div></div>

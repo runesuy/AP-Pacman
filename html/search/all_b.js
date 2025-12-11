@@ -13,13 +13,14 @@ var searchData=
   ['lifecounter_2eh_10',['LifeCounter.h',['../LifeCounter_8h.html',1,'']]],
   ['list_11',['Todo List',['../todo.html',1,'']]],
   ['livesamounttype_12',['LivesAmountType',['../classlogic_1_1LifeCounter.html#af8d1d5478b1e56f5e3154025bcd1c039',1,'logic::LifeCounter']]],
-  ['livesview_13',['livesview',['../classrenderer_1_1LivesView.html#a68ff7221256d3ea91ecfe4f9c1338ebd',1,'renderer::LivesView::LivesView()'],['../classrenderer_1_1LivesView.html',1,'renderer::LivesView']]],
+  ['livesview_13',['livesview',['../classrenderer_1_1LivesView.html',1,'renderer::LivesView'],['../classrenderer_1_1LivesView.html#a68ff7221256d3ea91ecfe4f9c1338ebd',1,'renderer::LivesView::LivesView()']]],
   ['livesview_2ecpp_14',['LivesView.cpp',['../LivesView_8cpp.html',1,'']]],
   ['livesview_2eh_15',['LivesView.h',['../LivesView_8h.html',1,'']]],
   ['loadconfigfile_16',['loadconfigfile',['../classrenderer_1_1IConfigParser.html#a7bca04342b5562edc5de2352d996a113',1,'renderer::IConfigParser::loadConfigFile()'],['../classrenderer_1_1JSONConfigParser.html#a69b9aec32b78a8f49fdb34f76fcc5970',1,'renderer::JSONConfigParser::loadConfigFile()']]],
   ['loadhighscores_17',['loadHighScores',['../classlogic_1_1ScoreCounter.html#a0dca59a5a2ee84297fa50487bd949dd5',1,'logic::ScoreCounter']]],
   ['loadmap_18',['loadmap',['../classrenderer_1_1IMapParser.html#a798e681ba3e9b3191291d793026cd13a',1,'renderer::IMapParser::loadMap()'],['../classrenderer_1_1TXTMapParser.html#a1d53757b1580783bb2c6aea54a1341b7',1,'renderer::TXTMapParser::loadMap()']]],
   ['loadtextures_19',['loadtextures',['../classrenderer_1_1ITextureParser.html#acd0207832ea88fd1cae6e130003f67a9',1,'renderer::ITextureParser::loadTextures()'],['../classrenderer_1_1DefaultTextureParser.html#acbc29caeb10668c094fcd593ed163bf7',1,'renderer::DefaultTextureParser::loadTextures()']]],
-  ['loadtoworld_20',['loadToWorld',['../classlogic_1_1TileMap.html#a475b315235436124ec52b1387750c09d',1,'logic::TileMap']]],
-  ['logic_21',['logic',['../namespacelogic.html',1,'']]]
+  ['loadtilemap_20',['loadtilemap',['../classlogic_1_1IConfig.html#a4daf0dfd6cfb4a8168fa683f14b02a26',1,'logic::IConfig::loadTileMap()'],['../classrenderer_1_1DefaultLogicConfig.html#abeb12ef8454b051a50c0aafbb0277618',1,'renderer::DefaultLogicConfig::loadTileMap()']]],
+  ['loadtoworld_21',['loadToWorld',['../classlogic_1_1TileMap.html#a475b315235436124ec52b1387750c09d',1,'logic::TileMap']]],
+  ['logic_22',['logic',['../namespacelogic.html',1,'']]]
 ];
