@@ -93,7 +93,7 @@ namespace logic {
         return score->getLifeCounter().getLivesLeft() == 0;
     }
 
-    World::World(const IConfig &config, std::shared_ptr<Score> score): config(config) {
+    World::World(const IConfig &config, std::shared_ptr<Score> score) : config(config) {
         this->score = std::move(score);
         config.getTileMap().loadToWorld(*this);
     }

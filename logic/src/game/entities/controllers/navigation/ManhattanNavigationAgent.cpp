@@ -29,9 +29,9 @@ namespace logic {
         auto mWithoutExclude = m;
         erase_if(mWithoutExclude, [excludeIfOtherOptions](auto d) { return excludeIfOtherOptions.contains(d.first); });
 
-        std::set<Direction> options = _selectBestOptions(mWithoutExclude,minimumDistance, comp);
+        std::set<Direction> options = _selectBestOptions(mWithoutExclude, minimumDistance, comp);
         if (options.empty()) {
-            options = _selectBestOptions(m,minimumDistance, comp);
+            options = _selectBestOptions(m, minimumDistance, comp);
         }
 
 
@@ -54,9 +54,9 @@ namespace logic {
         return _calculateManhattanDistance(position, target);
     }
 
-    std::map<Direction, std::pair<double, TileMap::TileType>>
+    std::map<Direction, std::pair<double, TileMap::TileType> >
     ManhattanNavigationAgent::_getDirectionMap(const Position &current, const Position &target, const World &world) {
-        std::map<Direction, std::pair<double, TileMap::TileType>> m;
+        std::map<Direction, std::pair<double, TileMap::TileType> > m;
         const auto &tileMap = world.getConfig().getTileMap();
         auto gridPos = tileMap.getGridPosition(current);
         double dRight = _calculateManhattanDistance(gridPos.first, gridPos.second + 1, world, target);
@@ -100,7 +100,7 @@ namespace logic {
         auto mWithoutExclude = m;
         erase_if(mWithoutExclude, [excludeIfOtherOptions](auto d) { return excludeIfOtherOptions.contains(d.first); });
 
-        std::set<Direction> options = _selectBestOptions(mWithoutExclude,-1, comp);
+        std::set<Direction> options = _selectBestOptions(mWithoutExclude, -1, comp);
         if (options.empty()) {
             options = _selectBestOptions(m, -1, comp);
         }
@@ -117,15 +117,13 @@ namespace logic {
                                                  double start,
                                                  const std::function<bool(double current,
                                                                           double compare)> &compare) {
-
         std::set<Direction> options;
         const double eps = 0.01;
         double maximumDistance = start;
         for (const auto &[d, pr]: directionsMap) {
-            if (std::abs(pr.first - maximumDistance)<eps) {
+            if (std::abs(pr.first - maximumDistance) < eps) {
                 options.insert(d);
-            }
-            else if (compare(pr.first, maximumDistance)) {
+            } else if (compare(pr.first, maximumDistance)) {
                 maximumDistance = pr.first;
                 options = {d};
             }

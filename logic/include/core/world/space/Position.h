@@ -16,6 +16,7 @@ namespace logic {
     class Position : public ICoordinate {
         CoordinateType x{};
         CoordinateType y{};
+
     public:
         /**
          * @param x horizontal coördinate, 0 being the center of the game world

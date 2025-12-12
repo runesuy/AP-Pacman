@@ -21,17 +21,16 @@ namespace logic {
      * and stops on each player death, send ON_KEY_PRESSED again to continue
      */
     class World : public Observable<World> {
-
         /**
          * Configuration reference for all logical settings and factories.
          */
-        const IConfig& config;
+        const IConfig &config;
 
         /**
          * All objects present in the world.
          * Updated on update.
          */
-        std::vector<std::shared_ptr<WorldObject>> objects;
+        std::vector<std::shared_ptr<WorldObject> > objects;
 
         /**
          * The score tracks player score and lives based on the world and the player.
@@ -56,18 +55,19 @@ namespace logic {
 
 
         void _handleWorldEvent(WorldObject::WorldEventT worldEvent);
+
     public:
         /**
          * Construct a World with the given configuration.
          * @param config Logic configuration reference.
          */
-        explicit World(const IConfig& config);
+        explicit World(const IConfig &config);
 
         /**
          * Construct a World with the given configuration.
          * @param config Logic configuration reference.
          */
-        explicit World(const IConfig& config, std::shared_ptr<Score> score);
+        explicit World(const IConfig &config, std::shared_ptr<Score> score);
 
         /**
          * Update all objects in the world.
@@ -91,13 +91,13 @@ namespace logic {
          * If the object is a PlayerModel, attach the Score as an observer.
          * @param object
          */
-        void addObject(const std::shared_ptr<WorldObject>& object);
+        void addObject(const std::shared_ptr<WorldObject> &object);
 
         /**
          * Remove object if present in the worldObjects.
          * @param object
          */
-        void removeObject(const WorldObject& object);
+        void removeObject(const WorldObject &object);
 
         /**
          * Send entityCommand command to all worldObjects of type Target
@@ -112,7 +112,7 @@ namespace logic {
          * @return A std::vector of all worldObjects of type Target present in the world.
          */
         template<typename Target>
-        [[nodiscard]] std::vector<std::shared_ptr<Target>> getObjectsOfType() const;
+        [[nodiscard]] std::vector<std::shared_ptr<Target> > getObjectsOfType() const;
 
         /**
          * @return The score instance.
@@ -129,7 +129,6 @@ namespace logic {
         [[nodiscard]] std::shared_ptr<Score> &getScore();
 
 
-
         /**
          * @return true if all coins are collected
          */
@@ -141,33 +140,36 @@ namespace logic {
         [[nodiscard]] bool isGameOver() const;
 
         using WorldCommandType = int;
+
+        /**
+         * Change the world based on the command.
+         * @param command
+         */
         void receiveCommand(WorldCommandType command);
     };
-
 
 
     //--------------- Implementation--------------------//
 
     template<typename Target>
-    std::vector<std::shared_ptr<Target>> World::getObjectsOfType() const {
-        std::vector<std::shared_ptr<Target>> result;
-        for (const auto& object : objects) {
+    std::vector<std::shared_ptr<Target> > World::getObjectsOfType() const {
+        std::vector<std::shared_ptr<Target> > result;
+        for (const auto &object: objects) {
             auto derived = std::dynamic_pointer_cast<Target>(object);
             if (derived) result.push_back(derived);
         }
-        return  result;
+        return result;
     }
 
     template<typename Target>
     void World::sendCommandTo(logic::EntityCommand command) {
-        for (const auto& object : objects) {
+        for (const auto &object: objects) {
             auto target = std::dynamic_pointer_cast<Target>(object);
             if (target) {
                 target->processCommand(command);
             }
         }
     }
-
 } // logic
 
 #endif //AP_PACMAN_WORLD_H

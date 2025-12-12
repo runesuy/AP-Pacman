@@ -10,9 +10,9 @@
 #include "game/entities/controllers/navigation/ManhattanNavigationAgent.h"
 
 namespace logic {
-
     /**
-     * GhostController that tries to cut of pacman.
+     * Implements CHASE behavior for ghosts.
+     * GhostController that tries to cut of pacman by minimizing manhattan distance to the tile in front of packman.
      */
     class ManhattanPredictGhostController : public GhostController {
         const std::unique_ptr<INavigationAgent> navigationAgent = std::make_unique<ManhattanNavigationAgent>();
@@ -33,8 +33,7 @@ namespace logic {
 
         void processCommand(EntityCommand command, GhostModel &entity) override;
 
-        void onCollision(GhostModel &entity, const SizedWorldObject &other, World& world) override;
-
+        void onCollision(GhostModel &entity, const SizedWorldObject &other, World &world) override;
     };
 
     template<class Derived>
@@ -61,7 +60,6 @@ namespace logic {
         }
         return position;
     }
-
 } // logic
 
 #endif //AP_PACMAN_MANHATTENPREDICTGHOSTCONTROLLER_H

@@ -11,7 +11,7 @@ namespace logic {
 
     /**
      * Calculates and holds the time in seconds between the last two ticks.
-     * Can be used for dynamic framerates int the game, by using deltaTime provided by Stopwatch.
+     * Can be used for dynamic frame rates int the game, by using deltaTime provided by Stopwatch.
      */
     class Stopwatch {
     public:
@@ -20,11 +20,12 @@ namespace logic {
          * The type used for displaying the deltaTime and durations
          */
         using TimeType = float;
+
     private:
         /**
          * Holds the previous tick timepoint.
          */
-        time_point<high_resolution_clock, high_resolution_clock ::duration> _previous;
+        time_point<high_resolution_clock, high_resolution_clock::duration> _previous;
 
         /**
          * True if this is the first time tick is called.
@@ -34,18 +35,18 @@ namespace logic {
         /**
          * The time between the last tick and the one before that. In seconds.
          */
-        TimeType deltaTime=0;
+        TimeType deltaTime = 0;
 
         /**
          * Timers updated on each tick.
          */
-        mutable std::vector<std::shared_ptr<Stopwatch::Timer>> _timers;
+        mutable std::vector<std::shared_ptr<Stopwatch::Timer> > _timers;
 
         inline static std::shared_ptr<Stopwatch> _instance;
-        Stopwatch()=default;
+
+        Stopwatch() = default;
 
     public:
-
         /**
          *  Update the deltaTime
          *  Sets deltaTime to the gap in seconds between this and the previous tick.
@@ -67,7 +68,7 @@ namespace logic {
         /**
          * Add a timer to be updated on each tick.
          */
-        void addTimer(const std::shared_ptr<Timer>& timer) const;
+        void addTimer(const std::shared_ptr<Timer> &timer) const;
     };
 }
 

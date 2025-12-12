@@ -8,7 +8,6 @@
 #include "Stopwatch.h"
 
 namespace logic {
-
     /**
      * Timer class used for timers counting down from a startTime to 0.
      * Can be added to Stopwatch to simulate on each tick.
@@ -19,7 +18,9 @@ namespace logic {
         bool running;
 
         void tick();
+
         friend class Stopwatch;
+
     public:
         explicit Timer(TimeType totalTime);
 
@@ -31,8 +32,6 @@ namespace logic {
 
         [[nodiscard]] bool isRunning() const;
     };
-
-
 } // logic
 
 #endif //AP_PACMAN_TIMER_H

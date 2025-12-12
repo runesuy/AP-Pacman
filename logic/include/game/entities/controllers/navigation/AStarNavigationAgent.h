@@ -11,7 +11,7 @@
 
 namespace logic {
     /**
-     * Coputes navigation directions using the A* pathfinding algorithm.
+     * Computes navigation directions using the A* pathfinding algorithm.
      * @warning Does not support away navigation.
      */
     class AStarNavigationAgent : public INavigationAgent {
@@ -20,9 +20,19 @@ namespace logic {
                                                        const World &world,
                                                        std::set<Direction> excludeIfOtherOptions) const override;
 
+        /**
+         * @warning NO SUPPORT FOR AWAY NAVIGATION
+         * @param current
+         * @param target
+         * @param world
+         * @param excludeIfOtherOptions
+         * @return
+         */
         [[nodiscard]] Direction getNavigationDirectionAway(const Position &current, const Position &target,
                                                            const World &world,
-                                                           std::set<Direction> excludeIfOtherOptions) const override{return NONE;};
+                                                           std::set<Direction> excludeIfOtherOptions) const override {
+            return NONE;
+        };
     };
 } // logic
 

@@ -12,14 +12,14 @@ namespace logic {
         return _instance;
     }
 
-    int Random::getIntInRange(int min, int max) const{
+    int Random::getIntInRange(int min, int max) const {
         std::uniform_int_distribution distribution(min, max);
         return distribution(generator);
     }
 
     Random::Random() {
         std::random_device rd;
-        std::seed_seq seed {rd(), rd(), rd(), rd(), rd(), rd()};
+        std::seed_seq seed{rd(), rd(), rd(), rd(), rd(), rd()};
         generator.seed(seed);
     }
 }

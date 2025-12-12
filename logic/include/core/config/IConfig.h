@@ -9,7 +9,6 @@
 #include "core/entity/IEntityFactory.h"
 
 namespace logic {
-
     /**
      * Config interface for the logic.
      * Needs to be passed to world.
@@ -46,7 +45,6 @@ namespace logic {
          */
         [[nodiscard]] virtual std::shared_ptr<logic::IEntityFactory> getEntityFactory() const = 0;
     };
-
 } // logic
 
 #endif //AP_PACMAN_ICONFIG_H

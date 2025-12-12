@@ -6,6 +6,7 @@
 #define AP_PACMAN_WALLMODEL_H
 
 #include "core/entity/EntityModel.h"
+#include "core/observer/Observable.h"
 
 namespace logic {
     class World;
@@ -32,7 +33,6 @@ namespace logic {
          */
         void setPosition(const Position &position) override;
     };
-
 } // logic
 
 #endif //AP_PACMAN_WALLMODEL_H

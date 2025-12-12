@@ -35,6 +35,6 @@ namespace logic {
      * @param positionTo
      * @return
      */
-    Direction getDirectionTo(Position positionFrom , Position positionTo);
+    Direction getDirectionTo(Position positionFrom, Position positionTo);
 }
 #endif //AP_PACMAN_DIRECTIONS_H

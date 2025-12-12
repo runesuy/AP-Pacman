@@ -14,7 +14,7 @@ namespace logic {
     }
 
     void PowerupController::onCollision(FruitModel &entity, const SizedWorldObject &other, World& world) {
-        CollectableController<logic::FruitModel>::onCollision(entity, other, world);
+        CollectableController::onCollision(entity, other, world);
         entity.updateObservers();
     }
 } // logic

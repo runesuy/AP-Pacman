@@ -8,7 +8,6 @@
 #endif //AP_PACMAN_GHOSTTYPES_H
 
 namespace logic {
-
     /**
      * Enumeration of different ghost types in the game.
      */
@@ -18,5 +17,4 @@ namespace logic {
         BLUE,
         ORANGE
     };
-
 } // logic

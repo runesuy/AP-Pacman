@@ -6,7 +6,6 @@
 #define AP_PACMAN_OBSERVABLETYPES_H
 
 namespace logic {
-
     /**
      * Types used for the Observable and Observer classes.
      */
@@ -17,7 +16,6 @@ namespace logic {
          */
         using EventType = int;
     };
-
 } // logic
 
 #endif //AP_PACMAN_OBSERVABLETYPES_H

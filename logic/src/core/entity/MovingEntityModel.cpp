@@ -5,5 +5,4 @@
 #include "game/entities/models/MovingEntityModel.h"
 
 namespace logic {
-
 } // logic

@@ -12,7 +12,6 @@
 #include "ObservableTypes.h"
 
 namespace logic {
-
     /**
      * An class containing observing logic for integrating with the IObserver class.
      * An IObservers can be added to the observable list so they are called on certain changes the observable chooses.
@@ -20,11 +19,10 @@ namespace logic {
      */
     template<typename Derived>
     class Observable {
-
         /**
          * List of observers observing this observable
          */
-        std::vector<std::shared_ptr<IObserver<Derived>>> _observers;
+        std::vector<std::shared_ptr<IObserver<Derived> > > _observers;
 
     public:
         virtual ~Observable();
@@ -45,7 +43,7 @@ namespace logic {
          * The observer will be updated on updateObservers(...)
          * @param observer The observer to add
          */
-        void addObserver(const std::shared_ptr<IObserver<Derived>> &observer);
+        void addObserver(const std::shared_ptr<IObserver<Derived> > &observer);
 
         /**
          * @return true if this has any observers
@@ -56,8 +54,7 @@ namespace logic {
          * @param observer The observer instance to search for.
          * @return true if observer is among observers
          */
-        bool hasObserver(const std::shared_ptr<IObserver<Derived>> &observer) const;
-
+        bool hasObserver(const std::shared_ptr<IObserver<Derived> > &observer) const;
     };
 
 
@@ -91,7 +88,7 @@ namespace logic {
     }
 
     template<typename Derived>
-    bool Observable<Derived>::hasObserver(const std::shared_ptr<IObserver<Derived>> &observer) const {
+    bool Observable<Derived>::hasObserver(const std::shared_ptr<IObserver<Derived> > &observer) const {
         for (const auto &obs: _observers) {
             if (obs == observer) {
                 return true;
@@ -101,7 +98,7 @@ namespace logic {
     }
 
     template<typename Derived>
-    void Observable<Derived>::addObserver(const std::shared_ptr<IObserver<Derived>> &observer) {
+    void Observable<Derived>::addObserver(const std::shared_ptr<IObserver<Derived> > &observer) {
         _observers.push_back(observer);
         updateObservers();
     }

@@ -9,11 +9,10 @@
 #include "game/entities/models/PlayerModel.h"
 
 namespace logic {
-
     template<typename ModelType>
     class CollectableController : public IEntityController<ModelType> {
     public:
-        void onCollision(ModelType &entity, const SizedWorldObject &other, World& world) override;
+        void onCollision(ModelType &entity, const SizedWorldObject &other, World &world) override;
     };
 
     template<typename ModelType>
@@ -24,7 +23,6 @@ namespace logic {
             entity.markForRemoval();
         }
     }
-
 } // logic
 
 #endif //AP_PACMAN_COLLECTABLECONTROLLER_H

@@ -6,11 +6,9 @@
 
 namespace logic {
     void CoinController::update(World &world, CoinModel &entity) {
-
     }
 
     void CoinController::processCommand(EntityCommand command, CoinModel &entity) {
-
     }
 
     void CoinController::onCollision(CoinModel &entity, const SizedWorldObject &other, World &world) {

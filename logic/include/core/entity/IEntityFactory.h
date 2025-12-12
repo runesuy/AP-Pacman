@@ -13,7 +13,6 @@
 #include "game/entities/models/GhostTypes.h"
 
 namespace logic {
-
     /**
      * Factory interface for creating entity models.
      * Provides methods to create different types of entities.
@@ -54,7 +53,7 @@ namespace logic {
          * Creates and returns a shared pointer to a GhostModel instance of the specified type.
          * @return A shared pointer to the created ghost of type.
          */
-        virtual std::shared_ptr<GhostModel> createGhostModel(GhostType type, float difficultyMultiplier=1) = 0;
+        virtual std::shared_ptr<GhostModel> createGhostModel(GhostType type, float difficultyMultiplier) = 0;
     };
 }
 

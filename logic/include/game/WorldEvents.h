@@ -6,7 +6,6 @@
 #define AP_PACMAN_WORLDEVENTS_H
 
 
-
 namespace logic {
     enum WorldEvent {
         FRUIT_EATEN_BY_PLAYER,

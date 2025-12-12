@@ -48,8 +48,8 @@ namespace logic {
             for (const Direction &dir: world.getConfig().getTileMap().getViableDirections(world, q->position)) {
                 auto successor = std::make_shared<Node>(0, 0, 0, Position{0, 0}, q);
                 // calculate position
-                double newX=0;
-                double newY=0;
+                double newX = 0;
+                double newY = 0;
                 switch (dir) {
                     case Direction::UP:
                         newX = q->position.getX();
@@ -70,7 +70,7 @@ namespace logic {
                     default:
                         break;
                 }
-                if (std::abs(newX)>1 || std::abs(newY)>1) {
+                if (std::abs(newX) > 1 || std::abs(newY) > 1) {
                     continue; // out of bounds
                 }
                 successor->position = {newX, newY};

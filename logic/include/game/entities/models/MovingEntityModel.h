@@ -9,7 +9,6 @@
 #include "core/world/space/Directions.h"
 
 namespace logic {
-
     /**
      * Entity model containing logic for moving in the world.
      * Use together with a MovingEntityController for easy navigation commands to move in te world while not bumping into walls.
@@ -27,6 +26,7 @@ namespace logic {
          * The direction that the entity needs to change to when it is possible.
          */
         Direction requestedDirection = NONE;
+
     public:
         /**
          * @return A constant or variable speed of the moving entity.
@@ -79,7 +79,6 @@ namespace logic {
     void MovingEntityModel<EntityModelType>::setRequestedDirection(Direction requestedDirection) {
         this->requestedDirection = requestedDirection;
     };
-
 } // logic
 
 #endif //AP_PACMAN_MOVINGENTITYMODEL_H

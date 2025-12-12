@@ -46,6 +46,7 @@ namespace logic {
          * @return a pointer to the instance.
          */
         static std::shared_ptr<Random> getInstance();
+
         //-------
 
         /**

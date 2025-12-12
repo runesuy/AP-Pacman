@@ -7,7 +7,6 @@
 
 namespace logic {
     void GhostController::update(World &world, GhostModel &entity) {
-
         MovingEntityController::update(world, entity);
         if (entity.getMode() == GhostModel::WAITING) {
             if (entity.getStartTimer() < entity.getStartDelay())
@@ -24,7 +23,9 @@ namespace logic {
 
         if (entity.getMode() == GhostModel::FRIGHTENED) {
             if (justChangedToFrightened) {
-                entity.setDirection(frightenedNavigationAgent->getNavigationDirection(entity.getPosition(), entity.getSpawnPosition(), world));
+                entity.setDirection(
+                    frightenedNavigationAgent->getNavigationDirection(entity.getPosition(), entity.getSpawnPosition(),
+                                                                      world,{}));
                 justChangedToFrightened = false;
             }
 
@@ -37,11 +38,14 @@ namespace logic {
         }
 
         // returning mode
-        if (!get<0>(_isPastCenter(world, entity, entity.getDirection())) && entity.getMode() == GhostModel::RETURNING_HOME ) {
-            if (entity.getDirection() == NONE ||isAtIntersectionOrDeadEnd(world, entity)) {
+        if (!get<0>(_isPastCenter(world, entity, entity.getDirection())) && entity.getMode() ==
+            GhostModel::RETURNING_HOME) {
+            if (entity.getDirection() == NONE || isAtIntersectionOrDeadEnd(world, entity)) {
                 entity.setRequestedDirection(
-                        returnNavigationAgent->getNavigationDirection(entity.getPosition(), entity.getReturnPosition(),
-                                                                      world, {getOppositeDirection(entity.getDirection())}));
+                    returnNavigationAgent->getNavigationDirection(entity.getPosition(), entity.getReturnPosition(),
+                                                                  world, {
+                                                                      getOppositeDirection(entity.getDirection())
+                                                                  }));
             }
             const auto &tileMap = world.getConfig().getTileMap();
             if (tileMap.getGridPosition(entity.getPosition()) == tileMap.getGridPosition(entity.getReturnPosition())) {
@@ -54,8 +58,10 @@ namespace logic {
             entity.getMode() == GhostModel::FRIGHTENED) {
             auto player = world.getObjectsOfType<PlayerModel>().at(0);
             entity.setRequestedDirection(
-                    frightenedNavigationAgent->getNavigationDirectionAway(entity.getPosition(), player->getPosition(),
-                                                                          world, {getOppositeDirection(entity.getDirection())}));
+                frightenedNavigationAgent->getNavigationDirectionAway(entity.getPosition(), player->getPosition(),
+                                                                      world, {
+                                                                          getOppositeDirection(entity.getDirection())
+                                                                      }));
         }
     }
 
@@ -88,9 +94,9 @@ namespace logic {
     bool GhostController::isAtIntersectionOrDeadEnd(const World &world, const GhostModel &entity) {
         auto viableDirections = world.getConfig().getTileMap().getViableDirections(world, entity.getPosition());
         return viableDirections.size() != 2 ||
-        std::find(viableDirections.begin(), viableDirections.end(), entity.getDirection())==viableDirections.end() ||
-        std::find(viableDirections.begin(), viableDirections.end(), getOppositeDirection(entity.getDirection()))==viableDirections.end();
+               std::find(viableDirections.begin(), viableDirections.end(), entity.getDirection()) == viableDirections.
+               end() ||
+               std::find(viableDirections.begin(), viableDirections.end(), getOppositeDirection(entity.getDirection()))
+               == viableDirections.end();
     }
-
-
 } // logic

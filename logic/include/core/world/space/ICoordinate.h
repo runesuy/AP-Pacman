@@ -6,12 +6,13 @@
 #define AP_PACMAN_ICOORDINATE_H
 
 namespace logic {
-
     /**
      * Interface representing a 2D coordinate with x and y values.
      */
     class ICoordinate {
     public:
+        virtual ~ICoordinate() = default;
+
         /**
          * Type used in the 2D coördinate system.
          */
@@ -41,7 +42,6 @@ namespace logic {
          */
         virtual void setY(CoordinateType y) = 0;
     };
-
 } // logic
 
 #endif //AP_PACMAN_ICOORDINATE_H

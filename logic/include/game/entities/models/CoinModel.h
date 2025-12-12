@@ -7,11 +7,12 @@
 
 #include "core/entity/EntityModel.h"
 #include "CollisionTypes.h"
+#include "core/observer/Observable.h"
 
 namespace logic {
-
     class CoinModel : public EntityModel<CoinModel>, public Observable<CoinModel> {
-        inline static const CollisionType collisionType = COIN;
+        static constexpr CollisionType collisionType = COIN;
+
     public:
         CoinModel();
 
@@ -23,7 +24,6 @@ namespace logic {
 
         [[nodiscard]] CollisionTypeT getCollisionType() const override;
     };
-
 } // logic
 
 #endif //AP_PACMAN_COINMODEL_H

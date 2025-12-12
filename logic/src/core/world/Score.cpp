@@ -6,7 +6,8 @@
 
 #include "game/entities/ObserverEvents.h"
 
-void logic::Score::update(logic::PlayerModel &subject) {}
+void logic::Score::update(logic::PlayerModel &subject) {
+}
 
 void logic::Score::update(PlayerModel &subject, ObservableTypes::EventType event) {
     scoreCounter.processEvent(event);
@@ -23,7 +24,7 @@ const logic::LifeCounter &logic::Score::getLifeCounter() const {
     return lifeCounter;
 }
 
- logic::LifeCounter &logic::Score::getLifeCounter() {
+logic::LifeCounter &logic::Score::getLifeCounter() {
     return lifeCounter;
 }
 

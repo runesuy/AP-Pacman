@@ -18,16 +18,16 @@ namespace logic {
         mapData.push_back(row);
     }
 
-    void TileMap::loadToWorld(World &world) const{
+    void TileMap::loadToWorld(World &world) const {
         const auto tileSize = getTileSize();
         const auto yOffsetForCentering = (2.0 - tileSize * mapData.size()) / 2.0;
-        for (int row=0; row<mapData.size(); row++) {
-            for (int col=0; col<mapData[row].size(); col++) {
+        for (int row = 0; row < mapData.size(); row++) {
+            for (int col = 0; col < mapData[row].size(); col++) {
                 TileType tileType = mapData[row][col];
                 auto x = -1.0 + static_cast<float>(col) * tileSize + tileSize / 2;
                 auto y = 1.0 - static_cast<float>(row) * tileSize - tileSize / 2 - yOffsetForCentering;
                 switch (tileType) {
-                    default:{
+                    default: {
                         break;
                     }
                     case TileType::WALL: {
@@ -54,42 +54,46 @@ namespace logic {
                     case TileType::POWER_UP: {
                         auto powerup = world.getConfig().getEntityFactory()->createPowerupModel();
                         powerup->setPosition({x, y});
-                        powerup->setSize({tileSize*0.9, tileSize*0.9});
+                        powerup->setSize({tileSize * 0.9, tileSize * 0.9});
                         world.addObject(powerup);
                         break;
                     }
                     case TileType::GHOST_RED: {
                         const float difficultyMultiplier = world.getScore()->getDifficultyMultiplier();
-                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::RED, difficultyMultiplier);
+                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(
+                            GhostType::RED, difficultyMultiplier);
                         ghost->setPosition({x, y});
-                        ghost->setReturnPosition({x,y});
+                        ghost->setReturnPosition({x, y});
                         ghost->setSize({tileSize, tileSize});
                         world.addObject(ghost);
                         break;
                     }
                     case TileType::GHOST_PINK: {
                         const float difficultyMultiplier = world.getScore()->getDifficultyMultiplier();
-                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::PINK, difficultyMultiplier);
+                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(
+                            GhostType::PINK, difficultyMultiplier);
                         ghost->setPosition({x, y});
-                        ghost->setReturnPosition({x,y});
+                        ghost->setReturnPosition({x, y});
                         ghost->setSize({tileSize, tileSize});
                         world.addObject(ghost);
                         break;
                     }
                     case TileType::GHOST_ORANGE: {
                         const float difficultyMultiplier = world.getScore()->getDifficultyMultiplier();
-                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::ORANGE, difficultyMultiplier);
+                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(
+                            GhostType::ORANGE, difficultyMultiplier);
                         ghost->setPosition({x, y});
-                        ghost->setReturnPosition({x,y});
+                        ghost->setReturnPosition({x, y});
                         ghost->setSize({tileSize, tileSize});
                         world.addObject(ghost);
                         break;
                     }
                     case TileType::GHOST_BLUE: {
                         const float difficultyMultiplier = world.getScore()->getDifficultyMultiplier();
-                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::BLUE, difficultyMultiplier);
+                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(
+                            GhostType::BLUE, difficultyMultiplier);
                         ghost->setPosition({x, y});
-                        ghost->setReturnPosition({x,y});
+                        ghost->setReturnPosition({x, y});
                         ghost->setSize({tileSize, tileSize});
                         world.addObject(ghost);
                         break;
@@ -99,16 +103,16 @@ namespace logic {
         }
     }
 
-    TileMap::TileType TileMap::getTileType(const Position& position) const{
+    TileMap::TileType TileMap::getTileType(const Position &position) const {
         const auto [row, col] = getGridPosition(position);
         return getTileType(row, col);
     }
 
     std::pair<int, int> TileMap::getGridPosition(const Position &position) const {
-        const float tileSize = 2/static_cast<float>(mapData[0].size());
+        const float tileSize = 2 / static_cast<float>(mapData[0].size());
         const float yOffsetForCentering = (2.0f - tileSize * static_cast<float>(mapData.size())) / 2.0f;
-        int col = static_cast<int>(((position.getX() + 1.0f) / tileSize)+tileSize/2);
-        int row = static_cast<int>((1.0f - position.getY() - yOffsetForCentering) / tileSize+tileSize/2);
+        int col = static_cast<int>(((position.getX() + 1.0f) / tileSize) + tileSize / 2);
+        int row = static_cast<int>((1.0f - position.getY() - yOffsetForCentering) / tileSize + tileSize / 2);
         return {row, col};
     }
 
@@ -117,7 +121,7 @@ namespace logic {
     }
 
     Position TileMap::getTileCenterPosition(unsigned int row, unsigned int col) const {
-        const float tileSize = 2/static_cast<float>(mapData[0].size());
+        const float tileSize = 2 / static_cast<float>(mapData[0].size());
         const float yOffsetForCentering = (2.0f - tileSize * static_cast<float>(mapData.size())) / 2.0f;
         float x = -1.0f + static_cast<float>(col) * tileSize + tileSize / 2;
         float y = 1.0f - static_cast<float>(row) * tileSize - tileSize / 2 - yOffsetForCentering;
@@ -125,7 +129,7 @@ namespace logic {
     }
 
     Size::CoordinateType TileMap::getTileSize() const {
-        return 2/static_cast<float>(mapData[0].size());
+        return 2 / static_cast<float>(mapData[0].size());
     }
 
     Size::CoordinateType TileMap::getYOffsetForCentering() const {
@@ -144,7 +148,7 @@ namespace logic {
     std::vector<logic::Direction>
     TileMap::getViableDirections(const logic::World &world, const Position &position) const {
         std::vector<Direction> viableDirections;
-        for (Direction dir : {Direction::UP, Direction::DOWN, Direction::LEFT, Direction::RIGHT}) {
+        for (Direction dir: {Direction::UP, Direction::DOWN, Direction::LEFT, Direction::RIGHT}) {
             TileType tileInDirection = getTileInDirection(world, position, dir);
             if (tileInDirection != TileMap::TileType::WALL) {
                 viableDirections.push_back(dir);
@@ -154,10 +158,10 @@ namespace logic {
     }
 
     TileMap::TileType TileMap::getTileInDirection(const World &world, const Position &position,
-                                                                Direction direction) const {
+                                                  Direction direction) const {
         auto [row, col] = getGridPosition(position);
 
-        TileType tileInFront=EMPTY;
+        TileType tileInFront = EMPTY;
         switch (direction) {
             case LEFT:
                 tileInFront = getTileType(row, col - 1);
@@ -177,5 +181,4 @@ namespace logic {
         }
         return tileInFront;
     }
-
 } // logic

@@ -5,10 +5,9 @@
 #ifndef AP_PACMAN_LIFECOUNTER_H
 #define AP_PACMAN_LIFECOUNTER_H
 
-#include "game/entities/models/PlayerModel.h"
+#include "core/observer/Observable.h"
 
 namespace logic {
-
     /**
      * Keeps track of the amount of lives of the player.
      * @see Score
@@ -16,10 +15,11 @@ namespace logic {
     class LifeCounter : public Observable<LifeCounter> {
         inline static const unsigned int lifeStart = 3;
         unsigned int livesLeft = lifeStart;
+
     public:
         using LivesAmountType = unsigned int;
 
-        LifeCounter()=default;
+        LifeCounter() = default;
 
         /**
          * Set the amount of lives left.
@@ -56,10 +56,6 @@ namespace logic {
          */
         void processEvent(ObservableTypes::EventType event);
     };
-
-
-
-
 } // logic
 
 #endif //AP_PACMAN_LIFECOUNTER_H

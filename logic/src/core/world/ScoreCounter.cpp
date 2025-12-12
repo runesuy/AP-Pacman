@@ -9,9 +9,12 @@
 namespace logic {
     void ScoreCounter::processEvent(ObservableTypes::EventType event) {
         if (event == PLAYER_COIN_COLLECTED) {
-            setScore(score + static_cast<int>(COIN_COLLECT_REWARD * (1 / (timeSinceLastCoin == 0 ? 1 : 1 +
-                                                                                                       timeSinceLastCoin *
-                                                                                                       COIN_COLLECT_REWARD)))); // Example: increase score by 10 for each point collected
+            setScore(score + static_cast<int>(COIN_COLLECT_REWARD * (1 / (timeSinceLastCoin == 0
+                                                                              ? 1
+                                                                              : 1 +
+                                                                                  timeSinceLastCoin *
+                                                                                  COIN_COLLECT_REWARD))));
+            // Example: increase score by 10 for each point collected
             timeSinceLastCoin = 0;
         }
         if (event == PLAYER_GHOST_KILLED) {
@@ -50,8 +53,8 @@ namespace logic {
         highScores = highScoreParser->getHighScores(highScoreFilePath);
     }
 
-    void ScoreCounter::saveHighScores()  {
-        if (score > highScores.at(highScores.size()-1)) {
+    void ScoreCounter::saveHighScores() {
+        if (score > highScores.at(highScores.size() - 1)) {
             highScores.push_back(score);
             std::sort(highScores.begin(), highScores.end(), std::greater<>());
             highScores.pop_back();

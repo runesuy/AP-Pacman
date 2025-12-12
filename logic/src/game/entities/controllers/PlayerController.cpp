@@ -29,11 +29,9 @@ namespace logic {
             default:
                 break;
         }
-
     }
 
     void PlayerController::onCollision(PlayerModel &entity, const SizedWorldObject &other, World &world) {
-
         switch (other.getCollisionType()) {
             case (COIN): {
                 entity.updateObservers(PLAYER_COIN_COLLECTED);
@@ -45,7 +43,7 @@ namespace logic {
                 break;
             }
             case(GHOST): {
-                const auto& ghost = dynamic_cast<const GhostModel&>(other);
+                const auto &ghost = dynamic_cast<const GhostModel &>(other);
                 if (ghost.getMode() == GhostModel::CHASE) {
                     entity.updateObservers(PLAYER_KILLED);
                     world.sendWorldEvent(PLAYER_KILLED_W);
@@ -57,7 +55,8 @@ namespace logic {
                 }
                 break;
             }
-            default:{}
+            default: {
+            }
         }
     }
 }

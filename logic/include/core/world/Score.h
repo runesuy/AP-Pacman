@@ -15,11 +15,11 @@ namespace logic {
      * An observer class to track and manage the player's score and lives.
      */
     class Score : public IObserver<PlayerModel> {
-
         ScoreCounter scoreCounter;
         LifeCounter lifeCounter;
-        float difficultyMultiplier=1;
+        float difficultyMultiplier = 1;
         static constexpr float DIFFICULTY_INCREASE = 0.1;
+
     public:
         /**
          * Called on each tick.
@@ -61,6 +61,9 @@ namespace logic {
 
         [[nodiscard]] float getDifficultyMultiplier() const;
 
+        /**
+         * Increase the difficulty multiplier by a fixed amount defined by score.
+         */
         void increaseDifficultyMultiplier();
     };
 }

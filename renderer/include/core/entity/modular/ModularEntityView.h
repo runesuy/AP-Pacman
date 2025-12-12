@@ -9,6 +9,8 @@
 #include "IEntityViewModule.h"
 #include <vector>
 
+#include "core/observer/Observable.h"
+
 namespace renderer {
 
     template<typename T>

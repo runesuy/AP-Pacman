@@ -9,7 +9,6 @@
 #include "CollectableController.h"
 
 namespace logic {
-
     class CoinController : public CollectableController<CoinModel> {
     public:
         void update(World &world, CoinModel &entity) override;
@@ -18,7 +17,6 @@ namespace logic {
 
         void onCollision(CoinModel &entity, const SizedWorldObject &other, World &world) override;
     };
-
 } // logic
 
 #endif //AP_PACMAN_COINCONTROLLER_H

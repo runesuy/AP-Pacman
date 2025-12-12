@@ -10,7 +10,6 @@
 #include <set>
 
 namespace logic {
-
     /**
      * A navigationAgent providing directions based on the current position, targetPosition and world.
      */
@@ -28,7 +27,7 @@ namespace logic {
          */
         [[nodiscard]] virtual Direction
         getNavigationDirection(const Position &current, const Position &target, const World &world,
-                               std::set<Direction> excludeIfOtherOptions={}) const = 0;
+                               std::set<Direction> excludeIfOtherOptions) const = 0;
 
         /**
          * Get directions from current away from target.
@@ -40,9 +39,8 @@ namespace logic {
          */
         [[nodiscard]] virtual Direction
         getNavigationDirectionAway(const Position &current, const Position &target, const World &world,
-                                   std::set<Direction> excludeIfOtherOptions={}) const = 0;
+                                   std::set<Direction> excludeIfOtherOptions) const = 0;
     };
-
 } // logic
 
 #endif //AP_PACMAN_INAVIGATIONAGENT_H

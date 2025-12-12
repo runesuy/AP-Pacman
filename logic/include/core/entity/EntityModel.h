@@ -6,16 +6,12 @@
 #define AP_PACMAN_ENTITYMODEL_H
 
 #include "core/world/space/Position.h"
-#include "vector"
-#include "core/observer/Observable.h"
 #include "memory"
 #include "core/world/objects/SizedWorldObject.h"
-#include "core/world/space/Size.h"
 #include "core/entity/IEntityController.h"
 #include "EntityCommands.h"
 
 namespace logic {
-
     template<typename EntityModelType>
     class IEntityController;
 
@@ -35,7 +31,7 @@ namespace logic {
          * The controller handles input, update and collisions,
          * meaning that the controller contains all logic that changes the model data.
          */
-        std::shared_ptr<IEntityController<Derived>> controller;
+        std::shared_ptr<IEntityController<Derived> > controller;
 
         /**
          * Position on first update.
@@ -51,15 +47,16 @@ namespace logic {
         /**
          * Creates a default EntityModel.
          */
-        EntityModel()=default;
-        ~EntityModel()=default;
+        EntityModel() = default;
+
+        ~EntityModel() override = default;
 
         /**
          * Sets the controller.
          * Controller is used for changing the model data.
          * @param controller
          */
-        void setController(const std::shared_ptr<IEntityController<Derived>> &controller);
+        void setController(const std::shared_ptr<IEntityController<Derived> > &controller);
 
         /**
          * Update the model based on command.
@@ -123,11 +120,10 @@ namespace logic {
         if (controller) {
             try {
                 controller->update(world, static_cast<Derived &>(*this));
-            }
-            catch (std::bad_cast &e) {
+            } catch (std::bad_cast &e) {
                 // Handle the error appropriately, e.g., log it
                 throw std::runtime_error(
-                        "Failed to cast EntityModel to Derived in update(): " + std::string(e.what()));
+                    "Failed to cast EntityModel to Derived in update(): " + std::string(e.what()));
             }
         }
     }
@@ -137,18 +133,18 @@ namespace logic {
         if (controller) {
             try {
                 controller->processCommand(command, static_cast<Derived &>(*this));
-            }
-            catch (std::bad_cast &e) {
+            } catch (std::bad_cast &e) {
                 // Handle the error appropriately, e.g., log it
                 throw std::runtime_error(
-                        "Failed to cast EntityModel to Derived in processCommand(): " + std::string(e.what()));
+                    "Failed to cast EntityModel to Derived in processCommand(): " + std::string(e.what()));
             }
         }
     }
 
     template<typename EntityModelType>
     void
-    EntityModel<EntityModelType>::setController(const std::shared_ptr<IEntityController<EntityModelType>> &controller) {
+    EntityModel<
+        EntityModelType>::setController(const std::shared_ptr<IEntityController<EntityModelType> > &controller) {
         this->controller = controller;
     }
 }

@@ -30,13 +30,14 @@ namespace logic {
             GHOST_ORANGE,
             PLAYER,
         };
+
     private:
         /**
          * The tile map data represented as a 2D vector of TileType.
          */
-        std::vector<std::vector<TileType>> mapData;
-    public:
+        std::vector<std::vector<TileType> > mapData;
 
+    public:
         /**
          * @return A row major 2d grid representing the tile map's tile types.
          */
@@ -45,7 +46,7 @@ namespace logic {
         /**
          * Load the tile map into the given world.
          * An entity is created for each tile based on its type.
-         * Afterwards the entity is added to the world.
+         * Afterward the entity is added to the world.
          * @param world
          */
         void loadToWorld(World &world) const;
@@ -104,11 +105,10 @@ namespace logic {
          */
         [[nodiscard]] unsigned int getColumnCount() const;
 
-        std::vector<Direction> getViableDirections(const World &world, const Position& position) const;
+        [[nodiscard]] std::vector<Direction> getViableDirections(const World &world, const Position &position) const;
 
-        TileType getTileInDirection(const World& world, const Position& position, Direction direction) const ;
+        [[nodiscard]] TileType getTileInDirection(const World &world, const Position &position, Direction direction) const;
     };
-
 } // logic
 
 #endif //AP_PACMAN_TILEMAP_H

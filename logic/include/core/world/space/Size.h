@@ -8,7 +8,6 @@
 #include "ICoordinate.h"
 
 namespace logic {
-
     /**
      * A size class representing width and height.
      * Size width and height must always be non-negative.
@@ -16,6 +15,7 @@ namespace logic {
     class Size : public ICoordinate {
         CoordinateType width;
         CoordinateType height;
+
     public:
         Size(CoordinateType x, CoordinateType y);
 
@@ -49,7 +49,6 @@ namespace logic {
          */
         void setY(CoordinateType y) override;
     };
-
 } // logic
 
 #endif //AP_PACMAN_SIZE_H

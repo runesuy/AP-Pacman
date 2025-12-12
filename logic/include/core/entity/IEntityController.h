@@ -4,7 +4,6 @@
 
 #ifndef AP_PACMAN_IENTITYCONTROLLER_H
 #define AP_PACMAN_IENTITYCONTROLLER_H
-#include <memory>
 #include "EntityCommands.h"
 #include "core/world/objects/SizedWorldObject.h"
 
@@ -49,7 +48,8 @@ namespace logic {
          */
         virtual void onCollision(DerivedEntityModel &entity, const SizedWorldObject &other, World &world) = 0;
 
-        virtual void handleWorldEvent(WorldObject::WorldEventT event, DerivedEntityModel &entity){};
+        virtual void handleWorldEvent(WorldObject::WorldEventT event, DerivedEntityModel &entity) {
+        };
     };
 }
 

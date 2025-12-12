@@ -5,5 +5,4 @@
 #include "core/entity/EntityModel.h"
 
 namespace logic {
-
 }

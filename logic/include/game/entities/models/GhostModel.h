@@ -7,9 +7,9 @@
 
 #include "MovingEntityModel.h"
 #include "CollisionTypes.h"
+#include "core/observer/Observable.h"
 
 namespace logic {
-
     class GhostModel : public MovingEntityModel<GhostModel>, public Observable<GhostModel> {
     public:
         enum Mode {
@@ -18,8 +18,9 @@ namespace logic {
             RETURNING_HOME,
             WAITING
         };
+
     private:
-        const float difficultyMultiplier=1;
+        const float difficultyMultiplier = 1;
         const float CHASE_SPEED = 3.0f;
         const float FRIGHTENED_SPEED = 1.0f;
         Position returnPosition{0, 0};
@@ -29,11 +30,13 @@ namespace logic {
         float START_DELAY = 3.0f; // seconds
 
         float frightenedTimer = 0.0f;
-        const float FRIGHTENED_DURATION = 10/difficultyMultiplier;
+        const float FRIGHTENED_DURATION = 10 / difficultyMultiplier;
 
         const CollisionType collisionType = GHOST;
+
     public:
         explicit GhostModel();
+
         explicit GhostModel(float difficultyMultiplier);
 
         void setSize(const Size &size) override;
@@ -70,7 +73,6 @@ namespace logic {
 
         [[nodiscard]] CollisionTypeT getCollisionType() const override;
     };
-
 } // logic
 
 #endif //AP_PACMAN_GHOSTMODEL_H

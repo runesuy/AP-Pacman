@@ -21,7 +21,9 @@ namespace logic {
          * If true the world will remove this object at the end of this update.
          */
         bool markedForRemoval = false;
+
     public:
+        virtual ~WorldObject() = default;
 
         /**
          * Type of the events that can be passed to all objects in the world.
@@ -53,14 +55,14 @@ namespace logic {
         /**
          * React on worldEvent
          */
-        virtual void handleWorldEvent(WorldEventT) {};
+        virtual void handleWorldEvent(WorldEventT) {
+        };
 
         /**
          * @return Wetter or not the object is marked for removal on the end of this update.
          */
-        bool isMarkedForRemoval() const;
+        [[nodiscard]] bool isMarkedForRemoval() const;
     };
-
 } // logic
 
 #endif //AP_PACMAN_WORLDOBJECT_H

@@ -5,7 +5,8 @@
 #include "core/utils/Timer.h"
 
 namespace logic {
-    Stopwatch::Timer::Timer(const Stopwatch::TimeType totalTime) : totalTime(totalTime), timeLeft(totalTime) {}
+    Stopwatch::Timer::Timer(const Stopwatch::TimeType totalTime) : totalTime(totalTime), timeLeft(totalTime) {
+    }
 
     void Stopwatch::Timer::start() {
         running = true;
@@ -27,8 +28,7 @@ namespace logic {
     void Stopwatch::Timer::tick() {
         if (running && !isCompleted()) {
             timeLeft -= getInstance()->getDeltaTime();
-        }
-        else {
+        } else {
             stop();
         }
     }

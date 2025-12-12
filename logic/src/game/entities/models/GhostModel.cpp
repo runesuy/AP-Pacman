@@ -28,9 +28,9 @@ namespace logic {
     float GhostModel::getSpeed() const {
         switch (mode) {
             default:
-                return CHASE_SPEED*difficultyMultiplier;
+                return CHASE_SPEED * difficultyMultiplier;
             case (FRIGHTENED):
-                return FRIGHTENED_SPEED*difficultyMultiplier;
+                return FRIGHTENED_SPEED * difficultyMultiplier;
         }
     }
 
