@@ -5,5 +5,4 @@
 #include "core/states/IStateDrawHandler.h"
 
 namespace renderer {
-
 } // renderer

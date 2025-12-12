@@ -36,5 +36,4 @@ namespace renderer {
     void FruitView::markForRemoval() {
         markedForRemoval = true;
     }
-
 } // renderer

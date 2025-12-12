@@ -10,11 +10,10 @@
 #include "core/entity/modular/modules/AnimatedSpriteModule.h"
 
 namespace renderer {
-
-    class GhostView : public ModularEntityView, public logic::IObserver<logic::GhostModel>{
+    class GhostView : public ModularEntityView, public logic::IObserver<logic::GhostModel> {
         bool markedForRemoval{false};
         logic::Direction direction = logic::NONE;
-        logic::GhostModel::Mode ghostMode=logic::GhostModel::WAITING;
+        logic::GhostModel::Mode ghostMode = logic::GhostModel::WAITING;
         float frightenedTimer = 0;
         const float FRIGHTENED_END_ANIM_START = 5;
 
@@ -24,7 +23,8 @@ namespace renderer {
 
     public:
         using AnimationsMap = AnimatedSpriteModule::AnimationNamesMap;
-        explicit GhostView(const AnimationsMap& animationsMap);
+
+        explicit GhostView(const AnimationsMap &animationsMap);
 
         void update(logic::GhostModel &subject) override;
 
@@ -42,7 +42,6 @@ namespace renderer {
 
         void setFrightenedTimer(float frightenedTimer);
     };
-
 } // renderer
 
 #endif //AP_PACMAN_GHOSTVIEW_H

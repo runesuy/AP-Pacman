@@ -19,6 +19,7 @@ namespace renderer {
     class JSONConfigParser : public IConfigParser {
         json _jsonData;
         const std::string configFilePath = "resources/config.json";
+
     public:
         [[nodiscard]] std::string getDefaultFontPath() const override;
 
@@ -28,9 +29,8 @@ namespace renderer {
 
         [[nodiscard]] std::map<std::string, sf::IntRect> getTextureRects() const override;
 
-        [[nodiscard]] sf::IntRect getTextureRectByName(const std::string& name) const override;
+        [[nodiscard]] sf::IntRect getTextureRectByName(const std::string &name) const override;
     };
-
 } // renderer
 
 #endif //AP_PACMAN_JSONCONFIGPARSER_H

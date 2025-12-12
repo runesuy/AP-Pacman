@@ -8,14 +8,12 @@
 #include "core/factories/IFactoryCollection.h"
 
 namespace renderer {
-
     class DefaultFactoryCollection : public IFactoryCollection {
     public:
         std::unique_ptr<StateManagerFactory> getStateManagerFactory() override;
 
         std::unique_ptr<IStateFactory> getStateFactory() override;
     };
-
 } // renderer
 
 #endif //AP_PACMAN_DEFAULTFACTORYCOLLECTION_H

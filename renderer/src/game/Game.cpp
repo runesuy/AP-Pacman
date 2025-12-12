@@ -11,7 +11,6 @@
 #include "core/utils/Stopwatch.h"
 
 int renderer::Game::run() {
-
     running = true;
     // load config file
     loadResources();
@@ -24,13 +23,15 @@ int renderer::Game::run() {
     sf::RenderWindow window(sf::VideoMode(800, 600), "Pacman");
 
     // game loop
-    while (running && window.isOpen()) {
+    while (running &&window
+    .
+    isOpen()
+    ) {
         logic::Stopwatch::getInstance()->tick();
         //--------- Process Input ---------
         sf::Event event{};
         bool cont = false;
-        while (window.pollEvent(event))
-        {
+        while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 window.close();
             if (event.type == sf::Event::Resized) {
@@ -42,7 +43,7 @@ int renderer::Game::run() {
             stateManager->processInput(event, window);
         }
         if (cont) continue;
-        if (logic::Stopwatch::getInstance()->getDeltaTime() >0.1) continue;
+        if (logic::Stopwatch::getInstance()->getDeltaTime() > 0.1) continue;
 
         //--------- Update ---------
         stateManager->update();
@@ -55,14 +56,14 @@ int renderer::Game::run() {
     return 0;
 }
 
-renderer::Game::Game(renderer::IAppConfig& appConfig): appConfig(appConfig){
+renderer::Game::Game(renderer::IAppConfig &appConfig) : appConfig(appConfig) {
 }
 
 std::shared_ptr<renderer::Game> renderer::Game::initializeInstance(renderer::IAppConfig &appConfig) {
     if (_instance) {
         throw std::runtime_error("Game was already initialized.");
     }
-    _instance = std::shared_ptr<Game>(new Game(appConfig));
+    _instance = std::shared_ptr < Game > (new Game(appConfig));
     return _instance;
 }
 
@@ -80,7 +81,7 @@ renderer::IAppConfig &renderer::Game::getAppConfig() const {
 void renderer::Game::loadResources() {
     appConfig.getConfigParser().loadConfigFile();
     appConfig.getTextureParser().loadTextures(
-            appConfig.getConfigParser().getSpriteSheetPath(),
-            appConfig.getConfigParser().getTextureRects()
+        appConfig.getConfigParser().getSpriteSheetPath(),
+        appConfig.getConfigParser().getTextureRects()
     );
 }

@@ -8,14 +8,14 @@
 #include "game/factories/StateManagerFactory.h"
 
 namespace renderer {
-
     class IFactoryCollection {
     public:
+        virtual ~IFactoryCollection() = default;
+
         virtual std::unique_ptr<StateManagerFactory> getStateManagerFactory() = 0;
 
         virtual std::unique_ptr<IStateFactory> getStateFactory() = 0;
     };
-
 } // renderer
 
 #endif //AP_PACMAN_IFACTORYCOLLECTION_H

@@ -10,6 +10,5 @@
 
 namespace renderer {
     BlueGhostView::BlueGhostView() : GhostView(animations) {
-
     }
 } // renderer

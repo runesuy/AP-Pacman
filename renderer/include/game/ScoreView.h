@@ -10,14 +10,15 @@
 #include "../core/drawable/ui/Label.h"
 
 namespace renderer {
-
-class ScoreView : public logic::IObserver<logic::ScoreCounter>, public Label{
+    /**
+     * Display the current score using a Label.
+     */
+    class ScoreView : public logic::IObserver<logic::ScoreCounter>, public Label {
     public:
         ScoreView();
+
         void update(logic::ScoreCounter &subject) override;
-
-};
-
+    };
 } // renderer
 
 #endif //AP_PACMAN_SCOREVIEW_H

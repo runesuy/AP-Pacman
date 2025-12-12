@@ -5,13 +5,12 @@
 #ifndef AP_PACMAN_MENUSTATE_H
 #define AP_PACMAN_MENUSTATE_H
 
-#include "core/states/DelegatingState.h"
+#include "core/states/IState.h"
 #include "core/drawable/ui/Button.h"
 #include <memory>
 #include "core/parsers/TXTHighScoreParser.h"
 
 namespace renderer {
-
     /**
      * State representing the main menu of the game.
      * Handles menu navigation and selections.
@@ -26,7 +25,8 @@ namespace renderer {
         Label highScoreLabel;
         std::unique_ptr<logic::IHighScoreParser> highScoreParser = std::make_unique<logic::TXTHighScoreParser>();
 
-        void onPlayButtonClick(StateManager& stateManager) const;
+        void onPlayButtonClick(StateManager &stateManager) const;
+
     public:
         MenuState();
 
@@ -41,7 +41,6 @@ namespace renderer {
 
         void onManagerReActive() override;
     };
-
 } // renderer
 
 #endif //AP_PACMAN_MENUSTATE_H

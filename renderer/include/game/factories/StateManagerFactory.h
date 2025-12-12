@@ -9,12 +9,10 @@
 #include "core/states/StateManager.h"
 
 namespace renderer {
-
     class StateManagerFactory {
     public:
         std::unique_ptr<StateManager> createStateManager(std::unique_ptr<IStateFactory> stateFactory);
     };
-
 } // renderer
 
 #endif //AP_PACMAN_STATEMANAGERFACTORY_H

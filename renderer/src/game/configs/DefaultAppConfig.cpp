@@ -9,15 +9,15 @@ namespace renderer {
         return factoryCollection;
     }
 
-    const IConfigParser & DefaultAppConfig::getConfigParser() const {
+    const IConfigParser &DefaultAppConfig::getConfigParser() const {
         return configParser;
     }
 
-    const logic::IConfig & DefaultAppConfig::getLogicConfig() const {
+    const logic::IConfig &DefaultAppConfig::getLogicConfig() const {
         return logicConfig;
     }
 
-    logic::IConfig & DefaultAppConfig::getLogicConfig() {
+    logic::IConfig &DefaultAppConfig::getLogicConfig() {
         return logicConfig;
     }
 

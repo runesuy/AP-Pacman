@@ -10,12 +10,12 @@
 #include "game/entities/models/PlayerModel.h"
 
 namespace renderer {
-
     /**
      * Default implementation of the entity factory interface.
      */
     class DefaultEntityFactory : public logic::IEntityFactory {
         std::shared_ptr<WorldView> viewTarget;
+
     public:
         std::shared_ptr<logic::WallModel> createWallModel() override;
 
@@ -31,7 +31,6 @@ namespace renderer {
 
         std::shared_ptr<logic::GhostModel> createGhostModel(logic::GhostType type, float difficultyMultiplier) override;
     };
-
 } // renderer
 
 #endif //AP_PACMAN_DEFAULTENTITYFACTORY_H

@@ -43,14 +43,14 @@ namespace renderer {
             throw std::runtime_error("Configuration data not loaded.");
         }
         try {
-            for (const auto &item : _jsonData["sprites"].items()) {
+            for (const auto &item: _jsonData["sprites"].items()) {
                 const std::string &key = item.key();
                 const auto &value = item.value();
                 sf::IntRect rect(
-                        value["x"].get<int>(),
-                        value["y"].get<int>(),
-                        value["width"].get<int>(),
-                        value["height"].get<int>()
+                    value["x"].get<int>(),
+                    value["y"].get<int>(),
+                    value["width"].get<int>(),
+                    value["height"].get<int>()
                 );
                 spriteMap[key] = rect;
             }
@@ -67,10 +67,10 @@ namespace renderer {
         try {
             const auto &value = _jsonData["sprites"][name];
             return {
-                    value["x"].get<int>(),
-                    value["y"].get<int>(),
-                    value["width"].get<int>(),
-                    value["height"].get<int>()
+                value["x"].get<int>(),
+                value["y"].get<int>(),
+                value["width"].get<int>(),
+                value["height"].get<int>()
             };
         } catch (const json::type_error &e) {
             throw std::runtime_error("Error retrieving texture rect for " + name + ": " + std::string(e.what()));

@@ -13,7 +13,7 @@ namespace renderer {
             animExt = "-frightened";
             if (frightenedTimer > FRIGHTENED_END_ANIM_START) {
                 animExt += "-end";
-                getModule<AnimatedSpriteModule>()->setFrameDuration(FRAME_DURATION*2);
+                getModule<AnimatedSpriteModule>()->setFrameDuration(FRAME_DURATION * 2);
             }
         }
         if (ghostMode == logic::GhostModel::RETURNING_HOME) {
@@ -21,31 +21,31 @@ namespace renderer {
         }
 
         switch (direction) {
-            case logic::Direction::RIGHT :{
+            case logic::Direction::RIGHT: {
                 auto module = getModule<AnimatedSpriteModule>();
                 if (module) {
                     module->setCurrentAnimation("move-right" + animExt);
                 }
                 break;
             }
-            case (logic::Direction::LEFT) :{
+            case (logic::Direction::LEFT): {
                 auto module = getModule<AnimatedSpriteModule>();
                 if (module) {
-                    module->setCurrentAnimation("move-left"+ animExt);
+                    module->setCurrentAnimation("move-left" + animExt);
                 }
                 break;
             }
-            case (logic::Direction::UP) :{
+            case (logic::Direction::UP): {
                 auto module = getModule<AnimatedSpriteModule>();
                 if (module) {
-                    module->setCurrentAnimation("move-up"+ animExt);
+                    module->setCurrentAnimation("move-up" + animExt);
                 }
                 break;
             }
-            case (logic::Direction::DOWN) :{
+            case (logic::Direction::DOWN): {
                 auto module = getModule<AnimatedSpriteModule>();
                 if (module) {
-                    module->setCurrentAnimation("move-down"+ animExt);
+                    module->setCurrentAnimation("move-down" + animExt);
                 }
                 break;
             }

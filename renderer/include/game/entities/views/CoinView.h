@@ -8,11 +8,12 @@
 #include "game/entities/models/CoinModel.h"
 
 namespace renderer {
-
     class CoinView : public ModularEntityView, public logic::IObserver<logic::CoinModel> {
         bool markedForRemoval{false};
+
     public:
         CoinView();
+
         void update(logic::CoinModel &subject) override;
 
         void setSize(const logic::Size &size) override;
@@ -23,7 +24,6 @@ namespace renderer {
 
         void markForRemoval();
     };
-
 } // renderer
 
 #endif //AP_PACMAN_COINVIEW_H

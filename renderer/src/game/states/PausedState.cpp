@@ -10,17 +10,16 @@ namespace renderer {
         pausedLabel.setString(pausedLabelText);
         pausedLabel.setHorizontalOrigin(Label::HorizontalOriginType::MIDDLE);
         pausedLabel.setCharacterSize(pausedLabelCharSize);
-        pausedLabel.setPosition({0,0.3});
+        pausedLabel.setPosition({0, 0.3});
         menuButton.setString(menuButtonText);
         menuButton.setCharacterSize(0.05);
-        menuButton.setPosition({-0.3,0});
+        menuButton.setPosition({-0.3, 0});
         continueButton.setString(continueButtonText);
         continueButton.setCharacterSize(0.05);
         continueButton.setPosition({0.3, 0});
     }
 
     void PausedState::update(StateManager &stateManager) {
-
     }
 
     void PausedState::processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) {
@@ -35,7 +34,10 @@ namespace renderer {
         pausedLabel.draw(window);
         menuButton.draw(window);
         continueButton.draw(window);
-        continueButton.setOnClick([&stateManager](){stateManager.popState();});
-        menuButton.setOnClick([&stateManager](){stateManager.popState();stateManager.popState();});
+        continueButton.setOnClick([&stateManager]() { stateManager.popState(); });
+        menuButton.setOnClick([&stateManager]() {
+            stateManager.popState();
+            stateManager.popState();
+        });
     }
 } // renderer

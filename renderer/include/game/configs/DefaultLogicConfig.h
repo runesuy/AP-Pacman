@@ -10,7 +10,6 @@
 #include "game/factories/DefaultEntityFactory.h"
 
 namespace renderer {
-
     /**
      * Default implementation of the logic configuration interface.
      */
@@ -26,12 +25,13 @@ namespace renderer {
         std::vector<std::string> _getAllMapPaths() const;
 
         void loadRandomMap() const;
+
     public:
         /**
          * Get the tile map to be used in the game world.
          * @return
          */
-        [[nodiscard]] const logic::TileMap & getTileMap() const override;
+        [[nodiscard]] const logic::TileMap &getTileMap() const override;
 
         void loadTileMap() override;
 
@@ -42,7 +42,6 @@ namespace renderer {
          */
         [[nodiscard]] std::shared_ptr<logic::IEntityFactory> getEntityFactory() const override;
     };
-
 } // renderer
 
 #endif //AP_PACMAN_DEFAULTLOGICCONFIG_H

@@ -42,9 +42,10 @@ namespace renderer {
             stateManager.replaceState(std::make_unique<GameOverState>(getWorld()->getScore()));
             return;
         }
-        if (getWorld()->levelComplete()){
+        if (getWorld()->levelComplete()) {
             // apply level clearing reward
-            getWorld()->getScore()->getScoreCounter().setScore(getWorld()->getScore()->getScoreCounter().getScore() + LEVEL_CLEAR_REWARD);
+            getWorld()->getScore()->getScoreCounter().setScore(
+                getWorld()->getScore()->getScoreCounter().getScore() + LEVEL_CLEAR_REWARD);
 
             // place new state on top
             stateManager.replaceState(std::make_unique<VictoryState>(getWorld()->getScore()));
@@ -70,8 +71,10 @@ namespace renderer {
                         getWorld()->sendCommandTo<logic::PlayerModel>(logic::EntityCommand::TURN_DOWN);
                         break;
                     case sf::Keyboard::Escape:
+                        getWorld()->getScore()->getScoreCounter().saveHighScores();
                         stateManager.pushState(
-                                Game::getInstance()->getAppConfig().getFactoryCollection().getStateFactory()->createPausedState());
+                            Game::getInstance()->getAppConfig().getFactoryCollection().getStateFactory()->
+                            createPausedState());
                     default:
                         break;
                 }

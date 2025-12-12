@@ -38,9 +38,10 @@ namespace renderer {
         /**
          * Called when the state becomes active again after being paused or another state is popped.
          */
-        virtual void onManagerReActive() {}
+        virtual void onManagerReActive() {
+        }
 
-        virtual ~IState()=default;
+        virtual ~IState() = default;
     };
 }
 

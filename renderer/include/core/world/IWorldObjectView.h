@@ -7,12 +7,10 @@
 #include "core/drawable/DrawObject.h"
 
 namespace renderer {
-
     class IWorldObjectView : public DrawObject {
     public:
-        virtual bool isMarkedForRemoval()=0;
+        virtual bool isMarkedForRemoval() =0;
     };
-
 } // renderer
 
 #endif //AP_PACMAN_IWORLDOBJECTVIEW_H

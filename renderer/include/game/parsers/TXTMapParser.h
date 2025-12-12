@@ -8,7 +8,6 @@
 #include "core/parser/IMapParser.h"
 
 namespace renderer {
-
     /**
      * Concrete implementation of IMapParser that reads tile maps from TXT files.
      */
@@ -27,7 +26,6 @@ namespace renderer {
 
         logic::TileMap loadMap(const std::string &filename) override;
     };
-
 } // renderer
 
 #endif //AP_PACMAN_TXTMAPPARSER_H

@@ -38,19 +38,18 @@ namespace renderer {
     }
 
     void Label::setFont(const sf::Font &font) {
-
     }
 
-    std::vector<std::unique_ptr<sf::Shape>> Label::getSFShapes(sf::RenderWindow &window) {
+    std::vector<std::unique_ptr<sf::Shape> > Label::getSFShapes(sf::RenderWindow &window) {
         return {};
     }
 
-    std::vector<std::shared_ptr<sf::Sprite>> Label::getSFSprites(sf::RenderWindow &window) {
+    std::vector<std::shared_ptr<sf::Sprite> > Label::getSFSprites(sf::RenderWindow &window) {
         return {};
     }
 
-    std::vector<std::unique_ptr<sf::Text>> Label::getSFTexts(sf::RenderWindow &window) {
-        std::vector<std::unique_ptr<sf::Text>> texts;
+    std::vector<std::unique_ptr<sf::Text> > Label::getSFTexts(sf::RenderWindow &window) {
+        std::vector<std::unique_ptr<sf::Text> > texts;
         text.setCharacterSize(Camera::sizeY(characterSize, window));
         _applyOriginProps();
         texts.push_back(std::make_unique<sf::Text>(text));
@@ -68,7 +67,7 @@ namespace renderer {
                 break;
             }
             case HorizontalOriginType::MIDDLE: {
-                text.setOrigin(text.getLocalBounds().width/2, text.getOrigin().y);
+                text.setOrigin(text.getLocalBounds().width / 2, text.getOrigin().y);
                 break;
             }
             case HorizontalOriginType::RIGHT: {
@@ -82,7 +81,7 @@ namespace renderer {
                 break;
             }
             case VerticalOriginType::MIDDLE: {
-                text.setOrigin(text.getOrigin().x, text.getLocalBounds().height/2);
+                text.setOrigin(text.getOrigin().x, text.getLocalBounds().height / 2);
                 break;
             }
             case VerticalOriginType::BOTTOM: {
@@ -96,7 +95,7 @@ namespace renderer {
         return characterSize;
     }
 
-    const  std::string::size_type Label::getStringSize() const {
+    const std::string::size_type Label::getStringSize() const {
         return text.getString().getSize();
     }
 

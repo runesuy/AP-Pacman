@@ -21,8 +21,9 @@ namespace renderer {
      * Manages the stack of game states, allowing for state transitions and delegating input, update, and draw calls to the current state.
      */
     class StateManager {
-        std::stack<std::unique_ptr<IState>> stack;
+        std::stack<std::unique_ptr<IState> > stack;
         std::unique_ptr<IStateFactory> stateFactory;
+
     public:
         explicit StateManager(std::unique_ptr<IState> &&initialState, std::unique_ptr<IStateFactory> &&stateFactory);
 
@@ -37,7 +38,7 @@ namespace renderer {
          * Forwards the draw call to the current state.
          * @param window
          */
-        void draw(sf::RenderWindow& window);
+        void draw(sf::RenderWindow &window);
 
         /**
          * Update the current state.
@@ -45,11 +46,11 @@ namespace renderer {
          */
         void update();
 
-        void pushState(std::unique_ptr<IState>&& state);
+        void pushState(std::unique_ptr<IState> &&state);
 
         void popState();
 
-        void replaceState(std::unique_ptr<IState>&& state);
+        void replaceState(std::unique_ptr<IState> &&state);
     };
 }
 

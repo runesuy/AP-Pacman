@@ -20,7 +20,8 @@ namespace renderer {
     }
 
     void VictoryState::draw(sf::RenderWindow &window, StateManager &stateManager) {
-        currentScoreLabel.setString(currentScoreLabelPref + std::to_string(passToNextLevel->getScoreCounter().getScore()));
+        currentScoreLabel.setString(
+            currentScoreLabelPref + std::to_string(passToNextLevel->getScoreCounter().getScore()));
         victoryLabel.draw(window);
         descrLabel.draw(window);
         currentScoreLabel.draw(window);

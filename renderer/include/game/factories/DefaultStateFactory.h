@@ -21,7 +21,6 @@ namespace renderer {
 
         std::unique_ptr<PausedState> createPausedState() override;
     };
-
 } // renderer
 
 #endif //AP_PACMAN_DEFAULTSTATEFACTORY_H

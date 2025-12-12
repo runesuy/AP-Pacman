@@ -4,12 +4,10 @@
 
 #ifndef AP_PACMAN_ENTITYVIEW_H
 #define AP_PACMAN_ENTITYVIEW_H
-#include "core/observer/IObserver.h"
 #include "core/entity/EntityModel.h"
 #include "core/world/IWorldObjectView.h"
 
 namespace renderer {
-
     /**
      * View class representing the visual aspect of an entity in the game.
      * Inherits from DrawObject to provide drawing capabilities.
@@ -17,8 +15,9 @@ namespace renderer {
      *
      * Has a size property to define the dimensions of the entity in the game world.
      */
-    class EntityView : public IWorldObjectView{
-        logic::Size size={0,0};
+    class EntityView : public IWorldObjectView {
+        logic::Size size = {0, 0};
+
     public:
         /**
          * Get the size of the entity view.

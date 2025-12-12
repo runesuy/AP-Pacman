@@ -8,7 +8,6 @@
 
 namespace renderer {
     void GameOverState::update(StateManager &stateManager) {
-
     }
 
     void GameOverState::processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) {
@@ -26,7 +25,7 @@ namespace renderer {
         currentScoreLabel.draw(window);
     }
 
-    GameOverState::GameOverState(const std::shared_ptr<logic::Score>& score) {
+    GameOverState::GameOverState(const std::shared_ptr<logic::Score> &score) {
         gameOverLabel.setCharacterSize(0.2);
         gameOverLabel.setVerticalOrigin(Label::VerticalOriginType::BOTTOM);
         gameOverLabel.setHorizontalOrigin(Label::HorizontalOriginType::MIDDLE);

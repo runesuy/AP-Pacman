@@ -10,9 +10,9 @@
 #include "core/entity/modular/ModularEntityView.h"
 
 namespace renderer {
-
     class FruitView : public ModularEntityView, public logic::IObserver<logic::FruitModel> {
         bool markedForRemoval{false};
+
     public:
         FruitView();
 
@@ -24,7 +24,6 @@ namespace renderer {
 
         void markForRemoval();
     };
-
 } // renderer
 
 #endif //AP_PACMAN_FRUITVIEW_H

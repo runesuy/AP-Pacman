@@ -35,28 +35,28 @@ namespace renderer {
 
     void PlayerView::_updateAnimation() {
         switch (direction) {
-            case logic::Direction::RIGHT :{
+            case logic::Direction::RIGHT: {
                 auto module = getModule<AnimatedSpriteModule>();
                 if (module) {
                     module->setCurrentAnimation("move-right");
                 }
                 break;
             }
-            case (logic::Direction::LEFT) :{
+            case (logic::Direction::LEFT): {
                 auto module = getModule<AnimatedSpriteModule>();
                 if (module) {
                     module->setCurrentAnimation("move-left");
                 }
                 break;
             }
-            case (logic::Direction::UP) :{
+            case (logic::Direction::UP): {
                 auto module = getModule<AnimatedSpriteModule>();
                 if (module) {
                     module->setCurrentAnimation("move-up");
                 }
                 break;
             }
-            case (logic::Direction::DOWN) :{
+            case (logic::Direction::DOWN): {
                 auto module = getModule<AnimatedSpriteModule>();
                 if (module) {
                     module->setCurrentAnimation("move-down");
@@ -75,5 +75,4 @@ namespace renderer {
     void PlayerView::setDirection(logic::Direction direction) {
         PlayerView::direction = direction;
     }
-
 } // renderer

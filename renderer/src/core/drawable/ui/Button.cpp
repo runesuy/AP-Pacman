@@ -7,9 +7,8 @@
 #include "core/utils/Camera.h"
 
 namespace renderer {
-
-    std::vector<std::unique_ptr<sf::Shape>> Button::getSFShapes(sf::RenderWindow &window) {
-        std::vector<std::unique_ptr<sf::Shape>> shapes;
+    std::vector<std::unique_ptr<sf::Shape> > Button::getSFShapes(sf::RenderWindow &window) {
+        std::vector<std::unique_ptr<sf::Shape> > shapes;
 
         rectangleShape.setSize(Camera::project(logic::Size{width, label.getCharacterSize()}, window));
         rectangleShape.setOrigin(rectangleShape.getLocalBounds().width / 2, 0);
@@ -17,11 +16,11 @@ namespace renderer {
         return shapes;
     }
 
-    std::vector<std::shared_ptr<sf::Sprite>> Button::getSFSprites(sf::RenderWindow &window) {
+    std::vector<std::shared_ptr<sf::Sprite> > Button::getSFSprites(sf::RenderWindow &window) {
         return {};
     };
 
-    std::vector<std::unique_ptr<sf::Text>> Button::getSFTexts(sf::RenderWindow &window) {
+    std::vector<std::unique_ptr<sf::Text> > Button::getSFTexts(sf::RenderWindow &window) {
         return label.getSFTexts(window);
     }
 

@@ -21,7 +21,8 @@ namespace renderer {
         virtual void processInput(sf::Event &event, StateManager &stateManager, DerivedState &state,
                                   const sf::RenderWindow &window) =0;
 
-        void processInput(sf::Event &event) override {};
+        void processInput(sf::Event &event) override {
+        };
     };
 }
 #endif //AP_PACMAN_ISTATEINPUTHANDLER_H

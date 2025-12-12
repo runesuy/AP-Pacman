@@ -9,8 +9,6 @@
 #include "core/entity/modular/modules/AnimatedSpriteModule.h"
 
 namespace renderer {
-
-    OrangeGhostView::OrangeGhostView() : GhostView(animations){
-
+    OrangeGhostView::OrangeGhostView() : GhostView(animations) {
     }
 } // renderer

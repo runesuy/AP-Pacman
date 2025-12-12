@@ -15,10 +15,11 @@ namespace renderer {
     template<typename DerivedState>
     class IStateUpdateHandler : public logic::IUpdateHandler {
     public:
-        virtual void update(DerivedState& state) = 0;
-        void update() override {};
-    };
+        virtual void update(DerivedState &state) = 0;
 
+        void update() override {
+        };
+    };
 } // renderer
 
 #endif //AP_PACMAN_ISTATEUPDATEHANDLER_H

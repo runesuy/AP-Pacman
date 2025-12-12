@@ -8,21 +8,21 @@
 
 namespace renderer {
     void DrawObject::draw(sf::RenderWindow &window) {
-        for (auto &shape : getSFShapes(window)) {
+        for (auto &shape: getSFShapes(window)) {
             shape->setPosition(shape->getPosition() + Camera::project(getPosition(), window));
             window.draw(*shape);
         }
-        for (auto &shape : getSFSprites(window)) {
+        for (auto &shape: getSFSprites(window)) {
             shape->setPosition(shape->getPosition() + Camera::project(getPosition(), window));
             window.draw(*shape);
         }
-        for (auto &shape : getSFTexts(window)) {
+        for (auto &shape: getSFTexts(window)) {
             shape->setPosition(shape->getPosition() + Camera::project(getPosition(), window));
             window.draw(*shape);
         }
     }
 
-    const logic::Position& DrawObject::getPosition() const {
+    const logic::Position &DrawObject::getPosition() const {
         return position;
     }
 

@@ -1,15 +1,18 @@
 # How to make custom maps.
 
 ## Introduction
+
 This game allows you to create custom maps.
 These maps are stored in the `maps/` directory of the game installation.
 Maps will be randomly selected from this directory when starting a new game, or when
 going to the next level.
 
 ## Map Format
+
 Maps are stored in a simple text format.
 Each map is represented as a grid of characters, where each character represents a different type of terrain or object.
 Here is a list of common characters used in the map files:
+
 - `.` : Coin
 - ' ' : Empty space
 - `W` : Wall

@@ -14,11 +14,11 @@ namespace renderer {
         setSize(subject.getSize());
     }
 
-    std::vector<std::unique_ptr<sf::Shape>> AnimatedSpriteModule::getSFShapes(sf::RenderWindow &window) const {
+    std::vector<std::unique_ptr<sf::Shape> > AnimatedSpriteModule::getSFShapes(sf::RenderWindow &window) const {
         return {};
     }
 
-    std::vector<std::shared_ptr<sf::Sprite>> AnimatedSpriteModule::getSFSprites(sf::RenderWindow &window) const {
+    std::vector<std::shared_ptr<sf::Sprite> > AnimatedSpriteModule::getSFSprites(sf::RenderWindow &window) const {
         if (!textures.contains(currentAnimation) || textures.at(currentAnimation).empty()) {
             return {};
         }
@@ -26,14 +26,13 @@ namespace renderer {
         elapsedTime += logic::Stopwatch::getInstance()->getDeltaTime();
 
         while (elapsedTime >= frameDuration) {
-
             elapsedTime -= frameDuration;
             currentFrameIndex = currentFrameIndex + 1;
         }
 
         // placed here to make sure this is always within range
         // if you switch animations and currentFrameIndex is f.e. 2, but new animation has only 1 frame, this keeps it within range
-        currentFrameIndex = currentFrameIndex% static_cast<int>(textures.at(currentAnimation).size());
+        currentFrameIndex = currentFrameIndex % static_cast<int>(textures.at(currentAnimation).size());
 
         sprite.setTexture(*textures.at(currentAnimation).at(currentFrameIndex));
         sf::Vector2<unsigned int> textureSize = textures.at(currentAnimation).at(currentFrameIndex)->getSize();
@@ -42,15 +41,14 @@ namespace renderer {
                         projectedSize.y / static_cast<float>(textureSize.y));
         sprite.setOrigin(static_cast<float>(textureSize.x) / 2.0f, static_cast<float>(textureSize.y) / 2.0f);
         return {std::make_shared<sf::Sprite>(sprite)};
-
     }
 
-    std::vector<std::unique_ptr<sf::Text>> AnimatedSpriteModule::getSFTexts() const {
+    std::vector<std::unique_ptr<sf::Text> > AnimatedSpriteModule::getSFTexts() const {
         return {};
     }
 
     void AnimatedSpriteModule::setAnimations(
-            const std::map<std::string, std::vector<std::shared_ptr<sf::Texture>>> &textures) {
+        const std::map<std::string, std::vector<std::shared_ptr<sf::Texture> > > &textures) {
         this->textures = textures;
     }
 
@@ -66,15 +64,13 @@ namespace renderer {
         AnimatedSpriteModule::currentAnimation = currentAnimation;
     }
 
-    void AnimatedSpriteModule::setAnimations(const std::map<std::string, std::vector<std::string>> &textures) {
+    void AnimatedSpriteModule::setAnimations(const std::map<std::string, std::vector<std::string> > &textures) {
         this->textures.clear();
         for (auto &[animationName, textureVec]: textures) {
             for (const std::string &textureName: textureVec) {
                 this->textures[animationName].push_back(std::make_shared<sf::Texture>(
-                        Game::getInstance()->getAppConfig().getTextureParser().getTexture(textureName)));
+                    Game::getInstance()->getAppConfig().getTextureParser().getTexture(textureName)));
             }
         }
     }
-
-
 } // renderer

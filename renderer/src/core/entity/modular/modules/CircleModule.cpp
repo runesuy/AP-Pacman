@@ -8,8 +8,8 @@
 #include "core/entity/modular/modules/CircleModule.h"
 
 namespace renderer {
-    std::vector<std::unique_ptr<sf::Shape>> CircleModule::getSFShapes(sf::RenderWindow &window) const {
-        std::vector<std::unique_ptr<sf::Shape>> shapes;
+    std::vector<std::unique_ptr<sf::Shape> > CircleModule::getSFShapes(sf::RenderWindow &window) const {
+        std::vector<std::unique_ptr<sf::Shape> > shapes;
         auto circle = std::make_unique<sf::CircleShape>();
         sf::Vector2 projectedSize = Camera::project(size, window);
         circle->setRadius(std::min(projectedSize.x, projectedSize.y) / 2);
@@ -20,11 +20,11 @@ namespace renderer {
         return shapes;
     }
 
-    std::vector<std::shared_ptr<sf::Sprite>> CircleModule::getSFSprites(sf::RenderWindow &window) const {
+    std::vector<std::shared_ptr<sf::Sprite> > CircleModule::getSFSprites(sf::RenderWindow &window) const {
         return {};
     }
 
-    std::vector<std::unique_ptr<sf::Text>> CircleModule::getSFTexts() const {
+    std::vector<std::unique_ptr<sf::Text> > CircleModule::getSFTexts() const {
         return {};
     }
 
@@ -41,6 +41,6 @@ namespace renderer {
     }
 
     void CircleModule::setFillColor(const sf::Color &color) {
-       CircleModule::fillColor = color;
+        CircleModule::fillColor = color;
     }
 } // renderer

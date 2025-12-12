@@ -31,5 +31,4 @@ namespace renderer {
     bool WallView::isMarkedForRemoval() {
         return false;
     }
-
 } // renderer

@@ -6,7 +6,6 @@
 #define AP_PACMAN_GAME_H
 
 #include "core/states/StateManager.h"
-#include "core/parser/IConfigParser.h"
 #include "core/config/IAppConfig.h"
 
 namespace renderer {
@@ -26,28 +25,34 @@ namespace renderer {
         /**
          * Is the game running?
          */
-        bool running=false;
+        bool running = false;
 
         /**
          * All the game configurations
          */
-        IAppConfig& appConfig;
+        IAppConfig &appConfig;
 
         /**
          * The singleton instance
          */
         inline static std::shared_ptr<Game> _instance;
-        explicit Game(IAppConfig& appConfig);
+
+        explicit Game(IAppConfig &appConfig);
 
         /**
          * Load resources from config files.
          */
         void loadResources();
+
     public:
-        Game(Game&&) noexcept = delete;
-        Game(Game&) = delete;
-        Game operator=(Game&&) noexcept = delete;
-        Game operator=(Game&) = delete;
+        Game(Game &&) noexcept = delete;
+
+        Game(Game &) = delete;
+
+        Game operator=(Game &&) noexcept = delete;
+
+        Game operator=(Game &) = delete;
+
         /**
          * Start the game.
          */
@@ -57,7 +62,7 @@ namespace renderer {
          * Call to initialize the instance with a IConfig.
          * @return
          */
-        static std::shared_ptr<Game> initializeInstance(IAppConfig& appConfig);
+        static std::shared_ptr<Game> initializeInstance(IAppConfig &appConfig);
 
         /**
          * Get active instance.

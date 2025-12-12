@@ -13,11 +13,13 @@ namespace renderer {
      */
     class IDrawable {
     public:
+        virtual ~IDrawable() = default;
+
         /**
          * Draw the object onto the provided render window.
          * @param window
          */
-        virtual void draw(sf::RenderWindow& window)=0;
+        virtual void draw(sf::RenderWindow &window) =0;
     };
 }
 

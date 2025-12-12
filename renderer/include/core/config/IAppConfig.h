@@ -4,7 +4,6 @@
 
 #ifndef AP_PACMAN_IAPPCONFIG_H
 #define AP_PACMAN_IAPPCONFIG_H
-#include <string>
 #include "core/factories/IFactoryCollection.h"
 #include "core/parser/IConfigParser.h"
 #include "core/parser/ITextureParser.h"
@@ -23,33 +22,43 @@ namespace renderer {
          * @note This method is only used on the representation side.
          * @return
          */
-        virtual IFactoryCollection& getFactoryCollection() = 0;
+        virtual IFactoryCollection &getFactoryCollection() = 0;
 
         /**
          * Get the configuration parser for reading and interpreting configuration files.
          * @return
          */
-        [[nodiscard]] virtual const IConfigParser& getConfigParser() const = 0;
+        [[nodiscard]] virtual const IConfigParser &getConfigParser() const = 0;
 
         /**
          * Get the configuration parser for reading and interpreting configuration files.
          * @return
          */
-        [[nodiscard]] virtual IConfigParser& getConfigParser() = 0;
+        [[nodiscard]] virtual IConfigParser &getConfigParser() = 0;
 
         /**
          * Get the logic configuration containing game logic settings.
          * @return
          */
-        [[nodiscard]] virtual const logic::IConfig & getLogicConfig() const =0;
-        [[nodiscard]] virtual logic::IConfig & getLogicConfig()=0;
+        [[nodiscard]] virtual const logic::IConfig &getLogicConfig() const =0;
 
-        [[nodiscard]] virtual const ITextureParser& getTextureParser() const =0;
+        /**
+         * Get the logic configuration containing game logic settings.
+         * @return
+         */
+        [[nodiscard]] virtual logic::IConfig &getLogicConfig() =0;
 
-        [[nodiscard]] virtual ITextureParser& getTextureParser() =0;
+        /**
+         * @return The texture parser for loading textures.
+         */
+        [[nodiscard]] virtual const ITextureParser &getTextureParser() const =0;
+
+        /**
+        * @return The texture parser for loading textures.
+        */
+        [[nodiscard]] virtual ITextureParser &getTextureParser() =0;
 
         virtual ~IAppConfig() = default;
     };
-
 }
 #endif //AP_PACMAN_IAPPCONFIG_H

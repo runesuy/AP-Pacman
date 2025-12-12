@@ -9,14 +9,14 @@
 #include "core/utils/Random.h"
 
 namespace renderer {
-    const logic::TileMap & DefaultLogicConfig::getTileMap() const {
+    const logic::TileMap &DefaultLogicConfig::getTileMap() const {
         return tileMap;
     }
 
     void DefaultLogicConfig::loadTileMap() {
         TXTMapParser parser;
         const auto mapPaths = _getAllMapPaths();
-        int randomI = logic::Random::getInstance()->getIntInRange(0, mapPaths.size()-1);
+        int randomI = logic::Random::getInstance()->getIntInRange(0, mapPaths.size() - 1);
         tileMap = parser.loadMap(mapPaths.at(randomI));
     }
 
@@ -26,7 +26,7 @@ namespace renderer {
 
     std::vector<std::string> DefaultLogicConfig::_getAllMapPaths() const {
         std::vector<std::string> result;
-        for (const auto & entry : std::filesystem::directory_iterator(_MapFolderPath)) {
+        for (const auto &entry: std::filesystem::directory_iterator(_MapFolderPath)) {
             if (entry.is_regular_file() && entry.path().extension() == ".txt") {
                 result.push_back(entry.path().string());
             }
@@ -35,6 +35,5 @@ namespace renderer {
     }
 
     void DefaultLogicConfig::loadRandomMap() const {
-
     }
 } // renderer

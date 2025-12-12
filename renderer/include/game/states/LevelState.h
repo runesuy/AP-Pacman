@@ -5,12 +5,11 @@
 #ifndef AP_PACMAN_LEVELSTATE_H
 #define AP_PACMAN_LEVELSTATE_H
 
-#include "core/states/DelegatingState.h"
+#include "core/states/IState.h"
 #include "core/world/World.h"
 #include "core/world/WorldView.h"
 
 namespace renderer {
-
     /**
      * State representing the main gameplay level.
      * Loads a map on the screen and lets player play the game.
@@ -23,7 +22,8 @@ namespace renderer {
 
     public:
         LevelState();
-        explicit LevelState(const std::shared_ptr<logic::Score>& score);
+
+        explicit LevelState(const std::shared_ptr<logic::Score> &score);
 
         std::unique_ptr<logic::World> &getWorld();
 
@@ -34,9 +34,7 @@ namespace renderer {
         void processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) override;
 
         void draw(sf::RenderWindow &window, StateManager &stateManager) override;
-
     };
-
 } // renderer
 
 #endif //AP_PACMAN_LEVELSTATE_H

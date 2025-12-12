@@ -9,15 +9,14 @@
 #include "IState.h"
 
 namespace renderer {
-
     template<typename DerivedState>
     class IStateDrawHandler : public IDrawHandler {
     public:
-        void draw(sf::RenderWindow &window) final{};
+        void draw(sf::RenderWindow &window) final {
+        };
 
         virtual void draw(sf::RenderWindow &window, DerivedState &state, StateManager &stateManager) = 0;
     };
-
 } // renderer
 
 #endif //AP_PACMAN_ISTATEDRAWHANDLER_H

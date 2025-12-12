@@ -11,7 +11,6 @@
 #include "core/observer/Observable.h"
 
 namespace renderer {
-
     /**
      * View class representing the visual aspect of a wall entity in the game.
      * Inherits from EntityView and implements the observer pattern to update its state based on the WallModel.
@@ -26,7 +25,6 @@ namespace renderer {
 
         bool isMarkedForRemoval() override;
     };
-
 } // renderer
 
 #endif //AP_PACMAN_WALLVIEW_H

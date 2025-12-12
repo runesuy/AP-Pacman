@@ -11,20 +11,21 @@ namespace renderer {
         setSize(subject.getSize());
     }
 
-    std::vector<std::unique_ptr<sf::Shape>> SpriteModule::getSFShapes(sf::RenderWindow &window) const {
+    std::vector<std::unique_ptr<sf::Shape> > SpriteModule::getSFShapes(sf::RenderWindow &window) const {
         return {};
     }
 
-    std::vector<std::shared_ptr<sf::Sprite>> SpriteModule::getSFSprites(sf::RenderWindow &window) const {
-        std::vector<std::shared_ptr<sf::Sprite>> sprites;
+    std::vector<std::shared_ptr<sf::Sprite> > SpriteModule::getSFSprites(sf::RenderWindow &window) const {
+        std::vector<std::shared_ptr<sf::Sprite> > sprites;
         sf::Vector2<unsigned int> textureSize = sprite.getTexture()->getSize();
         sf::Vector2<float> projectedSize = Camera::project(size, window);
-        sprite.setScale(projectedSize.x/static_cast<float>(textureSize.x), projectedSize.y/static_cast<float>(textureSize.y));
+        sprite.setScale(projectedSize.x / static_cast<float>(textureSize.x),
+                        projectedSize.y / static_cast<float>(textureSize.y));
         sprite.setOrigin(static_cast<float>(textureSize.x) / 2.0f, static_cast<float>(textureSize.y) / 2.0f);
         return {std::make_shared<sf::Sprite>(sprite)};
     }
 
-    std::vector<std::unique_ptr<sf::Text>> SpriteModule::getSFTexts() const {
+    std::vector<std::unique_ptr<sf::Text> > SpriteModule::getSFTexts() const {
         return {};
     }
 

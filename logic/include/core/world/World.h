@@ -162,7 +162,7 @@ namespace logic {
     }
 
     template<typename Target>
-    void World::sendCommandTo(logic::EntityCommand command) {
+    void World::sendCommandTo(EntityCommand command) {
         for (const auto &object: objects) {
             auto target = std::dynamic_pointer_cast<Target>(object);
             if (target) {

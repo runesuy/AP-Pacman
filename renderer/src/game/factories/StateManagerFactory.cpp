@@ -11,6 +11,6 @@
 namespace renderer {
     std::unique_ptr<StateManager> StateManagerFactory::createStateManager(std::unique_ptr<IStateFactory> stateFactory) {
         auto menuState = stateFactory->createMenuState();
-        return std::make_unique<StateManager>(std::move(menuState),std::move(stateFactory));
+        return std::make_unique<StateManager>(std::move(menuState), std::move(stateFactory));
     }
 } // renderer

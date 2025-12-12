@@ -9,7 +9,8 @@
 namespace renderer {
     logic::TileMap TXTMapParser::loadMap(const std::string &filename) {
         std::ifstream inputFile(filename);
-        if (!inputFile.is_open()) throw logic::FileNotOpenedException(filename, "TXTMapParser::loadMap(const std::string &filename)");
+        if (!inputFile.is_open()) throw logic::FileNotOpenedException(
+            filename, "TXTMapParser::loadMap(const std::string &filename)");
 
         logic::TileMap tileMap;
         std::string::size_type width = -1;
@@ -22,7 +23,7 @@ namespace renderer {
             }
 
             std::vector<logic::TileMap::TileType> row;
-            for (char ch : line) {
+            for (char ch: line) {
                 switch (ch) {
                     case EMPTY_CHAR:
                         row.push_back(logic::TileMap::EMPTY);

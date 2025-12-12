@@ -17,13 +17,14 @@ namespace renderer {
      */
     class IStateFactory {
     public:
-        virtual std::unique_ptr<MenuState> createMenuState()=0;
+        virtual ~IStateFactory() = default;
 
-        virtual std::unique_ptr<LevelState> createLevelState()=0;
+        virtual std::unique_ptr<MenuState> createMenuState() =0;
 
-        virtual std::unique_ptr<PausedState> createPausedState()=0;
+        virtual std::unique_ptr<LevelState> createLevelState() =0;
+
+        virtual std::unique_ptr<PausedState> createPausedState() =0;
     };
-
 } // renderer
 
 #endif //AP_PACMAN_ISTATEFACTORY_H

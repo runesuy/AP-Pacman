@@ -8,22 +8,22 @@
 #include "core/utils/Camera.h"
 
 namespace renderer {
-    std::vector<std::unique_ptr<sf::Shape>> RectangleModule::getSFShapes(sf::RenderWindow &window) const {
-        std::vector<std::unique_ptr<sf::Shape>> shapes;
+    std::vector<std::unique_ptr<sf::Shape> > RectangleModule::getSFShapes(sf::RenderWindow &window) const {
+        std::vector<std::unique_ptr<sf::Shape> > shapes;
         auto rectangle = std::make_unique<sf::RectangleShape>();
         rectangle->setSize(Camera::project(size, window));
-        rectangle->setPosition({0,0});
+        rectangle->setPosition({0, 0});
         rectangle->setFillColor(fillColor);
-        rectangle->setOrigin(rectangle->getSize().x/2, rectangle->getSize().y/2);
+        rectangle->setOrigin(rectangle->getSize().x / 2, rectangle->getSize().y / 2);
         shapes.push_back(std::move(rectangle));
         return shapes;
     }
 
-    std::vector<std::shared_ptr<sf::Sprite>> RectangleModule::getSFSprites(sf::RenderWindow &window) const {
+    std::vector<std::shared_ptr<sf::Sprite> > RectangleModule::getSFSprites(sf::RenderWindow &window) const {
         return {};
     }
 
-    std::vector<std::unique_ptr<sf::Text>> RectangleModule::getSFTexts() const {
+    std::vector<std::unique_ptr<sf::Text> > RectangleModule::getSFTexts() const {
         return {};
     }
 
