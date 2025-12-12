@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['random_0',['random',['../classlogic_1_1Random.html#a72525ce753bc59a73d7b9c089b7438e9',1,'logic::Random::Random(Random &amp;&amp;) noexcept=delete'],['../classlogic_1_1Random.html#a1c8a0c127c90e2760aaf347cbbe49976',1,'logic::Random::Random(Random &amp;)=delete'],['../classlogic_1_1Random.html',1,'logic::Random']]],
+  ['random_0',['random',['../classlogic_1_1Random.html',1,'logic::Random'],['../classlogic_1_1Random.html#a72525ce753bc59a73d7b9c089b7438e9',1,'logic::Random::Random(Random &amp;&amp;) noexcept=delete'],['../classlogic_1_1Random.html#a1c8a0c127c90e2760aaf347cbbe49976',1,'logic::Random::Random(Random &amp;)=delete']]],
   ['random_2ecpp_1',['Random.cpp',['../Random_8cpp.html',1,'']]],
   ['random_2eh_2',['Random.h',['../Random_8h.html',1,'']]],
   ['randomnavghostcontroller_3',['RandomNavGhostController',['../classlogic_1_1RandomNavGhostController.html',1,'logic']]],
@@ -11,7 +11,7 @@ var searchData=
   ['rectanglemodule_2ecpp_8',['RectangleModule.cpp',['../RectangleModule_8cpp.html',1,'']]],
   ['rectanglemodule_2eh_9',['RectangleModule.h',['../RectangleModule_8h.html',1,'']]],
   ['red_10',['RED',['../namespacelogic.html#a36053e250f7e1339ba0a6cbecbdf1b4baa2d9547b5d3dd9f05984475f7c926da0',1,'logic']]],
-  ['redghostview_11',['redghostview',['../classrenderer_1_1RedGhostView.html#a39acb71e2d4e43f782bd443730cd4b84',1,'renderer::RedGhostView::RedGhostView()'],['../classrenderer_1_1RedGhostView.html',1,'renderer::RedGhostView']]],
+  ['redghostview_11',['redghostview',['../classrenderer_1_1RedGhostView.html',1,'renderer::RedGhostView'],['../classrenderer_1_1RedGhostView.html#a39acb71e2d4e43f782bd443730cd4b84',1,'renderer::RedGhostView::RedGhostView()']]],
   ['redghostview_2ecpp_12',['RedGhostView.cpp',['../RedGhostView_8cpp.html',1,'']]],
   ['redghostview_2eh_13',['RedGhostView.h',['../RedGhostView_8h.html',1,'']]],
   ['removelives_14',['removeLives',['../classlogic_1_1LifeCounter.html#a1851f0902c5b2e61fc585895c95e9d2f',1,'logic::LifeCounter']]],
@@ -19,7 +19,8 @@ var searchData=
   ['renderer_16',['renderer',['../namespacerenderer.html',1,'']]],
   ['renderer_3a_3aismoduletype_17',['IsModuleType',['../conceptrenderer_1_1IsModuleType.html',1,'renderer']]],
   ['replacestate_18',['replaceState',['../classrenderer_1_1StateManager.html#a275ac75c18d9b5cd61cc459663f6be27',1,'renderer::StateManager']]],
-  ['returning_5fhome_19',['RETURNING_HOME',['../classlogic_1_1GhostModel.html#aa30135f88fabf78373f93b9cc9da0e4da526cac4a5b3032d7b4f95d7423ec8660',1,'logic::GhostModel']]],
-  ['right_20',['right',['../classrenderer_1_1Label.html#a3e746e8c97a5003ae5bd23f73a43e35aa21507b40c80068eda19865706fdc2403',1,'renderer::Label::RIGHT'],['../namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52ac231e8df5dd5f8ea2500f2a19efbd972',1,'logic::RIGHT']]],
-  ['run_21',['run',['../classrenderer_1_1Game.html#a47e7e9dc327781e6797f3b5f43b9bc8d',1,'renderer::Game']]]
+  ['resources_19',['Changing spite resources',['../md_renderer_2resources_2sprites_2SpriteGuide.html',1,'']]],
+  ['returning_5fhome_20',['RETURNING_HOME',['../classlogic_1_1GhostModel.html#aa30135f88fabf78373f93b9cc9da0e4da526cac4a5b3032d7b4f95d7423ec8660',1,'logic::GhostModel']]],
+  ['right_21',['right',['../classrenderer_1_1Label.html#a3e746e8c97a5003ae5bd23f73a43e35aa21507b40c80068eda19865706fdc2403',1,'renderer::Label::RIGHT'],['../namespacelogic.html#a5ee5130fbbf0b7c9c16c7375e2510c52ac231e8df5dd5f8ea2500f2a19efbd972',1,'logic::RIGHT']]],
+  ['run_22',['run',['../classrenderer_1_1Game.html#a47e7e9dc327781e6797f3b5f43b9bc8d',1,'renderer::Game']]]
 ];

@@ -10,12 +10,13 @@ var searchData=
   ['size_2eh_7',['Size.h',['../Size_8h.html',1,'']]],
   ['sizedworldobject_2ecpp_8',['SizedWorldObject.cpp',['../SizedWorldObject_8cpp.html',1,'']]],
   ['sizedworldobject_2eh_9',['SizedWorldObject.h',['../SizedWorldObject_8h.html',1,'']]],
-  ['spritemodule_2ecpp_10',['SpriteModule.cpp',['../SpriteModule_8cpp.html',1,'']]],
-  ['spritemodule_2eh_11',['SpriteModule.h',['../SpriteModule_8h.html',1,'']]],
-  ['statemanager_2ecpp_12',['StateManager.cpp',['../StateManager_8cpp.html',1,'']]],
-  ['statemanager_2eh_13',['StateManager.h',['../StateManager_8h.html',1,'']]],
-  ['statemanagerfactory_2ecpp_14',['StateManagerFactory.cpp',['../StateManagerFactory_8cpp.html',1,'']]],
-  ['statemanagerfactory_2eh_15',['StateManagerFactory.h',['../StateManagerFactory_8h.html',1,'']]],
-  ['stopwatch_2ecpp_16',['Stopwatch.cpp',['../Stopwatch_8cpp.html',1,'']]],
-  ['stopwatch_2eh_17',['Stopwatch.h',['../Stopwatch_8h.html',1,'']]]
+  ['spriteguide_2emd_10',['SpriteGuide.md',['../SpriteGuide_8md.html',1,'']]],
+  ['spritemodule_2ecpp_11',['SpriteModule.cpp',['../SpriteModule_8cpp.html',1,'']]],
+  ['spritemodule_2eh_12',['SpriteModule.h',['../SpriteModule_8h.html',1,'']]],
+  ['statemanager_2ecpp_13',['StateManager.cpp',['../StateManager_8cpp.html',1,'']]],
+  ['statemanager_2eh_14',['StateManager.h',['../StateManager_8h.html',1,'']]],
+  ['statemanagerfactory_2ecpp_15',['StateManagerFactory.cpp',['../StateManagerFactory_8cpp.html',1,'']]],
+  ['statemanagerfactory_2eh_16',['StateManagerFactory.h',['../StateManagerFactory_8h.html',1,'']]],
+  ['stopwatch_2ecpp_17',['Stopwatch.cpp',['../Stopwatch_8cpp.html',1,'']]],
+  ['stopwatch_2eh_18',['Stopwatch.h',['../Stopwatch_8h.html',1,'']]]
 ];
