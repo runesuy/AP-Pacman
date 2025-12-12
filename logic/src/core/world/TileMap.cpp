@@ -59,7 +59,8 @@ namespace logic {
                         break;
                     }
                     case TileType::GHOST_RED: {
-                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::RED, 1);
+                        const float difficultyMultiplier = world.getScore()->getDifficultyMultiplier();
+                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::RED, difficultyMultiplier);
                         ghost->setPosition({x, y});
                         ghost->setReturnPosition({x,y});
                         ghost->setSize({tileSize, tileSize});
@@ -67,7 +68,8 @@ namespace logic {
                         break;
                     }
                     case TileType::GHOST_PINK: {
-                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::PINK, 1);
+                        const float difficultyMultiplier = world.getScore()->getDifficultyMultiplier();
+                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::PINK, difficultyMultiplier);
                         ghost->setPosition({x, y});
                         ghost->setReturnPosition({x,y});
                         ghost->setSize({tileSize, tileSize});
@@ -75,7 +77,8 @@ namespace logic {
                         break;
                     }
                     case TileType::GHOST_ORANGE: {
-                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::ORANGE, 1);
+                        const float difficultyMultiplier = world.getScore()->getDifficultyMultiplier();
+                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::ORANGE, difficultyMultiplier);
                         ghost->setPosition({x, y});
                         ghost->setReturnPosition({x,y});
                         ghost->setSize({tileSize, tileSize});
@@ -83,7 +86,8 @@ namespace logic {
                         break;
                     }
                     case TileType::GHOST_BLUE: {
-                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::BLUE, 1);
+                        const float difficultyMultiplier = world.getScore()->getDifficultyMultiplier();
+                        auto ghost = world.getConfig().getEntityFactory()->createGhostModel(GhostType::BLUE, difficultyMultiplier);
                         ghost->setPosition({x, y});
                         ghost->setReturnPosition({x,y});
                         ghost->setSize({tileSize, tileSize});

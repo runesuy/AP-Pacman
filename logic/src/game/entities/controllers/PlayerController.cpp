@@ -41,7 +41,7 @@ namespace logic {
             }
             case(FRUIT): {
                 entity.updateObservers(PLAYER_FRUIT_COLLECTED);
-                world.sendWorldEvent(WorldEvent::FRUIT_EATEN_BY_PLAYER);
+                world.sendWorldEvent(FRUIT_EATEN_BY_PLAYER);
                 break;
             }
             case(GHOST): {

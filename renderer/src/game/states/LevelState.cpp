@@ -43,7 +43,10 @@ namespace renderer {
             return;
         }
         if (getWorld()->levelComplete()){
+            // apply level clearing reward
             getWorld()->getScore()->getScoreCounter().setScore(getWorld()->getScore()->getScoreCounter().getScore() + LEVEL_CLEAR_REWARD);
+
+            // place new state on top
             stateManager.replaceState(std::make_unique<VictoryState>(getWorld()->getScore()));
             return;
         }

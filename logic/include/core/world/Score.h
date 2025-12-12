@@ -19,7 +19,7 @@ namespace logic {
         ScoreCounter scoreCounter;
         LifeCounter lifeCounter;
         float difficultyMultiplier=1;
-        inline static const float DIFFICULTY_INCREASE = 0.1;
+        static constexpr float DIFFICULTY_INCREASE = 0.1;
     public:
         /**
          * Called on each tick.
@@ -59,7 +59,7 @@ namespace logic {
          */
         [[nodiscard]] ScoreCounter &getScoreCounter();
 
-        float getDifficultyMultiplier() const;
+        [[nodiscard]] float getDifficultyMultiplier() const;
 
         void increaseDifficultyMultiplier();
     };
