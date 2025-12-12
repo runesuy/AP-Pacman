@@ -54,6 +54,9 @@ Concrete implementation of \doxylink{classrenderer_1_1IConfigParser}{IConfig\+Pa
 \doxysubsubsection{\texorpdfstring{getDefaultFontPath()}{getDefaultFontPath()}}
 {\footnotesize\ttfamily std\+::string renderer\+::\+JSONConfig\+Parser\+::get\+Default\+Font\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+\begin{DoxyReturn}{Returns}
+The default font path as specified in the configuration. 
+\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classrenderer_1_1IConfigParser_aa77b34fb3e3fac869fdaae73814444bb}{renderer\+::\+IConfig\+Parser}}.
@@ -64,6 +67,9 @@ Implements \mbox{\hyperlink{classrenderer_1_1IConfigParser_aa77b34fb3e3fac869fda
 \doxysubsubsection{\texorpdfstring{getSpriteSheetPath()}{getSpriteSheetPath()}}
 {\footnotesize\ttfamily std\+::string renderer\+::\+JSONConfig\+Parser\+::get\+Sprite\+Sheet\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+\begin{DoxyReturn}{Returns}
+The sprite sheet path as specified in the configuration. 
+\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classrenderer_1_1IConfigParser_a8ace617490d726901a6d9cf687cf6474}{renderer\+::\+IConfig\+Parser}}.
@@ -75,6 +81,14 @@ Implements \mbox{\hyperlink{classrenderer_1_1IConfigParser_a8ace617490d726901a6d
 {\footnotesize\ttfamily sf\+::\+Int\+Rect renderer\+::\+JSONConfig\+Parser\+::get\+Texture\+Rect\+By\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
+\begin{DoxyParams}{Parameters}
+{\em name} & A specific texture rectangle based on a name that is present in the configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
 
 Implements \mbox{\hyperlink{classrenderer_1_1IConfigParser_acbeba8d7a53b6826d887bab5639a0293}{renderer\+::\+IConfig\+Parser}}.
 
@@ -84,6 +98,9 @@ Implements \mbox{\hyperlink{classrenderer_1_1IConfigParser_acbeba8d7a53b6826d887
 \doxysubsubsection{\texorpdfstring{getTextureRects()}{getTextureRects()}}
 {\footnotesize\ttfamily std\+::map$<$ std\+::string, sf\+::\+Int\+Rect $>$ renderer\+::\+JSONConfig\+Parser\+::get\+Texture\+Rects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+\begin{DoxyReturn}{Returns}
+The map of texture rectangle names to their corresponding sf\+::\+Int\+Rect values as specified in the configuration. 
+\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classrenderer_1_1IConfigParser_a459f265187764b25781a7521f1981ce3}{renderer\+::\+IConfig\+Parser}}.
@@ -94,7 +111,7 @@ Implements \mbox{\hyperlink{classrenderer_1_1IConfigParser_a459f265187764b25781a
 \doxysubsubsection{\texorpdfstring{loadConfigFile()}{loadConfigFile()}}
 {\footnotesize\ttfamily void renderer\+::\+JSONConfig\+Parser\+::load\+Config\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
-
+Parse the config file and store the data internally. 
 
 Implements \mbox{\hyperlink{classrenderer_1_1IConfigParser_a7bca04342b5562edc5de2352d996a113}{renderer\+::\+IConfig\+Parser}}.
 

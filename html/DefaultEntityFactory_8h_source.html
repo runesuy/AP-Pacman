@@ -93,10 +93,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="PlayerModel_8h.html">game/entities/models/PlayerModel.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerenderer.html">renderer</a> {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classrenderer_1_1DefaultEntityFactory.html">   17</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1DefaultEntityFactory.html">DefaultEntityFactory</a> : <span class="keyword">public</span> <a class="code hl_class" href="classlogic_1_1IEntityFactory.html">logic::IEntityFactory</a> {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        std::shared_ptr&lt;WorldView&gt; viewTarget;</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classrenderer_1_1DefaultEntityFactory.html">   16</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1DefaultEntityFactory.html">DefaultEntityFactory</a> : <span class="keyword">public</span> <a class="code hl_class" href="classlogic_1_1IEntityFactory.html">logic::IEntityFactory</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        std::shared_ptr&lt;WorldView&gt; viewTarget;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        std::shared_ptr&lt;logic::WallModel&gt; <a class="code hl_function" href="classrenderer_1_1DefaultEntityFactory.html#acd0f8f93327b10cad01d682effa9e7fe">createWallModel</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
@@ -113,15 +113,14 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        std::shared_ptr&lt;logic::GhostModel&gt; <a class="code hl_function" href="classrenderer_1_1DefaultEntityFactory.html#aba448a382ac8113ecab25738b5a37009">createGhostModel</a>(<a class="code hl_enumeration" href="namespacelogic.html#a36053e250f7e1339ba0a6cbecbdf1b4b">logic::GhostType</a> type, <span class="keywordtype">float</span> difficultyMultiplier) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    };</div>
 </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>} <span class="comment">// renderer</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_DEFAULTENTITYFACTORY_H</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>} <span class="comment">// renderer</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_DEFAULTENTITYFACTORY_H</span></div>
 <div class="ttc" id="aIEntityFactory_8h_html"><div class="ttname"><a href="IEntityFactory_8h.html">IEntityFactory.h</a></div></div>
 <div class="ttc" id="aLevelState_8h_html"><div class="ttname"><a href="LevelState_8h.html">LevelState.h</a></div></div>
 <div class="ttc" id="aPlayerModel_8h_html"><div class="ttname"><a href="PlayerModel_8h.html">PlayerModel.h</a></div></div>
 <div class="ttc" id="aclasslogic_1_1IEntityFactory_html"><div class="ttname"><a href="classlogic_1_1IEntityFactory.html">logic::IEntityFactory</a></div><div class="ttdef"><b>Definition</b> IEntityFactory.h:24</div></div>
-<div class="ttc" id="aclassrenderer_1_1DefaultEntityFactory_html"><div class="ttname"><a href="classrenderer_1_1DefaultEntityFactory.html">renderer::DefaultEntityFactory</a></div><div class="ttdef"><b>Definition</b> DefaultEntityFactory.h:17</div></div>
+<div class="ttc" id="aclassrenderer_1_1DefaultEntityFactory_html"><div class="ttname"><a href="classrenderer_1_1DefaultEntityFactory.html">renderer::DefaultEntityFactory</a></div><div class="ttdef"><b>Definition</b> DefaultEntityFactory.h:16</div></div>
 <div class="ttc" id="aclassrenderer_1_1DefaultEntityFactory_html_a035d0cc4c60a7c3c1800f4c1424b0296"><div class="ttname"><a href="classrenderer_1_1DefaultEntityFactory.html#a035d0cc4c60a7c3c1800f4c1424b0296">renderer::DefaultEntityFactory::createPowerupModel</a></div><div class="ttdeci">std::shared_ptr&lt; logic::FruitModel &gt; createPowerupModel() override</div><div class="ttdef"><b>Definition</b> DefaultEntityFactory.cpp:53</div></div>
 <div class="ttc" id="aclassrenderer_1_1DefaultEntityFactory_html_a497423527503fbb10efb90c63543efee"><div class="ttname"><a href="classrenderer_1_1DefaultEntityFactory.html#a497423527503fbb10efb90c63543efee">renderer::DefaultEntityFactory::createPlayerModel</a></div><div class="ttdeci">std::shared_ptr&lt; logic::PlayerModel &gt; createPlayerModel() override</div><div class="ttdef"><b>Definition</b> DefaultEntityFactory.cpp:29</div></div>
 <div class="ttc" id="aclassrenderer_1_1DefaultEntityFactory_html_a8c325cc7e30dd7b9aba92dc0180d98ce"><div class="ttname"><a href="classrenderer_1_1DefaultEntityFactory.html#a8c325cc7e30dd7b9aba92dc0180d98ce">renderer::DefaultEntityFactory::setViewTarget</a></div><div class="ttdeci">void setViewTarget(const std::shared_ptr&lt; WorldView &gt; &amp;viewTarget)</div><div class="ttdef"><b>Definition</b> DefaultEntityFactory.cpp:49</div></div>
@@ -130,7 +129,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassrenderer_1_1DefaultEntityFactory_html_acd0f8f93327b10cad01d682effa9e7fe"><div class="ttname"><a href="classrenderer_1_1DefaultEntityFactory.html#acd0f8f93327b10cad01d682effa9e7fe">renderer::DefaultEntityFactory::createWallModel</a></div><div class="ttdeci">std::shared_ptr&lt; logic::WallModel &gt; createWallModel() override</div><div class="ttdef"><b>Definition</b> DefaultEntityFactory.cpp:21</div></div>
 <div class="ttc" id="aclassrenderer_1_1DefaultEntityFactory_html_af4e2b1499a0c08725275e9e3f397b913"><div class="ttname"><a href="classrenderer_1_1DefaultEntityFactory.html#af4e2b1499a0c08725275e9e3f397b913">renderer::DefaultEntityFactory::createCoinModel</a></div><div class="ttdeci">std::shared_ptr&lt; logic::CoinModel &gt; createCoinModel() override</div><div class="ttdef"><b>Definition</b> DefaultEntityFactory.cpp:37</div></div>
 <div class="ttc" id="anamespacelogic_html_a36053e250f7e1339ba0a6cbecbdf1b4b"><div class="ttname"><a href="namespacelogic.html#a36053e250f7e1339ba0a6cbecbdf1b4b">logic::GhostType</a></div><div class="ttdeci">GhostType</div><div class="ttdef"><b>Definition</b> GhostTypes.h:14</div></div>
-<div class="ttc" id="anamespacerenderer_html"><div class="ttname"><a href="namespacerenderer.html">renderer</a></div><div class="ttdef"><b>Definition</b> IAppConfig.h:12</div></div>
+<div class="ttc" id="anamespacerenderer_html"><div class="ttname"><a href="namespacerenderer.html">renderer</a></div><div class="ttdef"><b>Definition</b> IAppConfig.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

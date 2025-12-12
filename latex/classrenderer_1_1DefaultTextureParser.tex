@@ -31,6 +31,11 @@ const sf\+::\+Texture \& \mbox{\hyperlink{classrenderer_1_1DefaultTextureParser_
 \item 
 void \mbox{\hyperlink{classrenderer_1_1DefaultTextureParser_acbc29caeb10668c094fcd593ed163bf7}{load\+Textures}} (const std\+::string \&path, const std\+::map$<$ std\+::string, sf\+::\+Int\+Rect $>$ \&texture\+Rects) override
 \end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classrenderer_1_1ITextureParser}{renderer\+::\+ITexture\+Parser}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classrenderer_1_1ITextureParser_a4a9b08bdbdf35f9eefa182b52ba9d659}{\texorpdfstring{$\sim$}{\string~}\+ITexture\+Parser}} ()=default
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
@@ -40,6 +45,14 @@ void \mbox{\hyperlink{classrenderer_1_1DefaultTextureParser_acbc29caeb10668c094f
 \doxysubsubsection{\texorpdfstring{getTexture()}{getTexture()}}
 {\footnotesize\ttfamily const sf\+::\+Texture \& renderer\+::\+Default\+Texture\+Parser\+::get\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Get the texture associated with the given name. 
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 Implements \mbox{\hyperlink{classrenderer_1_1ITextureParser_af64019e0be24ea4a3e02479221a9468b}{renderer\+::\+ITexture\+Parser}}.
@@ -50,6 +63,13 @@ Implements \mbox{\hyperlink{classrenderer_1_1ITextureParser_af64019e0be24ea4a3e0
 \doxysubsubsection{\texorpdfstring{loadTextures()}{loadTextures()}}
 {\footnotesize\ttfamily void renderer\+::\+Default\+Texture\+Parser\+::load\+Textures (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{const std\+::map$<$ std\+::string, sf\+::\+Int\+Rect $>$ \&}]{texture\+Rects }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Parse the textures from the given path using the provided texture rectangles and store them internally. 
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+{\em texture\+Rects} & \\
+\hline
+\end{DoxyParams}
 
 
 Implements \mbox{\hyperlink{classrenderer_1_1ITextureParser_acd0207832ea88fd1cae6e130003f67a9}{renderer\+::\+ITexture\+Parser}}.

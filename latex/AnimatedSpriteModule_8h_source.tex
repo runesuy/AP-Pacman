@@ -15,42 +15,41 @@
 \DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ITextureParser_8h}{core/parser/ITextureParser.h}}"{}}}
 \DoxyCodeLine{00012\ }
 \DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule}{AnimatedSpriteModule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IEntityViewModule}{IEntityViewModule}}\{}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ std::map<std::string,std::vector<std::shared\_ptr<sf::Texture>>>\ textures;}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ std::string\ currentAnimation;}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ frameDuration=0.1f;}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\ size=\{0.1,0.1\};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{float}\ elapsedTime=0.0f;}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{int}\ currentFrameIndex=0;}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ sf::Sprite\ sprite;}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a4a96e25d9dc165b9b518431cf7a69365}{AnimationNamesMap}}\ =\ std::map<std::string,std::vector<std::string>>;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule}{AnimatedSpriteModule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IEntityViewModule}{IEntityViewModule}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::map<std::string,\ std::vector<std::shared\_ptr<sf::Texture>\ >\ >\ textures;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::string\ currentAnimation;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ frameDuration\ =\ 0.1f;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\ size\ =\ \{0.1,\ 0.1\};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{float}\ elapsedTime\ =\ 0.0f;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{int}\ currentFrameIndex\ =\ 0;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ sf::Sprite\ sprite;}
 \DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_ac913ec6b379df50362fdb516cdd650f5}{AnimatedSpriteModule}}()=\textcolor{keywordflow}{default};}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a9d2e08cbe3b4a8537e5b963e3a07c82a}{update}}(\mbox{\hyperlink{classrenderer_1_1ModularEntityView}{ModularEntityView}}\ \&subject)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Shape>>\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_ac6ad2866b80f9aa9e62a065e02322e6a}{getSFShapes}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<sf::Sprite>>\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a5d8e5f53564f61c90dd44b317ddab40e}{getSFSprites}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<std::unique\_ptr<sf::Text>>\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a5d90107ab5ce63d957ad24a6a2867bac}{getSFTexts}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a43bd3dd7675f3c4edb5786ae8f1e6443}{setAnimations}}(\textcolor{keyword}{const}\ std::map<std::string,std::vector<std::shared\_ptr<sf::Texture>>>\ \&textures);}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a43bd3dd7675f3c4edb5786ae8f1e6443}{setAnimations}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a4a96e25d9dc165b9b518431cf7a69365}{AnimationNamesMap}}\ \&textures);}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_abb30e791b68e73d4d1ceffb09c2d43d1}{setSize}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\ \&size);}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_ab50214c94ead3bbe8cab27955333348b}{setFrameDuration}}(\textcolor{keywordtype}{float}\ frameDuration);}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a534e2d5332d56e3cfd086b0b39321dad}{setCurrentAnimation}}(\textcolor{keyword}{const}\ std::string\ \&currentAnimation);}
-\DoxyCodeLine{00046\ \ \ \ \ \};}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \}\ \textcolor{comment}{//\ renderer}}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_ANIMATEDSPRITEMODULE\_H}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a945d8a9e8ccfc2aa04f861c5601c0e90}{AnimationNamesMap}}\ =\ std::map<std::string,\ std::vector<std::string>\ >;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_ac913ec6b379df50362fdb516cdd650f5}{AnimatedSpriteModule}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a9d2e08cbe3b4a8537e5b963e3a07c82a}{update}}(\mbox{\hyperlink{classrenderer_1_1ModularEntityView}{ModularEntityView}}\ \&subject)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Shape>\ >\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_ac6ad2866b80f9aa9e62a065e02322e6a}{getSFShapes}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<sf::Sprite>\ >\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a5d8e5f53564f61c90dd44b317ddab40e}{getSFSprites}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<std::unique\_ptr<sf::Text>\ >\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a5d90107ab5ce63d957ad24a6a2867bac}{getSFTexts}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a43bd3dd7675f3c4edb5786ae8f1e6443}{setAnimations}}(\textcolor{keyword}{const}\ std::map<std::string,\ std::vector<std::shared\_ptr<sf::Texture>\ >\ >\ \&textures);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a43bd3dd7675f3c4edb5786ae8f1e6443}{setAnimations}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a945d8a9e8ccfc2aa04f861c5601c0e90}{AnimationNamesMap}}\ \&textures);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_abb30e791b68e73d4d1ceffb09c2d43d1}{setSize}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\ \&size);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_ab50214c94ead3bbe8cab27955333348b}{setFrameDuration}}(\textcolor{keywordtype}{float}\ frameDuration);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1AnimatedSpriteModule_a534e2d5332d56e3cfd086b0b39321dad}{setCurrentAnimation}}(\textcolor{keyword}{const}\ std::string\ \&currentAnimation);}
+\DoxyCodeLine{00074\ \ \ \ \ \};}
+\DoxyCodeLine{00075\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_ANIMATEDSPRITEMODULE\_H}}
 
 \end{DoxyCode}

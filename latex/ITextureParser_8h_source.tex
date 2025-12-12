@@ -9,22 +9,21 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_ITEXTUREPARSER\_H}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_ITEXTUREPARSER\_H}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <SFML/Graphics/Sprite.hpp>}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <map>}}
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <SFML/Graphics/Texture.hpp>}}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1ITextureParser}{ITextureParser}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <SFML/Graphics/Texture.hpp>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1ITextureParser}{ITextureParser}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classrenderer_1_1ITextureParser_a4a9b08bdbdf35f9eefa182b52ba9d659}{\string~ITextureParser}}()\ =\ \textcolor{keywordflow}{default};}
 \DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1ITextureParser_acd0207832ea88fd1cae6e130003f67a9}{loadTextures}}(\textcolor{keyword}{const}\ std::string\&\ path,\ \textcolor{keyword}{const}\ std::map<std::string,\ sf::IntRect>\&\ textureRects)=0;}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ sf::Texture\&\ \mbox{\hyperlink{classrenderer_1_1ITextureParser_af64019e0be24ea4a3e02479221a9468b}{getTexture}}(\textcolor{keyword}{const}\ std::string\ \&name)\ \textcolor{keyword}{const}\ =\ 0;}
-\DoxyCodeLine{00020\ \ \ \ \ \};}
-\DoxyCodeLine{00021\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1ITextureParser_acd0207832ea88fd1cae6e130003f67a9}{loadTextures}}(\textcolor{keyword}{const}\ std::string\ \&path,\ \textcolor{keyword}{const}\ std::map<std::string,\ sf::IntRect>\ \&textureRects)\ =0;}
 \DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_ITEXTUREPARSER\_H}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ sf::Texture\ \&\mbox{\hyperlink{classrenderer_1_1ITextureParser_af64019e0be24ea4a3e02479221a9468b}{getTexture}}(\textcolor{keyword}{const}\ std::string\ \&name)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00029\ \ \ \ \ \};}
+\DoxyCodeLine{00030\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_ITEXTUREPARSER\_H}}
 
 \end{DoxyCode}

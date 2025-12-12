@@ -93,39 +93,38 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="DefaultEntityFactory_8h.html">game/factories/DefaultEntityFactory.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerenderer.html">renderer</a> {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classrenderer_1_1DefaultLogicConfig.html">   17</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1DefaultLogicConfig.html">DefaultLogicConfig</a> : <span class="keyword">public</span> <a class="code hl_class" href="classlogic_1_1IConfig.html">logic::IConfig</a> {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_class" href="classlogic_1_1TileMap.html">logic::TileMap</a> tileMap;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        std::shared_ptr&lt;logic::IEntityFactory&gt; entityFactory = std::make_shared&lt;DefaultEntityFactory&gt;();</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">const</span> std::string _MapFolderPath = <span class="stringliteral">&quot;resources/maps/&quot;</span>;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        std::vector&lt;std::string&gt; _getAllMapPaths() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordtype">void</span> loadRandomMap() <span class="keyword">const</span>;</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classrenderer_1_1DefaultLogicConfig.html">   16</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1DefaultLogicConfig.html">DefaultLogicConfig</a> : <span class="keyword">public</span> <a class="code hl_class" href="classlogic_1_1IConfig.html">logic::IConfig</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_class" href="classlogic_1_1TileMap.html">logic::TileMap</a> tileMap;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        std::shared_ptr&lt;logic::IEntityFactory&gt; entityFactory = std::make_shared&lt;DefaultEntityFactory&gt;();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">const</span> std::string _MapFolderPath = <span class="stringliteral">&quot;resources/maps/&quot;</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        std::vector&lt;std::string&gt; _getAllMapPaths() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">void</span> loadRandomMap() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        [[nodiscard]] <span class="keyword">const</span> <a class="code hl_class" href="classlogic_1_1TileMap.html">logic::TileMap</a> &amp; <a class="code hl_function" href="classrenderer_1_1DefaultLogicConfig.html#aa274e162f5d00331767601ee109a5add">getTileMap</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        [[nodiscard]] <span class="keyword">const</span> <a class="code hl_class" href="classlogic_1_1TileMap.html">logic::TileMap</a> &amp;<a class="code hl_function" href="classrenderer_1_1DefaultLogicConfig.html#aa274e162f5d00331767601ee109a5add">getTileMap</a>() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classrenderer_1_1DefaultLogicConfig.html#abeb12ef8454b051a50c0aafbb0277618">loadTileMap</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        [[nodiscard]] std::shared_ptr&lt;logic::IEntityFactory&gt; <a class="code hl_function" href="classrenderer_1_1DefaultLogicConfig.html#af4d75b6cb4d070523d368c7230e87f94">getEntityFactory</a>() <span class="keyword">const override</span>;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    };</div>
 </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>} <span class="comment">// renderer</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_DEFAULTLOGICCONFIG_H</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>} <span class="comment">// renderer</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_DEFAULTLOGICCONFIG_H</span></div>
 <div class="ttc" id="aDefaultEntityFactory_8h_html"><div class="ttname"><a href="DefaultEntityFactory_8h.html">DefaultEntityFactory.h</a></div></div>
 <div class="ttc" id="aIConfig_8h_html"><div class="ttname"><a href="IConfig_8h.html">IConfig.h</a></div></div>
 <div class="ttc" id="aTileMap_8h_html"><div class="ttname"><a href="TileMap_8h.html">TileMap.h</a></div></div>
 <div class="ttc" id="aclasslogic_1_1IConfig_html"><div class="ttname"><a href="classlogic_1_1IConfig.html">logic::IConfig</a></div><div class="ttdef"><b>Definition</b> IConfig.h:18</div></div>
 <div class="ttc" id="aclasslogic_1_1TileMap_html"><div class="ttname"><a href="classlogic_1_1TileMap.html">logic::TileMap</a></div><div class="ttdef"><b>Definition</b> TileMap.h:16</div></div>
-<div class="ttc" id="aclassrenderer_1_1DefaultLogicConfig_html"><div class="ttname"><a href="classrenderer_1_1DefaultLogicConfig.html">renderer::DefaultLogicConfig</a></div><div class="ttdef"><b>Definition</b> DefaultLogicConfig.h:17</div></div>
+<div class="ttc" id="aclassrenderer_1_1DefaultLogicConfig_html"><div class="ttname"><a href="classrenderer_1_1DefaultLogicConfig.html">renderer::DefaultLogicConfig</a></div><div class="ttdef"><b>Definition</b> DefaultLogicConfig.h:16</div></div>
 <div class="ttc" id="aclassrenderer_1_1DefaultLogicConfig_html_aa274e162f5d00331767601ee109a5add"><div class="ttname"><a href="classrenderer_1_1DefaultLogicConfig.html#aa274e162f5d00331767601ee109a5add">renderer::DefaultLogicConfig::getTileMap</a></div><div class="ttdeci">const logic::TileMap &amp; getTileMap() const override</div><div class="ttdef"><b>Definition</b> DefaultLogicConfig.cpp:12</div></div>
 <div class="ttc" id="aclassrenderer_1_1DefaultLogicConfig_html_abeb12ef8454b051a50c0aafbb0277618"><div class="ttname"><a href="classrenderer_1_1DefaultLogicConfig.html#abeb12ef8454b051a50c0aafbb0277618">renderer::DefaultLogicConfig::loadTileMap</a></div><div class="ttdeci">void loadTileMap() override</div><div class="ttdef"><b>Definition</b> DefaultLogicConfig.cpp:16</div></div>
 <div class="ttc" id="aclassrenderer_1_1DefaultLogicConfig_html_af4d75b6cb4d070523d368c7230e87f94"><div class="ttname"><a href="classrenderer_1_1DefaultLogicConfig.html#af4d75b6cb4d070523d368c7230e87f94">renderer::DefaultLogicConfig::getEntityFactory</a></div><div class="ttdeci">std::shared_ptr&lt; logic::IEntityFactory &gt; getEntityFactory() const override</div><div class="ttdef"><b>Definition</b> DefaultLogicConfig.cpp:23</div></div>
-<div class="ttc" id="anamespacerenderer_html"><div class="ttname"><a href="namespacerenderer.html">renderer</a></div><div class="ttdef"><b>Definition</b> IAppConfig.h:12</div></div>
+<div class="ttc" id="anamespacerenderer_html"><div class="ttname"><a href="namespacerenderer.html">renderer</a></div><div class="ttdef"><b>Definition</b> IAppConfig.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -22,26 +22,27 @@
 \DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }IState;}
 \DoxyCodeLine{00019\ }
 \DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}\ \{}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::stack<std::unique\_ptr<IState>>\ stack;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::stack<std::unique\_ptr<IState>\ >\ stack;}
 \DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::unique\_ptr<IStateFactory>\ stateFactory;}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}(std::unique\_ptr<IState>\ \&\&initialState,\ std::unique\_ptr<IStateFactory>\ \&\&stateFactory);}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1StateManager_a2817f9241cfd076972064900da72283c}{processInput}}(sf::Event\ \&event,\ sf::RenderWindow\ \&window);}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1StateManager_ac58e08abe78bb06670171aa4866df68b}{draw}}(sf::RenderWindow\&\ window);}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1StateManager_ad8e76e0e75928ceb4de827953dc5458d}{update}}();}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1StateManager_a2b8a71923469fe8908528592683c9be3}{pushState}}(std::unique\_ptr<IState>\&\&\ state);}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1StateManager_a48940184a09dce24ee08748a41b7e741}{popState}}();}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1StateManager_a275ac75c18d9b5cd61cc459663f6be27}{replaceState}}(std::unique\_ptr<IState>\&\&\ state);}
-\DoxyCodeLine{00053\ \ \ \ \ \};}
-\DoxyCodeLine{00054\ \}}
-\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}(std::unique\_ptr<IState>\ \&\&initialState,\ std::unique\_ptr<IStateFactory>\ \&\&stateFactory);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1StateManager_a2817f9241cfd076972064900da72283c}{processInput}}(sf::Event\ \&event,\ sf::RenderWindow\ \&window);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1StateManager_ac58e08abe78bb06670171aa4866df68b}{draw}}(sf::RenderWindow\ \&window);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1StateManager_ad8e76e0e75928ceb4de827953dc5458d}{update}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1StateManager_a2b8a71923469fe8908528592683c9be3}{pushState}}(std::unique\_ptr<IState>\ \&\&state);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1StateManager_a48940184a09dce24ee08748a41b7e741}{popState}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1StateManager_a275ac75c18d9b5cd61cc459663f6be27}{replaceState}}(std::unique\_ptr<IState>\ \&\&state);}
+\DoxyCodeLine{00054\ \ \ \ \ \};}
+\DoxyCodeLine{00055\ \}}
 \DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_STATEMANAGER\_H}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_STATEMANAGER\_H}}
 
 \end{DoxyCode}

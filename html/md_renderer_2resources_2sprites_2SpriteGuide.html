@@ -78,11 +78,12 @@ spritemap.png</h1>
 <p>The spritemap.png file contains all the sprites used in the game. There is no rule in the spacing of the sprites in the spritemap, since selection of the actual sprite box is done via coordinates in the config.json file.</p>
 <h1><a class="anchor" id="autotoc_md5"></a>
 config.json</h1>
-<p>In the <b>sprites</b> section of the config.json file, each in-game is assigned to a rectangle inside the spritemap.png file. Each sprite entry has the following format: </p><div class="fragment"><div class="line">&quot;sprite_name&quot;: {</div>
-<div class="line">    &quot;x&quot;: &lt;x-coordinate&gt;,</div>
-<div class="line">    &quot;y&quot;: &lt;y-coordinate&gt;,</div>
-<div class="line">    &quot;width&quot;: &lt;width&gt;,</div>
-<div class="line">    &quot;height&quot;: &lt;height&gt;</div>
+<p>In the <b>sprites</b> section of the config.json file, each in-game is assigned to a rectangle inside the spritemap.png file. Each sprite entry has the following format:</p>
+<div class="fragment"><div class="line">&quot;sprite_name&quot;: {</div>
+<div class="line">&quot;x&quot;: &lt;x-coordinate&gt;,</div>
+<div class="line">&quot;y&quot;: &lt;y-coordinate&gt;,</div>
+<div class="line">&quot;width&quot;: &lt;width&gt;,</div>
+<div class="line">&quot;height&quot;: &lt;height&gt;</div>
 <div class="line">}</div>
 </div><!-- fragment --><p>All parameters are in pixels, and the (0,0) coordinate is the top-left corner of the spritemap.png file.</p>
 <p>Using the texture system of the games renderer, the sprite can be linked to an in-game object and rendered. </p>

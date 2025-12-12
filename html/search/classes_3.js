@@ -6,6 +6,5 @@ var searchData=
   ['defaultlogicconfig_3',['DefaultLogicConfig',['../classrenderer_1_1DefaultLogicConfig.html',1,'renderer']]],
   ['defaultstatefactory_4',['DefaultStateFactory',['../classrenderer_1_1DefaultStateFactory.html',1,'renderer']]],
   ['defaulttextureparser_5',['DefaultTextureParser',['../classrenderer_1_1DefaultTextureParser.html',1,'renderer']]],
-  ['delegatingstate_6',['DelegatingState',['../classrenderer_1_1DelegatingState.html',1,'renderer']]],
-  ['drawobject_7',['DrawObject',['../classrenderer_1_1DrawObject.html',1,'renderer']]]
+  ['drawobject_6',['DrawObject',['../classrenderer_1_1DrawObject.html',1,'renderer']]]
 ];

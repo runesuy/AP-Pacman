@@ -9,22 +9,22 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_MENUSTATE\_H}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_MENUSTATE\_H}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{DelegatingState_8h}{core/states/DelegatingState.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IState_8h}{core/states/IState.h}}"{}}}
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Button_8h}{core/drawable/ui/Button.h}}"{}}}
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <memory>}}
 \DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{TXTHighScoreParser_8h}{core/parsers/TXTHighScoreParser.h}}"{}}}
 \DoxyCodeLine{00012\ }
 \DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1MenuState}{MenuState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IState}{IState}}\ \{}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Button}{Button}}\ playButton;}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_fontLoaded\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ sf::Font\ \_font;}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label}{Label}}\ highScoreLabel;}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::unique\_ptr<logic::IHighScoreParser>\ highScoreParser\ =\ std::make\_unique<logic::TXTHighScoreParser>();}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ onPlayButtonClick(\mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}\&\ stateManager)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1MenuState}{MenuState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IState}{IState}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Button}{Button}}\ playButton;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_fontLoaded\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ sf::Font\ \_font;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label}{Label}}\ highScoreLabel;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::unique\_ptr<logic::IHighScoreParser>\ highScoreParser\ =\ std::make\_unique<logic::TXTHighScoreParser>();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ onPlayButtonClick(\mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}\ \&stateManager)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ }
 \DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1MenuState_aa7ffc60eaaa5b6123d9e40e22b5b27bc}{MenuState}}();}
 \DoxyCodeLine{00032\ }
@@ -39,9 +39,8 @@
 \DoxyCodeLine{00041\ }
 \DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1MenuState_a2c2ae896d9ed1af299ff0ecffaab624f}{onManagerReActive}}()\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00043\ \ \ \ \ \};}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \}\ \textcolor{comment}{//\ renderer}}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_MENUSTATE\_H}}
+\DoxyCodeLine{00044\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_MENUSTATE\_H}}
 
 \end{DoxyCode}

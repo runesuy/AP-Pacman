@@ -10,38 +10,33 @@
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_RECTANGLEMODULE\_H}}
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IEntityViewModule_8h}{core/entity/modular/IEntityViewModule.h}}"{}}}
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Size_8h}{core/world/space/Size.h}}"{}}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IObserver_8h}{core/observer/IObserver.h}}"{}}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ModularEntityView_8h}{core/entity/modular/ModularEntityView.h}}"{}}}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1RectangleModule}{RectangleModule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IEntityViewModule}{IEntityViewModule}}\ \{}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1RectangleModule_ae0fdc73778a6aa532b4c4cfe25c3bff6}{RectangleModule}}()=\textcolor{keywordflow}{default};}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\ \mbox{\hyperlink{classrenderer_1_1RectangleModule_a5b1a0910e64ea966a58c4b5f718e93d9}{size}}=\{0.1,0.1\};}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ModularEntityView_8h}{core/entity/modular/ModularEntityView.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1RectangleModule}{RectangleModule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IEntityViewModule}{IEntityViewModule}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\ size\ =\ \{0.1,\ 0.1\};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ sf::Color\ fillColor\ =\ sf::Color::Red;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1RectangleModule_ae0fdc73778a6aa532b4c4cfe25c3bff6}{RectangleModule}}()\ =\ \textcolor{keywordflow}{default};}
 \DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ sf::Color\ \mbox{\hyperlink{classrenderer_1_1RectangleModule_a377e832916d74059ccf0a9e7cd38f89b}{fillColor}}\ =\ sf::Color::Red;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Shape>\ >\ \mbox{\hyperlink{classrenderer_1_1RectangleModule_aabaedadc1409354b6b06b7115045791c}{getSFShapes}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{const\ override};}
 \DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Shape>>\ \mbox{\hyperlink{classrenderer_1_1RectangleModule_aabaedadc1409354b6b06b7115045791c}{getSFShapes}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<std::shared\_ptr<sf::Sprite>>\ \mbox{\hyperlink{classrenderer_1_1RectangleModule_a28c00a07bbebcd7e1517e467948c1b2e}{getSFSprites}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<std::unique\_ptr<sf::Text>>\ \mbox{\hyperlink{classrenderer_1_1RectangleModule_aa744d31a217b78ed0fdd7d977907c14c}{getSFTexts}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\ \&\mbox{\hyperlink{classrenderer_1_1RectangleModule_a753c3c095b45a77d2fc86e21e490988e}{getSize}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1RectangleModule_a5d1548a000d66a8f3a4c71e84972b37b}{setSize}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\ \&\mbox{\hyperlink{classrenderer_1_1RectangleModule_a5b1a0910e64ea966a58c4b5f718e93d9}{size}});}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1RectangleModule_a0d238b3e13c5c81f7590b136ad2eb0c0}{update}}(\mbox{\hyperlink{classrenderer_1_1ModularEntityView}{ModularEntityView}}\ \&subject)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1RectangleModule_abefad40a33680f92b9bd759cc62e3833}{setFillColor}}(\textcolor{keyword}{const}\ sf::Color\ \&color);}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \ \ \ \ \};}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \}\ \textcolor{comment}{//\ renderer}}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_RECTANGLEMODULE\_H}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<std::shared\_ptr<sf::Sprite>\ >\ \mbox{\hyperlink{classrenderer_1_1RectangleModule_a28c00a07bbebcd7e1517e467948c1b2e}{getSFSprites}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<std::unique\_ptr<sf::Text>\ >\ \mbox{\hyperlink{classrenderer_1_1RectangleModule_aa744d31a217b78ed0fdd7d977907c14c}{getSFTexts}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\ \&\mbox{\hyperlink{classrenderer_1_1RectangleModule_a753c3c095b45a77d2fc86e21e490988e}{getSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1RectangleModule_a5d1548a000d66a8f3a4c71e84972b37b}{setSize}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\ \&size);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1RectangleModule_a0d238b3e13c5c81f7590b136ad2eb0c0}{update}}(\mbox{\hyperlink{classrenderer_1_1ModularEntityView}{ModularEntityView}}\ \&subject)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1RectangleModule_abefad40a33680f92b9bd759cc62e3833}{setFillColor}}(\textcolor{keyword}{const}\ sf::Color\ \&color);}
+\DoxyCodeLine{00033\ \ \ \ \ \};}
+\DoxyCodeLine{00034\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_RECTANGLEMODULE\_H}}
 
 \end{DoxyCode}

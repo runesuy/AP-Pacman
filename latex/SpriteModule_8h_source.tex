@@ -13,28 +13,27 @@
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Size_8h}{core/world/space/Size.h}}"{}}}
 \DoxyCodeLine{00010\ }
 \DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1SpriteModule}{SpriteModule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IEntityViewModule}{IEntityViewModule}}\ \{}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\ size=\{0.1,0.1\};}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ sf::Sprite\ sprite;}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1SpriteModule_af547ca9c4aac8d754e3bbf1d62df0134}{SpriteModule}}()=\textcolor{keywordflow}{default};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1SpriteModule}{SpriteModule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IEntityViewModule}{IEntityViewModule}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\ size\ =\ \{0.1,\ 0.1\};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ sf::Sprite\ sprite;}
 \DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1SpriteModule_a4b2b1e2006dedd58529321df0268f506}{update}}(\mbox{\hyperlink{classrenderer_1_1ModularEntityView}{ModularEntityView}}\ \&subject)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Shape>>\ \mbox{\hyperlink{classrenderer_1_1SpriteModule_a0ae8c58d621db47069044c01fadfffcc}{getSFShapes}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<sf::Sprite>>\ \mbox{\hyperlink{classrenderer_1_1SpriteModule_a276af3683c0273b8733f76e8a5a0b276}{getSFSprites}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1SpriteModule_af547ca9c4aac8d754e3bbf1d62df0134}{SpriteModule}}()\ =\ \textcolor{keywordflow}{default};}
 \DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Text>>\ \mbox{\hyperlink{classrenderer_1_1SpriteModule_a92b37cfd12b63c79bfa6246c84f0a550}{getSFTexts}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1SpriteModule_a4b2b1e2006dedd58529321df0268f506}{update}}(\mbox{\hyperlink{classrenderer_1_1ModularEntityView}{ModularEntityView}}\ \&subject)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1SpriteModule_a84bf66c7407b97e1cdc00693d081ee40}{setTexture}}(\textcolor{keyword}{const}\ sf::Texture\ \&texture);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Shape>\ >\ \mbox{\hyperlink{classrenderer_1_1SpriteModule_a0ae8c58d621db47069044c01fadfffcc}{getSFShapes}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{const\ override};}
 \DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1SpriteModule_a448447002f6eafccde92df5046aea65d}{setSize}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\ \&size);}
-\DoxyCodeLine{00030\ \ \ \ \ \};}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \}\ \textcolor{comment}{//\ renderer}}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_SPRITEMODULE\_H}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<sf::Sprite>\ >\ \mbox{\hyperlink{classrenderer_1_1SpriteModule_a276af3683c0273b8733f76e8a5a0b276}{getSFSprites}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Text>\ >\ \mbox{\hyperlink{classrenderer_1_1SpriteModule_a92b37cfd12b63c79bfa6246c84f0a550}{getSFTexts}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1SpriteModule_a84bf66c7407b97e1cdc00693d081ee40}{setTexture}}(\textcolor{keyword}{const}\ sf::Texture\ \&texture);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1SpriteModule_a448447002f6eafccde92df5046aea65d}{setSize}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Size}{logic::Size}}\ \&size);}
+\DoxyCodeLine{00040\ \ \ \ \ \};}
+\DoxyCodeLine{00041\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_SPRITEMODULE\_H}}
 
 \end{DoxyCode}

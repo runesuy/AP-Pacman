@@ -9,21 +9,21 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_LEVELSTATE\_H}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_LEVELSTATE\_H}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{DelegatingState_8h}{core/states/DelegatingState.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IState_8h}{core/states/IState.h}}"{}}}
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{World_8h}{core/world/World.h}}"{}}}
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{WorldView_8h}{core/world/WorldView.h}}"{}}}
 \DoxyCodeLine{00011\ }
 \DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1LevelState}{LevelState}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IState}{IState}}\ \{}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::unique\_ptr<logic::World>\ \_world;}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::shared\_ptr<WorldView>\ \_worldView;}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ LEVEL\_CLEAR\_REWARD\ =\ 1000;}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1LevelState_ab7e1c92c42e5534f1be4d146055490d6}{LevelState}}();}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classrenderer_1_1LevelState_ab7e1c92c42e5534f1be4d146055490d6}{LevelState}}(\textcolor{keyword}{const}\ std::shared\_ptr<logic::Score>\&\ score);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1LevelState}{LevelState}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1IState}{IState}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::unique\_ptr<logic::World>\ \_world;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::shared\_ptr<WorldView>\ \_worldView;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ LEVEL\_CLEAR\_REWARD\ =\ 1000;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1LevelState_ab7e1c92c42e5534f1be4d146055490d6}{LevelState}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classrenderer_1_1LevelState_ab7e1c92c42e5534f1be4d146055490d6}{LevelState}}(\textcolor{keyword}{const}\ std::shared\_ptr<logic::Score>\ \&score);}
 \DoxyCodeLine{00027\ }
 \DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::unique\_ptr<logic::World>\ \&\mbox{\hyperlink{classrenderer_1_1LevelState_a985a6130dc1cd71665ef27ff2ecc15c9}{getWorld}}();}
 \DoxyCodeLine{00029\ }
@@ -34,11 +34,9 @@
 \DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1LevelState_ad6982856b712e69cea693e20fca8ebcc}{processInput}}(sf::Event\ \&event,\ \mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}\ \&stateManager,\ \textcolor{keyword}{const}\ sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00035\ }
 \DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1LevelState_a48d26de224efcea400efea0abba3b057}{draw}}(sf::RenderWindow\ \&window,\ \mbox{\hyperlink{classrenderer_1_1StateManager}{StateManager}}\ \&stateManager)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \ \ \};}
+\DoxyCodeLine{00037\ \ \ \ \ \};}
+\DoxyCodeLine{00038\ \}\ \textcolor{comment}{//\ renderer}}
 \DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \}\ \textcolor{comment}{//\ renderer}}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_LEVELSTATE\_H}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_LEVELSTATE\_H}}
 
 \end{DoxyCode}

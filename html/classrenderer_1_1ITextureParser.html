@@ -94,11 +94,39 @@ Inheritance diagram for renderer::ITextureParser:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a4a9b08bdbdf35f9eefa182b52ba9d659" id="r_a4a9b08bdbdf35f9eefa182b52ba9d659"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1ITextureParser.html#a4a9b08bdbdf35f9eefa182b52ba9d659">~ITextureParser</a> ()=default</td></tr>
+<tr class="separator:a4a9b08bdbdf35f9eefa182b52ba9d659"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd0207832ea88fd1cae6e130003f67a9" id="r_acd0207832ea88fd1cae6e130003f67a9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1ITextureParser.html#acd0207832ea88fd1cae6e130003f67a9">loadTextures</a> (const std::string &amp;path, const std::map&lt; std::string, sf::IntRect &gt; &amp;textureRects)=0</td></tr>
 <tr class="separator:acd0207832ea88fd1cae6e130003f67a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af64019e0be24ea4a3e02479221a9468b" id="r_af64019e0be24ea4a3e02479221a9468b"><td class="memItemLeft" align="right" valign="top">virtual const sf::Texture &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrenderer_1_1ITextureParser.html#af64019e0be24ea4a3e02479221a9468b">getTexture</a> (const std::string &amp;name) const =0</td></tr>
 <tr class="separator:af64019e0be24ea4a3e02479221a9468b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a4a9b08bdbdf35f9eefa182b52ba9d659" name="a4a9b08bdbdf35f9eefa182b52ba9d659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a9b08bdbdf35f9eefa182b52ba9d659">&#9670;&#160;</a></span>~ITextureParser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual renderer::ITextureParser::~ITextureParser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="af64019e0be24ea4a3e02479221a9468b" name="af64019e0be24ea4a3e02479221a9468b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af64019e0be24ea4a3e02479221a9468b">&#9670;&#160;</a></span>getTexture()</h2>
@@ -123,6 +151,13 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Get the texture associated with the given name. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p>Implemented in <a class="el" href="classrenderer_1_1DefaultTextureParser.html#a13c20f01390113f39df3ab0a56d451c1">renderer::DefaultTextureParser</a>.</p>
 
@@ -161,6 +196,13 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Parse the textures from the given path using the provided texture rectangles and store them internally. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td></td></tr>
+    <tr><td class="paramname">textureRects</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="classrenderer_1_1DefaultTextureParser.html#acbc29caeb10668c094fcd593ed163bf7">renderer::DefaultTextureParser</a>.</p>
 

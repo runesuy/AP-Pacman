@@ -21,7 +21,7 @@ Collaboration diagram for renderer\+::Circle\+Module\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=316pt]{classrenderer_1_1CircleModule__coll__graph}
+\includegraphics[width=216pt]{classrenderer_1_1CircleModule__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
@@ -37,7 +37,7 @@ std\+::vector$<$ std\+::unique\+\_\+ptr$<$ sf\+::\+Text $>$ $>$ \mbox{\hyperlink
 \item 
 const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \& \mbox{\hyperlink{classrenderer_1_1CircleModule_aaff7c7f41305c4ab9991da7c337dc3be}{get\+Size}} () const
 \item 
-void \mbox{\hyperlink{classrenderer_1_1CircleModule_a2872e4af2fc04ec99eedb79887c5eb6c}{set\+Size}} (const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&\mbox{\hyperlink{classrenderer_1_1CircleModule_a0078c75a8765bf667e19c05d94dc5978}{size}})
+void \mbox{\hyperlink{classrenderer_1_1CircleModule_a2872e4af2fc04ec99eedb79887c5eb6c}{set\+Size}} (const \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \&size)
 \item 
 void \mbox{\hyperlink{classrenderer_1_1CircleModule_a396c790a7748878958d84380677cabc0}{update}} (\mbox{\hyperlink{classrenderer_1_1ModularEntityView}{Modular\+Entity\+View}} \&subject) override
 \item 
@@ -54,13 +54,6 @@ virtual void \mbox{\hyperlink{classlogic_1_1IObserver_aca5bbaf530bc7594de4e8de3a
 \item 
 virtual void \mbox{\hyperlink{classlogic_1_1IObserver_acdde4b1d124989fc652801832b036eea}{on\+Observable\+Destroyed}} (Modular\+Entity\+View \&subject)
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} \mbox{\hyperlink{classrenderer_1_1CircleModule_a0078c75a8765bf667e19c05d94dc5978}{size}} =\{0.\+1,0.\+1\}
-\item 
-sf\+::\+Color \mbox{\hyperlink{classrenderer_1_1CircleModule_a84010a35d6c56f6ce64f29fe02d02198}{fill\+Color}} = sf\+::\+Color\+::\+Red
-\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -70,7 +63,7 @@ sf\+::\+Color \mbox{\hyperlink{classrenderer_1_1CircleModule_a84010a35d6c56f6ce6
 \doxysubsubsection{\texorpdfstring{CircleModule()}{CircleModule()}}
 {\footnotesize\ttfamily renderer\+::\+Circle\+Module\+::\+Circle\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
-
+Default constructor. fill\+Color is set to Red. size is set to (0.\+1, 0.\+1). 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classrenderer_1_1CircleModule_ae78361d480d1682c5b2b3aa48c6f6341}\label{classrenderer_1_1CircleModule_ae78361d480d1682c5b2b3aa48c6f6341} 
@@ -123,6 +116,11 @@ Implements \mbox{\hyperlink{classrenderer_1_1IEntityViewModule_a0f703a56940857e9
 \doxysubsubsection{\texorpdfstring{setFillColor()}{setFillColor()}}
 {\footnotesize\ttfamily void renderer\+::\+Circle\+Module\+::set\+Fill\+Color (\begin{DoxyParamCaption}\item[{const sf\+::\+Color \&}]{color }\end{DoxyParamCaption})}
 
+Set the fill color of the circle. 
+\begin{DoxyParams}{Parameters}
+{\em color} & \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classrenderer_1_1CircleModule_a2872e4af2fc04ec99eedb79887c5eb6c}\label{classrenderer_1_1CircleModule_a2872e4af2fc04ec99eedb79887c5eb6c} 
 \index{renderer::CircleModule@{renderer::CircleModule}!setSize@{setSize}}
 \index{setSize@{setSize}!renderer::CircleModule@{renderer::CircleModule}}
@@ -143,21 +141,6 @@ Here is the call graph for this function\+:
 \includegraphics[width=340pt]{classrenderer_1_1CircleModule_a396c790a7748878958d84380677cabc0_cgraph}
 \end{center}
 \end{figure}
-
-
-\doxysubsection{Member Data Documentation}
-\Hypertarget{classrenderer_1_1CircleModule_a84010a35d6c56f6ce64f29fe02d02198}\label{classrenderer_1_1CircleModule_a84010a35d6c56f6ce64f29fe02d02198} 
-\index{renderer::CircleModule@{renderer::CircleModule}!fillColor@{fillColor}}
-\index{fillColor@{fillColor}!renderer::CircleModule@{renderer::CircleModule}}
-\doxysubsubsection{\texorpdfstring{fillColor}{fillColor}}
-{\footnotesize\ttfamily sf\+::\+Color renderer\+::\+Circle\+Module\+::fill\+Color = sf\+::\+Color\+::\+Red}
-
-\Hypertarget{classrenderer_1_1CircleModule_a0078c75a8765bf667e19c05d94dc5978}\label{classrenderer_1_1CircleModule_a0078c75a8765bf667e19c05d94dc5978} 
-\index{renderer::CircleModule@{renderer::CircleModule}!size@{size}}
-\index{size@{size}!renderer::CircleModule@{renderer::CircleModule}}
-\doxysubsubsection{\texorpdfstring{size}{size}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classlogic_1_1Size}{logic\+::\+Size}} renderer\+::\+Circle\+Module\+::size =\{0.\+1,0.\+1\}}
-
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

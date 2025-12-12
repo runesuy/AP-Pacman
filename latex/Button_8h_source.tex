@@ -14,37 +14,40 @@
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
 \DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <functional>}}
 \DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Size_8h}{core/world/space/Size.h}}"{}}}
 \DoxyCodeLine{00014\ }
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1Button}{Button}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1DrawObject}{DrawObject}}\{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacerenderer}{renderer}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrenderer_1_1Button}{Button}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classrenderer_1_1DrawObject}{DrawObject}}\ \{}
 \DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Label}{Label}}\ label;}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{logic::Size::CoordinateType}}\ width=0.3;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{logic::Size::CoordinateType}}\ width\ =\ 0.3;}
 \DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::function<void()>\ onClick;}
 \DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ sf::RectangleShape\ rectangleShape;}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Button_a1c7d9256ae0a14d145ee01d3079c71d0}{Button}}();}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Button_aeea1b970da458f0c28282bec1f8cfe26}{setPosition}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{logic::Position}}\ \&position)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Shape>>\ \mbox{\hyperlink{classrenderer_1_1Button_a918eb9efe3f25e9be22ccb9eecdf50db}{getSFShapes}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<sf::Sprite>>\ \mbox{\hyperlink{classrenderer_1_1Button_a596db4cb3bdd79adc7e63af455df1e61}{getSFSprites}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Text>>\ \mbox{\hyperlink{classrenderer_1_1Button_add05e62ac67f5e94402a3fd13643c73c}{getSFTexts}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Button_a2d9ecbba534c987add7bba33abaadf37}{setString}}(\textcolor{keyword}{const}\ std::string\ \&str);}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Button_a6660cad640c9c99afc39f0ebd5bedf1a}{setFont}}(\textcolor{keyword}{const}\ sf::Font\ \&font);}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Button_a6eff6988cf4a1351ce8b4d0966452a55}{setCharacterSize}}(\textcolor{keywordtype}{float}\ size);}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Button_acbad078f23caae8c1935bf51a38f36bb}{setWidth}}(\mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{logic::Size::CoordinateType}}\ width);}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Button_a2da7e7b3fb2ede6183ff27dbf5958fee}{setOnClick}}(\textcolor{keyword}{const}\ std::function<\textcolor{keywordtype}{void}()>\ \&onClick);}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Button_ad65902647a8a1c799177dbda98a9042a}{processEvent}}(\textcolor{keyword}{const}\ sf::Event\&\ event,\ \textcolor{keyword}{const}\ sf::RenderWindow\ \&window);}
-\DoxyCodeLine{00044\ \ \ \ \ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classrenderer_1_1Button_a1c7d9256ae0a14d145ee01d3079c71d0}{Button}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Button_aeea1b970da458f0c28282bec1f8cfe26}{setPosition}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{logic::Position}}\ \&position)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Shape>\ >\ \mbox{\hyperlink{classrenderer_1_1Button_a918eb9efe3f25e9be22ccb9eecdf50db}{getSFShapes}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<sf::Sprite>\ >\ \mbox{\hyperlink{classrenderer_1_1Button_a596db4cb3bdd79adc7e63af455df1e61}{getSFSprites}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<sf::Text>\ >\ \mbox{\hyperlink{classrenderer_1_1Button_add05e62ac67f5e94402a3fd13643c73c}{getSFTexts}}(sf::RenderWindow\ \&window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Button_a2d9ecbba534c987add7bba33abaadf37}{setString}}(\textcolor{keyword}{const}\ std::string\ \&str);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Button_a6660cad640c9c99afc39f0ebd5bedf1a}{setFont}}(\textcolor{keyword}{const}\ sf::Font\ \&font);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Button_a6eff6988cf4a1351ce8b4d0966452a55}{setCharacterSize}}(\textcolor{keywordtype}{float}\ size);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Button_acbad078f23caae8c1935bf51a38f36bb}{setWidth}}(\mbox{\hyperlink{classlogic_1_1ICoordinate_a3d35c6be08adc094e27f987c1be77ec1}{logic::Size::CoordinateType}}\ width);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Button_a2da7e7b3fb2ede6183ff27dbf5958fee}{setOnClick}}(\textcolor{keyword}{const}\ std::function<\textcolor{keywordtype}{void}()>\ \&onClick);}
 \DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ \}\ \textcolor{comment}{//\ renderer}}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_BUTTON\_H}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classrenderer_1_1Button_ad65902647a8a1c799177dbda98a9042a}{processEvent}}(\textcolor{keyword}{const}\ sf::Event\ \&event,\ \textcolor{keyword}{const}\ sf::RenderWindow\ \&window);}
+\DoxyCodeLine{00047\ \ \ \ \ \};}
+\DoxyCodeLine{00048\ \}\ \textcolor{comment}{//\ renderer}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_BUTTON\_H}}
 
 \end{DoxyCode}

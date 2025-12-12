@@ -94,23 +94,21 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="Observable_8h.html">core/observer/Observable.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacerenderer.html">renderer</a> {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classrenderer_1_1WallView.html">   19</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1WallView.html">WallView</a> : <span class="keyword">public</span> <a class="code hl_class" href="classrenderer_1_1ModularEntityView.html">ModularEntityView</a>, <span class="keyword">public</span> <a class="code hl_class" href="classlogic_1_1IObserver.html">logic::IObserver</a>&lt;logic::WallModel&gt; {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_function" href="classrenderer_1_1WallView.html#a006a3fcbb94c5bde7bdec1d8705ef35e">WallView</a>();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classrenderer_1_1WallView.html#a4a35f4cbbb25a1ed761ff319bf1f3d18">update</a>(<a class="code hl_class" href="classlogic_1_1WallModel.html">logic::WallModel</a> &amp;subject) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classrenderer_1_1WallView.html#a83b84324bd900063a02d11bd04e99056">setSize</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlogic_1_1Size.html">logic::Size</a> &amp;size) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classrenderer_1_1WallView.html#a5c742dafd06e3b70a69e4bb42b90ab5e">isMarkedForRemoval</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    };</div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classrenderer_1_1WallView.html">   18</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classrenderer_1_1WallView.html">WallView</a> : <span class="keyword">public</span> <a class="code hl_class" href="classrenderer_1_1ModularEntityView.html">ModularEntityView</a>, <span class="keyword">public</span> <a class="code hl_class" href="classlogic_1_1IObserver.html">logic::IObserver</a>&lt;logic::WallModel&gt; {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <a class="code hl_function" href="classrenderer_1_1WallView.html#a006a3fcbb94c5bde7bdec1d8705ef35e">WallView</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classrenderer_1_1WallView.html#a4a35f4cbbb25a1ed761ff319bf1f3d18">update</a>(<a class="code hl_class" href="classlogic_1_1WallModel.html">logic::WallModel</a> &amp;subject) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classrenderer_1_1WallView.html#a83b84324bd900063a02d11bd04e99056">setSize</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlogic_1_1Size.html">logic::Size</a> &amp;size) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classrenderer_1_1WallView.html#a5c742dafd06e3b70a69e4bb42b90ab5e">isMarkedForRemoval</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    };</div>
 </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>} <span class="comment">// renderer</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>} <span class="comment">// renderer</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_WALLVIEW_H</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_WALLVIEW_H</span></div>
 <div class="ttc" id="aModularEntityView_8h_html"><div class="ttname"><a href="ModularEntityView_8h.html">ModularEntityView.h</a></div></div>
 <div class="ttc" id="aObservable_8h_html"><div class="ttname"><a href="Observable_8h.html">Observable.h</a></div></div>
 <div class="ttc" id="aRectangleModule_8h_html"><div class="ttname"><a href="RectangleModule_8h.html">RectangleModule.h</a></div></div>
@@ -119,12 +117,12 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclasslogic_1_1Size_html"><div class="ttname"><a href="classlogic_1_1Size.html">logic::Size</a></div><div class="ttdef"><b>Definition</b> Size.h:15</div></div>
 <div class="ttc" id="aclasslogic_1_1WallModel_html"><div class="ttname"><a href="classlogic_1_1WallModel.html">logic::WallModel</a></div><div class="ttdef"><b>Definition</b> WallModel.h:18</div></div>
 <div class="ttc" id="aclassrenderer_1_1ModularEntityView_html"><div class="ttname"><a href="classrenderer_1_1ModularEntityView.html">renderer::ModularEntityView</a></div><div class="ttdef"><b>Definition</b> ModularEntityView.h:18</div></div>
-<div class="ttc" id="aclassrenderer_1_1WallView_html"><div class="ttname"><a href="classrenderer_1_1WallView.html">renderer::WallView</a></div><div class="ttdef"><b>Definition</b> WallView.h:19</div></div>
+<div class="ttc" id="aclassrenderer_1_1WallView_html"><div class="ttname"><a href="classrenderer_1_1WallView.html">renderer::WallView</a></div><div class="ttdef"><b>Definition</b> WallView.h:18</div></div>
 <div class="ttc" id="aclassrenderer_1_1WallView_html_a006a3fcbb94c5bde7bdec1d8705ef35e"><div class="ttname"><a href="classrenderer_1_1WallView.html#a006a3fcbb94c5bde7bdec1d8705ef35e">renderer::WallView::WallView</a></div><div class="ttdeci">WallView()</div><div class="ttdef"><b>Definition</b> WallView.cpp:18</div></div>
 <div class="ttc" id="aclassrenderer_1_1WallView_html_a4a35f4cbbb25a1ed761ff319bf1f3d18"><div class="ttname"><a href="classrenderer_1_1WallView.html#a4a35f4cbbb25a1ed761ff319bf1f3d18">renderer::WallView::update</a></div><div class="ttdeci">void update(logic::WallModel &amp;subject) override</div><div class="ttdef"><b>Definition</b> WallView.cpp:13</div></div>
 <div class="ttc" id="aclassrenderer_1_1WallView_html_a5c742dafd06e3b70a69e4bb42b90ab5e"><div class="ttname"><a href="classrenderer_1_1WallView.html#a5c742dafd06e3b70a69e4bb42b90ab5e">renderer::WallView::isMarkedForRemoval</a></div><div class="ttdeci">bool isMarkedForRemoval() override</div><div class="ttdef"><b>Definition</b> WallView.cpp:31</div></div>
 <div class="ttc" id="aclassrenderer_1_1WallView_html_a83b84324bd900063a02d11bd04e99056"><div class="ttname"><a href="classrenderer_1_1WallView.html#a83b84324bd900063a02d11bd04e99056">renderer::WallView::setSize</a></div><div class="ttdeci">void setSize(const logic::Size &amp;size) override</div><div class="ttdef"><b>Definition</b> WallView.cpp:26</div></div>
-<div class="ttc" id="anamespacerenderer_html"><div class="ttname"><a href="namespacerenderer.html">renderer</a></div><div class="ttdef"><b>Definition</b> IAppConfig.h:12</div></div>
+<div class="ttc" id="anamespacerenderer_html"><div class="ttname"><a href="namespacerenderer.html">renderer</a></div><div class="ttdef"><b>Definition</b> IAppConfig.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

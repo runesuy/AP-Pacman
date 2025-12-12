@@ -54,6 +54,9 @@ virtual void \mbox{\hyperlink{classlogic_1_1IObserver_acdde4b1d124989fc652801832
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Entity module for rendering a non-\/animated sprite. 
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classrenderer_1_1SpriteModule_af547ca9c4aac8d754e3bbf1d62df0134}\label{classrenderer_1_1SpriteModule_af547ca9c4aac8d754e3bbf1d62df0134} 
 \index{renderer::SpriteModule@{renderer::SpriteModule}!SpriteModule@{SpriteModule}}
@@ -61,7 +64,7 @@ virtual void \mbox{\hyperlink{classlogic_1_1IObserver_acdde4b1d124989fc652801832
 \doxysubsubsection{\texorpdfstring{SpriteModule()}{SpriteModule()}}
 {\footnotesize\ttfamily renderer\+::\+Sprite\+Module\+::\+Sprite\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
-
+Size defaults to (0.\+1, 0.\+1) 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classrenderer_1_1SpriteModule_a0ae8c58d621db47069044c01fadfffcc}\label{classrenderer_1_1SpriteModule_a0ae8c58d621db47069044c01fadfffcc} 
@@ -114,6 +117,11 @@ Implements \mbox{\hyperlink{classrenderer_1_1IEntityViewModule_a0f703a56940857e9
 \doxysubsubsection{\texorpdfstring{setTexture()}{setTexture()}}
 {\footnotesize\ttfamily void renderer\+::\+Sprite\+Module\+::set\+Texture (\begin{DoxyParamCaption}\item[{const sf\+::\+Texture \&}]{texture }\end{DoxyParamCaption})}
 
+Set the texture used by this sprite module. 
+\begin{DoxyParams}{Parameters}
+{\em texture} & Texture name available using the provided texture parser. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classrenderer_1_1SpriteModule_a4b2b1e2006dedd58529321df0268f506}\label{classrenderer_1_1SpriteModule_a4b2b1e2006dedd58529321df0268f506} 
 \index{renderer::SpriteModule@{renderer::SpriteModule}!update@{update}}
 \index{update@{update}!renderer::SpriteModule@{renderer::SpriteModule}}
