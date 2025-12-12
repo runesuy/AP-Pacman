@@ -20,7 +20,7 @@
 \DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1ScoreCounter}{ScoreCounter}}\ scoreCounter;}
 \DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1LifeCounter}{LifeCounter}}\ lifeCounter;}
 \DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ difficultyMultiplier=1;}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ DIFFICULTY\_INCREASE\ =\ 0.1;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ DIFFICULTY\_INCREASE\ =\ 0.1;}
 \DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1Score_a24a5466920e34282c89abee1c32373dc}{onTick}}();}
 \DoxyCodeLine{00029\ }
@@ -36,7 +36,7 @@
 \DoxyCodeLine{00056\ }
 \DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlogic_1_1ScoreCounter}{ScoreCounter}}\ \&\mbox{\hyperlink{classlogic_1_1Score_a1d5019742c20e530abdc36f01faf9a7a}{getScoreCounter}}();}
 \DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classlogic_1_1Score_abf8076430c886430006be3bbe53e2958}{getDifficultyMultiplier}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classlogic_1_1Score_abf8076430c886430006be3bbe53e2958}{getDifficultyMultiplier}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00063\ }
 \DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1Score_af16cc96543c5a227d4ea8132e26752bb}{increaseDifficultyMultiplier}}();}
 \DoxyCodeLine{00065\ \ \ \ \ \};}
