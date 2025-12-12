@@ -23,3 +23,5 @@ Here is a list of common characters used in the map files:
 
 Note: the map must be rectangular, meaning all rows must have the same length.
 
+Note: Pacman may not be able to leave the map.
+
