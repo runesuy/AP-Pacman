@@ -35,24 +35,25 @@ namespace logic {
     void PlayerController::onCollision(PlayerModel &entity, const SizedWorldObject &other, World &world) {
 
         switch (other.getCollisionType()) {
-            case (CollisionType::COIN): {
-                entity.updateObservers(static_cast<int>(ObserverEvent::PLAYER_COIN_COLLECTED));
+            case (COIN): {
+                entity.updateObservers(PLAYER_COIN_COLLECTED);
                 break;
             }
-            case(CollisionType::FRUIT): {
+            case(FRUIT): {
+                entity.updateObservers(PLAYER_FRUIT_COLLECTED);
                 world.sendWorldEvent(WorldEvent::FRUIT_EATEN_BY_PLAYER);
                 break;
             }
-            case(CollisionType::GHOST): {
+            case(GHOST): {
                 const auto& ghost = dynamic_cast<const GhostModel&>(other);
                 if (ghost.getMode() == GhostModel::CHASE) {
-                    entity.updateObservers(ObserverEvent::PLAYER_KILLED);
+                    entity.updateObservers(PLAYER_KILLED);
                     world.sendWorldEvent(PLAYER_KILLED_W);
                     entity.setPosition(entity.getSpawnPosition());
                     entity.setDirection(NONE);
                 }
                 if (ghost.getMode() == GhostModel::FRIGHTENED) {
-                    entity.updateObservers(ObserverEvent::PLAYER_GHOST_KILLED);
+                    entity.updateObservers(PLAYER_GHOST_KILLED);
                 }
                 break;
             }

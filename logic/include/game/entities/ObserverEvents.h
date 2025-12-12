@@ -9,7 +9,8 @@ namespace logic {
     enum ObserverEvent {
         PLAYER_COIN_COLLECTED,
         PLAYER_KILLED,
-        PLAYER_GHOST_KILLED
+        PLAYER_GHOST_KILLED,
+        PLAYER_FRUIT_COLLECTED,
     };
 }
 

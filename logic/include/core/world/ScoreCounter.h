@@ -22,9 +22,10 @@ namespace logic {
         using HighScoresList = std::vector<int>;
         HighScoresList highScores = {-1, -1, -1, -1, -1};
 
-        inline static const int COIN_COLLECT_REWARD = 10;
-        inline static const int GHOST_KILL_REWARD = 200;
-        inline static const int SCORE_DECAY_RATE = 1; // per second
+        static constexpr int COIN_COLLECT_REWARD = 10;
+        static constexpr int FRUIT_COLLECT_REWARD = 100;
+        static constexpr int GHOST_KILL_REWARD = 200;
+        static constexpr int SCORE_DECAY_RATE = 1; // per second
 
         const std::unique_ptr<IHighScoreParser> highScoreParser = std::make_unique<TXTHighScoreParser>();
         inline static const std::string highScoreFilePath = "resources/highscores.txt";

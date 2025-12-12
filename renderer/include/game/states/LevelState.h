@@ -19,6 +19,8 @@ namespace renderer {
         std::unique_ptr<logic::World> _world;
         std::shared_ptr<WorldView> _worldView;
 
+        static constexpr int LEVEL_CLEAR_REWARD = 1000;
+
     public:
         LevelState();
         explicit LevelState(const std::shared_ptr<logic::Score>& score);
