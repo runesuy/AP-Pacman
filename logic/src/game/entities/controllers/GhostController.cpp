@@ -63,10 +63,10 @@ namespace logic {
         switch (event) {
             default: {
             }
-            case (WorldEvent::FRUIT_EATEN_BY_PLAYER): {
+            case (FRUIT_EATEN_BY_PLAYER): {
                 if (entity.getMode() == GhostModel::CHASE)
                     entity.setMode(GhostModel::FRIGHTENED);
-                    justChangedToFrightened = true;
+                justChangedToFrightened = true;
                 break;
             }
             case (WorldEvent::PLAYER_KILLED_W): {
