@@ -15,7 +15,7 @@ namespace renderer {
      * State representing the main gameplay level.
      * Loads a map on the screen and lets player play the game.
      */
-    class LevelState : public IState {
+    class LevelState final : public IState {
         std::unique_ptr<logic::World> _world;
         std::shared_ptr<WorldView> _worldView;
 
