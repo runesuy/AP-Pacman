@@ -19,9 +19,9 @@ Inheritance diagram for logic\+::INavigation\+Agent\+:
 \item 
 virtual \mbox{\hyperlink{classlogic_1_1INavigationAgent_a99975ec9e8447d2fc9651dc3b52803b6}{\texorpdfstring{$\sim$}{\string~}\+INavigation\+Agent}} ()=default
 \item 
-virtual \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} \mbox{\hyperlink{classlogic_1_1INavigationAgent_ae647e21c79e19f2d2bcdf083dc52b955}{get\+Navigation\+Direction}} (const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&current, const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&target, const \mbox{\hyperlink{classlogic_1_1World}{World}} \&world, std\+::set$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} $>$ exclude\+If\+Other\+Options=\{\}) const =0
+virtual \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} \mbox{\hyperlink{classlogic_1_1INavigationAgent_ad0e9cedef9dd82fb048104075c5afaa0}{get\+Navigation\+Direction}} (const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&current, const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&target, const \mbox{\hyperlink{classlogic_1_1World}{World}} \&world, std\+::set$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} $>$ exclude\+If\+Other\+Options) const =0
 \item 
-virtual \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} \mbox{\hyperlink{classlogic_1_1INavigationAgent_ac8b515e26ede33c63b4f132c4384e5cf}{get\+Navigation\+Direction\+Away}} (const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&current, const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&target, const \mbox{\hyperlink{classlogic_1_1World}{World}} \&world, std\+::set$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} $>$ exclude\+If\+Other\+Options=\{\}) const =0
+virtual \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} \mbox{\hyperlink{classlogic_1_1INavigationAgent_a8d356575773afdda52968babeccef4ce}{get\+Navigation\+Direction\+Away}} (const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&current, const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&target, const \mbox{\hyperlink{classlogic_1_1World}{World}} \&world, std\+::set$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} $>$ exclude\+If\+Other\+Options) const =0
 \end{DoxyCompactItemize}
 
 
@@ -38,11 +38,11 @@ A navigation\+Agent providing directions based on the current position, target\+
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classlogic_1_1INavigationAgent_ae647e21c79e19f2d2bcdf083dc52b955}\label{classlogic_1_1INavigationAgent_ae647e21c79e19f2d2bcdf083dc52b955} 
+\Hypertarget{classlogic_1_1INavigationAgent_ad0e9cedef9dd82fb048104075c5afaa0}\label{classlogic_1_1INavigationAgent_ad0e9cedef9dd82fb048104075c5afaa0} 
 \index{logic::INavigationAgent@{logic::INavigationAgent}!getNavigationDirection@{getNavigationDirection}}
 \index{getNavigationDirection@{getNavigationDirection}!logic::INavigationAgent@{logic::INavigationAgent}}
 \doxysubsubsection{\texorpdfstring{getNavigationDirection()}{getNavigationDirection()}}
-{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} logic\+::\+INavigation\+Agent\+::get\+Navigation\+Direction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{current,  }\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{target,  }\item[{const \mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{std\+::set$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} $>$}]{exclude\+If\+Other\+Options = {\ttfamily \{\}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} logic\+::\+INavigation\+Agent\+::get\+Navigation\+Direction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{current,  }\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{target,  }\item[{const \mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{std\+::set$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} $>$}]{exclude\+If\+Other\+Options }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 Get directions from current to target. 
 \begin{DoxyParams}{Parameters}
@@ -62,11 +62,11 @@ A direction to proceed to in order to get from current to target.
 
 Implemented in \mbox{\hyperlink{classlogic_1_1AStarNavigationAgent_ab3a98eff731e23c84801940e2dbde7d2}{logic\+::\+AStar\+Navigation\+Agent}}, and \mbox{\hyperlink{classlogic_1_1ManhattanNavigationAgent_aead3e5b54535f01bda2ae65a919f99b0}{logic\+::\+Manhattan\+Navigation\+Agent}}.
 
-\Hypertarget{classlogic_1_1INavigationAgent_ac8b515e26ede33c63b4f132c4384e5cf}\label{classlogic_1_1INavigationAgent_ac8b515e26ede33c63b4f132c4384e5cf} 
+\Hypertarget{classlogic_1_1INavigationAgent_a8d356575773afdda52968babeccef4ce}\label{classlogic_1_1INavigationAgent_a8d356575773afdda52968babeccef4ce} 
 \index{logic::INavigationAgent@{logic::INavigationAgent}!getNavigationDirectionAway@{getNavigationDirectionAway}}
 \index{getNavigationDirectionAway@{getNavigationDirectionAway}!logic::INavigationAgent@{logic::INavigationAgent}}
 \doxysubsubsection{\texorpdfstring{getNavigationDirectionAway()}{getNavigationDirectionAway()}}
-{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} logic\+::\+INavigation\+Agent\+::get\+Navigation\+Direction\+Away (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{current,  }\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{target,  }\item[{const \mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{std\+::set$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} $>$}]{exclude\+If\+Other\+Options = {\ttfamily \{\}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} logic\+::\+INavigation\+Agent\+::get\+Navigation\+Direction\+Away (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{current,  }\item[{const \mbox{\hyperlink{classlogic_1_1Position}{Position}} \&}]{target,  }\item[{const \mbox{\hyperlink{classlogic_1_1World}{World}} \&}]{world,  }\item[{std\+::set$<$ \mbox{\hyperlink{namespacelogic_a5ee5130fbbf0b7c9c16c7375e2510c52}{Direction}} $>$}]{exclude\+If\+Other\+Options }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 Get directions from current away from target. 
 \begin{DoxyParams}{Parameters}

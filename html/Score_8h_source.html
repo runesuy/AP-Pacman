@@ -96,11 +96,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacelogic.html">logic</a> {</div>
 <div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classlogic_1_1Score.html">   17</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classlogic_1_1Score.html">Score</a> : <span class="keyword">public</span> <a class="code hl_class" href="classlogic_1_1IObserver.html">IObserver</a>&lt;PlayerModel&gt; {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_class" href="classlogic_1_1ScoreCounter.html">ScoreCounter</a> scoreCounter;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <a class="code hl_class" href="classlogic_1_1LifeCounter.html">LifeCounter</a> lifeCounter;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordtype">float</span> difficultyMultiplier=1;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">float</span> DIFFICULTY_INCREASE = 0.1;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_class" href="classlogic_1_1ScoreCounter.html">ScoreCounter</a> scoreCounter;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_class" href="classlogic_1_1LifeCounter.html">LifeCounter</a> lifeCounter;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordtype">float</span> difficultyMultiplier = 1;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">float</span> DIFFICULTY_INCREASE = 0.1;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classlogic_1_1Score.html#a24a5466920e34282c89abee1c32373dc">onTick</a>();</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
@@ -118,29 +118,29 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        [[nodiscard]] <span class="keywordtype">float</span> <a class="code hl_function" href="classlogic_1_1Score.html#abf8076430c886430006be3bbe53e2958">getDifficultyMultiplier</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classlogic_1_1Score.html#af16cc96543c5a227d4ea8132e26752bb">increaseDifficultyMultiplier</a>();</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    };</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classlogic_1_1Score.html#af16cc96543c5a227d4ea8132e26752bb">increaseDifficultyMultiplier</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    };</div>
 </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_SCORE_H</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#endif </span><span class="comment">//AP_PACMAN_SCORE_H</span></div>
 <div class="ttc" id="aIObserver_8h_html"><div class="ttname"><a href="IObserver_8h.html">IObserver.h</a></div></div>
 <div class="ttc" id="aLifeCounter_8h_html"><div class="ttname"><a href="LifeCounter_8h.html">LifeCounter.h</a></div></div>
 <div class="ttc" id="aPlayerModel_8h_html"><div class="ttname"><a href="PlayerModel_8h.html">PlayerModel.h</a></div></div>
 <div class="ttc" id="aScoreCounter_8h_html"><div class="ttname"><a href="ScoreCounter_8h.html">ScoreCounter.h</a></div></div>
-<div class="ttc" id="aclasslogic_1_1IObserver_html"><div class="ttname"><a href="classlogic_1_1IObserver.html">logic::IObserver</a></div><div class="ttdef"><b>Definition</b> IObserver.h:19</div></div>
-<div class="ttc" id="aclasslogic_1_1LifeCounter_html"><div class="ttname"><a href="classlogic_1_1LifeCounter.html">logic::LifeCounter</a></div><div class="ttdef"><b>Definition</b> LifeCounter.h:16</div></div>
-<div class="ttc" id="aclasslogic_1_1ObservableTypes_html_a2e3a4285a9bc569d4d2939ae894937af"><div class="ttname"><a href="classlogic_1_1ObservableTypes.html#a2e3a4285a9bc569d4d2939ae894937af">logic::ObservableTypes::EventType</a></div><div class="ttdeci">int EventType</div><div class="ttdef"><b>Definition</b> ObservableTypes.h:18</div></div>
+<div class="ttc" id="aclasslogic_1_1IObserver_html"><div class="ttname"><a href="classlogic_1_1IObserver.html">logic::IObserver</a></div><div class="ttdef"><b>Definition</b> IObserver.h:18</div></div>
+<div class="ttc" id="aclasslogic_1_1LifeCounter_html"><div class="ttname"><a href="classlogic_1_1LifeCounter.html">logic::LifeCounter</a></div><div class="ttdef"><b>Definition</b> LifeCounter.h:15</div></div>
+<div class="ttc" id="aclasslogic_1_1ObservableTypes_html_a2e3a4285a9bc569d4d2939ae894937af"><div class="ttname"><a href="classlogic_1_1ObservableTypes.html#a2e3a4285a9bc569d4d2939ae894937af">logic::ObservableTypes::EventType</a></div><div class="ttdeci">int EventType</div><div class="ttdef"><b>Definition</b> ObservableTypes.h:17</div></div>
 <div class="ttc" id="aclasslogic_1_1PlayerModel_html"><div class="ttname"><a href="classlogic_1_1PlayerModel.html">logic::PlayerModel</a></div><div class="ttdef"><b>Definition</b> PlayerModel.h:13</div></div>
-<div class="ttc" id="aclasslogic_1_1ScoreCounter_html"><div class="ttname"><a href="classlogic_1_1ScoreCounter.html">logic::ScoreCounter</a></div><div class="ttdef"><b>Definition</b> ScoreCounter.h:14</div></div>
+<div class="ttc" id="aclasslogic_1_1ScoreCounter_html"><div class="ttname"><a href="classlogic_1_1ScoreCounter.html">logic::ScoreCounter</a></div><div class="ttdef"><b>Definition</b> ScoreCounter.h:13</div></div>
 <div class="ttc" id="aclasslogic_1_1Score_html"><div class="ttname"><a href="classlogic_1_1Score.html">logic::Score</a></div><div class="ttdef"><b>Definition</b> Score.h:17</div></div>
-<div class="ttc" id="aclasslogic_1_1Score_html_a1d5019742c20e530abdc36f01faf9a7a"><div class="ttname"><a href="classlogic_1_1Score.html#a1d5019742c20e530abdc36f01faf9a7a">logic::Score::getScoreCounter</a></div><div class="ttdeci">const ScoreCounter &amp; getScoreCounter() const</div><div class="ttdef"><b>Definition</b> Score.cpp:30</div></div>
-<div class="ttc" id="aclasslogic_1_1Score_html_a24a5466920e34282c89abee1c32373dc"><div class="ttname"><a href="classlogic_1_1Score.html#a24a5466920e34282c89abee1c32373dc">logic::Score::onTick</a></div><div class="ttdeci">void onTick()</div><div class="ttdef"><b>Definition</b> Score.cpp:17</div></div>
+<div class="ttc" id="aclasslogic_1_1Score_html_a1d5019742c20e530abdc36f01faf9a7a"><div class="ttname"><a href="classlogic_1_1Score.html#a1d5019742c20e530abdc36f01faf9a7a">logic::Score::getScoreCounter</a></div><div class="ttdeci">const ScoreCounter &amp; getScoreCounter() const</div><div class="ttdef"><b>Definition</b> Score.cpp:31</div></div>
+<div class="ttc" id="aclasslogic_1_1Score_html_a24a5466920e34282c89abee1c32373dc"><div class="ttname"><a href="classlogic_1_1Score.html#a24a5466920e34282c89abee1c32373dc">logic::Score::onTick</a></div><div class="ttdeci">void onTick()</div><div class="ttdef"><b>Definition</b> Score.cpp:18</div></div>
 <div class="ttc" id="aclasslogic_1_1Score_html_a7dc0b66e765a991456c0402e4b31af2b"><div class="ttname"><a href="classlogic_1_1Score.html#a7dc0b66e765a991456c0402e4b31af2b">logic::Score::update</a></div><div class="ttdeci">void update(PlayerModel &amp;subject) override</div><div class="ttdef"><b>Definition</b> Score.cpp:9</div></div>
-<div class="ttc" id="aclasslogic_1_1Score_html_ab44eeb0ec4a8805b5caddbb1ef419027"><div class="ttname"><a href="classlogic_1_1Score.html#ab44eeb0ec4a8805b5caddbb1ef419027">logic::Score::getLifeCounter</a></div><div class="ttdeci">const LifeCounter &amp; getLifeCounter() const</div><div class="ttdef"><b>Definition</b> Score.cpp:22</div></div>
-<div class="ttc" id="aclasslogic_1_1Score_html_abf8076430c886430006be3bbe53e2958"><div class="ttname"><a href="classlogic_1_1Score.html#abf8076430c886430006be3bbe53e2958">logic::Score::getDifficultyMultiplier</a></div><div class="ttdeci">float getDifficultyMultiplier() const</div><div class="ttdef"><b>Definition</b> Score.cpp:38</div></div>
-<div class="ttc" id="aclasslogic_1_1Score_html_af16cc96543c5a227d4ea8132e26752bb"><div class="ttname"><a href="classlogic_1_1Score.html#af16cc96543c5a227d4ea8132e26752bb">logic::Score::increaseDifficultyMultiplier</a></div><div class="ttdeci">void increaseDifficultyMultiplier()</div><div class="ttdef"><b>Definition</b> Score.cpp:42</div></div>
+<div class="ttc" id="aclasslogic_1_1Score_html_ab44eeb0ec4a8805b5caddbb1ef419027"><div class="ttname"><a href="classlogic_1_1Score.html#ab44eeb0ec4a8805b5caddbb1ef419027">logic::Score::getLifeCounter</a></div><div class="ttdeci">const LifeCounter &amp; getLifeCounter() const</div><div class="ttdef"><b>Definition</b> Score.cpp:23</div></div>
+<div class="ttc" id="aclasslogic_1_1Score_html_abf8076430c886430006be3bbe53e2958"><div class="ttname"><a href="classlogic_1_1Score.html#abf8076430c886430006be3bbe53e2958">logic::Score::getDifficultyMultiplier</a></div><div class="ttdeci">float getDifficultyMultiplier() const</div><div class="ttdef"><b>Definition</b> Score.cpp:39</div></div>
+<div class="ttc" id="aclasslogic_1_1Score_html_af16cc96543c5a227d4ea8132e26752bb"><div class="ttname"><a href="classlogic_1_1Score.html#af16cc96543c5a227d4ea8132e26752bb">logic::Score::increaseDifficultyMultiplier</a></div><div class="ttdeci">void increaseDifficultyMultiplier()</div><div class="ttdef"><b>Definition</b> Score.cpp:43</div></div>
 <div class="ttc" id="anamespacelogic_html"><div class="ttname"><a href="namespacelogic.html">logic</a></div><div class="ttdef"><b>Definition</b> IConfig.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -18,25 +18,25 @@
 \DoxyCodeLine{00014\ }
 \DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
 \DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1World}{World}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1Observable}{Observable}}<World>\ \{}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1IConfig}{IConfig}}\&\ config;}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<WorldObject>>\ objects;}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ std::shared\_ptr<Score>\ score\ =\ std::make\_shared<Score>();}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_handleCollisions();}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_removeMarkedObjects();}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_initialKeyPressed\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1IConfig}{IConfig}}\ \&config;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<WorldObject>\ >\ objects;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ std::shared\_ptr<Score>\ score\ =\ std::make\_shared<Score>();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_handleCollisions();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_removeMarkedObjects();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_initialKeyPressed\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00055\ }
 \DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_handleWorldEvent(\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{WorldObject::WorldEventT}}\ worldEvent);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \_handleWorldEvent(\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{WorldObject::WorldEventT}}\ worldEvent);}
+\DoxyCodeLine{00058\ }
 \DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classlogic_1_1World}{World}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1IConfig}{IConfig}}\&\ config);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classlogic_1_1World}{World}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1IConfig}{IConfig}}\ \&config);}
 \DoxyCodeLine{00065\ }
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classlogic_1_1World}{World}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1IConfig}{IConfig}}\&\ config,\ std::shared\_ptr<Score>\ score);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classlogic_1_1World}{World}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1IConfig}{IConfig}}\ \&config,\ std::shared\_ptr<Score>\ score);}
 \DoxyCodeLine{00071\ }
 \DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1World_a8c069541cc88b46fd9849bf2d7f4008c}{update}}();}
 \DoxyCodeLine{00076\ }
@@ -44,56 +44,54 @@
 \DoxyCodeLine{00082\ }
 \DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1World_af9ab94ecd779009e230be66afb4b39d9}{sendWorldEvent}}(\mbox{\hyperlink{classlogic_1_1WorldObject_a2c8c9cce37d13cbc0acf8a6d3d437373}{WorldObject::WorldEventT}}\ event);}
 \DoxyCodeLine{00088\ }
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1World_a0283bebe131b2e3d14961195cfeb5993}{addObject}}(\textcolor{keyword}{const}\ std::shared\_ptr<WorldObject>\&\ \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1World_a0283bebe131b2e3d14961195cfeb5993}{addObject}}(\textcolor{keyword}{const}\ std::shared\_ptr<WorldObject>\ \&\textcolor{keywordtype}{object});}
 \DoxyCodeLine{00095\ }
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1World_aa0ee63479670036e50b093909e6ccfcb}{removeObject}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1WorldObject}{WorldObject}}\&\ \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1World_aa0ee63479670036e50b093909e6ccfcb}{removeObject}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1WorldObject}{WorldObject}}\ \&\textcolor{keywordtype}{object});}
 \DoxyCodeLine{00101\ }
 \DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Target>}
 \DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1World_a93baf6b62a43ffe3cc2ecf33f60e85c2}{sendCommandTo}}(\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{EntityCommand}}\ command);}
 \DoxyCodeLine{00109\ }
 \DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Target>}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<std::shared\_ptr<Target>>\ \mbox{\hyperlink{classlogic_1_1World_a8982fe868e154e8595bd3736b57305ca}{getObjectsOfType}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::vector<std::shared\_ptr<Target>\ >\ \mbox{\hyperlink{classlogic_1_1World_a8982fe868e154e8595bd3736b57305ca}{getObjectsOfType}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00116\ }
 \DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Score}{Score}}\ \&\mbox{\hyperlink{classlogic_1_1World_a867e6617d44852c0a974089fb9149f69}{getScore}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00123\ }
 \DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::shared\_ptr<Score>\ \&\mbox{\hyperlink{classlogic_1_1World_a867e6617d44852c0a974089fb9149f69}{getScore}}();}
 \DoxyCodeLine{00130\ }
 \DoxyCodeLine{00131\ }
-\DoxyCodeLine{00132\ }
-\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classlogic_1_1World_a931a7c9174861dc9881f7d78075d62e6}{levelComplete}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00137\ }
-\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classlogic_1_1World_ae50253dfcf0258eaa787083abdee95c3}{isGameOver}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00142\ }
-\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classlogic_1_1World_aa64337ca3e88db5040788acc5aa09625}{WorldCommandType}}\ =\ int;}
-\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1World_aab6eea40afdf5f8d142f2a7dc9dd272f}{receiveCommand}}(\mbox{\hyperlink{classlogic_1_1World_aa64337ca3e88db5040788acc5aa09625}{WorldCommandType}}\ command);}
-\DoxyCodeLine{00145\ \ \ \ \ \};}
-\DoxyCodeLine{00146\ }
-\DoxyCodeLine{00147\ }
-\DoxyCodeLine{00148\ }
-\DoxyCodeLine{00149\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Implementation-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\///}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classlogic_1_1World_a931a7c9174861dc9881f7d78075d62e6}{levelComplete}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classlogic_1_1World_ae50253dfcf0258eaa787083abdee95c3}{isGameOver}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classlogic_1_1World_aa64337ca3e88db5040788acc5aa09625}{WorldCommandType}}\ =\ int;}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1World_aab6eea40afdf5f8d142f2a7dc9dd272f}{receiveCommand}}(\mbox{\hyperlink{classlogic_1_1World_aa64337ca3e88db5040788acc5aa09625}{WorldCommandType}}\ command);}
+\DoxyCodeLine{00149\ \ \ \ \ \};}
 \DoxyCodeLine{00150\ }
-\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Target>}
-\DoxyCodeLine{00152\ \ \ \ \ std::vector<std::shared\_ptr<Target>>\ \mbox{\hyperlink{classlogic_1_1World_a8982fe868e154e8595bd3736b57305ca}{World::getObjectsOfType}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<Target>>\ result;}
-\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ \textcolor{keywordtype}{object}\ :\ objects)\ \{}
-\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ derived\ =\ std::dynamic\_pointer\_cast<Target>(\textcolor{keywordtype}{object});}
-\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (derived)\ result.push\_back(derived);}
-\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \ result;}
-\DoxyCodeLine{00159\ \ \ \ \ \}}
-\DoxyCodeLine{00160\ }
-\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Target>}
-\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1World_a93baf6b62a43ffe3cc2ecf33f60e85c2}{World::sendCommandTo}}(\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{logic::EntityCommand}}\ command)\ \{}
-\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ \textcolor{keywordtype}{object}\ :\ objects)\ \{}
-\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ target\ =\ std::dynamic\_pointer\_cast<Target>(\textcolor{keywordtype}{object});}
-\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (target)\ \{}
-\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ target-\/>processCommand(command);}
-\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00169\ \ \ \ \ \}}
-\DoxyCodeLine{00170\ }
-\DoxyCodeLine{00171\ \}\ \textcolor{comment}{//\ logic}}
-\DoxyCodeLine{00172\ }
-\DoxyCodeLine{00173\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_WORLD\_H}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Implementation-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\///}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Target>}
+\DoxyCodeLine{00155\ \ \ \ \ std::vector<std::shared\_ptr<Target>\ >\ \mbox{\hyperlink{classlogic_1_1World_a8982fe868e154e8595bd3736b57305ca}{World::getObjectsOfType}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<Target>\ >\ result;}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&\textcolor{keywordtype}{object}:\ objects)\ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ derived\ =\ std::dynamic\_pointer\_cast<Target>(\textcolor{keywordtype}{object});}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (derived)\ result.push\_back(derived);}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00162\ \ \ \ \ \}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Target>}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1World_a93baf6b62a43ffe3cc2ecf33f60e85c2}{World::sendCommandTo}}(\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{logic::EntityCommand}}\ command)\ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&\textcolor{keywordtype}{object}:\ objects)\ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ target\ =\ std::dynamic\_pointer\_cast<Target>(\textcolor{keywordtype}{object});}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (target)\ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ target-\/>processCommand(command);}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00172\ \ \ \ \ \}}
+\DoxyCodeLine{00173\ \}\ \textcolor{comment}{//\ logic}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_WORLD\_H}}
 
 \end{DoxyCode}

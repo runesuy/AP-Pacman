@@ -104,8 +104,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a681cfc3ed8fef2b023f6c402a164207d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6cf715e54a24f75743af85b4c9f319b" id="r_ad6cf715e54a24f75743af85b4c9f319b"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classlogic_1_1FruitModel.html">FruitModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IEntityFactory.html#ad6cf715e54a24f75743af85b4c9f319b">createPowerupModel</a> ()=0</td></tr>
 <tr class="separator:ad6cf715e54a24f75743af85b4c9f319b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8112cb9a0073d610d4c6d91d0d3ea64" id="r_ad8112cb9a0073d610d4c6d91d0d3ea64"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IEntityFactory.html#ad8112cb9a0073d610d4c6d91d0d3ea64">createGhostModel</a> (<a class="el" href="namespacelogic.html#a36053e250f7e1339ba0a6cbecbdf1b4b">GhostType</a> type, float difficultyMultiplier=1)=0</td></tr>
-<tr class="separator:ad8112cb9a0073d610d4c6d91d0d3ea64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06214501c1190ca6bd739d832eba6e5b" id="r_a06214501c1190ca6bd739d832eba6e5b"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1IEntityFactory.html#a06214501c1190ca6bd739d832eba6e5b">createGhostModel</a> (<a class="el" href="namespacelogic.html#a36053e250f7e1339ba0a6cbecbdf1b4b">GhostType</a> type, float difficultyMultiplier)=0</td></tr>
+<tr class="separator:a06214501c1190ca6bd739d832eba6e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Factory interface for creating entity models. Provides methods to create different types of entities. </p><dl class="section note"><dt>Note</dt><dd>This is an interface and should be implemented by concrete factory classes. </dd>
@@ -170,8 +170,8 @@ Each method should also initialize any necessary components for the entity on th
 
 </div>
 </div>
-<a id="ad8112cb9a0073d610d4c6d91d0d3ea64" name="ad8112cb9a0073d610d4c6d91d0d3ea64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8112cb9a0073d610d4c6d91d0d3ea64">&#9670;&#160;</a></span>createGhostModel()</h2>
+<a id="a06214501c1190ca6bd739d832eba6e5b" name="a06214501c1190ca6bd739d832eba6e5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06214501c1190ca6bd739d832eba6e5b">&#9670;&#160;</a></span>createGhostModel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,7 +189,7 @@ Each method should also initialize any necessary components for the entity on th
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>difficultyMultiplier</em> = <code>1</code>&#160;</td>
+          <td class="paramname"><em>difficultyMultiplier</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

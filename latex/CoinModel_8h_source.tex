@@ -11,23 +11,23 @@
 \DoxyCodeLine{00007\ }
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{EntityModel_8h}{core/entity/EntityModel.h}}"{}}}
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{CollisionTypes_8h}{CollisionTypes.h}}"{}}}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
-\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Observable_8h}{core/observer/Observable.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
 \DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1CoinModel}{CoinModel}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1EntityModel}{EntityModel}}<CoinModel>,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1Observable}{Observable}}<CoinModel>\ \{}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacelogic_a3617a50a32f5e13787b434372fa21ac6}{CollisionType}}\ collisionType\ =\ \mbox{\hyperlink{namespacelogic_a3617a50a32f5e13787b434372fa21ac6a6ab44a0dd51ce1bbf0e5d75e5cd34337}{COIN}};}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1CoinModel_a1660f533129810829fc9daa8b48b3cc2}{CoinModel}}();}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1CoinModel_accad02ca7c67b16d3d24b53aeb2bfd17}{setSize}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Size}{Size}}\ \&size)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1CoinModel_a4632ebe719e2421116e4915794ce7b5e}{setPosition}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ \&position)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1CoinModel_a2dcfc1318f085ceeef06c5d5b9e587df}{markForRemoval}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a059ee03db27e3962f0c11f71cf0e2bd0}{CollisionTypeT}}\ \mbox{\hyperlink{classlogic_1_1CoinModel_a2492ed57891abec17988d21de99404f5}{getCollisionType}}()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00025\ \ \ \ \ \};}
-\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{namespacelogic_a3617a50a32f5e13787b434372fa21ac6}{CollisionType}}\ collisionType\ =\ \mbox{\hyperlink{namespacelogic_a3617a50a32f5e13787b434372fa21ac6a6ab44a0dd51ce1bbf0e5d75e5cd34337}{COIN}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlogic_1_1CoinModel_a1660f533129810829fc9daa8b48b3cc2}{CoinModel}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1CoinModel_accad02ca7c67b16d3d24b53aeb2bfd17}{setSize}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Size}{Size}}\ \&size)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1CoinModel_a4632ebe719e2421116e4915794ce7b5e}{setPosition}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1Position}{Position}}\ \&position)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1CoinModel_a2dcfc1318f085ceeef06c5d5b9e587df}{markForRemoval}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject_a059ee03db27e3962f0c11f71cf0e2bd0}{CollisionTypeT}}\ \mbox{\hyperlink{classlogic_1_1CoinModel_a2492ed57891abec17988d21de99404f5}{getCollisionType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00026\ \ \ \ \ \};}
 \DoxyCodeLine{00027\ \}\ \textcolor{comment}{//\ logic}}
 \DoxyCodeLine{00028\ }
 \DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_COINMODEL\_H}}

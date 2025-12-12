@@ -8,25 +8,23 @@
 \DoxyCodeLine{00004\ }
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ AP\_PACMAN\_RANDOMNAVGHOSTCONTROLLER\_H}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ AP\_PACMAN\_RANDOMNAVGHOSTCONTROLLER\_H}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MovingEntityController_8h}{MovingEntityController.h}}"{}}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GhostModel_8h}{game/entities/models/GhostModel.h}}"{}}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GhostController_8h}{GhostController.h}}"{}}}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1RandomNavGhostController}{RandomNavGhostController}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1GhostController}{GhostController}}\{}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a81f28729a077fa04040f443217df058f}{processCommand}}(\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{EntityCommand}}\ command,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a7e3e9afc28bb56c3233f709ee1be72bf}{onCollision}}(\mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{SizedWorldObject}}\ \&other,\ \mbox{\hyperlink{classlogic_1_1World}{World}}\&\ world)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GhostModel_8h}{game/entities/models/GhostModel.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GhostController_8h}{GhostController.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1RandomNavGhostController}{RandomNavGhostController}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1GhostController}{GhostController}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a81f28729a077fa04040f443217df058f}{processCommand}}(\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{EntityCommand}}\ command,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a1710c2ac9420f3cf75941aefb0d9da0e}{update}}(\mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a7e3e9afc28bb56c3233f709ee1be72bf}{onCollision}}(\mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{SizedWorldObject}}\ \&other,\ \mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_af1b25d3570b8af506ace0f0b024f300b}{onWallCollision}}(\mbox{\hyperlink{classlogic_1_1World}{logic::World}}\ \&world,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{logic::GhostModel}}\ \&entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a1710c2ac9420f3cf75941aefb0d9da0e}{update}}(\mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00021\ }
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a231c0609100e65eef142e40ca9f6e94e}{chooseDirection}}(\mbox{\hyperlink{classlogic_1_1World}{logic::World}}\ \&world,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{logic::GhostModel}}\ \&entity);}
-\DoxyCodeLine{00030\ \ \ \ \ \};}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \}}
-\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_RANDOMNAVGHOSTCONTROLLER\_H}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a0bdbd11ffdb2beda65fb63cde13c26a9}{onWallCollision}}(\mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a068f8db7c26ffcc7d8a8f375fd6ff19e}{chooseDirection}}(\mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity);}
+\DoxyCodeLine{00032\ \ \ \ \ \};}
+\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_RANDOMNAVGHOSTCONTROLLER\_H}}
 
 \end{DoxyCode}

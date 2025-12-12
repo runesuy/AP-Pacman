@@ -150,7 +150,16 @@ Static Protected Member Functions</h2></td></tr>
 <tr class="memitem:a3ce9110b988dfd2b7d8c402ad29f12a5 inherit pro_static_methods_classlogic_1_1MovingEntityController" id="r_a3ce9110b988dfd2b7d8c402ad29f12a5"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlogic_1_1MovingEntityController.html#a3ce9110b988dfd2b7d8c402ad29f12a5">_getTileScaledSpeed</a> (<a class="el" href="classlogic_1_1World.html">World</a> &amp;world, const <a class="el" href="classlogic_1_1GhostModel.html">GhostModel</a> &amp;entity)</td></tr>
 <tr class="separator:a3ce9110b988dfd2b7d8c402ad29f12a5 inherit pro_static_methods_classlogic_1_1MovingEntityController"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Controller for basic ghost behavior.</p>
+<p>MODES:</p><ul>
+<li>CHASE: Ghosts will navigate towards the player, implementation needs to be provided by subclass.</li>
+<li>FRIGHTENED: Ghosts will maximize manhattan distance from the player.</li>
+<li>RETURNING_HOME: Ghosts will navigate back to their spawn point using A* pathfinding.</li>
+</ul>
+<p>Ghost will start in CHASE mode. On POWER_UP event, ghost will switch to FRIGHTENED mode.</p>
+<p>While in FRIGHTENED mode, a timer is set. After the timer expires, the ghost switches back to CHASE mode. The duration of the timer depends on the difficulty multiplier of the ghost. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aeba3f9707ff49bd10c53c721c48b5002" name="aeba3f9707ff49bd10c53c721c48b5002"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeba3f9707ff49bd10c53c721c48b5002">&#9670;&#160;</a></span>handleWorldEvent()</h2>
 

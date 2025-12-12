@@ -14,20 +14,18 @@
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ManhattanNavigationAgent_8h}{game/entities/controllers/navigation/ManhattanNavigationAgent.h}}"{}}}
 \DoxyCodeLine{00011\ }
 \DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacelogic}{logic}}\ \{}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1ManhattanFollowGhostController}{ManhattanFollowGhostController}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1GhostController}{GhostController}}\{}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::unique\_ptr<INavigationAgent>\ navigationAgent\ =\ std::make\_unique<ManhattanNavigationAgent>();}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ManhattanFollowGhostController_a46d2f2b9739e9cb77553b3b3b11b7336}{update}}(\mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlogic_1_1ManhattanFollowGhostController}{ManhattanFollowGhostController}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlogic_1_1GhostController}{GhostController}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::unique\_ptr<INavigationAgent>\ navigationAgent\ =\ std::make\_unique<ManhattanNavigationAgent>();}
 \DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ManhattanFollowGhostController_a287bd626c0a630a430d4b5cf0a38d04f}{processCommand}}(\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{EntityCommand}}\ command,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ManhattanFollowGhostController_acd26c4cfcd957473b5aaf34ec2a9cde1}{onCollision}}(\mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{SizedWorldObject}}\ \&other,\ \mbox{\hyperlink{classlogic_1_1World}{World}}\&\ world)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \ \ \ \ \};}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \}\ \textcolor{comment}{//\ logic}}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_MANHATTANFOLLOWGHOSTCONTROLLER\_H}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ManhattanFollowGhostController_a46d2f2b9739e9cb77553b3b3b11b7336}{update}}(\mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ManhattanFollowGhostController_a287bd626c0a630a430d4b5cf0a38d04f}{processCommand}}(\mbox{\hyperlink{namespacelogic_a8c969071a5f036b8ad64f854267522fb}{EntityCommand}}\ command,\ \mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlogic_1_1ManhattanFollowGhostController_acd26c4cfcd957473b5aaf34ec2a9cde1}{onCollision}}(\mbox{\hyperlink{classlogic_1_1GhostModel}{GhostModel}}\ \&entity,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlogic_1_1SizedWorldObject}{SizedWorldObject}}\ \&other,\ \mbox{\hyperlink{classlogic_1_1World}{World}}\ \&world)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ \ \ \ \ \};}
+\DoxyCodeLine{00026\ \}\ \textcolor{comment}{//\ logic}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AP\_PACMAN\_MANHATTANFOLLOWGHOSTCONTROLLER\_H}}
 
 \end{DoxyCode}

@@ -113,7 +113,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a99975ec9e8447d2fc9651dc3b52803b6 inherit pub_methods_classlogic_1_1INavigationAgent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Coputes navigation directions using the A* pathfinding algorithm. </p><dl class="section warning"><dt>Warning</dt><dd>Does not support away navigation. </dd></dl>
+<div class="textblock"><p>Computes navigation directions using the A* pathfinding algorithm. </p><dl class="section warning"><dt>Warning</dt><dd>Does not support away navigation. </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab3a98eff731e23c84801940e2dbde7d2" name="ab3a98eff731e23c84801940e2dbde7d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3a98eff731e23c84801940e2dbde7d2">&#9670;&#160;</a></span>getNavigationDirection()</h2>
@@ -171,7 +171,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A direction to proceed to in order to get from current to target. </dd></dl>
 
-<p>Implements <a class="el" href="classlogic_1_1INavigationAgent.html#ae647e21c79e19f2d2bcdf083dc52b955">logic::INavigationAgent</a>.</p>
+<p>Implements <a class="el" href="classlogic_1_1INavigationAgent.html#ad0e9cedef9dd82fb048104075c5afaa0">logic::INavigationAgent</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -254,18 +254,19 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get directions from current away from target. </p><dl class="params"><dt>Parameters</dt><dd>
+<dl class="section warning"><dt>Warning</dt><dd>NO SUPPORT FOR AWAY NAVIGATION </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">current</td><td>The current position from which is navigated. </td></tr>
-    <tr><td class="paramname">target</td><td>The position current wants to get away from. </td></tr>
-    <tr><td class="paramname">world</td><td>The game world. </td></tr>
-    <tr><td class="paramname">excludeIfOtherOptions</td><td>Directions only to be used if no other options are available. </td></tr>
+    <tr><td class="paramname">current</td><td></td></tr>
+    <tr><td class="paramname">target</td><td></td></tr>
+    <tr><td class="paramname">world</td><td></td></tr>
+    <tr><td class="paramname">excludeIfOtherOptions</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A direction to proceed to in order to get away from target. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Implements <a class="el" href="classlogic_1_1INavigationAgent.html#ac8b515e26ede33c63b4f132c4384e5cf">logic::INavigationAgent</a>.</p>
+<p>Implements <a class="el" href="classlogic_1_1INavigationAgent.html#a8d356575773afdda52968babeccef4ce">logic::INavigationAgent</a>.</p>
 
 </div>
 </div>

@@ -33,7 +33,7 @@ void \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a7e3e9afc28bb56c323
 \item 
 void \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a1710c2ac9420f3cf75941aefb0d9da0e}{update}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world, \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&entity) override
 \item 
-void \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_af1b25d3570b8af506ace0f0b024f300b}{on\+Wall\+Collision}} (\mbox{\hyperlink{classlogic_1_1World}{logic\+::\+World}} \&world, \mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} \&entity) override
+void \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a0bdbd11ffdb2beda65fb63cde13c26a9}{on\+Wall\+Collision}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world, \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&entity) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classlogic_1_1GhostController}{logic\+::\+Ghost\+Controller}}}
 \begin{DoxyCompactItemize}
@@ -65,7 +65,7 @@ virtual void \mbox{\hyperlink{classlogic_1_1IEntityController_afc00d163ce088cd89
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a231c0609100e65eef142e40ca9f6e94e}{choose\+Direction}} (\mbox{\hyperlink{classlogic_1_1World}{logic\+::\+World}} \&world, \mbox{\hyperlink{classlogic_1_1GhostModel}{logic\+::\+Ghost\+Model}} \&entity)
+static void \mbox{\hyperlink{classlogic_1_1RandomNavGhostController_a068f8db7c26ffcc7d8a8f375fd6ff19e}{choose\+Direction}} (\mbox{\hyperlink{classlogic_1_1World}{World}} \&world, \mbox{\hyperlink{classlogic_1_1GhostModel}{Ghost\+Model}} \&entity)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{classlogic_1_1GhostController}{logic\+::\+Ghost\+Controller}}}
@@ -84,8 +84,11 @@ static double \mbox{\hyperlink{classlogic_1_1MovingEntityController_a3ce9110b988
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Implements CHASE behavior for a ghost entity by choosing random directions at intersections. 
+
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classlogic_1_1RandomNavGhostController_a231c0609100e65eef142e40ca9f6e94e}\label{classlogic_1_1RandomNavGhostController_a231c0609100e65eef142e40ca9f6e94e} 
+\Hypertarget{classlogic_1_1RandomNavGhostController_a068f8db7c26ffcc7d8a8f375fd6ff19e}\label{classlogic_1_1RandomNavGhostController_a068f8db7c26ffcc7d8a8f375fd6ff19e} 
 \index{logic::RandomNavGhostController@{logic::RandomNavGhostController}!chooseDirection@{chooseDirection}}
 \index{chooseDirection@{chooseDirection}!logic::RandomNavGhostController@{logic::RandomNavGhostController}}
 \doxysubsubsection{\texorpdfstring{chooseDirection()}{chooseDirection()}}
@@ -103,7 +106,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classlogic_1_1RandomNavGhostController_a231c0609100e65eef142e40ca9f6e94e_cgraph}
+\includegraphics[width=350pt]{classlogic_1_1RandomNavGhostController_a068f8db7c26ffcc7d8a8f375fd6ff19e_cgraph}
 \end{center}
 \end{figure}
 \Hypertarget{classlogic_1_1RandomNavGhostController_a7e3e9afc28bb56c3233f709ee1be72bf}\label{classlogic_1_1RandomNavGhostController_a7e3e9afc28bb56c3233f709ee1be72bf} 
@@ -120,7 +123,7 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{classlogic_1_1RandomNavGhostController_a7e3e9afc28bb56c3233f709ee1be72bf_cgraph}
 \end{center}
 \end{figure}
-\Hypertarget{classlogic_1_1RandomNavGhostController_af1b25d3570b8af506ace0f0b024f300b}\label{classlogic_1_1RandomNavGhostController_af1b25d3570b8af506ace0f0b024f300b} 
+\Hypertarget{classlogic_1_1RandomNavGhostController_a0bdbd11ffdb2beda65fb63cde13c26a9}\label{classlogic_1_1RandomNavGhostController_a0bdbd11ffdb2beda65fb63cde13c26a9} 
 \index{logic::RandomNavGhostController@{logic::RandomNavGhostController}!onWallCollision@{onWallCollision}}
 \index{onWallCollision@{onWallCollision}!logic::RandomNavGhostController@{logic::RandomNavGhostController}}
 \doxysubsubsection{\texorpdfstring{onWallCollision()}{onWallCollision()}}
