@@ -3,6 +3,8 @@
 
 This document explains how to refactor the collision handling system to eliminate `dynamic_cast` usage through better polymorphism and design patterns.
 
+**Important Constraint:** Only `SizedWorldObject` instances participate in collision detection. Regular `WorldObject` instances do not have collision handling. All solutions preserve this architectural decision.
+
 ---
 
 ## Current Problems
@@ -33,7 +35,7 @@ if (ghost.getMode() == GhostModel::CHASE) { ... }
 
 ## Solution 1: Visitor Pattern (Recommended)
 
-The Visitor pattern allows double dispatch without runtime type checking. Each entity "accepts" a visitor that performs type-specific operations.
+The Visitor pattern allows double dispatch without runtime type checking. Each `SizedWorldObject` entity "accepts" a visitor that performs type-specific operations. This solution **maintains the constraint that only SizedWorldObjects handle collisions** - the visitor interface is only used within the SizedWorldObject hierarchy.
 
 ### Step 1: Define Collision Visitor Interface
 
@@ -239,22 +241,30 @@ void CollectableController<ModelType>::onCollision(ModelType &entity, const Size
 }
 ```
 
-### Step 6: Refactor CollisionHandler (No More dynamic_cast!)
+### Step 6: Refactor CollisionHandler (Maintaining SizedWorldObject-only collisions)
 
-**CollisionHandler.cpp:**
+**Important:** The `CollisionHandler` needs to filter for `SizedWorldObject` instances. Here are three approaches that avoid modifying `WorldObject`:
+
+**Option A: Store SizedWorldObjects separately in World (Recommended)**
 ```cpp
-void CollisionHandler::handleCollisions(std::vector<std::shared_ptr<WorldObject>> &objects, World &world) {
-    // Separate sized objects from regular objects
-    std::vector<std::shared_ptr<SizedWorldObject>> sizedObjects;
+// In World.h - add a separate container
+class World {
+    std::vector<std::shared_ptr<WorldObject>> objects;
+    std::vector<std::shared_ptr<SizedWorldObject>> sizedObjects; // NEW: Track separately
     
-    for (auto& obj : objects) {
-        // Use virtual method instead of dynamic_cast
-        if (auto sized = obj->asSizedObject()) {
+    void addObject(const std::shared_ptr<WorldObject>& object) {
+        objects.push_back(object);
+        // If it's a SizedWorldObject, also track it separately
+        if (auto sized = std::dynamic_pointer_cast<SizedWorldObject>(object)) {
             sizedObjects.push_back(sized);
         }
     }
-    
-    // Check collisions between all sized objects
+};
+
+// In CollisionHandler.cpp - use the dedicated container
+void CollisionHandler::handleCollisions(const std::vector<std::shared_ptr<SizedWorldObject>>& sizedObjects, 
+                                       World &world) {
+    // No filtering needed - we already have only SizedWorldObjects
     for (size_t i = 0; i < sizedObjects.size(); ++i) {
         for (size_t j = i + 1; j < sizedObjects.size(); ++j) {
             handleCollision(sizedObjects[i], sizedObjects[j], world);
@@ -263,24 +273,72 @@ void CollisionHandler::handleCollisions(std::vector<std::shared_ptr<WorldObject>
 }
 ```
 
-**Alternative: Add virtual method to WorldObject:**
+**Option B: Type tag on WorldObject (without collision methods)**
 ```cpp
-// In WorldObject.h
-virtual std::shared_ptr<SizedWorldObject> asSizedObject() {
-    return nullptr;
-}
+// In WorldObject.h - add type query (NOT collision handling)
+enum class ObjectType { REGULAR, SIZED };
+
+class WorldObject {
+    // ...
+    virtual ObjectType getObjectType() const { return ObjectType::REGULAR; }
+};
 
 // In SizedWorldObject.h
-std::shared_ptr<SizedWorldObject> asSizedObject() override {
-    return std::static_pointer_cast<SizedWorldObject>(shared_from_this());
+class SizedWorldObject : public WorldObject {
+    // ...
+    ObjectType getObjectType() const override { return ObjectType::SIZED; }
+};
+
+// In CollisionHandler.cpp
+void CollisionHandler::handleCollisions(std::vector<std::shared_ptr<WorldObject>> &objects, World &world) {
+    std::vector<std::shared_ptr<SizedWorldObject>> sizedObjects;
+    
+    for (auto& obj : objects) {
+        if (obj->getObjectType() == ObjectType::SIZED) {
+            // Safe static_cast since we know the type
+            sizedObjects.push_back(std::static_pointer_cast<SizedWorldObject>(obj));
+        }
+    }
+    
+    // Check collisions between all sized objects only
+    for (size_t i = 0; i < sizedObjects.size(); ++i) {
+        for (size_t j = i + 1; j < sizedObjects.size(); ++j) {
+            handleCollision(sizedObjects[i], sizedObjects[j], world);
+        }
+    }
 }
 ```
+
+**Option C: Keep current dynamic_pointer_cast but document it's intentional**
+```cpp
+// In CollisionHandler.cpp
+void CollisionHandler::handleCollisions(std::vector<std::shared_ptr<WorldObject>> &objects, World &world) {
+    // Filter for SizedWorldObjects - this is the ONE place dynamic_cast is acceptable
+    // because we're enforcing the architectural constraint that only SizedWorldObjects collide
+    std::vector<std::shared_ptr<SizedWorldObject>> sizedObjects;
+    
+    for (auto& obj : objects) {
+        if (auto sized = std::dynamic_pointer_cast<SizedWorldObject>(obj)) {
+            sizedObjects.push_back(sized);
+        }
+    }
+    
+    // All collision handling below works with SizedWorldObjects only
+    for (size_t i = 0; i < sizedObjects.size(); ++i) {
+        for (size_t j = i + 1; j < sizedObjects.size(); ++j) {
+            handleCollision(sizedObjects[i], sizedObjects[j], world);
+        }
+    }
+}
+```
+
+**Recommendation:** Use **Option A** (separate container in World) for best performance and no dynamic_cast, or **Option B** (type tag) for a clean architectural solution that maintains the separation without modifying `WorldObject`'s collision interface.
 
 ---
 
 ## Solution 2: Command Pattern (Alternative Approach)
 
-Instead of visitors, use command objects for collision responses.
+Instead of visitors, use command objects for collision responses. **This solution also maintains that only SizedWorldObjects handle collisions** - commands are created based on SizedWorldObject collision types.
 
 ### Step 1: Define Collision Command Interface
 
@@ -372,7 +430,7 @@ public:
 
 ## Solution 3: Virtual Method Approach (Simplest)
 
-Add virtual collision response methods to SizedWorldObject.
+Add virtual collision response methods to `SizedWorldObject`. **This solution explicitly maintains collision handling within the SizedWorldObject hierarchy** - all collision methods are defined on SizedWorldObject, and only SizedWorldObject instances can collide.
 
 ### Implementation
 
@@ -442,13 +500,27 @@ void CoinModel::onCollisionWithPlayer(PlayerModel& player, World& world) {
 
 ---
 
+## Important: Preserving the SizedWorldObject Constraint
+
+All three solutions **maintain the architectural decision that only `SizedWorldObject` instances handle collisions**:
+
+1. **Visitor Pattern**: The `acceptCollision()` method is defined on `SizedWorldObject`, not `WorldObject`. Only SizedWorldObjects accept visitors.
+
+2. **Command Pattern**: Commands are created from `SizedWorldObject` pairs. The factory only works with SizedWorldObjects.
+
+3. **Virtual Methods**: All collision-specific virtual methods are defined on `SizedWorldObject`, not on the base `WorldObject` class.
+
+The key difference from the current implementation is that **within the SizedWorldObject hierarchy**, we eliminate dynamic_cast by using polymorphism instead.
+
+---
+
 ## Comparison of Solutions
 
 | Approach | Pros | Cons | Recommended For |
 |----------|------|------|----------------|
-| **Visitor Pattern** | • True double dispatch<br>• Extensible for new operations<br>• No runtime type checks | • More complex<br>• More files to maintain<br>• Needs const_cast workaround | Large projects with many collision types |
-| **Command Pattern** | • Encapsulates responses<br>• Easy to test<br>• Can queue/undo | • Still needs factory logic<br>• Many command classes | Complex collision logic with delayed execution |
-| **Virtual Methods** | • Simple to understand<br>• Less boilerplate<br>• Works with existing enum | • static_cast needed (but safer)<br>• More methods per class | Small to medium projects (like this one) |
+| **Visitor Pattern** | • True double dispatch<br>• Extensible for new operations<br>• No runtime type checks in collision logic<br>• Maintains SizedWorldObject constraint | • More complex<br>• More files to maintain<br>• Needs const_cast workaround | Large projects with many collision types |
+| **Command Pattern** | • Encapsulates responses<br>• Easy to test<br>• Can queue/undo<br>• Maintains SizedWorldObject constraint | • Still needs factory logic<br>• Many command classes | Complex collision logic with delayed execution |
+| **Virtual Methods** | • Simple to understand<br>• Less boilerplate<br>• Works with existing enum<br>• Maintains SizedWorldObject constraint | • static_cast needed (but safer)<br>• More methods per class | Small to medium projects (like this one) |
 
 ---
 
