@@ -6,7 +6,7 @@
 
 #include "game/entities/ObserverEvents.h"
 
-void logic::Score::update(logic::PlayerModel& subject)
+void logic::Score::update(PlayerModel& subject)
 {
 }
 

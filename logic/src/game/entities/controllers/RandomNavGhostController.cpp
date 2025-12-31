@@ -5,7 +5,7 @@
 #include "game/entities/controllers/RandomNavGhostController.h"
 #include "core/utils/Random.h"
 
-void logic::RandomNavGhostController::processCommand(logic::EntityCommand command, logic::GhostModel& entity)
+void logic::RandomNavGhostController::processCommand(EntityCommand command, GhostModel& entity)
 {
 }
 
@@ -14,11 +14,11 @@ void logic::RandomNavGhostController::onCollision(GhostModel& entity, const Size
     GhostController::onCollision(entity, other, world);
 }
 
-void logic::RandomNavGhostController::update(logic::World& world, logic::GhostModel& entity)
+void logic::RandomNavGhostController::update(World& world, GhostModel& entity)
 {
     GhostController::update(world, entity);
     if (entity.getMode() == GhostModel::WAITING) return;
-    if (entity.getDirection() == Direction::NONE)
+    if (entity.getDirection() == NONE)
     {
         chooseDirection(world, entity);
     }
@@ -30,16 +30,15 @@ void logic::RandomNavGhostController::update(logic::World& world, logic::GhostMo
     }
 }
 
-void logic::RandomNavGhostController::onWallCollision(logic::World& world, logic::GhostModel& entity)
+void logic::RandomNavGhostController::onWallCollision(World& world, GhostModel& entity)
 {
     // set requested direction to a random direction
     chooseDirection(world, entity);
 }
 
-void logic::RandomNavGhostController::chooseDirection(logic::World& world, logic::GhostModel& entity)
+void logic::RandomNavGhostController::chooseDirection(World& world, GhostModel& entity)
 {
-    bool change = Random::getInstance()->getIntInRange(0, 1);
-    if (!change) return;
+    if (const bool change = Random::getInstance()->getIntInRange(0, 1); !change) return;
     std::vector<Direction> viableDirections = world.getConfig().getTileMap().getViableDirections(
         world, entity.getPosition());
     if (!viableDirections.empty())
@@ -50,7 +49,7 @@ void logic::RandomNavGhostController::chooseDirection(logic::World& world, logic
             erase(viableDirections, getOppositeDirection(entity.getDirection()));
         }
 
-        Direction randomDirection = viableDirections[Random::getInstance()->getIntInRange(
+        const Direction randomDirection = viableDirections[Random::getInstance()->getIntInRange(
             0, static_cast<int>(viableDirections.size()) - 1)];
         entity.setRequestedDirection(randomDirection);
     }

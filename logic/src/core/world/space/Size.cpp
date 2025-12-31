@@ -12,7 +12,7 @@ namespace logic
         return width;
     }
 
-    void Size::setX(CoordinateType x)
+    void Size::setX(const CoordinateType x)
     {
         if (x < 0)
         {
@@ -26,7 +26,7 @@ namespace logic
         return height;
     }
 
-    void Size::setY(CoordinateType y)
+    void Size::setY(const CoordinateType y)
     {
         if (y < 0)
         {
@@ -35,7 +35,7 @@ namespace logic
         height = y;
     }
 
-    Size::Size(Size::CoordinateType x, Size::CoordinateType y)
+    Size::Size(const CoordinateType x, const CoordinateType y)
     {
         if (x < 0)
         {

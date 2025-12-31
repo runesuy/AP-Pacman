@@ -83,7 +83,7 @@ namespace logic
         GhostModel::returnPosition = returnPosition;
     }
 
-    void GhostModel::setStartDelay(float startDelay)
+    void GhostModel::setStartDelay(const float startDelay)
     {
         START_DELAY = startDelay;
     }

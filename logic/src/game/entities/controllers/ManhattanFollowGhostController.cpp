@@ -8,7 +8,7 @@ namespace logic
 {
     void ManhattanFollowGhostController::update(World& world, GhostModel& entity)
     {
-        auto player = world.getObjectsOfType<PlayerModel>().at(0);
+        const auto player = world.getObjectsOfType<PlayerModel>().at(0);
         if (!player)
         {
             std::cerr << "No Player Found [ManhattanFollowGhostController::update]" << std::endl;

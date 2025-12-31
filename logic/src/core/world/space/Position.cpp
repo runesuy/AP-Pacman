@@ -24,7 +24,7 @@ namespace logic
         return x;
     }
 
-    void logic::Position::setX(CoordinateType x)
+    void Position::setX(CoordinateType x)
     {
         if (x < -1 || x > 1)
         {
@@ -33,12 +33,12 @@ namespace logic
         Position::x = x;
     }
 
-    Position::CoordinateType logic::Position::getY() const
+    Position::CoordinateType Position::getY() const
     {
         return y;
     }
 
-    void logic::Position::setY(CoordinateType y)
+    void Position::setY(CoordinateType y)
     {
         if (y < -1 || y > 1)
         {
@@ -47,29 +47,29 @@ namespace logic
         Position::y = y;
     }
 
-    logic::Position& logic::Position::operator+=(const logic::Position& other)
+    Position& Position::operator+=(const Position& other)
     {
         this->x += other.x;
         this->y += other.y;
         return *this;
     }
 
-    logic::Position logic::Position::operator+(const logic::Position& other) const
+    Position Position::operator+(const Position& other) const
     {
         return {this->x + other.x, this->y + other.y};
     }
 
-    logic::Position logic::Position::operator*(float scalar) const
+    Position Position::operator*(float scalar) const
     {
         return {this->x * scalar, this->y * scalar};
     }
 
-    bool logic::Position::operator==(const logic::Position& other) const
+    bool Position::operator==(const Position& other) const
     {
         return this->x == other.x && this->y == other.y;
     }
 
-    bool logic::Position::isEqualTo(const logic::Position& other, double eps) const
+    bool Position::isEqualTo(const Position& other, double eps) const
     {
         return std::abs(this->x - other.x) < eps && std::abs(this->y - other.y) < eps;
     }

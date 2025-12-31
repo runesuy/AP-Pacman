@@ -22,12 +22,12 @@ namespace logic
 
     Direction getDirectionTo(Position positionFrom, Position positionTo)
     {
-        const double eps = 0.001;
+        constexpr double eps = 0.001;
         // scale positions so vecTo cant be outsider Position scope
         // does not affect the direction and so the result
-        auto posFromN = positionFrom * 0.5;
-        auto posToN = positionTo * 0.5;
-        auto vecTo = posToN + (posFromN * -1);
+        const auto posFromN = positionFrom * 0.5;
+        const auto posToN = positionTo * 0.5;
+        const auto vecTo = posToN + (posFromN * -1);
 
         // UP OR DOWN
         if (std::abs(vecTo.getX()) < eps)

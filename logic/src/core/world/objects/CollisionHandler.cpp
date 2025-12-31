@@ -32,14 +32,13 @@ namespace logic
     void CollisionHandler::handleCollision(const std::shared_ptr<SizedWorldObject>& objectA,
                                            const std::shared_ptr<SizedWorldObject>& objectB, World& world)
     {
-        Position posA = objectA->getPosition();
-        Size sizeA = objectA->getSize();
-        Position posB = objectB->getPosition();
-        Size sizeB = objectB->getSize();
+        const Position posA = objectA->getPosition();
+        const Size sizeA = objectA->getSize();
+        const Position posB = objectB->getPosition();
+        const Size sizeB = objectB->getSize();
 
-        bool overlapX = posA.getX() < posB.getX() + sizeB.getX() / 2 && posA.getX() + sizeA.getX() / 2 > posB.getX();
-        bool overlapY = posA.getY() < posB.getY() + sizeB.getY() / 2 && posA.getY() + sizeA.getY() / 2 > posB.getY();
-        if (overlapX && overlapY)
+        const bool overlapX = posA.getX() < posB.getX() + sizeB.getX() / 2 && posA.getX() + sizeA.getX() / 2 > posB.getX();
+        if (const bool overlapY = posA.getY() < posB.getY() + sizeB.getY() / 2 && posA.getY() + sizeA.getY() / 2 > posB.getY(); overlapX && overlapY)
         {
             objectA->onCollision(*objectB, world);
             //objectB->onCollision(*objectA); NOT called because of double handling

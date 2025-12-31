@@ -6,7 +6,7 @@
 
 namespace logic
 {
-    Stopwatch::Timer::Timer(const Stopwatch::TimeType totalTime) : totalTime(totalTime), timeLeft(totalTime)
+    Stopwatch::Timer::Timer(const TimeType totalTime) : timeLeft(totalTime), totalTime(totalTime)
     {
     }
 

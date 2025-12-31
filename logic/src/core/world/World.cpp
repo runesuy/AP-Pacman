@@ -100,7 +100,7 @@ namespace logic
 
     void World::sendWorldEvent(WorldObject::WorldEventT event)
     {
-        for (auto& obj : objects)
+        for (const auto& obj : objects)
         {
             obj->handleWorldEvent(event);
         }
@@ -123,7 +123,7 @@ namespace logic
         config.getTileMap().loadToWorld(*this);
     }
 
-    void World::receiveCommand(World::WorldCommandType command)
+    void World::receiveCommand(WorldCommandType command)
     {
         if (command == ON_KEY_PRESS)
         {
@@ -133,7 +133,7 @@ namespace logic
 
     void World::_handleWorldEvent(WorldObject::WorldEventT worldEvent)
     {
-        if (worldEvent == WorldEvent::PLAYER_KILLED_W)
+        if (worldEvent == PLAYER_KILLED_W)
         {
             _initialKeyPressed = false;
         }

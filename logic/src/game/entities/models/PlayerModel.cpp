@@ -29,7 +29,7 @@ namespace logic
         return SPEED;
     }
 
-    void PlayerModel::setDirection(Direction direction)
+    void PlayerModel::setDirection(const Direction direction)
     {
         MovingEntityModel::setDirection(direction);
         updateObservers();

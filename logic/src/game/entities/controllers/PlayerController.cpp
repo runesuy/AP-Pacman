@@ -17,17 +17,17 @@ namespace logic
     {
         switch (command)
         {
-        case EntityCommand::TURN_LEFT:
-            entity.setRequestedDirection(Direction::LEFT);
+        case TURN_LEFT:
+            entity.setRequestedDirection(LEFT);
             break;
-        case EntityCommand::TURN_RIGHT:
-            entity.setRequestedDirection(Direction::RIGHT);
+        case TURN_RIGHT:
+            entity.setRequestedDirection(RIGHT);
             break;
-        case EntityCommand::TURN_UP:
-            entity.setRequestedDirection(Direction::UP);
+        case TURN_UP:
+            entity.setRequestedDirection(UP);
             break;
-        case EntityCommand::TURN_DOWN:
-            entity.setRequestedDirection(Direction::DOWN);
+        case TURN_DOWN:
+            entity.setRequestedDirection(DOWN);
             break;
         default:
             break;

@@ -39,7 +39,7 @@ namespace logic
                     {
                         break;
                     }
-                case TileType::WALL:
+                case WALL:
                     {
                         auto wall = world.getConfig().getEntityFactory()->createWallModel();
                         wall->setPosition({x, y});
@@ -47,7 +47,7 @@ namespace logic
                         world.addObject(wall);
                         break;
                     }
-                case TileType::PLAYER:
+                case PLAYER:
                     {
                         auto player = world.getConfig().getEntityFactory()->createPlayerModel();
                         player->setPosition({x, y});
@@ -55,7 +55,7 @@ namespace logic
                         world.addObject(player);
                         break;
                     }
-                case TileType::COIN:
+                case COIN:
                     {
                         auto coin = world.getConfig().getEntityFactory()->createCoinModel();
                         coin->setPosition({x, y});
@@ -63,7 +63,7 @@ namespace logic
                         world.addObject(coin);
                         break;
                     }
-                case TileType::POWER_UP:
+                case POWER_UP:
                     {
                         auto powerup = world.getConfig().getEntityFactory()->createPowerupModel();
                         powerup->setPosition({x, y});
@@ -71,7 +71,7 @@ namespace logic
                         world.addObject(powerup);
                         break;
                     }
-                case TileType::GHOST_RED:
+                case GHOST_RED:
                     {
                         const float difficultyMultiplier = world.getScore()->getDifficultyMultiplier();
                         auto ghost = world.getConfig().getEntityFactory()->createGhostModel(
@@ -82,7 +82,7 @@ namespace logic
                         world.addObject(ghost);
                         break;
                     }
-                case TileType::GHOST_PINK:
+                case GHOST_PINK:
                     {
                         const float difficultyMultiplier = world.getScore()->getDifficultyMultiplier();
                         auto ghost = world.getConfig().getEntityFactory()->createGhostModel(
@@ -93,7 +93,7 @@ namespace logic
                         world.addObject(ghost);
                         break;
                     }
-                case TileType::GHOST_ORANGE:
+                case GHOST_ORANGE:
                     {
                         const float difficultyMultiplier = world.getScore()->getDifficultyMultiplier();
                         auto ghost = world.getConfig().getEntityFactory()->createGhostModel(
@@ -104,7 +104,7 @@ namespace logic
                         world.addObject(ghost);
                         break;
                     }
-                case TileType::GHOST_BLUE:
+                case GHOST_BLUE:
                     {
                         const float difficultyMultiplier = world.getScore()->getDifficultyMultiplier();
                         auto ghost = world.getConfig().getEntityFactory()->createGhostModel(

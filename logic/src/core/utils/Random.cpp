@@ -15,7 +15,7 @@ namespace logic
         return _instance;
     }
 
-    int Random::getIntInRange(int min, int max) const
+    int Random::getIntInRange(const int min, const int max) const
     {
         std::uniform_int_distribution distribution(min, max);
         return distribution(generator);

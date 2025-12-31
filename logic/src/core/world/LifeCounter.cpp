@@ -18,14 +18,14 @@ namespace logic
         return livesLeft;
     }
 
-    void LifeCounter::addLives(unsigned int amount)
+    void LifeCounter::addLives(const unsigned int amount)
     {
         if (amount + livesLeft > lifeStart) livesLeft = lifeStart;
         else livesLeft += amount;
         updateObservers();
     }
 
-    void LifeCounter::removeLives(unsigned int amount)
+    void LifeCounter::removeLives(const unsigned int amount)
     {
         if (livesLeft < amount) livesLeft = 0;
         else livesLeft -= amount;
@@ -38,9 +38,9 @@ namespace logic
         updateObservers();
     }
 
-    void LifeCounter::processEvent(ObservableTypes::EventType event)
+    void LifeCounter::processEvent(const ObservableTypes::EventType event)
     {
-        if (event == ObserverEvent::PLAYER_KILLED)
+        if (event == PLAYER_KILLED)
         {
             removeLives(1);
         }

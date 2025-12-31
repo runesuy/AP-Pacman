@@ -20,9 +20,9 @@ namespace logic
                 entity.setStartTimer(0);
             }
 
-            if (entity.getDirection() != Direction::NONE)
+            if (entity.getDirection() != NONE)
             {
-                entity.setRequestedDirection(Direction::NONE);
+                entity.setRequestedDirection(NONE);
             }
         }
 
@@ -91,7 +91,7 @@ namespace logic
                 justChangedToFrightened = true;
                 break;
             }
-        case (WorldEvent::PLAYER_KILLED_W):
+        case (PLAYER_KILLED_W):
             {
                 entity.setPosition(entity.getSpawnPosition());
                 entity.setDirection(NONE);

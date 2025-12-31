@@ -12,11 +12,10 @@ namespace logic
 {
     std::vector<int> TXTHighScoreParser::getHighScores(const std::string& file) const
     {
-        std::vector<int> result;
-        std::ifstream input{file};
-        std::string line;
-        if (input.is_open())
+        if (std::ifstream input{file}; input.is_open())
         {
+            std::string line;
+            std::vector<int> result;
             int i = 0;
             while (std::getline(input, line) && i < 5)
             {
