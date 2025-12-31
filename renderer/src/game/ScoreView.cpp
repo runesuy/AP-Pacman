@@ -4,12 +4,15 @@
 
 #include "game/ScoreView.h"
 
-namespace renderer {
-    void ScoreView::update(logic::ScoreCounter &subject) {
+namespace renderer
+{
+    void ScoreView::update(logic::ScoreCounter& subject)
+    {
         setString("SCORE: " + std::to_string(subject.getScore()));
     }
 
-    ScoreView::ScoreView() {
+    ScoreView::ScoreView()
+    {
         setString("SCORE: 0");
     }
 } // renderer

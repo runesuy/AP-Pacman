@@ -4,5 +4,6 @@
 
 #include "core/states/IStateDrawHandler.h"
 
-namespace renderer {
+namespace renderer
+{
 } // renderer

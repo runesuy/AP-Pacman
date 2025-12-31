@@ -12,8 +12,10 @@
 #include "core/drawable/IDrawable.h"
 #include "core/world/objects/WorldObject.h"
 
-namespace renderer {
-    class DrawObject : public IDrawable {
+namespace renderer
+{
+    class DrawObject : public IDrawable
+    {
         /**
          * Position of the draw object in the game world and on the screen.
          */
@@ -24,20 +26,20 @@ namespace renderer {
          * Get the position of the draw object.
          * @return
          */
-        [[nodiscard]] const logic::Position &getPosition() const;
+        [[nodiscard]] const logic::Position& getPosition() const;
 
         /**
          * Set the position of the draw object.
          * @param position
          */
-        virtual void setPosition(const logic::Position &position);
+        virtual void setPosition(const logic::Position& position);
 
         /**
          * Draw the object onto the provided render window.
          * All shapes sprites and text will be drawn and scaled according to the position and size of the object, along with the DrawObject position.
          * @param window
          */
-        void draw(sf::RenderWindow &window) override;
+        void draw(sf::RenderWindow& window) override;
 
         /**
          * Get the SFML shapes representing the draw object.
@@ -46,7 +48,7 @@ namespace renderer {
          * @param window
          * @return
          */
-        virtual std::vector<std::unique_ptr<sf::Shape> > getSFShapes(sf::RenderWindow &window) = 0;
+        virtual std::vector<std::unique_ptr<sf::Shape>> getSFShapes(sf::RenderWindow& window) = 0;
 
         /**
          * Get the SFML sprites representing the draw object.
@@ -54,7 +56,7 @@ namespace renderer {
          * @warning positions are relative to the DrawObject position.
          * @return
          */
-        virtual std::vector<std::shared_ptr<sf::Sprite> > getSFSprites(sf::RenderWindow &window) = 0;
+        virtual std::vector<std::shared_ptr<sf::Sprite>> getSFSprites(sf::RenderWindow& window) = 0;
 
         /**
          * Get the SFML texts representing the draw object.
@@ -62,7 +64,7 @@ namespace renderer {
          * @warning positions are relative to the DrawObject position.
          * @return
          */
-        virtual std::vector<std::unique_ptr<sf::Text> > getSFTexts(sf::RenderWindow &window) = 0;
+        virtual std::vector<std::unique_ptr<sf::Text>> getSFTexts(sf::RenderWindow& window) = 0;
     };
 } // renderer
 

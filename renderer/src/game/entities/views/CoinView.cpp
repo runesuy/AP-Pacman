@@ -5,16 +5,20 @@
 #include "game/entities/views/CoinView.h"
 #include "core/entity/modular/modules/CircleModule.h"
 
-namespace renderer {
-    void CoinView::update(logic::CoinModel &subject) {
+namespace renderer
+{
+    void CoinView::update(logic::CoinModel& subject)
+    {
         setPosition(subject.getPosition());
         setSize(subject.getSize());
-        if (subject.isMarkedForRemoval()) {
+        if (subject.isMarkedForRemoval())
+        {
             markForRemoval();
         }
     }
 
-    CoinView::CoinView() {
+    CoinView::CoinView()
+    {
         auto circleModule = std::make_shared<CircleModule>();
         circleModule->setSize(getSize());
         circleModule->setFillColor(sf::Color::White);
@@ -22,20 +26,24 @@ namespace renderer {
         addObserver(circleModule);
     }
 
-    void CoinView::setSize(const logic::Size &size) {
+    void CoinView::setSize(const logic::Size& size)
+    {
         EntityView::setSize(size);
         updateObservers();
     }
 
-    bool CoinView::isMarkedForRemoval() {
+    bool CoinView::isMarkedForRemoval()
+    {
         return markedForRemoval;
     }
 
-    void CoinView::onObservableDestroyed(logic::CoinModel &subject) {
+    void CoinView::onObservableDestroyed(logic::CoinModel& subject)
+    {
         IObserver::onObservableDestroyed(subject);
     }
 
-    void CoinView::markForRemoval() {
+    void CoinView::markForRemoval()
+    {
         markedForRemoval = true;
     }
 } // renderer

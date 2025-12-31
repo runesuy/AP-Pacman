@@ -10,17 +10,20 @@
 #include <iostream>
 #include "core/utils/Random.h"
 
-namespace logic {
-    Direction ManhattanNavigationAgent::getNavigationDirection(const Position &current, const Position &target,
-                                                               const World &world,
-                                                               std::set<Direction> excludeIfOtherOptions) const {
+namespace logic
+{
+    Direction ManhattanNavigationAgent::getNavigationDirection(const Position& current, const Position& target,
+                                                               const World& world,
+                                                               std::set<Direction> excludeIfOtherOptions) const
+    {
         auto m = _getDirectionMap(current, target, world);
         _removeNonViableDirections(m);
 
         // calculate options | result : vector with directions with the smallest distance
         double minimumDistance = std::numeric_limits<double>::infinity();
         // calculate options | result : vector with directions with the least distance
-        auto comp = [](double current, double compare) -> bool {
+        auto comp = [](double current, double compare) -> bool
+        {
             return current < compare;
         };
 
@@ -30,7 +33,8 @@ namespace logic {
         erase_if(mWithoutExclude, [excludeIfOtherOptions](auto d) { return excludeIfOtherOptions.contains(d.first); });
 
         std::set<Direction> options = _selectBestOptions(mWithoutExclude, minimumDistance, comp);
-        if (options.empty()) {
+        if (options.empty())
+        {
             options = _selectBestOptions(m, minimumDistance, comp);
         }
 
@@ -42,22 +46,25 @@ namespace logic {
         return temp.at(randomInt);
     }
 
-    double ManhattanNavigationAgent::_calculateManhattanDistance(const Position &current, const Position &target) {
+    double ManhattanNavigationAgent::_calculateManhattanDistance(const Position& current, const Position& target)
+    {
         return std::abs(current.getX() - target.getX()) + std::abs(current.getY() - target.getY());
     }
 
     double
     ManhattanNavigationAgent::_calculateManhattanDistance(Position::CoordinateType row, Position::CoordinateType col,
-                                                          const World &world,
-                                                          const Position &target) {
+                                                          const World& world,
+                                                          const Position& target)
+    {
         auto position = world.getConfig().getTileMap().getTileCenterPosition(row, col);
         return _calculateManhattanDistance(position, target);
     }
 
-    std::map<Direction, std::pair<double, TileMap::TileType> >
-    ManhattanNavigationAgent::_getDirectionMap(const Position &current, const Position &target, const World &world) {
-        std::map<Direction, std::pair<double, TileMap::TileType> > m;
-        const auto &tileMap = world.getConfig().getTileMap();
+    std::map<Direction, std::pair<double, TileMap::TileType>>
+    ManhattanNavigationAgent::_getDirectionMap(const Position& current, const Position& target, const World& world)
+    {
+        std::map<Direction, std::pair<double, TileMap::TileType>> m;
+        const auto& tileMap = world.getConfig().getTileMap();
         auto gridPos = tileMap.getGridPosition(current);
         double dRight = _calculateManhattanDistance(gridPos.first, gridPos.second + 1, world, target);
         auto typeRight = tileMap.getTileType(gridPos.first, gridPos.second + 1);
@@ -74,24 +81,29 @@ namespace logic {
         return m;
     }
 
-    void ManhattanNavigationAgent::_removeNonViableDirections(ManhattanNavigationAgent::DirectionsMap &m) {
+    void ManhattanNavigationAgent::_removeNonViableDirections(ManhattanNavigationAgent::DirectionsMap& m)
+    {
         auto r = m;
-        for (const auto &[d, pr]: m) {
-            if (pr.second == TileMap::WALL) {
+        for (const auto& [d, pr] : m)
+        {
+            if (pr.second == TileMap::WALL)
+            {
                 r.erase(d);
             }
         }
         m = r;
     }
 
-    Direction ManhattanNavigationAgent::getNavigationDirectionAway(const Position &current, const Position &target,
-                                                                   const World &world,
-                                                                   std::set<Direction> excludeIfOtherOptions) const {
+    Direction ManhattanNavigationAgent::getNavigationDirectionAway(const Position& current, const Position& target,
+                                                                   const World& world,
+                                                                   std::set<Direction> excludeIfOtherOptions) const
+    {
         auto m = _getDirectionMap(current, target, world);
         _removeNonViableDirections(m);
 
         // calculate options | result : vector with directions with the largest distance
-        auto comp = [](double current, double compare) -> bool {
+        auto comp = [](double current, double compare) -> bool
+        {
             return current > compare;
         };
 
@@ -101,7 +113,8 @@ namespace logic {
         erase_if(mWithoutExclude, [excludeIfOtherOptions](auto d) { return excludeIfOtherOptions.contains(d.first); });
 
         std::set<Direction> options = _selectBestOptions(mWithoutExclude, -1, comp);
-        if (options.empty()) {
+        if (options.empty())
+        {
             options = _selectBestOptions(m, -1, comp);
         }
 
@@ -113,17 +126,22 @@ namespace logic {
     }
 
     std::set<Direction>
-    ManhattanNavigationAgent::_selectBestOptions(const ManhattanNavigationAgent::DirectionsMap &directionsMap,
+    ManhattanNavigationAgent::_selectBestOptions(const ManhattanNavigationAgent::DirectionsMap& directionsMap,
                                                  double start,
                                                  const std::function<bool(double current,
-                                                                          double compare)> &compare) {
+                                                                          double compare)>& compare)
+    {
         std::set<Direction> options;
         const double eps = 0.01;
         double maximumDistance = start;
-        for (const auto &[d, pr]: directionsMap) {
-            if (std::abs(pr.first - maximumDistance) < eps) {
+        for (const auto& [d, pr] : directionsMap)
+        {
+            if (std::abs(pr.first - maximumDistance) < eps)
+            {
                 options.insert(d);
-            } else if (compare(pr.first, maximumDistance)) {
+            }
+            else if (compare(pr.first, maximumDistance))
+            {
                 maximumDistance = pr.first;
                 options = {d};
             }

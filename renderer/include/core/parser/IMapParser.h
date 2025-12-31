@@ -7,15 +7,17 @@
 #include <string>
 #include "core/world/TileMap.h"
 
-namespace renderer {
+namespace renderer
+{
     /**
      * Interface for map parser, responsible for loading tile maps from files.
      */
-    class IMapParser {
+    class IMapParser
+    {
     public:
         virtual ~IMapParser() = default;
 
-        virtual logic::TileMap loadMap(const std::string &filename) = 0;
+        virtual logic::TileMap loadMap(const std::string& filename) = 0;
     };
 } // renderer
 

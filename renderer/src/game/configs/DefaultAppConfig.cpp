@@ -4,32 +4,40 @@
 
 #include "game/configs/DefaultAppConfig.h"
 
-namespace renderer {
-    IFactoryCollection &DefaultAppConfig::getFactoryCollection() {
+namespace renderer
+{
+    IFactoryCollection& DefaultAppConfig::getFactoryCollection()
+    {
         return factoryCollection;
     }
 
-    const IConfigParser &DefaultAppConfig::getConfigParser() const {
+    const IConfigParser& DefaultAppConfig::getConfigParser() const
+    {
         return configParser;
     }
 
-    const logic::IConfig &DefaultAppConfig::getLogicConfig() const {
+    const logic::IConfig& DefaultAppConfig::getLogicConfig() const
+    {
         return logicConfig;
     }
 
-    logic::IConfig &DefaultAppConfig::getLogicConfig() {
+    logic::IConfig& DefaultAppConfig::getLogicConfig()
+    {
         return logicConfig;
     }
 
-    IConfigParser &DefaultAppConfig::getConfigParser() {
+    IConfigParser& DefaultAppConfig::getConfigParser()
+    {
         return configParser;
     }
 
-    const DefaultTextureParser &DefaultAppConfig::getTextureParser() const {
+    const DefaultTextureParser& DefaultAppConfig::getTextureParser() const
+    {
         return textureParser;
     }
 
-    ITextureParser &DefaultAppConfig::getTextureParser() {
+    ITextureParser& DefaultAppConfig::getTextureParser()
+    {
         return textureParser;
     }
 } // renderer

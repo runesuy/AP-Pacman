@@ -8,17 +8,19 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 
-namespace renderer {
+namespace renderer
+{
     /**
      * Interface for handling drawing operations in the game.
      */
-    class IDrawHandler {
+    class IDrawHandler
+    {
     public:
         /**
          * Draw the game elements onto the provided render window.
          * @param window
          */
-        virtual void draw(sf::RenderWindow &window) = 0;
+        virtual void draw(sf::RenderWindow& window) = 0;
 
         virtual ~IDrawHandler() = default;
     };

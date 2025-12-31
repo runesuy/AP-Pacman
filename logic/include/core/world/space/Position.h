@@ -8,12 +8,14 @@
 
 #include "ICoordinate.h"
 
-namespace logic {
+namespace logic
+{
     /**
      * A position class for the game world.
      * x and y should always be between -1 and 1
      */
-    class Position : public ICoordinate {
+    class Position : public ICoordinate
+    {
         CoordinateType x{};
         CoordinateType y{};
 
@@ -31,22 +33,22 @@ namespace logic {
          */
         Position() = default;
 
-        Position(Position &&) noexcept = default;
+        Position(Position&&) noexcept = default;
 
-        Position(const Position &) = default;
+        Position(const Position&) = default;
 
-        Position &operator=(Position &&) noexcept = default;
+        Position& operator=(Position&&) noexcept = default;
 
-        Position &operator=(const Position &) = default;
+        Position& operator=(const Position&) = default;
 
-        Position &operator+=(const Position &other);
+        Position& operator+=(const Position& other);
 
         /**
          * Add up the corresponding x and y values.
          * @param other
          * @return
          */
-        Position operator+(const Position &other) const;
+        Position operator+(const Position& other) const;
 
         /**
          * Multiply x and y with a scalar.
@@ -55,7 +57,7 @@ namespace logic {
          */
         Position operator*(float scalar) const;
 
-        bool operator==(const Position &other) const;
+        bool operator==(const Position& other) const;
 
         /**
          * Check if this position is equal to another position within a certain epsilon.
@@ -63,7 +65,7 @@ namespace logic {
          * @param eps
          * @return
          */
-        [[nodiscard]] bool isEqualTo(const logic::Position &other, double eps) const;
+        [[nodiscard]] bool isEqualTo(const logic::Position& other, double eps) const;
 
         /**
          * @return the horizontal coördinate

@@ -8,14 +8,18 @@
 #include <fstream>
 #include "core/exceptions/FileNotOpenedException.h"
 
-namespace logic {
-    std::vector<int> TXTHighScoreParser::getHighScores(const std::string &file) const {
+namespace logic
+{
+    std::vector<int> TXTHighScoreParser::getHighScores(const std::string& file) const
+    {
         std::vector<int> result;
         std::ifstream input{file};
         std::string line;
-        if (input.is_open()) {
+        if (input.is_open())
+        {
             int i = 0;
-            while (std::getline(input, line) && i < 5) {
+            while (std::getline(input, line) && i < 5)
+            {
                 result.push_back(std::stoi(line));
                 i++;
             }
@@ -25,13 +29,18 @@ namespace logic {
         throw FileNotOpenedException(file, "TXTHighScoreParser::getHighScores(const std::string &file) const");
     }
 
-    void TXTHighScoreParser::writeHighScores(const std::vector<int> &highScores, const std::string &file) {
+    void TXTHighScoreParser::writeHighScores(const std::vector<int>& highScores, const std::string& file)
+    {
         std::ofstream output{file};
-        if (output.is_open()) {
-            for (auto highscore: highScores) {
+        if (output.is_open())
+        {
+            for (auto highscore : highScores)
+            {
                 output << std::to_string(highscore) << std::endl;
             }
-        } else {
+        }
+        else
+        {
             throw FileNotOpenedException(
                 file,
                 "TXTHighScoreParser::writeHighScores(const std::vector<int> &highScores, const std::string &file) ");

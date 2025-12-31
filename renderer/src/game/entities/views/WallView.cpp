@@ -9,13 +9,16 @@
 #include "core/entity/modular/modules/SpriteModule.h"
 #include "game/Game.h"
 
-namespace renderer {
-    void WallView::update(logic::WallModel &subject) {
+namespace renderer
+{
+    void WallView::update(logic::WallModel& subject)
+    {
         setPosition(subject.getPosition());
         setSize(subject.getSize());
     }
 
-    WallView::WallView() {
+    WallView::WallView()
+    {
         auto rectangleModule = std::make_shared<RectangleModule>();
         rectangleModule->setSize(getSize());
         rectangleModule->setFillColor(sf::Color::Blue);
@@ -23,12 +26,14 @@ namespace renderer {
         addObserver(rectangleModule);
     }
 
-    void WallView::setSize(const logic::Size &size) {
+    void WallView::setSize(const logic::Size& size)
+    {
         EntityView::setSize(size);
         updateObservers();
     }
 
-    bool WallView::isMarkedForRemoval() {
+    bool WallView::isMarkedForRemoval()
+    {
         return false;
     }
 } // renderer

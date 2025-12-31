@@ -8,7 +8,9 @@
 #include "game/Game.h"
 #include "core/entity/modular/modules/AnimatedSpriteModule.h"
 
-namespace renderer {
-    PinkGhostView::PinkGhostView() : GhostView(animations) {
+namespace renderer
+{
+    PinkGhostView::PinkGhostView() : GhostView(animations)
+    {
     }
 } // renderer

@@ -11,23 +11,30 @@
 #include "core/factories/IStateFactory.h"
 #include "game/states/LevelState.h"
 
-namespace renderer {
-    void MenuState::update(StateManager &stateManager) {
+namespace renderer
+{
+    void MenuState::update(StateManager& stateManager)
+    {
     }
 
-    void MenuState::processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) {
-        if (event.type == sf::Event::KeyPressed) {
+    void MenuState::processInput(sf::Event& event, StateManager& stateManager, const sf::RenderWindow& window)
+    {
+        if (event.type == sf::Event::KeyPressed)
+        {
             std::unique_ptr<IState> levelState = Game::getInstance()->getAppConfig().getFactoryCollection().
-                    getStateFactory()->createLevelState();
+                                                                      getStateFactory()->createLevelState();
             stateManager.pushState(std::move(levelState));
         }
         playButton.processEvent(event, window);
     }
 
-    void MenuState::draw(sf::RenderWindow &window, StateManager &stateManager) {
-        if (!_fontLoaded) {
+    void MenuState::draw(sf::RenderWindow& window, StateManager& stateManager)
+    {
+        if (!_fontLoaded)
+        {
             std::string fileName = renderer::Game::getInstance()->getAppConfig().getConfigParser().getDefaultFontPath();
-            if (!_font.loadFromFile(fileName)) {
+            if (!_font.loadFromFile(fileName))
+            {
                 throw std::runtime_error("Failed to load font from file: " + fileName);
             }
             _fontLoaded = true;
@@ -58,22 +65,26 @@ namespace renderer {
         highScoreLabel.draw(window);
     }
 
-    void MenuState::onManagerReActive() {
+    void MenuState::onManagerReActive()
+    {
         const auto highScores = highScoreParser->getHighScores("resources/highscores.txt");
         std::string highScoreLabelText = "HighScores: \n";
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++)
+        {
             highScoreLabelText += std::to_string(i + 1) + ". " + std::to_string(highScores.at(i)) + "\n";
         }
         highScoreLabel.setString(highScoreLabelText);
     }
 
-    MenuState::MenuState() {
+    MenuState::MenuState()
+    {
         playButton.setString("PLAY");
         playButton.setCharacterSize(0.1);
         playButton.setPosition({0, -0.3});
         const auto highScores = highScoreParser->getHighScores("resources/highscores.txt");
         std::string highScoreLabelText = "HighScores: \n";
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++)
+        {
             highScoreLabelText += std::to_string(i + 1) + ". " + std::to_string(highScores.at(i)) + "\n";
         }
         highScoreLabel.setString(highScoreLabelText);
@@ -82,9 +93,10 @@ namespace renderer {
         highScoreLabel.setHorizontalOrigin(Label::HorizontalOriginType::MIDDLE);
     }
 
-    void MenuState::onPlayButtonClick(StateManager &stateManager) const {
+    void MenuState::onPlayButtonClick(StateManager& stateManager) const
+    {
         std::unique_ptr<IState> levelState = Game::getInstance()->getAppConfig().getFactoryCollection().
-                getStateFactory()->createLevelState();
+                                                                  getStateFactory()->createLevelState();
         stateManager.pushState(std::move(levelState));
     }
 } // renderer

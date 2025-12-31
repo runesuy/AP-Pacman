@@ -7,12 +7,14 @@
 
 #include "core/observer/Observable.h"
 
-namespace logic {
+namespace logic
+{
     /**
      * Keeps track of the amount of lives of the player.
      * @see Score
      */
-    class LifeCounter : public Observable<LifeCounter> {
+    class LifeCounter : public Observable<LifeCounter>
+    {
         inline static const unsigned int lifeStart = 3;
         unsigned int livesLeft = lifeStart;
 

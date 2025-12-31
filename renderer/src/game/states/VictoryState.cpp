@@ -6,20 +6,26 @@
 #include "core/states/StateManager.h"
 #include "game/states/LevelState.h"
 
-namespace renderer {
-    void VictoryState::update(StateManager &stateManager) {
+namespace renderer
+{
+    void VictoryState::update(StateManager& stateManager)
+    {
     }
 
-    void VictoryState::processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) {
-        if (event.type == sf::Event::KeyReleased) {
+    void VictoryState::processInput(sf::Event& event, StateManager& stateManager, const sf::RenderWindow& window)
+    {
+        if (event.type == sf::Event::KeyReleased)
+        {
             keyReleased = true;
         }
-        if (event.type == sf::Event::KeyPressed && keyReleased) {
+        if (event.type == sf::Event::KeyPressed && keyReleased)
+        {
             stateManager.replaceState(std::make_unique<LevelState>(passToNextLevel));
         }
     }
 
-    void VictoryState::draw(sf::RenderWindow &window, StateManager &stateManager) {
+    void VictoryState::draw(sf::RenderWindow& window, StateManager& stateManager)
+    {
         currentScoreLabel.setString(
             currentScoreLabelPref + std::to_string(passToNextLevel->getScoreCounter().getScore()));
         victoryLabel.draw(window);
@@ -27,7 +33,8 @@ namespace renderer {
         currentScoreLabel.draw(window);
     }
 
-    VictoryState::VictoryState(const std::shared_ptr<logic::Score> &passToNextLevel) {
+    VictoryState::VictoryState(const std::shared_ptr<logic::Score>& passToNextLevel)
+    {
         this->passToNextLevel = passToNextLevel;
         passToNextLevel->increaseDifficultyMultiplier();
         victoryLabel.setCharacterSize(0.2);

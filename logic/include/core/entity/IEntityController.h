@@ -7,10 +7,11 @@
 #include "EntityCommands.h"
 #include "core/world/objects/SizedWorldObject.h"
 
-namespace logic {
+namespace logic
+{
     class World;
 
-    template<typename Derived>
+    template <typename Derived>
     class EntityModel;
 
     /**
@@ -22,8 +23,9 @@ namespace logic {
      *
      * @see EntityModel
      */
-    template<typename DerivedEntityModel>
-    class IEntityController {
+    template <typename DerivedEntityModel>
+    class IEntityController
+    {
     public:
         virtual ~IEntityController() = default;
 
@@ -32,23 +34,24 @@ namespace logic {
          * @param world
          * @param entity
          */
-        virtual void update(World &world, DerivedEntityModel &entity) = 0;
+        virtual void update(World& world, DerivedEntityModel& entity) = 0;
 
         /**
          * Update the entity based on the command.
          * @param command
          * @param entity
          */
-        virtual void processCommand(EntityCommand command, DerivedEntityModel &entity) = 0;
+        virtual void processCommand(EntityCommand command, DerivedEntityModel& entity) = 0;
 
         /**
          * Handle a collision between entity and other.
          * @param entity
          * @param other
          */
-        virtual void onCollision(DerivedEntityModel &entity, const SizedWorldObject &other, World &world) = 0;
+        virtual void onCollision(DerivedEntityModel& entity, const SizedWorldObject& other, World& world) = 0;
 
-        virtual void handleWorldEvent(WorldObject::WorldEventT event, DerivedEntityModel &entity) {
+        virtual void handleWorldEvent(WorldObject::WorldEventT event, DerivedEntityModel& entity)
+        {
         };
     };
 }

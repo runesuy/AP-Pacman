@@ -9,14 +9,16 @@
 #include "core/parser/IConfigParser.h"
 #include "json.hpp"
 
-namespace renderer {
+namespace renderer
+{
     using json = nlohmann::json;
 
     /**
      * Concrete implementation of IConfigParser that reads configuration from a JSON file.
      * Reads file resources/config.json
      */
-    class JSONConfigParser : public IConfigParser {
+    class JSONConfigParser : public IConfigParser
+    {
         json _jsonData;
         const std::string configFilePath = "resources/config.json";
 
@@ -29,7 +31,7 @@ namespace renderer {
 
         [[nodiscard]] std::map<std::string, sf::IntRect> getTextureRects() const override;
 
-        [[nodiscard]] sf::IntRect getTextureRectByName(const std::string &name) const override;
+        [[nodiscard]] sf::IntRect getTextureRectByName(const std::string& name) const override;
     };
 } // renderer
 

@@ -9,7 +9,8 @@
 #include "WorldObject.h"
 #include "SizedWorldObject.h"
 
-namespace logic {
+namespace logic
+{
     /**
      * Handles collisions between WorldObjects and calls their onCollision methods when the rectangles given by the
      * position and size of the objects intersect.
@@ -17,7 +18,8 @@ namespace logic {
      *
      * @note This means only SizedWorldObjects have collisions.
      */
-    class CollisionHandler {
+    class CollisionHandler
+    {
     public:
         /**
          * Handle collisions between objects of the list.
@@ -26,7 +28,7 @@ namespace logic {
          * @note Only SizedWorldObjects have collisions.
          * @param objects List of objects.
          */
-        static void handleCollisions(std::vector<std::shared_ptr<WorldObject> > &objects, World &world);
+        static void handleCollisions(std::vector<std::shared_ptr<WorldObject>>& objects, World& world);
 
         /**
          * Handle a collision from object a to object b.
@@ -34,8 +36,8 @@ namespace logic {
          * @param objectA
          * @param objectB
          */
-        static void handleCollision(const std::shared_ptr<SizedWorldObject> &objectA,
-                                    const std::shared_ptr<SizedWorldObject> &objectB, World &world);
+        static void handleCollision(const std::shared_ptr<SizedWorldObject>& objectA,
+                                    const std::shared_ptr<SizedWorldObject>& objectB, World& world);
     };
 } // logic
 

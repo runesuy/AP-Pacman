@@ -5,13 +5,16 @@
 #include "core/drawable/ui/Icon.h"
 #include "core/utils/Camera.h"
 
-namespace renderer {
-    std::vector<std::unique_ptr<sf::Shape> > Icon::getSFShapes(sf::RenderWindow &window) {
+namespace renderer
+{
+    std::vector<std::unique_ptr<sf::Shape>> Icon::getSFShapes(sf::RenderWindow& window)
+    {
         return {};
     }
 
-    std::vector<std::shared_ptr<sf::Sprite> > Icon::getSFSprites(sf::RenderWindow &window) {
-        std::vector<std::shared_ptr<sf::Sprite> > sprites;
+    std::vector<std::shared_ptr<sf::Sprite>> Icon::getSFSprites(sf::RenderWindow& window)
+    {
+        std::vector<std::shared_ptr<sf::Sprite>> sprites;
         sf::Vector2<unsigned int> textureSize = sprite.getTexture()->getSize();
         sf::Vector2<float> projectedSize = Camera::project(size, window);
         sprite.setScale(projectedSize.x / static_cast<float>(textureSize.x),
@@ -20,15 +23,18 @@ namespace renderer {
         return {std::make_shared<sf::Sprite>(sprite)};
     }
 
-    std::vector<std::unique_ptr<sf::Text> > Icon::getSFTexts(sf::RenderWindow &window) {
+    std::vector<std::unique_ptr<sf::Text>> Icon::getSFTexts(sf::RenderWindow& window)
+    {
         return {};
     }
 
-    void Icon::setTexture(const sf::Texture &texture) {
+    void Icon::setTexture(const sf::Texture& texture)
+    {
         sprite.setTexture(texture);
     }
 
-    void Icon::setSize(const logic::Size &size) {
+    void Icon::setSize(const logic::Size& size)
+    {
         this->size = size;
     }
 } // renderer

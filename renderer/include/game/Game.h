@@ -8,7 +8,8 @@
 #include "core/states/StateManager.h"
 #include "core/config/IAppConfig.h"
 
-namespace renderer {
+namespace renderer
+{
     /**
      * Singleton
      * Manages the representation side of the game, such as:
@@ -16,7 +17,8 @@ namespace renderer {
      * - Factory creation
      * - Processing user interaction
      */
-    class Game {
+    class Game
+    {
         /**
          * The initial state the StateManager starts in
          */
@@ -30,14 +32,14 @@ namespace renderer {
         /**
          * All the game configurations
          */
-        IAppConfig &appConfig;
+        IAppConfig& appConfig;
 
         /**
          * The singleton instance
          */
         inline static std::shared_ptr<Game> _instance;
 
-        explicit Game(IAppConfig &appConfig);
+        explicit Game(IAppConfig& appConfig);
 
         /**
          * Load resources from config files.
@@ -45,13 +47,13 @@ namespace renderer {
         void loadResources();
 
     public:
-        Game(Game &&) noexcept = delete;
+        Game(Game&&) noexcept = delete;
 
-        Game(Game &) = delete;
+        Game(Game&) = delete;
 
-        Game operator=(Game &&) noexcept = delete;
+        Game operator=(Game&&) noexcept = delete;
 
-        Game operator=(Game &) = delete;
+        Game operator=(Game&) = delete;
 
         /**
          * Start the game.
@@ -62,7 +64,7 @@ namespace renderer {
          * Call to initialize the instance with a IConfig.
          * @return
          */
-        static std::shared_ptr<Game> initializeInstance(IAppConfig &appConfig);
+        static std::shared_ptr<Game> initializeInstance(IAppConfig& appConfig);
 
         /**
          * Get active instance.
@@ -70,7 +72,7 @@ namespace renderer {
          */
         static std::shared_ptr<Game> getInstance();
 
-        [[nodiscard]] IAppConfig &getAppConfig() const;
+        [[nodiscard]] IAppConfig& getAppConfig() const;
     };
 }
 

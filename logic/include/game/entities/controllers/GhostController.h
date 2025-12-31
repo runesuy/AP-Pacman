@@ -10,7 +10,8 @@
 #include "game/entities/controllers/navigation/ManhattanNavigationAgent.h"
 #include "navigation/AStarNavigationAgent.h"
 
-namespace logic {
+namespace logic
+{
     /**
      * Controller for basic ghost behavior.
      *
@@ -25,7 +26,8 @@ namespace logic {
      * While in FRIGHTENED mode, a timer is set. After the timer expires, the ghost switches back to CHASE mode.
      * The duration of the timer depends on the difficulty multiplier of the ghost.
      */
-    class GhostController : public MovingEntityController<GhostModel> {
+    class GhostController : public MovingEntityController<GhostModel>
+    {
         const std::unique_ptr<INavigationAgent> returnNavigationAgent = std::make_unique<AStarNavigationAgent>();
         const std::unique_ptr<INavigationAgent> frightenedNavigationAgent = std::make_unique<
             ManhattanNavigationAgent>();
@@ -33,14 +35,14 @@ namespace logic {
         bool justChangedToFrightened = false;
 
     protected:
-        static bool isAtIntersectionOrDeadEnd(const World &world, const GhostModel &entity);
+        static bool isAtIntersectionOrDeadEnd(const World& world, const GhostModel& entity);
 
     public:
-        void update(World &world, GhostModel &entity) override;
+        void update(World& world, GhostModel& entity) override;
 
-        void handleWorldEvent(WorldObject::WorldEventT event, GhostModel &entity) override;
+        void handleWorldEvent(WorldObject::WorldEventT event, GhostModel& entity) override;
 
-        void onCollision(GhostModel &entity, const SizedWorldObject &other, World &world) override;
+        void onCollision(GhostModel& entity, const SizedWorldObject& other, World& world) override;
     };
 } // logic
 

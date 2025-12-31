@@ -7,7 +7,8 @@
 #include "core/entity/EntityModel.h"
 #include "core/world/IWorldObjectView.h"
 
-namespace renderer {
+namespace renderer
+{
     /**
      * View class representing the visual aspect of an entity in the game.
      * Inherits from DrawObject to provide drawing capabilities.
@@ -15,7 +16,8 @@ namespace renderer {
      *
      * Has a size property to define the dimensions of the entity in the game world.
      */
-    class EntityView : public IWorldObjectView {
+    class EntityView : public IWorldObjectView
+    {
         logic::Size size = {0, 0};
 
     public:
@@ -23,13 +25,13 @@ namespace renderer {
          * Get the size of the entity view.
          * @return
          */
-        [[nodiscard]] const logic::Size &getSize() const;
+        [[nodiscard]] const logic::Size& getSize() const;
 
         /**
          * Set the size of the entity view.
          * @param size
          */
-        virtual void setSize(const logic::Size &size);
+        virtual void setSize(const logic::Size& size);
     };
 }
 

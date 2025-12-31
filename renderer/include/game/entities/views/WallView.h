@@ -10,18 +10,20 @@
 #include "core/entity/modular/modules/RectangleModule.h"
 #include "core/observer/Observable.h"
 
-namespace renderer {
+namespace renderer
+{
     /**
      * View class representing the visual aspect of a wall entity in the game.
      * Inherits from EntityView and implements the observer pattern to update its state based on the WallModel.
      */
-    class WallView : public ModularEntityView, public logic::IObserver<logic::WallModel> {
+    class WallView : public ModularEntityView, public logic::IObserver<logic::WallModel>
+    {
     public:
         WallView();
 
-        void update(logic::WallModel &subject) override;
+        void update(logic::WallModel& subject) override;
 
-        void setSize(const logic::Size &size) override;
+        void setSize(const logic::Size& size) override;
 
         bool isMarkedForRemoval() override;
     };

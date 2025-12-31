@@ -6,14 +6,16 @@
 #define AP_PACMAN_STOPWATCH_H
 #include "chrono"
 
-namespace logic {
+namespace logic
+{
     using namespace std::chrono;
 
     /**
      * Calculates and holds the time in seconds between the last two ticks.
      * Can be used for dynamic frame rates int the game, by using deltaTime provided by Stopwatch.
      */
-    class Stopwatch {
+    class Stopwatch
+    {
     public:
         class Timer;
         /**
@@ -40,7 +42,7 @@ namespace logic {
         /**
          * Timers updated on each tick.
          */
-        mutable std::vector<std::shared_ptr<Stopwatch::Timer> > _timers;
+        mutable std::vector<std::shared_ptr<Stopwatch::Timer>> _timers;
 
         inline static std::shared_ptr<Stopwatch> _instance;
 
@@ -68,7 +70,7 @@ namespace logic {
         /**
          * Add a timer to be updated on each tick.
          */
-        void addTimer(const std::shared_ptr<Timer> &timer) const;
+        void addTimer(const std::shared_ptr<Timer>& timer) const;
     };
 }
 

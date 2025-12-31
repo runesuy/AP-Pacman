@@ -8,14 +8,16 @@
 #include "core/world/TileMap.h"
 #include "core/entity/IEntityFactory.h"
 
-namespace logic {
+namespace logic
+{
     /**
      * Config interface for the logic.
      * Needs to be passed to world.
      *
      * The Config contains info for the game's logic section to improve customizability of the game without extensive redesigning of the original code.
      */
-    class IConfig {
+    class IConfig
+    {
     public:
         virtual ~IConfig() = default;
 
@@ -27,7 +29,7 @@ namespace logic {
          *
          * @see logic::TileMap
          */
-        [[nodiscard]] virtual const TileMap &getTileMap() const = 0;
+        [[nodiscard]] virtual const TileMap& getTileMap() const = 0;
 
         /**
          * Choose a new map and load it in the config.
@@ -43,7 +45,7 @@ namespace logic {
          *
          * @see logic::IEntityFactory
          */
-        [[nodiscard]] virtual std::shared_ptr<logic::IEntityFactory> getEntityFactory() const = 0;
+        [[nodiscard]] virtual std::shared_ptr<IEntityFactory> getEntityFactory() const = 0;
     };
 } // logic
 

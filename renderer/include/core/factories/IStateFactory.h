@@ -7,7 +7,8 @@
 
 #include "game/states/PausedState.h"
 
-namespace renderer {
+namespace renderer
+{
     class MenuState;
     class LevelState;
 
@@ -15,7 +16,8 @@ namespace renderer {
      * Interface for state factory, responsible for creating different game states.
      * Interchangeable using config system.
      */
-    class IStateFactory {
+    class IStateFactory
+    {
     public:
         virtual ~IStateFactory() = default;
 

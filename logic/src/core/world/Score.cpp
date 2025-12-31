@@ -6,40 +6,49 @@
 
 #include "game/entities/ObserverEvents.h"
 
-void logic::Score::update(logic::PlayerModel &subject) {
+void logic::Score::update(logic::PlayerModel& subject)
+{
 }
 
-void logic::Score::update(PlayerModel &subject, ObservableTypes::EventType event) {
+void logic::Score::update(PlayerModel& subject, ObservableTypes::EventType event)
+{
     scoreCounter.processEvent(event);
     lifeCounter.processEvent(event);
 }
 
 
-void logic::Score::onTick() {
+void logic::Score::onTick()
+{
     scoreCounter.onTick();
 }
 
 
-const logic::LifeCounter &logic::Score::getLifeCounter() const {
+const logic::LifeCounter& logic::Score::getLifeCounter() const
+{
     return lifeCounter;
 }
 
-logic::LifeCounter &logic::Score::getLifeCounter() {
+logic::LifeCounter& logic::Score::getLifeCounter()
+{
     return lifeCounter;
 }
 
-const logic::ScoreCounter &logic::Score::getScoreCounter() const {
+const logic::ScoreCounter& logic::Score::getScoreCounter() const
+{
     return scoreCounter;
 }
 
-logic::ScoreCounter &logic::Score::getScoreCounter() {
+logic::ScoreCounter& logic::Score::getScoreCounter()
+{
     return scoreCounter;
 }
 
-float logic::Score::getDifficultyMultiplier() const {
+float logic::Score::getDifficultyMultiplier() const
+{
     return difficultyMultiplier;
 }
 
-void logic::Score::increaseDifficultyMultiplier() {
+void logic::Score::increaseDifficultyMultiplier()
+{
     difficultyMultiplier += DIFFICULTY_INCREASE;
 }

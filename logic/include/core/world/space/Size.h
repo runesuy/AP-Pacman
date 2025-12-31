@@ -7,25 +7,27 @@
 
 #include "ICoordinate.h"
 
-namespace logic {
+namespace logic
+{
     /**
      * A size class representing width and height.
      * Size width and height must always be non-negative.
      */
-    class Size : public ICoordinate {
+    class Size : public ICoordinate
+    {
         CoordinateType width;
         CoordinateType height;
 
     public:
         Size(CoordinateType x, CoordinateType y);
 
-        Size(Size &&) noexcept = default;
+        Size(Size&&) noexcept = default;
 
-        Size(const Size &) = default;
+        Size(const Size&) = default;
 
-        Size &operator=(Size &&) noexcept = default;
+        Size& operator=(Size&&) noexcept = default;
 
-        Size &operator=(const Size &) = default;
+        Size& operator=(const Size&) = default;
 
         /**
          * @return The width

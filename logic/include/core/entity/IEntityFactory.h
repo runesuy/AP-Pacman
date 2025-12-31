@@ -12,7 +12,8 @@
 #include "game/entities/models/GhostModel.h"
 #include "game/entities/models/GhostTypes.h"
 
-namespace logic {
+namespace logic
+{
     /**
      * Factory interface for creating entity models.
      * Provides methods to create different types of entities.
@@ -21,7 +22,8 @@ namespace logic {
      * @note On creation of an entity, it should be fully initialized except for position and size.
      * @note Each method should also initialize any necessary components for the entity on the representation side.
      */
-    class IEntityFactory {
+    class IEntityFactory
+    {
     public:
         virtual ~IEntityFactory() = default;
 

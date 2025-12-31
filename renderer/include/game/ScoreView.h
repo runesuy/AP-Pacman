@@ -9,15 +9,17 @@
 #include "core/world/Score.h"
 #include "../core/drawable/ui/Label.h"
 
-namespace renderer {
+namespace renderer
+{
     /**
      * Display the current score using a Label.
      */
-    class ScoreView : public logic::IObserver<logic::ScoreCounter>, public Label {
+    class ScoreView : public logic::IObserver<logic::ScoreCounter>, public Label
+    {
     public:
         ScoreView();
 
-        void update(logic::ScoreCounter &subject) override;
+        void update(logic::ScoreCounter& subject) override;
     };
 } // renderer
 

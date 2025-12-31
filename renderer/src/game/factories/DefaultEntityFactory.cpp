@@ -17,8 +17,10 @@
 #include "game/entities/controllers/ManhattanPredictGhostController.h"
 #include "game/entities/views/BlueGhostView.h"
 
-namespace renderer {
-    std::shared_ptr<logic::WallModel> DefaultEntityFactory::createWallModel() {
+namespace renderer
+{
+    std::shared_ptr<logic::WallModel> DefaultEntityFactory::createWallModel()
+    {
         auto wallView = std::make_shared<WallView>();
         auto wallModel = std::make_shared<logic::WallModel>();
         wallModel->addObserver(wallView);
@@ -26,7 +28,8 @@ namespace renderer {
         return wallModel;
     }
 
-    std::shared_ptr<logic::PlayerModel> DefaultEntityFactory::createPlayerModel() {
+    std::shared_ptr<logic::PlayerModel> DefaultEntityFactory::createPlayerModel()
+    {
         auto playerView = std::make_shared<PlayerView>();
         auto playerModel = std::make_shared<logic::PlayerModel>();
         playerModel->addObserver(playerView);
@@ -34,7 +37,8 @@ namespace renderer {
         return playerModel;
     }
 
-    std::shared_ptr<logic::CoinModel> DefaultEntityFactory::createCoinModel() {
+    std::shared_ptr<logic::CoinModel> DefaultEntityFactory::createCoinModel()
+    {
         auto coinView = std::make_shared<CoinView>();
         auto coinModel = std::make_shared<logic::CoinModel>();
         coinModel->addObserver(coinView);
@@ -42,15 +46,18 @@ namespace renderer {
         return coinModel;
     }
 
-    const std::shared_ptr<WorldView> &DefaultEntityFactory::getViewTarget() const {
+    const std::shared_ptr<WorldView>& DefaultEntityFactory::getViewTarget() const
+    {
         return viewTarget;
     }
 
-    void DefaultEntityFactory::setViewTarget(const std::shared_ptr<WorldView> &viewTarget) {
+    void DefaultEntityFactory::setViewTarget(const std::shared_ptr<WorldView>& viewTarget)
+    {
         DefaultEntityFactory::viewTarget = viewTarget;
     }
 
-    std::shared_ptr<logic::FruitModel> DefaultEntityFactory::createPowerupModel() {
+    std::shared_ptr<logic::FruitModel> DefaultEntityFactory::createPowerupModel()
+    {
         auto powerupView = std::make_shared<FruitView>();
         auto powerupModel = std::make_shared<logic::FruitModel>();
         powerupModel->addObserver(powerupView);
@@ -59,9 +66,12 @@ namespace renderer {
     }
 
     std::shared_ptr<logic::GhostModel>
-    DefaultEntityFactory::createGhostModel(logic::GhostType type, float difficultyMultiplier) {
-        switch (type) {
-            case logic::GhostType::RED: {
+    DefaultEntityFactory::createGhostModel(logic::GhostType type, float difficultyMultiplier)
+    {
+        switch (type)
+        {
+        case logic::GhostType::RED:
+            {
                 auto ghostView = std::make_shared<RedGhostView>();
                 auto ghostModel = std::make_shared<logic::GhostModel>(difficultyMultiplier);
                 ghostModel->addObserver(ghostView);
@@ -70,7 +80,8 @@ namespace renderer {
                 ghostModel->setStartDelay(0);
                 return ghostModel;
             }
-            case logic::GhostType::PINK: {
+        case logic::GhostType::PINK:
+            {
                 auto ghostView = std::make_shared<PinkGhostView>();
                 auto ghostModel = std::make_shared<logic::GhostModel>(difficultyMultiplier);
                 ghostModel->addObserver(ghostView);
@@ -79,7 +90,8 @@ namespace renderer {
                 ghostModel->setStartDelay(0);
                 return ghostModel;
             }
-            case logic::GhostType::ORANGE: {
+        case logic::GhostType::ORANGE:
+            {
                 auto ghostView = std::make_shared<OrangeGhostView>();
                 auto ghostModel = std::make_shared<logic::GhostModel>(difficultyMultiplier);
                 ghostModel->addObserver(ghostView);
@@ -88,7 +100,8 @@ namespace renderer {
                 ghostModel->setStartDelay(5);
                 return ghostModel;
             }
-            case logic::GhostType::BLUE: {
+        case logic::GhostType::BLUE:
+            {
                 auto ghostView = std::make_shared<BlueGhostView>();
                 auto ghostModel = std::make_shared<logic::GhostModel>(difficultyMultiplier);
                 ghostModel->addObserver(ghostView);

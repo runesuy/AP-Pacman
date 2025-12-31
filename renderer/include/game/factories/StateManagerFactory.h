@@ -8,8 +8,10 @@
 #include <memory>
 #include "core/states/StateManager.h"
 
-namespace renderer {
-    class StateManagerFactory {
+namespace renderer
+{
+    class StateManagerFactory
+    {
     public:
         std::unique_ptr<StateManager> createStateManager(std::unique_ptr<IStateFactory> stateFactory);
     };

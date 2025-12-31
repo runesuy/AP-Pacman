@@ -9,11 +9,13 @@
 #include "core/world/World.h"
 #include <set>
 
-namespace logic {
+namespace logic
+{
     /**
      * A navigationAgent providing directions based on the current position, targetPosition and world.
      */
-    class INavigationAgent {
+    class INavigationAgent
+    {
     public:
         virtual ~INavigationAgent() = default;
 
@@ -26,7 +28,7 @@ namespace logic {
          * @return A direction to proceed to in order to get from current to target.
          */
         [[nodiscard]] virtual Direction
-        getNavigationDirection(const Position &current, const Position &target, const World &world,
+        getNavigationDirection(const Position& current, const Position& target, const World& world,
                                std::set<Direction> excludeIfOtherOptions) const = 0;
 
         /**
@@ -38,7 +40,7 @@ namespace logic {
          * @return A direction to proceed to in order to get away from target.
          */
         [[nodiscard]] virtual Direction
-        getNavigationDirectionAway(const Position &current, const Position &target, const World &world,
+        getNavigationDirectionAway(const Position& current, const Position& target, const World& world,
                                    std::set<Direction> excludeIfOtherOptions) const = 0;
     };
 } // logic

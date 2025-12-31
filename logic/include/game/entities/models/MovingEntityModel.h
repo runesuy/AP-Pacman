@@ -8,14 +8,16 @@
 #include "core/entity/EntityModel.h"
 #include "core/world/space/Directions.h"
 
-namespace logic {
+namespace logic
+{
     /**
      * Entity model containing logic for moving in the world.
      * Use together with a MovingEntityController for easy navigation commands to move in te world while not bumping into walls.
      * @tparam EntityModelType
      */
-    template<typename EntityModelType>
-    class MovingEntityModel : public EntityModel<EntityModelType> {
+    template <typename EntityModelType>
+    class MovingEntityModel : public EntityModel<EntityModelType>
+    {
     private:
         /**
          * The current direction of the entity;
@@ -60,23 +62,27 @@ namespace logic {
 
     //-------------------- IMPLEMENTATION -------------------//
 
-    template<typename EntityModelType>
-    void MovingEntityModel<EntityModelType>::setDirection(Direction direction) {
+    template <typename EntityModelType>
+    void MovingEntityModel<EntityModelType>::setDirection(Direction direction)
+    {
         MovingEntityModel::direction = direction;
     }
 
-    template<typename EntityModelType>
-    Direction MovingEntityModel<EntityModelType>::getDirection() const {
+    template <typename EntityModelType>
+    Direction MovingEntityModel<EntityModelType>::getDirection() const
+    {
         return direction;
     };
 
-    template<typename EntityModelType>
-    Direction MovingEntityModel<EntityModelType>::getRequestedDirection() const {
+    template <typename EntityModelType>
+    Direction MovingEntityModel<EntityModelType>::getRequestedDirection() const
+    {
         return requestedDirection;
     };
 
-    template<typename EntityModelType>
-    void MovingEntityModel<EntityModelType>::setRequestedDirection(Direction requestedDirection) {
+    template <typename EntityModelType>
+    void MovingEntityModel<EntityModelType>::setRequestedDirection(Direction requestedDirection)
+    {
         this->requestedDirection = requestedDirection;
     };
 } // logic

@@ -9,34 +9,36 @@
 #include <map>
 #include <functional>
 
-namespace logic {
-    class ManhattanNavigationAgent : public INavigationAgent {
+namespace logic
+{
+    class ManhattanNavigationAgent : public INavigationAgent
+    {
         using DirectionsMapPair = std::pair<double, TileMap::TileType>;
         using DirectionsMap = std::map<Direction, DirectionsMapPair>;
 
-        [[nodiscard]] static double _calculateManhattanDistance(const Position &current, const Position &target);
+        [[nodiscard]] static double _calculateManhattanDistance(const Position& current, const Position& target);
 
         [[nodiscard]] static double
-        _calculateManhattanDistance(Position::CoordinateType row, Position::CoordinateType col, const World &world,
-                                    const Position &target);
+        _calculateManhattanDistance(Position::CoordinateType row, Position::CoordinateType col, const World& world,
+                                    const Position& target);
 
         [[nodiscard]] static DirectionsMap
-        _getDirectionMap(const Position &current, const Position &target,
-                         const World &world);
+        _getDirectionMap(const Position& current, const Position& target,
+                         const World& world);
 
-        static void _removeNonViableDirections(DirectionsMap &m);
+        static void _removeNonViableDirections(DirectionsMap& m);
 
-        static std::set<Direction> _selectBestOptions(const DirectionsMap &, double start,
-                                                      const std::function<bool(double current, double compare)> &
+        static std::set<Direction> _selectBestOptions(const DirectionsMap&, double start,
+                                                      const std::function<bool(double current, double compare)>&
                                                       compare);
 
     public:
         [[nodiscard]] Direction
-        getNavigationDirection(const Position &current, const Position &target, const World &world,
+        getNavigationDirection(const Position& current, const Position& target, const World& world,
                                std::set<Direction> excludeIfOtherOptions) const override;
 
         [[nodiscard]] Direction
-        getNavigationDirectionAway(const Position &current, const Position &target, const World &world,
+        getNavigationDirectionAway(const Position& current, const Position& target, const World& world,
                                    std::set<Direction> excludeIfOtherOptions) const override;
     };
 } // logic

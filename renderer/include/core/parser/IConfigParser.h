@@ -7,11 +7,13 @@
 #include <string>
 #include <map>
 
-namespace renderer {
+namespace renderer
+{
     /**
      * Interface for configuration parser, responsible for loading and retrieving configuration settings.
      */
-    class IConfigParser {
+    class IConfigParser
+    {
     public:
         virtual ~IConfigParser() = default;
 
@@ -39,7 +41,7 @@ namespace renderer {
          * @param name A specific texture rectangle based on a name that is present in the configuration.
          * @return
          */
-        [[nodiscard]] virtual sf::IntRect getTextureRectByName(const std::string &name) const =0;
+        [[nodiscard]] virtual sf::IntRect getTextureRectByName(const std::string& name) const =0;
     };
 }
 #endif //AP_PACMAN_ICONFIGPARSER_H

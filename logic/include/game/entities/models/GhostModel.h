@@ -9,10 +9,13 @@
 #include "CollisionTypes.h"
 #include "core/observer/Observable.h"
 
-namespace logic {
-    class GhostModel : public MovingEntityModel<GhostModel>, public Observable<GhostModel> {
+namespace logic
+{
+    class GhostModel : public MovingEntityModel<GhostModel>, public Observable<GhostModel>
+    {
     public:
-        enum Mode {
+        enum Mode
+        {
             CHASE,
             FRIGHTENED,
             RETURNING_HOME,
@@ -39,9 +42,9 @@ namespace logic {
 
         explicit GhostModel(float difficultyMultiplier);
 
-        void setSize(const Size &size) override;
+        void setSize(const Size& size) override;
 
-        void setPosition(const Position &position) override;
+        void setPosition(const Position& position) override;
 
         void markForRemoval() override;
 
@@ -55,9 +58,9 @@ namespace logic {
 
         [[nodiscard]] Mode getMode() const;
 
-        [[nodiscard]] const Position &getReturnPosition() const;
+        [[nodiscard]] const Position& getReturnPosition() const;
 
-        void setReturnPosition(const Position &returnPosition);
+        void setReturnPosition(const Position& returnPosition);
 
         void setMode(Mode mode);
 

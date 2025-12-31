@@ -5,8 +5,10 @@
 #ifndef AP_PACMAN_WORLDCOMMAND_H
 #define AP_PACMAN_WORLDCOMMAND_H
 
-namespace logic {
-    enum WorldCommand {
+namespace logic
+{
+    enum WorldCommand
+    {
         ON_KEY_PRESS
     };
 }

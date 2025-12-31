@@ -8,12 +8,14 @@
 #include "memory"
 #include <random>
 
-namespace logic {
+namespace logic
+{
     /**
      * A random class for all the game random logic.
      * Singleton class.
      */
-    class Random {
+    class Random
+    {
         /**
          * Instance for singleton behaviour.
          */
@@ -33,13 +35,13 @@ namespace logic {
         ~Random() = default;
 
         //-- SINGLETON BEHAVIOUR--
-        Random(Random &) = delete;
+        Random(Random&) = delete;
 
-        Random(Random &&) noexcept = delete;
+        Random(Random&&) noexcept = delete;
 
-        void operator=(Random &) = delete;
+        void operator=(Random&) = delete;
 
-        void operator=(Random &&) noexcept = delete;
+        void operator=(Random&&) noexcept = delete;
 
         /**
          * Get the Random instance.

@@ -4,20 +4,25 @@
 
 #include "core/world/objects/WorldObject.h"
 
-namespace logic {
-    const Position &WorldObject::getPosition() const {
+namespace logic
+{
+    const Position& WorldObject::getPosition() const
+    {
         return position;
     }
 
-    void WorldObject::setPosition(const Position &position) {
+    void WorldObject::setPosition(const Position& position)
+    {
         this->position = position;
     }
 
-    void WorldObject::markForRemoval() {
+    void WorldObject::markForRemoval()
+    {
         markedForRemoval = true;
     }
 
-    bool WorldObject::isMarkedForRemoval() const {
+    bool WorldObject::isMarkedForRemoval() const
+    {
         return markedForRemoval;
     }
 } // logic

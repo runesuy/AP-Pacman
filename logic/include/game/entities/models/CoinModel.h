@@ -9,16 +9,18 @@
 #include "CollisionTypes.h"
 #include "core/observer/Observable.h"
 
-namespace logic {
-    class CoinModel : public EntityModel<CoinModel>, public Observable<CoinModel> {
+namespace logic
+{
+    class CoinModel : public EntityModel<CoinModel>, public Observable<CoinModel>
+    {
         static constexpr CollisionType collisionType = COIN;
 
     public:
         CoinModel();
 
-        void setSize(const Size &size) override;
+        void setSize(const Size& size) override;
 
-        void setPosition(const Position &position) override;
+        void setPosition(const Position& position) override;
 
         void markForRemoval() override;
 

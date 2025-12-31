@@ -7,19 +7,21 @@
 #include "game/entities/models/GhostModel.h"
 #include "GhostController.h"
 
-namespace logic {
+namespace logic
+{
     /**
      * Implements CHASE behavior for a ghost entity by choosing random directions at intersections.
      */
-    class RandomNavGhostController : public GhostController {
+    class RandomNavGhostController : public GhostController
+    {
     public:
-        void processCommand(EntityCommand command, GhostModel &entity) override;
+        void processCommand(EntityCommand command, GhostModel& entity) override;
 
-        void onCollision(GhostModel &entity, const SizedWorldObject &other, World &world) override;
+        void onCollision(GhostModel& entity, const SizedWorldObject& other, World& world) override;
 
-        void update(World &world, GhostModel &entity) override;
+        void update(World& world, GhostModel& entity) override;
 
-        void onWallCollision(World &world, GhostModel &entity) override;
+        void onWallCollision(World& world, GhostModel& entity) override;
 
         /**
          * Choose a direction to request based on the viable options.
@@ -28,7 +30,7 @@ namespace logic {
          * @param world
          * @param entity
          */
-        static void chooseDirection(World &world, GhostModel &entity);
+        static void chooseDirection(World& world, GhostModel& entity);
     };
 }
 #endif //AP_PACMAN_RANDOMNAVGHOSTCONTROLLER_H

@@ -6,11 +6,13 @@
 #define AP_PACMAN_IUPDATEHANDLER_H
 
 
-namespace logic {
+namespace logic
+{
     /**
      * Interface for handling update operations in the game.
      */
-    class IUpdateHandler {
+    class IUpdateHandler
+    {
     public:
         /**
          * Update the game state.

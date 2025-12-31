@@ -9,8 +9,10 @@
 #include "game/entities/models/FruitModel.h"
 #include "core/entity/modular/ModularEntityView.h"
 
-namespace renderer {
-    class FruitView : public ModularEntityView, public logic::IObserver<logic::FruitModel> {
+namespace renderer
+{
+    class FruitView : public ModularEntityView, public logic::IObserver<logic::FruitModel>
+    {
         bool markedForRemoval{false};
 
     public:
@@ -18,9 +20,9 @@ namespace renderer {
 
         bool isMarkedForRemoval() override;
 
-        void setSize(const logic::Size &size) override;
+        void setSize(const logic::Size& size) override;
 
-        void update(logic::FruitModel &subject) override;
+        void update(logic::FruitModel& subject) override;
 
         void markForRemoval();
     };

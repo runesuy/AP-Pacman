@@ -8,11 +8,13 @@
 
 #include "Position.h"
 
-namespace logic {
+namespace logic
+{
     /**
      * Possible direction a entity can face.
      */
-    enum Direction {
+    enum Direction
+    {
         UP,
         DOWN,
         LEFT,

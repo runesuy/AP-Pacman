@@ -6,26 +6,33 @@
 #include "SFML/Graphics.hpp"
 #include "core/states/StateManager.h"
 
-namespace renderer {
-    void GameOverState::update(StateManager &stateManager) {
+namespace renderer
+{
+    void GameOverState::update(StateManager& stateManager)
+    {
     }
 
-    void GameOverState::processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) {
-        if (event.type == sf::Event::KeyReleased) {
+    void GameOverState::processInput(sf::Event& event, StateManager& stateManager, const sf::RenderWindow& window)
+    {
+        if (event.type == sf::Event::KeyReleased)
+        {
             keyReleased = true;
         }
-        if (event.type == sf::Event::KeyPressed && keyReleased) {
+        if (event.type == sf::Event::KeyPressed && keyReleased)
+        {
             stateManager.popState();
         }
     }
 
-    void GameOverState::draw(sf::RenderWindow &window, StateManager &stateManager) {
+    void GameOverState::draw(sf::RenderWindow& window, StateManager& stateManager)
+    {
         gameOverLabel.draw(window);
         descrLabel.draw(window);
         currentScoreLabel.draw(window);
     }
 
-    GameOverState::GameOverState(const std::shared_ptr<logic::Score> &score) {
+    GameOverState::GameOverState(const std::shared_ptr<logic::Score>& score)
+    {
         gameOverLabel.setCharacterSize(0.2);
         gameOverLabel.setVerticalOrigin(Label::VerticalOriginType::BOTTOM);
         gameOverLabel.setHorizontalOrigin(Label::HorizontalOriginType::MIDDLE);

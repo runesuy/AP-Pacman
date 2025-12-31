@@ -11,27 +11,29 @@
 #include "DefaultLogicConfig.h"
 #include "game/parsers/DefaultTextureParser.h"
 
-namespace renderer {
-    class DefaultAppConfig : public IAppConfig {
+namespace renderer
+{
+    class DefaultAppConfig : public IAppConfig
+    {
         DefaultFactoryCollection factoryCollection;
         JSONConfigParser configParser;
         DefaultLogicConfig logicConfig;
         DefaultTextureParser textureParser;
 
     public:
-        IFactoryCollection &getFactoryCollection() override;
+        IFactoryCollection& getFactoryCollection() override;
 
-        [[nodiscard]] const IConfigParser &getConfigParser() const override;
+        [[nodiscard]] const IConfigParser& getConfigParser() const override;
 
-        IConfigParser &getConfigParser() override;
+        IConfigParser& getConfigParser() override;
 
-        [[nodiscard]] const logic::IConfig &getLogicConfig() const override;
+        [[nodiscard]] const logic::IConfig& getLogicConfig() const override;
 
-        [[nodiscard]] logic::IConfig &getLogicConfig() override;
+        [[nodiscard]] logic::IConfig& getLogicConfig() override;
 
-        [[nodiscard]] const DefaultTextureParser &getTextureParser() const override;
+        [[nodiscard]] const DefaultTextureParser& getTextureParser() const override;
 
-        ITextureParser &getTextureParser() override;
+        ITextureParser& getTextureParser() override;
     };
 } // renderer
 

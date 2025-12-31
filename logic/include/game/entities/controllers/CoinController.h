@@ -8,14 +8,16 @@
 #include "game/entities/models/CoinModel.h"
 #include "CollectableController.h"
 
-namespace logic {
-    class CoinController : public CollectableController<CoinModel> {
+namespace logic
+{
+    class CoinController : public CollectableController<CoinModel>
+    {
     public:
-        void update(World &world, CoinModel &entity) override;
+        void update(World& world, CoinModel& entity) override;
 
-        void processCommand(EntityCommand command, CoinModel &entity) override;
+        void processCommand(EntityCommand command, CoinModel& entity) override;
 
-        void onCollision(CoinModel &entity, const SizedWorldObject &other, World &world) override;
+        void onCollision(CoinModel& entity, const SizedWorldObject& other, World& world) override;
     };
 } // logic
 

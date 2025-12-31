@@ -9,23 +9,29 @@
 #include "core/entity/modular/ModularEntityView.h"
 #include "game/Game.h"
 
-namespace renderer {
-    void AnimatedSpriteModule::update(ModularEntityView &subject) {
+namespace renderer
+{
+    void AnimatedSpriteModule::update(ModularEntityView& subject)
+    {
         setSize(subject.getSize());
     }
 
-    std::vector<std::unique_ptr<sf::Shape> > AnimatedSpriteModule::getSFShapes(sf::RenderWindow &window) const {
+    std::vector<std::unique_ptr<sf::Shape>> AnimatedSpriteModule::getSFShapes(sf::RenderWindow& window) const
+    {
         return {};
     }
 
-    std::vector<std::shared_ptr<sf::Sprite> > AnimatedSpriteModule::getSFSprites(sf::RenderWindow &window) const {
-        if (!textures.contains(currentAnimation) || textures.at(currentAnimation).empty()) {
+    std::vector<std::shared_ptr<sf::Sprite>> AnimatedSpriteModule::getSFSprites(sf::RenderWindow& window) const
+    {
+        if (!textures.contains(currentAnimation) || textures.at(currentAnimation).empty())
+        {
             return {};
         }
 
         elapsedTime += logic::Stopwatch::getInstance()->getDeltaTime();
 
-        while (elapsedTime >= frameDuration) {
+        while (elapsedTime >= frameDuration)
+        {
             elapsedTime -= frameDuration;
             currentFrameIndex = currentFrameIndex + 1;
         }
@@ -43,31 +49,39 @@ namespace renderer {
         return {std::make_shared<sf::Sprite>(sprite)};
     }
 
-    std::vector<std::unique_ptr<sf::Text> > AnimatedSpriteModule::getSFTexts() const {
+    std::vector<std::unique_ptr<sf::Text>> AnimatedSpriteModule::getSFTexts() const
+    {
         return {};
     }
 
     void AnimatedSpriteModule::setAnimations(
-        const std::map<std::string, std::vector<std::shared_ptr<sf::Texture> > > &textures) {
+        const std::map<std::string, std::vector<std::shared_ptr<sf::Texture>>>& textures)
+    {
         this->textures = textures;
     }
 
-    void AnimatedSpriteModule::setSize(const logic::Size &size) {
+    void AnimatedSpriteModule::setSize(const logic::Size& size)
+    {
         this->size = size;
     }
 
-    void AnimatedSpriteModule::setFrameDuration(float frameDuration) {
+    void AnimatedSpriteModule::setFrameDuration(float frameDuration)
+    {
         AnimatedSpriteModule::frameDuration = frameDuration;
     }
 
-    void AnimatedSpriteModule::setCurrentAnimation(const std::string &currentAnimation) {
+    void AnimatedSpriteModule::setCurrentAnimation(const std::string& currentAnimation)
+    {
         AnimatedSpriteModule::currentAnimation = currentAnimation;
     }
 
-    void AnimatedSpriteModule::setAnimations(const std::map<std::string, std::vector<std::string> > &textures) {
+    void AnimatedSpriteModule::setAnimations(const std::map<std::string, std::vector<std::string>>& textures)
+    {
         this->textures.clear();
-        for (auto &[animationName, textureVec]: textures) {
-            for (const std::string &textureName: textureVec) {
+        for (auto& [animationName, textureVec] : textures)
+        {
+            for (const std::string& textureName : textureVec)
+            {
                 this->textures[animationName].push_back(std::make_shared<sf::Texture>(
                     Game::getInstance()->getAppConfig().getTextureParser().getTexture(textureName)));
             }

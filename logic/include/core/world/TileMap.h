@@ -10,15 +10,18 @@
 #include "core/world/space/Size.h"
 #include "core/world/space/Directions.h"
 
-namespace logic {
+namespace logic
+{
     class World;
 
-    class TileMap {
+    class TileMap
+    {
     public:
         /**
          * All possible tile types in the tile map.
          */
-        enum TileType {
+        enum TileType
+        {
             EMPTY,
             WALL,
             COIN,
@@ -35,13 +38,13 @@ namespace logic {
         /**
          * The tile map data represented as a 2D vector of TileType.
          */
-        std::vector<std::vector<TileType> > mapData;
+        std::vector<std::vector<TileType>> mapData;
 
     public:
         /**
          * @return A row major 2d grid representing the tile map's tile types.
          */
-        [[nodiscard]] const auto &getMapData() const;
+        [[nodiscard]] const auto& getMapData() const;
 
         /**
          * Load the tile map into the given world.
@@ -49,26 +52,26 @@ namespace logic {
          * Afterward the entity is added to the world.
          * @param world
          */
-        void loadToWorld(World &world) const;
+        void loadToWorld(World& world) const;
 
         /**
          * Add a row to the tile map.
          * @param row A vector representing a row of tile types.
          * @throws std::invalid_argument if the row size does not match existing rows.
          */
-        void addRow(const std::vector<TileType> &row);
+        void addRow(const std::vector<TileType>& row);
 
         /**
          * @param position World position.
          * @return The original tile at the given position in the world.
          */
-        [[nodiscard]] TileType getTileType(const Position &position) const;
+        [[nodiscard]] TileType getTileType(const Position& position) const;
 
         /**
          * @param position
          * @return (row, col) of the position on the map
          */
-        [[nodiscard]] std::pair<int, int> getGridPosition(const Position &position) const;
+        [[nodiscard]] std::pair<int, int> getGridPosition(const Position& position) const;
 
         /**
          *
@@ -105,9 +108,10 @@ namespace logic {
          */
         [[nodiscard]] unsigned int getColumnCount() const;
 
-        [[nodiscard]] std::vector<Direction> getViableDirections(const World &world, const Position &position) const;
+        [[nodiscard]] std::vector<Direction> getViableDirections(const World& world, const Position& position) const;
 
-        [[nodiscard]] TileType getTileInDirection(const World &world, const Position &position, Direction direction) const;
+        [[nodiscard]] TileType getTileInDirection(const World& world, const Position& position,
+                                                  Direction direction) const;
     };
 } // logic
 

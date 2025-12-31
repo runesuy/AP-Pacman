@@ -5,17 +5,19 @@
 #ifndef AP_PACMAN_IHIGHSCOREPARSER_H
 #define AP_PACMAN_IHIGHSCOREPARSER_H
 
-namespace logic {
+namespace logic
+{
     /**
      * Parser for reading and writing high scores to a file.
      */
-    class IHighScoreParser {
+    class IHighScoreParser
+    {
     public:
         virtual ~IHighScoreParser() = default;
 
-        [[nodiscard]] virtual std::vector<int> getHighScores(const std::string &file) const =0;
+        [[nodiscard]] virtual std::vector<int> getHighScores(const std::string& file) const =0;
 
-        virtual void writeHighScores(const std::vector<int> &highScores, const std::string &file) =0;
+        virtual void writeHighScores(const std::vector<int>& highScores, const std::string& file) =0;
     };
 } // logic
 

@@ -6,27 +6,33 @@
 #include "game/entities/models/PlayerModel.h"
 #include "game/entities/controllers/CoinController.h"
 
-namespace logic {
-    void CoinModel::setSize(const Size &size) {
+namespace logic
+{
+    void CoinModel::setSize(const Size& size)
+    {
         EntityModel::setSize(size);
         updateObservers();
     }
 
-    void CoinModel::setPosition(const Position &position) {
+    void CoinModel::setPosition(const Position& position)
+    {
         WorldObject::setPosition(position);
         updateObservers();
     }
 
-    void CoinModel::markForRemoval() {
+    void CoinModel::markForRemoval()
+    {
         WorldObject::markForRemoval();
         updateObservers();
     }
 
-    CoinModel::CoinModel() {
+    CoinModel::CoinModel()
+    {
         controller = std::make_shared<logic::CoinController>();
     }
 
-    SizedWorldObject::CollisionTypeT CoinModel::getCollisionType() const {
+    SizedWorldObject::CollisionTypeT CoinModel::getCollisionType() const
+    {
         return collisionType;
     }
 } // logic

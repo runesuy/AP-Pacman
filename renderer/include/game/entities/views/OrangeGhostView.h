@@ -10,8 +10,10 @@
 #include "game/entities/models/GhostModel.h"
 #include "GhostView.h"
 
-namespace renderer {
-    class OrangeGhostView : public GhostView {
+namespace renderer
+{
+    class OrangeGhostView : public GhostView
+    {
         inline static const AnimationsMap animations{
             {
                 "move-right",

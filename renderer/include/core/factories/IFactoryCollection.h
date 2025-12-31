@@ -7,8 +7,10 @@
 
 #include "game/factories/StateManagerFactory.h"
 
-namespace renderer {
-    class IFactoryCollection {
+namespace renderer
+{
+    class IFactoryCollection
+    {
     public:
         virtual ~IFactoryCollection() = default;
 

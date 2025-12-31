@@ -7,11 +7,13 @@
 
 #endif //AP_PACMAN_GHOSTTYPES_H
 
-namespace logic {
+namespace logic
+{
     /**
      * Enumeration of different ghost types in the game.
      */
-    enum class GhostType {
+    enum class GhostType
+    {
         RED,
         PINK,
         BLUE,

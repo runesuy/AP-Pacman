@@ -8,14 +8,17 @@
 #include "core/handlers/IDrawHandler.h"
 #include "IState.h"
 
-namespace renderer {
-    template<typename DerivedState>
-    class IStateDrawHandler : public IDrawHandler {
+namespace renderer
+{
+    template <typename DerivedState>
+    class IStateDrawHandler : public IDrawHandler
+    {
     public:
-        void draw(sf::RenderWindow &window) final {
+        void draw(sf::RenderWindow& window) final
+        {
         };
 
-        virtual void draw(sf::RenderWindow &window, DerivedState &state, StateManager &stateManager) = 0;
+        virtual void draw(sf::RenderWindow& window, DerivedState& state, StateManager& stateManager) = 0;
     };
 } // renderer
 

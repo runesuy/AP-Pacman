@@ -5,11 +5,13 @@
 #ifndef AP_PACMAN_OBSERVABLETYPES_H
 #define AP_PACMAN_OBSERVABLETYPES_H
 
-namespace logic {
+namespace logic
+{
     /**
      * Types used for the Observable and Observer classes.
      */
-    class ObservableTypes {
+    class ObservableTypes
+    {
     public:
         /**
          * Type of events that can be passed from observable to observer.

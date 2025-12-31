@@ -8,20 +8,23 @@
 #include "core/handlers/IInputHandler.h"
 #include "SFML/Graphics.hpp"
 
-namespace renderer {
+namespace renderer
+{
     class StateManager;
     class IState;
 
     /**
      * Interface for handling input specific to a game state.
      */
-    template<typename DerivedState>
-    class IStateInputHandler : public renderer::IInputHandler {
+    template <typename DerivedState>
+    class IStateInputHandler : public renderer::IInputHandler
+    {
     public:
-        virtual void processInput(sf::Event &event, StateManager &stateManager, DerivedState &state,
-                                  const sf::RenderWindow &window) =0;
+        virtual void processInput(sf::Event& event, StateManager& stateManager, DerivedState& state,
+                                  const sf::RenderWindow& window) =0;
 
-        void processInput(sf::Event &event) override {
+        void processInput(sf::Event& event) override
+        {
         };
     };
 }

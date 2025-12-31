@@ -7,11 +7,13 @@
 
 #include "core/parser/IMapParser.h"
 
-namespace renderer {
+namespace renderer
+{
     /**
      * Concrete implementation of IMapParser that reads tile maps from TXT files.
      */
-    class TXTMapParser : public IMapParser {
+    class TXTMapParser : public IMapParser
+    {
     public:
         static const char WALL_CHAR = 'W';
         static const char COIN_CHAR = '.';
@@ -24,7 +26,7 @@ namespace renderer {
         static const char EMPTY_CHAR = ' ';
         static const char POWER_UP_CHAR = 'U';
 
-        logic::TileMap loadMap(const std::string &filename) override;
+        logic::TileMap loadMap(const std::string& filename) override;
     };
 } // renderer
 

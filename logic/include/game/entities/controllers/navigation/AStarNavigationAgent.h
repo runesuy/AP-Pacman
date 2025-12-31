@@ -9,15 +9,17 @@
 // A* pathfinding algorithm implementation
 // based on: https://www.geeksforgeeks.org/dsa/a-search-algorithm/
 
-namespace logic {
+namespace logic
+{
     /**
      * Computes navigation directions using the A* pathfinding algorithm.
      * @warning Does not support away navigation.
      */
-    class AStarNavigationAgent : public INavigationAgent {
+    class AStarNavigationAgent : public INavigationAgent
+    {
     public:
-        [[nodiscard]] Direction getNavigationDirection(const Position &current, const Position &target,
-                                                       const World &world,
+        [[nodiscard]] Direction getNavigationDirection(const Position& current, const Position& target,
+                                                       const World& world,
                                                        std::set<Direction> excludeIfOtherOptions) const override;
 
         /**
@@ -28,9 +30,10 @@ namespace logic {
          * @param excludeIfOtherOptions
          * @return
          */
-        [[nodiscard]] Direction getNavigationDirectionAway(const Position &current, const Position &target,
-                                                           const World &world,
-                                                           std::set<Direction> excludeIfOtherOptions) const override {
+        [[nodiscard]] Direction getNavigationDirectionAway(const Position& current, const Position& target,
+                                                           const World& world,
+                                                           std::set<Direction> excludeIfOtherOptions) const override
+        {
             return NONE;
         };
     };

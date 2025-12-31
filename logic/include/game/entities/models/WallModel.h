@@ -8,14 +8,16 @@
 #include "core/entity/EntityModel.h"
 #include "core/observer/Observable.h"
 
-namespace logic {
+namespace logic
+{
     class World;
 
     /**
      * Entity Model representing a wall in the game world.
      * Observable for integrating with representation layer.
      */
-    class WallModel : public EntityModel<WallModel>, public Observable<WallModel> {
+    class WallModel : public EntityModel<WallModel>, public Observable<WallModel>
+    {
     public:
         WallModel() = default;
 
@@ -24,14 +26,14 @@ namespace logic {
          * Calls the observers to update.
          * @param size
          */
-        void setSize(const Size &size) override;
+        void setSize(const Size& size) override;
 
         /**
          * Sets the position of the wall.
          * Calls the observers to update.
          * @param size
          */
-        void setPosition(const Position &position) override;
+        void setPosition(const Position& position) override;
     };
 } // logic
 

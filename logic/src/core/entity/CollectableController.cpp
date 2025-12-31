@@ -4,5 +4,6 @@
 
 #include "game/entities/controllers/CollectableController.h"
 
-namespace logic {
+namespace logic
+{
 } // logic

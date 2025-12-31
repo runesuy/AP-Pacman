@@ -9,8 +9,10 @@
 #include "core/parsers/IHighScoreParser.h"
 #include "core/parsers/TXTHighScoreParser.h"
 
-namespace logic {
-    class ScoreCounter : public Observable<ScoreCounter> {
+namespace logic
+{
+    class ScoreCounter : public Observable<ScoreCounter>
+    {
         /**
          * The current score.
          */

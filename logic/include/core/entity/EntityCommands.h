@@ -5,14 +5,16 @@
 #ifndef AP_PACMAN_IENTITYCOMMAND_H
 #define AP_PACMAN_IENTITYCOMMAND_H
 
-namespace logic {
+namespace logic
+{
     /**
      * Commands that can be passed to the entities.
      * These commands can be used in the entityControllers.
      *
      * @see IEntityController::processCommand(...)
      */
-    enum EntityCommand {
+    enum EntityCommand
+    {
         TURN_LEFT,
         TURN_RIGHT,
         TURN_UP,

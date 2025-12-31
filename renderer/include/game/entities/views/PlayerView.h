@@ -8,9 +8,11 @@
 #include "core/entity/modular/ModularEntityView.h"
 #include "game/entities/models/PlayerModel.h"
 
-namespace renderer {
-    class PlayerView : public ModularEntityView, public logic::IObserver<logic::PlayerModel> {
-        inline static const std::map<std::string, std::vector<std::string> > animations{
+namespace renderer
+{
+    class PlayerView : public ModularEntityView, public logic::IObserver<logic::PlayerModel>
+    {
+        inline static const std::map<std::string, std::vector<std::string>> animations{
             {
                 "move-right",
                 {"player-right_0", "player-right_1", "player-right_2"},
@@ -40,9 +42,9 @@ namespace renderer {
     public:
         PlayerView();
 
-        void update(logic::PlayerModel &subject) override;
+        void update(logic::PlayerModel& subject) override;
 
-        void setSize(const logic::Size &size) override;
+        void setSize(const logic::Size& size) override;
 
         bool isMarkedForRemoval() override;
 

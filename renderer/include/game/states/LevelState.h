@@ -9,12 +9,14 @@
 #include "core/world/World.h"
 #include "core/world/WorldView.h"
 
-namespace renderer {
+namespace renderer
+{
     /**
      * State representing the main gameplay level.
      * Loads a map on the screen and lets player play the game.
      */
-    class LevelState final : public IState {
+    class LevelState final : public IState
+    {
         std::unique_ptr<logic::World> _world;
         std::shared_ptr<WorldView> _worldView;
 
@@ -23,17 +25,17 @@ namespace renderer {
     public:
         LevelState();
 
-        explicit LevelState(const std::shared_ptr<logic::Score> &score);
+        explicit LevelState(const std::shared_ptr<logic::Score>& score);
 
-        std::unique_ptr<logic::World> &getWorld();
+        std::unique_ptr<logic::World>& getWorld();
 
-        [[nodiscard]] const std::shared_ptr<WorldView> &getWorldView() const;
+        [[nodiscard]] const std::shared_ptr<WorldView>& getWorldView() const;
 
-        void update(StateManager &stateManager) override;
+        void update(StateManager& stateManager) override;
 
-        void processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) override;
+        void processInput(sf::Event& event, StateManager& stateManager, const sf::RenderWindow& window) override;
 
-        void draw(sf::RenderWindow &window, StateManager &stateManager) override;
+        void draw(sf::RenderWindow& window, StateManager& stateManager) override;
     };
 } // renderer
 

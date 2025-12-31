@@ -10,14 +10,16 @@
 #include <memory>
 #include "core/parsers/TXTHighScoreParser.h"
 
-namespace renderer {
+namespace renderer
+{
     /**
      * State representing the main menu of the game.
      * Handles menu navigation and selections.
      *
      * Displays title and press key to go to level state.
      */
-    class MenuState : public IState {
+    class MenuState : public IState
+    {
         Button playButton;
         bool _fontLoaded = false;
         sf::Font _font;
@@ -25,7 +27,7 @@ namespace renderer {
         Label highScoreLabel;
         std::unique_ptr<logic::IHighScoreParser> highScoreParser = std::make_unique<logic::TXTHighScoreParser>();
 
-        void onPlayButtonClick(StateManager &stateManager) const;
+        void onPlayButtonClick(StateManager& stateManager) const;
 
     public:
         MenuState();
@@ -33,11 +35,11 @@ namespace renderer {
         friend class MenuInputHandler;
         friend class MenuDrawHandler;
 
-        void update(StateManager &stateManager) override;
+        void update(StateManager& stateManager) override;
 
-        void processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) override;
+        void processInput(sf::Event& event, StateManager& stateManager, const sf::RenderWindow& window) override;
 
-        void draw(sf::RenderWindow &window, StateManager &stateManager) override;
+        void draw(sf::RenderWindow& window, StateManager& stateManager) override;
 
         void onManagerReActive() override;
     };

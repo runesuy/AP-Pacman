@@ -5,31 +5,38 @@
 #include "game/entities/models/PlayerModel.h"
 #include "game/entities/controllers/PlayerController.h"
 
-namespace logic {
-    void PlayerModel::setPosition(const Position &position) {
+namespace logic
+{
+    void PlayerModel::setPosition(const Position& position)
+    {
         WorldObject::setPosition(position);
         updateObservers();
     }
 
-    void PlayerModel::setSize(const Size &size) {
+    void PlayerModel::setSize(const Size& size)
+    {
         EntityModel::setSize(size);
         updateObservers();
     }
 
-    PlayerModel::PlayerModel() {
+    PlayerModel::PlayerModel()
+    {
         setController(std::make_shared<PlayerController>());
     }
 
-    float PlayerModel::getSpeed() const {
+    float PlayerModel::getSpeed() const
+    {
         return SPEED;
     }
 
-    void PlayerModel::setDirection(Direction direction) {
+    void PlayerModel::setDirection(Direction direction)
+    {
         MovingEntityModel::setDirection(direction);
         updateObservers();
     }
 
-    SizedWorldObject::CollisionTypeT PlayerModel::getCollisionType() const {
+    SizedWorldObject::CollisionTypeT PlayerModel::getCollisionType() const
+    {
         return collisionType;
     }
 } // logic

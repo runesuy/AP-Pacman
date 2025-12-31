@@ -7,12 +7,14 @@
 #include "WorldObject.h"
 #include "core/world/space/Size.h"
 
-namespace logic {
+namespace logic
+{
     /**
      * A world object containing a size and able to handle collisions.
      * The hitbox is defined by the size and position of the object, with the position in the middle of the resulting rectangle.
      */
-    class SizedWorldObject : public WorldObject {
+    class SizedWorldObject : public WorldObject
+    {
         /**
          * The size of the object.
          * Used as hitbox for collision handling.
@@ -30,7 +32,7 @@ namespace logic {
          * The size represents the hitbox of the object.
          * @param size
          */
-        virtual void setSize(const Size &size);
+        virtual void setSize(const Size& size);
 
         /**
          * @return The size of the object.
@@ -42,7 +44,8 @@ namespace logic {
          * Handle a collision from this to the other.
          * @param other
          */
-        virtual void onCollision(const SizedWorldObject &other, World &world) {
+        virtual void onCollision(const SizedWorldObject& other, World& world)
+        {
         };
 
         /**

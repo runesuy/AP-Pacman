@@ -5,13 +5,15 @@
 #ifndef AP_PACMAN_IINPUTHANDLER_H
 #define AP_PACMAN_IINPUTHANDLER_H
 
-namespace renderer {
+namespace renderer
+{
     /**
      * Interface for handling input events.
      */
-    class IInputHandler {
+    class IInputHandler
+    {
     public:
-        virtual void processInput(sf::Event &event) =0;
+        virtual void processInput(sf::Event& event) =0;
 
         virtual ~IInputHandler() = default;
     };

@@ -11,13 +11,15 @@
 #include "SFML/Graphics.hpp"
 #include "core/world/space/Size.h"
 
-namespace renderer {
+namespace renderer
+{
     /**
      * Utility class for projecting logical game coordinates to screen coordinates.
      * Provides static methods to convert logical positions and sizes to pixel values
      * based on the dimensions of the render window.
      */
-    class Camera {
+    class Camera
+    {
     public:
         /**
          * Projects the logical position to the screen position.
@@ -25,7 +27,7 @@ namespace renderer {
          * @param window The render window to project to.
          * @return The screen X position in pixels.
          */
-        static float projectX(logic::Position::CoordinateType posX, const sf::RenderWindow &window);
+        static float projectX(logic::Position::CoordinateType posX, const sf::RenderWindow& window);
 
         /**
          * Projects the logical position to the screen position.
@@ -33,7 +35,7 @@ namespace renderer {
          * @param window The render window to project to.
          * @return The screen X position in pixels.
          */
-        static float projectX(const logic::Position &position, const sf::RenderWindow &window);
+        static float projectX(const logic::Position& position, const sf::RenderWindow& window);
 
         /**
          * Projects the logical position to the screen position.
@@ -41,7 +43,7 @@ namespace renderer {
          * @param window The render window to project to.
          * @return The screen Y position in pixels.
          */
-        static float projectY(logic::Position::CoordinateType posY, const sf::RenderWindow &window);
+        static float projectY(logic::Position::CoordinateType posY, const sf::RenderWindow& window);
 
         /**
          * Projects the logical position to the screen position.
@@ -49,7 +51,7 @@ namespace renderer {
          * @param window The render window to project to.
          * @return The screen Y position in pixels.
          */
-        static float projectY(const logic::Position &position, const sf::RenderWindow &window);
+        static float projectY(const logic::Position& position, const sf::RenderWindow& window);
 
         /**
          * Projects the logical position to the screen position.
@@ -57,7 +59,7 @@ namespace renderer {
          * @param window The render window to project to.
          * @return The screen position in pixels.
          */
-        static sf::Vector2<float> project(const logic::Position &position, const sf::RenderWindow &window);
+        static sf::Vector2<float> project(const logic::Position& position, const sf::RenderWindow& window);
 
         /**
          * Projects the size position to the screen size.
@@ -65,7 +67,7 @@ namespace renderer {
          * @param window The render window to project to.
          * @return The screen size in pixels.
          */
-        static sf::Vector2<float> project(const logic::Size &size, const sf::RenderWindow &window);
+        static sf::Vector2<float> project(const logic::Size& size, const sf::RenderWindow& window);
 
 
         /**
@@ -74,7 +76,7 @@ namespace renderer {
          * @param window The render window to project to.
          * @return The screen X size in pixels.
          */
-        static float sizeX(logic::Position::CoordinateType, const sf::RenderWindow &window);
+        static float sizeX(logic::Position::CoordinateType, const sf::RenderWindow& window);
 
         /**
          * Projects the logical size to the screen size.
@@ -82,7 +84,7 @@ namespace renderer {
          * @param window The render window to project to.
          * @return The screen Y size in pixels.
          */
-        static float sizeY(logic::Position::CoordinateType, const sf::RenderWindow &window);
+        static float sizeY(logic::Position::CoordinateType, const sf::RenderWindow& window);
     };
 }
 

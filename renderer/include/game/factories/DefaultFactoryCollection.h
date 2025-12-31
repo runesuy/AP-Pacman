@@ -7,8 +7,10 @@
 
 #include "core/factories/IFactoryCollection.h"
 
-namespace renderer {
-    class DefaultFactoryCollection : public IFactoryCollection {
+namespace renderer
+{
+    class DefaultFactoryCollection : public IFactoryCollection
+    {
     public:
         std::unique_ptr<StateManagerFactory> getStateManagerFactory() override;
 

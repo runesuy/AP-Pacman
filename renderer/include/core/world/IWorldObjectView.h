@@ -6,8 +6,10 @@
 #define AP_PACMAN_IWORLDOBJECTVIEW_H
 #include "core/drawable/DrawObject.h"
 
-namespace renderer {
-    class IWorldObjectView : public DrawObject {
+namespace renderer
+{
+    class IWorldObjectView : public DrawObject
+    {
     public:
         virtual bool isMarkedForRemoval() =0;
     };

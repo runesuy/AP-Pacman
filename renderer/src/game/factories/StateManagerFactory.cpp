@@ -8,8 +8,10 @@
 #include "core/states/IStateInputHandler.h"
 #include "core/states/IStateUpdateHandler.h"
 
-namespace renderer {
-    std::unique_ptr<StateManager> StateManagerFactory::createStateManager(std::unique_ptr<IStateFactory> stateFactory) {
+namespace renderer
+{
+    std::unique_ptr<StateManager> StateManagerFactory::createStateManager(std::unique_ptr<IStateFactory> stateFactory)
+    {
         auto menuState = stateFactory->createMenuState();
         return std::make_unique<StateManager>(std::move(menuState), std::move(stateFactory));
     }

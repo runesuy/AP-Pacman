@@ -6,27 +6,33 @@
 #include "game/entities/models/PlayerModel.h"
 #include "game/entities/controllers/PowerupController.h"
 
-namespace logic {
-    void FruitModel::setSize(const Size &size) {
+namespace logic
+{
+    void FruitModel::setSize(const Size& size)
+    {
         SizedWorldObject::setSize(size);
         updateObservers();
     }
 
-    void FruitModel::setPosition(const Position &position) {
+    void FruitModel::setPosition(const Position& position)
+    {
         WorldObject::setPosition(position);
         updateObservers();
     }
 
-    void FruitModel::markForRemoval() {
+    void FruitModel::markForRemoval()
+    {
         WorldObject::markForRemoval();
         updateObservers();
     }
 
-    FruitModel::FruitModel() {
+    FruitModel::FruitModel()
+    {
         controller = std::make_shared<PowerupController>();
     }
 
-    SizedWorldObject::CollisionTypeT FruitModel::getCollisionType() const {
+    SizedWorldObject::CollisionTypeT FruitModel::getCollisionType() const
+    {
         return FRUIT;
     }
 } // logic

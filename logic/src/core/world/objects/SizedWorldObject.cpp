@@ -4,12 +4,15 @@
 
 #include "core/world/objects/SizedWorldObject.h"
 
-namespace logic {
-    void SizedWorldObject::setSize(const Size &size) {
+namespace logic
+{
+    void SizedWorldObject::setSize(const Size& size)
+    {
         this->size = size;
     }
 
-    Size SizedWorldObject::getSize() const {
+    Size SizedWorldObject::getSize() const
+    {
         return size;
     }
 } // logic

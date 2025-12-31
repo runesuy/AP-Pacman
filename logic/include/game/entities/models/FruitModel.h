@@ -10,16 +10,18 @@
 #include "game/entities/models/CollisionTypes.h"
 #include "core/observer/Observable.h"
 
-namespace logic {
-    class FruitModel : public EntityModel<FruitModel>, public Observable<FruitModel> {
+namespace logic
+{
+    class FruitModel : public EntityModel<FruitModel>, public Observable<FruitModel>
+    {
         inline static const CollisionType collisionType = FRUIT;
 
     public:
         FruitModel();
 
-        void setSize(const Size &size) override;
+        void setSize(const Size& size) override;
 
-        void setPosition(const Position &position) override;
+        void setPosition(const Position& position) override;
 
         void markForRemoval() override;
 

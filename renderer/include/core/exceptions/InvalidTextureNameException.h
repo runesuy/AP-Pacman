@@ -7,20 +7,24 @@
 #include <string>
 #include <stdexcept>
 
-namespace renderer {
+namespace renderer
+{
     /**
      * Exception thrown when a file cannot be opened.
      */
-    class InvalidTextureNameException : public std::invalid_argument {
+    class InvalidTextureNameException : public std::invalid_argument
+    {
         std::string name;
 
     public:
-        explicit InvalidTextureNameException(const std::string &name) : name(name), std::invalid_argument(
+        explicit InvalidTextureNameException(const std::string& name) : name(name), std::invalid_argument(
                                                                             name + " is not a valid texture name."
-                                                                        ) {
+                                                                        )
+        {
         };
 
-        [[nodiscard]] std::string getPath() const {
+        [[nodiscard]] std::string getPath() const
+        {
             return name;
         }
     };

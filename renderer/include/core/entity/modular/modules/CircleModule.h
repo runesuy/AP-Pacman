@@ -8,8 +8,10 @@
 #include "core/world/space/Size.h"
 #include "core/entity/modular/ModularEntityView.h"
 
-namespace renderer {
-    class CircleModule : public IEntityViewModule {
+namespace renderer
+{
+    class CircleModule : public IEntityViewModule
+    {
         logic::Size size = {0.1, 0.1};
 
         sf::Color fillColor = sf::Color::Red;
@@ -22,23 +24,23 @@ namespace renderer {
          */
         CircleModule() = default;
 
-        std::vector<std::unique_ptr<sf::Shape> > getSFShapes(sf::RenderWindow &window) const override;
+        std::vector<std::unique_ptr<sf::Shape>> getSFShapes(sf::RenderWindow& window) const override;
 
-        [[nodiscard]] std::vector<std::shared_ptr<sf::Sprite> > getSFSprites(sf::RenderWindow &window) const override;
+        [[nodiscard]] std::vector<std::shared_ptr<sf::Sprite>> getSFSprites(sf::RenderWindow& window) const override;
 
-        [[nodiscard]] std::vector<std::unique_ptr<sf::Text> > getSFTexts() const override;
+        [[nodiscard]] std::vector<std::unique_ptr<sf::Text>> getSFTexts() const override;
 
-        [[nodiscard]] const logic::Size &getSize() const;
+        [[nodiscard]] const logic::Size& getSize() const;
 
-        void setSize(const logic::Size &size);
+        void setSize(const logic::Size& size);
 
-        void update(ModularEntityView &subject) override;
+        void update(ModularEntityView& subject) override;
 
         /**
          * Set the fill color of the circle.
          * @param color
          */
-        void setFillColor(const sf::Color &color);
+        void setFillColor(const sf::Color& color);
     };
 } // renderer
 

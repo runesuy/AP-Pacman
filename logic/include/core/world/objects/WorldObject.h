@@ -7,10 +7,12 @@
 
 #include "core/world/space/Position.h"
 
-namespace logic {
+namespace logic
+{
     class World;
 
-    class WorldObject {
+    class WorldObject
+    {
         /**
          * The position of the world object.
          * Used for spatial representation in the world.
@@ -33,19 +35,19 @@ namespace logic {
         /**
          * @return the position of the world object.
          */
-        [[nodiscard]] virtual const Position &getPosition() const;
+        [[nodiscard]] virtual const Position& getPosition() const;
 
         /**
          * Set the position of the world object
          * @param position The new position
          */
-        virtual void setPosition(const Position &position);
+        virtual void setPosition(const Position& position);
 
         /**
          * Update the world object.
          * Called on each game update.
          */
-        virtual void update(World &world) = 0;
+        virtual void update(World& world) = 0;
 
         /**
          * Mark the object to be removed at the end of this update.
@@ -55,7 +57,8 @@ namespace logic {
         /**
          * React on worldEvent
          */
-        virtual void handleWorldEvent(WorldEventT) {
+        virtual void handleWorldEvent(WorldEventT)
+        {
         };
 
         /**

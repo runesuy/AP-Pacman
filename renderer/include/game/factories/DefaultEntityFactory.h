@@ -9,11 +9,13 @@
 #include "game/states/LevelState.h"
 #include "game/entities/models/PlayerModel.h"
 
-namespace renderer {
+namespace renderer
+{
     /**
      * Default implementation of the entity factory interface.
      */
-    class DefaultEntityFactory : public logic::IEntityFactory {
+    class DefaultEntityFactory : public logic::IEntityFactory
+    {
         std::shared_ptr<WorldView> viewTarget;
 
     public:
@@ -25,9 +27,9 @@ namespace renderer {
 
         std::shared_ptr<logic::FruitModel> createPowerupModel() override;
 
-        [[nodiscard]] const std::shared_ptr<WorldView> &getViewTarget() const;
+        [[nodiscard]] const std::shared_ptr<WorldView>& getViewTarget() const;
 
-        void setViewTarget(const std::shared_ptr<WorldView> &viewTarget);
+        void setViewTarget(const std::shared_ptr<WorldView>& viewTarget);
 
         std::shared_ptr<logic::GhostModel> createGhostModel(logic::GhostType type, float difficultyMultiplier) override;
     };

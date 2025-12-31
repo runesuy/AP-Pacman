@@ -12,7 +12,8 @@
 #include <vector>
 #include "LifeCounter.h"
 
-namespace logic {
+namespace logic
+{
     /**
      * World is the center of the logic part of the game.
      *
@@ -20,17 +21,18 @@ namespace logic {
      * simulation only starts when the ON_KEY_PRESSED command is sent,
      * and stops on each player death, send ON_KEY_PRESSED again to continue
      */
-    class World : public Observable<World> {
+    class World : public Observable<World>
+    {
         /**
          * Configuration reference for all logical settings and factories.
          */
-        const IConfig &config;
+        const IConfig& config;
 
         /**
          * All objects present in the world.
          * Updated on update.
          */
-        std::vector<std::shared_ptr<WorldObject> > objects;
+        std::vector<std::shared_ptr<WorldObject>> objects;
 
         /**
          * The score tracks player score and lives based on the world and the player.
@@ -61,13 +63,13 @@ namespace logic {
          * Construct a World with the given configuration.
          * @param config Logic configuration reference.
          */
-        explicit World(const IConfig &config);
+        explicit World(const IConfig& config);
 
         /**
          * Construct a World with the given configuration.
          * @param config Logic configuration reference.
          */
-        explicit World(const IConfig &config, std::shared_ptr<Score> score);
+        explicit World(const IConfig& config, std::shared_ptr<Score> score);
 
         /**
          * Update all objects in the world.
@@ -78,7 +80,7 @@ namespace logic {
          * Get the configuration reference.
          * @return
          */
-        [[nodiscard]] const IConfig &getConfig() const;
+        [[nodiscard]] const IConfig& getConfig() const;
 
         /**
          * Send a world event to all worldObjects in the world.
@@ -91,42 +93,42 @@ namespace logic {
          * If the object is a PlayerModel, attach the Score as an observer.
          * @param object
          */
-        void addObject(const std::shared_ptr<WorldObject> &object);
+        void addObject(const std::shared_ptr<WorldObject>& object);
 
         /**
          * Remove object if present in the worldObjects.
          * @param object
          */
-        void removeObject(const WorldObject &object);
+        void removeObject(const WorldObject& object);
 
         /**
          * Send entityCommand command to all worldObjects of type Target
          * @tparam Target
          * @param command
          */
-        template<typename Target>
+        template <typename Target>
         void sendCommandTo(EntityCommand command);
 
         /**
          * @tparam Target
          * @return A std::vector of all worldObjects of type Target present in the world.
          */
-        template<typename Target>
-        [[nodiscard]] std::vector<std::shared_ptr<Target> > getObjectsOfType() const;
+        template <typename Target>
+        [[nodiscard]] std::vector<std::shared_ptr<Target>> getObjectsOfType() const;
 
         /**
          * @return The score instance.
          *
          * Score provides score and player life logic.
          */
-        [[nodiscard]] const Score &getScore() const;
+        [[nodiscard]] const Score& getScore() const;
 
         /**
          * @return The score instance.
          *
          * Score provides score and player life logic.
          */
-        [[nodiscard]] std::shared_ptr<Score> &getScore();
+        [[nodiscard]] std::shared_ptr<Score>& getScore();
 
 
         /**
@@ -151,21 +153,26 @@ namespace logic {
 
     //--------------- Implementation--------------------//
 
-    template<typename Target>
-    std::vector<std::shared_ptr<Target> > World::getObjectsOfType() const {
-        std::vector<std::shared_ptr<Target> > result;
-        for (const auto &object: objects) {
+    template <typename Target>
+    std::vector<std::shared_ptr<Target>> World::getObjectsOfType() const
+    {
+        std::vector<std::shared_ptr<Target>> result;
+        for (const auto& object : objects)
+        {
             auto derived = std::dynamic_pointer_cast<Target>(object);
             if (derived) result.push_back(derived);
         }
         return result;
     }
 
-    template<typename Target>
-    void World::sendCommandTo(EntityCommand command) {
-        for (const auto &object: objects) {
+    template <typename Target>
+    void World::sendCommandTo(EntityCommand command)
+    {
+        for (const auto& object : objects)
+        {
             auto target = std::dynamic_pointer_cast<Target>(object);
-            if (target) {
+            if (target)
+            {
                 target->processCommand(command);
             }
         }

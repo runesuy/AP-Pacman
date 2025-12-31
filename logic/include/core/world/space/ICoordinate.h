@@ -5,11 +5,13 @@
 #ifndef AP_PACMAN_ICOORDINATE_H
 #define AP_PACMAN_ICOORDINATE_H
 
-namespace logic {
+namespace logic
+{
     /**
      * Interface representing a 2D coordinate with x and y values.
      */
-    class ICoordinate {
+    class ICoordinate
+    {
     public:
         virtual ~ICoordinate() = default;
 

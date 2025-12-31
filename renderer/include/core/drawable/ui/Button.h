@@ -12,11 +12,13 @@
 
 #include "core/world/space/Size.h"
 
-namespace renderer {
+namespace renderer
+{
     /**
      * Class representing a UI button in the game.
      */
-    class Button : public DrawObject {
+    class Button : public DrawObject
+    {
         Label label;
         logic::Size::CoordinateType width = 0.3;
         std::function<void()> onClick;
@@ -25,25 +27,25 @@ namespace renderer {
     public:
         Button();
 
-        void setPosition(const logic::Position &position) override;
+        void setPosition(const logic::Position& position) override;
 
-        std::vector<std::unique_ptr<sf::Shape> > getSFShapes(sf::RenderWindow &window) override;
+        std::vector<std::unique_ptr<sf::Shape>> getSFShapes(sf::RenderWindow& window) override;
 
-        std::vector<std::shared_ptr<sf::Sprite> > getSFSprites(sf::RenderWindow &window) override;
+        std::vector<std::shared_ptr<sf::Sprite>> getSFSprites(sf::RenderWindow& window) override;
 
-        std::vector<std::unique_ptr<sf::Text> > getSFTexts(sf::RenderWindow &window) override;
+        std::vector<std::unique_ptr<sf::Text>> getSFTexts(sf::RenderWindow& window) override;
 
-        void setString(const std::string &str);
+        void setString(const std::string& str);
 
-        void setFont(const sf::Font &font);
+        void setFont(const sf::Font& font);
 
         void setCharacterSize(float size);
 
         void setWidth(logic::Size::CoordinateType width);
 
-        void setOnClick(const std::function<void()> &onClick);
+        void setOnClick(const std::function<void()>& onClick);
 
-        void processEvent(const sf::Event &event, const sf::RenderWindow &window);
+        void processEvent(const sf::Event& event, const sf::RenderWindow& window);
     };
 } // renderer
 

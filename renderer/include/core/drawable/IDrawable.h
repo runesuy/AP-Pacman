@@ -7,11 +7,13 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 
-namespace renderer {
+namespace renderer
+{
     /**
      * Interface for drawable objects in the game.
      */
-    class IDrawable {
+    class IDrawable
+    {
     public:
         virtual ~IDrawable() = default;
 
@@ -19,7 +21,7 @@ namespace renderer {
          * Draw the object onto the provided render window.
          * @param window
          */
-        virtual void draw(sf::RenderWindow &window) =0;
+        virtual void draw(sf::RenderWindow& window) =0;
     };
 }
 

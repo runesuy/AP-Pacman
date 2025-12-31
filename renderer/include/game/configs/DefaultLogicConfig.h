@@ -9,11 +9,13 @@
 #include "core/world/TileMap.h"
 #include "game/factories/DefaultEntityFactory.h"
 
-namespace renderer {
+namespace renderer
+{
     /**
      * Default implementation of the logic configuration interface.
      */
-    class DefaultLogicConfig : public logic::IConfig {
+    class DefaultLogicConfig : public logic::IConfig
+    {
         logic::TileMap tileMap;
         std::shared_ptr<logic::IEntityFactory> entityFactory = std::make_shared<DefaultEntityFactory>();
 
@@ -31,7 +33,7 @@ namespace renderer {
          * Get the tile map to be used in the game world.
          * @return
          */
-        [[nodiscard]] const logic::TileMap &getTileMap() const override;
+        [[nodiscard]] const logic::TileMap& getTileMap() const override;
 
         void loadTileMap() override;
 

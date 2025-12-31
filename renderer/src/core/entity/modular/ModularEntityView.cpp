@@ -4,10 +4,13 @@
 
 #include "core/entity/modular/ModularEntityView.h"
 
-namespace renderer {
-    std::vector<std::unique_ptr<sf::Shape> > ModularEntityView::getSFShapes(sf::RenderWindow &window) {
-        std::vector<std::unique_ptr<sf::Shape> > shapes;
-        for (const auto &module: modules) {
+namespace renderer
+{
+    std::vector<std::unique_ptr<sf::Shape>> ModularEntityView::getSFShapes(sf::RenderWindow& window)
+    {
+        std::vector<std::unique_ptr<sf::Shape>> shapes;
+        for (const auto& module : modules)
+        {
             auto moduleShapes = module->getSFShapes(window);
             shapes.insert(shapes.end(),
                           std::make_move_iterator(moduleShapes.begin()),
@@ -16,9 +19,11 @@ namespace renderer {
         return std::move(shapes);
     }
 
-    std::vector<std::shared_ptr<sf::Sprite> > ModularEntityView::getSFSprites(sf::RenderWindow &window) {
-        std::vector<std::shared_ptr<sf::Sprite> > sprites;
-        for (const auto &module: modules) {
+    std::vector<std::shared_ptr<sf::Sprite>> ModularEntityView::getSFSprites(sf::RenderWindow& window)
+    {
+        std::vector<std::shared_ptr<sf::Sprite>> sprites;
+        for (const auto& module : modules)
+        {
             auto moduleSprites = module->getSFSprites(window);
             sprites.insert(sprites.end(),
                            std::make_move_iterator(moduleSprites.begin()),
@@ -27,9 +32,11 @@ namespace renderer {
         return std::move(sprites);
     }
 
-    std::vector<std::unique_ptr<sf::Text> > ModularEntityView::getSFTexts(sf::RenderWindow &window) {
-        std::vector<std::unique_ptr<sf::Text> > texts;
-        for (const auto &module: modules) {
+    std::vector<std::unique_ptr<sf::Text>> ModularEntityView::getSFTexts(sf::RenderWindow& window)
+    {
+        std::vector<std::unique_ptr<sf::Text>> texts;
+        for (const auto& module : modules)
+        {
             auto moduleTexts = module->getSFTexts();
             texts.insert(texts.end(),
                          std::make_move_iterator(moduleTexts.begin()),
@@ -38,7 +45,8 @@ namespace renderer {
         return std::move(texts);
     }
 
-    void ModularEntityView::addModule(std::shared_ptr<IEntityViewModule> module) {
+    void ModularEntityView::addModule(std::shared_ptr<IEntityViewModule> module)
+    {
         modules.push_back(std::move(module));
     }
 } // renderer

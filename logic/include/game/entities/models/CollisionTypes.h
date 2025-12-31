@@ -6,8 +6,10 @@
 #define AP_PACMAN_COLLISIONTYPES_H
 
 
-namespace logic {
-    enum CollisionType {
+namespace logic
+{
+    enum CollisionType
+    {
         COIN,
         PLAYER,
         FRUIT,

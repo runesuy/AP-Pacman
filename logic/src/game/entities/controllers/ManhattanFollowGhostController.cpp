@@ -4,14 +4,18 @@
 
 #include "game/entities/controllers/ManhattanFollowGhostController.h"
 
-namespace logic {
-    void ManhattanFollowGhostController::update(World &world, GhostModel &entity) {
+namespace logic
+{
+    void ManhattanFollowGhostController::update(World& world, GhostModel& entity)
+    {
         auto player = world.getObjectsOfType<PlayerModel>().at(0);
-        if (!player) {
+        if (!player)
+        {
             std::cerr << "No Player Found [ManhattanFollowGhostController::update]" << std::endl;
         }
-        if (!get < 0 > (_isPastCenter(world, entity, entity.getDirection())) && entity.getMode() == GhostModel::CHASE
-            && (isAtIntersectionOrDeadEnd(world, entity) || entity.getDirection() == NONE)) {
+        if (!get<0>(_isPastCenter(world, entity, entity.getDirection())) && entity.getMode() == GhostModel::CHASE
+            && (isAtIntersectionOrDeadEnd(world, entity) || entity.getDirection() == NONE))
+        {
             entity.setRequestedDirection(
                 navigationAgent->getNavigationDirection(entity.getPosition(), player->getPosition(), world, {
                                                             getOppositeDirection(entity.getDirection())
@@ -21,10 +25,12 @@ namespace logic {
         GhostController::update(world, entity);
     }
 
-    void ManhattanFollowGhostController::processCommand(EntityCommand command, GhostModel &entity) {
+    void ManhattanFollowGhostController::processCommand(EntityCommand command, GhostModel& entity)
+    {
     }
 
-    void ManhattanFollowGhostController::onCollision(GhostModel &entity, const SizedWorldObject &other, World &world) {
+    void ManhattanFollowGhostController::onCollision(GhostModel& entity, const SizedWorldObject& other, World& world)
+    {
         GhostController::onCollision(entity, other, world);
     }
 } // logic

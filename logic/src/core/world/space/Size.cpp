@@ -5,35 +5,45 @@
 #include "core/world/space/Size.h"
 #include "stdexcept"
 
-namespace logic {
-    ICoordinate::CoordinateType Size::getX() const {
+namespace logic
+{
+    ICoordinate::CoordinateType Size::getX() const
+    {
         return width;
     }
 
-    void Size::setX(CoordinateType x) {
-        if (x < 0) {
+    void Size::setX(CoordinateType x)
+    {
+        if (x < 0)
+        {
             throw std::invalid_argument("width cannot be negative");
         }
         width = x;
     }
 
-    Size::CoordinateType Size::getY() const {
+    Size::CoordinateType Size::getY() const
+    {
         return height;
     }
 
-    void Size::setY(CoordinateType y) {
-        if (y < 0) {
+    void Size::setY(CoordinateType y)
+    {
+        if (y < 0)
+        {
             throw std::invalid_argument("height cannot be negative");
         }
         height = y;
     }
 
-    Size::Size(Size::CoordinateType x, Size::CoordinateType y) {
-        if (x < 0) {
+    Size::Size(Size::CoordinateType x, Size::CoordinateType y)
+    {
+        if (x < 0)
+        {
             throw std::invalid_argument("width cannot be negative");
         }
         width = x;
-        if (y < 0) {
+        if (y < 0)
+        {
             throw std::invalid_argument("height cannot be negative");
         }
         height = y;

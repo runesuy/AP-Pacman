@@ -9,12 +9,14 @@
 #include "core/entity/INavigationAgent.h"
 #include "game/entities/controllers/navigation/ManhattanNavigationAgent.h"
 
-namespace logic {
+namespace logic
+{
     /**
      * Implements CHASE behavior for ghosts.
      * GhostController that tries to cut of pacman by minimizing manhattan distance to the tile in front of packman.
      */
-    class ManhattanPredictGhostController : public GhostController {
+    class ManhattanPredictGhostController : public GhostController
+    {
         const std::unique_ptr<INavigationAgent> navigationAgent = std::make_unique<ManhattanNavigationAgent>();
 
         /**
@@ -25,38 +27,40 @@ namespace logic {
          * @param stepSize
          * @return Position
          */
-        template<class Derived>
-        Position _calculatePositionInFrontOneStep(const MovingEntityModel<Derived> &entity, double stepSize);
+        template <class Derived>
+        Position _calculatePositionInFrontOneStep(const MovingEntityModel<Derived>& entity, double stepSize);
 
     public:
-        void update(World &world, GhostModel &entity) override;
+        void update(World& world, GhostModel& entity) override;
 
-        void processCommand(EntityCommand command, GhostModel &entity) override;
+        void processCommand(EntityCommand command, GhostModel& entity) override;
 
-        void onCollision(GhostModel &entity, const SizedWorldObject &other, World &world) override;
+        void onCollision(GhostModel& entity, const SizedWorldObject& other, World& world) override;
     };
 
-    template<class Derived>
-    Position ManhattanPredictGhostController::_calculatePositionInFrontOneStep(const MovingEntityModel<Derived> &entity,
-                                                                               double stepSize) {
+    template <class Derived>
+    Position ManhattanPredictGhostController::_calculatePositionInFrontOneStep(const MovingEntityModel<Derived>& entity,
+                                                                               double stepSize)
+    {
         Position position = entity.getPosition();
         const Direction direction = entity.getDirection();
 
-        switch (direction) {
-            case NONE:
-                return position;
-            case RIGHT:
-                position.setX(position.getX() + stepSize);
-                break;
-            case LEFT:
-                position.setX(position.getX() - stepSize);
-                break;
-            case UP:
-                position.setY(position.getY() + stepSize);
-                break;
-            case DOWN:
-                position.setY(position.getY() - stepSize);
-                break;
+        switch (direction)
+        {
+        case NONE:
+            return position;
+        case RIGHT:
+            position.setX(position.getX() + stepSize);
+            break;
+        case LEFT:
+            position.setX(position.getX() - stepSize);
+            break;
+        case UP:
+            position.setY(position.getY() + stepSize);
+            break;
+        case DOWN:
+            position.setY(position.getY() - stepSize);
+            break;
         }
         return position;
     }

@@ -10,9 +10,11 @@
 #include "game/ScoreView.h"
 #include "game/LivesView.h"
 
-namespace renderer {
-    class WorldView : public logic::IObserver<logic::World> {
-        std::vector<std::shared_ptr<IWorldObjectView> > objectViews;
+namespace renderer
+{
+    class WorldView : public logic::IObserver<logic::World>
+    {
+        std::vector<std::shared_ptr<IWorldObjectView>> objectViews;
 
         /**
      * Clean up views that are no longer needed.
@@ -24,11 +26,11 @@ namespace renderer {
         std::shared_ptr<LivesView> livesView = std::make_shared<LivesView>();
 
     public:
-        void update(logic::World &subject) override;
+        void update(logic::World& subject) override;
 
-        void draw(sf::RenderWindow &window);
+        void draw(sf::RenderWindow& window);
 
-        void addObjectView(const std::shared_ptr<IWorldObjectView> &objectView);
+        void addObjectView(const std::shared_ptr<IWorldObjectView>& objectView);
     };
 } // renderer
 

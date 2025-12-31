@@ -10,11 +10,13 @@
 #include "LifeCounter.h"
 #include "ScoreCounter.h"
 
-namespace logic {
+namespace logic
+{
     /**
      * An observer class to track and manage the player's score and lives.
      */
-    class Score : public IObserver<PlayerModel> {
+    class Score : public IObserver<PlayerModel>
+    {
         ScoreCounter scoreCounter;
         LifeCounter lifeCounter;
         float difficultyMultiplier = 1;
@@ -31,33 +33,33 @@ namespace logic {
          * Update score and lives based on player change.
          * @param subject
          */
-        void update(PlayerModel &subject) override;
+        void update(PlayerModel& subject) override;
 
         /**
          * Update score and lives based on player event.
          * @param subject
          */
-        void update(PlayerModel &subject, ObservableTypes::EventType event) override;
+        void update(PlayerModel& subject, ObservableTypes::EventType event) override;
 
         /**
          * @return The LifeCounter instance that handles the player lives.
          */
-        [[nodiscard]] const LifeCounter &getLifeCounter() const;
+        [[nodiscard]] const LifeCounter& getLifeCounter() const;
 
         /**
          * @return The LifeCounter instance that handles the player lives.
          */
-        [[nodiscard]] LifeCounter &getLifeCounter();
+        [[nodiscard]] LifeCounter& getLifeCounter();
 
         /**
          * @return The ScoreCounter instance that handles the player score.
          */
-        [[nodiscard]] const ScoreCounter &getScoreCounter() const;
+        [[nodiscard]] const ScoreCounter& getScoreCounter() const;
 
         /**
          * @return The ScoreCounter instance that handles the player score.
          */
-        [[nodiscard]] ScoreCounter &getScoreCounter();
+        [[nodiscard]] ScoreCounter& getScoreCounter();
 
         [[nodiscard]] float getDifficultyMultiplier() const;
 

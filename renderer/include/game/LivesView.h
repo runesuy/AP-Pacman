@@ -9,18 +9,20 @@
 #include "core/world/Score.h"
 #include "core/drawable/ui/Label.h"
 
-namespace renderer {
+namespace renderer
+{
     /**
      * Display the number of lives remaining in the game.
      */
-    class LivesView : public logic::IObserver<logic::LifeCounter>, public Label {
+    class LivesView : public logic::IObserver<logic::LifeCounter>, public Label
+    {
         const std::string preFix = "# LIVES REMAINING: ";
         logic::LifeCounter::LivesAmountType livesLeft;
 
     public:
         LivesView();
 
-        void update(logic::LifeCounter &subject) override;
+        void update(logic::LifeCounter& subject) override;
     };
 } // renderer
 

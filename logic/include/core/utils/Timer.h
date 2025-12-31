@@ -7,12 +7,14 @@
 
 #include "Stopwatch.h"
 
-namespace logic {
+namespace logic
+{
     /**
      * Timer class used for timers counting down from a startTime to 0.
      * Can be added to Stopwatch to simulate on each tick.
      */
-    class Stopwatch::Timer {
+    class Stopwatch::Timer
+    {
         TimeType timeLeft;
         const TimeType totalTime;
         bool running;

@@ -6,34 +6,42 @@
 #include "game/entities/ObserverEvents.h"
 #include <algorithm>
 
-namespace logic {
-    unsigned int LifeCounter::getLifeStart() {
+namespace logic
+{
+    unsigned int LifeCounter::getLifeStart()
+    {
         return lifeStart;
     }
 
-    unsigned int LifeCounter::getLivesLeft() const {
+    unsigned int LifeCounter::getLivesLeft() const
+    {
         return livesLeft;
     }
 
-    void LifeCounter::addLives(unsigned int amount) {
+    void LifeCounter::addLives(unsigned int amount)
+    {
         if (amount + livesLeft > lifeStart) livesLeft = lifeStart;
         else livesLeft += amount;
         updateObservers();
     }
 
-    void LifeCounter::removeLives(unsigned int amount) {
+    void LifeCounter::removeLives(unsigned int amount)
+    {
         if (livesLeft < amount) livesLeft = 0;
         else livesLeft -= amount;
         updateObservers();
     }
 
-    void LifeCounter::setLivesLeft(unsigned int livesLeft) {
+    void LifeCounter::setLivesLeft(unsigned int livesLeft)
+    {
         LifeCounter::livesLeft = livesLeft;
         updateObservers();
     }
 
-    void LifeCounter::processEvent(ObservableTypes::EventType event) {
-        if (event == ObserverEvent::PLAYER_KILLED) {
+    void LifeCounter::processEvent(ObservableTypes::EventType event)
+    {
+        if (event == ObserverEvent::PLAYER_KILLED)
+        {
             removeLives(1);
         }
     }

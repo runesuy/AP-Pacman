@@ -9,11 +9,13 @@
 #include "core/factories/IStateFactory.h"
 #include "game/states/PausedState.h"
 
-namespace renderer {
+namespace renderer
+{
     class MenuState;
     class LevelState;
 
-    class DefaultStateFactory : public IStateFactory {
+    class DefaultStateFactory : public IStateFactory
+    {
     public:
         std::unique_ptr<MenuState> createMenuState() override;
 

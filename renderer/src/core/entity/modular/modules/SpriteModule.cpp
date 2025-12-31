@@ -6,17 +6,21 @@
 #include "core/entity/modular/ModularEntityView.h"
 #include "core/utils/Camera.h"
 
-namespace renderer {
-    void SpriteModule::update(ModularEntityView &subject) {
+namespace renderer
+{
+    void SpriteModule::update(ModularEntityView& subject)
+    {
         setSize(subject.getSize());
     }
 
-    std::vector<std::unique_ptr<sf::Shape> > SpriteModule::getSFShapes(sf::RenderWindow &window) const {
+    std::vector<std::unique_ptr<sf::Shape>> SpriteModule::getSFShapes(sf::RenderWindow& window) const
+    {
         return {};
     }
 
-    std::vector<std::shared_ptr<sf::Sprite> > SpriteModule::getSFSprites(sf::RenderWindow &window) const {
-        std::vector<std::shared_ptr<sf::Sprite> > sprites;
+    std::vector<std::shared_ptr<sf::Sprite>> SpriteModule::getSFSprites(sf::RenderWindow& window) const
+    {
+        std::vector<std::shared_ptr<sf::Sprite>> sprites;
         sf::Vector2<unsigned int> textureSize = sprite.getTexture()->getSize();
         sf::Vector2<float> projectedSize = Camera::project(size, window);
         sprite.setScale(projectedSize.x / static_cast<float>(textureSize.x),
@@ -25,15 +29,18 @@ namespace renderer {
         return {std::make_shared<sf::Sprite>(sprite)};
     }
 
-    std::vector<std::unique_ptr<sf::Text> > SpriteModule::getSFTexts() const {
+    std::vector<std::unique_ptr<sf::Text>> SpriteModule::getSFTexts() const
+    {
         return {};
     }
 
-    void SpriteModule::setSize(const logic::Size &size) {
+    void SpriteModule::setSize(const logic::Size& size)
+    {
         SpriteModule::size = size;
     }
 
-    void SpriteModule::setTexture(const sf::Texture &texture) {
+    void SpriteModule::setTexture(const sf::Texture& texture)
+    {
         SpriteModule::sprite.setTexture(texture);
     }
 } // renderer

@@ -9,12 +9,14 @@
 #include "core/world/Score.h"
 #include "core/drawable/ui/Label.h"
 
-namespace renderer {
+namespace renderer
+{
     /**
      * Displays a victory screen when the player completes a level.
      * When a key is pressed, it passes the score to the next level and transitions to the next state.
      */
-    class VictoryState : public IState {
+    class VictoryState : public IState
+    {
         std::shared_ptr<logic::Score> passToNextLevel;
         Label victoryLabel{"LEVEL COMPLETE"};
         Label currentScoreLabel;
@@ -23,13 +25,13 @@ namespace renderer {
         bool keyReleased = false;
 
     public:
-        explicit VictoryState(const std::shared_ptr<logic::Score> &passToNextLevel);
+        explicit VictoryState(const std::shared_ptr<logic::Score>& passToNextLevel);
 
-        void update(StateManager &stateManager) override;
+        void update(StateManager& stateManager) override;
 
-        void processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) override;
+        void processInput(sf::Event& event, StateManager& stateManager, const sf::RenderWindow& window) override;
 
-        void draw(sf::RenderWindow &window, StateManager &stateManager) override;
+        void draw(sf::RenderWindow& window, StateManager& stateManager) override;
     };
 } // renderer
 

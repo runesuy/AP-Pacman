@@ -4,5 +4,6 @@
 
 #include "core/world/IWorldObjectView.h"
 
-namespace renderer {
+namespace renderer
+{
 } // renderer

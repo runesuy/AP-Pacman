@@ -9,8 +9,10 @@
 #include "game/entities/models/GhostModel.h"
 #include "core/entity/modular/modules/AnimatedSpriteModule.h"
 
-namespace renderer {
-    class GhostView : public ModularEntityView, public logic::IObserver<logic::GhostModel> {
+namespace renderer
+{
+    class GhostView : public ModularEntityView, public logic::IObserver<logic::GhostModel>
+    {
         bool markedForRemoval{false};
         logic::Direction direction = logic::NONE;
         logic::GhostModel::Mode ghostMode = logic::GhostModel::WAITING;
@@ -24,15 +26,15 @@ namespace renderer {
     public:
         using AnimationsMap = AnimatedSpriteModule::AnimationNamesMap;
 
-        explicit GhostView(const AnimationsMap &animationsMap);
+        explicit GhostView(const AnimationsMap& animationsMap);
 
-        void update(logic::GhostModel &subject) override;
+        void update(logic::GhostModel& subject) override;
 
         bool isMarkedForRemoval() override;
 
         void markForRemoval();
 
-        void setSize(const logic::Size &size) override;
+        void setSize(const logic::Size& size) override;
 
         void setDirection(logic::Direction direction);
 

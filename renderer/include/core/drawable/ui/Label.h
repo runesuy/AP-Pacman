@@ -6,17 +6,21 @@
 #define AP_PACMAN_LABEL_H
 #include "core/drawable/DrawObject.h"
 
-namespace renderer {
+namespace renderer
+{
     /**
      * A simple UI victoryLabel for displaying text.
      */
-    class Label : public DrawObject {
+    class Label : public DrawObject
+    {
     public:
-        enum class HorizontalOriginType {
+        enum class HorizontalOriginType
+        {
             LEFT, MIDDLE, RIGHT
         };
 
-        enum class VerticalOriginType {
+        enum class VerticalOriginType
+        {
             TOP, MIDDLE, BOTTOM
         };
 
@@ -39,25 +43,25 @@ namespace renderer {
         /**
          * @param str The string to display.
          */
-        explicit Label(const std::string &str);
+        explicit Label(const std::string& str);
 
         /**
          * @param str The string to display.
          * @param font The font to use.
          */
-        Label(const std::string &str, const sf::Font &font);
+        Label(const std::string& str, const sf::Font& font);
 
         /**
          * Set the string to display.
          * @param str
          */
-        void setString(const std::string &str);
+        void setString(const std::string& str);
 
         /**
          * Set the font to use.
          * @param font
          */
-        void setFont(const sf::Font &font);
+        void setFont(const sf::Font& font);
 
         /**
          *
@@ -87,11 +91,11 @@ namespace renderer {
          */
         void setVerticalOrigin(VerticalOriginType verticalOrigin);
 
-        std::vector<std::unique_ptr<sf::Shape> > getSFShapes(sf::RenderWindow &window) override;
+        std::vector<std::unique_ptr<sf::Shape>> getSFShapes(sf::RenderWindow& window) override;
 
-        std::vector<std::shared_ptr<sf::Sprite> > getSFSprites(sf::RenderWindow &window) override;
+        std::vector<std::shared_ptr<sf::Sprite>> getSFSprites(sf::RenderWindow& window) override;
 
-        std::vector<std::unique_ptr<sf::Text> > getSFTexts(sf::RenderWindow &window) override;
+        std::vector<std::unique_ptr<sf::Text>> getSFTexts(sf::RenderWindow& window) override;
     };
 } // renderer
 

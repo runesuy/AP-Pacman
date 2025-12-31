@@ -12,7 +12,8 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 
 
-namespace renderer {
+namespace renderer
+{
     class MenuState;
     class IStateFactory;
     class IState;
@@ -20,25 +21,26 @@ namespace renderer {
     /**
      * Manages the stack of game states, allowing for state transitions and delegating input, update, and draw calls to the current state.
      */
-    class StateManager {
-        std::stack<std::unique_ptr<IState> > stack;
+    class StateManager
+    {
+        std::stack<std::unique_ptr<IState>> stack;
         std::unique_ptr<IStateFactory> stateFactory;
 
     public:
-        explicit StateManager(std::unique_ptr<IState> &&initialState, std::unique_ptr<IStateFactory> &&stateFactory);
+        explicit StateManager(std::unique_ptr<IState>&& initialState, std::unique_ptr<IStateFactory>&& stateFactory);
 
         /**
          * Process input events and forward them to the current state.
          * @param event The input event to process.
          */
-        void processInput(sf::Event &event, sf::RenderWindow &window);
+        void processInput(sf::Event& event, sf::RenderWindow& window);
 
         /**
          * Draw the current state to the given window.
          * Forwards the draw call to the current state.
          * @param window
          */
-        void draw(sf::RenderWindow &window);
+        void draw(sf::RenderWindow& window);
 
         /**
          * Update the current state.
@@ -46,11 +48,11 @@ namespace renderer {
          */
         void update();
 
-        void pushState(std::unique_ptr<IState> &&state);
+        void pushState(std::unique_ptr<IState>&& state);
 
         void popState();
 
-        void replaceState(std::unique_ptr<IState> &&state);
+        void replaceState(std::unique_ptr<IState>&& state);
     };
 }
 

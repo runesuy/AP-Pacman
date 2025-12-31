@@ -4,10 +4,12 @@
 
 #include "core/entity/EntityView.h"
 
-const logic::Size &renderer::EntityView::getSize() const {
+const logic::Size& renderer::EntityView::getSize() const
+{
     return size;
 }
 
-void renderer::EntityView::setSize(const logic::Size &size) {
+void renderer::EntityView::setSize(const logic::Size& size)
+{
     EntityView::size = size;
 }

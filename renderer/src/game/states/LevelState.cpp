@@ -13,36 +13,44 @@
 #include "game/states/GameOverState.h"
 #include "game/states/VictoryState.h"
 
-namespace renderer {
-    LevelState::LevelState() {
-        auto &logicConfig = Game::getInstance()->getAppConfig().getLogicConfig();
+namespace renderer
+{
+    LevelState::LevelState()
+    {
+        auto& logicConfig = Game::getInstance()->getAppConfig().getLogicConfig();
         logicConfig.loadTileMap();
         auto entityFactory = logicConfig.getEntityFactory();
         auto defaultFactory = std::dynamic_pointer_cast<DefaultEntityFactory>(entityFactory);
         _worldView = std::make_shared<WorldView>();
-        if (defaultFactory) {
+        if (defaultFactory)
+        {
             defaultFactory->setViewTarget(_worldView);
         }
         _world = std::make_unique<logic::World>(logicConfig);
         _world->addObserver(_worldView);
     }
 
-    std::unique_ptr<logic::World> &LevelState::getWorld() {
+    std::unique_ptr<logic::World>& LevelState::getWorld()
+    {
         return _world;
     }
 
-    const std::shared_ptr<WorldView> &LevelState::getWorldView() const {
+    const std::shared_ptr<WorldView>& LevelState::getWorldView() const
+    {
         return _worldView;
     }
 
-    void LevelState::update(StateManager &stateManager) {
+    void LevelState::update(StateManager& stateManager)
+    {
         getWorld()->update();
-        if (getWorld()->isGameOver()) {
+        if (getWorld()->isGameOver())
+        {
             getWorld()->getScore()->getScoreCounter().saveHighScores();
             stateManager.replaceState(std::make_unique<GameOverState>(getWorld()->getScore()));
             return;
         }
-        if (getWorld()->levelComplete()) {
+        if (getWorld()->levelComplete())
+        {
             // apply level clearing reward
             getWorld()->getScore()->getScoreCounter().setScore(
                 getWorld()->getScore()->getScoreCounter().getScore() + LEVEL_CLEAR_REWARD);
@@ -53,47 +61,53 @@ namespace renderer {
         }
     }
 
-    void LevelState::processInput(sf::Event &event, StateManager &stateManager, const sf::RenderWindow &window) {
-        switch (event.type) {
-            case sf::Event::KeyPressed:
-                getWorld()->receiveCommand(logic::WorldCommand::ON_KEY_PRESS);
-                switch (event.key.code) {
-                    case sf::Keyboard::Left:
-                        getWorld()->sendCommandTo<logic::PlayerModel>(logic::EntityCommand::TURN_LEFT);
-                        break;
-                    case sf::Keyboard::Right:
-                        getWorld()->sendCommandTo<logic::PlayerModel>(logic::EntityCommand::TURN_RIGHT);
-                        break;
-                    case sf::Keyboard::Up:
-                        getWorld()->sendCommandTo<logic::PlayerModel>(logic::EntityCommand::TURN_UP);
-                        break;
-                    case sf::Keyboard::Down:
-                        getWorld()->sendCommandTo<logic::PlayerModel>(logic::EntityCommand::TURN_DOWN);
-                        break;
-                    case sf::Keyboard::Escape:
-                        getWorld()->getScore()->getScoreCounter().saveHighScores();
-                        stateManager.pushState(
-                            Game::getInstance()->getAppConfig().getFactoryCollection().getStateFactory()->
-                            createPausedState());
-                    default:
-                        break;
-                }
+    void LevelState::processInput(sf::Event& event, StateManager& stateManager, const sf::RenderWindow& window)
+    {
+        switch (event.type)
+        {
+        case sf::Event::KeyPressed:
+            getWorld()->receiveCommand(logic::WorldCommand::ON_KEY_PRESS);
+            switch (event.key.code)
+            {
+            case sf::Keyboard::Left:
+                getWorld()->sendCommandTo<logic::PlayerModel>(logic::EntityCommand::TURN_LEFT);
                 break;
+            case sf::Keyboard::Right:
+                getWorld()->sendCommandTo<logic::PlayerModel>(logic::EntityCommand::TURN_RIGHT);
+                break;
+            case sf::Keyboard::Up:
+                getWorld()->sendCommandTo<logic::PlayerModel>(logic::EntityCommand::TURN_UP);
+                break;
+            case sf::Keyboard::Down:
+                getWorld()->sendCommandTo<logic::PlayerModel>(logic::EntityCommand::TURN_DOWN);
+                break;
+            case sf::Keyboard::Escape:
+                getWorld()->getScore()->getScoreCounter().saveHighScores();
+                stateManager.pushState(
+                    Game::getInstance()->getAppConfig().getFactoryCollection().getStateFactory()->
+                                         createPausedState());
             default:
                 break;
+            }
+            break;
+        default:
+            break;
         }
     }
 
-    void LevelState::draw(sf::RenderWindow &window, StateManager &stateManager) {
+    void LevelState::draw(sf::RenderWindow& window, StateManager& stateManager)
+    {
         getWorldView()->draw(window);
     }
 
-    LevelState::LevelState(const std::shared_ptr<logic::Score> &score) {
-        auto &logicConfig = Game::getInstance()->getAppConfig().getLogicConfig();
+    LevelState::LevelState(const std::shared_ptr<logic::Score>& score)
+    {
+        auto& logicConfig = Game::getInstance()->getAppConfig().getLogicConfig();
         auto entityFactory = logicConfig.getEntityFactory();
         auto defaultFactory = std::dynamic_pointer_cast<DefaultEntityFactory>(entityFactory);
         _worldView = std::make_shared<WorldView>();
-        if (defaultFactory) {
+        if (defaultFactory)
+        {
             defaultFactory->setViewTarget(_worldView);
         }
         _world = std::make_unique<logic::World>(logicConfig, score);
