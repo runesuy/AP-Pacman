@@ -19,8 +19,8 @@ namespace renderer
     {
         auto& logicConfig = Game::getInstance()->getAppConfig().getLogicConfig();
         logicConfig.loadTileMap();
-        auto entityFactory = logicConfig.getEntityFactory();
-        auto defaultFactory = std::dynamic_pointer_cast<DefaultEntityFactory>(entityFactory);
+        const auto entityFactory = logicConfig.getEntityFactory();
+        const auto defaultFactory = std::dynamic_pointer_cast<DefaultEntityFactory>(entityFactory);
         _worldView = std::make_shared<WorldView>();
         if (defaultFactory)
         {
@@ -46,7 +46,8 @@ namespace renderer
         if (getWorld()->isGameOver())
         {
             getWorld()->getScore()->getScoreCounter().saveHighScores();
-            stateManager.replaceState(std::make_unique<GameOverState>(getWorld()->getScore()));
+            stateManager.replaceState(Game::getInstance()->getAppConfig().getFactoryCollection().getStateFactory()->
+                                                           createGameOverState(getWorld()->getScore()));
             return;
         }
         if (getWorld()->levelComplete())
@@ -56,7 +57,8 @@ namespace renderer
                 getWorld()->getScore()->getScoreCounter().getScore() + LEVEL_CLEAR_REWARD);
 
             // place new state on top
-            stateManager.replaceState(std::make_unique<VictoryState>(getWorld()->getScore()));
+            stateManager.replaceState(Game::getInstance()->getAppConfig().getFactoryCollection().getStateFactory()->
+                                                           createVictoryState(getWorld()->getScore()));
             return;
         }
     }

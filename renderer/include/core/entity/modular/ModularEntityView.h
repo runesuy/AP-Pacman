@@ -14,7 +14,7 @@
 namespace renderer
 {
     template <typename T>
-    concept IsModuleType = std::is_base_of<IEntityViewModule, T>::value;
+    concept IsModuleType = std::is_base_of_v<IEntityViewModule, T>;
 
     class ModularEntityView : public EntityView, public logic::Observable<ModularEntityView>
     {
@@ -27,8 +27,17 @@ namespace renderer
 
         std::vector<std::unique_ptr<sf::Text>> getSFTexts(sf::RenderWindow& window) override;
 
+        /**
+         * Add a module to the ModularEntityView.
+         * @param module
+         */
         void addModule(std::shared_ptr<IEntityViewModule> module);
 
+        /**
+         *
+         * @tparam T
+         * @return The first module of type T, or nullptr if no such module exists.
+         */
         template <IsModuleType T>
         std::shared_ptr<T> getModule()
         {

@@ -17,9 +17,9 @@ namespace renderer
         std::string name;
 
     public:
-        explicit InvalidTextureNameException(const std::string& name) : name(name), std::invalid_argument(
+        explicit InvalidTextureNameException(const std::string& name) : std::invalid_argument(
                                                                             name + " is not a valid texture name."
-                                                                        )
+                                                                        ), name(name)
         {
         };
 

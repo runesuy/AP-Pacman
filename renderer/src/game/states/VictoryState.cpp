@@ -3,7 +3,10 @@
 //
 
 #include "game/states/VictoryState.h"
+
+#include "core/factories/IStateFactory.h"
 #include "core/states/StateManager.h"
+#include "game/Game.h"
 #include "game/states/LevelState.h"
 
 namespace renderer
@@ -20,7 +23,8 @@ namespace renderer
         }
         if (event.type == sf::Event::KeyPressed && keyReleased)
         {
-            stateManager.replaceState(std::make_unique<LevelState>(passToNextLevel));
+            Game::getInstance()->getAppConfig().getFactoryCollection().getStateFactory()->
+                                                           createLevelState(passToNextLevel);
         }
     }
 

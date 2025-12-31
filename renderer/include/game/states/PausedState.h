@@ -19,7 +19,7 @@ namespace renderer
     {
         Label pausedLabel;
         inline static const std::string pausedLabelText = "PAUSED";
-        inline static const float pausedLabelCharSize = 0.1;
+        static constexpr float pausedLabelCharSize = 0.1;
 
         Button continueButton;
         inline static const std::string continueButtonText = "CONTINUE";
