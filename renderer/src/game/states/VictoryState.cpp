@@ -23,8 +23,8 @@ namespace renderer
         }
         if (event.type == sf::Event::KeyPressed && keyReleased)
         {
-            Game::getInstance()->getAppConfig().getFactoryCollection().getStateFactory()->
-                                                           createLevelState(passToNextLevel);
+            stateManager.replaceState(Game::getInstance()->getAppConfig().getFactoryCollection().getStateFactory()->
+                                                           createLevelState(passToNextLevel));
         }
     }
 
