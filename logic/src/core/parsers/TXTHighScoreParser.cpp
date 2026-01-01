@@ -12,7 +12,17 @@ namespace logic
 {
     std::vector<int> TXTHighScoreParser::getHighScores(const std::string& file) const
     {
-        if (std::ifstream input{file}; input.is_open())
+        std::ifstream input{file};
+
+        if (!input.is_open())
+        {
+            // create the file if it does not exist
+            std::ofstream output{file};
+            output.close();
+        }
+        input.close();
+        input.open(file);
+        if (input.is_open())
         {
             std::string line;
             std::vector<int> result;
@@ -22,10 +32,16 @@ namespace logic
                 result.push_back(std::stoi(line));
                 i++;
             }
+            while (result.size() < 5)
+            {
+                result.push_back(0);
+            }
 
             return result;
         }
-        throw FileNotOpenedException(file, "TXTHighScoreParser::getHighScores(const std::string &file) const");
+        throw FileNotOpenedException(
+            file,
+            "TXTHighScoreParser::getHighScores(const std::string &file) const ");
     }
 
     void TXTHighScoreParser::writeHighScores(const std::vector<int>& highScores, const std::string& file)

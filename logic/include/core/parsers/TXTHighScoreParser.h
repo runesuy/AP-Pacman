@@ -15,6 +15,7 @@ namespace logic
     class TXTHighScoreParser : public IHighScoreParser
     {
     public:
+
         [[nodiscard]] std::vector<int> getHighScores(const std::string& file) const override;
 
         void writeHighScores(const std::vector<int>& highScores, const std::string& file) override;

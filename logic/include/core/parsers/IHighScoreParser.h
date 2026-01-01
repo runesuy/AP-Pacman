@@ -15,6 +15,12 @@ namespace logic
     public:
         virtual ~IHighScoreParser() = default;
 
+        /**
+         * Reads high scores from the specified file.
+         * Creates a new file if not present.
+         * @param file
+         * @return A vector of high scores read from the specified file.
+         */
         [[nodiscard]] virtual std::vector<int> getHighScores(const std::string& file) const =0;
 
         virtual void writeHighScores(const std::vector<int>& highScores, const std::string& file) =0;
