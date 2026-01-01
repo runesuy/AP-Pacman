@@ -7,10 +7,9 @@
 
 #include "core/entity/IEntityFactory.h"
 #include "core/world/objects/WorldObject.h"
-#include "core/config/IConfig.h"
+#include "core/config/ILogicConfig.h"
 #include "Score.h"
 #include <vector>
-#include "LifeCounter.h"
 
 namespace logic
 {
@@ -26,7 +25,7 @@ namespace logic
         /**
          * Configuration reference for all logical settings and factories.
          */
-        const IConfig& config;
+        const ILogicConfig& config;
 
         /**
          * All objects present in the world.
@@ -63,13 +62,13 @@ namespace logic
          * Construct a World with the given configuration.
          * @param config Logic configuration reference.
          */
-        explicit World(const IConfig& config);
+        explicit World(const ILogicConfig& config);
 
         /**
          * Construct a World with the given configuration.
          * @param config Logic configuration reference.
          */
-        explicit World(const IConfig& config, std::shared_ptr<Score> score);
+        explicit World(const ILogicConfig& config, std::shared_ptr<Score> score);
 
         /**
          * Update all objects in the world.
@@ -80,7 +79,7 @@ namespace logic
          * Get the configuration reference.
          * @return
          */
-        [[nodiscard]] const IConfig& getConfig() const;
+        [[nodiscard]] const ILogicConfig& getConfig() const;
 
         /**
          * Send a world event to all worldObjects in the world.

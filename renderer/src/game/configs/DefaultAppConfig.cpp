@@ -6,38 +6,24 @@
 
 namespace renderer
 {
-    IFactoryCollection& DefaultAppConfig::getFactoryCollection()
+    IRendererConfig& DefaultAppConfig::getRendererConfig()
     {
-        return factoryCollection;
+        return rendererConfig;
     }
 
-    const IConfigParser& DefaultAppConfig::getConfigParser() const
+    const IRendererConfig& DefaultAppConfig::getRendererConfig() const
     {
-        return configParser;
+        return rendererConfig;
     }
 
-    const logic::IConfig& DefaultAppConfig::getLogicConfig() const
+    const logic::ILogicConfig& DefaultAppConfig::getLogicConfig() const
     {
         return logicConfig;
     }
 
-    logic::IConfig& DefaultAppConfig::getLogicConfig()
+    logic::ILogicConfig& DefaultAppConfig::getLogicConfig()
     {
         return logicConfig;
     }
 
-    IConfigParser& DefaultAppConfig::getConfigParser()
-    {
-        return configParser;
-    }
-
-    const DefaultTextureParser& DefaultAppConfig::getTextureParser() const
-    {
-        return textureParser;
-    }
-
-    ITextureParser& DefaultAppConfig::getTextureParser()
-    {
-        return textureParser;
-    }
 } // renderer

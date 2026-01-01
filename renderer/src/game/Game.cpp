@@ -16,9 +16,9 @@ int renderer::Game::run()
     // load config file
     loadResources();
 
-    std::unique_ptr<StateManager> stateManager = appConfig.getFactoryCollection().getStateManagerFactory()
+    std::unique_ptr<StateManager> stateManager = appConfig.getRendererConfig().getFactoryCollection().getStateManagerFactory()
                                                           ->createStateManager(
-                                                              appConfig.getFactoryCollection().getStateFactory());
+                                                              appConfig.getRendererConfig().getFactoryCollection().getStateFactory());
 
 
     //create sfml window
@@ -91,9 +91,9 @@ renderer::IAppConfig& renderer::Game::getAppConfig() const
 
 void renderer::Game::loadResources()
 {
-    appConfig.getConfigParser().loadConfigFile();
-    appConfig.getTextureParser().loadTextures(
-        appConfig.getConfigParser().getSpriteSheetPath(),
-        appConfig.getConfigParser().getTextureRects()
+    appConfig.getRendererConfig().getConfigParser().loadConfigFile();
+    appConfig.getRendererConfig().getTextureParser().loadTextures(
+        appConfig.getRendererConfig().getConfigParser().getSpriteSheetPath(),
+        appConfig.getRendererConfig().getConfigParser().getTextureRects()
     );
 }

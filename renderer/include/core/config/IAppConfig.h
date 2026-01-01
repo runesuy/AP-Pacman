@@ -4,7 +4,8 @@
 
 #ifndef AP_PACMAN_IAPPCONFIG_H
 #define AP_PACMAN_IAPPCONFIG_H
-#include "core/config/IConfig.h"
+#include "IRendererConfig.h"
+#include "core/config/ILogicConfig.h"
 #include "core/factories/IFactoryCollection.h"
 #include "core/parser/IConfigParser.h"
 #include "core/parser/ITextureParser.h"
@@ -21,45 +22,29 @@ namespace renderer
     {
     public:
         /**
-         * Get the factory collection used for creating various game components.
-         * @note This method is only used on the representation side.
+         * Get the logic configuration containing game logic settings.
          * @return
          */
-        virtual IFactoryCollection& getFactoryCollection() = 0;
-
-        /**
-         * Get the configuration parser for reading and interpreting configuration files.
-         * @return
-         */
-        [[nodiscard]] virtual const IConfigParser& getConfigParser() const = 0;
-
-        /**
-         * Get the configuration parser for reading and interpreting configuration files.
-         * @return
-         */
-        [[nodiscard]] virtual IConfigParser& getConfigParser() = 0;
+        [[nodiscard]] virtual const logic::ILogicConfig& getLogicConfig() const =0;
 
         /**
          * Get the logic configuration containing game logic settings.
          * @return
          */
-        [[nodiscard]] virtual const logic::IConfig& getLogicConfig() const =0;
+        [[nodiscard]] virtual logic::ILogicConfig& getLogicConfig() =0;
 
         /**
-         * Get the logic configuration containing game logic settings.
+         * Get the factory collection for creating various game objects.
          * @return
          */
-        [[nodiscard]] virtual logic::IConfig& getLogicConfig() =0;
+        [[nodiscard]] virtual IRendererConfig& getRendererConfig() =0;
 
         /**
-         * @return The texture parser for loading textures.
+         * Get the factory collection for creating various game objects.
+         * @return
          */
-        [[nodiscard]] virtual const ITextureParser& getTextureParser() const =0;
+        [[nodiscard]] virtual const IRendererConfig& getRendererConfig() const =0;
 
-        /**
-        * @return The texture parser for loading textures.
-        */
-        [[nodiscard]] virtual ITextureParser& getTextureParser() =0;
 
         virtual ~IAppConfig() = default;
     };

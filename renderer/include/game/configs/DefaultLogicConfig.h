@@ -5,7 +5,7 @@
 #ifndef AP_PACMAN_DEFAULTLOGICCONFIG_H
 #define AP_PACMAN_DEFAULTLOGICCONFIG_H
 
-#include "core/config/IConfig.h"
+#include "core/config/ILogicConfig.h"
 #include "core/world/TileMap.h"
 #include "game/factories/DefaultEntityFactory.h"
 
@@ -14,7 +14,7 @@ namespace renderer
     /**
      * Default implementation of the logic configuration interface.
      */
-    class DefaultLogicConfig : public logic::IConfig
+    class DefaultLogicConfig : public logic::ILogicConfig
     {
         logic::TileMap tileMap;
         std::shared_ptr<logic::IEntityFactory> entityFactory = std::make_shared<DefaultEntityFactory>();
@@ -24,7 +24,7 @@ namespace renderer
         /**
          * @return Paths to all txt files in _MapFolderPath
          */
-        std::vector<std::string> _getAllMapPaths() const;
+        [[nodiscard]] std::vector<std::string> _getAllMapPaths() const;
 
         void loadRandomMap() const;
 

@@ -6,34 +6,23 @@
 #define AP_PACMAN_DEFAULTAPPCONFIG_H
 
 #include "core/config/IAppConfig.h"
-#include "game/factories/DefaultFactoryCollection.h"
-#include "game/parsers/JSONConfigParser.h"
 #include "DefaultLogicConfig.h"
-#include "game/parsers/DefaultTextureParser.h"
+#include "DefaultRendererConfig.h"
 
 namespace renderer
 {
     class DefaultAppConfig : public IAppConfig
     {
-        DefaultFactoryCollection factoryCollection;
-        JSONConfigParser configParser;
         DefaultLogicConfig logicConfig;
-        DefaultTextureParser textureParser;
+        DefaultRendererConfig rendererConfig;
 
     public:
-        IFactoryCollection& getFactoryCollection() override;
+        [[nodiscard]] const logic::ILogicConfig& getLogicConfig() const override;
 
-        [[nodiscard]] const IConfigParser& getConfigParser() const override;
+        [[nodiscard]] logic::ILogicConfig& getLogicConfig() override;
 
-        IConfigParser& getConfigParser() override;
-
-        [[nodiscard]] const logic::IConfig& getLogicConfig() const override;
-
-        [[nodiscard]] logic::IConfig& getLogicConfig() override;
-
-        [[nodiscard]] const DefaultTextureParser& getTextureParser() const override;
-
-        ITextureParser& getTextureParser() override;
+        [[nodiscard]] IRendererConfig& getRendererConfig() override;
+        [[nodiscard]] const IRendererConfig& getRendererConfig() const override;
     };
 } // renderer
 

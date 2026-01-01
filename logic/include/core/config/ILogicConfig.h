@@ -16,10 +16,10 @@ namespace logic
      *
      * The Config contains info for the game's logic section to improve customizability of the game without extensive redesigning of the original code.
      */
-    class IConfig
+    class ILogicConfig
     {
     public:
-        virtual ~IConfig() = default;
+        virtual ~ILogicConfig() = default;
 
         /**
          * Get the tile map configuration.
