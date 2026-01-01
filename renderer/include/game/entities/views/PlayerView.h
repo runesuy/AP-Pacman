@@ -10,6 +10,9 @@
 
 namespace renderer
 {
+    /**
+     * Displays the player in the game world with appropriate animations.
+     */
     class PlayerView : public ModularEntityView, public logic::IObserver<logic::PlayerModel>
     {
         inline static const std::map<std::string, std::vector<std::string>> animations{

@@ -10,6 +10,10 @@
 
 namespace renderer
 {
+    /**
+     * A rectangular rendering module for ModularEntityView.
+     * Displays a rectangle.
+     */
     class RectangleModule : public IEntityViewModule
     {
         logic::Size size = {0.1, 0.1};

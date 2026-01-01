@@ -9,6 +9,9 @@
 
 namespace renderer
 {
+    /**
+     * Default implementation of the factory collection interface.
+     */
     class DefaultFactoryCollection : public IFactoryCollection
     {
     public:

@@ -8,7 +8,6 @@
 #include "game/entities/models/WallModel.h"
 #include "core/entity/modular/ModularEntityView.h"
 #include "core/entity/modular/modules/RectangleModule.h"
-#include "core/observer/Observable.h"
 
 namespace renderer
 {

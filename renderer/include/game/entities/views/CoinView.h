@@ -9,6 +9,9 @@
 
 namespace renderer
 {
+    /**
+     * Displays a coin in the game world.
+     */
     class CoinView : public ModularEntityView, public logic::IObserver<logic::CoinModel>
     {
         bool markedForRemoval{false};

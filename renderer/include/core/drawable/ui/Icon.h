@@ -24,6 +24,10 @@ namespace renderer
 
         std::vector<std::unique_ptr<sf::Text>> getSFTexts(sf::RenderWindow& window) override;
 
+        /**
+         * Sets the texture of the icon.
+         * @param texture
+         */
         void setTexture(const sf::Texture& texture);
 
         void setSize(const logic::Size& size);

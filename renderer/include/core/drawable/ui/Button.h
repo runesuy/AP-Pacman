@@ -43,8 +43,17 @@ namespace renderer
 
         void setWidth(logic::Size::CoordinateType width);
 
+        /**
+         * Sets the callback function to be called when the button is clicked.
+         * @param onClick
+         */
         void setOnClick(const std::function<void()>& onClick);
 
+        /**
+         * Processes an SFML event to handle button interactions.
+         * @param event The SFML event to process.
+         * @param window The SFML render window.
+         */
         void processEvent(const sf::Event& event, const sf::RenderWindow& window);
     };
 } // renderer

@@ -17,6 +17,11 @@ namespace renderer
     public:
         virtual ~IMapParser() = default;
 
+        /**
+         * Read a tile map from the specified file.
+         * @param filename
+         * @return
+         */
         virtual logic::TileMap loadMap(const std::string& filename) = 0;
     };
 } // renderer

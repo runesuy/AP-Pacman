@@ -13,6 +13,10 @@ namespace renderer
     class IInputHandler
     {
     public:
+        /**
+         * Processes an input event.
+         * @param event
+         */
         virtual void processInput(sf::Event& event) =0;
 
         virtual ~IInputHandler() = default;

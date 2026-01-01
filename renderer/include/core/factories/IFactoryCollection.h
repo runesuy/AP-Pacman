@@ -14,8 +14,16 @@ namespace renderer
     public:
         virtual ~IFactoryCollection() = default;
 
+        /**
+         *
+         * @return The factory for creating StateManager instances.
+         */
         virtual std::unique_ptr<StateManagerFactory> getStateManagerFactory() = 0;
 
+        /**
+         *
+         * @return The factory for creating game states.
+         */
         virtual std::unique_ptr<IStateFactory> getStateFactory() = 0;
     };
 } // renderer

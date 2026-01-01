@@ -4,6 +4,7 @@
 
 #ifndef AP_PACMAN_IAPPCONFIG_H
 #define AP_PACMAN_IAPPCONFIG_H
+#include "core/config/IConfig.h"
 #include "core/factories/IFactoryCollection.h"
 #include "core/parser/IConfigParser.h"
 #include "core/parser/ITextureParser.h"

@@ -4,8 +4,6 @@
 
 #include "game/states/MenuState.h"
 #include "core/handlers/IDrawHandler.h"
-#include "core/states/IStateInputHandler.h"
-#include "core/states/IStateUpdateHandler.h"
 #include "core/utils/Camera.h"
 #include "game/Game.h"
 #include "core/factories/IStateFactory.h"

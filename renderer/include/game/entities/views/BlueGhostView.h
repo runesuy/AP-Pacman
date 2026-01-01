@@ -6,11 +6,13 @@
 #define AP_PACMAN_BlUEGHOSTVIEW_H
 
 #include "core/entity/modular/ModularEntityView.h"
-#include "game/entities/models/GhostModel.h"
 #include "GhostView.h"
 
 namespace renderer
 {
+    /**
+     * Displays the blue ghost with its specific animations.
+     */
     class BlueGhostView : public GhostView
     {
         inline static const std::map<std::string, std::vector<std::string>> animations{

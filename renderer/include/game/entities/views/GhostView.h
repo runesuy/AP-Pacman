@@ -11,6 +11,9 @@
 
 namespace renderer
 {
+    /**
+     * Displays a ghost in the game world.
+     */
     class GhostView : public ModularEntityView, public logic::IObserver<logic::GhostModel>
     {
         bool markedForRemoval{false};

@@ -11,6 +11,9 @@
 
 namespace renderer
 {
+    /**
+     * Displays a fruit in the game world.
+     */
     class FruitView : public ModularEntityView, public logic::IObserver<logic::FruitModel>
     {
         bool markedForRemoval{false};

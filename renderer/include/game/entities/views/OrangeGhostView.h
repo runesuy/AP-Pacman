@@ -6,12 +6,13 @@
 #define AP_PACMAN_ORANGEGHOSTVIEW_H
 
 #include "core/entity/modular/ModularEntityView.h"
-#include "game/entities/models/GhostModel.h"
-#include "game/entities/models/GhostModel.h"
 #include "GhostView.h"
 
 namespace renderer
 {
+    /**
+     * Displays the orange ghost with its specific animations.
+     */
     class OrangeGhostView : public GhostView
     {
         inline static const AnimationsMap animations{

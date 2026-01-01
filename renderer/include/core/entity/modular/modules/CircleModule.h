@@ -10,6 +10,10 @@
 
 namespace renderer
 {
+    /**
+     * A circular rendering module for ModularEntityView.
+     * Displays a circle.
+     */
     class CircleModule : public IEntityViewModule
     {
         logic::Size size = {0.1, 0.1};

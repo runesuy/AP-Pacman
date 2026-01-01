@@ -5,7 +5,6 @@
 #ifndef AP_PACMAN_CAMERA_H
 #define AP_PACMAN_CAMERA_H
 
-#include <tuple>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include "core/world/space/Position.h"
 #include "SFML/Graphics.hpp"

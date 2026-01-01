@@ -11,6 +11,10 @@ namespace renderer
     class IWorldObjectView : public DrawObject
     {
     public:
+        /**
+         *
+         * @return True if the world object view is marked for removal, false otherwise.
+         */
         virtual bool isMarkedForRemoval() =0;
     };
 } // renderer

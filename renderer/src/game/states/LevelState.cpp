@@ -3,9 +3,7 @@
 //
 
 #include "game/states/LevelState.h"
-
 #include <memory>
-#include "core/states/IStateInputHandler.h"
 #include "game/Game.h"
 #include "game/factories/DefaultEntityFactory.h"
 #include "game/WorldCommand.h"
