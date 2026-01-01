@@ -10,6 +10,9 @@
 
 namespace renderer
 {
+    /**
+     * Configuration interface for the renderer module.
+     */
     class IRendererConfig
     {
     public:
