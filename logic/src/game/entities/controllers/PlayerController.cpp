@@ -51,6 +51,10 @@ namespace logic
             }
         case(GHOST):
             {
+                // dynamic_casts are used here to access the GhostModel specific methods
+                // I could avoid this cast by putting some of this logic in the ghostController itself and send a world event
+                // however I think this is more straightforward and easier to follow, since all player logic is neatly in the playercontroller,
+                // so a dynamic_cast is acceptable here
                 const auto& ghost = dynamic_cast<const GhostModel&>(other);
                 if (ghost.getMode() == GhostModel::CHASE)
                 {

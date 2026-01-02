@@ -22,7 +22,7 @@ namespace logic
                                                        World& world)
     {
         // if collision with player
-        if (dynamic_cast<const EntityModel<PlayerModel>*>(&other))
+        if (other.getCollisionType()==PLAYER)
         {
             entity.markForRemoval();
         }

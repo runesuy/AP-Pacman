@@ -158,8 +158,7 @@ namespace logic
         std::vector<std::shared_ptr<Target>> result;
         for (const auto& object : objects)
         {
-            auto derived = std::dynamic_pointer_cast<Target>(object);
-            if (derived) result.push_back(derived);
+            if (auto derived = std::dynamic_pointer_cast<Target>(object)) result.push_back(derived);
         }
         return result;
     }

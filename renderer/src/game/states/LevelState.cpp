@@ -18,12 +18,8 @@ namespace renderer
         auto& logicConfig = Game::getInstance()->getAppConfig().getLogicConfig();
         logicConfig.loadTileMap();
         const auto entityFactory = logicConfig.getEntityFactory();
-        const auto defaultFactory = std::dynamic_pointer_cast<DefaultEntityFactory>(entityFactory);
         _worldView = std::make_shared<WorldView>();
-        if (defaultFactory)
-        {
-            defaultFactory->setViewTarget(_worldView);
-        }
+        entityFactory->setViewTarget(_worldView);
         _world = std::make_unique<logic::World>(logicConfig);
         _world->addObserver(_worldView);
     }

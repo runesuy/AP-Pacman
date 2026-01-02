@@ -12,6 +12,11 @@
 #include "game/entities/models/GhostModel.h"
 #include "game/entities/models/GhostTypes.h"
 
+namespace renderer
+{
+    class WorldView;
+}
+
 namespace logic
 {
     /**
@@ -56,6 +61,8 @@ namespace logic
          * @return A shared pointer to the created ghost of type.
          */
         virtual std::shared_ptr<GhostModel> createGhostModel(GhostType type, float difficultyMultiplier) = 0;
+
+        virtual void setViewTarget(const std::shared_ptr<renderer::WorldView>& viewTarget)=0;
     };
 }
 

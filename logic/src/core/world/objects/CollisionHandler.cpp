@@ -12,6 +12,9 @@ namespace logic
         for (auto& objectA : objects)
         {
             // check if objectA is EntityModel
+            // since only SizedWorldObjects have colliders, dynamic casts are used here to call the appropriate methods
+            // I could use a separate list of SizedWorldObjects to avoid dynamic casting here, but that would add complexity elsewhere
+            // therefore i think dynamic_casts are appropriate here.
             auto sizedObjectA = std::dynamic_pointer_cast<SizedWorldObject>(objectA);
             if (!sizedObjectA)
             {
