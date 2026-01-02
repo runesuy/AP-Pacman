@@ -87,6 +87,7 @@ namespace logic
                 if (entity.getMode() == GhostModel::CHASE)
                     entity.setMode(GhostModel::FRIGHTENED);
                 justChangedToFrightened = true;
+                entity.setFrightenedTimer(0);
                 break;
             }
         case (WorldEvents::PLAYER_KILLED):
