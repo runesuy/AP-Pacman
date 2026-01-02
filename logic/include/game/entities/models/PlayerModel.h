@@ -13,8 +13,8 @@ namespace logic
 {
     class PlayerModel : public MovingEntityModel<PlayerModel>, public Observable<PlayerModel>
     {
-        const float SPEED = 4.0;
-        inline static const CollisionType collisionType = PLAYER;
+        const float SPEED = 5.0;
+        static constexpr CollisionType collisionType = PLAYER;
 
     public:
         PlayerModel();
