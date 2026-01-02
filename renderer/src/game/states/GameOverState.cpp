@@ -14,11 +14,11 @@ namespace renderer
 
     void GameOverState::processInput(sf::Event& event, StateManager& stateManager, const sf::RenderWindow& window)
     {
-        if (event.type == sf::Event::KeyReleased)
+        if (event.type == sf::Event::KeyReleased || (firstEvent && event.type != sf::Event::KeyPressed))
         {
             keyReleased = true;
         }
-        if (event.type == sf::Event::KeyPressed && (keyReleased||firstEvent))
+        if (event.type == sf::Event::KeyPressed && keyReleased)
         {
             stateManager.popState();
         }
