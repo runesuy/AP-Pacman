@@ -14,7 +14,8 @@ namespace logic
         {
             FRUIT_EATEN_BY_PLAYER,
             PLAYER_KILLED,
-            PLAYER_GHOST_KILLED
+            PLAYER_GHOST_KILLED,
+            COIN_COLLECTED
         };
     };
 }

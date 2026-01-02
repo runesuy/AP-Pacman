@@ -82,9 +82,6 @@ namespace logic
     {
         switch (event)
         {
-        default:
-            {
-            }
         case (WorldEvents::FRUIT_EATEN_BY_PLAYER):
             {
                 if (entity.getMode() == GhostModel::CHASE)
@@ -100,7 +97,9 @@ namespace logic
                 entity.setMode(GhostModel::CHASE);
                 break;
             }
+        default: break;
         }
+
     }
 
     void GhostController::onCollision(GhostModel& entity, const SizedWorldObject& other, World& world)

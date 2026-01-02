@@ -6,11 +6,11 @@
 
 #include "game/entities/ObserverEvents.h"
 
-void logic::Score::update(PlayerModel& subject)
+void logic::Score::update(World& subject)
 {
 }
 
-void logic::Score::update(PlayerModel& subject, ObservableTypes::EventType event)
+void logic::Score::update(World& subject, ObservableTypes::EventType event)
 {
     scoreCounter.processEvent(event);
     lifeCounter.processEvent(event);

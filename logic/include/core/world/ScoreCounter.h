@@ -26,8 +26,8 @@ namespace logic
 
         // Rewards and penalties
         static constexpr int COIN_COLLECT_REWARD = 10;
-        static constexpr int FRUIT_COLLECT_REWARD = 100;
-        static constexpr int GHOST_KILL_REWARD = 200;
+        static constexpr int FRUIT_COLLECT_REWARD = 200;
+        static constexpr int GHOST_KILL_REWARD = 400;
         static constexpr int SCORE_DECAY_RATE = 1; // per second
 
         // High score parser

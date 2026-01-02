@@ -15,7 +15,7 @@ namespace logic
     /**
      * An observer class to track and manage the player's score and lives.
      */
-    class Score : public IObserver<PlayerModel>
+    class Score : public IObserver<World>
     {
         ScoreCounter scoreCounter;
         LifeCounter lifeCounter;
@@ -33,13 +33,13 @@ namespace logic
          * Update score and lives based on player change.
          * @param subject
          */
-        void update(PlayerModel& subject) override;
+        void update(World& subject) override;
 
         /**
          * Update score and lives based on player event.
          * @param subject
          */
-        void update(PlayerModel& subject, ObservableTypes::EventType event) override;
+        void update(World& subject, ObservableTypes::EventType event) override;
 
         /**
          * @return The LifeCounter instance that handles the player lives.

@@ -10,6 +10,7 @@
 #include "core/world/objects/CollisionHandler.h"
 #include "game/WorldCommand.h"
 #include "game/WorldEvents.h"
+#include "game/entities/ObserverEvents.h"
 
 namespace logic
 {
@@ -34,6 +35,7 @@ namespace logic
     World::World(const ILogicConfig& config) : config(config)
     {
         config.getTileMap().loadToWorld(*this);
+        addObserver(score);
     }
 
     const ILogicConfig& World::getConfig() const
@@ -43,10 +45,6 @@ namespace logic
 
     void World::addObject(const std::shared_ptr<WorldObject>& object)
     {
-        if (auto playerModel = std::dynamic_pointer_cast<PlayerModel>(object))
-        {
-            playerModel->addObserver(score);
-        }
         objects.push_back(object);
     }
 
@@ -120,6 +118,7 @@ namespace logic
     {
         this->score = std::move(score);
         config.getTileMap().loadToWorld(*this);
+        addObserver(this->score);
     }
 
     void World::receiveCommand(WorldCommandType command)
@@ -132,6 +131,32 @@ namespace logic
 
     void World::_handleWorldEvent(WorldObject::WorldEventT worldEvent)
     {
+        switch (worldEvent)
+        {
+        case WorldEvents::PLAYER_GHOST_KILLED:
+            {
+                updateObservers(ObserverEvents::PLAYER_GHOST_KILLED);
+                break;
+            }
+        case WorldEvents::FRUIT_EATEN_BY_PLAYER:
+            {
+                updateObservers(ObserverEvents::PLAYER_FRUIT_COLLECTED);
+                break;
+            }
+        case WorldEvents::COIN_COLLECTED:
+            {
+                updateObservers(ObserverEvents::PLAYER_COIN_COLLECTED);
+                break;
+            }
+
+        case WorldEvents::PLAYER_KILLED:
+            {
+                updateObservers(ObserverEvents::PLAYER_KILLED);
+                break;
+            }
+        default:
+            {}
+        }
         if (worldEvent == WorldEvents::WorldEvent::PLAYER_KILLED)
         {
             _initialKeyPressed = false;
