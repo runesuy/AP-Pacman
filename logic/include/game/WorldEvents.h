@@ -8,10 +8,14 @@
 
 namespace logic
 {
-    enum WorldEvent
+    struct WorldEvents
     {
-        FRUIT_EATEN_BY_PLAYER,
-        PLAYER_KILLED_W
+        enum WorldEvent
+        {
+            FRUIT_EATEN_BY_PLAYER,
+            PLAYER_KILLED,
+            PLAYER_GHOST_KILLED
+        };
     };
 }
 

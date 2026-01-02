@@ -40,7 +40,7 @@ namespace logic
 
     void LifeCounter::processEvent(const ObservableTypes::EventType event)
     {
-        if (event == PLAYER_KILLED)
+        if (event == ObserverEvents::PLAYER_KILLED)
         {
             removeLives(1);
         }

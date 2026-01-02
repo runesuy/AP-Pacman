@@ -132,7 +132,7 @@ namespace logic
 
     void World::_handleWorldEvent(WorldObject::WorldEventT worldEvent)
     {
-        if (worldEvent == PLAYER_KILLED_W)
+        if (worldEvent == WorldEvents::WorldEvent::PLAYER_KILLED)
         {
             _initialKeyPressed = false;
         }

@@ -22,6 +22,8 @@ namespace logic
         void processCommand(int command, PlayerModel& entity) override;
 
         void onCollision(PlayerModel& entity, const SizedWorldObject& other, World& world) override;
+
+        void handleWorldEvent(WorldObject::WorldEventT event, PlayerModel& entity) override;
     };
 } // logic
 

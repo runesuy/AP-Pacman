@@ -40,47 +40,33 @@ namespace logic
         {
         case (COIN):
             {
-                entity.updateObservers(PLAYER_COIN_COLLECTED);
+                entity.updateObservers(ObserverEvents::PLAYER_COIN_COLLECTED);
                 break;
             }
         case(FRUIT):
             {
-                entity.updateObservers(PLAYER_FRUIT_COLLECTED);
-                world.sendWorldEvent(FRUIT_EATEN_BY_PLAYER);
-                break;
-            }
-        case(GHOST):
-            {
-                // dynamic_casts are used here to access the GhostModel specific methods
-                // I could avoid this cast by putting some of this logic in the ghostController itself and send a world event
-                // however I think this is more straightforward and easier to follow, since all player logic is neatly in the playercontroller,
-                // so a dynamic_cast is acceptable here
-                try
-                {
-                    const auto& ghost = dynamic_cast<const GhostModel&>(other);
-                    if (ghost.getMode() == GhostModel::CHASE)
-                    {
-                        entity.updateObservers(PLAYER_KILLED);
-                        world.sendWorldEvent(PLAYER_KILLED_W);
-                        entity.setPosition(entity.getSpawnPosition());
-                        entity.setDirection(NONE);
-                    }
-                    if (ghost.getMode() == GhostModel::FRIGHTENED)
-                    {
-                        entity.updateObservers(PLAYER_GHOST_KILLED);
-                    }
-                }
-                catch (const std::bad_cast& e)
-                {
-                    // this other has a ghost collision type but is not a ghost model?
-                    throw std::runtime_error(
-                        "Ghost collision with non-ghost model detected in PlayerController onCollision");
-                }
+                entity.updateObservers(ObserverEvents::PLAYER_FRUIT_COLLECTED);
+                world.sendWorldEvent(WorldEvents::FRUIT_EATEN_BY_PLAYER);
                 break;
             }
         default:
             {
             }
+        }
+    }
+
+    void PlayerController::handleWorldEvent(WorldObject::WorldEventT event, PlayerModel& entity)
+    {
+        if (event == WorldEvents::PLAYER_KILLED)
+        {
+            entity.updateObservers(ObserverEvents::PLAYER_KILLED);
+            entity.setPosition(entity.getSpawnPosition());
+            entity.setDirection(NONE);
+        }
+
+        if (event == WorldEvents::PLAYER_GHOST_KILLED)
+        {
+            entity.updateObservers(ObserverEvents::PLAYER_GHOST_KILLED);
         }
     }
 }

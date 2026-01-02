@@ -4,6 +4,7 @@
 
 #include "game/entities/controllers/GhostController.h"
 #include "game/WorldEvents.h"
+#include "game/entities/ObserverEvents.h"
 
 namespace logic
 {
@@ -77,21 +78,21 @@ namespace logic
         }
     }
 
-    void GhostController::handleWorldEvent(WorldObject::WorldEventT event, GhostModel& entity)
+    void GhostController::handleWorldEvent(const WorldObject::WorldEventT event, GhostModel& entity)
     {
         switch (event)
         {
         default:
             {
             }
-        case (FRUIT_EATEN_BY_PLAYER):
+        case (WorldEvents::FRUIT_EATEN_BY_PLAYER):
             {
                 if (entity.getMode() == GhostModel::CHASE)
                     entity.setMode(GhostModel::FRIGHTENED);
                 justChangedToFrightened = true;
                 break;
             }
-        case (PLAYER_KILLED_W):
+        case (WorldEvents::PLAYER_KILLED):
             {
                 entity.setPosition(entity.getSpawnPosition());
                 entity.setDirection(NONE);
@@ -104,9 +105,14 @@ namespace logic
 
     void GhostController::onCollision(GhostModel& entity, const SizedWorldObject& other, World& world)
     {
+        if (other.getCollisionType() == PLAYER && entity.getMode() == GhostModel::CHASE)
+        {
+            world.sendWorldEvent(WorldEvents::PLAYER_KILLED);
+        }
         if (other.getCollisionType() == PLAYER && entity.getMode() == GhostModel::FRIGHTENED)
         {
             entity.setMode(GhostModel::RETURNING_HOME);
+            world.sendWorldEvent(WorldEvents::PLAYER_GHOST_KILLED);
         }
     }
 
@@ -114,9 +120,9 @@ namespace logic
     {
         auto viableDirections = world.getConfig().getTileMap().getViableDirections(world, entity.getPosition());
         return viableDirections.size() != 2 ||
-            std::find(viableDirections.begin(), viableDirections.end(), entity.getDirection()) == viableDirections.
+            std::ranges::find(viableDirections, entity.getDirection()) == viableDirections.
             end() ||
-            std::find(viableDirections.begin(), viableDirections.end(), getOppositeDirection(entity.getDirection()))
+            std::ranges::find(viableDirections, getOppositeDirection(entity.getDirection()))
             == viableDirections.end();
     }
 } // logic

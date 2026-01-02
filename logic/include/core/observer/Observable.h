@@ -14,7 +14,7 @@
 namespace logic
 {
     /**
-     * An class containing observing logic for integrating with the IObserver class.
+     * A class containing observing logic for integrating with the IObserver class.
      * An IObservers can be added to the observable list so they are called on certain changes the observable chooses.
      * @tparam Derived The derived class which inherits from Observable.
      */
