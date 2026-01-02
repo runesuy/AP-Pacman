@@ -54,7 +54,7 @@ namespace renderer
          * @param event The SFML event to process.
          * @param window The SFML render window.
          */
-        void processEvent(const sf::Event& event, const sf::RenderWindow& window);
+        void processEvent(const sf::Event& event, const sf::RenderWindow& window) const;
     };
 } // renderer
 

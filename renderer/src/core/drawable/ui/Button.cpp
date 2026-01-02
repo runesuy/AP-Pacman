@@ -66,7 +66,7 @@ namespace renderer
         Button::onClick = onClick;
     }
 
-    void Button::processEvent(const sf::Event& event, const sf::RenderWindow& window)
+    void Button::processEvent(const sf::Event& event, const sf::RenderWindow& window) const
     {
         if (event.type == sf::Event::MouseButtonPressed)
         {
@@ -74,9 +74,9 @@ namespace renderer
             // globalBounds is in position system
             // convert to sfml system
             sf::RectangleShape dummyRect = rectangleShape;
-            dummyRect.setPosition(rectangleShape.getPosition() + Camera::project(getPosition(), window));
-            auto globalBounds = dummyRect.getGlobalBounds();
-            if (globalBounds.contains(pos.x, pos.y))
+            auto currentPos = getPosition();
+            dummyRect.setPosition(rectangleShape.getPosition() + Camera::project(currentPos, window));
+            if (auto globalBounds = dummyRect.getGlobalBounds(); globalBounds.contains(pos.x, pos.y))
             {
                 onClick();
             }
