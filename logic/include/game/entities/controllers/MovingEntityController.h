@@ -44,6 +44,8 @@ namespace logic
         };
     };
 
+    //------------IMPLEMENTATION----------------//
+
     template <typename EntityModelType>
     double MovingEntityController<EntityModelType>::_getTileScaledSpeed(World& world, const EntityModelType& entity)
     {

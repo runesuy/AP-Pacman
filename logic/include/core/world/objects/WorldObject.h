@@ -67,11 +67,13 @@ namespace logic
          */
         [[nodiscard]] bool isMarkedForRemoval() const;
 
-        virtual void processCommand(int){};
+        virtual void processCommand(int)
+        {
+        };
     };
 
     template <typename T>
-    concept IsWorldObject= std::is_base_of_v<WorldObject, T>;
+    concept IsWorldObject = std::is_base_of_v<WorldObject, T>;
 } // logic
 
 #endif //AP_PACMAN_WORLDOBJECT_H

@@ -100,7 +100,6 @@ namespace logic
             }
         default: break;
         }
-
     }
 
     void GhostController::onCollision(GhostModel& entity, const SizedWorldObject& other, World& world)

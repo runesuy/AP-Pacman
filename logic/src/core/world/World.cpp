@@ -105,7 +105,7 @@ namespace logic
 
     bool World::levelComplete() const
     {
-        return getNumberOfObjectsOfType<CoinModel>()==0;
+        return getNumberOfObjectsOfType<CoinModel>() == 0;
     }
 
     bool World::isGameOver() const
@@ -154,7 +154,8 @@ namespace logic
                 break;
             }
         default:
-            {}
+            {
+            }
         }
         if (worldEvent == WorldEvents::WorldEvent::PLAYER_KILLED)
         {

@@ -19,7 +19,7 @@ namespace logic
 
     void CoinController::onCollision(CoinModel& entity, const SizedWorldObject& other, World& world)
     {
-        if (other.getCollisionType() ==PLAYER)
+        if (other.getCollisionType() == PLAYER)
         {
             world.sendWorldEvent(WorldEvents::COIN_COLLECTED);
         }

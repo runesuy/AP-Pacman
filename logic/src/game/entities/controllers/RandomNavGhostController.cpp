@@ -23,8 +23,10 @@ void logic::RandomNavGhostController::update(World& world, GhostModel& entity)
         chooseDirection(world, entity);
     }
     auto tilemap = world.getConfig().getTileMap();
-    if (entity.getMode()!= GhostModel::RETURNING_HOME && world.getConfig().getTileMap().getViableDirections(world, entity.getPosition()).size() > 2 && !get<0>(
-        _isPastOrOnCenter(world, entity, entity.getDirection())))
+    if (entity.getMode() != GhostModel::RETURNING_HOME && world.getConfig().getTileMap().
+                                                                getViableDirections(world, entity.getPosition()).size()
+        > 2 && !get<0>(
+            _isPastOrOnCenter(world, entity, entity.getDirection())))
     {
         chooseDirection(world, entity);
     }

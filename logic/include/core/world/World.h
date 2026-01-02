@@ -162,7 +162,7 @@ namespace logic
     template <IsWorldObject Target>
     unsigned int World::getNumberOfObjectsOfType() const
     {
-        unsigned result=0;
+        unsigned result = 0;
         for (const auto& object : objects)
         {
             if (typeid(Target) == typeid(*object))

@@ -24,5 +24,4 @@ namespace renderer
     {
         return entityFactory;
     }
-
 } // renderer
