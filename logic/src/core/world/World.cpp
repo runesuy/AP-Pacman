@@ -43,8 +43,7 @@ namespace logic
 
     void World::addObject(const std::shared_ptr<WorldObject>& object)
     {
-        auto playerModel = std::dynamic_pointer_cast<PlayerModel>(object);
-        if (playerModel)
+        if (auto playerModel = std::dynamic_pointer_cast<PlayerModel>(object))
         {
             playerModel->addObserver(score);
         }
