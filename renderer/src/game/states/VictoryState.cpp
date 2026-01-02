@@ -26,6 +26,7 @@ namespace renderer
             stateManager.replaceState(
                 Game::getInstance()->getAppConfig().getRendererConfig().getFactoryCollection().getStateFactory()->
                                      createLevelState(passToNextLevel));
+            return;
         }
         firstEvent = false;
     }
