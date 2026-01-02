@@ -74,7 +74,8 @@ namespace renderer
             // globalBounds is in position system
             // convert to sfml system
             sf::RectangleShape dummyRect = rectangleShape;
-            dummyRect.setPosition(rectangleShape.getPosition() + Camera::project(getPosition(), window));
+            const auto position = getPosition();
+            dummyRect.setPosition(rectangleShape.getPosition() + Camera::project(position, window));
             auto globalBounds = dummyRect.getGlobalBounds();
             if (globalBounds.contains(pos.x, pos.y))
             {
