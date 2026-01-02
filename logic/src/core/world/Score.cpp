@@ -4,8 +4,6 @@
 
 #include "core/world/Score.h"
 
-#include "game/entities/ObserverEvents.h"
-
 void logic::Score::update(World& subject)
 {
 }
