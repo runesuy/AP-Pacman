@@ -28,7 +28,8 @@ namespace renderer
     {
         auto spriteModule = std::make_shared<SpriteModule>();
         spriteModule->setSize(getSize());
-        spriteModule->setTexture(Game::getInstance()->getAppConfig().getRendererConfig().getTextureParser().getTexture("fruit"));
+        spriteModule->setTexture(
+            Game::getInstance()->getAppConfig().getRendererConfig().getTextureParser().getTexture("fruit"));
         addModule(spriteModule);
         addObserver(spriteModule);
     }

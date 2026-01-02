@@ -4,7 +4,7 @@
 
 #ifndef AP_PACMAN_IENTITYCONTROLLER_H
 #define AP_PACMAN_IENTITYCONTROLLER_H
-#include "EntityCommands.h"
+#include "../../game/EntityCommands.h"
 #include "core/world/objects/SizedWorldObject.h"
 
 namespace logic
@@ -41,7 +41,7 @@ namespace logic
          * @param command
          * @param entity
          */
-        virtual void processCommand(EntityCommand command, DerivedEntityModel& entity) = 0;
+        virtual void processCommand(int command, DerivedEntityModel& entity) = 0;
 
         /**
          * Handle a collision between entity and other.

@@ -13,7 +13,8 @@ namespace renderer
     {
         text.setString("Label");
         text.setCharacterSize(14);
-        font.loadFromFile(Game::getInstance()->getAppConfig().getRendererConfig().getConfigParser().getDefaultFontPath());
+        font.loadFromFile(
+            Game::getInstance()->getAppConfig().getRendererConfig().getConfigParser().getDefaultFontPath());
         text.setFont(font);
     }
 
@@ -26,7 +27,8 @@ namespace renderer
     {
         text.setString(str);
         text.setCharacterSize(14);
-        font.loadFromFile(Game::getInstance()->getAppConfig().getRendererConfig().getConfigParser().getDefaultFontPath());
+        font.loadFromFile(
+            Game::getInstance()->getAppConfig().getRendererConfig().getConfigParser().getDefaultFontPath());
         text.setFont(font);
     }
 

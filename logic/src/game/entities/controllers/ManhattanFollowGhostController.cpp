@@ -25,7 +25,7 @@ namespace logic
         GhostController::update(world, entity);
     }
 
-    void ManhattanFollowGhostController::processCommand(EntityCommand command, GhostModel& entity)
+    void ManhattanFollowGhostController::processCommand(int command, GhostModel& entity)
     {
     }
 

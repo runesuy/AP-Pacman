@@ -83,7 +83,8 @@ namespace renderer
             for (const std::string& textureName : textureVec)
             {
                 this->textures[animationName].push_back(std::make_shared<sf::Texture>(
-                    Game::getInstance()->getAppConfig().getRendererConfig().getTextureParser().getTexture(textureName)));
+                    Game::getInstance()->getAppConfig().getRendererConfig().getTextureParser().getTexture(
+                        textureName)));
             }
         }
     }

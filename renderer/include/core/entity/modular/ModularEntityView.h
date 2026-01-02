@@ -43,6 +43,8 @@ namespace renderer
         {
             for (const auto& module : modules)
             {
+                // This dynamic cast is safe because of the IsModuleType concept
+                // This cast can not be avoided
                 if (auto casted = std::dynamic_pointer_cast<T>(module))
                 {
                     return casted;

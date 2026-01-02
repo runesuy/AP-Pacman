@@ -10,7 +10,7 @@ namespace logic
     {
     }
 
-    void CoinController::processCommand(EntityCommand command, CoinModel& entity)
+    void CoinController::processCommand(int command, CoinModel& entity)
     {
     }
 

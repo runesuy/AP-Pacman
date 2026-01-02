@@ -62,7 +62,7 @@ namespace logic
          */
         virtual std::shared_ptr<GhostModel> createGhostModel(GhostType type, float difficultyMultiplier) = 0;
 
-        virtual void setViewTarget(const std::shared_ptr<renderer::WorldView>& viewTarget)=0;
+        virtual void setViewTarget(const std::shared_ptr<renderer::WorldView>& viewTarget) =0;
     };
 }
 

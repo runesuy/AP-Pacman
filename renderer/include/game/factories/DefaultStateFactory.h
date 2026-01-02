@@ -31,7 +31,8 @@ namespace renderer
 
         std::unique_ptr<VictoryState> createVictoryState(const std::shared_ptr<logic::Score>& passToNextLevel) override;
 
-        std::unique_ptr<GameOverState> createGameOverState(const std::shared_ptr<logic::Score>& passToNextLevel) override;
+        std::unique_ptr<GameOverState>
+        createGameOverState(const std::shared_ptr<logic::Score>& passToNextLevel) override;
     };
 } // renderer
 

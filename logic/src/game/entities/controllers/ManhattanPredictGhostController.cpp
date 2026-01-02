@@ -14,7 +14,8 @@ namespace logic
             std::cerr << "No Player Found [ManhattanFollowGhostController::update]" << std::endl;
         }
         // calculate position in front of player
-        const auto targetPosition = _calculatePositionInFrontOneStep(*player, world.getConfig().getTileMap().getTileSize());
+        const auto targetPosition = _calculatePositionInFrontOneStep(
+            *player, world.getConfig().getTileMap().getTileSize());
         if (!get<0>(_isPastCenter(world, entity, entity.getDirection())) && entity.getMode() == GhostModel::CHASE
             && (isAtIntersectionOrDeadEnd(world, entity) || entity.getDirection() == NONE))
         {
@@ -26,7 +27,7 @@ namespace logic
         GhostController::update(world, entity);
     }
 
-    void ManhattanPredictGhostController::processCommand(EntityCommand command, GhostModel& entity)
+    void ManhattanPredictGhostController::processCommand(int command, GhostModel& entity)
     {
     }
 

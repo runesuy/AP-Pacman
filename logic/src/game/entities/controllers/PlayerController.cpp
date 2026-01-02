@@ -13,7 +13,7 @@
 
 namespace logic
 {
-    void PlayerController::processCommand(EntityCommand command, PlayerModel& entity)
+    void PlayerController::processCommand(int command, PlayerModel& entity)
     {
         switch (command)
         {
@@ -55,17 +55,26 @@ namespace logic
                 // I could avoid this cast by putting some of this logic in the ghostController itself and send a world event
                 // however I think this is more straightforward and easier to follow, since all player logic is neatly in the playercontroller,
                 // so a dynamic_cast is acceptable here
-                const auto& ghost = dynamic_cast<const GhostModel&>(other);
-                if (ghost.getMode() == GhostModel::CHASE)
+                try
                 {
-                    entity.updateObservers(PLAYER_KILLED);
-                    world.sendWorldEvent(PLAYER_KILLED_W);
-                    entity.setPosition(entity.getSpawnPosition());
-                    entity.setDirection(NONE);
+                    const auto& ghost = dynamic_cast<const GhostModel&>(other);
+                    if (ghost.getMode() == GhostModel::CHASE)
+                    {
+                        entity.updateObservers(PLAYER_KILLED);
+                        world.sendWorldEvent(PLAYER_KILLED_W);
+                        entity.setPosition(entity.getSpawnPosition());
+                        entity.setDirection(NONE);
+                    }
+                    if (ghost.getMode() == GhostModel::FRIGHTENED)
+                    {
+                        entity.updateObservers(PLAYER_GHOST_KILLED);
+                    }
                 }
-                if (ghost.getMode() == GhostModel::FRIGHTENED)
+                catch (const std::bad_cast& e)
                 {
-                    entity.updateObservers(PLAYER_GHOST_KILLED);
+                    // this other has a ghost collision type but is not a ghost model?
+                    throw std::runtime_error(
+                        "Ghost collision with non-ghost model detected in PlayerController onCollision");
                 }
                 break;
             }

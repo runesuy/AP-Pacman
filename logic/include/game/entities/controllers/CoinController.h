@@ -15,7 +15,7 @@ namespace logic
     public:
         void update(World& world, CoinModel& entity) override;
 
-        void processCommand(EntityCommand command, CoinModel& entity) override;
+        void processCommand(int command, CoinModel& entity) override;
 
         void onCollision(CoinModel& entity, const SizedWorldObject& other, World& world) override;
     };

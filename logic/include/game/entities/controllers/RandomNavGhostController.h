@@ -15,7 +15,7 @@ namespace logic
     class RandomNavGhostController : public GhostController
     {
     public:
-        void processCommand(EntityCommand command, GhostModel& entity) override;
+        void processCommand(int command, GhostModel& entity) override;
 
         void onCollision(GhostModel& entity, const SizedWorldObject& other, World& world) override;
 

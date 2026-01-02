@@ -17,7 +17,7 @@ namespace logic
     {
         TimeType timeLeft;
         const TimeType totalTime;
-        bool running=false;
+        bool running = false;
 
         void tick();
 

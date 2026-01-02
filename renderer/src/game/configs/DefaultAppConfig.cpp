@@ -25,5 +25,4 @@ namespace renderer
     {
         return logicConfig;
     }
-
 } // renderer

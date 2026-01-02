@@ -5,6 +5,7 @@
 #ifndef AP_PACMAN_WORLDOBJECT_H
 #define AP_PACMAN_WORLDOBJECT_H
 
+#include <type_traits>
 #include "core/world/space/Position.h"
 
 namespace logic
@@ -65,7 +66,12 @@ namespace logic
          * @return Wetter or not the object is marked for removal on the end of this update.
          */
         [[nodiscard]] bool isMarkedForRemoval() const;
+
+        virtual void processCommand(int){};
     };
+
+    template <typename T>
+    concept IsWorldObject= std::is_base_of_v<WorldObject, T>;
 } // logic
 
 #endif //AP_PACMAN_WORLDOBJECT_H

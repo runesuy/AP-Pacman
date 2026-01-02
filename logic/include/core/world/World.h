@@ -105,14 +105,14 @@ namespace logic
          * @tparam Target
          * @param command
          */
-        template <typename Target>
-        void sendCommandTo(EntityCommand command);
+        template <IsWorldObject Target>
+        void sendCommandTo(int command);
 
         /**
          * @tparam Target
          * @return A std::vector of all worldObjects of type Target present in the world.
          */
-        template <typename Target>
+        template <IsWorldObject Target>
         [[nodiscard]] std::vector<std::shared_ptr<Target>> getObjectsOfType() const;
 
         /**
@@ -152,7 +152,7 @@ namespace logic
 
     //--------------- Implementation--------------------//
 
-    template <typename Target>
+    template <IsWorldObject Target>
     std::vector<std::shared_ptr<Target>> World::getObjectsOfType() const
     {
         std::vector<std::shared_ptr<Target>> result;
@@ -163,15 +163,14 @@ namespace logic
         return result;
     }
 
-    template <typename Target>
-    void World::sendCommandTo(EntityCommand command)
+    template <IsWorldObject Target>
+    void World::sendCommandTo(const int command)
     {
         for (const auto& object : objects)
         {
-            auto target = std::dynamic_pointer_cast<Target>(object);
-            if (target)
+            if (typeid(Target) == typeid(*object))
             {
-                target->processCommand(command);
+                object->processCommand(command);
             }
         }
     }

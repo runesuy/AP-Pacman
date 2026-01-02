@@ -5,7 +5,7 @@
 #include "game/entities/controllers/RandomNavGhostController.h"
 #include "core/utils/Random.h"
 
-void logic::RandomNavGhostController::processCommand(EntityCommand command, GhostModel& entity)
+void logic::RandomNavGhostController::processCommand(int command, GhostModel& entity)
 {
 }
 

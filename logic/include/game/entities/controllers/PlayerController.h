@@ -19,7 +19,7 @@ namespace logic
     class PlayerController : public MovingEntityController<PlayerModel>
     {
     public:
-        void processCommand(EntityCommand command, PlayerModel& entity) override;
+        void processCommand(int command, PlayerModel& entity) override;
 
         void onCollision(PlayerModel& entity, const SizedWorldObject& other, World& world) override;
     };

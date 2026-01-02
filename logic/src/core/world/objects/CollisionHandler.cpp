@@ -40,8 +40,10 @@ namespace logic
         const Position posB = objectB->getPosition();
         const Size sizeB = objectB->getSize();
 
-        const bool overlapX = posA.getX() < posB.getX() + sizeB.getX() / 2 && posA.getX() + sizeA.getX() / 2 > posB.getX();
-        if (const bool overlapY = posA.getY() < posB.getY() + sizeB.getY() / 2 && posA.getY() + sizeA.getY() / 2 > posB.getY(); overlapX && overlapY)
+        const bool overlapX = posA.getX() < posB.getX() + sizeB.getX() / 2 && posA.getX() + sizeA.getX() / 2 > posB.
+            getX();
+        if (const bool overlapY = posA.getY() < posB.getY() + sizeB.getY() / 2 && posA.getY() + sizeA.getY() / 2 > posB.
+            getY(); overlapX && overlapY)
         {
             objectA->onCollision(*objectB, world);
             //objectB->onCollision(*objectA); NOT called because of double handling

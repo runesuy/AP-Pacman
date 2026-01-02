@@ -22,7 +22,7 @@ namespace logic
                                                        World& world)
     {
         // if collision with player
-        if (other.getCollisionType()==PLAYER)
+        if (other.getCollisionType() == PLAYER)
         {
             entity.markForRemoval();
         }

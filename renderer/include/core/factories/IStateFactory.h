@@ -52,13 +52,15 @@ namespace renderer
          * Create a new VictoryState instance.
          * @return
          */
-        virtual std::unique_ptr<VictoryState> createVictoryState(const std::shared_ptr<logic::Score>& passToNextLevel) =0;
+        virtual std::unique_ptr<VictoryState> createVictoryState(const std::shared_ptr<logic::Score>& passToNextLevel) =
+        0;
 
         /**
          * Create a new GameOverState instance.
          * @return
          */
-        virtual std::unique_ptr<GameOverState> createGameOverState(const std::shared_ptr<logic::Score>& passToNextLevel) =0;
+        virtual std::unique_ptr<GameOverState> createGameOverState(const std::shared_ptr<logic::Score>& passToNextLevel)
+        =0;
     };
 } // renderer
 

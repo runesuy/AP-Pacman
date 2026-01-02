@@ -23,8 +23,9 @@ namespace renderer
         }
         if (event.type == sf::Event::KeyPressed && keyReleased)
         {
-            stateManager.replaceState(Game::getInstance()->getAppConfig().getRendererConfig().getFactoryCollection().getStateFactory()->
-                                                           createLevelState(passToNextLevel));
+            stateManager.replaceState(
+                Game::getInstance()->getAppConfig().getRendererConfig().getFactoryCollection().getStateFactory()->
+                                     createLevelState(passToNextLevel));
         }
     }
 

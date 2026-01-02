@@ -16,9 +16,11 @@ int renderer::Game::run()
     // load config file
     loadResources();
 
-    std::unique_ptr<StateManager> stateManager = appConfig.getRendererConfig().getFactoryCollection().getStateManagerFactory()
-                                                          ->createStateManager(
-                                                              appConfig.getRendererConfig().getFactoryCollection().getStateFactory());
+    std::unique_ptr<StateManager> stateManager = appConfig
+                                                 .getRendererConfig().getFactoryCollection().getStateManagerFactory()
+                                                 ->createStateManager(
+                                                     appConfig.getRendererConfig().getFactoryCollection().
+                                                               getStateFactory());
 
 
     //create sfml window

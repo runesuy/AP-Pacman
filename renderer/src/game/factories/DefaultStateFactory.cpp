@@ -18,7 +18,8 @@ namespace renderer
         return std::make_unique<LevelState>();
     }
 
-    std::unique_ptr<LevelState> DefaultStateFactory::createLevelState(const std::shared_ptr<logic::Score>& passToNextLevel)
+    std::unique_ptr<LevelState> DefaultStateFactory::createLevelState(
+        const std::shared_ptr<logic::Score>& passToNextLevel)
     {
         return std::make_unique<LevelState>(passToNextLevel);
     }
@@ -28,12 +29,14 @@ namespace renderer
         return std::make_unique<PausedState>();
     }
 
-    std::unique_ptr<GameOverState> DefaultStateFactory::createGameOverState(const std::shared_ptr<logic::Score>& passToNextLevel)
+    std::unique_ptr<GameOverState> DefaultStateFactory::createGameOverState(
+        const std::shared_ptr<logic::Score>& passToNextLevel)
     {
         return std::make_unique<GameOverState>(passToNextLevel);
     }
 
-    std::unique_ptr<VictoryState> DefaultStateFactory::createVictoryState(const std::shared_ptr<logic::Score>& passToNextLevel)
+    std::unique_ptr<VictoryState> DefaultStateFactory::createVictoryState(
+        const std::shared_ptr<logic::Score>& passToNextLevel)
     {
         return std::make_unique<VictoryState>(passToNextLevel);
     }

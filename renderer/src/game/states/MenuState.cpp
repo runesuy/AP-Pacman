@@ -19,8 +19,9 @@ namespace renderer
     {
         if (event.type == sf::Event::KeyPressed)
         {
-            std::unique_ptr<IState> levelState = Game::getInstance()->getAppConfig().getRendererConfig().getFactoryCollection().
-                                                                      getStateFactory()->createLevelState();
+            std::unique_ptr<IState> levelState = Game::getInstance()->
+                                                 getAppConfig().getRendererConfig().getFactoryCollection().
+                                                 getStateFactory()->createLevelState();
             stateManager.pushState(std::move(levelState));
         }
         playButton.processEvent(event, window);
@@ -30,7 +31,8 @@ namespace renderer
     {
         if (!_fontLoaded)
         {
-            std::string fileName = renderer::Game::getInstance()->getAppConfig().getRendererConfig().getConfigParser().getDefaultFontPath();
+            std::string fileName = renderer::Game::getInstance()->getAppConfig().getRendererConfig().getConfigParser().
+                                                                  getDefaultFontPath();
             if (!_font.loadFromFile(fileName))
             {
                 throw std::runtime_error("Failed to load font from file: " + fileName);
@@ -93,8 +95,9 @@ namespace renderer
 
     void MenuState::onPlayButtonClick(StateManager& stateManager) const
     {
-        std::unique_ptr<IState> levelState = Game::getInstance()->getAppConfig().getRendererConfig().getFactoryCollection().
-                                                                  getStateFactory()->createLevelState();
+        std::unique_ptr<IState> levelState = Game::getInstance()->
+                                             getAppConfig().getRendererConfig().getFactoryCollection().
+                                             getStateFactory()->createLevelState();
         stateManager.pushState(std::move(levelState));
     }
 } // renderer

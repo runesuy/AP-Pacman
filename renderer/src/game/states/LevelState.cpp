@@ -40,8 +40,9 @@ namespace renderer
         if (getWorld()->isGameOver())
         {
             getWorld()->getScore()->getScoreCounter().saveHighScores();
-            stateManager.replaceState(Game::getInstance()->getAppConfig().getRendererConfig().getFactoryCollection().getStateFactory()->
-                                                           createGameOverState(getWorld()->getScore()));
+            stateManager.replaceState(
+                Game::getInstance()->getAppConfig().getRendererConfig().getFactoryCollection().getStateFactory()->
+                                     createGameOverState(getWorld()->getScore()));
             return;
         }
         if (getWorld()->levelComplete())
@@ -51,8 +52,9 @@ namespace renderer
                 getWorld()->getScore()->getScoreCounter().getScore() + LEVEL_CLEAR_REWARD);
 
             // place new state on top
-            stateManager.replaceState(Game::getInstance()->getAppConfig().getRendererConfig().getFactoryCollection().getStateFactory()->
-                                                           createVictoryState(getWorld()->getScore()));
+            stateManager.replaceState(
+                Game::getInstance()->getAppConfig().getRendererConfig().getFactoryCollection().getStateFactory()->
+                                     createVictoryState(getWorld()->getScore()));
             return;
         }
     }

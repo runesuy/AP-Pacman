@@ -9,7 +9,6 @@
 #include "memory"
 #include "core/world/objects/SizedWorldObject.h"
 #include "core/entity/IEntityController.h"
-#include "EntityCommands.h"
 
 namespace logic
 {
@@ -65,7 +64,7 @@ namespace logic
          * Calls the controller.
          * @param command
          */
-        void processCommand(EntityCommand command);
+        void processCommand(int command) override;
 
         /**
          * Update the model based on the world and the tick delta.
@@ -127,34 +126,16 @@ namespace logic
         }
         if (controller)
         {
-            try
-            {
-                controller->update(world, static_cast<Derived&>(*this));
-            }
-            catch (std::bad_cast& e)
-            {
-                // Handle the error appropriately, e.g., log it
-                throw std::runtime_error(
-                    "Failed to cast EntityModel to Derived in update(): " + std::string(e.what()));
-            }
+            controller->update(world, static_cast<Derived&>(*this));
         }
     }
 
     template <typename Derived>
-    void EntityModel<Derived>::processCommand(EntityCommand command)
+    void EntityModel<Derived>::processCommand(int command)
     {
         if (controller)
         {
-            try
-            {
-                controller->processCommand(command, static_cast<Derived&>(*this));
-            }
-            catch (std::bad_cast& e)
-            {
-                // Handle the error appropriately, e.g., log it
-                throw std::runtime_error(
-                    "Failed to cast EntityModel to Derived in processCommand(): " + std::string(e.what()));
-            }
+            controller->processCommand(command, static_cast<Derived&>(*this));
         }
     }
 

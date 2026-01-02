@@ -18,7 +18,7 @@ namespace logic
     public:
         void update(World& world, FruitModel& entity) override;
 
-        void processCommand(EntityCommand command, FruitModel& entity) override;
+        void processCommand(int command, FruitModel& entity) override;
 
         void onCollision(FruitModel& entity, const SizedWorldObject& other, World& world) override;
     };

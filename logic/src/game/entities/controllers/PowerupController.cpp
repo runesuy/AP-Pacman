@@ -10,7 +10,7 @@ namespace logic
     {
     }
 
-    void PowerupController::processCommand(EntityCommand command, FruitModel& entity)
+    void PowerupController::processCommand(int command, FruitModel& entity)
     {
     }
 
