@@ -20,7 +20,7 @@ namespace renderer
         Label descrLabel{"PRESS ANY KEY TO CONTINUE"};
         Label currentScoreLabel;
         bool keyReleased = false;
-
+        bool firstEvent = true;
     public:
         explicit GameOverState(const std::shared_ptr<logic::Score>& score);
 

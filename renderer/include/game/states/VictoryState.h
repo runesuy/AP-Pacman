@@ -23,6 +23,7 @@ namespace renderer
         const std::string currentScoreLabelPref = "YOUR CURRENT SCORE IS: ";
         Label descrLabel{"PRESS ANY KEY TO CONTINUE"};
         bool keyReleased = false;
+        bool firstEvent = true;
 
     public:
         explicit VictoryState(const std::shared_ptr<logic::Score>& passToNextLevel);

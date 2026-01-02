@@ -18,10 +18,11 @@ namespace renderer
         {
             keyReleased = true;
         }
-        if (event.type == sf::Event::KeyPressed && keyReleased)
+        if (event.type == sf::Event::KeyPressed && (keyReleased||firstEvent))
         {
             stateManager.popState();
         }
+        firstEvent = false;
     }
 
     void GameOverState::draw(sf::RenderWindow& window, StateManager& stateManager)

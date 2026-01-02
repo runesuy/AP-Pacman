@@ -18,7 +18,8 @@ namespace renderer
         for (auto& shape : getSFSprites(window))
         {
             shape->setPosition(shape->getPosition() + Camera::project(getPosition(), window));
-            window.draw(*shape);
+            auto s = *shape;
+            window.draw(s);
         }
         for (auto& shape : getSFTexts(window))
         {

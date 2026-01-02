@@ -21,12 +21,13 @@ namespace renderer
         {
             keyReleased = true;
         }
-        if (event.type == sf::Event::KeyPressed && keyReleased)
+        if (event.type == sf::Event::KeyPressed && (keyReleased||firstEvent))
         {
             stateManager.replaceState(
                 Game::getInstance()->getAppConfig().getRendererConfig().getFactoryCollection().getStateFactory()->
                                      createLevelState(passToNextLevel));
         }
+        firstEvent = false;
     }
 
     void VictoryState::draw(sf::RenderWindow& window, StateManager& stateManager)
