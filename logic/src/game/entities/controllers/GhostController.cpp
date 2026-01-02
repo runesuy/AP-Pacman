@@ -69,7 +69,7 @@ namespace logic
         if (!get<0>(_isPastCenter(world, entity, entity.getDirection())) &&
             entity.getMode() == GhostModel::FRIGHTENED)
         {
-            auto player = world.getObjectsOfType<PlayerModel>().at(0);
+            const auto player = world.getPlayerModel().lock();
             entity.setRequestedDirection(
                 frightenedNavigationAgent->getNavigationDirectionAway(entity.getPosition(), player->getPosition(),
                                                                       world, {

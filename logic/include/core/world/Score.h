@@ -20,7 +20,7 @@ namespace logic
         ScoreCounter scoreCounter;
         LifeCounter lifeCounter;
         float difficultyMultiplier = 1;
-        static constexpr float DIFFICULTY_INCREASE = 0.1;
+        static constexpr float DIFFICULTY_INCREASE = 0.2;
 
     public:
         /**

@@ -9,6 +9,7 @@
 #include "core/world/objects/WorldObject.h"
 #include "core/config/ILogicConfig.h"
 #include "Score.h"
+#include <utility>
 #include <vector>
 
 namespace logic
@@ -56,6 +57,8 @@ namespace logic
 
 
         void _handleWorldEvent(WorldObject::WorldEventT worldEvent);
+
+        std::weak_ptr<PlayerModel> _playerModel;
 
     public:
         /**
@@ -106,14 +109,14 @@ namespace logic
          * @param command
          */
         template <IsWorldObject Target>
-        void sendCommandTo(int command);
+        void sendCommandTo(int command) const;
 
         /**
          * @tparam Target
          * @return A std::vector of all worldObjects of type Target present in the world.
          */
         template <IsWorldObject Target>
-        [[nodiscard]] std::vector<std::shared_ptr<Target>> getObjectsOfType() const;
+        [[nodiscard]] unsigned int getNumberOfObjectsOfType() const;
 
         /**
          * @return The score instance.
@@ -147,25 +150,31 @@ namespace logic
          * @param command
          */
         void receiveCommand(WorldCommandType command);
+
+        void setPlayerModel(const std::weak_ptr<PlayerModel>& playerModel);
+
+        std::weak_ptr<PlayerModel> getPlayerModel();
     };
 
 
     //--------------- Implementation--------------------//
 
     template <IsWorldObject Target>
-    std::vector<std::shared_ptr<Target>> World::getObjectsOfType() const
+    unsigned int World::getNumberOfObjectsOfType() const
     {
-        std::vector<std::shared_ptr<Target>> result;
+        unsigned result=0;
         for (const auto& object : objects)
         {
-            // deze dynamic_cast is safe en belangrijk voor de implementatie van deze methode
-            if (auto derived = std::dynamic_pointer_cast<Target>(object)) result.push_back(derived);
+            if (typeid(Target) == typeid(*object))
+            {
+                result++;
+            }
         }
         return result;
     }
 
     template <IsWorldObject Target>
-    void World::sendCommandTo(const int command)
+    void World::sendCommandTo(const int command) const
     {
         for (const auto& object : objects)
         {

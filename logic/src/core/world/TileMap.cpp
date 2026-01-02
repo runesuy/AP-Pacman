@@ -53,6 +53,7 @@ namespace logic
                         player->setPosition({x, y});
                         player->setSize({tileSize, tileSize});
                         world.addObject(player);
+                        world.setPlayerModel(player);
                         break;
                     }
                 case COIN:

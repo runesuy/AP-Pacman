@@ -3,7 +3,6 @@
 //
 
 #include <memory>
-#include <iostream>
 #include <utility>
 #include "core/world/World.h"
 #include "core/world/TileMap.h"
@@ -106,7 +105,7 @@ namespace logic
 
     bool World::levelComplete() const
     {
-        return getObjectsOfType<CoinModel>().empty();
+        return getNumberOfObjectsOfType<CoinModel>()==0;
     }
 
     bool World::isGameOver() const
@@ -161,5 +160,15 @@ namespace logic
         {
             _initialKeyPressed = false;
         }
+    }
+
+    std::weak_ptr<PlayerModel> World::getPlayerModel()
+    {
+        return _playerModel;
+    }
+
+    void World::setPlayerModel(const std::weak_ptr<PlayerModel>& playerModel)
+    {
+        _playerModel = playerModel;
     }
 } // logic
