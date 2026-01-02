@@ -18,15 +18,7 @@ namespace renderer
     {
         logic::TileMap tileMap;
         std::shared_ptr<logic::IEntityFactory> entityFactory = std::make_shared<DefaultEntityFactory>();
-
-        const std::string _MapFolderPath = "resources/maps/";
-
-        /**
-         * @return Paths to all txt files in _MapFolderPath
-         */
-        [[nodiscard]] std::vector<std::string> _getAllMapPaths() const;
-
-        void loadRandomMap() const;
+        inline static const std::string DEFAULT_MAP_PATH = "resources/maps/map.txt";
 
     public:
         /**
