@@ -11,7 +11,7 @@ namespace renderer
     {
         std::string animExt = "";
         getModule<AnimatedSpriteModule>()->setFrameDuration(FRAME_DURATION);
-        if (ghostMode == logic::GhostModel::FRIGHTENED)
+        if (ghostMode == logic::GhostModel::FRIGHTENED || ghostMode == logic::GhostModel::FRIGHTENED_WAITING)
         {
             animExt = "-frightened";
             if (frightenedTimer > FRIGHTENED_END_ANIM_START)
@@ -64,6 +64,12 @@ namespace renderer
                 break;
             }
         case logic::NONE:
+            // If no direction, keep last animation
+            auto module = getModule<AnimatedSpriteModule>();
+            if (module)
+            {
+                module->setCurrentAnimation("move-right" + animExt);
+            }
             break;
         }
     }

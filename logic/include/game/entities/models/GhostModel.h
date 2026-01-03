@@ -19,7 +19,8 @@ namespace logic
             CHASE,
             FRIGHTENED,
             RETURNING_HOME,
-            WAITING
+            WAITING,
+            FRIGHTENED_WAITING
         };
 
     private:

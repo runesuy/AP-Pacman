@@ -11,7 +11,8 @@ namespace logic
     void GhostController::update(World& world, GhostModel& entity)
     {
         MovingEntityController::update(world, entity);
-        if (entity.getMode() == GhostModel::WAITING)
+        if (entity.getMode() == GhostModel::WAITING ||
+            entity.getMode() == GhostModel::FRIGHTENED_WAITING)
         {
             if (entity.getStartTimer() < entity.getStartDelay())
                 entity.setStartTimer(entity.getStartTimer() + Stopwatch::getInstance()->getDeltaTime());
@@ -86,7 +87,10 @@ namespace logic
             {
                 if (entity.getMode() == GhostModel::CHASE)
                     entity.setMode(GhostModel::FRIGHTENED);
+                if (entity.getMode() == GhostModel::WAITING)
+                    entity.setMode(GhostModel::FRIGHTENED_WAITING);
                 justChangedToFrightened = true;
+                entity.updateObservers();
                 entity.setFrightenedTimer(0);
                 break;
             }
