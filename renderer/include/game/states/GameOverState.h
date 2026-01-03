@@ -21,6 +21,7 @@ namespace renderer
         Label currentScoreLabel;
         bool keyReleased = false;
         bool firstEvent = true;
+
     public:
         explicit GameOverState(const std::shared_ptr<logic::Score>& score);
 

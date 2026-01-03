@@ -46,7 +46,7 @@ namespace logic
             else
             {
                 entity.setFrightenedTimer(0);
-                if (entity.getMode()== GhostModel::FRIGHTENED)
+                if (entity.getMode() == GhostModel::FRIGHTENED)
                     entity.setMode(GhostModel::CHASE);
                 if (entity.getMode() == GhostModel::FRIGHTENED_WAITING)
                     entity.setMode(GhostModel::WAITING);

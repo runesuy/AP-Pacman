@@ -17,7 +17,7 @@ namespace renderer
 
     void VictoryState::processInput(sf::Event& event, StateManager& stateManager, const sf::RenderWindow& window)
     {
-        if (event.type == sf::Event::KeyReleased ||( firstEvent && event.type != sf::Event::KeyPressed))
+        if (event.type == sf::Event::KeyReleased || (firstEvent && event.type != sf::Event::KeyPressed))
         {
             keyReleased = true;
         }

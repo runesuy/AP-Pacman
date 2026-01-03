@@ -17,7 +17,7 @@ namespace renderer
          */
         virtual bool isMarkedForRemoval() =0;
 
-        int zIndex=0;
+        int zIndex = 0;
     };
 } // renderer
 
