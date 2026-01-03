@@ -30,9 +30,10 @@ namespace logic
             }
         }
 
-        if (entity.getMode() == GhostModel::FRIGHTENED)
+        if (entity.getMode() == GhostModel::FRIGHTENED ||
+            entity.getMode() == GhostModel::FRIGHTENED_WAITING)
         {
-            if (justChangedToFrightened)
+            if (justChangedToFrightened && entity.getMode() == GhostModel::FRIGHTENED)
             {
                 entity.setDirection(
                     frightenedNavigationAgent->getNavigationDirection(entity.getPosition(), entity.getSpawnPosition(),
@@ -45,7 +46,10 @@ namespace logic
             else
             {
                 entity.setFrightenedTimer(0);
-                entity.setMode(GhostModel::CHASE);
+                if (entity.getMode()== GhostModel::FRIGHTENED)
+                    entity.setMode(GhostModel::CHASE);
+                if (entity.getMode() == GhostModel::FRIGHTENED_WAITING)
+                    entity.setMode(GhostModel::WAITING);
             }
         }
 
