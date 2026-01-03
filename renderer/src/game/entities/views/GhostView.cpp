@@ -64,7 +64,8 @@ namespace renderer
                 break;
             }
         case logic::NONE:
-            // If no direction, keep last animation
+            // If no direction, use right as default
+
             auto module = getModule<AnimatedSpriteModule>();
             if (module)
             {
