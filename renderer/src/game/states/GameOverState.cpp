@@ -21,6 +21,7 @@ namespace renderer
         if (event.type == sf::Event::KeyPressed && keyReleased)
         {
             stateManager.popState();
+            return;
         }
         firstEvent = false;
     }

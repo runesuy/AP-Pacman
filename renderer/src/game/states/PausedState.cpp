@@ -30,6 +30,7 @@ namespace renderer
         if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
         {
             stateManager.popState();
+            return;
         }
         continueButton.processEvent(event, window);
         menuButton.processEvent(event, window);
@@ -45,6 +46,7 @@ namespace renderer
         {
             stateManager.popState();
             stateManager.popState();
+            return;
         });
     }
 } // renderer
