@@ -24,15 +24,6 @@ jobs:
           enable-latex: false # optional (default is false)
           # Extra alpine packages for the build environment
 
-      - name: Commit and push ONLY the documentation folder
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./doxygen
-          commit_message: "Auto-generated Doxygen documentation update"
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
