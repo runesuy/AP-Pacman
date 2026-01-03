@@ -92,13 +92,13 @@ namespace logic
         {
             const double scaledSpeed = _getTileScaledSpeed(world, entity);
             if (entity.getDirection() == LEFT)
-                entity.setPosition(entity.getPosition() + Position(-scaledSpeed, 0) * delta);
+                entity.setPosition(Position(entity.getPosition().getX(), tileCenter.getY()) + Position(-scaledSpeed, 0) * delta);
             else if (entity.getDirection() == RIGHT)
-                entity.setPosition(entity.getPosition() + Position(scaledSpeed, 0) * delta);
+                entity.setPosition(Position(entity.getPosition().getX(), tileCenter.getY()) + Position(scaledSpeed, 0) * delta);
             else if (entity.getDirection() == UP)
-                entity.setPosition(entity.getPosition() + Position(0, scaledSpeed) * delta);
+                entity.setPosition(Position(tileCenter.getX(),entity.getPosition().getY()) + Position(0, scaledSpeed) * delta);
             else if (entity.getDirection() == DOWN)
-                entity.setPosition(entity.getPosition() + Position(0, -scaledSpeed) * delta);
+                entity.setPosition(Position(tileCenter.getX(),entity.getPosition().getY()) + Position(0, -scaledSpeed) * delta);
         }
         else
         {
