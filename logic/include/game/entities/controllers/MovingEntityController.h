@@ -58,7 +58,7 @@ namespace logic
     MovingEntityController<EntityModelType>::_isPastOrOnCenter(const World& world, const EntityModelType& entity,
                                                                Direction direction)
     {
-        const float epsilon = 0.0001f;
+        constexpr float epsilon = 0.0001f;
         const auto [isPastCenter, tileCenter] = _isPastCenter(world, entity, direction);
         bool isOnCenter = std::abs(tileCenter.getX() - entity.getPosition().getX()) < epsilon && std::abs(
             tileCenter.getY() - entity.getPosition().getY()) < epsilon;
@@ -68,9 +68,9 @@ namespace logic
     template <typename EntityModelType>
     void MovingEntityController<EntityModelType>::update(World& world, EntityModelType& entity)
     {
-        float delta = Stopwatch::getInstance()->getDeltaTime();
+        const float delta = Stopwatch::getInstance()->getDeltaTime();
 
-        TileMap::TileType tileInRequested = world.getConfig().getTileMap().getTileInDirection(
+        const TileMap::TileType tileInRequested = world.getConfig().getTileMap().getTileInDirection(
             world, entity.getPosition(), entity.getRequestedDirection());
 
         if (entity.getRequestedDirection() != entity.getDirection() && tileInRequested != TileMap::TileType::WALL)
@@ -84,13 +84,13 @@ namespace logic
         }
         if (entity.getDirection() == NONE) return;
 
-        TileMap::TileType tileInFront = world.getConfig().getTileMap().getTileInDirection(
+        const TileMap::TileType tileInFront = world.getConfig().getTileMap().getTileInDirection(
             world, entity.getPosition(), entity.getDirection());
         auto [isPastCenter, tileCenter] = _isPastOrOnCenter(world, entity, entity.getDirection());
 
         if (tileInFront != TileMap::TileType::WALL || !isPastCenter)
         {
-            double scaledSpeed = _getTileScaledSpeed(world, entity);
+            const double scaledSpeed = _getTileScaledSpeed(world, entity);
             if (entity.getDirection() == LEFT)
                 entity.setPosition(entity.getPosition() + Position(-scaledSpeed, 0) * delta);
             else if (entity.getDirection() == RIGHT)
@@ -120,13 +120,13 @@ namespace logic
         Position tileCenter = world.getConfig().getTileMap().getTileCenterPosition(row, col);
         switch (direction)
         {
-        case Direction::LEFT:
+        case LEFT:
             return {entity.getPosition().getX() < tileCenter.getX(), tileCenter};
-        case Direction::RIGHT:
+        case RIGHT:
             return {entity.getPosition().getX() > tileCenter.getX(), tileCenter};
-        case Direction::UP:
+        case UP:
             return {entity.getPosition().getY() > tileCenter.getY(), tileCenter};
-        case Direction::DOWN:
+        case DOWN:
             return {entity.getPosition().getY() < tileCenter.getY(), tileCenter};
         default: return {false, tileCenter};
         }
