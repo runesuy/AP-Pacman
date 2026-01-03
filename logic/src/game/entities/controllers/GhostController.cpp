@@ -18,7 +18,9 @@ namespace logic
                 entity.setStartTimer(entity.getStartTimer() + Stopwatch::getInstance()->getDeltaTime());
             else
             {
-                entity.setMode(GhostModel::CHASE);
+                if (entity.getMode() == GhostModel::WAITING) entity.setMode(GhostModel::CHASE);
+                if (entity.getMode() == GhostModel::FRIGHTENED_WAITING)
+                    entity.setMode(GhostModel::FRIGHTENED);
                 entity.setStartTimer(0);
             }
 
