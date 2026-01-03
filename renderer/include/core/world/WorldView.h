@@ -31,6 +31,8 @@ namespace renderer
         void draw(sf::RenderWindow& window);
 
         void addObjectView(const std::shared_ptr<IWorldObjectView>& objectView);
+
+        void sortDrawOrder();
     };
 } // renderer
 

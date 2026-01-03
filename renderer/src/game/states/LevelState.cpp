@@ -22,6 +22,7 @@ namespace renderer
         entityFactory->setViewTarget(_worldView);
         _world = std::make_unique<logic::World>(logicConfig);
         _world->addObserver(_worldView);
+        _worldView->sortDrawOrder();
     }
 
     std::unique_ptr<logic::World>& LevelState::getWorld()
@@ -106,5 +107,6 @@ namespace renderer
         entityFactory->setViewTarget(_worldView);
         _world = std::make_unique<logic::World>(logicConfig, score);
         _world->addObserver(_worldView);
+        _worldView->sortDrawOrder();
     }
 } // renderer

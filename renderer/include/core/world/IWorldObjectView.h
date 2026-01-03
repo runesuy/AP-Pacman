@@ -16,6 +16,8 @@ namespace renderer
          * @return True if the world object view is marked for removal, false otherwise.
          */
         virtual bool isMarkedForRemoval() =0;
+
+        int zIndex=0;
     };
 } // renderer
 

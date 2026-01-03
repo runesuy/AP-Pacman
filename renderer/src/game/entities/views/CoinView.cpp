@@ -24,6 +24,7 @@ namespace renderer
         circleModule->setFillColor(sf::Color::White);
         addModule(circleModule);
         addObserver(circleModule);
+        zIndex = -10;
     }
 
     void CoinView::setSize(const logic::Size& size)

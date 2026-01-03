@@ -32,6 +32,7 @@ namespace renderer
             Game::getInstance()->getAppConfig().getRendererConfig().getTextureParser().getTexture("fruit"));
         addModule(spriteModule);
         addObserver(spriteModule);
+        zIndex = -10;
     }
 
     void FruitView::setSize(const logic::Size& size)

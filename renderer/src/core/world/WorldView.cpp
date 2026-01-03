@@ -4,6 +4,7 @@
 
 #include "core/world/WorldView.h"
 #include "game/Game.h"
+#include "algorithm"
 
 namespace renderer
 {
@@ -53,5 +54,15 @@ namespace renderer
     void WorldView::addObjectView(const std::shared_ptr<IWorldObjectView>& objectView)
     {
         objectViews.push_back(objectView);
+    }
+
+    void WorldView::sortDrawOrder()
+    {
+        // sort by zIndex
+        std::ranges::sort(objectViews, [](const std::shared_ptr<IWorldObjectView>& a,
+                                          const std::shared_ptr<IWorldObjectView>& b)
+        {
+            return a->zIndex < b->zIndex;
+        });
     }
 } // renderer
