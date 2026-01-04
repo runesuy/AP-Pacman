@@ -75,13 +75,13 @@ High scores are stored in highscores.txt in the renderer/ directory.
 ## Core Game Requirements
 
 - [ ] Startup screen is implemented in the [MenuState](renderer/include/game/states/MenuState.h) class. This class
- uses [TXTHighScoreParser](logic/include/core/parsers/TXTHighScoreParser.h)
- to load and display the high scores from the highscores.txt file.
+  uses [TXTHighScoreParser](logic/include/core/parsers/TXTHighScoreParser.h)
+  to load and display the high scores from the highscores.txt file.
 - [ ] The maze is stored in the [TileMap](logic/include/core/world/TileMap.h) class, which loads the map from
- resources/maps/map.txt using the [TXTMapParser](renderer/include/game/parsers/TXTMapParser.h) class. Collisions are
- detected in
- the [CollisionHandler](logic/include/core/world/objects/CollisionHandler.h). This class calls the onCollision methods
- of the controllers of the entities.
+  resources/maps/map.txt using the [TXTMapParser](renderer/include/game/parsers/TXTMapParser.h) class. Collisions are
+  detected in
+  the [CollisionHandler](logic/include/core/world/objects/CollisionHandler.h). This class calls the onCollision methods
+  of the controllers of the entities.
 - [ ] Movement is done
   using a controller based on
   the [MovingEntityController](logic/include/game/entities/controllers/MovingEntityController.h)
@@ -147,7 +147,14 @@ High scores are stored in highscores.txt in the renderer/ directory.
 - [ ] The classes are split up as much as possible into smaller classes with a single responsibility.
   For example, the Score class is split into ScoreCounter and LifeCounter classes to separate the score and life logic.
   Another example is the GhostController class, which provides general ghost functionality, while specific ghost
-  behaviour is implemented in subclasses.
+  behaviour is implemented in subclasses. EntityViews are mostly of the
+  type [ModularEntityView](renderer/include/core/entity/modular/ModularEntityView.h), which allows to add modules to the
+  view like for example the [AnimatedSpriteModule](renderer/include/core/entity/modular/modules/AnimatedSpriteModule.h),
+  which provides an easy interface for displaying animations based on names.
+  Textures are loaded an [ITextureParser](renderer/include/core/parser/ITextureParser.h) interface. The default
+  implementation can be found [here](renderer/include/game/parsers/DefaultTextureParser.h).
+  This class reads the config.json file and loads the textures. After that, the textures can be accessed using string
+  keys.
   This makes the code more maintainable and expandable.
   The [IAppConfig](renderer/include/core/config/IAppConfig.h) interface provides a way to inject custom parsers,
   factories and a TileMap for
@@ -157,11 +164,12 @@ High scores are stored in highscores.txt in the renderer/ directory.
 ## Bonus Features
 
 - [ ] **Generic programming** is used throughout the codebase. For example, the observer pattern is implemented using
- templates in
- the [IObserver](logic/include/core/observer/IObserver.h)
- and [Observable](logic/include/core/observer/Observable.h) classes. This allows for type-safe observers and observables
- without the need for casting. I also make use of **concepts** and the **using** keyword to create more readable and
- maintainable code.
+  templates in
+  the [IObserver](logic/include/core/observer/IObserver.h)
+  and [Observable](logic/include/core/observer/Observable.h) classes. This allows for type-safe observers and
+  observables
+  without the need for casting. I also make use of **concepts** and the **using** keyword to create more readable and
+  maintainable code.
 - [ ] The ghosts use **A\*** pathfinding to navigate to their spawn point after being eaten.
   This is implemented in
   the [AStarNavigationAgent](logic/include/game/entities/controllers/navigation/AStarNavigationAgent.h)
