@@ -115,3 +115,55 @@ High scores are stored in highscores.txt in the renderer/ directory.
   update, LevelState checks if the game has reached game over. If so, it pushes the GameOverState onto the stack.
 
 ## Software Design & Code Architecture
+
+- [ ] Each entity has a model, view and controller. The models and controllers are in the logic/include/game/entities,
+  while the views are in
+  renderer/include/game/entities/views. The controllers are linked to the models and are stored in the World. The views
+  are stored and managed in the WorldView.
+- [ ] The **MVC pattern** is implemented using [EntityModel](logic/include/core/entity/EntityModel.h),
+  [IEntityController](logic/include/core/entity/IEntityController.h)
+  and [IEntityView](renderer/include/core/entity/EntityView.h) interfaces. Other models, views and controllers inherit
+  from
+  these classes.
+  The **observer pattern** is implemented in [IObserver](logic/include/core/observer/IObserver.h)
+  and [Observable](logic/include/core/observer/Observable.h). These classes use **templates** to easily link an observer
+  to an observable. These classes are widely used in the codebase, for example in the World and Score classes, or the
+  models and views.
+  The **abstract factory pattern** is implemented using
+  the [IEntityFactory](logic/include/core/entity/IEntityFactory.h). This factory gets
+  implemented by the renderer in [DefaultEntityFactory](renderer/include/game/factories/DefaultEntityFactory.h) and
+  injected into the logic.
+  The **singleton pattern** is implemented in for example the [Stopwatch](logic/include/core/utils/Stopwatch.h)
+  , [Random](logic/include/core/utils/Random.h) and [Game](renderer/include/game/Game.h) classes.
+  The **state pattern** is implemented in the [IState](renderer/include/core/states/IState.h)
+  and [StateManager](renderer/include/core/states/StateManager.h) classes.
+- [ ] The logic is a standalone library without any SFML or renderer dependencies. The CMakeLists.txt is
+  located [here](logic/CMakeLists.txt).
+  The renderer depends on the logic and can be found [here](renderer/CMakeLists.txt).
+- [ ] The camera class can be found in [here](renderer/include/core/utils/Camera.h).
+  It is used in the WorldView to translate world coördinates to screen coördinates. Camera
+  supports [Positions](logic/include/core/world/space/Position.h) and [Sizes](logic/include/core/world/space/Size.h),
+  which is the way logic represents coördinates.
+- [ ] The classes are split up as much as possible into smaller classes with a single responsibility.
+  For example, the Score class is split into ScoreCounter and LifeCounter classes to separate the score and life logic.
+  Another example is the GhostController class, which provides general ghost functionality, while specific ghost
+  behaviour is implemented in subclasses.
+  This makes the code more maintainable and expandable.
+  The [IAppConfig](renderer/include/core/config/IAppConfig.h) interface provides a way to inject custom parsers,
+  factories and a TileMap for
+  even more configurability. There also are resources for textures and fonts that can be easily swapped out without
+  changing the code in renderer/resources/.
+
+## Bonus Features
+
+-[ ] **Generic programming** is used throughout the codebase. For example, the observer pattern is implemented using
+ templates in
+ the [IObserver](logic/include/core/observer/IObserver.h)
+ and [Observable](logic/include/core/observer/Observable.h) classes. This allows for type-safe observers and observables
+ without the need for casting. I also make use of **concepts** and the **using** keyword to create more readable and
+ maintainable code.
+- [ ] The ghosts use **A\*** pathfinding to navigate to their spawn point after being eaten.
+  This is implemented in
+  the [AStarNavigationAgent](logic/include/game/entities/controllers/navigation/AStarNavigationAgent.h)
+  class.
+
