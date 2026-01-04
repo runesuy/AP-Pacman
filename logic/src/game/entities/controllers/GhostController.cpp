@@ -35,9 +35,7 @@ namespace logic
         {
             if (justChangedToFrightened && entity.getMode() == GhostModel::FRIGHTENED)
             {
-                entity.setDirection(
-                    frightenedNavigationAgent->getNavigationDirection(entity.getPosition(), entity.getSpawnPosition(),
-                                                                      world, {}));
+                entity.setRequestedDirection(getOppositeDirection(entity.getDirection()));
                 justChangedToFrightened = false;
             }
 
@@ -74,7 +72,7 @@ namespace logic
 
         // frightened mode
         if (!get<0>(_isPastCenter(world, entity, entity.getDirection())) &&
-            entity.getMode() == GhostModel::FRIGHTENED)
+            entity.getMode() == GhostModel::FRIGHTENED && isAtIntersectionOrDeadEnd(world, entity))
         {
             const auto player = world.getPlayerModel().lock();
             entity.setRequestedDirection(
