@@ -74,10 +74,10 @@ High scores are stored in highscores.txt in the renderer/ directory.
 
 ## Core Game Requirements
 
--[ ] Startup screen is implemented in the [MenuState](renderer/include/game/states/MenuState.h) class. This class
+- [ ] Startup screen is implemented in the [MenuState](renderer/include/game/states/MenuState.h) class. This class
  uses [TXTHighScoreParser](logic/include/core/parsers/TXTHighScoreParser.h)
  to load and display the high scores from the highscores.txt file.
--[ ] The maze is stored in the [TileMap](logic/include/core/world/TileMap.h) class, which loads the map from
+- [ ] The maze is stored in the [TileMap](logic/include/core/world/TileMap.h) class, which loads the map from
  resources/maps/map.txt using the [TXTMapParser](renderer/include/game/parsers/TXTMapParser.h) class. Collisions are
  detected in
  the [CollisionHandler](logic/include/core/world/objects/CollisionHandler.h). This class calls the onCollision methods
@@ -156,7 +156,7 @@ High scores are stored in highscores.txt in the renderer/ directory.
 
 ## Bonus Features
 
--[ ] **Generic programming** is used throughout the codebase. For example, the observer pattern is implemented using
+- [ ] **Generic programming** is used throughout the codebase. For example, the observer pattern is implemented using
  templates in
  the [IObserver](logic/include/core/observer/IObserver.h)
  and [Observable](logic/include/core/observer/Observable.h) classes. This allows for type-safe observers and observables
